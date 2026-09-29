@@ -1,6 +1,11 @@
 # Pieza del plan v2: el canal desatendido (retornos, costes, pipeline y riesgos de plataforma)
 
-- **Versión:** v3 (ronda 3 del constructor), 29-09-2026. Cambios frente a v2: sección §A nueva (¿existe el nicho?,
+- **Versión:** v4 (ronda 4 del constructor), 29-09-2026. Cambios frente a v3: la prueba del nicho (§A.4 y P1) ya no
+  decide solo por vistas: paso 1 de exposición (impresiones o visitas sembradas), estado "no concluyente" con ventanas
+  de iteración de títulos y miniaturas, siembra anónima en 3-5 comunidades galegas contada en D3 (§3.2), y paso 2 con
+  umbrales fijados de antemano de CTR, retención a 2 min y % de Galicia del tráfico sembrado; "parada por
+  distribución" separada de "nicho inexistente". Corregida la fecha de TechCrunch (§7.1) y marcada como [S] la
+  inferencia del arranque en §4.2. Versión anterior: v3 (ronda 3), 29-09-2026. Cambios frente a v2: sección §A nueva (¿existe el nicho?,
   veredicto, tres nichos, multi-audio gl + pt + es + en medido, prueba falsable con umbral de parada), §1.3 y §8.2
   rehechos con el catálogo ampliado, P1 sin zona gris, controles H4 y M1-M6. Versión anterior: v2 (ronda 2), 29-09-2026. Cambios frente a v1: tiempos de máquina medidos (§4.1), horas
   del MVP unificadas (57-85 h), §3.3 nueva con el dossier cronometrado, C0 medido (70 % → 80 % tras corregir un fallo
@@ -26,8 +31,13 @@
    separado: (a) historia en galego, 15-100 vistas por vídeo; (b) toda Galicia en galego (lendas, mar, idiosincrasia),
    25-200, **la opción del plan**; (c) (b) con pistas pt/en/es, 40-400 en total, con el riesgo de que el galego quede
    en minoría. **Prueba falsable:** 8 episodios (4 de historia y 4 de Galicia ampliada) y decisión a las ≈ 10 semanas (el episodio 8 sale en la semana 6; se esperan sus 30 días).
-   Si la mediana a 30 días es < 40 vistas, o menos del 15 % viene de Galicia sin ningún comentario en galego, se para.
-   Con 40-149, modo mínimo; con ≥ 150, plan. Las pistas pt + en se prueban después en 4 de esos 8 vídeos, con 4 de
+   Cada episodio se siembra una vez en 3-5 comunidades galegas (10-15 min, dentro de D3). Primero se mira si hubo
+   exposición (≥ 8.000 impresiones o ≥ 150 visitas sembradas en los 8); si no la hubo, el resultado es **no
+   concluyente**: se iteran títulos y miniaturas y se siembra en más sitios (hasta 2 ventanas de 30 días), sin parar.
+   Con exposición, **el nicho se declara inexistente y se para si fallan 2 de 3 umbrales fijados hoy:** CTR < 2 %,
+   retención a 2 min < 25 %, < 35 % de Galicia en el tráfico sembrado. Si fallan 0 o 1: mediana < 150 vistas → modo
+   mínimo; ≥ 150 → plan. Si tras 2 ventanas sigue sin exposición, se para "por distribución", que no es lo mismo.
+   Las pistas pt + en se prueban después en 4 de esos 8 vídeos, con 4 de
    control. El castellano va al final y con condiciones, porque es la pista que desplaza al galego en Galicia (§A.4).
 1. **En dinero, el canal casi seguro pierde un poco; el caso es cultural y técnico, no económico.** Escenario central a
    12 meses: 0 € de ingresos y 20-100 € de gasto; ≈ 85-140 h del promotor el primer año natural (57-85 h de montaje + 25-55 h
@@ -40,7 +50,7 @@
 4. **Horas:** construir el MVP pide **≈ 57-85 h → 10-14 semanas a 6 h/semana** (§3.1, incluye el stock de 8 dossieres).
    Después, el régimen estable **no cabe en 1 h/semana a 1 episodio por semana** una vez que se acaba el stock: el
    dossier de un episodio de 60 min pide 25-75 min de persona (§3.3). Se cumple D3 bajando a **1 episodio cada 2
-   semanas** tras los 8 primeros: 40-87 min/semana, ≈ 60 de centro (§3.2).
+   semanas** tras los 8 primeros: 40-90 min/semana, ≈ 62 de centro, incluida la siembra reducida (§3.2).
 5. **Cadencia:** 3 episodios la primera semana y 1/semana hasta agotar el stock (8 episodios); después, 1 cada 2
    semanas (≈ 30 episodios el primer año). 60 min narrados + 30 de cola. La máquina no es el límite: **5,0-7,0 h de
    reloj por episodio medidas y extrapoladas** (4,4-5,8 h sin LLM, §4.1), una noche. El límite son las horas de
@@ -201,32 +211,95 @@ otro proceso al 300 %, así que los tiempos son pesimistas]
 
 ### A.4 Prueba falsable con el pipeline (sustituye a la P1 de la v2)
 
-**Fase 1: ¿hay público en galego? (de M0 a ≈ semana 10)**
+**Fase 1: ¿hay público en galego? (de M0 a ≈ semana 10, ampliable a la 18 si no es concluyente)**
+
+El problema que resuelve esta versión: un canal nuevo, anónimo y en galego tiene **poca distribución por defecto**. Con
+pocas vistas no se sabe si "no hay demanda" o si "YouTube no lo enseña". Por eso la prueba no decide solo por vistas:
+primero comprueba si hubo **exposición suficiente** (impresiones de YouTube + visitas sembradas a mano) y solo entonces
+juzga la demanda por **cómo reacciona quien lo ve** (CTR, retención a 2 min y origen galego del tráfico sembrado).
+
 - **Qué se publica:** los 8 episodios del stock (§4.2), **4 de historia (nicho a) y 4 de Galicia ampliada (nicho b)**,
   alternados, con la misma duración y la misma receta de embudo (ganchos en el primer minuto, luego tono de dormir).
-  Solo galego. 3 en la primera semana y 1 por semana después. No añade horas: el stock ya está en el MVP (§3.1).
-- **Métricas (Studio, a los 30 días de cada vídeo):** M = mediana de vistas de los 8; Ma y Mb = medianas de cada bloque;
-  **G = % de vistas desde ciudades galegas** (Studio > Audiencia > Geografía > ciudades; si Studio no da ciudades, %
-  de España como techo [S: verificar el informe]); % de espectadores recurrentes; comentarios en galego de personas
-  reales; retención a 2 min; suscriptores netos.
-- **Decisión el día 30 del episodio 8 (≈ semana 10). Toda cifra lleva a una sola acción:**
+  Solo galego. 3 en la primera semana y 1 por semana después. El vídeo no añade horas (el stock está en el MVP, §3.1);
+  la siembra sí, y va contada en §3.2.
+- **Siembra mínima y anónima (obligatoria en la fase 1):** cada episodio se enlaza **una vez** en **3-5 comunidades
+  galegas** fijadas antes de M0 y siempre las mismas, para que la cifra sea comparable. Candidatas [S: comprobar que
+  existen, que están activas y que sus normas admiten autopromoción]: r/Galicia y r/galego en Reddit; las etiquetas
+  #galego y #Galiza en Mastodon y Bluesky; un grupo de Telegram o Discord de lingua o historia galega.
+  - **Anónima, no encubierta:** se publica con la cuenta seudónima del canal (*Serán*) en cada plataforma, diciendo en
+    el propio mensaje que es una canle propia hecha con IA (coherente con §7.3). Nunca cuentas falsas, votos propios ni
+    mensajes que finjan ser un oyente: eso sería manipular la prueba y, en una comunidad pequeña, se descubre (alarma A3).
+  - **Qué se publica:** el pipeline genera `sementeira.txt` con el enlace, 2 líneas en galego (el tema y el dato
+    curioso del gancho) y la nota de IA; el promotor lo pega. Si la moderación de una comunidad lo retira o lo
+    critica, se deja esa comunidad y se sustituye por otra de la lista; no se discute.
+  - **Minutos:** 10-15 por episodio (pegar en 3-5 sitios y leer las respuestas del primer día), dentro de D3 (§3.2).
+    Tras la fase 1, la siembra se reduce a la comunidad que más visitas trajo (≈ 5 min por episodio) o se deja.
+- **Métricas (Studio, a los 30 días de cada vídeo)** [F sobre qué cuenta cada métrica:
+  https://support.google.com/youtube/answer/7628154?hl=en]:
 
-| Resultado | Acción |
+| Símbolo | Métrica | Dónde | Para qué |
+|---|---|---|---|
+| I | **Impresiones** de miniatura dentro de YouTube (suma de los 8) | Studio > Alcance | Mide si YouTube lo enseña. **No incluye** las visitas desde webs externas, así que no recoge la siembra [F] |
+| CTR | **CTR de impresiones** (agregado de los 8) | Studio > Alcance | Si quien ve la miniatura en YouTube la elige. Referencia: la mitad de los canales y vídeos están entre el 2 % y el 10 % [F] |
+| S | **Visitas sembradas:** vistas con fuente "Externa" desde los dominios sembrados (reddit.com, la instancia de Mastodon, bsky.app, t.me…) | Studio > Fuentes de tráfico > Externa | Mide la exposición que no depende del algoritmo |
+| F | **% de vistas por fuente** (Explorar, Sugeridos, Búsqueda, Externa, Página del canal, Listas) | Studio > Fuentes de tráfico | Diagnóstico: si el peso de Explorar + Sugeridos crece del episodio 1 al 8, el algoritmo empieza a recogerlo |
+| R2 | **Retención a 2 min** (% de quienes empiezan que siguen en el minuto 2), de los 8 agregados y, si Studio lo filtra, solo del tráfico sembrado | Studio > Retención | Si el gancho convence. Después del minuto 2 la curva mide el sueño, no el interés (§9.2) |
+| Gs | **% de Galicia en el tráfico sembrado** (ciudades galegas sobre el total de vistas con fuente Externa) | Studio, modo avanzado: filtro por fuente + Geografía > ciudades [S: verificar el cruce; si no existe, se usa G, el % de Galicia sobre todas las vistas] | Si quien entra desde las comunidades galegas es público galego o curioso de fuera |
+| M, Ma, Mb | Mediana de vistas de los 8, de los 4 de historia y de los 4 de Galicia ampliada | Studio | Tamaño, una vez que hay exposición |
+| — | Recurrentes, suscriptores netos, comentarios en galego de personas reales | Studio | Informativos: no deciden la fase 1 |
+
+- **Decisión el día 30 del episodio 8 (≈ semana 10), en dos pasos, con umbrales fijados hoy (29-09-2026) y no
+  retocables después de ver los datos:**
+
+**Paso 1: ¿hubo exposición suficiente?** Sí, si se cumple **cualquiera** de estas dos:
+- **I ≥ 8.000** impresiones en los 8 episodios (≈ 1.000 por vídeo; con un CTR del 2 %, ≈ 160 clics; la incertidumbre del
+  CTR queda en ± 0,3 puntos [S, binomial al 95 %]); **o**
+- **S ≥ 150** visitas sembradas en los 8 (≈ 20 por vídeo; con 150 visitas, una proporción del 30 % se mide con ± 7
+  puntos al 95 % [S, binomial], suficiente para separar un 15 % de un 35 %).
+
+| Paso 1 | Acción |
 |---|---|
-| **PARADA:** M < 40, **o** G < 15 % con 0 comentarios en galego | **Nicho declarado inexistente para este formato.** Se para la producción, se publican el código y los informes de error para Nós, y el canal queda quieto. Coste hundido: ≈ 60-95 h y < 30 € |
-| **MÍNIMO:** 40 ≤ M < 150 (y no se cumple la parada) | 1 episodio al mes; el 75 % del catálogo del bloque ganador. En M6 se aplica la misma regla a los 4 últimos episodios: **M < 60 → PARADA; M ≥ 60 → sigue a 1 al mes** |
-| **PLAN:** M ≥ 150 (y no se cumple la parada) | Régimen de §4.2 (1 cada 2 semanas) y puerta P2 (§9) |
-| Reparto del catálogo (se aplica en MÍNIMO y en PLAN) | Mb/Ma ≥ 1,5 → 75 % Galicia ampliada; Mb/Ma ≤ 0,67 → 75 % historia; en otro caso, 50/50 |
+| **NO CONCLUYENTE:** I < 8.000 **y** S < 150 | **No se para ni se juzga el nicho.** Ventana de iteración de 30 días (semanas 10-14): (1) títulos y miniaturas nuevos en los 8 con la prueba A/B de Studio (hasta 3 variantes de título y miniatura; gana la de más tiempo de visionado [F https://support.google.com/youtube/answer/13861714]; necesita las funciones avanzadas del canal, que piden verificar un teléfono, no la identidad pública [S]); (2) siembra en 2 comunidades galegas nuevas; (3) mientras tanto, 1 episodio nuevo al mes. Coste: ≈ 40 min de miniaturas y títulos (el pipeline genera las variantes) + 20-30 min de siembra. Al final, se repite el paso 1 con las cifras acumuladas. Máximo **2 ventanas** (hasta ≈ semana 18) |
+| NO CONCLUYENTE tras 2 ventanas | **PARADA POR DISTRIBUCIÓN**, que no es lo mismo que "nicho inexistente" y se registra así: con siembra en 5-7 comunidades y 2 rondas de títulos, ni YouTube lo enseña ni las comunidades galegas hacen clic. Puede haber público, pero **este canal anónimo no llega a él con 1 h/semana**. Se para la producción y se le presenta al promotor la única salida que queda: distribución con un socio que ya tenga público (medio, asociación, podcast galego; ver la pieza de comunidad), no más horas |
+| Exposición suficiente | Paso 2 |
 
-- **Por qué 40:** 40 vistas × ≈ 30 episodios × 1,5 (vistas después del día 30) ≈ 1.800 vistas al año × 15-25 min ≈
-  450-750 h de escucha al año ≈ **1,2-2,1 h por noche: menos de dos personas durmiéndose con el canal cada noche.** Es
-  también el 2 % del extremo bajo del mercado atendible (2.000). Por debajo, la tesis "pro lingua" no tiene a quién
-  servir y las horas del promotor no se justifican ni como hobby cultural.
-- **Probabilidades [S]:** PARADA 35-50 %; MÍNIMO 40-50 %; PLAN 10-20 %.
-- **Ruido declarado:** 8 vídeos y una ráfaga inicial; la mediana resiste un vídeo disparado, pero el reparto Ma/Mb con
-  4 contra 4 es orientativo. Se acepta: la prueba decide si seguir, no el catálogo definitivo.
+**Paso 2 (solo con exposición suficiente): ¿reacciona el público?** Tres umbrales de fallo, fijados de antemano [S,
+justificación debajo]:
+- **CTR < 2 %** (el borde inferior de la franja en que están la mitad de los vídeos de YouTube [F]); si I < 8.000 y la
+  exposición viene solo de la siembra, este umbral no se evalúa y cuenta como no fallado;
+- **R2 < 25 %** (tres de cada cuatro se van antes del minuto 2);
+- **Gs < 35 %** (el tráfico que llega desde comunidades galegas no es mayoritariamente galego).
 
-**Fase 2: ¿suman las pistas pt y en? (≈ semanas 12-17; solo si la fase 1 no da PARADA)**
+| Paso 2 | Acción |
+|---|---|
+| **PARADA · nicho inexistente:** fallan **2 o 3** de los tres umbrales | **Nicho declarado inexistente para este formato:** se le enseñó a suficiente gente y no lo eligió, no lo aguantó o no era galega. Se para la producción, se publican el código y los informes de error para Nós, y el canal queda quieto. Coste hundido: ≈ 60-95 h y < 30 € (≈ +2 h si hubo ventanas) |
+| **MÍNIMO:** fallan 0 o 1, y M < 150 | 1 episodio al mes; el 75 % del catálogo del bloque ganador. En M6, los 4 últimos episodios pasan otra vez por los dos pasos (exposición: I ≥ 4.000 o S ≥ 75): **PARADA** si fallan 2 o 3 umbrales **o** M < 40 con exposición suficiente; si no, sigue a 1 al mes |
+| **PLAN:** fallan 0 o 1, y M ≥ 150 | Régimen de §4.2 (1 cada 2 semanas) y puerta P2 (§9) |
+| Reparto del catálogo (MÍNIMO y PLAN) | Mb/Ma ≥ 1,5 → 75 % Galicia ampliada; Mb/Ma ≤ 0,67 → 75 % historia; en otro caso, 50/50 |
+
+- **Lectura de F (diagnóstico, no decide):** si > 60 % de las vistas son "Externa" e I < 1.000 por vídeo, el público
+  lo trae la siembra y YouTube aún no lo distribuye; si "Búsqueda de YouTube" pesa > 30 %, hay demanda activa en
+  galego que nadie atendía (buena señal para el nicho a); si Explorar + Sugeridos pasa de < 20 % en los episodios 1-3
+  a > 40 % en los 6-8, el algoritmo lo está recogiendo y conviene no parar aunque M sea bajo.
+- **Por qué esos umbrales [S]:** CTR 2 %: por debajo, la miniatura y el tema no atraen ni en la franja baja habitual de
+  YouTube [F de la franja]. R2 25 %: en §9.2 la alarma de un canal en marcha es < 40 %; para tráfico sembrado, menos
+  afín que el de un suscriptor, se exige menos, pero perder 3 de cada 4 en el gancho dice que el formato no interesa.
+  Gs 35 %: las comunidades candidatas son galegas pero con mucha diáspora y curiosos; si ni un tercio de quien entra
+  desde ellas es de Galicia, el galego no está encontrando a su público ni cuando se le lleva de la mano. Se exige
+  fallar **dos** de tres para que un solo indicador ruidoso (p. ej., una miniatura mala) no declare muerto el nicho.
+- **Por qué sigue habiendo un suelo de 40 vistas (solo en M6 y con exposición):** 40 vistas × ≈ 30 episodios × 1,5
+  (vistas después del día 30) ≈ 1.800 vistas al año × 15-25 min ≈ 450-750 h de escucha al año ≈ **1,2-2,1 h por noche:
+  menos de dos personas durmiéndose con el canal cada noche**; es el 2 % del extremo bajo del mercado atendible
+  (2.000). Con exposición demostrada, por debajo de eso la tesis "pro lingua" no tiene a quién servir.
+- **Probabilidades [S]:** NO CONCLUYENTE en la semana 10: 35-50 % (el resultado por defecto de un canal nuevo en
+  galego); de ahí, PARADA POR DISTRIBUCIÓN al final 10-15 %; PARADA por nicho inexistente 20-30 %; MÍNIMO 40-50 %;
+  PLAN 10-20 %.
+- **Ruido declarado:** 8 vídeos y una ráfaga inicial; el reparto Ma/Mb con 4 contra 4 es orientativo. La siembra
+  sesga el tráfico hacia el público más galego y más militante, que no es el que llegará por el algoritmo: por eso Gs
+  se usa como prueba de que el público existe, no como estimación de su tamaño. La prueba decide si seguir, no el
+  catálogo definitivo.
+
+**Fase 2: ¿suman las pistas pt y en? (≈ semanas 12-17, o 4-8 semanas más tarde si hubo ventanas de iteración; solo si la fase 1 da MÍNIMO o PLAN)**
 - **Requisitos:** galego disponible como idioma de pista en Studio (§A.3.1); M1-M6 construidos (6-10 h, semanas 10-12).
 - **Qué se hace:** se añaden pistas **pt-BR y en** (Kokoro) con título y descripción traducidos a **4 de los 8**
   episodios ya publicados (2 de cada bloque, elegidos a cara o cruz antes de mirar los datos). Los otros 4 son el
@@ -306,7 +379,7 @@ https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-op
 
 | Escenario | Prob. [S] | Qué pasa en la prueba de §A.4 | Vistas por vídeo a 30 días (mediana) | Vistas en 12 meses | Horas vistas | Subs a M12 | YPP | Ingresos 12 meses |
 |---|---|---|---|---|---|---|---|---|
-| **Pesimista:** el nicho galego no aparece (ni con lendas); o YouTube lo trata como *slop* y no lo recomienda | 50-60 % | PARADA (M < 40) o MÍNIMO bajo | 15-100 | 0,2-4,5 K (con PARADA en la semana 10, el canal se queda en 8 episodios) | 50-1.900 h | 2-70 | No | **0 €** |
+| **Pesimista:** el nicho galego no aparece (ni con lendas); o YouTube lo trata como *slop* y no lo recomienda | 50-60 % | PARADA (nicho inexistente o por distribución) o MÍNIMO bajo | 15-100 | 0,2-4,5 K (con PARADA en la semana 10, el canal se queda en 8 episodios) | 50-1.900 h | 2-70 | No | **0 €** |
 | **Base:** hueco en galego + las lendas atraen a quien no busca historia + algún eco en redes galegas | 30-38 % | MÍNIMO o PLAN | 100-600 | 4,5-27 K | 1.100-11.000 h | 45-400 | No (faltan subs) | **0 €** |
 | **Optimista:** "a primeira canle para durmir en galego" sale en prensa/TVG, o un vídeo de lendas se dispara | 8-12 % | PLAN | 600-4.000 | 27-180 K | 7-75 K h | 270-2.700 | Posible en M8-M12 **si la revisión de YouTube no lo rechaza** (§7.1) | 0-60 €/mes desde la entrada en YPP; **≈ 0-300 € en el año** |
 | *Suplemento multi-audio (nicho c), solo si la fase 2 de §A.4 da R ≥ 1,3* | 40-55 % condicionado a no PARAR | — | ×1,3-2 sobre la fila que toque; el galego conserva el 25-70 % del tiempo de visionado | ×1,3-2 | ×1,3-2 | ×1,3-2 (subs en pt/en) | Adelanta el YPP en el optimista; no cambia el pesimista | Casi igual: el RPM de pt-BR es bajo [S] |
@@ -422,13 +495,14 @@ Tareas por episodio:
 |---|---|---|
 | **Subir o pasar a público** | 5-10 | La API de YouTube deja **privados** los vídeos subidos desde proyectos no auditados [F https://developers.google.com/youtube/v3/docs/videos/insert]: subida por API en privado y un clic en Studio |
 | **Dossier** (elegir fuentes y leer el informe de `dossier.py`) | 25-75 | Medido en volumen en §3.3 |
-| **Subtotal por episodio** | **30-85** | |
+| **Siembra** en comunidades galegas (§A.4) | 10-15 en la fase 1; ≈ 5 o 0 después | Pegar `sementeira.txt` en 3-5 sitios y leer las respuestas del primer día [S] |
+| **Subtotal por episodio** | **40-100 en la fase 1; 30-90 después** | |
 
 | Cadencia | Min/semana | ¿Cumple D3? |
 |---|---|---|
-| 1/semana con dossier del stock (primeros 8 episodios) | 30-55 | Sí |
+| 1/semana con dossier del stock y siembra (primeros 8 episodios; la semana 1, con 3 episodios, ≈ 75-110) | 40-70 | Sí (la semana 1 se pasa y se compensa con semanas de 0 dossier) |
 | 1/semana con dossier nuevo | 55-130 (centro ≈ 90) | **No** |
-| **1 cada 2 semanas con dossier nuevo** (régimen tras el stock) | **40-87 (centro ≈ 60)** | **Sí en el centro**; en el extremo alto se pasa ≈ 45 % |
+| **1 cada 2 semanas con dossier nuevo** (régimen tras el stock; con 5 min de siembra, +2-3) | **40-90 (centro ≈ 62)** | **Sí en el centro**; en el extremo alto se pasa ≈ 45 % |
 | 1 cada 2 semanas reutilizando el dossier en una serie de 2 episodios [S: ahorra ≈ 1/3 del dossier] | 36-75 | Sí |
 
 **Regla para cumplir D3:** el promotor apunta los minutos reales (una línea por semana en `jobs/horas.csv`). Si la
@@ -501,8 +575,9 @@ con las pausas para dormir, la carga del modelo y la escritura frase a frase, la
 
 ### 4.2 Recomendación
 
-- **Arranque:** 3 episodios en la primera semana (catálogo mínimo para que el algoritmo tenga qué encadenar). La
-  referencia concentró sus 3 éxitos en una ráfaga de 8 vídeos en 10 días [F, `../referencia.md`]; aquí se copia la
+- **Arranque:** 3 episodios en la primera semana. Que eso dé al algoritmo "qué encadenar" (sugerir un episodio tras
+  otro) es una **inferencia propia [S]**, no algo documentado por YouTube; se comprueba con la métrica F de §A.4 (peso
+  de Sugeridos en los episodios 1-3). La referencia concentró sus 3 éxitos en una ráfaga de 8 vídeos en 10 días [F, `../referencia.md`]; aquí se copia la
   idea, no la escala. Luego 1/semana hasta publicar los 8 del stock (P1).
 - **Régimen:** **1 episodio cada 2 semanas**, siempre el mismo día y hora (domingo por la noche [S]), porque es lo que
   cabe en D3 (§3.2). Techo: 1 por semana, solo si el registro de horas lo permite. La máquina daría para uno diario.
@@ -680,7 +755,7 @@ corregirlo rápido (erratas en ≤ 7 días en el comentario fijado y la descripc
   impression of mass production **without adding the creator's original, authentic insights or perspective**" y el
   "similar or repetitive content with low educational value, commentary, narratives, or minimal variation across
   videos". Permitido: misma intro y outro con "distinct storyline, focus, or concept" [F https://support.google.com/youtube/answer/1311392?hl=en].
-- Aclaración del 13-07-2026 (TubeFilter) / 16-07-2026 (TechCrunch). **No es una norma nueva ni un endurecimiento**: la
+- Aclaración del 13-07-2026 (TubeFilter) / 20-07-2026 (TechCrunch). **No es una norma nueva ni un endurecimiento**: la
   propia nota dice que aclara la política existente, y el contenido afectado ya estaba excluido de la monetización
   desde el 15-07-2025. Lo nuevo es el detalle, en tres categorías: (1) genérico o repetitivo,
   con ejemplos como **"image slideshows and templated storylines"**; (2) contenido que busca impactar o manipular;
@@ -829,7 +904,7 @@ días de publicarse.
 |---|---|---|---|
 | **P0 · Salida** | Antes de publicar el primer episodio | (1) Piloto completo pasa los 14 controles; (1a, P0-a) un episodio de 60 + 30 min sale del pipeline sin intervención en ≤ 8 h de reloj (§4.1 predice 5-7 h); (2) canarios C0 con H2: ≥ 90 % y ≥ 4/5 en "sin fuente" en el conjunto actual, y ≥ 80 % en un conjunto nuevo de otro tema (§6.1). **Hoy: 80 % y 2/5 → no se pasa**; (2a) sonoridad dentro de −18/−16 LUFS en el vídeo que se publique (el ejemplo actual mide −20); (2b) el promotor ha cronometrado 3 dossieres y la media cabe en §3.2; (3) aviso hablado y nota de descripción puestos; etiqueta sintética activada; (4) licencias archivadas (SDXL-Turbo, Apache de Nós); (5) **correo de solicitud de permiso a Nós/USC enviado** (D4). La respuesta no es necesaria para publicar como hobby **sin monetizar** [S, decisión de prudencia] | No se publica |
 | **P0-bis · Voz** | En cuanto responda Nós/USC | Permiso para el uso (y, si Nós lo exige, del locutor) | Si dicen que no: cambiar a otra voz con permiso claro en ≤ 30 días (voces de proveedor gl-ES con licencia comercial) o retirar el audio [R `gtm_riesgos.md` §3.3 bis] |
-| **P1 · ¿Existe el nicho?** (fase 1 de §A.4) | Día 30 del episodio 8 (≈ semana 10) | 8 episodios: 4 de historia y 4 de Galicia ampliada, solo en galego. M = mediana de vistas a 30 días; G = % de vistas desde ciudades galegas; y 0 incidentes graves (§10) | **Sin zona gris:** M < 40, **o** G < 15 % con 0 comentarios en galego → **PARADA** (nicho inexistente para este formato; se publican el código y los informes de error para Nós; coste hundido ≈ 60-95 h y < 30 €). 40 ≤ M < 150 → **MÍNIMO** (1 episodio al mes; en M6, M < 60 sobre los 4 últimos → PARADA, M ≥ 60 → sigue). M ≥ 150 → **PLAN** (régimen de §4.2 y P2) |
+| **P1 · ¿Existe el nicho?** (fase 1 de §A.4) | Día 30 del episodio 8 (≈ semana 10); hasta ≈ semana 18 si hay ventanas | 8 episodios (4 de historia, 4 de Galicia ampliada), solo en galego, cada uno sembrado en 3-5 comunidades galegas. **Paso 1, exposición:** I (impresiones, suma de los 8) ≥ 8.000 **o** S (visitas sembradas) ≥ 150. **Paso 2, reacción:** CTR de impresiones, R2 (retención a 2 min), Gs (% de Galicia en el tráfico sembrado); M = mediana de vistas a 30 días; y 0 incidentes graves (§10) | **Sin exposición → NO CONCLUYENTE**, no se para: nuevos títulos y miniaturas (A/B de Studio) + 2 comunidades más, 30 días, máximo 2 ventanas; si sigue sin exposición → **PARADA POR DISTRIBUCIÓN** (no "nicho inexistente"). **Con exposición:** fallan 2-3 de {CTR < 2 %, R2 < 25 %, Gs < 35 %} → **PARADA · nicho inexistente** (se publican el código y los informes de error para Nós; coste hundido ≈ 60-95 h y < 30 €). Fallan 0-1 y M < 150 → **MÍNIMO** (1 al mes; en M6 se repiten los dos pasos sobre los 4 últimos, con suelo M ≥ 40). Fallan 0-1 y M ≥ 150 → **PLAN** (régimen de §4.2 y P2) |
 | **P1-bis · Pistas pt + en** (fase 2 de §A.4) | ≈ Semanas 12-17, si P1 no da PARADA | Pistas en 4 de los 8 episodios; control con los otros 4. R = cociente de vistas; L = % del tiempo en la pista gl | R < 1,3 → solo galego. R ≥ 1,3 y L ≥ 40 % → pt + en y prueba del es (fase 3). 25 % ≤ L < 40 % → pt + en, sin es. L < 25 % → solo pt |
 | **P2 · Hábito** | M6 (~17 episodios), solo si P1 dio PLAN | Mediana a 30 días ≥ 200 vistas **y** ≥ 150 subs **y** ≥ 25 % de espectadores recurrentes **y** ≥ 30 % de las vistas desde listas de reproducción, página del canal o búsqueda de la canle (consumo repetido, no descubrimiento) **y** tasa de erratas señaladas por episodio decreciente | Seguir solo como banco de pruebas técnico, a 1 episodio al mes |
 | **P3 · Tracción (dispara D1)** | Desde M6, revisión mensual | Ver §9.1 | No se paga la validación |
@@ -866,6 +941,8 @@ con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léx
 |---|---|---|
 | Vistas a 30 días (mediana de los 4 últimos) | Studio | Caída > 50 % dos meses seguidos |
 | Espectadores recurrentes (% de espectadores únicos) | Studio, *Audiencia* | < 10 % dos meses seguidos [S] |
+| Impresiones por vídeo y CTR de impresiones (mediana de los 4 últimos) | Studio, *Alcance* | < 500 impresiones o CTR < 2 % dos meses seguidos: YouTube deja de enseñarlo o la miniatura no funciona → nueva ronda A/B de títulos y miniaturas [S] |
+| Fuentes de tráfico (% Explorar + Sugeridos; % Externa) | Studio | Explorar + Sugeridos < 20 % a partir de M6: el canal vive de la siembra, no del algoritmo [S] |
 | Retención a 2 min (la única parte de la curva que mide si el vídeo convence: después, la gente se duerme) | Studio | < 40 % [S] |
 | AVD (solo informativo) | Studio | Sin umbral: en contenido para dormir el vídeo sigue sonando con el oyente dormido o en segundo plano, así que el AVD mide tanto el sueño como el interés |
 | Suscriptores netos | Studio | Negativos dos meses seguidos |
@@ -904,14 +981,20 @@ con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léx
    Analytics desglosa el tiempo de visionado por pista (§A.3.1). Se comprueba en Studio antes de construir M1-M6.
 8. Calidad de oído de Piper y Kokoro en pt/en/es frente a los competidores de cada idioma (no escuchada todavía; §A.3.3),
    licencia de la voz base *lessac* de Piper, y tiempos sin la CPU compartida.
-9. Si Studio da el informe de ciudades (métrica G de §A.4) o solo el país.
+9. Si Studio da el informe de ciudades (métrica G de §A.4) o solo el país, y si el modo avanzado cruza fuente de
+   tráfico con geografía y con retención (métricas Gs y R2 del tráfico sembrado). Se comprueba en el primer episodio.
+10. Si las comunidades candidatas de la siembra existen, están activas y admiten autopromoción declarada, y cuántas
+    visitas trae cada una (S por dominio). Los umbrales de §A.4 (CTR 2 %, R2 25 %, Gs 35 %, I 8.000, S 150) son [S]
+    y quedan congelados desde el 29-09-2026: no se ajustan después de ver los datos.
 
 ---
 
 ## Fuentes nuevas de esta pieza (consultadas el 29-09-2026)
 
 - YouTube, política de monetización (contenido inauténtico): https://support.google.com/youtube/answer/1311392?hl=en
-- TubeFilter, aclaración de las tres categorías (13-07-2026): https://www.tubefilter.com/2026/07/13/youtube-inauthentic-content-monetization-policy-update/
+- TubeFilter, aclaración de las tres categorías (13-07-2026): https://www.tubefilter.com/2026/07/13/youtube-inauthentic-content-monetization-policy-update/ ; TechCrunch, la misma aclaración (20-07-2026): https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/
+- YouTube, impresiones y CTR (la mitad de canales y vídeos entre el 2 % y el 10 %; las webs externas no cuentan como impresiones): https://support.google.com/youtube/answer/7628154?hl=en
+- YouTube, prueba A/B de títulos y miniaturas (hasta 3 variantes; gana la de más tiempo de visionado; requiere funciones avanzadas): https://support.google.com/youtube/answer/13861714
 - YouTube, divulgación de contenido alterado o sintético: https://support.google.com/youtube/answer/14328491?hl=en
 - YouTube Data API, `videos.insert` (proyectos no auditados → privado): https://developers.google.com/youtube/v3/docs/videos/insert
 - Stability AI, licencias (Community License, < 1 M$): https://stability.ai/license ; ficha SDXL-Turbo: https://huggingface.co/stabilityai/sdxl-turbo
