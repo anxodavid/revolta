@@ -1,0 +1,10 @@
+# Proba negativa: 3 citas falsas (cifra cambiada, fonte equivocada, invención). Esperado: 0/3 aceptadas.
+- fontes: [GL-MOST]
+  feito: A biblioteca garda trinta mil volumes.
+  cita: "conta cun fondo de 30.000 volumes"
+- fontes: [GL-CAPELA]
+  feito: A igrexa barroca construíuse entre 1734 e 1748.
+  cita: "A igrexa , barroca , foi construída entre 1734 e 1748"
+- fontes: [GL-MOST]
+  feito: Os monxes fuxiron a Portugal en 1835.
+  cita: "Os monxes fuxiron a Portugal"

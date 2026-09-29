@@ -2,7 +2,7 @@ id: samos-mosteiro
 titulo: O mosteiro de Samos, contado para durmir
 dossier: '- [GL-MOST] O mosteiro de San Xulián de Samos é un mosteiro medieval fundado no século sexto.
 
-  - [GL-MOST] Segundo a tradición, fundouno Martiño de Dumio.
+  - [GL-MOST] (lenda: contar como "contábase que...") Segundo a tradición, fundouno Martiño de Dumio.
 
   - [GL-MOST] Chegou a ser un dos mosteiros de maior importancia de Galicia e hoxe está en bo estado de conservación.
 
@@ -36,10 +36,6 @@ dossier: '- [GL-MOST] O mosteiro de San Xulián de Samos é un mosteiro medieval
   - [GL-SAMOS] O papa Alexandre III concedeulle unha bula con dereitos e rendas sobre moitas igrexas de todo o reino.
 
   - [GL-MOST] No ano mil cincocentos cincuenta e oito un incendio obrigou a reconstruílo enteiro.
-
-  - [GL-MOST] A comunidade foi exclaustrada en mil oitocentos trinta e cinco.
-
-  - [ES-MOST] A comunidade foi exclaustrada en mil oitocentos trinta e seis, coa desamortización de Mendizábal.
 
   - [GL-MOST] Os monxes beneditinos volveron en mil oitocentos oitenta.
 
@@ -79,7 +75,8 @@ dossier: '- [GL-MOST] O mosteiro de San Xulián de Samos é un mosteiro medieval
 
   - [GL-CAPELA] Dentro da capela hai frescos do século décimo con cruces, portadas e decoracións florais.
 
-  - [GL-CAPELA] A capela está abrazada polo río, e pode que estea onde estaba o primeiro mosteiro.
+  - [GL-CAPELA] (lenda: contar como "contábase que...") A capela está abrazada polo río, e pode que estea onde estaba o primeiro
+  mosteiro.
 
   - [GL-CAPELA] Co tempo a capela quedou abandonada e serviu de alpendre para gardar aveños do campo.
 
@@ -88,7 +85,8 @@ dossier: '- [GL-MOST] O mosteiro de San Xulián de Samos é un mosteiro medieval
   - [GL-SAMOS] Samos está nas serras orientais de Galicia; o relevo é moi accidentado e a altitude media pasa dos setecentos
   metros.
 
-  - [GL-SAMOS] O nome vén de Samanos, que quizais se refire a un lugar habitado por unha comunidade relixiosa.
+  - [GL-SAMOS] (lenda: contar como "contábase que...") O nome vén de Samanos, que quizais se refire a un lugar habitado por
+  unha comunidade relixiosa.
 
   - [GL-SAMOS] Nos séculos dezasete e dezaoito fixéronse moitas obras que lle deron a arquitectura actual.
 

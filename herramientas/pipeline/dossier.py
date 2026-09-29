@@ -72,14 +72,21 @@ def main():
         c = norm(f['cita'])
         onde = [k for k in f['fontes'] if k in fontes and c in fontes[k]]
         (ok if onde else mal).append({**f, 'atopada_en': onde})
-    dossier = '\n'.join(f"- [{', '.join(f['atopada_en'])}] {f['feito']}" for f in ok)
+    confl = [f for f in ok if f.get('conflito')]          # fontes que non concordan: o guion non pode usar o dato
+    ok = [f for f in ok if not f.get('conflito')]
+    lenda = lambda f: '(lenda: contar como "contábase que...") ' if f.get('tipo') == 'lenda' else ''
+    dossier = '\n'.join(f"- [{', '.join(f['atopada_en'])}] {lenda(f)}{f['feito']}" for f in ok)
     (S / 'dossier.yaml').write_text(yaml.safe_dump({'id': tema['id'], 'titulo': tema['titulo'], 'dossier': dossier + '\n',
                                                      'fontes': tema['fontes']}, allow_unicode=True, sort_keys=False, width=120))
     pal_feitos = sum(len(f['feito'].split()) for f in ok)
-    L = [f"# Dossier {tema['id']}: {len(ok)}/{len(feitos)} feitos coa cita atopada ({100*len(ok)/max(1,len(feitos)):.0f} %)", '',
+    n_cit = len(ok) + len(confl)
+    L = [f"# Dossier {tema['id']}: {n_cit}/{len(feitos)} feitos coa cita atopada ({100*n_cit/max(1,len(feitos)):.0f} %); "
+         f"{len(ok)} entran no dossier ({sum(f.get('tipo') == 'lenda' for f in ok)} como lenda), {len(confl)} fóra por conflito", '',
          f"Palabras do dossier: {pal_feitos}. Comprobación: {time.time()-t0:.2f} s.", '',
          '## Rexeitados (a cita non está literalmente na fonte declarada)', '']
     L += [f"- [{', '.join(f['fontes'])}] {f['feito']} | cita: \"{f['cita']}\"" for f in mal] or ['- ningún']
+    L += ['', '## Fóra por conflito entre fontes (o guion non pode usar o dato)', '']
+    L += [f"- [{', '.join(f['atopada_en'])}] {f['feito']}" for f in confl] or ['- ningún']
     (S / 'informe.md').write_text('\n'.join(L) + '\n')
     print('\n'.join(L[:3]))
 
