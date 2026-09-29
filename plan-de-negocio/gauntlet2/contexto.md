@@ -44,3 +44,17 @@ que corra en CPU en tiempo razonable (p. ej. SD-Turbo, SDXL-Turbo, LCM o similar
   y sus fotogramas sí, si pesan < 50 MB.
 - Plan en CASTELLANO; todo lo que ve u oye el público en GALEGO normativo.
 - Cada cifra con URL o marcada como supuesto [S]. Fecha: 29-09-2026.
+
+## Feedback del promotor tras ver el vídeo de ejemplo (29-09-2026) — PRIORITARIO
+El promotor, como juez humano, vio `video/ejemplo.mp4`: **vale como primera aproximación**, está cerca de algo publicable
+"sin dar vergüenza ajena". Pide dos cambios:
+1. **El ritmo es algo lento.** Subirlo, sobre todo al principio.
+2. **Más "picante" para enganchar**, como la referencia de Versalles: ganchos del tipo *"non vas crer o que facían as persoas
+   daquela"*, contraste "lujo por fuera, suciedad por dentro", curiosidad y detalle cotidiano sorprendente.
+
+Cómo aplicarlo sin romper el formato para dormir (fórmula de "embudo"):
+- **Título, miniatura y primeros 60-120 s:** ganchos claros y ritmo más vivo, al estilo de la referencia.
+- **Después:** el ritmo y la intensidad bajan poco a poco hasta el tono sereno de dormir; los ganchos se vuelven suaves
+  (curiosidades tranquilas, sin sobresaltos ni gritos).
+- Los ganchos deben ser **verdaderos** (nada inventado para impactar) y en galego natural, no calcos del castellano.
+- Reflejarlo en el pipeline (prompts de guion, ritmo de la voz y de los cortes), en el vídeo de ejemplo y en el plan.
