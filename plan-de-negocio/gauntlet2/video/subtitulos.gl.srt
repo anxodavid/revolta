@@ -1,207 +1,207 @@
 1
-00:00:04,000 --> 00:00:05,548
+00:00:04,000 --> 00:00:05,673
 Boas noites.
 
 2
-00:00:06,248 --> 00:00:11,521
+00:00:07,073 --> 00:00:12,596
 A voz que vas escoitar é sintética, e este
 texto preparouno un proceso automático.
 
 3
-00:00:13,121 --> 00:00:17,954
+00:00:14,996 --> 00:00:20,135
 Ao sur de Compostela hai un outeiro verde,
 e nas mañás de outono a brétema queda alí
 
 4
-00:00:17,954 --> 00:00:18,644
+00:00:20,135 --> 00:00:20,869
 moito tempo.
 
 5
-00:00:19,344 --> 00:00:24,442
+00:00:22,269 --> 00:00:27,492
 Entre as árbores asoman unhas pedras
 vellas, cubertas de musgo e de follas molladas.
 
 6
-00:00:25,142 --> 00:00:30,544
+00:00:28,892 --> 00:00:34,477
 Son os restos dunha fortaleza: uns anacos
 de muralla e a planta dos muros, debuxada
 
 7
-00:00:30,544 --> 00:00:31,065
+00:00:34,477 --> 00:00:35,015
 no chan.
 
 8
-00:00:31,765 --> 00:00:36,537
+00:00:36,415 --> 00:00:41,487
 Hoxe só se escoita a choiva lenta sobre as
 follas e, lonxe, algún paxaro.
 
 9
-00:00:38,137 --> 00:00:43,010
+00:00:43,887 --> 00:00:48,835
 Aquela fortaleza chamábase a Rocha Forte,
 e era do arcebispo de Compostela.
 
 10
-00:00:43,710 --> 00:00:47,233
+00:00:50,235 --> 00:00:53,858
 Desde ela vixiábanse os camiños que
 baixaban cara ao mar.
 
 11
-00:00:47,933 --> 00:00:52,736
+00:00:55,258 --> 00:01:00,112
 Un día, a xente da cidade e os labregos da
 comarca decidiron que aquela torre xa non
 
 12
-00:00:52,736 --> 00:00:55,081
+00:01:00,112 --> 00:01:02,481
 tiña que seguir en pé, e botárona abaixo.
 
 13
-00:00:56,681 --> 00:00:59,979
+00:01:04,881 --> 00:01:08,354
 Isto é Serán, historia de Galicia para
 durmir.
 
 14
-00:01:01,579 --> 00:01:04,877
+00:01:10,754 --> 00:01:14,202
 Esta noite imos contar a historia dos
 irmandiños.
 
 15
-00:01:05,577 --> 00:01:10,268
+00:01:15,602 --> 00:01:20,532
 Durante uns poucos anos, labregos,
 artesáns, mariñeiros, clérigos e mesmo algúns
 
 16
-00:01:10,268 --> 00:01:14,900
+00:01:20,532 --> 00:01:25,400
 fidalgos xuntáronse nunha irmandade e
 botaron abaixo moitas das torres do país.
 
 17
-00:01:15,600 --> 00:01:20,498
+00:01:26,800 --> 00:01:31,923
 Falaremos da vida baixo aquelas torres e
 dos tempos difíciles que viñeran antes.
 
 18
-00:01:21,198 --> 00:01:26,767
+00:01:33,323 --> 00:01:39,095
 E, xa cara ao final, lembraremos o que
 contaron moito despois os vellos que o viran
 
 19
-00:01:26,767 --> 00:01:27,371
+00:01:39,095 --> 00:01:39,721
 de mozos.
 
 20
-00:01:28,971 --> 00:01:31,819
+00:01:42,121 --> 00:01:45,044
 Non tes que lembrar nada do que che conte.
 
 21
-00:01:32,519 --> 00:01:37,492
+00:01:46,444 --> 00:01:51,567
 Acomódate, apaga a luz se aínda está acesa
 e deixa que o corpo pese un pouco máis.
 
 22
-00:01:38,192 --> 00:01:42,865
+00:01:52,967 --> 00:01:57,865
 Deixa tamén que a respiración vaia máis
 amodo, e imos alá, a aquel tempo.
 
 23
-00:01:44,465 --> 00:01:49,326
+00:02:00,265 --> 00:02:05,292
 Arredor da metade do século quince, Galicia
 era unha terra de labregos, de artesáns,
 
 24
-00:01:49,326 --> 00:01:51,062
+00:02:05,292 --> 00:02:07,088
 de mariñeiros e de mercadores.
 
 25
-00:01:51,763 --> 00:01:55,985
+00:02:08,488 --> 00:02:12,885
 Moitos deles vivían nas terras dun señor,
 e eran os seus vasalos.
 
 26
-00:01:56,685 --> 00:02:01,263
+00:02:14,285 --> 00:02:19,042
 Pagábanlle tributos en diñeiro e en
 especie, e debíanlle traballo nas obras da
 
 27
-00:02:01,263 --> 00:02:03,083
+00:02:19,042 --> 00:02:20,933
 fortaleza e servizo coas armas.
 
 28
-00:02:03,783 --> 00:02:08,906
+00:02:22,333 --> 00:02:27,656
 Eran cargas pesadas, e moitas familias
 labregas vivían sempre á beira da pobreza.
 
 29
-00:02:10,506 --> 00:02:13,479
+00:02:30,056 --> 00:02:33,229
 O señor era tamén o xuíz na súa terra.
 
 30
-00:02:14,179 --> 00:02:19,127
+00:02:34,629 --> 00:02:39,799
 Había xa un século que mandaba unha
 nobreza nova, máis violenta ca a de antes, e o
 
 31
-00:02:19,127 --> 00:02:20,877
+00:02:39,799 --> 00:02:41,627
 país enchérase de fortalezas.
 
 32
-00:02:21,577 --> 00:02:25,975
+00:02:43,027 --> 00:02:47,700
 Algunhas eran das grandes casas nobres,
 como a de Lemos ou a de Andrade.
 
 33
-00:02:26,675 --> 00:02:30,873
+00:02:49,100 --> 00:02:53,423
 Outras eran dos bispos e, sobre todo, do
 arcebispo de Compostela.
 
 34
-00:02:32,473 --> 00:02:36,646
+00:02:55,823 --> 00:03:00,396
 Desde aquelas torres, dicían os vasalos,
 viñan os males e os danos.
 
 35
-00:02:37,346 --> 00:02:42,169
+00:03:01,796 --> 00:03:06,894
 Moitos anos despois, as testemuñas aínda
 lles chamaban refuxios de malfeitores.
 
 36
-00:02:43,769 --> 00:02:47,542
+00:03:09,294 --> 00:03:13,467
 Non era a primeira vez que a xente se
 xuntaba contra os señores.
 
 37
-00:02:48,242 --> 00:02:53,094
+00:03:14,867 --> 00:03:19,983
 Unhas décadas antes, os vasalos dun gran
 señor das Mariñas formaran unha irmandade e
 
 38
-00:02:53,094 --> 00:02:55,115
+00:03:19,983 --> 00:03:22,115
 camiñaran xuntos cara a Compostela.
 
 39
-00:02:55,815 --> 00:03:00,562
+00:03:23,515 --> 00:03:28,438
 Aquela primeira irmandade foi vencida, e
 os que a formaran foron castigados.
 
 40
-00:03:02,162 --> 00:03:07,018
+00:03:30,838 --> 00:03:35,967
 Os tempos, ademais, eran difíciles, porque
 desde a peste negra as rendas dos señores
 
 41
-00:03:07,018 --> 00:03:08,810
+00:03:35,967 --> 00:03:37,860
 viñan minguando en toda Europa.
 
 42
-00:03:09,510 --> 00:03:15,183
+00:03:39,260 --> 00:03:45,458
 E, como cobraban menos, moitos señores
 esixían cada vez máis aos seus vasalos.
 
 43
-00:03:15,883 --> 00:03:20,228
+00:03:46,858 --> 00:03:51,360
 Así, pouco a pouco, nas casas e nos
 camiños, ía medrando a memoria daquelas
 
 44
-00:03:20,228 --> 00:03:23,531
+00:03:51,360 --> 00:03:54,781
 irmandades, coma unha semente que agarda
 outra primavera.

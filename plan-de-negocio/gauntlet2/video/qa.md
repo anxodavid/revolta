@@ -2,13 +2,13 @@
 
 Informe xerado por `herramientas/pipeline/pipeline.py` (etapa 8). Ningunha persoa revisou o vídeo.
 
-**Veredicto automático: NON PUBLICABLE**
+**Veredicto automático: PUBLICABLE**
 
 | Porta | Resultado |
 |---|---|
 | duracion | pasa |
 | wer_mestura | pasa |
-| sincronia_av | FALLA |
+| sincronia_av | pasa |
 | sincronia_subtitulos | pasa |
 | lingua_lt | pasa |
 | estilo | pasa |
@@ -20,33 +20,33 @@ Informe xerado por `herramientas/pipeline/pipeline.py` (etapa 8). Ningunha perso
 
 | Medida | Valor |
 |---|---|
-| mb | 31.0 |
+| mb | 36.6 |
 | resolucion | 1920x1080 |
 | fps | 24.0 |
 | pista_subtitulos | True |
-| dur_video_s | 203.37 |
-| dur_audio_s | 203.52 |
-| dur_prevista_s | 209.53 |
-| desfase_av_s | 0.15 |
-| lufs_integrado | -18.0 |
-| lra_lu | 5.7 |
-| pico_real_dbtp | -2.0 |
-| ritmo (palabras/min sobre a narración, pausas incluídas) | 142.8 |
+| dur_video_s | 240.79 |
+| dur_audio_s | 240.78 |
+| dur_prevista_s | 240.78 |
+| desfase_av_s | 0.01 |
+| lufs_integrado | -20.0 |
+| lra_lu | 9.6 |
+| pico_real_dbtp | -5.1 |
+| ritmo (palabras/min sobre a narración, pausas incluídas) | 123.5 |
 
 ## ASR (Whisper large-v3-turbo galego de Nós, CTranslate2 int8)
 
 | Audio | WER | Subst. | Borr. | Ins. | Palabras ref. |
 |---|---|---|---|---|---|
-| mestura | 0.023 | 5 | 2 | 4 | 475 |
-| voz | 0.082 | 6 | 32 | 1 | 475 |
+| mestura | 0.025 | 5 | 1 | 6 | 475 |
+| voz | 0.086 | 10 | 30 | 1 | 475 |
 
-Sincronía subtítulos-voz (marcas de tempo por palabra do ASR contra o SRT): 99.8 % das 468 palabras aliñadas caen dentro da súa frase (±0,5 s); desfase no inicio de frase: mediana -0.26 s, máximo 1.39 s (31 frases medidas).
+Sincronía subtítulos-voz (marcas de tempo por palabra do ASR contra o SRT): 100.0 % das 469 palabras aliñadas caen dentro da súa frase (±0,5 s); desfase no inicio de frase: mediana -0.3 s, máximo 0.57 s (32 frases medidas).
 
 Frases con WER > 0,5 (candidatas a erro de pronuncia): ningunha.
 
 <details><summary>Transcrición ASR da mestura</summary>
 
-as noites, a voz que vas escoitar é sintética e este texto preparouno un proceso automático. Ao sur de Compostela hai un outeiro verde e nas mañás do outono a brétema queda alí moito tempo. Dentro as árbores asoman unhas pedras vellas, cubertas de musgo e de follas molladas. Son os restos dunha fortaleza, uns anacos de muralla e a planta dos muros debuxada no chan. árona do mar. Hoxe só se escoita a choiva lenta sobre as follas e, lonxe, algún paxaro. Aquela fortaleza chamábase a Rocha Forte e era do arcebispo de Compostela. Desde ela vixiábanse os camiños que baixaban cara ao mar. Un día, a xente da cidade e os labregos da comarca decidiron que aquela torre xa non tiña que seguir en pé e botárona abaixo. Isto é serán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Durante uns poucos anos labregos, artesáns, mariñeiros, clérigos e mesmo algúns fidalgos xuntáronse nunha irmandade e botaron abaixo moitas das torres do país. Falaremos da vida baixo aquelas torres e dos tempos difíciles que viñeran antes. E, xa cara ao final, lembrarémolo que contaron moito despois os vellos que o viran de mozos.  Non tes que lembrar nada do que che conte. Acomódate, apaga a luz aínda está acesa e deixa que o corpo pese un pouco máis. Deixa tamén que a respiración vaia máis amodo e imos alá, a aquel tempo. Arredor da metade do século XV, Galicia era unha terra de labregos, de artesáns, de mariñeiros e de mercadores. Moitos deles vivían nas terras dun señor e eran os seus vasalos. Pagábanlle tributos en diñeiro e en especie e debíanlle traballo nas obras da fortaleza e servizo coas armas. E eran cargas pesadas e moitas familias labregas vivían sempre á beira da pobreza. O señor era tamén o xuíz na súa terra. Había xa un século que mandaba unha nobreza nova, máis violenta ca a de antes, e o país enchérase de fortalezas. Algunhas eran das grandes casas nobres, como a de Lemos ou a de Andrade.  Outras eran dos bispos e, sobre todo, do arcebispo de Compostela. Desde aquelas torres, dicían os vasalos, viñan os males e os danos. Moitos anos despois, as testemuñas aínda lles chamaban refuxios de malfeitores. Non era a primeira vez que a xente se xuntaba contra os señores. Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e camiñaran xuntos cara a Compostela.  Aquela primeira irmandade foi vencida e os que a formaran foron castigados. Os tempos, ademais, eran difíciles porque desde a peste negra as rendas dos señores viñan minguando en toda Europa. E, como cobraban menos, moitos señores esixían cada vez máis aos seus vasalos. Así, pouco a pouco, nas casas e nos camiños, ía medrando a memoria daquelas irmandades, coma unha semente que agarda outra primavera.
+Boas noites. A voz que vas escoitar é sintética e este texto preparouno un proceso automático. Ao sur de Compostela hai un outeiro verde e nas mañás do outono a brétema queda alí moito tempo. Nentre as árbores asuman unhas pedras vellas, cubertas de musgo e de follas molladas. as. Son os restos dunha fortaleza, uns anacos de muralla e a planta dos muros debuxada no chan. Hoxe só se escoita a choiva lenta sobre as follas e, lonxe, algún paxaro. Aquela fortaleza chamábase a Rocha Forte e era do arcebispo de Compostela. Desde ela vixiábanse os camiños que baixaban cara ao mar.  Un día, a xente da cidade e os labregos da comarca decidiron que aquela torre xa non tiña que seguir en pé e botárona abaixo. Isto é serán, historia de Galicia para durmir. Esta noite imos contar a historia dos irmandiños. Durante uns poucos anos labregos, artesáns, mariñeiros, clérigos e mesmo algúns fidalgos xuntáronse nunha irmandade e botaron abaixo.  dixo moitas das torres do país. Falaremos da vida baixo aquelas torres e dos tempos difíciles que viñeran antes. E, xa cara ao final, lembrarémolo que contaron moito despois os vellos que o viran de mozos. Non tes que lembrar nada do que che conte. Acomódate, apaga a luz se aínda está acesa e deixa que o corpo pese un pouco máis.  deixa tamén que a respiración vaia máis amodo e imos alá a aquel tempo. Arredor da metade do século XV, Galicia era unha terra de labregos, de artesáns, de mariñeiros e de mercadores. Moitos deles vivían nas terras dun señor e eran os seus vasalos. Pagábanlle tributos en diñeiro e en especie e debíanlle traballo nas obras da fortaleza e servizo coas armas. as. E eran cargas pesadas, e moitas familias labregas vivían sempre á beira da pobreza. O señor era tamén o xuíz na súa terra. Había xa un século que mandaba unha nobreza nova, máis violenta ca a de antes, e o país enchérase de fortalezas. Algunhas eran das grandes casas nobres, como a de Lemos ou a de Andrade.  Outras eran dos bispos e, sobre todo, do arcebispo de Compostela. Desde aquelas torres, dicían os vasalos, viñan os males e os danos. Moitos anos despois, as testemuñas aínda lles chamaban refuxios de malfeitores. Non era a primeira vez que a xente se xuntaba contra os señores. Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade foi vencida e os que a formaran foron castigados. Os tempos, ademais, eran difíciles porque desde a peste negra as rendas dos señores viñan minguando en toda Europa.  en Europa. E, como cobraban menos, moitos señores esixían cada vez máis aos seus vasalos. Así, pouco a pouco, nas casas e nos camiños ía medrando a memoria daquelas irmandades, coma unha semente que agarda outra primavera.
 
 </details>
 
@@ -81,46 +81,46 @@ Avisos antes da corrección automática: 3. Despois: 2.
 
 | Medida | Valor |
 |---|---|
-| lufs_voz_obxectivo | -21.0 |
+| lufs_voz_obxectivo | -20.0 |
 | choiva_rel_db | -17.0 |
-| lufs_mestura_pyloudnorm | -18.0 |
-| pico | 0.792 |
+| lufs_mestura_pyloudnorm | -20.0 |
+| pico | 0.558 |
 
 ## Escenas e imaxes
 
 | # | Frases | Dur. (s) | Mov. | Lum. | Contr. | Simil. ant. | Prompt |
 |---|---|---|---|---|---|---|---|
-| 0 | 1-3 | 19.0 | zoom_in | 117.1 | 47.1 | None | wide view at dawn of a green wooded hill south of Santiago de Compostela, thick morning fog lying in the valley, oak and chestnut trees, faint grey stones on the hilltop, pale golden light |
-| 1 | 4-6 | 18.8 | pan_right | 86.9 | 37.5 | 0.39 | ruins of a medieval granite wall among oak trees, stones covered in green moss and wet fallen leaves, low foundations of walls outlined on the ground, light rain, soft grey daylight |
-| 2 | 7-8 | 9.8 | zoom_out | 101.5 | 46.6 | 0.24 | a stone castle with two square towers on a hill, seen from far away, dirt roads winding down through green valleys toward a distant estuary and the Atlantic sea, calm late afternoon light |
-| 3 | 9-10 | 13.6 | pan_up | 133.7 | 59.7 | 0.65 | a large crowd of peasants and townspeople seen from behind, walking slowly up a misty hillside path at dawn carrying wooden tools, a dark castle silhouette above them in the fog |
-| 4 | 11-12 | 14.0 | pan_left | 108.6 | 37.9 | 0.38 | a medieval village square of granite houses with slate roofs, small groups of peasants, craftsmen, fishermen and a monk in a brown habit gathered and talking quietly, seen from a distance, overcast morning |
-| 5 | 13-14 | 13.4 | zoom_in | 35.1 | 22.9 | 0.0 | interior of a humble stone house at night, an old man seen from behind sitting by the hearth fire, warm orange firelight on rough granite walls, wooden bench, clay pots |
-| 6 | 15-17 | 15.5 | zoom_in | 35.5 | 25.8 | -0.1 | a quiet medieval bedroom at night, simple wooden bed with wool blankets, a single candle on a stool, small window with rain drops and blue night outside, warm dim light |
-| 7 | 18-19 | 12.2 | pan_right | 133.1 | 49.0 | -0.14 | wide landscape of the Galician countryside in the fifteenth century, small fields and stone walls, a hamlet with thatched roofs and a granite granary on stilts, a river estuary with small fishing boats in the distance, soft morning mist |
-| 8 | 20-21 | 13.8 | pan_left | 102.0 | 41.0 | 0.09 | peasants seen from behind carrying sacks of grain and baskets along a muddy track toward a stone tower house, oxen cart, autumn trees, overcast grey sky |
-| 9 | 22-23 | 11.1 | zoom_out | 95.6 | 42.1 | 0.07 | a tall square stone tower house of a lord dominating a green valley at dusk, small peasant houses below, smoke from chimneys, cold blue and violet evening light |
-| 10 | 24-25 | 10.9 | pan_right | 98.2 | 43.7 | 0.66 | a great medieval castle with high granite walls and towers on a rocky hill above a river, and far away the towers of a Romanesque cathedral in a walled city, golden evening light, clouds |
-| 11 | 26-27 | 11.3 | zoom_in | 63.9 | 38.4 | 0.64 | a dark stone fortress tower at night under a cloudy sky with a pale moon, below it a few peasant houses with small warm lit windows, quiet and still, fog on the ground |
-| 12 | 28-30 | 18.4 | pan_left | 136.6 | 53.5 | 0.46 | a long line of peasants walking together along a muddy road through fog, seen from behind and far away, toward a distant walled medieval city with cathedral towers, grey morning light |
-| 13 | 31-32 | 13.7 | zoom_out | 104.3 | 32.6 | 0.59 | empty autumn fields and an abandoned farmhouse of granite with a collapsed roof, bare trees, grey low clouds, crows in the sky, melancholic quiet atmosphere |
-| 14 | 33-33 | 14.0 | zoom_in | 76.1 | 38.8 | 0.02 | close view of weathered hands of a peasant woman placing seeds into a small clay jar on a wooden table, warm hearth light, a window showing a spring morning with blossoming trees |
+| 0 | 1-3 | 21.9 | zoom_in | 115.5 | 53.3 | None | A green wooded hill rising from thick morning fog, oak and chestnut trees, a few grey granite stones on its top, pale dawn light, wide view of a quiet valley |
+| 1 | 4-6 | 21.6 | pan_right | 88.6 | 33.5 | 0.16 | Moss-covered granite ruins of a medieval wall among oak trees, low stone foundations outlined on the ground, wet fallen leaves, light rain, soft grey daylight |
+| 2 | 7-8 | 11.4 | zoom_out | 97.6 | 34.1 | 0.21 | A small granite castle with a square keep on a green hill, seen from far away, muddy roads winding down through wooded valleys toward a distant grey estuary, overcast afternoon |
+| 3 | 9-10 | 15.5 | pan_up | 139.0 | 61.1 | 0.52 | A crowd of peasants seen from behind walking slowly up a misty green hillside at dawn with wooden tools on their shoulders, a dark stone tower above them in the fog |
+| 4 | 11-12 | 16.0 | pan_left | 111.4 | 35.4 | 0.57 | A small Galician hamlet of grey granite houses with dark slate roofs, peasants, fishermen and a monk in a brown habit talking quietly, seen from a distance, drizzle, overcast morning |
+| 5 | 13-14 | 15.3 | zoom_in | 35.1 | 19.8 | -0.22 | An old man seen from behind sitting by a hearth fire inside a humble granite house at night, warm orange firelight on rough stone walls, wooden bench, clay pots |
+| 6 | 15-17 | 18.1 | zoom_in | 41.5 | 28.1 | -0.01 | A quiet medieval bedroom at night, simple wooden bed with wool blankets, one candle on a stool, a small window with raindrops and blue darkness outside, warm dim light |
+| 7 | 18-19 | 14.0 | pan_right | 120.7 | 35.7 | -0.08 | Green rainy Galician countryside, small fields bordered by stone walls, a hamlet of granite houses with thatched roofs and a stone hórreo granary, a misty estuary with small fishing boats |
+| 8 | 20-21 | 15.8 | pan_left | 109.5 | 41.7 | 0.45 | Peasants seen from behind carrying sacks of grain along a muddy lane toward a square granite tower house, an ox cart, chestnut trees in autumn, grey sky |
+| 9 | 22-23 | 13.0 | zoom_out | 85.2 | 37.8 | 0.44 | A tall square granite tower house dominating a green valley at dusk, a few small peasant houses with smoking chimneys below, cold blue evening light, light rain |
+| 10 | 24-25 | 12.8 | pan_right | 104.9 | 37.4 | 0.43 | A great granite castle with high walls and towers above a green river valley, far away the towers of a Romanesque cathedral, low clouds, soft evening light |
+| 11 | 26-27 | 13.5 | zoom_in | 80.3 | 31.8 | 0.67 | A dark granite fortress tower at night under a cloudy sky with a pale moon, a few peasant houses below with small warm lit windows, fog on the ground |
+| 12 | 28-30 | 21.5 | pan_left | 155.2 | 62.7 | 0.69 | A long line of peasants seen from behind walking together along a muddy road through fog and green fields toward the distant towers of a walled medieval city, grey morning |
+| 13 | 31-32 | 16.0 | zoom_out | 108.2 | 37.9 | 0.82 | Empty autumn fields and an abandoned granite farmhouse with a collapsed slate roof, bare chestnut trees, low grey clouds, crows in the sky, rainy melancholic quiet |
+| 14 | 33-33 | 14.3 | zoom_in | 89.8 | 42.3 | 0.21 | Weathered hands of a peasant woman placing seeds into a small clay jar on a wooden table, warm hearth light, a window showing a green spring morning with blossoming trees |
 
 ## Tempos de render (CPU: 4 núcleos, sen GPU)
 
 | Etapa | Parede (s) | CPU (s) |
 |---|---|---|
 | 1_guion | 0.0 | 0.0 |
-| 2_corrixir | 19.5 | 43.0 |
+| 2_corrixir | 13.7 | 9.8 |
 | 3_escenas | 0.0 | 0.0 |
-| 4_voz | 222.7 | 202.9 |
-| 5_imaxes | 321.2 | 1167.6 |
-| 6_son | 5.2 | 5.1 |
-| 7_montaxe | 284.9 | 1062.6 |
-| 8_qa | 128.3 | 237.0 |
-| **Total** | **981.8** | **2718.2** |
+| 4_voz | 248.3 | 202.7 |
+| 5_imaxes | 574.4 | 1010.2 |
+| 6_son | 5.0 | 4.9 |
+| 7_montaxe | 308.9 | 1149.7 |
+| 8_qa | 135.3 | 262.8 |
+| **Total** | **1285.6** | **2640.1** |
 
-Tempo total de CPU: 0.76 h de núcleo; parede: 16.4 min. Non inclúe a descarga de modelos nin o tempo do LLM externo (ver LLM).
+Tempo total de CPU: 0.73 h de núcleo; parede: 21.4 min. Non inclúe a descarga de modelos nin o tempo do LLM externo (ver LLM).
 
 ## LLM
 
@@ -128,7 +128,7 @@ Tempo total de CPU: 0.76 h de núcleo; parede: 16.4 min. Non inclúe a descarga 
 |---|---|---|
 | guion | `guion-86cb43ec62b3.txt` | backend: manual, model: Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline, data: 2026-09-29, nota: Resposta escrita seguindo literalmente o prompt renderizado (llm_pending/guion-86cb43ec62b3.prompt.md), sen edición humana. |
 | corrixir | `corrixir-29a6ee9f9e7b.txt` | backend: manual, model: Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline, data: 2026-09-29, nota: Resposta ao prompt renderizado llm_pending/corrixir-29a6ee9f9e7b.prompt.md: acepta REFLEXIVOS (demorarse -> queda); considera falsos positivos a concordancia de Esta noite imos, e camiñaran xuntos (suxeito os vasalos). |
-| escenas | `escenas-11c8e046d451.txt` | backend: manual, model: Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline, data: 2026-09-29, nota: Resposta ao prompt renderizado llm_pending/escenas-11c8e046d451.prompt.md, sen edición humana. |
+| escenas | `escenas-57d1738aae30.txt` | backend: manual, model: Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline, data: 2026-09-29, nota: Resposta ao prompt renderizado llm_pending/escenas-57d1738aae30.prompt.md (versión 2 do prompt de escenas: prompts máis curtos e regra de paisaxe atlántica), sen edición humana. |
 
 ## Guion final narrado
 
