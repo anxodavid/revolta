@@ -262,7 +262,9 @@ def informe(r, tema, guion):
     L += [f"| {k} | {v['parede_s']} | {v['cpu_s']} |" for k, v in t.items()]
     L += [f'| **Total** | **{round(par, 1)}** | **{round(cpu, 1)}** |', '',
           f"Tempo total de CPU: {round(cpu / 3600, 2)} h de núcleo; parede: {round(par / 60, 1)} min. "
-          'Non inclúe a descarga de modelos nin o tempo do LLM externo (ver LLM).', '',
+          'Non inclúe a descarga de modelos nin o tempo do LLM externo (ver LLM).', '']
+    L += extrapolacion(r)
+    L += [
           '## LLM', '', '| Etapa | Caché | Metadatos |', '|---|---|---|']
     for k, v in r['llm'].items():
         L.append(f"| {k} | `{v.get('cache')}` | {', '.join(f'{a}: {b}' for a, b in v.items() if a != 'cache')} |")
@@ -270,5 +272,34 @@ def informe(r, tema, guion):
     return '\n'.join(L)
 
 
+def extrapolacion(r, minutos=60, s_por_imaxe=15.0):
+    """Extrapola linealmente os tempos medidos a un episodio longo [S: supón custo proporcional]."""
+    t, f = r['tempos'], r['ficheiro']
+    dur = f['dur_video_s']; n_img = len(r['escenas']); D = minutos * 60; n_d = D / s_por_imaxe
+    g = lambda k: t.get(k, {'parede_s': 0, 'cpu_s': 0})
+    fila = {  # etapa: (factor de escala, base)
+        '4_voz': D / dur, '5_imaxes': n_d / n_img, '6_son': D / dur, '7_montaxe': D / dur, '8_qa': D / dur,
+        '2_corrixir': D / dur}
+    L = [f'## Extrapolación a un episodio de {minutos} min [S: escala lineal dos tempos medidos]', '',
+         f'Supostos: mesma densidade de texto, unha imaxe cada {s_por_imaxe:.0f} s ({n_d:.0f} imaxes), '
+         'custo de voz, montaxe e QA proporcional á duración, e LLM local non incluído.', '',
+         '| Etapa | Parede (min) | CPU (h de núcleo) |', '|---|---|---|']
+    tp = tc = 0
+    for k, fac in fila.items():
+        p, c = g(k)['parede_s'] * fac / 60, g(k)['cpu_s'] * fac / 3600
+        tp += p; tc += c
+        L.append(f'| {k} | {p:.0f} | {c:.2f} |')
+    L += [f'| **Total** | **{tp:.0f}** ({tp / 60:.1f} h) | **{tc:.2f}** |', '']
+    return L
+
+
+def _informe_de_novo(qa_json, tema_yaml, guion_txt, out_md):
+    r = json.loads(Path(qa_json).read_text()); tema = yaml.safe_load(open(tema_yaml))
+    Path(out_md).write_text(informe(r, tema, Path(guion_txt).read_text().strip()))
+
+
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) == 6 and sys.argv[1] == '--so-informe':
+        _informe_de_novo(*sys.argv[2:])   # qa.json tema.yaml guion.txt qa.md
+    else:
+        main()
