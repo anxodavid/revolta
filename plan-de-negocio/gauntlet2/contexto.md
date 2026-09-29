@@ -72,3 +72,15 @@ Cómo aplicarlo sin romper el formato para dormir (fórmula de "embudo"):
   oyentes atendibles; ninguna competencia directa; demanda de "Galicia para dormir" en castellano) y con la ampliación de temas.
 - **Pistas de audio multilingües** (gl original + es/pt en el mismo vídeo): **aún no decidido por el promotor**; el plan
   puede evaluarlas como opción con números, sin darlas por aprobadas.
+
+## PREGUNTA OBLIGATORIA: ¿apuntamos a un nicho inexistente? (29-09-2026)
+El promotor sospecha que el nicho (gente que consume en galego contenido de historia/cultura de Galicia para dormir) puede
+**no existir** o ser demasiado pequeño para sostener un canal. Todo plan, pieza e integración debe:
+1. **Dar un veredicto explícito:** existe / existe pero es marginal / no hay evidencia suficiente; con la evidencia a favor
+   y en contra (cifras con fuente) y sin maquillarlo.
+2. **Separar tres nichos** y estimar cada uno: (a) historia de Galicia para dormir en galego; (b) toda Galicia (mitos, lendas,
+   mar, idiosincrasia) para dormir en galego; (c) lo mismo con pistas de audio es/pt (opción no aprobada).
+3. **Proponer una prueba barata y falsable** con el pipeline automático: qué se publica, cuánto tiempo, qué métricas
+   (vistas, retención, % de audiencia en galego, suscriptores, comentarios) y **qué umbral concreto declara el nicho
+   inexistente y manda parar**.
+4. Los críticos y el tribunal deben suspender cualquier pieza que esquive esta pregunta o la conteste sin cifras.
