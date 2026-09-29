@@ -1,8 +1,11 @@
 # Pieza del plan v2: el ecosistema galego (riesgos, apoyos y estrategia *pro lingua*)
 
-- **Versión:** v3 (ronda 3 del constructor), 29-09-2026. Cambios: §1.13 (ganchos con picante ante el ecosistema,
-  reglas y lista de títulos en galego), E10 y alarma A9, correo del §5 con el formato de embudo, nombre oficial de la
-  Lei 1/2025 y de la CSAG.
+- **Versión:** v4 (ronda 4 del constructor), 29-09-2026. Cambios: §0.1 (veredicto con cifras sobre si el nicho
+  existe, tres nichos y prueba con umbral de parada, leído desde el ecosistema); §1.14 (pistas de audio multilingües
+  ante ADA, AGPTI, A Mesa, AGAL, CSAG y Nós, con reglas); fila de AGAL en §1.0; aportación 8 en §2.2; contradicción 5
+  en §2.3; tesis del §2.4 reescrita con la opción elegida (gl original + pt/en, **sin pista en castellano el primer
+  año**); fase 4-bis en §4; alarma A10; riesgo E11; correo del §5 con las pistas traducidas y el uso de la voz de
+  Brais. v3: §1.13 (ganchos con picante), E10 y A9.
 - **Qué cubre:** análisis de actores (Proxecto Nós/USC/CiTIUS/ILG y Gradiant, CSAG-CRTVG/TVG y Radio Galega, RAG,
   Consello da Cultura Galega, Secretaría Xeral da Lingua, AGPTI, sector de la dobraxe y la locución, comunidad
   tecnológica de software libre, divulgadores de historia, medios y comunidad de hablantes); evaluación crítica de la
@@ -16,7 +19,7 @@
 
 ---
 
-## 0. Resumen en 13 líneas
+## 0. Resumen en 15 líneas
 
 1. **La tesis del promotor es defendible, pero solo en una versión concreta:** el canal no es "contido en galego feito
    con IA", sino **un laboratorio aberto que pon a proba a IA aberta en galego en público** y devuelve datos. Si se
@@ -57,6 +60,62 @@
     Galicia atrasada) y ante divulgadores y medios (ganchos falsos). Reglas: gancho 100 % anclado al dossier y
     verificado por ASR, contraste que apunta hacia arriba y nunca hacia la gente corriente, lista de títulos
     permitidos y vetados en galego, alarma A9 (§1.13, §6 E10).
+14. **Las pistas de audio traducidas (pt/es/en) son doblaje y traducción con IA sin revisión**, lo mismo que ADA,
+    AGPTI y A Mesa denunciaron a RTVE el 20-02-2026 [F]. La pista en castellano es además la puerta por la que el
+    galegofalante sale del galego: YouTube elige la pista por el historial del espectador [F], y el 96,4 % de los
+    gallegos mayores de 16 no ve audiovisual sobre todo en galego [R]. **Recomendación: galego siempre original,
+    título y miniatura en galego, solo pt y en, ninguna pista en castellano el primer año (más estricto que la fase 3
+    de `plan-desatendido.md` §A.4), nunca la voz de Brais ni de ningún actor de dobraxe en las pistas traducidas**. La
+    pista portuguesa abre el debate reintegracionista (AGAL, Lei Paz-Andrade): oportunidad si se enmarca en la ley de
+    2014, votada por unanimidad [F], riesgo si el canal toma partido normativo (§1.14, E11, A10).
+15. **¿Existe el nicho? No hay evidencia suficiente; lo más probable es que sea marginal** (20-1.000 personas
+    distintas el primer año; mediana esperada de 25-200 vistas por vídeo en el nicho b) [R `plan-desatendido.md` §A].
+    Para el ecosistema esto importa: con ese tamaño, lo que el canal devuelve a Nós vale más que su audiencia, y la
+    tesis *pro lingua* tiene que sostenerse también si la prueba manda **parar** (M < 40 vistas de mediana) (§0.1).
+
+### 0.1 ¿Existe el nicho? Veredicto con cifras y lo que implica para el ecosistema
+
+Las cifras son las de `plan-desatendido.md` §A (búsquedas medidas en `../medidas/nicho/`); aquí se resumen y se leen
+desde el ecosistema, sin rehacerlas.
+
+**Veredicto: NO HAY EVIDENCIA SUFICIENTE de que exista un público en galego para historia y cultura de Galicia para
+dormir; si existe, lo más probable es que sea MARGINAL** (decenas a pocos cientos de oyentes por vídeo) [S sobre R].
+
+| Evidencia | Cifra | Fuente |
+|---|---|---|
+| A favor: el tema engancha, pero en castellano | "Galicia para dormir" de lendas: 107.875 vistas (Relatos al Oído); otros 5.106-17.264 | [R `plan-desatendido.md` §A.1, P `../medidas/nicho/busquedas-yt.txt`] |
+| A favor: hueco total en galego | 0 canales o vídeos para dormir en galego en 10 búsquedas | [R idem] |
+| A favor: el hábito existe | 48 % de los oyentes de pódcast los usan para dormirse (Acast 2023) | [R `audiencia.md` §6.2] |
+| En contra: consumo en galego mínimo | 3,59 % de los mayores de 16 ve audiovisual siempre o sobre todo en galego (IGE 2023) ≈ 60.000-84.000 personas | [R `audiencia.md` §2.4] |
+| En contra: mercado atendible | 2.000-20.000 oyentes habituales posibles; alcanzables el año 1: **20-1.000** | [R `audiencia.md` §8; `plan-desatendido.md` §A.1] |
+| En contra: lo que hay en galego hace poco | Lendas en galego: 59-1.577 vistas acumuladas en años | [R `plan-desatendido.md` §A.1] |
+
+**Tres nichos** [S, de `plan-desatendido.md` §A.2]:
+
+| Nicho | Vistas por vídeo a 30 días (mediana) | P(pasa la parada: mediana ≥ 40) | Lectura para el ecosistema |
+|---|---|---|---|
+| (a) Historia de Galicia para dormir, en galego | 15-100 | 35-50 % | Demasiado pequeño para que la comunidad de correctores (§1.12) exista: 0-2 correcciones por episodio |
+| (b) Toda Galicia (lendas, mar, castros, idiosincrasia), en galego | 25-200 | 55-70 % | Opción del plan. Algo más de público y **más riesgo de tópico** en los ganchos (§1.13) |
+| (c) (b) + pistas pt/en (y es) | 40-400 en total; el galego se queda con el 25-70 % del tiempo | 40-55 % de que las pistas suban las vistas ≥ 30 % | Más audiencia, pero es donde el canal choca con ADA, AGPTI y A Mesa (§1.14) |
+
+**Prueba falsable** (`plan-desatendido.md` §A.4): 8 episodios en galego (4 de a, 4 de b) en ≈ 10 semanas; a los 30
+días de cada uno, mediana de vistas M y % de vistas desde Galicia G. **Parada si M < 40, o G < 15 % con 0 comentarios en
+galego.** Pistas pt/en solo después, en 4 de los 8 episodios con los otros 4 de control.
+
+**Qué añade el ecosistema a la prueba (propuesta):**
+1. **Métrica pro lingua, además de las de audiencia:** número de errores de lengua confirmados (por la audiencia o por
+   el promotor en muestreo) que llegan al informe para Nós. Si a la semana 10 es **0** y M < 150, la tesis *pro lingua*
+   queda sin base empírica y **no se usa como argumento público** (el canal sigue, si sigue, como hobby).
+2. **Si la prueba manda parar**, la devolución a Nós se hace igual: informe de errores de voz de los 8 episodios (≈ 8
+   h de narración), métricas y código. Es lo único del proyecto que no depende del tamaño del nicho, y es lo que
+   cumple el correo del §5 aunque el canal muera.
+3. **La fase de pistas no empieza si hay alarmas abiertas** del ecosistema (A7, A9) ni sin la respuesta de Nós sobre
+   la voz: añadir audiencias en otras lenguas a un canal que ya tiene un conflicto en Galicia lo agrava.
+
+Lectura honesta: con 20-1.000 personas, el canal **no cambia el consumo en galego** de nadie de forma medible. Lo que
+puede cambiar algo es el dato que devuelve: ≈ 10-30 h de narración larga al año evaluadas (12-30 episodios según
+la prueba) y los errores que salgan
+(§2.2). La tesis *pro lingua* es defendible como tesis de **laboratorio**, no de **audiencia**.
 
 ---
 
@@ -83,6 +142,8 @@ Tres rasgos del enfoque generan fricción, y cada actor los pesa distinto:
 | Divulgadores de historia | A (errores), competencia, uso de su trabajo | Enlaces y tráfico; ser fuente citada | Recelo | **No hostilidad**; algunos como fuente citada |
 | Medios (Nós Diario, Praza, GCiencia, Código Cero) | Titular fácil: "IA anónima enche YouTube" | Titular positivo: "experimento aberto que mide a IA en galego" | Nada, salvo polémica | **Una pieza técnica** en un medio de ciencia, cuando haya datos |
 | *Transversal: ganchos con picante (§1.13)* | Tópico de la Galicia atrasada (A Mesa, CCG, CSAG, Nós Diario); ganchos falsos (divulgadores, medios) | Audiencia sin la que no hay datos que devolver | Crítica si hay un gancho malo con eco | **Política de ganchos pública** que nadie pueda citar como burla |
+| AGAL (reintegracionismo) y entorno lusófono | Solo si hay pista pt: que se trate el portugués como "idioma extranjero" o que se tome partido normativo | Puente con la lusofonía (Lei Paz-Andrade) | Interés o indiferencia | **Neutralidad amistosa**; no contactar al inicio |
+| *Transversal: pistas multilingües (§1.14)* | Doblaje y traducción con IA (ADA, AGPTI); pista es = salida del galego (A Mesa, sociolingüística); debate normativo (AGAL) | Más audiencia y escaparate del galego fuera de Galicia | Crítica si hay pista es o voz de actor | **Solo pt/en, galego original, sin es el primer año** |
 | Comunidad de hablantes | A (castellanismos, pronunciación), N | Más contenido para dormir en galego, hoy casi inexistente [R] | Mixta: comentarios de errores | **Comunidad de correctores** |
 
 ### 1.1 Proxecto Nós (USC: CiTIUS e ILG) y Gradiant
@@ -464,6 +525,88 @@ generado quejas.
 aceptado: en un nicho diminuto, una polémica con A Mesa o con Nós Diario cuesta más audiencia galegofalante de la que
 aporta un título agresivo, y además pone en riesgo el permiso de la voz (D4).
 
+### 1.14 Pistas multilingües ante o ecosistema
+
+**Qué se ha aprobado explorar.** El promotor aprobó (29-09-2026) explorar, en el mismo vídeo, una pista original en
+galego y pistas adicionales en **portugués, castellano e inglés**, hechas con **traducción automática gl→pt/es/en y
+voz sintética** (`contexto.md`). `plan-desatendido.md` §A.3-A.4 lo concreta: traducción con Nós MT (gl→es, gl→en,
+MIT) y con el LLM para el pt; voces Kokoro-82M (Apache-2.0) o Piper; controles automáticos M1-M6 sin revisión humana;
+orden pt-BR + en (fase 2) y es solo si el galego conserva ≥ 40 % del tiempo de visionado (fase 3). Técnicamente es
+**doblaje con IA sin revisión humana**. Es la decisión más delicada ante el ecosistema después de la voz de Brais, y
+esta sección la analiza actor por actor.
+
+**Cómo elige YouTube la pista (dato que cambia el análisis).** La ayuda oficial dice: *"The audio tracks will
+automatically default to the viewer's preferred language, which is determined by their watch history"* [F
+https://support.google.com/youtube/answer/13338784?hl=en]. No es el creador quien fija la pista por defecto: la fija el
+historial del espectador (que en la práctica suele coincidir con el idioma de la interfaz [S]). Consecuencias:
+- Un gallego que ve YouTube sobre todo en castellano (la mayoría: el 96,4 % de los mayores de 16 no consume
+  audiovisual sobre todo en galego [R `audiencia.md` §2.4]) **oiría por defecto la pista en castellano** si existe.
+  Tendría que cambiarla a mano para oír el galego, y para dormir nadie cambia nada [S].
+- Si **no hay pista en castellano**, ese mismo espectador oye la **pista original, que es la galega** [S: es el
+  comportamiento esperable cuando no hay pista en la lengua preferida; comprobarlo en Studio con una cuenta de
+  historial en castellano antes de la fase 2]. Es el argumento más fuerte para no tener pista es: **sin ella, el
+  canal expone al galego a quien no lo elegiría; con ella, le da una salida automática**.
+- El galego existe en el selector de idioma de la ayuda de YouTube, pero **no está confirmado que sea un idioma
+  admitido como pista o como idioma original del vídeo** [P, misma página]. Si no lo es, todo este apartado sobra
+  (`plan-desatendido.md` §A.3.1 lo comprueba en 5 min).
+
+**Postura previsible de cada actor [S, salvo lo marcado F].**
+
+| Actor | Qué le molestaría | Qué le podría interesar | Postura previsible |
+|---|---|---|---|
+| **ADA** (dobraxe) | Es literalmente "dobraxe con IA". En el caso RTVE la IA doblaba **al** galego; aquí dobla **desde** el galego, así que no quita trabajo a la dobraxe galega [S]. Pero si una pista usa la voz de un actor de dobraxe (Brais clonado a otra lengua, o una voz base de un profesional), el conflicto es directo | Nada, salvo que el canal diga en público que no usa voces de actores | Crítica si hay voz de actor o pista es; **indiferencia probable con pt/en y voces sin actor** |
+| **AGPTI** (traducción) | Traducción automática sin revisión, publicada: es el núcleo de su decálogo (textos mediocres, sustitución, corpus "expropiados") [F https://www.agpti.org/defender-o-noso-traballo-e-defender-unha-sociedade-humana/]. Sus socios traducen gl↔es sobre todo, y también gl→pt/en | Un compromiso de revisión profesional de las pistas si hay ingresos | **Crítica** si se entera por terceros; la pista es es la que más les toca (su par de lenguas principal) |
+| **A Mesa** y la sociolingüística activista | La pista es: un canal "pro lingua" que ofrece el castellano por defecto a los gallegos castellanohablantes **refuerza la sustitución** en vez de invertirla. Mismo argumento que contra el doblaje de RTVE (calidad) más uno nuevo (función de la lengua) | Pistas pt/en que muestren fuera que el galego produce cultura | **Crítica segura con pista es**; neutral o favorable con pt/en si el galego es el original visible |
+| **AGAL** (reintegracionismo) y Academia Galega da Língua Portuguesa | Una pista pt presentada como "tradución a outro idioma" contradice su tesis de que galego y portugués son la misma lengua; una pista pt-BR "de asistente" puede leerse como desprecio a la variedad europea, la más próxima | La **Lei 1/2014 Paz-Andrade** (aprobada por unanimidad en el Parlamento, para el aprovechamiento de la lengua portuguesa y los vínculos con la lusofonía) [F https://gl.wikipedia.org/wiki/Lei_Paz-Andrade], cuya aplicación AGAL denuncia como escasa [F https://praza.gal/cultura/denuncian-o-nulo-desenvolvemento-da-lei-paz-andrade-catro-anos-despois-da-sua-aprobacion]: un canal que lleva Galicia al público lusófono encaja en su programa | **Oportunidad** si la pista se presenta como puente y no como traducción "a lingua estranxeira"; **riesgo** de quedar atrapado en el debate normativo si el canal opina |
+| **Aislacionismo normativo** (entorno RAG-ILG) | Que el canal, que declara norma RAG-ILG, parezca tomar partido reintegracionista por tener pista pt | Nada específico | Indiferencia, salvo que el canal opine sobre normativa |
+| **CSAG** | Poco: no compite. Riesgo de confusión si las pistas usan marca o archivo de la TVG (prohibido ya, §1.2) | Referencia de cómo llevar contenido galego a la diáspora y a la lusofonía [S] | Indiferencia |
+| **Proxecto Nós** | Que su voz Brais acabe hablando portugués o inglés (uso no previsto, y el locutor no lo consintió); que sus modelos MT se usen para producir la pista es que desplaza al galego | **Errores reales de su MT gl→es/gl→en** en dominio histórico: la prueba del plan ya encontró "acomódate" → "acuérdate" y "Rocha Forte" → "Roca Forte" [R `plan-desatendido.md` §A.3.3]. Es un dato de evaluación que pueden usar | **Interés técnico** si se les cuenta antes y la voz de Brais queda fuera; molestia si lo descubren después |
+| **Comunidad de hablantes** | Oír una pista es por defecto sin saber que existe la galega; ver comentarios en castellano o portugués desplazando a los de galego | Orgullo de ver "feito orixinalmente en galego" ante público de fuera | Mixta |
+
+**Reglas (propuesta para `plan-desatendido.md` §A.3.5 y §A.4; algunas endurecen el plan).**
+
+1. **El galego es siempre la pista original** del vídeo y el **idioma declarado del vídeo** en Studio. Si Studio no
+   admite el galego como idioma original, **no hay pistas** (no se declara el vídeo en castellano o portugués para
+   poder añadirlas).
+2. **Título, miniatura y descripción principal, en galego.** Traducciones de metadatos solo a pt y en (para que el
+   vídeo aparezca en esas búsquedas), nunca a es. La miniatura no lleva texto en otra lengua.
+3. **Ninguna pista en castellano el primer año**, pase lo que pase con las métricas. Esto sustituye la fase 3 de
+   `plan-desatendido.md` §A.4 (es condicionada a L ≥ 40 %) por una revisión **a los 12 meses** que exige además:
+   que no haya alarmas A7, A9 o A10 abiertas, que A Mesa o AGPTI no hayan criticado el canal, y una decisión explícita
+   del promotor. Motivo: con la pista es el canal pierde el argumento *pro lingua* ante el actor que más lo examinará,
+   a cambio de competir en el mercado ya cubierto por Relatos al Oído con peor voz [R `plan-desatendido.md` §A.3.2].
+   Coste: renunciar a la pista que más vistas podría sumar [S].
+4. **Solo pt y en en la fase 2**, y el pt primero. Para el ecosistema galego, **pt-PT es preferible a pt-BR** (la
+   variedad europea es la más próxima al galego y la que AGAL y la Lei Paz-Andrade tienen en mente) [S]; el plan elige
+   pt-BR por mercado y licencia (Kokoro). Propuesta: pt-BR en la prueba, y pt-PT si se aclara la licencia de la voz
+   base de Piper `tugão` (`plan-desatendido.md` §A.3.3).
+5. **Ninguna voz de actor de dobraxe en las pistas traducidas.** La voz de Brais (y la de Celtia) **nunca** se usa ni
+   se clona para otras lenguas. Las voces de las pistas tienen que tener origen documentado y no ser de actores de
+   dobraxe: antes de publicar, anotar en la página de transparencia de quién son los datos de cada voz Kokoro o Piper;
+   **si el origen no está documentado, esa voz no se usa** [S: las fichas de Kokoro no detallan la procedencia de cada
+   voz; comprobar].
+6. **Frase de apertura fija en cada pista, neutral en lo normativo:** pt *"Este vídeo foi feito originalmente em
+   galego, a língua da Galiza. Pode ouvi-lo em galego mudando a faixa de áudio."*; en *"This video was originally made
+   in Galician, the language of Galicia. You can listen to it in Galician by switching the audio track."* Sin decir si
+   galego y portugués son la misma lengua o lenguas hermanas: el canal no opina de normativa.
+7. **Transparencia de la traducción:** la descripción de cada pista dice *"tradución e voz automáticas, sen revisión
+   humana"* en esa lengua, igual que el aviso del galego (`plan-desatendido.md` §7.2-7.3). Nunca "dobraxe" ni
+   "versión profesional".
+8. **Subtítulos:** en galego siempre; en pt y en solo si hay pista en esa lengua; **nunca subtítulos en castellano**
+   generados por el canal (la traducción automática de subtítulos de YouTube es cosa de YouTube, no del canal).
+9. **Comentarios:** respuestas del canal solo en galego (con una línea en pt o en si hace falta). Es donde se ve qué
+   lengua tiene el canal.
+10. **Métrica pública del galego:** el % de tiempo de visionado en la pista galega (L) se publica en el informe
+    trimestral. Si L < 25 %, se aplica ya el plan (solo pt) y se dice en público.
+
+**Cómo convierte esto el riesgo en apoyo.** Con estas reglas, el mensaje ante el ecosistema es: *"o galego é a lingua
+orixinal e a única por defecto para quen non ten outra pista; as pistas en portugués e inglés levan a Galicia e o
+galego a quen non o fala, e non hai pista en castelán porque o público galego xa o ten todo en castelán"*. Ante AGAL
+y el entorno de la Lei Paz-Andrade es un caso práctico de vínculo con la lusofonía; ante Nós, una fuente de errores de
+su MT; ante ADA, ninguna voz de actor; ante AGPTI, el compromiso de revisión profesional de las pistas si hay ingresos
+(después de la revisión del galego). Lo que **no** se puede neutralizar es que es traducción automática publicada sin
+revisar: AGPTI lo seguirá viendo mal, y hay que aceptarlo.
+
 ---
 
 ## 2. La tesis del promotor, examinada
@@ -491,8 +634,10 @@ aporta un título agresivo, y además pone en riesgo el permiso de la voz (D4).
 | **5. Métricas públicas del pipeline** | Por episodio: WER del control ASR, canarios detectados, castellanismos detectados, frases bloqueadas; comparación Carballo vs. *frontier* (§2.3) | **Medio:** es una medida continua y pública del estado de la IA abierta en galego | Metodología estable y publicada | ~0 (ya se genera) |
 | **6. Pipeline libre** | Código en `herramientas/pipeline/`, documentado en galego | **Medio:** baja la barrera para que otros hagan contenido en galego con Nós | Licencia libre; que funcione fuera de este entorno | 5-10 h una vez |
 | **7. Guiones CC BY** | Los textos de cada episodio | **Bajo o negativo como corpus:** galego sintético sin revisar | Solo si van **etiquetados como sintéticos** y separados; útiles como material de evaluación, **no** de entrenamiento | ~0 |
+| **8. Errores de la MT de Nós en dominio histórico** (solo si hay pistas, §1.14) | Cada frase que M1-M3 bloquean (ida y vuelta, nombres, cifras) al traducir gl→en con `Nos_MT-CT2-gl-en`, con original, salida y tipo de error; ejemplo real de la prueba: "Rocha Forte" → "Roca Forte" [R `plan-desatendido.md` §A.3.3] | **Medio:** mismo formato que su `erros_sistematicos_traducion_es_gl` [F], en un dominio (topónimos, nombres medievales) que ese conjunto no cubre [S] | Que los errores los confirme una persona antes de etiquetarlos como tales; **no** incluir errores de la pista es si no hay pista es | ~0,5 h/trimestre (sale del registro de M1-M3) |
 
-**Lectura honesta.** La tesis funciona si lo que se devuelve son **errores y evaluaciones** (1, 2, 3, 5), no
+**Lectura honesta.** La tesis funciona si lo que se devuelve son **errores y evaluaciones** (1, 2, 3, 5 y, con
+pistas, 8), no
 **contenido** (7). "Fomentar mellores modelos" no ocurre porque el canal exista; ocurre si alguien empaqueta los
 errores y Nós los usa. Con ~1 h/semana en régimen estable (D3), las aportaciones 1, 2 y 5 caben (≈ 1-2 h/mes); la 3
 necesita horas extra o un voluntario. **Si no se empaquetan, la tesis es solo retórica** y un crítico lo verá.
@@ -514,19 +659,37 @@ necesita horas extra o un voluntario. **Si no se empaquetan, la tesis es solo re
    (1 episodio/semana, nunca diario), **corregir rápido** y **medir en público** la tasa de error.
 4. **Uso de la voz de una persona sin su consentimiento explícito para este uso.** Mientras no haya respuesta de Nós
    y del locutor, el relato *pro lingua* se cae ante cualquier actor de dobraxe (§1.7).
+5. **Pistas traducidas: "pro lingua" que ofrece otra lengua por defecto.** Una pista en castellano convierte el canal
+   en un canal en castellano para la mayoría de sus espectadores gallegos (YouTube elige por historial, §1.14), y las
+   pistas en general son doblaje y traducción con IA sin revisión, lo mismo que se denunció a RTVE [F §1.6].
+   **Arreglo:** reglas del §1.14 (galego original, solo pt/en, sin es el primer año, ninguna voz de actor) y métrica
+   pública L (% del tiempo en galego). Con pt/en la contradicción baja a una tensión defendible: el galego no pierde
+   a nadie que hoy lo escuche, y gana visibilidad fuera. Con es, no hay arreglo.
 
 ### 2.4 Veredicto sobre la tesis
 
+**Opción elegida para las pistas (condiciona la tesis):** galego original y por defecto donde YouTube lo permite,
+pistas **solo en pt y en**, **ninguna en castellano el primer año** (§1.14). Con esa opción, la tesis queda así:
+
 **Versión defendible:** *"Serán é un laboratorio aberto: usa só ferramentas abertas de galego cando é posible, mide
 en público o que fallan e devólvello ao Proxecto Nós e á comunidade. Non substitúe a ninguén: onde hoxe non hai nada,
-proba canto se pode facer e canto falta."*
+proba canto se pode facer e canto falta. O galego é sempre a lingua orixinal; as pistas en portugués e inglés levan
+Galicia e o galego a quen non o fala, e non hai pista en castelán porque en castelán xa hai de todo."*
+
+**Si el promotor eligiera incluir la pista en castellano**, la última frase no se puede decir y la tesis *pro lingua*
+queda reducida a la parte de laboratorio (datos para Nós); ante A Mesa y la sociolingüística el canal pasa a ser
+"contido sobre Galicia con versión galega", no "contido en galego" [S]. Es una opción legítima como hobby, pero
+entonces **no debe presentarse como pro lingua**.
+
+**Y si la prueba del §0.1 manda parar** (M < 40), la tesis se reduce a lo que se entregue: informe de errores de voz,
+métricas y código. Es poco, pero es verificable.
 
 **Versión no defendible:** *"A IA fai historia de Galicia en galego para todos."* Promete calidad que no hay y se
 compara con el trabajo humano.
 
 Probabilidad de que la tesis se sostenga públicamente si se cumplen las condiciones del §2.3 y el §4: **media** [S].
-Si no se cumplen (voz sin permiso, LLM cerrado sin comparación, errores sin corregir): **baja**, y el canal sería un
-argumento más contra la IA en galego.
+Si no se cumplen (voz sin permiso, LLM cerrado sin comparación, errores sin corregir, pista en castellano): **baja**,
+y el canal sería un argumento más contra la IA en galego.
 
 ---
 
@@ -568,6 +731,7 @@ Relojes: S0 = esta semana (29-09-2026). M0 = primera publicación (≈ 8-10 sema
 | **2. Aviso previo** | M0 − 1 semana | AGPTI y ADA (solo si Nós y el locutor dijeron sí) | Carta informativa breve: qué es, qué voz y con qué permiso, compromiso de revisión profesional si hay ingresos | Pedir apoyo o aval | Que se enteren por el canal, no por la prensa |
 | **3. Comunidad técnica** | M0 | Trasno, GALPon, AGASOL, Common Voice gl | Publicar el código y un artículo técnico en galego; invitar a revisar la lista de castellanismos | Presentarlo como "producto" | Primeros correctores y usuarios del pipeline |
 | **4. Lanzamiento discreto** | M0 | Público | 3 episodios; aviso hablado; etiqueta sintética; "Para saber máis" con divulgadores humanos | Contactar a A Mesa, RAG, CSAG, medios | Primeras correcciones reales |
+| **4-bis. Pistas pt/en** | ≈ semanas 12-17 (fase 2 de `plan-desatendido.md` §A.4), solo si la fase 1 no da PARADA, Nós ya respondió sobre la voz y no hay alarmas A7/A9 abiertas | Público; Nós (aviso en el informe) | Pistas pt y en en 4 episodios con las reglas del §1.14; página de transparencia con el origen de cada voz; L publicado | Pista es; voz de Brais u otra de actor en las pistas; contactar a AGAL antes de tener datos | Saber si las pistas suman sin desplazar al galego (R ≥ 1,3 con L ≥ 25 %) |
 | **5. Primera devolución** | M0 + 3 meses | Nós | Informe de errores de voz + pares de corrección + métricas (§2.2) | Pedir respaldo público | Que Nós los use o los comente |
 | **6. Caso de estudio** | M0 + 6 meses (si P2 de `plan-desatendido.md` §9 da GO) | Código Cero / GCiencia; CCG (observatorio) | Datos agregados; propuesta de pieza técnica | Titulares de éxito | Titular "experimento aberto que mide a IA en galego" |
 | **7. Institucional** | Con tracción (P3) y revisión humana parcial | CSAG (convocatoria digital), SXL, RAG | Solo con identidad pública o entidad; con revisión lingüística profesional | Pedir dinero para un canal sin revisión | Financiar la revisión humana (lo que el plan v1 llamaba Puerta F) |
@@ -602,6 +766,12 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
   sustituir el tramo en ≤ 7 días, agradecer en erratas; 4 semanas solo con ganchos suaves y revisión de la lista de
   títulos. **Dos casos en un trimestre** → suspender los ganchos con cifra o contraste hasta revisar las reglas del
   §1.13 y el prompt.
+- **A10:** una entidad (A Mesa, AGPTI, ADA, AGAL) o un medio critica las pistas traducidas, **o** L (% del tiempo de
+  visionado en galego) baja del 25 % dos meses seguidos, **o** una pista resulta llevar la voz de un actor o una
+  traducción que cambia un hecho → se retiran las pistas de los vídeos afectados en ≤ 48 h (YouTube lo permite sin
+  tocar el vídeo), comentario fijado explicándolo en galego, y no se añaden pistas nuevas hasta revisar las reglas del
+  §1.14 con los datos. Si el motivo es L < 25 %, se aplica lo del plan (solo pt). Una segunda A10 en 6 meses →
+  canal solo en galego.
 
 ---
 
@@ -613,7 +783,7 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 - **Asunto:** Consulta sobre o uso da voz StyleTTS2 Brais nunha canle de divulgación en galego e oferta de datos de
   erros
 
-> Boas tardes:
+> Ola, bo día:
 >
 > Chámome [nome e apelidos] e escríbovos a título persoal. Estou a preparar, como afección e sen ánimo de lucro polo
 > de agora, unha canle de YouTube e pódcast de historia e cultura de Galicia en galego pensada para escoitar antes de
@@ -644,13 +814,22 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 >
 > A cambio, gustaríame devolvervos algo útil:
 >
-> - **Un informe trimestral de erros de pronuncia** en narración longa (a partir de 60 minutos seguidos): topónimos,
+> - **Un informe trimestral de erros de pronuncia** en narración longa (máis dunha hora seguida): topónimos,
 >   nomes medievais, vogais abertas e pechadas, números, cambios de prosodia ao longo do audio, con fragmentos de
 >   son e a forma correcta.
 > - **As correccións que faga a audiencia**, en pares "texto xerado / texto corrixido".
 > - **Un conxunto de preguntas de historia de Galicia con fonte**, por se vos serve para avaliar modelos.
 > - **O código de todo o proceso**, con licenza libre, e as métricas de cada episodio, incluída unha comparación
 >   entre os vosos modelos de lingua e outros pechados.
+>
+> Quero contarvos tamén unha cousa que aínda non está decidida. Se a canle ten público en galego, nunha segunda
+> fase gustaríame probar a engadir ao mesmo vídeo pistas de audio traducidas automaticamente ao portugués e ao
+> inglés, co galego sempre como lingua orixinal, título en galego e sen pista en castelán. Esas pistas serían
+> tradución e voz automáticas sen revisión humana, e diríase así nelas. **A voz de Brais non se usaría nunca nelas**:
+> nin se empregaría para outras linguas nin se clonaría; usaríanse outras voces sintéticas abertas que non sexan de
+> actores de dobraxe. Se para traducir ao inglés uso o voso modelo de tradución, enviaríavos tamén os erros que
+> atopen os controles automáticos (nunha primeira proba co voso modelo galego-castelán, por exemplo, "Rocha Forte"
+> saíu como "Roca Forte"). Se vedes algún problema nesta idea, agradecería que mo dixésedes.
 >
 > A canle publicarase co nome da canle e sen o meu nome. Pídovos, se non vos importa, que non fagades público quen
 > está detrás; vós si sabedes con quen falades, e contestarei a calquera cousa que precisedes.
@@ -678,6 +857,10 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 - Antes de enviar, escuchar Sabela, Icía e Iago en un tramo de narración: el correo las nombra como alternativa y
   conviene saber si aguantan.
 - Revisar el texto con un galegofalante antes de enviarlo (es el primer "producto" que verá Nós).
+- El párrafo de las pistas **no es opcional**: si se callara y Nós lo descubriera después, el correo que presume de
+  transparencia quedaría en entredicho. Si el promotor decidiera incluir pista en castellano, hay que cambiar "sen
+  pista en castelán" antes de enviar, no después. El ejemplo "Rocha Forte" → "Roca Forte" es real: salió de la
+  prueba con el modelo gl→es de Nós (`plan-desatendido.md` §A.3.3).
 
 ---
 
@@ -695,6 +878,7 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 | E8 | Divulgadores acusan de usar su trabajo | Baja / medio | Dossier solo con Galipedia y dominio público; "Para saber máis" | §1.10 |
 | E9 | Los datos prometidos nunca se entregan (falta de horas) | **Alta** con 1 h/semana / medio | Automatizar la exportación de errores y métricas en el pipeline; compromiso mínimo: informe de voz trimestral | §2.2 |
 | E10 | Gancho falso o estigmatizante (tópico de la Galicia atrasada o mísera, burla de la gente del pasado, leyenda como hecho) en título, miniatura o primeros 120 s | **Media** con ganchos generados por LLM sin revisión / **alto** (es lo más visible y lo más citable; puede costar el permiso de la voz) | Reglas y lista de títulos del §1.13; gancho 100 % anclado (H1) y aprobado por H2; ASR completo en los primeros 120 s; política de ganchos pública; alarma A9 | §1.13, §4 |
+| E11 | Las pistas traducidas se leen como "dobraxe con IA" o como salida del galego: crítica de A Mesa/AGPTI/ADA, voz de un actor en una pista, galego marginal (L < 25 %) o el canal atrapado en el debate normativo por la pista pt | **Media** si hay pista es o voz sin origen documentado; **baja** con las reglas del §1.14 / **alto** (afecta a la tesis *pro lingua* y al permiso de la voz) | Solo pt/en; nada de es el primer año; galego original; voces sin actor y con origen documentado; Brais nunca en pistas; frase de apertura neutral en lo normativo; L público; alarma A10 | §1.14, §2.3, §4 |
 
 ---
 
@@ -714,6 +898,14 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 8. Que los ganchos dignos del §1.13 no pierden tanto CTR frente a los crudos como para anular el canal [S; medir con
    las pruebas A/B de miniaturas de YouTube desde el primer mes].
 9. Que el locutor de Brais acepta el tono vivo del inicio y no solo el sereno [S; se pregunta en el correo, §5].
+10. Que, sin pista en la lengua preferida del espectador, YouTube reproduce la pista original (galego) [S; comprobar
+    con una cuenta de historial en castellano antes de la fase 2]. Si reprodujera otra cosa, la regla 3 del §1.14
+    pierde su argumento principal.
+11. Que el galego es un idioma admitido como pista y como idioma original en Studio [S; `plan-desatendido.md` §A.3.1].
+12. Que las voces Kokoro/Piper de las pistas tienen origen documentado y no son de actores de dobraxe [S; revisar
+    fichas antes de la fase 2].
+13. Que AGAL y el entorno lusófono ven la pista pt como puente y no como "tradución a lingua estranxeira" [S; sin
+    contacto previo; observar reacciones].
 
 ---
 
@@ -744,5 +936,7 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 - A Mesa, "emerxencia lingüística" (24-09-2026): https://www.nosdiario.gal/articulo/lingua/mesa-sinala-que-emenda-ao-plan-do-pp-sigue-vetando-galego-nas-aulas/20260924133755267588.html
 - Trasno y Common Voice: https://trasno.gal/2021/02/07/proxecto-common-voice-en-galego/ ; AGASOL: https://www.agasol.gal/ ; https://www.conselleriadefacenda.gal/-/a-xunta-colabora-con-agasol-para-promover-o-uso-do-software-libre-no-tecido-empresarial-galego
 - Divulgación: https://podgalego.agora.gal/descifrando-a-historia/ ; https://historiadegalicia.gal/ ; https://gl.wikipedia.org/wiki/Miguel_%C3%81ngel_Cajigal_Vera ; https://obradoirodixitalgalego.gal/comunidade/
+- YouTube, pistas de audio multilingües (pista por defecto según el historial): https://support.google.com/youtube/answer/13338784?hl=en
+- Lei 1/2014 Paz-Andrade: https://gl.wikipedia.org/wiki/Lei_Paz-Andrade ; https://consellodacultura.gal/detalle-material.php?id=83771 ; AGAL y otras entidades sobre su escasa aplicación: https://praza.gal/cultura/denuncian-o-nulo-desenvolvemento-da-lei-paz-andrade-catro-anos-despois-da-sua-aprobacion
 - Reutilizado: `../../gauntlet/investigacion/voz_guion.md`, `audiencia.md`, `ingresos_alt.md`;
-  `../../gauntlet/piezas/gtm_riesgos.md`; `plan-desatendido.md`.
+  `../../gauntlet/piezas/gtm_riesgos.md`; `plan-desatendido.md` (§A: nicho y multi-audio); `../medidas/nicho/`.
