@@ -1,0 +1,316 @@
+{
+ "data": "2026-09-29",
+ "tema": "irmandinos-apertura",
+ "sinais_no_guion_limpo": [
+  [
+   "languagetool",
+   "...erán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Duran..."
+  ],
+  [
+   "languagetool",
+   "...ñas formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade..."
+  ]
+ ],
+ "detectados": 16,
+ "total": 20,
+ "pct": 80.0,
+ "por_familia": {
+  "castelanismo": "5/5",
+  "data": "5/5",
+  "nome": "4/5",
+  "sen_fonte": "2/5"
+ },
+ "segundos": 55.8,
+ "canarios": [
+  {
+   "familia": "castelanismo",
+   "erro": "Hoy só se escoita",
+   "fragmento": "Hoy",
+   "detectado": true,
+   "por": [
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...e a planta dos muros, debuxada no chan. Hoy só se escoita a choiva lenta sobre as f..."
+    ]
+   ]
+  },
+  {
+   "familia": "castelanismo",
+   "erro": "e, lejos, algún paxaro",
+   "fragmento": "lejos",
+   "detectado": true,
+   "por": [
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...coita a choiva lenta sobre as follas e, lejos, algún paxaro.  Aquela fortaleza chamáb..."
+    ]
+   ]
+  },
+  {
+   "familia": "castelanismo",
+   "erro": "xa hacia o final",
+   "fragmento": "hacia",
+   "detectado": true,
+   "por": [
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...mpos difíciles que viñeran antes. E, xa hacia o final, lembraremos o que contaron moi..."
+    ]
+   ]
+  },
+  {
+   "familia": "castelanismo",
+   "erro": "Os tempos, sen embargo, eran difíciles",
+   "fragmento": "embargo",
+   "detectado": true,
+   "por": [
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "... formaran foron castigados.  Os tempos, sen embargo, eran difíciles, porque desde a peste n..."
+    ]
+   ]
+  },
+  {
+   "familia": "castelanismo",
+   "erro": "ao borde da pobreza",
+   "fragmento": "borde",
+   "detectado": true,
+   "por": [
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...itas familias labregas vivían sempre ao borde da pobreza.  O señor era tamén o xuíz n..."
+    ]
+   ]
+  },
+  {
+   "familia": "data",
+   "erro": "metade do século catorce",
+   "fragmento": "catorce",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "século catorce | Arredor da metade do século catorce, Galicia era unha terra de labregos, de artesáns, de mariñeiros e de mercadores."
+    ]
+   ]
+  },
+  {
+   "familia": "data",
+   "erro": "Había xa dous séculos",
+   "fragmento": "dous",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "dous | Había xa dous séculos que mandaba unha nobreza nova, máis violenta ca a de antes, e o país enchérase de fortalezas."
+    ]
+   ]
+  },
+  {
+   "familia": "data",
+   "erro": "Trinta anos antes",
+   "fragmento": "Trinta",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "trinta | Trinta anos antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e camiñaran xuntos cara a Compostela."
+    ]
+   ]
+  },
+  {
+   "familia": "data",
+   "erro": "Desde mil catrocentos setenta e sete,",
+   "fragmento": "setenta",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...erán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Desde..."
+    ],
+    [
+     "h1_lexico",
+     "mil catrocentos setenta e sete | Desde mil catrocentos setenta e sete, labregos, artesáns, mariñeiros, clérigos e mesmo algúns fidalgos xuntáronse nunha irmandade e botaron abaixo moitas das torres do país."
+    ]
+   ]
+  },
+  {
+   "familia": "data",
+   "erro": "Cen anos despois, as testemuñas",
+   "fragmento": "Cen",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "cen | Cen anos despois, as testemuñas aínda lles chamaban refuxios de malfeitores."
+    ]
+   ]
+  },
+  {
+   "familia": "nome",
+   "erro": "como a de Moscoso ou a de Andrade",
+   "fragmento": "Moscoso",
+   "detectado": true,
+   "por": [
+    "h1_lexico",
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...ran das grandes casas nobres, como a de Moscoso ou a de Andrade. Outras eran dos bispos..."
+    ],
+    [
+     "h1_lexico",
+     "Moscoso | Algunhas eran das grandes casas nobres, como a de Moscoso ou a de Andrade."
+    ]
+   ]
+  },
+  {
+   "familia": "nome",
+   "erro": "como a de Andrade ou a de Lemos, e sobre todo a de Lemos",
+   "fragmento": "Lemos",
+   "detectado": false,
+   "por": [],
+   "sinais_novos": []
+  },
+  {
+   "familia": "nome",
+   "erro": "e era do bispo de Lugo",
+   "fragmento": "Lugo",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "Lugo | Aquela fortaleza chamábase a Rocha Forte, e era do bispo de Lugo."
+    ]
+   ]
+  },
+  {
+   "familia": "nome",
+   "erro": "dun gran señor do Morrazo",
+   "fragmento": "Morrazo",
+   "detectado": true,
+   "por": [
+    "h1_lexico",
+    "languagetool"
+   ],
+   "sinais_novos": [
+    [
+     "languagetool",
+     "...das antes, os vasalos dun gran señor do Morrazo formaran unha irmandade e camiñaran xun..."
+    ],
+    [
+     "languagetool",
+     "...azo formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade..."
+    ],
+    [
+     "h1_lexico",
+     "Morrazo | Unhas décadas antes, os vasalos dun gran señor do Morrazo formaran unha irmandade e camiñaran xuntos cara a Compostela."
+    ]
+   ]
+  },
+  {
+   "familia": "nome",
+   "erro": "rendas dos señores viñan minguando en toda Castela",
+   "fragmento": "Castela",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "Castela | Os tempos, ademais, eran difíciles, porque desde a peste negra as rendas dos señores viñan minguando en toda Castela."
+    ]
+   ]
+  },
+  {
+   "familia": "sen_fonte",
+   "erro": "e botárona abaixo. O arcebispo gardaba alí un tesouro de moedas de ouro.",
+   "fragmento": "tesouro",
+   "detectado": false,
+   "por": [],
+   "sinais_novos": []
+  },
+  {
+   "familia": "sen_fonte",
+   "erro": "foron castigados. Os labregos levaban tres días sen durmir cando chegaron.",
+   "fragmento": "tres",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "tres | Os labregos levaban tres días sen durmir cando chegaron."
+    ]
+   ]
+  },
+  {
+   "familia": "sen_fonte",
+   "erro": "e botárona abaixo. Contan que a última pedra caeu nunha noite de lúa chea.",
+   "fragmento": "lúa",
+   "detectado": false,
+   "por": [],
+   "sinais_novos": []
+  },
+  {
+   "familia": "sen_fonte",
+   "erro": "foron castigados. Despois, moitos señores fuxiron a Portugal.",
+   "fragmento": "Portugal",
+   "detectado": true,
+   "por": [
+    "h1_lexico"
+   ],
+   "sinais_novos": [
+    [
+     "h1_lexico",
+     "Portugal | Despois, moitos señores fuxiron a Portugal."
+    ]
+   ]
+  },
+  {
+   "familia": "sen_fonte",
+   "erro": "coma unha semente que agarda outra primavera. Aquela foi a revolta máis grande de toda Europa.",
+   "fragmento": "grande",
+   "detectado": false,
+   "por": [],
+   "sinais_novos": []
+  }
+ ]
+}
