@@ -58,3 +58,17 @@ Cómo aplicarlo sin romper el formato para dormir (fórmula de "embudo"):
   (curiosidades tranquilas, sin sobresaltos ni gritos).
 - Los ganchos deben ser **verdaderos** (nada inventado para impactar) y en galego natural, no calcos del castellano.
 - Reflejarlo en el pipeline (prompts de guion, ritmo de la voz y de los cortes), en el vídeo de ejemplo y en el plan.
+
+## Directriz del promotor sobre temas y tono (29-09-2026) — PRIORITARIO
+- **Ganchos solo al principio** (título, miniatura, primeros 60-120 s); después, bajada al tono de dormir.
+- **Temas ampliados a toda Galicia**, no solo historia medieval: mitos, lendas (Santa Compaña, meigas, mouras…), el mar,
+  castros, Camino, vida cotidiana de antes y **el porqué de la idiosincrasia galega** (retranca, morriña, minifundio,
+  emigración, etc.). El catálogo del plan y del pipeline debe reflejarlo.
+- **Prioridad: enganchar y ser atractivo audiovisualmente**, por encima de la exhaustividad. Nada de "chapa histórica
+  aleccionadora y ultrarrigurosa que nadie quiera consumir". Pero **sin perder rigor**: nada falso ni inventado; lo
+  legendario se presenta como leyenda; si algo es dudoso se dice o se omite.
+- **Contexto de mercado:** el promotor duda de que el nicho exista ("¿a quién le importan los irmandiños y cuántos se
+  duermen con vídeos de YouTube?"). El plan debe responderlo con cifras (3,59 % de consumo audiovisual en galego; 2.000-20.000
+  oyentes atendibles; ninguna competencia directa; demanda de "Galicia para dormir" en castellano) y con la ampliación de temas.
+- **Pistas de audio multilingües** (gl original + es/pt en el mismo vídeo): **aún no decidido por el promotor**; el plan
+  puede evaluarlas como opción con números, sin darlas por aprobadas.
