@@ -23,7 +23,7 @@ quedan en `--traballo` (por defecto `$SCRATCH/pipeline_work/<id>`) y cada etapa 
 | 3 | escenas | El LLM agrupa las frases en escenas de 12-20 s y escribe un prompt de imagen por escena | LLM, `prompts/escenas.md` |
 | 4 | voz | Narra frase a frase; pausas de 1,4 s entre frases y 2,4 s entre párrafos (≈124 palabras/min medidas); 4 s de lluvia antes de la voz y 6 s al final | Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC), escala de duraciones 1,25 (`escala` en la ficha); Cotovía para fonemas |
 | 5 | imaxes | Una imagen 1024x576 por escena, 4 pasos, bfloat16, semilla fija por escena | SDXL-Turbo (Stability AI Community License) con `diffusers` 0.35 |
-| 6 | son | Lluvia sintetizada por código (ruido filtrado + gotas de Poisson + rumor grave): no usa grabaciones de terceros, no hay licencia que anotar. Voz a -20 LUFS (medida en estéreo), lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
+| 6 | son | Lluvia sintetizada por código (ruido filtrado + gotas de Poisson + rumor grave): no usa grabaciones de terceros, no hay licencia que anotar. Voz a -17 LUFS (medida en estéreo; antes -20, cambiado para cumplir A2 del plan), lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
 | 7 | montaxe | Ken Burns lento (zoom 1,00-1,12 o paneo), niebla animada semitransparente, viñeta, fundidos encadenados de 3 s, fundido de entrada y salida; x264 CRF 22 con tope de 1,1 Mb/s; AAC 128 kb/s; subtítulos `mov_text` en pista `glg` | PIL, numpy, ffmpeg de `imageio-ffmpeg` (el ffmpeg del sistema no tiene codificadores) |
 | 8 | qa | Controles automáticos y hoja de contactos (abajo) | faster-whisper + Whisper turbo galego de Nós, LanguageTool, ffmpeg `ebur128` |
 
@@ -31,13 +31,14 @@ quedan en `--traballo` (por defecto `$SCRATCH/pipeline_work/<id>`) y cada etapa 
 
 | Control | Cómo | Puerta |
 |---|---|---|
-| Inteligibilidad | WER de ASR sobre la **mezcla final** (voz + lluvia) y sobre la voz sola, con `proxectonos/whisper-large-v3-turbo-gl-v1.0` convertido a CTranslate2 int8; WER por frase (frases > 0,5 = posible error de pronunciación) | WER mezcla ≤ 0,25 [S] |
+| Inteligibilidad | WER de ASR sobre la **mezcla final** (voz + lluvia) y sobre la voz sola, con `proxectonos/whisper-large-v3-turbo-gl-v1.0` convertido a CTranslate2 int8; WER por frase (frases > 0,5 = posible error de pronunciación) | WER mezcla ≤ 0,06 (A1 del plan; medido: 0,023 y 0,025 en las dos ejecuciones, 0,015 en 16 min) |
 | Sincronía subtítulos-voz | Marcas de tiempo por palabra del ASR alineadas con el texto (jiwer); % de palabras que caen dentro del intervalo de su frase en el SRT (±0,5 s) y desfase al inicio de frase | ≥ 95 % |
 | Sincronía A/V | Duración decodificada de la pista de vídeo y de audio | desfase ≤ 0,1 s |
 | Duración | Duración del vídeo | 180-300 s en esta muestra (3-5 min) |
 | Lengua | LanguageTool gl-ES (incluye hunspell); los nombres del dossier no cuentan como error ortográfico | ≤ 2 avisos tras la corrección [S] |
+| H1-léxico (`ancoraxe.py`) | Nombres propios y cantidades del guion que no están en el dossier, por palabra entera | 0 sin anclar |
 | Estilo del canal | Sin cifras ni signos que la voz no lea, sin preguntas, sin "imaxina"/CTA, aviso y fórmula literales, frases de 8-25 palabras, nombres propios nuevos por cada 110 palabras | sin cifras/signos/vetadas; aviso y fórmula presentes |
-| Sonoridad | `ebur128` sobre el MP4 (integrado, LRA, pico real) | -24 a -18 LUFS |
+| Sonoridad | `ebur128` sobre el MP4 (integrado, LRA, pico real) | -18 a -16 LUFS (A2 del plan). El `video/ejemplo.mp4` actual mide -20,0 LUFS y **no pasaría**: hay que rehacer las etapas 6-8 (borrar la caché de la etapa 6); con +3 dB mide -17,0 LUFS |
 | Imágenes | Luminancia, contraste y similitud con la anterior (para detectar negras, lavadas o repetidas) | informativo |
 | Peso y formato | MB, resolución, fps, pista de subtítulos | ≤ 50 MB, 1920x1080 |
 

@@ -1,5 +1,5 @@
 """Etapa SON: choiva sintetizada (procedural, sen mostras de terceiros: sen licenza que anotar)
-e mestura coa voz. Voz a -20 LUFS (medida en estéreo); choiva 17 dB por debaixo; fundidos de entrada e saída."""
+e mestura coa voz. Voz a -17 LUFS (medida en estéreo; porta A2 do plan: -18 a -16); choiva 17 dB por debaixo; fundidos de entrada e saída."""
 import numpy as np, soundfile as sf
 from scipy import signal
 import pyloudnorm as pyln
@@ -32,7 +32,7 @@ def choiva(dur, seed=7):
     return out / np.abs(out).max() * 0.5
 
 
-def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-20.0, rel_choiva=-17.0):
+def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiva=-17.0):
     """voz: array mono 24 kHz (sen o offset). Devolve datos de sonoridade."""
     v = signal.resample_poly(voz, 2, 1).astype(np.float32)
     n = int(dur_total * SR)

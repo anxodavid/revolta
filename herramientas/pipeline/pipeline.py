@@ -31,8 +31,10 @@ CFG = {
     'whisper_dir': os.environ.get('WHISPER_DIR', f'{SCRATCH}/bench/wgl_ct2'),
 }
 OFFSET, GAP_FRASE, GAP_PAR, COLA = 4.0, 1.4, 1.0, 6.0   # segundos
-UMBRAIS = {'dur_min_s': 180, 'dur_max_s': 300, 'wer_max': 0.25, 'desfase_av_max_s': 0.1,
-           'pct_sincronia_min': 95.0, 'mb_max': 50, 'lt_max': 2, 'lufs': (-24, -18)}
+# Umbrais aliñados co plan (plan-de-negocio/gauntlet2/piezas/plan-desatendido.md §6.1): A1 WER <= 6 %,
+# A2 sonoridade integrada entre -18 e -16 LUFS, H1 0 nomes/cantidades sen ancorar no dossier.
+UMBRAIS = {'dur_min_s': 180, 'dur_max_s': 300, 'wer_max': 0.06, 'desfase_av_max_s': 0.1,
+           'pct_sincronia_min': 95.0, 'mb_max': 50, 'lt_max': 2, 'lufs': (-18, -16), 'h1_non_ancorados_max': 0}
 
 TEMPOS = {}
 
@@ -194,6 +196,8 @@ def main():
                'imaxes_xeracion_s': info.get('imaxes_xeracion_s')}
         res['lingua_antes_correccion'] = info['lt_antes']
         res['lingua'] = qa.lingua(guion, dossier=tema['dossier'])
+        import ancoraxe
+        res['h1_ancoraxe'] = ancoraxe.ancoraxe(guion, tema['dossier'], [tema['aviso']])
         res['estilo'] = qa.estilo(guion, frases, tema['aviso'], tema['palabras'])
         res['asr'] = qa.asr(str(W / 'mestura.wav'), str(W / 'voz_linea.wav'), frases, tempos, CFG['whisper_dir'])
         res['ficheiro'] = qa.ficheiro(mp4, dur)
@@ -213,6 +217,7 @@ def main():
         'sincronia_av': f['desfase_av_s'] <= UMBRAIS['desfase_av_max_s'],
         'sincronia_subtitulos': res['asr']['mestura']['sincronia']['pct_dentro_da_sua_frase'] >= UMBRAIS['pct_sincronia_min'],
         'lingua_lt': len(res['lingua']) <= UMBRAIS['lt_max'],
+        'h1_ancoraxe': len(res['h1_ancoraxe']['non_ancorados']) <= UMBRAIS['h1_non_ancorados_max'],
         'estilo': not (res['estilo']['cifras'] or res['estilo']['signos_prohibidos'] or res['estilo']['palabras_vetadas'])
                   and res['estilo']['aviso_literal'] and res['estilo']['formula_literal'],
         'sonoridade': UMBRAIS['lufs'][0] <= f['lufs_integrado'] <= UMBRAIS['lufs'][1],
