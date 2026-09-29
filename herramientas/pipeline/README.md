@@ -21,9 +21,9 @@ quedan en `--traballo` (por defecto `$SCRATCH/pipeline_work/<id>`) y cada etapa 
 | 1 | guion | Escribe el texto narrado solo con datos del dossier | LLM, `prompts/guion.md` (ver abajo) |
 | 2 | corrixir | LanguageTool gl-ES revisa el guion; si hay avisos, el LLM corrige (una vuelta) | LanguageTool 6.8 (LGPL-2.1) con hunspell gl; `prompts/corrixir.md` |
 | 3 | escenas | El LLM agrupa las frases en escenas de 12-20 s y escribe un prompt de imagen por escena | LLM, `prompts/escenas.md` |
-| 4 | voz | Narra frase a frase; pausas de 0,7 s entre frases y 1,6 s entre párrafos; 4 s de lluvia antes de la voz y 6 s al final | Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC), escala de duraciones 1,2; Cotovía para fonemas |
+| 4 | voz | Narra frase a frase; pausas de 1,4 s entre frases y 2,4 s entre párrafos (≈124 palabras/min medidas); 4 s de lluvia antes de la voz y 6 s al final | Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC), escala de duraciones 1,25 (`escala` en la ficha); Cotovía para fonemas |
 | 5 | imaxes | Una imagen 1024x576 por escena, 4 pasos, bfloat16, semilla fija por escena | SDXL-Turbo (Stability AI Community License) con `diffusers` 0.35 |
-| 6 | son | Lluvia sintetizada por código (ruido filtrado + gotas de Poisson + rumor grave): no usa grabaciones de terceros, no hay licencia que anotar. Voz a -21 LUFS, lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
+| 6 | son | Lluvia sintetizada por código (ruido filtrado + gotas de Poisson + rumor grave): no usa grabaciones de terceros, no hay licencia que anotar. Voz a -20 LUFS (medida en estéreo), lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
 | 7 | montaxe | Ken Burns lento (zoom 1,00-1,12 o paneo), niebla animada semitransparente, viñeta, fundidos encadenados de 3 s, fundido de entrada y salida; x264 CRF 22 con tope de 1,1 Mb/s; AAC 128 kb/s; subtítulos `mov_text` en pista `glg` | PIL, numpy, ffmpeg de `imageio-ffmpeg` (el ffmpeg del sistema no tiene codificadores) |
 | 8 | qa | Controles automáticos y hoja de contactos (abajo) | faster-whisper + Whisper turbo galego de Nós, LanguageTool, ffmpeg `ebur128` |
 
@@ -72,6 +72,14 @@ No es un modelo abierto: para el canal real hay que sustituirlo por uno de los a
 
 Rutas por defecto: las de la sesión del 29-09-2026 bajo `$SCRATCH`; se cambian con las variables de entorno de
 `CFG` en `pipeline.py`.
+
+## Medidas de la muestra (29-09-2026, ejecución limpia en `--traballo` vacío)
+
+Vídeo de 4 min 01 s, 15 imágenes, 36,6 MB, veredicto automático PUBLICABLE (9/9 puertas). Tiempo: 21,4 min de
+reloj y 0,73 h de CPU de núcleo (voz 4,1 min, imágenes 9,6 min de las que ≈6 min son la carga de SDXL-Turbo y
+≈16 s por imagen, montaje 5,1 min, QA 2,3 min). Extrapolación lineal a 60 min: ≈4,1 h de reloj y ≈8,8 h de CPU
+de núcleo [S]. Detalle en `plan-de-negocio/gauntlet2/video/qa.md`. Para regenerar solo el informe:
+`python pipeline.py --so-informe qa.json tema.yaml guion.txt qa.md`.
 
 ## Licencias a vigilar
 

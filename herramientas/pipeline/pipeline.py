@@ -163,6 +163,7 @@ def main():
         imgs, rex = imaxes.xerar(escenas, W / 'imaxes', seed_base=tema['id'])
         if rex:
             (W / 'imaxes' / 'rexistro.json').write_text(json.dumps(rex, ensure_ascii=False, indent=1))
+        info['imaxes_xeracion_s'] = sum(x['s'] for x in rex)   # sen a carga do modelo
     save_t()
 
     # 6 son
@@ -189,7 +190,8 @@ def main():
     # 8 qa
     with Etapa('8_qa'):
         import qa
-        res = {'umbrais': UMBRAIS, 'son': info['son'], 'llm': info['llm']}
+        res = {'umbrais': UMBRAIS, 'son': info['son'], 'llm': info['llm'],
+               'imaxes_xeracion_s': info.get('imaxes_xeracion_s')}
         res['lingua_antes_correccion'] = info['lt_antes']
         res['lingua'] = qa.lingua(guion, dossier=tema['dossier'])
         res['estilo'] = qa.estilo(guion, frases, tema['aviso'], tema['palabras'])
@@ -282,11 +284,16 @@ def extrapolacion(r, minutos=60, s_por_imaxe=15.0):
         '2_corrixir': D / dur}
     L = [f'## Extrapolación a un episodio de {minutos} min [S: escala lineal dos tempos medidos]', '',
          f'Supostos: mesma densidade de texto, unha imaxe cada {s_por_imaxe:.0f} s ({n_d:.0f} imaxes), '
-         'custo de voz, montaxe e QA proporcional á duración, e LLM local non incluído.', '',
+         'custo de voz, montaxe e QA proporcional á duración (nas imaxes a carga do modelo cóntase unha vez), '
+         'e LLM local non incluído.', '',
          '| Etapa | Parede (min) | CPU (h de núcleo) |', '|---|---|---|']
     tp = tc = 0
     for k, fac in fila.items():
         p, c = g(k)['parede_s'] * fac / 60, g(k)['cpu_s'] * fac / 3600
+        xs = r.get('imaxes_xeracion_s')
+        if k == '5_imaxes' and xs:   # a carga do modelo paga unha vez; só a xeración escala
+            par = g(k)['parede_s']; p60 = (par - xs) + xs * fac
+            p, c = p60 / 60, g(k)['cpu_s'] * p60 / par / 3600
         tp += p; tc += c
         L.append(f'| {k} | {p:.0f} | {c:.2f} |')
     L += [f'| **Total** | **{tp:.0f}** ({tp / 60:.1f} h) | **{tc:.2f}** |', '']

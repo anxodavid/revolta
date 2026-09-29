@@ -122,6 +122,20 @@ Avisos antes da corrección automática: 3. Despois: 2.
 
 Tempo total de CPU: 0.73 h de núcleo; parede: 21.4 min. Non inclúe a descarga de modelos nin o tempo do LLM externo (ver LLM).
 
+## Extrapolación a un episodio de 60 min [S: escala lineal dos tempos medidos]
+
+Supostos: mesma densidade de texto, unha imaxe cada 15 s (240 imaxes), custo de voz, montaxe e QA proporcional á duración (nas imaxes a carga do modelo cóntase unha vez), e LLM local non incluído.
+
+| Etapa | Parede (min) | CPU (h de núcleo) |
+|---|---|---|
+| 4_voz | 62 | 0.84 |
+| 5_imaxes | 70 | 2.06 |
+| 6_son | 1 | 0.02 |
+| 7_montaxe | 77 | 4.77 |
+| 8_qa | 34 | 1.09 |
+| 2_corrixir | 3 | 0.04 |
+| **Total** | **248** (4.1 h) | **8.83** |
+
 ## LLM
 
 | Etapa | Caché | Metadatos |
