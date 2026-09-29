@@ -1,0 +1,170 @@
+== 1_guion
+== 2_corrixir
+== 3_voz
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1011: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+== 4_escenas
+== 5_imaxes
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1790724216.993258   22342 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790724217.028589   22342 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790724217.125901   22348 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790724217.210544   22348 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1790724225.970331   22344 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe   6 intento 0 revisado de novo: ['lume grande no exterior']
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:05,  1.02it/s]Loading pipeline components...:  29%|██▊       | 2/7 [00:01<00:03,  1.50it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:16<00:28,  7.25s/it]Loading pipeline components...:  57%|█████▋    | 4/7 [00:16<00:13,  4.45s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [00:16<00:02,  2.13s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:18<00:00,  1.97s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:18<00:00,  2.62s/it]
+imaxe   6 intento 1  25.3s + revisión 17.3s ['lume grande no exterior']
+imaxe   6 intento 2  25.8s + revisión 17.5s ['lume grande no exterior']
+imaxe   6 intento 3  31.8s + revisión 22.3s ['lume grande no exterior']
+imaxe   6 intento 4  29.2s + revisión 20.1s ['lume grande no exterior']
+imaxe   6 intento 5  26.3s + revisión 20.2s ok
+imaxe   7 intento 0 revisado de novo: ok
+imaxe   9 intento 0 revisado de novo: ['morte']
+imaxe   9 intento 1  28.7s + revisión 18.9s ok
+== 6_son
+== 7_montaxe
+== 8_qa
+publicable: False {'llm_local_desatendido': True, 'duracion': True, 'wer_mestura': True, 'sincronia_av': True, 'sincronia_subtitulos': True, 'lingua_lt': False, 'h1_ancoraxe': False, 'estilo': True, 'imaxes_revisadas': True, 'sonoridade': True, 'peso': True, 'resolucion': True}
+
+real	21m25.658s
+user	67m46.238s
+sys	8m7.160s

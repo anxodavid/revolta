@@ -1,0 +1,161 @@
+== 1_guion
+== 2_corrixir
+== 3_voz
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1011: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+== 4_escenas
+== 5_imaxes
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1790723936.683547   21068 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790723936.736145   21068 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790723936.813658   21073 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790723936.877100   21074 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1790723945.311430   21088 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00, 16.03it/s]Loading pipeline components...:  57%|█████▋    | 4/7 [00:13<00:11,  3.83s/it]Loading pipeline components...:  71%|███████▏  | 5/7 [00:14<00:06,  3.05s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [00:14<00:02,  2.23s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:15<00:00,  1.71s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:15<00:00,  2.15s/it]
+imaxe  16 intento 6  14.0s + revisión 12.6s ['tellados laranxas']
+imaxe  16 intento 7  17.8s + revisión 18.4s ok
+== 6_son
+== 7_montaxe
+/usr/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 7 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.11/multiprocessing/resource_tracker.py:267: UserWarning: resource_tracker: '/loky-21035-9cp4lkzs': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))

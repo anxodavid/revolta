@@ -1,0 +1,3 @@
+AVISOS  
+- [HUNSPELL_RULE] Atopouse un posíbel erro ortográfico | contexto: "...artesáns uníronse contra os señores das fortaleiras. A xente común botou abaixo torres con ..." | suxestións: fortaleceras, fortalecedoras, fornalleiras  
+- [HUNSPELL_RULE] Atopouse un posíbel erro ortográfico | contexto: "... de xente diversa derrubou castelos. As fortaleiras perderon fronte á unión popular." | suxestións: fortaleceras, fortalecedoras, fornalleiras

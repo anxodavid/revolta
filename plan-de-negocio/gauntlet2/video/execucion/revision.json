@@ -1,0 +1,963 @@
+{
+ "000-ea440dac": {
+  "ficheiro": "000-ea440dac-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "000-ea440dac-0.png",
+    "seed": 753514115,
+    "s": 27.4,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A diverse group of peasants, artisans, and nobles gather to dismantle a fortress under stormy skies**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of medieval knights gathered in a field with a castle in the background. The castle is made of stone and has a flagpole with a flag flying in front of it. The sky is cloudy and the ground is covered in green grass. The knights are dressed in traditional medieval clothing, with helmets and armor, and some are holding swords and shields. They appear to be engaged in a conversation. There are baskets of food and other items scattered around the field. The overall mood of the image is tense and somber.",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.6
+   }
+  ],
+  "version_revisor": 3
+ },
+ "001-bffe6f5b": {
+  "ficheiro": "001-bffe6f5b-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "001-bffe6f5b-0.png",
+    "seed": 1149587656,
+    "s": 19.4,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Laborers with wooden beams and stone hammers demolish the tower’s base in a rain-soaked courtyard**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men standing in a ruined street. The street is covered in rubble and debris, with wooden planks and rubble scattered around. In the background, there is a large stone building with a tower and a cloudy sky. The men are dressed in medieval-style clothing and appear to be engaged in a conversation. One of the men is holding a wooden cross, while the others are looking at it intently. The overall mood of the image is somber and desolate.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 13.7
+   }
+  ],
+  "version_revisor": 3
+ },
+ "002-c9fa2270": {
+  "ficheiro": "002-c9fa2270-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "002-c9fa2270-0.png",
+    "seed": 2777703885,
+    "s": 23.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Multitudes toppling granite walls with ropes, sledgehammers, and pickaxes at dawn**, natural light, detailed, painterly realism",
+    "problemas": [
+     "armas"
+    ],
+    "descricion": "The image shows a group of soldiers marching in a line in front of a stone building. The soldiers are dressed in traditional military uniforms and helmets, and some are carrying rifles. The building appears to be old and dilapidated, with broken windows and crumbling walls. The sky is blue and the ground is covered in rubble and debris. The scene appears to have been taken during a battle or a historical event. The overall mood of the image is tense and somber.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 15.2
+   },
+   {
+    "intento": 1,
+    "ficheiro": "002-c9fa2270-1.png",
+    "seed": 2833899614,
+    "s": 19.9,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Multitudes toppling granite walls with ropes, sledgehammers, and pickaxes at dawn**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men dressed in medieval clothing and helmets, engaged in a battle. They are standing in front of a stone wall, which appears to be part of a fort or a castle. The men are holding wooden sticks and ropes, and some are using them to secure themselves to the wall. The sky is blue and there are mountains in the background. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.4
+   }
+  ],
+  "version_revisor": 3
+ },
+ "003-86e1fb2d": {
+  "ficheiro": "003-86e1fb2d-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "003-86e1fb2d-0.png",
+    "seed": 1055987713,
+    "s": 20.6,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Armed villagers scale a crumbling keep while nobles flee on horseback through mist**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of medieval knights on horseback in front of a castle. The knights are dressed in full armor and helmets, and some are holding swords and shields. The castle is made of stone and has multiple towers and arches. The sky is cloudy and there is a dust cloud in the air, suggesting that the knights are in the midst of a battle. The ground is covered in rocks and there are trees in the background. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "castle",
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.5
+   }
+  ],
+  "version_revisor": 3
+ },
+ "004-50a10212": {
+  "ficheiro": "004-50a10212-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "004-50a10212-0.png",
+    "seed": 3254906581,
+    "s": 16.0,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A fractured fortress looms over a village square where rebels hoist banners of unity**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of medieval knights marching on a hill with a castle in the background. The knights are dressed in full armor and helmets, and some are holding flags and banners. The hill is covered in greenery and there are several buildings and structures scattered around. The sky is blue and the overall mood of the image is one of strength and determination. The image appears to be a scene from a medieval battle or battle.",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.0
+   }
+  ],
+  "version_revisor": 3
+ },
+ "005-38a2a84a": {
+  "ficheiro": "005-38a2a84a-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "005-38a2a84a-0.png",
+    "seed": 3023375303,
+    "s": 19.2,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Time-travelers stand before the ruins as dusk paints the sky in amber and slate gray**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people walking through an old, dilapidated castle ruins. The ruins are made of stone and appear to be in a state of disrepair, with broken windows and crumbling walls. The sky is a hazy orange color, indicating that the photo was taken at sunrise or sunset. The people in the image are dressed in medieval-style clothing, with some wearing long robes and others wearing cloaks. They are walking on a cobblestone path, and there are a few people visible in the background. The overall mood of the image is somber and desolate",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.5
+   }
+  ],
+  "version_revisor": 3
+ },
+ "006-32beff49": {
+  "ficheiro": "006-32beff49-5.png",
+  "escollida": 5,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "006-32beff49-0.png",
+    "seed": 1294076057,
+    "s": 18.5,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Crowds surround a burning keep, torches casting jagged shadows on mossy stones at nightfall**, natural light, detailed, painterly realism",
+    "problemas": [
+     "lume grande no exterior"
+    ],
+    "descricion": "The image shows a large group of people gathered around a large fire in a medieval town. The fire is burning brightly and the people are standing on a rocky hillside, with a castle-like structure on the right side of the image. The sky is dark and cloudy, and there are mountains in the background. The people are dressed in medieval clothing and appear to be engaged in a heated argument or protest. The scene is lit by the flames, creating a dramatic and intense atmosphere.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.5,
+    "problemas_revision_anterior": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "006-32beff49-1.png",
+    "seed": 1142130269,
+    "s": 25.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Crowds surround a burning keep, torches casting jagged shadows on mossy stones at nightfall**, natural light, detailed, painterly realism",
+    "problemas": [
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image shows a large group of people gathered around a large fire pit in a medieval town. The fire is burning brightly and there are several people holding torches in their hands. The people are dressed in medieval clothing and appear to be engaged in a battle. In the background, there are stone buildings and a castle-like structure with a tower. The sky is dark and cloudy, suggesting that the scene is taking place at night. The overall mood of the image is tense and intense.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 17.3
+   },
+   {
+    "intento": 2,
+    "ficheiro": "006-32beff49-2.png",
+    "seed": 1391973542,
+    "s": 25.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Crowds surround a burning keep, torches casting jagged shadows on mossy stones at nightfall**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image shows a group of people gathered around a large fire pit in a medieval setting. The fire is burning brightly and there are several people standing on top of it, some of them holding sticks. The people are dressed in dark clothing and appear to be engaged in a battle. In the background, there are ruins of a castle and a castle tower. The sky is dark and cloudy, suggesting that the scene is taking place at night. The overall mood of the image is tense and somber.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 17.5
+   },
+   {
+    "intento": 3,
+    "ficheiro": "006-32beff49-3.png",
+    "seed": 2123890569,
+    "s": 31.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Crowds surround a burning keep, torches casting jagged shadows on mossy stones at nightfall**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image shows a large group of people gathered around a bonfire in front of a castle. The castle is made of stone and has multiple towers with turrets and turrets. The sky is dark and cloudy, and there is a large amount of smoke rising from the fire. The people are holding sticks and appear to be engaged in a battle. The bonfire is burning brightly, and the people are dressed in medieval clothing. The overall mood of the image is tense and intense.",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 22.3
+   },
+   {
+    "intento": 4,
+    "ficheiro": "006-32beff49-4.png",
+    "seed": 2185998857,
+    "s": 29.2,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Crowds surround a burning keep, torches casting jagged shadows on mossy stones at nightfall**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image shows a large group of people gathered around a large fire pit in a medieval-style setting. The fire is burning brightly and the people are wearing long robes and hats, suggesting that it is a religious ceremony or procession. The background shows a stone building with arched windows and a tower, and there are mountains in the distance. The sky is orange and yellow, indicating that it has recently rained. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 20.1
+   },
+   {
+    "intento": 5,
+    "ficheiro": "006-32beff49-5.png",
+    "seed": 4157857903,
+    "s": 26.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking on a cobblestone street in a medieval village. The street is lined with stone buildings on both sides and there is a tall tower in the background. The tower appears to be made of stone and has a pointed top. The people are dressed in long robes and are walking in a line, with some walking towards the tower. The sky is overcast and there are trees and hills in the distance. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 20.2
+   }
+  ],
+  "version_revisor": 3
+ },
+ "007-d12934ae": {
+  "ficheiro": "007-d12934ae-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "007-d12934ae-0.png",
+    "seed": 1624851059,
+    "s": 16.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A council of rebels debates strategy by candlelight inside a half-ruined chapel’s nave**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a large room with arches and stained glass windows. The room appears to be a medieval or medieval castle with a high ceiling and stone floor. The people are dressed in dark robes and are gathered around a table with a fire burning on it. Some of them are holding candles, while others are looking at the fire. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 12.3,
+    "problemas_revision_anterior": [
+     "xanelas de vidro"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "007-d12934ae-1.png",
+    "seed": 3937163132,
+    "s": 16.9,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A council of rebels debates strategy by candlelight inside a half-ruined chapel’s nave**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of monks gathered in a large room with high ceilings and arches. The room appears to be a church or cathedral with large windows on both sides. The monks are dressed in traditional robes and are gathered around a fire pit, which is lit with orange flames. They are holding candles in their hands and appear to be engaged in a ritual or ceremony. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "man",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 14.8
+   }
+  ],
+  "version_revisor": 3
+ },
+ "008-ad30e0b9": {
+  "ficheiro": "008-ad30e0b9-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "008-ad30e0b9-0.png",
+    "seed": 3498285539,
+    "s": 21.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Nobles in chainmail and velvet cloaks surrender keys to masons armed with sledgehammers**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men dressed in medieval clothing standing in a courtyard with stone walls and arches. The men are dressed in red robes and helmets, and some are holding swords and shields. They appear to be engaged in a conversation, with one man in the center holding a sword and another holding a shield. The courtyard is cobblestone and there are other people in the background. The overall mood of the image is tense and somber.",
+    "obxectos": [
+     "man",
+     "person"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.571,
+       0.597
+      ],
+      "confianza": 0.97,
+      "dist_corpo": 0.031
+     }
+    ],
+    "corpos": 3,
+    "s_revision": 14.1
+   }
+  ],
+  "version_revisor": 3
+ },
+ "009-6cb23d05": {
+  "ficheiro": "009-6cb23d05-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "009-6cb23d05-0.png",
+    "seed": 2362223764,
+    "s": 15.0,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Sunrise glints off rainwater pooling around the collapsed keep’s skeletal remains**, natural light, detailed, painterly realism",
+    "problemas": [
+     "morte"
+    ],
+    "descricion": "The image shows two skeletons standing in the ruins of an old, dilapidated building. The building appears to be made of stone and has multiple arches and pillars. The sky is orange and yellow, indicating that it is either sunrise or sunset. The ground is covered in rubble and debris, and there are a few pieces of debris scattered around. The skeletons are standing side by side, facing the same direction. The overall mood of the image is eerie and desolate.",
+    "obxectos": [
+     "skull"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.5,
+    "problemas_revision_anterior": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "009-6cb23d05-1.png",
+    "seed": 2430937797,
+    "s": 28.7,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Sunrise glints off rainwater pooling around the collapsed keep’s skeletal remains**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image shows the ruins of an old, dilapidated building with arches and pillars. The building appears to be in a state of disrepair, with broken walls and debris scattered around the area. The sky is orange and yellow, indicating that it is either sunrise or sunset. In the background, there is a cityscape with buildings and a bridge visible. The overall mood of the image is one of destruction and devastation.",
+    "obxectos": [
+     "building"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 18.9
+   }
+  ],
+  "version_revisor": 3
+ },
+ "010-29b1e62f": {
+  "ficheiro": "010-29b1e62f-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "010-29b1e62f-0.png",
+    "seed": 2480411031,
+    "s": 17.6,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A lone figure sketches the fortress’s silhouette against a blood-orange horizon at dusk**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image is a photograph of a castle on top of a hill at sunset. The sky is a beautiful orange and pink color, with the sun setting in the background. The castle is made of stone and has two towers with pointed roofs and turrets. The hill is covered in trees and shrubs, and there are a few other buildings scattered around the base of the castle. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "castle"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.0
+   }
+  ],
+  "version_revisor": 3
+ },
+ "011-63a450dc": {
+  "ficheiro": "011-63a450dc-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "011-63a450dc-0.png",
+    "seed": 1620486491,
+    "s": 20.4,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Boatmen unload timber from sloops in a fog-draped estuary where stone towers jut like teeth**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men on a longboat on a river. The boat is made of wood and has multiple masts and rigging. The men are dressed in traditional clothing and hats, and some are sitting on the deck while others are standing on the bow of the boat. They appear to be engaged in a conversation. In the background, there is a foggy landscape with a castle-like structure on a hill and trees on the other side of the river. On the left side, there are stacks of logs and a wooden pier. The sky is overcast and the overall",
+    "obxectos": [
+     "boat",
+     "bull mastiff",
+     "oar",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.8
+   }
+  ],
+  "version_revisor": 3
+ },
+ "012-c745626d": {
+  "ficheiro": "012-c745626d-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "012-c745626d-0.png",
+    "seed": 180994091,
+    "s": 16.4,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Fisherfolk haul nets while monks chant psalms beside a half-demolished watchtower’s base**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of monks gathered around a large wooden structure made of sticks and ropes. The structure appears to be a medieval castle or fort, with a stone facade and a tower in the background. The monks are wearing traditional robes and are gathered around the structure, which is made up of multiple wooden poles and ropes that are tied together to form a structure. The sky is cloudy and the ground is covered in dirt and debris. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.8
+   }
+  ],
+  "version_revisor": 3
+ },
+ "013-c7a9e9d5": {
+  "ficheiro": "013-c7a9e9d5-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "013-c7a9e9d5-0.png",
+    "seed": 590026097,
+    "s": 18.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A blacksmith forges weapons under the fortress’s shattered archway as villagers watch in silence**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men gathered around a stone archway in an old stone building. The archway is made of stone and has a medieval-style design. The men are dressed in medieval clothing and are engaged in a conversation. They are standing around a table with various tools and equipment on it, including a large pot, a bucket, and a wooden bench. In the background, there is a castle-like structure with a tower and a hill in the distance. The sky is blue and the overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "man",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 18.2
+   }
+  ],
+  "version_revisor": 3
+ },
+ "014-821e4476": {
+  "ficheiro": "014-821e4476-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "014-821e4476-0.png",
+    "seed": 2890761660,
+    "s": 23.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Children chase crows through rubble where once stood a lord’s throne room and torture rack**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of children walking through an old, dilapidated church with arches and ruins. The children are dressed in medieval-style clothing and are carrying weapons, including swords and shields. The church appears to be in ruins, with broken windows and debris scattered on the ground. The sky is overcast and the overall mood of the image is somber.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.1
+   }
+  ],
+  "version_revisor": 3
+ },
+ "015-739c8884": {
+  "ficheiro": "015-739c8884-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "015-739c8884-0.png",
+    "seed": 3287759572,
+    "s": 21.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Monks tend to wounded rebels by lantern-light inside a chapel strewn with broken siege gear**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men dressed in black robes standing in a large room with high ceilings and arched windows. The room appears to be a church or cathedral with stone walls and arches. The men are gathered around a wooden table with a lit candle on it, and there are several other candles on the table. Some of the men are holding candles in their hands, while others are looking at the candle. The floor is covered in fallen leaves and there is a chandelier hanging from the ceiling. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 15.8
+   }
+  ],
+  "version_revisor": 3
+ },
+ "016-2ff3c497": {
+  "ficheiro": "016-2ff3c497-7.png",
+  "escollida": 7,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "016-2ff3c497-0.png",
+    "seed": 998430061,
+    "s": 16.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A scribe records the rebellion in a candlelit scriptorium surrounded by torn parchment maps**, natural light, detailed, painterly realism",
+    "problemas": [
+     "interior moderno",
+     "texto na imaxe"
+    ],
+    "descricion": "The image shows an elderly man sitting at a table in a dimly lit room with a large window in the background. He is holding a pen and appears to be writing or drawing on a piece of paper. The man has a long white beard and is wearing a dark blue robe. On the table in front of him, there are several old books and papers scattered around, as well as a small bowl and a candle holder with lit candles. The room is decorated with various items, including a vase with flowers and a lamp. The overall mood of the image is somber and contempl",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 12.7
+   },
+   {
+    "intento": 1,
+    "ficheiro": "016-2ff3c497-1.png",
+    "seed": 3927702533,
+    "s": 22.3,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A scribe records the rebellion in a candlelit scriptorium surrounded by torn parchment maps**, natural light, detailed, painterly realism",
+    "problemas": [
+     "obxectos modernos",
+     "texto na imaxe"
+    ],
+    "descricion": "The image shows an elderly man sitting at a wooden table in a room with arched windows. He is wearing a blue coat and has a beard and glasses. He appears to be writing on a large piece of paper with a pen. The table is covered with papers and other documents, and there are several candles on the table in front of him. The room is dimly lit, with a warm glow from the windows. The walls are decorated with intricate patterns and the overall atmosphere of the room is cozy and medieval.",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.398,
+       0.754
+      ],
+      "confianza": 0.95,
+      "dist_corpo": 0.129
+     }
+    ],
+    "corpos": 1,
+    "s_revision": 16.1
+   },
+   {
+    "intento": 2,
+    "ficheiro": "016-2ff3c497-2.png",
+    "seed": 3863911850,
+    "s": 19.5,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A scribe records the rebellion in a candlelit scriptorium surrounded by torn parchment maps**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "descricion": "The image shows a group of people gathered in a large room with high ceilings and arched windows. The room appears to be a church or a religious setting with a high ceiling and a chandelier hanging from the ceiling. In the center of the room, there is a man with long hair and a beard sitting at a long table with a large scroll in front of him. He is holding a pen and writing on a piece of paper. To his left, there are two other men with long white hair and beards, one of whom is looking at the scroll while the other is",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.9
+   },
+   {
+    "intento": 3,
+    "ficheiro": "016-2ff3c497-3.png",
+    "seed": 1464130240,
+    "s": 19.1,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A scribe records the rebellion in a candlelit scriptorium surrounded by torn parchment maps**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "descricion": "The image shows a group of three men sitting around a long table in a large room with high ceilings and arched windows. The room appears to be a medieval or medieval setting with a high ceiling and stained glass windows. On the table, there are several items such as papers, books, and candles. The men are dressed in medieval clothing and appear to be engaged in a conversation. One of the men is holding a pen and writing on a piece of paper, while the other two are looking at it intently. There are also several other people in the background, some of whom are",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.8,
+    "problemas_revision_anterior": [
+     "xanelas de vidro",
+     "texto na imaxe"
+    ]
+   },
+   {
+    "intento": 4,
+    "ficheiro": "016-2ff3c497-4.png",
+    "seed": 2632624642,
+    "s": 20.1,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A scribe records the rebellion in a candlelit scriptorium surrounded by torn parchment maps**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "descricion": "The image shows three men sitting at a table in a dimly lit room with a window in the background. The man on the left is an older man with long white hair and a beard, wearing a black robe with gold embroidery. He is holding a pen and appears to be writing on a piece of paper. The other two men are younger men, also wearing black robes with gold accents. They are sitting at the table with papers and a candle on a stand in front of them. The room is filled with candles and there is a large sheet of paper on the table.",
+    "obxectos": [
+     "human face",
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.7
+   },
+   {
+    "intento": 5,
+    "ficheiro": "016-2ff3c497-5.png",
+    "seed": 2546848616,
+    "s": 15.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, villagers in wool cloaks walking past a granite tower-house in a small hamlet, slate roofs, overcast morning light, wide shot, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking on a cobblestone street in a medieval village. The street is lined with stone buildings on both sides, and there is a stone tower in the background. The people are dressed in long robes and hooded cloaks, and some are carrying bags or backpacks. The sky is overcast and the overall mood of the image is somber. The buildings appear to be old and weathered, with some of them having a red tiled roof. The overall atmosphere is gloomy and gloomy.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 16.3
+   },
+   {
+    "intento": 6,
+    "ficheiro": "016-2ff3c497-6.png",
+    "seed": 2704007059,
+    "s": 14.0,
+    "prompt": "cinematic film still, fifteenth-century Galicia, villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking on a cobblestone street in a medieval village. The street is lined with stone buildings with tiled roofs and a stone tower with a pointed roof. The people are wearing long black robes and hats, and some are carrying bags. The sky is overcast and there are trees in the background. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.6
+   },
+   {
+    "intento": 7,
+    "ficheiro": "016-2ff3c497-7.png",
+    "seed": 3322770241,
+    "s": 17.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking on a cobblestone pathway in a medieval village. The pathway is lined with stone buildings on both sides, with a stone tower on the left side. The buildings appear to be old and weathered, with some of them having a sloping roof. In the background, there is a green landscape with rolling hills and fields. The sky is overcast and the overall mood of the image is somber. The people in the image are dressed in dark robes, suggesting that they are monks or nuns.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 18.4
+   }
+  ],
+  "version_revisor": 3
+ },
+ "017-b80e3691": {
+  "ficheiro": "017-b80e3691-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "017-b80e3691-0.png",
+    "seed": 3334018243,
+    "s": 13.6,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Weavers stitch banners of defiance beneath a fortress’s collapsed gatehouse at twilight**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered around a large stone castle. The castle appears to be old and weathered, with multiple towers and arches. The sky is blue and the ground is covered in rubble and debris. The people are dressed in medieval clothing and some are holding swords and shields. There are clothes hanging out to dry on a clothesline in front of the castle, suggesting that it is being used for a battle or demonstration. The overall mood of the image is tense and somber.",
+    "obxectos": [
+     "castle"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.7
+   }
+  ],
+  "version_revisor": 3
+ },
+ "018-e216d3e3": {
+  "ficheiro": "018-e216d3e3-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "018-e216d3e3-0.png",
+    "seed": 1322802824,
+    "s": 15.6,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **An old woman sells herbs to rebels outside a half-standing tower where vines now choke the stones**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a courtyard with a stone building in the background. There are six people in the image, all dressed in medieval clothing, standing in front of a stone archway. They are holding baskets of plants and appear to be engaged in a conversation.\n\nIn the center of the group, there is an elderly woman with white hair and a white headscarf, who is holding a basket of plants. She is smiling and seems to be explaining something to the group. To her left, there are two men, one wearing a black hat and the",
+    "obxectos": [
+     "flowerpot",
+     "houseplant",
+     "man",
+     "woman"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 13.4
+   }
+  ],
+  "version_revisor": 3
+ },
+ "019-5407cf37": {
+  "ficheiro": "019-5407cf37-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "019-5407cf37-0.png",
+    "seed": 2763736614,
+    "s": 18.7,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A lord in silver armor watches from horseback as peasants hurl boulders into a keep’s moat**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of knights on horseback in a medieval battle scene. The knights are dressed in full armor and helmets, and are riding on a dirt path that winds through a grassy field. In the background, there is a large stone castle with a tower and a moat. The sky is blue and there are trees and bushes on either side of the path. The castle appears to be old and weathered, with some of the walls crumbling and others still intact. The horses are brown and white, and the riders are wearing helmets and armor. The scene is bustling with",
+    "obxectos": [
+     "castle",
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.8
+   }
+  ],
+  "version_revisor": 3
+ },
+ "020-0085c786": {
+  "ficheiro": "020-0085c786-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "020-0085c786-0.png",
+    "seed": 2640681999,
+    "s": 19.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Carpenters nail planks across broken windows of a fortress chapel while guards surrender their swords**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of men dressed in medieval clothing standing in a large room with arched windows. They are holding swords and appear to be engaged in a battle. The room is made of stone and has a wooden floor. The men are dressed in dark clothing and are standing in front of a wooden bench. The background shows a stone wall and a stone archway. The overall mood of the image is tense and intense.",
+    "obxectos": [
+     "man",
+     "person",
+     "woman"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 15.3
+   }
+  ],
+  "version_revisor": 3
+ },
+ "021-6caccfc6": {
+  "ficheiro": "021-6caccfc6-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "021-6caccfc6-0.png",
+    "seed": 511308769,
+    "s": 16.9,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Burgesses tally spoils in ledgers by torchlight inside the keep’s vaulted treasury chamber**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a large room with arches and stained glass windows. The room appears to be a medieval or medieval setting with stone walls and arches. The floor is made of stone and there are several tables and benches scattered throughout the room. On the left side of the image, there is a large table with a few people sitting at it, and on the right side, there are a few standing.\n\nIn the center of the room, a man is standing and holding a lit candle, casting a warm glow on the scene. He is wearing",
+    "obxectos": [
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 14.8,
+    "problemas_revision_anterior": [
+     "xanelas de vidro"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "021-6caccfc6-1.png",
+    "seed": 1004475952,
+    "s": 22.0,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Burgesses tally spoils in ledgers by torchlight inside the keep’s vaulted treasury chamber**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered around a long table in a large room with arches and a high ceiling. The room appears to be a medieval or medieval setting with a large stained glass window in the background. The people are dressed in medieval clothing and are gathered around the table, which is covered with papers and other religious documents. Some of them are holding books and papers, while others are looking at the papers. There is a chandelier hanging from the ceiling and a few candles on the tables. The overall mood of the image is solemn and contemplative.",
+    "obxectos": [
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 3,
+    "s_revision": 15.4,
+    "problemas_revision_anterior": [
+     "xanelas de vidro"
+    ]
+   },
+   {
+    "intento": 2,
+    "ficheiro": "021-6caccfc6-2.png",
+    "seed": 4182343968,
+    "s": 18.8,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Burgesses tally spoils in ledgers by torchlight inside the keep’s vaulted treasury chamber**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a large room with high arches and stained glass windows. The room appears to be a church or a religious setting, as there are several large windows on the walls and a chandelier hanging from the ceiling. The people are dressed in black robes and are gathered around a long table with papers and other religious items on it. They are all holding candles and appear to be engaged in a discussion or ritual. The overall mood of the image is solemn and contemplative.",
+    "obxectos": [
+     "building",
+     "man",
+     "person",
+     "table",
+     "window"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.2,
+    "problemas_revision_anterior": [
+     "xanelas de vidro"
+    ]
+   },
+   {
+    "intento": 3,
+    "ficheiro": "021-6caccfc6-3.png",
+    "seed": 3493499855,
+    "s": 14.2,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Burgesses tally spoils in ledgers by torchlight inside the keep’s vaulted treasury chamber**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a large room with high ceilings and arches. The room appears to be a medieval or medieval setting with stone walls and stained glass windows. The people are dressed in dark clothing and are gathered around a long table with various objects on it. Some of them are holding candles, while others are looking at the table. In the center of the room, there is a man with long hair and a beard, who is holding a book and appears to have a serious expression on his face. The other people in the room are also dressed in medieval clothing",
+    "obxectos": [
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.5,
+    "problemas_revision_anterior": [
+     "xanelas de vidro"
+    ]
+   },
+   {
+    "intento": 4,
+    "ficheiro": "021-6caccfc6-4.png",
+    "seed": 465888906,
+    "s": 19.4,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Burgesses tally spoils in ledgers by torchlight inside the keep’s vaulted treasury chamber**, natural light, detailed, painterly realism, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a large room with high ceilings and arches. The room appears to be a medieval or medieval setting with stone walls and stained glass windows. There are several tables and chairs scattered throughout the room, with people sitting at them and standing around them. Some of the people are holding torches, suggesting that they are engaged in a ritual or ritualistic activity. The people are dressed in medieval clothing, with some wearing long coats and others wearing cloaks. The overall mood of the image is dark and eerie, with a sense of mystery and intrigue.",
+    "obxectos": [
+     "man"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 13.8,
+    "problemas_revision_anterior": [
+     "xanelas de vidro"
+    ]
+   }
+  ],
+  "version_revisor": 3
+ },
+ "022-31f2a968": {
+  "ficheiro": "022-31f2a968-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "022-31f2a968-0.png",
+    "seed": 121744811,
+    "s": 19.0,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **A bishop blesses the rubble where once stood a lord’s throne room, now trampled like common soil**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of people gathered in a large room with high ceilings and arches. The room appears to be a church or cathedral, as there are large windows on the walls and a large pile of rubble in the center of the room. The people are dressed in medieval-style clothing, with some wearing red robes and others wearing blue robes. In the center, there is a man wearing a blue robe and a gold crown, standing in front of a large altar. He is holding a book and appears to have a serious expression on his face. On the left side of the",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 14.1
+   }
+  ],
+  "version_revisor": 3
+ },
+ "023-be697bd9": {
+  "ficheiro": "023-be697bd9-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "023-be697bd9-0.png",
+    "seed": 808728546,
+    "s": 15.4,
+    "prompt": "cinematic film still, fifteenth-century Galicia, **Rebels march past a crumbling keep as dawn bleeds gold through gaps in its shattered walls**, natural light, detailed, painterly realism",
+    "problemas": [],
+    "descricion": "The image shows a group of medieval knights marching on a cobblestone street in front of a castle. The knights are dressed in full armor and helmets, and some are carrying swords and shields. The castle walls are made of stone and there is a flagpole with a flag flying in the background. The sky is blue and the overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.1
+   }
+  ],
+  "version_revisor": 3
+ }
+}

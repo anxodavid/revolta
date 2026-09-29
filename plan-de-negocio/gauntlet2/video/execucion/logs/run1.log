@@ -1,0 +1,194 @@
+== 1_guion
+servidor LLM listo en 34.1 s
+LLM bloque_seleccion_gancho: 87.8 s, {'prompt_tokens': 703, 'completion_tokens': 60, 'total_tokens': 763}
+LLM bloque_gancho: 36.6 s, {'prompt_tokens': 369, 'completion_tokens': 110, 'total_tokens': 479}
+LLM bloque_gancho: 26.6 s, {'prompt_tokens': 405, 'completion_tokens': 83, 'total_tokens': 488}
+LLM bloque_resumo: 104.9 s, {'prompt_tokens': 814, 'completion_tokens': 315, 'total_tokens': 1129}
+LLM bloque_resumo: 188.0 s, {'prompt_tokens': 1027, 'completion_tokens': 113, 'total_tokens': 1140}
+LLM bloque_resumo: 113.0 s, {'prompt_tokens': 904, 'completion_tokens': 285, 'total_tokens': 1189}
+LLM bloque_invitacion: 19.2 s, {'prompt_tokens': 174, 'completion_tokens': 58, 'total_tokens': 232}
+LLM bloque_invitacion: 15.9 s, {'prompt_tokens': 209, 'completion_tokens': 48, 'total_tokens': 257}
+LLM bloque_seleccion: 36.7 s, {'prompt_tokens': 799, 'completion_tokens': 14, 'total_tokens': 813}
+LLM bloque_parrafo: 48.4 s, {'prompt_tokens': 460, 'completion_tokens': 89, 'total_tokens': 549}
+LLM bloque_parrafo: 32.1 s, {'prompt_tokens': 497, 'completion_tokens': 89, 'total_tokens': 586}
+LLM bloque_parrafo: 45.2 s, {'prompt_tokens': 512, 'completion_tokens': 107, 'total_tokens': 619}
+LLM bloque_parrafo: 41.0 s, {'prompt_tokens': 391, 'completion_tokens': 46, 'total_tokens': 437}
+LLM bloque_parrafo: 25.1 s, {'prompt_tokens': 467, 'completion_tokens': 60, 'total_tokens': 527}
+LLM bloque_parrafo: 30.8 s, {'prompt_tokens': 447, 'completion_tokens': 49, 'total_tokens': 496}
+LLM bloque_parrafo: 45.7 s, {'prompt_tokens': 415, 'completion_tokens': 143, 'total_tokens': 558}
+LLM bloque_parrafo: 34.1 s, {'prompt_tokens': 555, 'completion_tokens': 88, 'total_tokens': 643}
+LLM bloque_parrafo: 53.0 s, {'prompt_tokens': 495, 'completion_tokens': 185, 'total_tokens': 680}
+LLM bloque_parrafo: 34.0 s, {'prompt_tokens': 444, 'completion_tokens': 104, 'total_tokens': 548}
+LLM bloque_parrafo: 41.7 s, {'prompt_tokens': 442, 'completion_tokens': 162, 'total_tokens': 604}
+LLM bloque_parrafo: 69.7 s, {'prompt_tokens': 816, 'completion_tokens': 191, 'total_tokens': 1007}
+LLM bloque_parrafo: 65.3 s, {'prompt_tokens': 770, 'completion_tokens': 219, 'total_tokens': 989}
+== 2_corrixir
+LLM corrixir_parrafo: 37.0 s, {'prompt_tokens': 343, 'completion_tokens': 135, 'total_tokens': 478}
+LLM corrixir_parrafo: 46.3 s, {'prompt_tokens': 385, 'completion_tokens': 124, 'total_tokens': 509}
+LLM corrixir_parrafo: 94.4 s, {'prompt_tokens': 284, 'completion_tokens': 172, 'total_tokens': 456}
+LLM corrixir_parrafo: 46.3 s, {'prompt_tokens': 373, 'completion_tokens': 138, 'total_tokens': 511}
+LLM corrixir_parrafo: 117.2 s, {'prompt_tokens': 561, 'completion_tokens': 363, 'total_tokens': 924}
+== 3_voz
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1011: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+voz   1   1.4s Boas noites.
+voz   2   4.7s A voz que vas escoitar é sintética, e este texto preparouno 
+voz   3   4.8s Os campesiños, mariñeiros e artesáns uníronse contra os seño
+voz   4   3.4s A xente común botou abaixo torres con paus e pedras.
+voz   5   3.0s Os nobres tiñan poder, pero a irmandade venceu.
+voz   6   2.9s A Rocha Forte caeu baixo as súas mans.
+voz   7   3.1s Un exército de xente diversa derrubou castelos.
+voz   8   3.0s As fortaleiras perderon fronte á unión popular.
+voz   9   3.0s Isto é Serán, historia de Galicia para durmir.
+voz  10  13.5s Esta noite viaxamos no tempo para descubrir unha historia es
+voz  11   8.9s Xuntáronse labregos, artesáns, mariñeiros, burgueses, clérig
+voz  12   4.2s Estás a punto de embarcarche nunha viaxe tranquila pola hist
+voz  13   5.6s Acomódate, apaga as luces e deixa que o aire che acompañe me
+voz  14   9.5s Na primavera de mil catrocentos sesenta e sete, un grupo div
+voz  15   5.2s Botaron abaixo moitas fortalezas, aproveitando a chuvia e o 
+voz  16   4.6s A luz do sol rompe entre as ruínas, mentres o lume arde nos 
+voz  17   5.1s As pedras, molladas polo chuvia e o vento, caeron baixo as f
+voz  18   5.6s A luz do sol filtraba entre os escombros, iluminando camiños
+voz  19   8.4s Cando o ceo se fundía coas chairas, os homes labraban a terr
+voz  20  11.5s Algunhas casas tiñan tellados de lousa ou palla, e os teitos
+voz  21   8.3s O vento arrastraba o cheiro a terra mollada entre as pedras,
+voz  22   6.9s As chaves da Rocha Forte caeron unha tras outra, e cada golp
+voz  23   7.9s A auga goteaba das teituras rachadas, mesturándose coa area 
+voz  24  18.1s Os labregos, con aixadas e picos, os artesáns coas súas ferr
+voz  25  15.8s O vento arrastraba a chuvia polos camiños empedrados, mentre
+== 4_escenas

@@ -1,0 +1,6 @@
+AVISOS  
+- [HUNSPELL_RULE] Atopouse un posíbel erro ortográfico | contexto: "...a nobreza que souberon guiar o lume dos fachós entre as pedras, xuntáronse nunha soa voz." | suxestións: fachos, fachóns, fachas  
+- [HUNSPELL_RULE] Atopouse un posíbel erro ortográfico | contexto: "... camiños empedrados, mentres o lume das antorchas iluminaba os rostros cansos de todos eles, unidos baixo un mesmo ceo roto polo ruído constante da caída dos tellados e as paredes que se esgadanaban coma se o mundo tentase esquecer o seu propio peso." | suxestións: esganaban, desengadaban  
+- [GL_BARBARISM_REPLACE] 'ceo' é un xenismo. É preferíbel dicir "director executivo" | contexto: "...os de todos eles, unidos baixo un mesmo ceo roto polo ruído constante da caída dos..." | suxestións: director executivo  
+- [HUNSPELL_RULE] Atopouse un posíbel erro ortográfico | contexto: "... caída dos tellados e as paredes que se esgadanaban coma se o mundo tentase esquecer o seu propio peso." | suxestións: esgaduñaban, desengadaban  
+- [HUNSPELL_RULE] Atopouse un posíbel erro ortográfico | contexto: "... os de todos eles, unidos baixo un mesmo ceo roto polo ruído constante da caída dos..." | suxestións: director executivo
