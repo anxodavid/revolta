@@ -1,6 +1,8 @@
 # Pieza del plan v2: el canal desatendido (retornos, costes, pipeline y riesgos de plataforma)
 
-- **Versión:** v1 (primera versión del constructor), 29-09-2026.
+- **Versión:** v2 (ronda 2 del constructor), 29-09-2026. Cambios frente a v1: tiempos de máquina medidos (§4.1), horas
+  del MVP unificadas (57-85 h), §3.3 nueva con el dossier cronometrado, C0 medido (70 % → 80 % tras corregir un fallo
+  de H1) y umbrales del código alineados con los del plan (WER ≤ 6 %, −18 a −16 LUFS). Cadencia ajustada para cumplir D3.
 - **Qué cubre:** retornos esperables con comparables reales, costes, horas (D3), cadencia, arquitectura del pipeline
   automático, controles automáticos que sustituyen a la revisión humana (qué detectan y qué no), política de YouTube,
   AI Act art. 50, riesgos de lengua e historia sin filtro humano, puertas go/no-go y KPIs para pagar la validación de voz (D1).
@@ -14,38 +16,49 @@
 
 ---
 
-## 0. Resumen en 12 líneas
+## 0. Resumen
 
 1. **En dinero, el canal casi seguro pierde un poco; el caso es cultural y técnico, no económico.** Escenario central a
-   12 meses: 0 € de ingresos y 30-120 € de gasto; ~70-100 h del promotor. Solo en el escenario optimista (≈ 5-10 % [S])
-   llega al YPP, y aun así a 10-60 €/mes (§1).
+   12 meses: 0 € de ingresos y 20-100 € de gasto; ≈ 85-140 h del promotor el primer año natural (57-85 h de montaje + 25-55 h
+   de régimen en las ≈ 40 semanas restantes, §3). Solo en el escenario optimista (≈ 5-10 % [S]) llega al YPP, y aun así a 10-60 €/mes (§1).
 2. **El listón de referencia es un pico, no la media:** *Historia Desconocida* hace ≈ 1,0 M de vistas con 21 vídeos, pero
    el 67 % viene de 3 vídeos de una semana de abril; sus vídeos de ago-sep 2026 hacen 1.300-6.400 vistas en castellano
    [F, `../referencia.md`]. En galego, el techo es 1-2 órdenes de magnitud menor (§1.2).
 3. **Coste casi cero de verdad:** voz, ASR, imágenes y montaje en CPU propia con open source (0 €); el guion con un LLM
    frontier por API ≈ 1-2 USD por episodio, o 0 € con un LLM abierto de Nós si se acepta peor galego (§2).
-4. **Horas:** construir el MVP pide ≈ 45-60 h → **8-10 semanas a 6 h/semana**. Después, ≈ 1 h/semana, que alcanza
-   para publicar (la subida por API queda privada sin auditoría de Google) y vigilar comentarios y erratas (§3).
-5. **Cadencia:** 1 episodio/semana (60 min narrados + 30 min de cola), con un arranque de 3 episodios la primera semana.
-   Nunca diario: la máquina podría (≈ 4-6 h de CPU por episodio), la política de YouTube no (§4).
-6. **Pipeline:** 9 etapas en una cola local, todas deterministas o con LLM, con **14 controles automáticos** que
-   bloquean la publicación. Ninguno sustituye del todo a un filólogo ni a un historiador (§5-6).
-7. **Lo que los controles NO ven:** errores históricos fluidos y plausibles que no se contradicen con las fuentes
+4. **Horas:** construir el MVP pide **≈ 57-85 h → 10-14 semanas a 6 h/semana** (§3.1, incluye el stock de 8 dossieres).
+   Después, el régimen estable **no cabe en 1 h/semana a 1 episodio por semana** una vez que se acaba el stock: el
+   dossier de un episodio de 60 min pide 25-75 min de persona (§3.3). Se cumple D3 bajando a **1 episodio cada 2
+   semanas** tras los 8 primeros: 40-87 min/semana, ≈ 60 de centro (§3.2).
+5. **Cadencia:** 3 episodios la primera semana y 1/semana hasta agotar el stock (8 episodios); después, 1 cada 2
+   semanas (≈ 30 episodios el primer año). 60 min narrados + 30 de cola. La máquina no es el límite: **5,0-7,0 h de
+   reloj por episodio medidas y extrapoladas** (4,4-5,8 h sin LLM, §4.1), una noche. El límite son las horas de
+   persona (D3) y el riesgo de parecer producción masiva (§4).
+6. **Pipeline:** diseño de 9 etapas en una cola local (§5.1); el código actual tiene 8 etapas con otro reparto más
+   `dossier.py` aparte, y 10 puertas automáticas. El diseño tiene **14 controles** que bloquean la publicación; hoy
+   hay 6, varios en versión parcial. Ninguno sustituye del todo a un filólogo ni a un historiador (§5-6).
+7. **C0 (errores canario) medido: 70 %** (14/20) con los controles del código, **por debajo del 80 % de P0**.
+   Un fallo de H1 (anclaba "dous" dentro de "douscentas") explicaba 2 fallos; corregido, **80 % (16/20)**, justo en el
+   umbral y sobre el mismo conjunto con que se encontró el fallo. Las invenciones sin nombre ni cifra siguen en 2/5:
+   solo las sube H2 (juez LLM). P0 exige además ≥ 80 % en un conjunto nuevo y ≥ 4/5 en "sin fuente": **hoy no se
+   pasa** (§6.1). Los umbrales del código ya son los del plan (WER ≤ 6 %, −18 a −16 LUFS); el vídeo de ejemplo, a
+   −20 LUFS, no pasaría A2 y hay que volver a mezclarlo.
+8. **Lo que los controles NO ven:** errores históricos fluidos y plausibles que no se contradicen con las fuentes
    cargadas, castellanismos sutiles que no están en las listas, **errores de prosodia que el ASR entiende igual**
    (vocales abiertas/cerradas, acento), anacronismos visuales y tono (§6.3). Se mide su tasa con **errores canario**
    inyectados y se publica en la página de erratas.
-8. **YouTube:** el formato es literalmente "presentación de imágenes + voz IA + plantilla", el patrón que la aclaración
+9. **YouTube:** el formato es literalmente "presentación de imágenes + voz IA + plantilla", el patrón que la aclaración
    del 13-07-2026 nombra ("image slideshows and templated storylines") [F]. **Probabilidad de que el YPP se deniegue o
    se retire: 40-60 % [S].** Como hobby, eso no mata el proyecto; mata solo los ingresos (§7.1).
-9. **Etiquetado:** imágenes fotorrealistas de época ⇒ la etiqueta "contenido alterado o sintético" es **obligatoria**,
+10. **Etiquetado:** imágenes fotorrealistas de época ⇒ la etiqueta "contenido alterado o sintético" es **obligatoria**,
    no opcional [F]. Se activa siempre (§7.2).
-10. **AI Act art. 50:** sin revisión humana **no hay excepción** para el texto de interés público: hay que declarar que
+11. **AI Act art. 50:** sin revisión humana **no hay excepción** para el texto de interés público: hay que declarar que
     el texto es generado por IA, además de la voz y las imágenes. Aviso hablado en los primeros 30 s (§7.3).
-11. **El riesgo más serio para la tesis "pro lingua" no es YouTube: es publicar galego sintético sin revisar en la web
+12. **El riesgo más serio para la tesis "pro lingua" no es YouTube: es publicar galego sintético sin revisar en la web
     abierta**, que acaba en los corpus con que se entrenan los próximos modelos en galego. Mitigación obligatoria: todo
     texto publicado va marcado como sintético y nunca se ofrece como corpus limpio (§8.3).
-12. **D1 (validación de voz, 850-1.500 €) solo se paga si se cumplen a la vez tracción (2 de 3 KPIs), permiso de
-    Nós/USC y ninguna alarma de plataforma abierta.** Probabilidad de llegar a pagarla en 12 meses: ≈ 10-15 % [S] (§9).
+13. **D1 (validación de voz, 850-1.500 €) solo se paga si se cumplen a la vez tracción (2 de 3 KPIs), permiso de
+    Nós/USC y ninguna alarma de plataforma abierta.** Probabilidad de llegar a pagarla en 12 meses: ≈ 5-10 % [S] (§9).
 
 ---
 
@@ -85,9 +98,9 @@ una política que ya existía desde julio de 2025 (§7.1).
   4,8 M de vistas en 10 meses) [R `audiencia.md` §1]. En audio para dormir, entender cada palabra importa menos. Es una
   **hipótesis a medir** en Analytics (geografía e idioma), no un supuesto del plan.
 
-### 1.3 Escenarios a 12 meses (≈ 50 episodios publicados) [S]
+### 1.3 Escenarios a 12 meses desde la primera publicación (≈ 30 episodios) [S]
 
-Supuestos: 1 episodio/semana de ~90 min (60 narrados + 30 de cola); AVD (duración media de visionado) de 15-25 min;
+Supuestos: 8 episodios semanales y luego 1 cada 2 semanas (§4.2), de ~90 min (60 narrados + 30 de cola); AVD (duración media de visionado) de 15-25 min;
 conversión a suscriptor del 1-1,5 % de las vistas; RPM de 1,5-4 € solo dentro del YPP [R `retornos.md` §2.4]; umbral
 del YPP para nuevos solicitantes desde el 1-02-2027: **1.000 suscriptores + 8.000 h en 365 días** [F
 https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/]; fan funding con
@@ -95,12 +108,15 @@ https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-op
 
 | Escenario | Prob. [S] | Vistas por vídeo a 30 días (mediana) | Vistas en 12 meses | Horas vistas | Subs a M12 | YPP | Ingresos 12 meses |
 |---|---|---|---|---|---|---|---|
-| **Pesimista:** mercado galego sin empuje; o YouTube lo trata como *slop* y no lo recomienda | 60-70 % | 20-150 | 1-8 K | 300-3.000 h | 10-100 | No | **0 €** |
-| **Base:** nicho vacío + algún eco en redes galegas | 25-30 % | 150-800 | 8-40 K | 2.000-15.000 h | 100-600 | No (faltan subs) | **0 €** (fan funding si pasa de 500 subs: 0-10 €/mes [S]) |
-| **Optimista:** "a primeira canle de historia para durmir en galego" sale en prensa/TVG o un vídeo se dispara | 5-10 % | 800-5.000 | 40-250 K | 10-80 K h | 600-3.000 | Posible en M6-M12 **si la revisión de YouTube no lo rechaza** (§7.1) | 0-60 €/mes desde la entrada en YPP; **≈ 0-300 € en el año** |
+| **Pesimista:** mercado galego sin empuje; o YouTube lo trata como *slop* y no lo recomienda | 60-70 % | 20-150 | 1-5 K | 200-1.800 h | 10-60 | No | **0 €** |
+| **Base:** nicho vacío + algún eco en redes galegas | 25-30 % | 150-800 | 5-25 K | 1.200-9.000 h | 60-400 | No (faltan subs) | **0 €** |
+| **Optimista:** "a primeira canle de historia para durmir en galego" sale en prensa/TVG o un vídeo se dispara | 5-10 % | 800-5.000 | 25-150 K | 6-50 K h | 400-2.000 | Posible en M8-M12 **si la revisión de YouTube no lo rechaza** (§7.1) | 0-60 €/mes desde la entrada en YPP; **≈ 0-300 € en el año** |
 
-**Valor esperado de ingresos en 12 meses: ≈ 0-30 € [S].** Gasto de caja en 12 meses: ≈ 30-120 € (§2). **Resultado
-esperado en caja: ≈ −30 a −120 €**, más ≈ 100 h del promotor (§3). En dinero es un hobby con coste, como decidió el
+Las vistas totales bajan ≈ 40 % frente a la v1 porque se publican ≈ 30 episodios en vez de 50: es el precio de cumplir
+D3 (§3.2).
+
+**Valor esperado de ingresos en 12 meses: ≈ 0-20 € [S].** Gasto de caja en 12 meses: ≈ 20-100 € (§2). **Resultado
+esperado en caja: ≈ −20 a −100 €**, más ≈ 85-140 h del promotor el primer año natural (§3). En dinero es un hobby con coste, como decidió el
 promotor (D6); no hay que venderlo como otra cosa.
 
 **Qué no entra en el modelo y podría cambiarlo:**
@@ -131,22 +147,22 @@ promotor (D6); no hay que venderlo como otra cosa.
 | Etapa | Opción propia (open source) | Coste | Opción API | Coste por episodio de 60 min narrados | Elección |
 |---|---|---|---|---|---|
 | Guion (≈ 7.000 palabras) | LLM de Nós en CPU: `Llama-3.1-Carballo-Instr3` (8B) o `Carvalho-Salamandra-Instruct` (7B), cuantizado con llama.cpp [F https://huggingface.co/proxectonos/Llama-3.1-Carballo-Instr3] | 0 €; ≈ 2-4 h de CPU por pase [S] | LLM frontier (p. ej. Claude) | ≈ 1-2 USD (proporcional a los ≈ 3 USD optimizados del episodio de 2 h) [R `pipeline.md` §5.1] | **API frontier para redactar** (el Gauntlet 1 concluyó que los modelos de 7-8B van por detrás en redacción larga [R `voz_guion.md`]); **modelos de Nós como segundo corrector y juez** (ver §5). Probar Carballo como redactor en el piloto: si su galego gana, cambia a 0 € |
-| Voz | StyleTTS2 Brais de Nós (Apache-2.0) en CPU | 0 €; RTF 0,28-0,4 [P] | ElevenLabs/Azure | 3-4 USD [R] | **Propia** (D2: la voz más cercana al listón) |
-| Control ASR | whisper-large-v3-turbo-gl de Nós, int8, por párrafo | 0 €; RTF 0,75 [P] | — | — | Propia |
+| Voz | StyleTTS2 Brais de Nós (Apache-2.0) en CPU | 0 €; 0,76-1,15 s de reloj por s narrado en el pipeline, con pausas y carga (§4.1) [P] | ElevenLabs/Azure | 3-4 USD [R] | **Propia** (D2: la voz más cercana al listón) |
+| Control ASR | whisper-large-v3-turbo-gl de Nós, int8, por párrafo | 0 €; RTF 0,20 sobre 16 min (WER 1,5 %) [P, `../medidas/escala/`] | — | — | Propia |
 | Imágenes (≈ 200-240 por episodio) | SDXL-Turbo o SD-Turbo en CPU + reescalado | 0 € | Nano Banana 2 Lite batch | ≈ 7-8 USD (0,034 USD × 220) [R `pipeline.md` §5.2] | **Propia**. Licencia: ver §2.3 |
 | Montaje (Ken Burns lento, fundidos, cola) | ffmpeg (`imageio-ffmpeg`) | 0 € | — | — | Propia |
 | Juez factual de otra familia | LLM abierto local o capa gratuita de otra API | 0-0,2 USD | — | — | Local si cabe en el tiempo de CPU |
 
-### 2.2 Caja mensual (4-5 episodios/mes) [S sobre F/R]
+### 2.2 Caja mensual (2-5 episodios/mes) [S sobre F/R]
 
 | Partida | €/mes | Nota |
 |---|---|---|
-| LLM de redacción por API | 4-9 € | 4-5 × 1-2 USD; 0 € si se usa un LLM abierto o si la suscripción que ya tiene el promotor cubre el uso [S: comprobar los términos de uso automatizado] |
-| Electricidad de la CPU propia | 0,3-1 € | ≈ 20-30 h/mes de CPU a 60-100 W ≈ 1,5-3 kWh × 0,15-0,25 €/kWh [S] |
+| LLM de redacción y extracción del dossier por API | 2-9 € | 2-5 × 1-2 USD (el dossier añade ≈ 0,1 USD); 0 € si se usa un LLM abierto o si la suscripción que ya tiene el promotor cubre el uso [S: comprobar los términos de uso automatizado] |
+| Electricidad de la CPU propia | 0,2-1 € | 2-5 episodios × 5-7 h (§4.1) ≈ 10-35 h/mes a 60-100 W ≈ 0,6-3,5 kWh × 0,15-0,25 €/kWh [S] |
 | Servidor alquilado (solo si el PC del promotor no puede quedarse encendido de noche) | 0 € (por defecto) / 10-30 € | VPS de 4-8 vCPU y 16 GB [S: precio sin verificar hoy] |
 | Música/ambiente | 0 € | Ambiente generado o grabado propio; nada con Content ID |
 | Validación de voz (D1) | 0 € | Solo tras la puerta P3 (§9): 850-1.500 € una vez |
-| **Total** | **≈ 5-10 €/mes (0 € con LLM abierto)** | Frente a los ~305 €/episodio de la garantía humana del plan v1 (D5) |
+| **Total** | **≈ 3-10 €/mes (≈ 1 € con LLM abierto)** | Frente a los ~305 €/episodio de la garantía humana del plan v1 (D5) |
 
 ### 2.3 Licencias del stack (condición de publicación)
 
@@ -163,67 +179,138 @@ promotor (D6); no hay que venderlo como otra cosa.
 
 ## 3. Horas (D3)
 
-### 3.1 Construcción del MVP a ~6 h/semana [S]
+### 3.1 Construcción del MVP a ~6 h/semana [S, con las partes medidas marcadas]
 
-Parte del trabajo ya existe y está medido (§4.1): el pipeline de 8 etapas de `herramientas/pipeline/` produce un vídeo de
-3,5 min de extremo a extremo. Lo que falta es escalarlo a 60 min, el dossier y los controles pendientes (§5.1).
+Parte del trabajo ya existe y está medido (§4.1): el código de `herramientas/pipeline/` (8 etapas propias, que el
+diseño de §5.1 reparte en 9) produce un vídeo de 3,4-4 min de extremo a extremo, y `dossier.py` saca un dossier con
+citas comprobadas (§3.3). Lo que falta es escalarlo a 60 min, H2 y los controles pendientes (§5.1).
 
 | Bloque | Horas | Qué deja hecho |
 |---|---|---|
 | Orquestador y cola local (`pipeline.py`, `jobs/`, reanudación) | 5-7 | Un comando por episodio, reanudable tras un corte |
-| Guion: investigación sobre fuentes cargadas + escaleta + redacción por capítulos + reglas de densidad para dormir | 8-10 | `guion.md` + `afirmacions.csv` |
+| Guion: escaleta + redacción por capítulos + reglas de densidad para dormir y embudo de ganchos al inicio | 8-10 | `guion.md` + `afirmacions.csv` |
 | Cinturón lingüístico automático (Hunspell-gl, LanguageTool-gl, lista de castellanismos, LLM corrector de otra familia) | 5-7 | `qa_texto.json` |
-| Verificación de afirmaciones contra fuentes (extracción + cita literal + juez de otra familia) | 6-8 | `qa_historia.json` |
-| Voz + QA de audio (ya casi hecho: normalización, WER por párrafo, sonoridad) | 3-4 | `voz.wav` + `qa_audio.json` |
-| Imágenes: plan de planos, prompts con lista de anacronismos, generación, reescalado, filtros | 6-8 | `planos/*.png` + `qa_imaxe.json` |
-| Montaje + miniatura + metadatos + subtítulos | 4-6 | `episodio.mp4`, `miniatura.png`, `metadatos.json` |
-| Errores canario y panel de calidad | 3-4 | Tasa de detección medida por episodio |
-| Piloto completo + ajustes | 5-8 | 1 episodio publicable |
-| **Nuevo en la ronda 2:** extractor de dossier semiautomático (§3.3) | 6-10 | `dossier.py`: hechos con cita literal comprobada por código |
-| **Nuevo en la ronda 2:** escalar el código de 3,5 a 60 min (guion por capítulos, ASR por párrafo, montaje por tramos sin cargar todas las imágenes en RAM) | 5-8 | Criterio P0-a (§9): 60 min sin intervención en ≤ 8 h |
-| **Nuevo en la ronda 2:** stock de 8 dossieres antes de publicar (§3.3) | 6-12 | Colchón para el arranque |
-| **Total** | **≈ 62-92 h** | **≈ 11-15 semanas a 6 h/semana** (antes: 8-10; el recálculo sale de medir el pipeline real) |
+| Verificación de afirmaciones: H2 (juez LLM de otra familia sobre `afirmacions.csv`) y conjunto nuevo de canarios | 6-8 | `qa_historia.json`; C0 ≥ 80 % en un conjunto nuevo (§6.1) |
+| Voz + QA de audio (falta: ASR por párrafo y regeneración ×3) | 3-4 | `voz.wav` + `qa_audio.json` |
+| Imágenes: plan de planos, lista de anacronismos, filtros I1-I3 | 6-8 | `planos/*.png` + `qa_imaxe.json` |
+| Montaje por tramos (sin cargar las ≈ 270 imágenes en RAM) + miniatura + metadatos + subtítulos | 4-6 | `episodio.mp4`, `miniatura.png`, `metadatos.json` |
+| Canarios C0 dentro del pipeline y panel de calidad | 3-4 | Tasa de detección por episodio |
+| Piloto completo de 60 min + ajustes | 5-8 | 1 episodio publicable; criterio P0-a (§9): 60 min sin intervención en ≤ 8 h |
+| `dossier.py`: falta PDF, fuentes no Wikipedia y calibrar el prompt (la parte medida ya existe, §3.3) | 3-5 | Dossier de 80-140 hechos por episodio |
+| Escalar el código de 3,5 a 60 min (guion por capítulos, ASR por párrafo) | 5-8 | Sin cambios manuales entre etapas |
+| Stock de 8 dossieres antes de publicar (8 × 25-75 min, §3.3) | 4-10 | Los 8 episodios semanales del arranque |
+| **Total** | **≈ 57-85 h** | **≈ 10-14 semanas a 6 h/semana**. Es la única cifra del plan (§0 y §9 remiten aquí) |
 
-### 3.2 Régimen estable a ~1 h/semana
+### 3.2 Régimen estable (D3: ~1 h/semana)
+
+Tareas fijas (no dependen de cuántos episodios salgan):
 
 | Tarea semanal | Min | Nota |
 |---|---|---|
 | Lanzar la tanda (o nada, si va por cron) | 0-5 | |
-| Mirar el semáforo de controles (no es revisión del contenido: solo verde/rojo) | 5 | Si está rojo, el episodio no sale y se salta esa semana |
-| **Subir o pasar a público** | 5-10 | La API de YouTube deja **privados** los vídeos subidos desde proyectos no auditados [F https://developers.google.com/youtube/v3/docs/videos/insert]. Opciones: subida por API en privado y un clic en Studio, o subida manual |
-| Comentarios: erratas señaladas → fichero de erratas → comentario fijado | 20-30 | La única "revisión humana", y es posterior a publicar |
+| Mirar el semáforo de controles (no es revisión del contenido: solo verde/rojo) | 5 | Si está rojo, el episodio no sale |
+| Comentarios: erratas señaladas → fichero de erratas → comentario fijado | 10-20 | **Con tope**: si hay más, se atienden en la semana sin episodio. Es la única "revisión humana", y es posterior a publicar |
 | Mantenimiento (actualizaciones, fallos) | 10-15 | Promedio; habrá semanas de 0 y semanas de 2 h |
-| **Total** | **≈ 45-65 min** | Compatible con D3 |
+| **Subtotal fijo** | **25-45** | |
+
+Tareas por episodio:
+
+| Tarea | Min | Nota |
+|---|---|---|
+| **Subir o pasar a público** | 5-10 | La API de YouTube deja **privados** los vídeos subidos desde proyectos no auditados [F https://developers.google.com/youtube/v3/docs/videos/insert]: subida por API en privado y un clic en Studio |
+| **Dossier** (elegir fuentes y leer el informe de `dossier.py`) | 25-75 | Medido en volumen en §3.3 |
+| **Subtotal por episodio** | **30-85** | |
+
+| Cadencia | Min/semana | ¿Cumple D3? |
+|---|---|---|
+| 1/semana con dossier del stock (primeros 8 episodios) | 30-55 | Sí |
+| 1/semana con dossier nuevo | 55-130 (centro ≈ 90) | **No** |
+| **1 cada 2 semanas con dossier nuevo** (régimen tras el stock) | **40-87 (centro ≈ 60)** | **Sí en el centro**; en el extremo alto se pasa ≈ 45 % |
+| 1 cada 2 semanas reutilizando el dossier en una serie de 2 episodios [S: ahorra ≈ 1/3 del dossier] | 36-75 | Sí |
+
+**Regla para cumplir D3:** el promotor apunta los minutos reales (una línea por semana en `jobs/horas.csv`). Si la
+media de 4 semanas pasa de 70 min, se aplica la palanca siguiente, en este orden: (1) series de 2 episodios sobre un
+mismo dossier ampliado (el control P1 vigila que no se repitan frases); (2) 1 episodio cada 3 semanas; (3) pausa. Nunca
+se amplían horas. A 1 episodio cada 2 semanas el canal publica ≈ 30 episodios el primer año (§1.3).
 
 **Riesgo de horas:** si un error llamativo se hace viral en redes galegas, la gestión se come varias semanas de
 presupuesto de golpe [S]. Regla: ante un incidente, pausar la publicación en vez de ampliar horas (§10, alarma A3).
 
----
+### 3.3 El dossier semimanual, medido (29-09-2026)
+
+**Por qué es la parte cara.** Es la única etapa que pide a una persona en cada episodio: elegir fuentes admisibles
+(§5.2) no se puede dejar a un LLM sin revisión, porque todo lo que viene después (H1, H2) solo comprueba coherencia
+con el dossier.
+
+**Prueba real.** Se hizo un dossier nuevo para un tema de la lista cerrada (§8.2), el mosteiro de Samos, con el código
+nuevo `herramientas/pipeline/dossier.py` y el prompt `prompts/dossier.md`. Todo está en
+`herramientas/pipeline/dossier/samos/` (fuentes descargadas, hechos, informe, `cronometro.md`).
+
+| Paso | Quién | Medido | Min |
+|---|---|---|---|
+| 1 Buscar fuentes (API de búsqueda de Galipedia) y elegir 4 (3 gl + 1 es) | persona | 10 resultados; el artículo principal tiene 865 palabras | [S] 10-20 |
+| 2 Descargar y limpiar (`dossier.py fontes`) | máquina | 13,6 y 16,0 s; 2.852 palabras de fuente [P] | 0,3 |
+| 3 Extraer hechos con cita literal (LLM) | máquina | 45 hechos [P]; tiempo por API [S] | 1-3 |
+| 4 Comprobar citas por código (`dossier.py comprobar`) | máquina | 0,02 s; 45/45 citas encontradas; **2 fuera por conflicto entre fuentes** (exclaustración en 1835 según Galipedia y en 1836 según la Wikipedia en castellano); 3 marcados como leyenda; prueba negativa con 3 citas falsas: 0/3 aceptadas [P] | 0 |
+| 5 Leer el informe (rechazados, conflictos, leyendas; no los 43 hechos) | persona | ≈ 120 palabras [P] | [S] 2-5 |
+| **Por dossier de 4 fuentes** | | **43 hechos usables, 611 palabras** | **≈ 15-30, de ellos 12-25 de persona** |
+
+Qué es medida y qué no: los pasos de máquina y el volumen que la persona tiene que leer están medidos [P]; los
+minutos de persona (pasos 1 y 5) son un supuesto [S] a partir de ese volumen, porque la prueba la hizo un agente, no
+el promotor. **Condición de P0 (§9): el promotor cronometra los 3 primeros dossieres del stock** y la tabla de §3.2
+se rehace con su medida.
+
+**Escala a un episodio de 60 min [S sobre P].** El vídeo de ejemplo usa 18 hechos para 475 palabras (≈ 26 palabras de
+guion por hecho) y la voz va a 124-143 palabras/min [P, `../medidas/r2-*/qa.json`]: 60 min son ≈ 7.400-8.600 palabras.
+Con el embudo (2 min densos y luego ritmo de dormir, 1 hecho cada 60-100 palabras [S]) salen **≈ 80-140 hechos por
+episodio: 2-3 dossieres como el de Samos**, es decir, 8-12 fuentes. Consecuencias:
+- **Minutos de persona por episodio: ≈ 25-75** (12-25 × 2-3). Es el dato que usa §3.2.
+- **Galipedia sola no llega:** para Samos da 43 hechos en total. Los temas del primer año necesitan fuentes largas
+  con licencia abierta (artículos de acceso abierto de historiadores, como los de Carlos Barros que usa el dossier de
+  irmandiños, o PDF oficiales), que tardan más en encontrarse. Los temas con poca fuente se hacen de 40 min narrados
+  (con más cola) en vez de forzar datos.
+- **Los conflictos entre fuentes aparecen incluso en temas tranquilos** (1835/1836 en la primera prueba): el código
+  los saca del dossier, y así el guion no puede usar el dato.
 
 ## 4. Cadencia sostenible
 
-### 4.1 Tiempo de máquina por episodio en la CPU de 4 núcleos [P/S]
+### 4.1 Tiempo de máquina por episodio (60 min narrados + 30 de cola) en la CPU de 4 núcleos
 
-| Paso | Tiempo | Base |
+Medido en las dos ejecuciones reales del pipeline (29-09-2026) y en una prueba de ASR sobre 16 min, y extrapolado por
+unidad de escala con `../medidas/escala/extrapolacion.py` (salida en `extrapolacion.md`). Imágenes: 255-287 (una cada
+14-16 s en la parte narrada, como en el vídeo de ejemplo, y una por minuto en la cola [S]).
+
+| Paso | Medido [P] | Min de reloj para 60 + 30 min |
 |---|---|---|
-| Guion por API (con vueltas de control) | 20-60 min de reloj | [S] |
-| TTS, 60 min de voz con ritmo para dormir (RTF 0,28-0,4) | 17-25 min | [P] RTF medido en este entorno |
-| ASR por párrafo (RTF 0,75) | 35-45 min | [P] |
-| Imágenes, ~220 a 15-20 s por plano (60 min narrados + planos lentos de la cola) | 1-2,5 h | [S: pendiente de medir con el vídeo piloto; supone 10-40 s por imagen en CPU con 1-4 pasos + reescalado] |
-| Montaje ffmpeg de 90 min (Ken Burns lento, 1080p o 720p) | 1-2 h | [S] |
-| **Total** | **≈ 3,5-6,5 h: una noche** | |
+| Guion y escenas por API (con vueltas de control) | — | 20-60 [S] |
+| Corrección (LanguageTool) | 14-20 s para 475 palabras | 4-6 |
+| Voz (StyleTTS2 Brais, frase a frase, con pausas y carga del modelo) | 223 y 248 s para 193 y 231 s narrados: **0,76-1,15 s de reloj por s narrado** | **47-69** |
+| Imágenes (SDXL-Turbo, 4 pasos, 1024×576) | 12,1-25,4 s por imagen (media 16,2-19,8 s); carga del modelo 24-331 s | **69-100** |
+| Sonido (lluvia y mezcla) | 5,0-5,2 s | 2 |
+| Montaje (Ken Burns, niebla, x264) | 1,28-1,40 s de reloj por s de vídeo | **115-126** (solo con la carga de imágenes por tramos, §5.1) |
+| QA (ASR sobre mezcla y voz, LanguageTool, `ebur128`, hoja de contactos) | ASR sobre 16 min: RTF 0,20, WER 1,5 % | 29-42 |
+| **Subtotal sin LLM** | | **266-346 min = 4,4-5,8 h** |
+| Canarios C0 sobre el guion entero (20 inyecciones) | 52,6-55,8 s para 475 palabras | ≈ 14 [S: lineal con las palabras] |
+| **Total** | | **≈ 5,0-7,0 h: una noche** |
+
+La cifra de la v1 (voz con RTF 0,28-0,4 → 17-25 min) medía la síntesis sola en un banco de pruebas; en el pipeline,
+con las pausas para dormir, la carga del modelo y la escritura frase a frase, la voz tarda 2-3 veces más.
 
 ### 4.2 Recomendación
 
 - **Arranque:** 3 episodios en la primera semana (catálogo mínimo para que el algoritmo tenga qué encadenar). La
   referencia concentró sus 3 éxitos en una ráfaga de 8 vídeos en 10 días [F, `../referencia.md`]; aquí se copia la
-  idea, no la escala.
-- **Régimen:** **1 episodio por semana**, siempre el mismo día y hora (domingo por la noche [S]). Techo: 2 por semana.
-- **Nunca diario.** No por falta de máquina, sino porque: (a) la frecuencia de subida y la similitud de formato son
-  señales de riesgo de contenido inauténtico [F https://www.tubefilter.com/2026/07/13/youtube-inauthentic-content-monetization-policy-update/];
-  (b) el público galego no es una bolsa que se agote a diario; (c) más episodios = más errores publicados sin filtro.
-- **Duración:** 60 min narrados + 20-30 min de cola de ambiente (imagen lenta, sin voz). Experimento a partir del
-  episodio 10: 2 de cada 4 con 90 min narrados, para medir AVD por duración [S].
+  idea, no la escala. Luego 1/semana hasta publicar los 8 del stock (P1).
+- **Régimen:** **1 episodio cada 2 semanas**, siempre el mismo día y hora (domingo por la noche [S]), porque es lo que
+  cabe en D3 (§3.2). Techo: 1 por semana, solo si el registro de horas lo permite. La máquina daría para uno diario.
+- **Nunca diario.** No por falta de máquina, sino porque: (a) la política de monetización excluye el contenido que
+  da "the impression of mass production" y el de "minimal variation across videos" [F
+  https://support.google.com/youtube/answer/1311392?hl=en]; que un canal automático suba a diario refuerza esa
+  impresión es una **inferencia propia [S]**, no algo que diga la política ni la nota de TubeFilter; (b) el público
+  galego no es una bolsa que se agote a diario; (c) más episodios = más errores publicados sin filtro; (d) D3.
+- **Duración:** 60 min narrados + 20-30 min de cola de ambiente (imagen lenta, sin voz); 40 min narrados si el tema
+  tiene poca fuente (§3.3). Experimento a partir del episodio 10: alternar 60 y 90 min narrados para medir AVD por
+  duración [S], solo si hay dossier para ello.
 - **Sin bucles ni directos 24/7 ni recopilaciones** hasta tener > 50 episodios; y entonces, con narración nueva.
 
 ---
@@ -235,7 +322,8 @@ presupuesto de golpe [S]. Regla: ante un incidente, pausar la publicación en ve
 ```
 temas.csv (lista cerrada, §8.2)
    │
-[1] Fuentes ──► dossier/ (SEMIMANUAL: el promotor elige 3-6 fuentes; un LLM extrae hechos con cita; §3.3)
+[1] Fuentes ──► dossier/ (SEMIMANUAL: el promotor elige 8-12 fuentes; un LLM extrae hechos con cita; dossier.py
+   │   comprueba cada cita literal y aparta conflictos y leyendas; §3.3)
    │
 [2] Escaleta (LLM A) ──► escaleta.json (actos, lugares, densidades para dormir)
    │
@@ -262,14 +350,14 @@ Rojo → no sale; se registra el motivo; el episodio siguiente de la cola ocupa 
 
 | Etapa del diagrama | Estado en el código | Diferencia con el diseño |
 |---|---|---|
-| [1] Fuentes → dossier | **Manual.** El único dossier (`temas/irmandinos-apertura.yaml`, 18 hechos, 8 fuentes) se escribió a mano a partir de las notas de fuentes del guion muestra, ya revisado por el tribunal del Gauntlet 1 | La extracción automática no existe. Presupuesto de horas y plan para automatizarla a medias en §3.3 |
+| [1] Fuentes → dossier | El dossier del vídeo de ejemplo (`temas/irmandinos-apertura.yaml`, 18 hechos, 8 fuentes) se escribió a mano desde las notas del guion muestra. **Nuevo en la ronda 2:** `dossier.py` (descarga, limpieza, comprobación literal de citas, conflictos, leyendas), probado con Samos: 45 hechos en 16 s de máquina (§3.3) | Falta leer PDF y fuentes que no son Wikipedia, y conectar su salida con `pipeline.py` sin copiarla a mano |
 | [2]-[3] Escaleta y guion | Un solo prompt (`prompts/guion.md`) que escribe un fragmento de ≈ 440 palabras; sin escaleta ni capítulos; sin `afirmacions.csv` | Para 60 min hay que trocear en capítulos (≈ 12-14 llamadas) |
 | [4] Cinturón lingüístico | LanguageTool gl-ES + hunspell y una vuelta de corrección por LLM. No hay lista de castellanismos propia ni LLM B de otra familia | T3 y la parte de LLM B de T2 sin hacer |
-| [5] Verificación histórica | **Solo H1-léxico** (`ancoraxe.py`, nuevo en esta ronda): nombres propios y cantidades del guion deben estar en el dossier. H2 (juez LLM) no existe | Ver C0 medido en §6.1 |
-| [6]-[7] Voz y QA de audio | StyleTTS2 Brais frase a frase; ASR Whisper-gl sobre el audio **entero**, sin regeneración | El Gauntlet 1 midió que Whisper sobre audio largo entero alucina (WER 48-53 % en 6,6 min) [R `pipeline.md` §4.1.1]: para 60 min hay que pasarlo por párrafo (cambio pendiente, 1-2 h) |
+| [5] Verificación histórica | **Solo H1-léxico** (`ancoraxe.py`): nombres propios y cantidades del guion deben estar en el dossier, por palabra entera (corregido en la ronda 2) y ahora como puerta de `pipeline.py`. H2 (juez LLM) no existe | C0 medido: 70 % → 80 % (§6.1) |
+| [6]-[7] Voz y QA de audio | StyleTTS2 Brais frase a frase; ASR Whisper-gl sobre el audio **entero**, sin regeneración; puerta WER ≤ 6 % sobre la mezcla | El Gauntlet 1 vio alucinar a Whisper sobre audio largo (WER 48-53 % en 6,6 min) [R `pipeline.md` §4.1.1]; con el Whisper-gl de Nós la prueba de escala dio WER 1,5 % en 16 min [P, `../medidas/escala/asr_longo_x4.json`]; la de 60 min no llegó a terminar. Se mantiene el diseño por párrafo (pendiente, 1-2 h) |
 | [8] Imágenes | SDXL-Turbo, 4 pasos, 1024×576, 1 imagen por escena; controles solo informativos (luminancia, contraste, similitud) | I1 (NSFW), I2 (OCR) e I3 entre episodios no existen |
-| [9] Montaje | Ken Burns + niebla + fundidos + subtítulos; carga **todas** las imágenes reescaladas en memoria en cada uno de los 4 procesos | A 240 imágenes serían ≈ 9 GB de RAM (240 × 9,7 MB × 4): hay que cargarlas por tramo antes de pasar de ≈ 60 imágenes (cambio pendiente) |
-| Semáforo | 9 puertas en `pipeline.py` (`PERFIS`), con umbrales alineados con §6.1 | P1, C0 dentro del pipeline, H2, I1-I3, T3, T5 pendientes |
+| [9] Montaje | Ken Burns + niebla + fundidos + subtítulos; carga **todas** las imágenes reescaladas en memoria en cada uno de los 4 procesos | A 270 imágenes serían ≈ 10 GB de RAM (270 × 9,7 MB × 4): hay que cargarlas por tramo antes de pasar de ≈ 60 imágenes (cambio pendiente; los 115-126 min de §4.1 lo suponen hecho) |
+| Semáforo | 10 puertas en `pipeline.py` (`UMBRAIS` y `portas`): duración, WER, sincronía A/V y de subtítulos, LanguageTool, **H1**, estilo, sonoridad, peso, resolución. Umbrales alineados con §6.1 en la ronda 2 (WER 0,25 → 0,06; sonoridad −24/−18 → −18/−16 LUFS) | P1, C0 dentro del pipeline, H2, I1-I3, T3, T5 pendientes. Hoy hay 6 de los 14 controles, varios en versión parcial: T1, T2 (sin LLM B), T4 (parcial), H1 (léxico), A1 (sobre la mezcla, no por párrafo), A2 (solo sonoridad) |
 
 - **Todo reanudable e idempotente**: cola en disco local, trabajos con hash de contenido (diseño de
   `../../gauntlet/piezas/pipeline.md` §4.1.1 c, reutilizado tal cual).
@@ -305,8 +393,8 @@ dossier textos del Consello da Cultura Galega ni obras protegidas (solo verifica
 | H1 | Anclaje de afirmaciones | `afirmacions.csv` + comprobación de que la cita literal existe en el fragmento | ≥ 95 % de frases con dato ancladas; las no ancladas se borran | Invenciones "sin fuente" |
 | H2 | Coherencia con la cita | LLM C (otra familia) juzga "la frase dice lo mismo que la cita" | ≤ 5 % de "no respaldado"; si > 10 %, el episodio no sale | Fechas cambiadas, personajes mezclados, exageraciones |
 | H3 | Temas vetados | Lista cerrada de temas (§8.2) + detector de palabras de zona roja | 0 | Guerra Civil, represión, política reciente, conflictos vivos |
-| A1 | Inteligibilidad | ASR Whisper-gl por párrafo, normalizado con Cotovía, WER | ≤ 6 % por párrafo tras 3 regeneraciones [R `pipeline.md` §4.1.1 a] | Palabras comidas, cambiadas, tartamudeos, "alucinaciones" del TTS |
-| A2 | Técnica de audio | ffmpeg `ebur128`, `silencedetect`, recortes | −16 a −18 LUFS integrados; sin silencios > 8 s en la parte narrada; 0 recortes | Saltos de volumen que despiertan, cortes |
+| A1 | Inteligibilidad | ASR Whisper-gl por párrafo, normalizado con Cotovía, WER | ≤ 6 % por párrafo tras 3 regeneraciones [R `pipeline.md` §4.1.1 a]. **En el código:** WER ≤ 0,06 sobre la mezcla entera (medido: 2,3 % y 2,5 %; la voz sola da 8,2-8,6 %, por eso aún no es puerta) | Palabras comidas, cambiadas, tartamudeos, "alucinaciones" del TTS |
+| A2 | Técnica de audio | ffmpeg `ebur128`, `silencedetect`, recortes | −18 a −16 LUFS integrados; sin silencios > 8 s en la parte narrada; 0 recortes. **En el código:** solo la sonoridad; la mezcla apunta ahora a −17 LUFS (`son.py`, antes −20). **El `video/ejemplo.mp4` actual mide −20,0 LUFS y no pasa A2**; con +3 dB mide −17,0 [P, ffmpeg `ebur128`] y el pico real pasa de −5,1 a ≈ −2,1 dBTP: hay que rehacer las etapas 6-8 antes de P0 | Saltos de volumen que despiertan, cortes |
 | I1 | Seguridad de imagen | Clasificador NSFW | 0 positivos | Desnudos, violencia gráfica |
 | I2 | Texto en imagen | OCR (Tesseract) | 0 textos detectados con confianza > umbral | Letras inventadas y rótulos ilegibles, típicos de la IA |
 | I3 | Duplicados y variedad | *Hash* perceptual + similitud entre episodios | ≤ 10 % de planos casi iguales; ≤ 5 % reutilizados de otros episodios | "Plantilla repetitiva" (política de YouTube) |
@@ -314,8 +402,33 @@ dossier textos del Consello da Cultura Galega ni obras protegidas (solo verifica
 
 Más un control transversal: **C0, errores canario.** En cada ejecución se inyectan en una copia del guion 20 errores
 conocidos (5 castellanismos, 5 fechas cambiadas, 5 nombres intercambiados, 5 frases sin fuente) y se mide cuántos
-detecta la cadena. **Si detecta < 80 %, el pipeline no publica ese día** (algo se ha roto) [S]. La tasa histórica de
+detecta la cadena. **Si detecta < 80 %, el pipeline no publica ese día** (algo se ha roto). La tasa histórica de
 detección se publica en la página de erratas.
+
+**C0 medido (29-09-2026, guion del vídeo de ejemplo, `herramientas/pipeline/canarios.py`)** con los controles que
+existen en el código (LanguageTool + hunspell, H1-léxico, estilo):
+
+| Familia | Ronda 1 [P, `../medidas/c0-irmandinos-apertura/`] | Ronda 2, tras corregir H1 [P, `../medidas/c0-irmandinos-apertura-r3/`] | Qué falla todavía |
+|---|---|---|---|
+| Castellanismos | 5/5 | 5/5 | — |
+| Fechas y cantidades | 3/5 | **5/5** | — |
+| Nombres cambiados | 4/5 | 4/5 | Lemos y Andrade intercambiados: los dos están en el dossier |
+| Frases sin fuente | **2/5** | **2/5** | Invenciones sin nombre ni cifra ("gardaba alí un tesouro de moedas de ouro", "a última pedra caeu nunha noite de lúa chea", "a revolta máis grande de toda Europa") |
+| **Total** | **14/20 = 70 %: no pasa P0** | **16/20 = 80 %: en el umbral** | Falsos positivos de base: 2 en ambas |
+
+- **Qué se corrigió:** H1 buscaba cada cantidad del guion como subcadena del dossier, así que "dous" (dous séculos) se
+  daba por anclado dentro de "douscentas" y "cen" (cen anos) dentro de "cincocentos". Ahora compara palabras enteras
+  (`ancoraxe.py`). No añadió falsos positivos en el guion limpio. H1 pasa además a ser puerta de `pipeline.py`.
+- **Por qué el 80 % no basta todavía:** se alcanza en el mismo conjunto de 20 canarios que sirvió para encontrar el
+  fallo (riesgo de ajustar el control al examen) y deja las invenciones "sin fuente" en 2/5, que es justo el error
+  más dañino sin historiador.
+- **Qué lo sube, y cómo se mide:** **H2**, un juez LLM de otra familia que recibe cada frase del guion con los hechos
+  del dossier y responde "respaldada / no respaldada". Es el único control que puede ver una invención sin nombre ni
+  cifra y un cambio de papeles entre dos nombres del dossier. Objetivo medible: **≥ 4/5 en "sin fuente" y ≥ 90 % en
+  total** en este conjunto, **y ≥ 80 % en un segundo conjunto de 20 canarios nuevo** escrito para otro tema (Samos, con
+  su dossier de §3.3) sin mirar los resultados antes. Se mide también su coste: falsos positivos en los dos guiones
+  limpios (umbral: ≤ 1 frase de cada 50 marcada sin motivo) [S].
+- **Hoy, P0 no se da por pasada** en el punto de los canarios (§9).
 
 ### 6.2 Coherencia visual (sin control fiable, solo mitigación)
 
@@ -376,7 +489,7 @@ creador" que mostrar más allá de la selección de temas y fuentes.
 
 | Riesgo | Prob. [S] | Impacto | Mitigación |
 |---|---|---|---|
-| Solicitud al YPP rechazada por contenido inauténtico | 40-60 % si se llega a solicitar [S puro: **no** se apoya en casos comparables documentados de canales de voz IA + imágenes admitidos o rechazados en 2026; no se han encontrado datos públicos fiables, solo anécdotas de foros. Se deja como supuesto a sustituir por el resultado real si se solicita] | Sin anuncios ni fan funding; para un hobby, bajo | Variedad real entre episodios (P1, I3); series con arco; fuentes en la descripción; cadencia semanal; no copiar la plantilla de títulos de la referencia |
+| Solicitud al YPP rechazada por contenido inauténtico | 40-60 % si se llega a solicitar [S puro: **no** se apoya en casos comparables documentados de canales de voz IA + imágenes admitidos o rechazados en 2026; no se han encontrado datos públicos fiables, solo anécdotas de foros. Se deja como supuesto a sustituir por el resultado real si se solicita] | Sin anuncios ni fan funding; para un hobby, bajo | Variedad real entre episodios (P1, I3); series con arco; fuentes en la descripción; cadencia fija y lenta (quincenal); no copiar la plantilla de títulos de la referencia |
 | Desmonetización tras entrar | 20-30 % en 12 meses | Igual | Ídem; expediente para apelar |
 | Menor distribución algorítmica (no documentada como sanción) | Desconocida | Menos vistas | No controlable |
 | **Cierre del canal** (spam, prácticas engañosas) | Baja, < 5 %, si se etiqueta y no se engaña | Alto: se pierde el catálogo | Etiquetado siempre; nada de metadatos engañosos; nada de subidas masivas; copia del catálogo fuera de YouTube (Internet Archive o similar, con licencia) |
@@ -494,10 +607,10 @@ días de publicarse.
 
 | Puerta | Cuándo | Condición para seguir (GO) | Si falla |
 |---|---|---|---|
-| **P0 · Salida** | Antes de publicar el primer episodio | (1) Piloto completo pasa los 14 controles; (2) canarios C0 ≥ 80 %; (3) aviso hablado y nota de descripción puestos; etiqueta sintética activada; (4) licencias archivadas (SDXL-Turbo, Apache de Nós); (5) **correo de solicitud de permiso a Nós/USC enviado** (D4). La respuesta no es necesaria para publicar como hobby **sin monetizar** [S, decisión de prudencia] | No se publica |
+| **P0 · Salida** | Antes de publicar el primer episodio | (1) Piloto completo pasa los 14 controles; (1a, P0-a) un episodio de 60 + 30 min sale del pipeline sin intervención en ≤ 8 h de reloj (§4.1 predice 5-7 h); (2) canarios C0 con H2: ≥ 90 % y ≥ 4/5 en "sin fuente" en el conjunto actual, y ≥ 80 % en un conjunto nuevo de otro tema (§6.1). **Hoy: 80 % y 2/5 → no se pasa**; (2a) sonoridad dentro de −18/−16 LUFS en el vídeo que se publique (el ejemplo actual mide −20); (2b) el promotor ha cronometrado 3 dossieres y la media cabe en §3.2; (3) aviso hablado y nota de descripción puestos; etiqueta sintética activada; (4) licencias archivadas (SDXL-Turbo, Apache de Nós); (5) **correo de solicitud de permiso a Nós/USC enviado** (D4). La respuesta no es necesaria para publicar como hobby **sin monetizar** [S, decisión de prudencia] | No se publica |
 | **P0-bis · Voz** | En cuanto responda Nós/USC | Permiso para el uso (y, si Nós lo exige, del locutor) | Si dicen que no: cambiar a otra voz con permiso claro en ≤ 30 días (voces de proveedor gl-ES con licencia comercial) o retirar el audio [R `gtm_riesgos.md` §3.3 bis] |
-| **P1 · Señal** | Tras 8 episodios (~M2) | Mediana a 30 días ≥ 50 vistas **y** ≥ 15 % de espectadores recurrentes (Studio: *espectadores nuevos y recurrentes*) **y** ≥ 3 comentarios de personas reales en galego en total **y** 0 incidentes graves (§10) | Si mediana < 20 vistas: parar la producción semanal, publicar el código y los informes de error para Nós, y dejar el canal quieto (coste hundido ≈ 60 h y < 30 €) |
-| **P2 · Hábito** | M6 (~26 episodios) | Mediana a 30 días ≥ 200 vistas **y** ≥ 150 subs **y** ≥ 25 % de espectadores recurrentes **y** ≥ 30 % de las vistas desde listas de reproducción, página del canal o búsqueda de la canle (consumo repetido, no descubrimiento) **y** tasa de erratas señaladas por episodio decreciente | Seguir solo como banco de pruebas técnico, a 1 episodio cada 2 semanas |
+| **P1 · Señal** | Tras 8 episodios (~M2) | Mediana a 30 días ≥ 50 vistas **y** ≥ 15 % de espectadores recurrentes (Studio: *espectadores nuevos y recurrentes*) **y** ≥ 3 comentarios de personas reales en galego en total **y** 0 incidentes graves (§10) | Si mediana < 20 vistas: parar la producción, publicar el código y los informes de error para Nós, y dejar el canal quieto (coste hundido ≈ 60-90 h y < 30 €) |
+| **P2 · Hábito** | M6 (~17 episodios) | Mediana a 30 días ≥ 200 vistas **y** ≥ 150 subs **y** ≥ 25 % de espectadores recurrentes **y** ≥ 30 % de las vistas desde listas de reproducción, página del canal o búsqueda de la canle (consumo repetido, no descubrimiento) **y** tasa de erratas señaladas por episodio decreciente | Seguir solo como banco de pruebas técnico, a 1 episodio al mes |
 | **P3 · Tracción (dispara D1)** | Desde M6, revisión mensual | Ver §9.1 | No se paga la validación |
 | **P4 · YPP** | Cuando se cumplan 1.000 subs y 8.000 h | Solicitar solo con P0-bis resuelto y sin alarmas abiertas | No solicitar |
 
@@ -524,7 +637,7 @@ la voz es el cuello de botella, y D1 se paga con 1 KPI de tracción en lugar de 
 revisor profesional que puntúa la voz frente al listón [R `../../gauntlet/piezas/voz.md`]. Resultado posible: seguir
 con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léxico de corrección de Cotovía.
 
-**Probabilidad de llegar a pagarla en 12 meses:** ≈ 10-15 % [S] (escenario optimista + parte alta del base del §1.3).
+**Probabilidad de llegar a pagarla en 12 meses:** ≈ 5-10 % [S] (el escenario optimista del §1.3; con ≈ 30 episodios, el base ya no llega a 500 subs).
 
 ### 9.2 Cuadro de mando mensual (5 min al mes)
 
@@ -557,9 +670,11 @@ con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léx
 
 ## 11. Supuestos que el piloto tiene que medir
 
-1. Tiempo de imagen por plano en CPU con SDXL-Turbo/SD-Turbo y calidad frente a la referencia (lo mide la pieza del vídeo).
+1. ~~Tiempo de imagen por plano en CPU~~: medido, 12-25 s con SDXL-Turbo (§4.1). Queda la calidad frente a la referencia (pieza del vídeo)
+   y el tiempo real de un episodio de 60 min completo (P0-a).
+1 bis. Minutos de persona por dossier: medidos en volumen, no en reloj de persona (§3.3). Los mide el promotor en los 3 primeros.
 2. Calidad del guion de un LLM frontier frente a Carballo-Instr3 en galego (ciego, con los controles T1-T3 como métrica).
-3. Tasa de detección real de los canarios y tasa de falsos bloqueos.
+3. Tasa de detección de los canarios con H2 y en un conjunto nuevo (hoy, sin H2 y sobre el conjunto conocido: 80 %), y tasa de falsos bloqueos.
 4. Residuos por episodio (§6.3): solo se sabrán si una persona experta mira un episodio. Si alguien de la comunidad lo
    ofrece gratis, aceptarlo es compatible con D5 (no es revisión pagada) y es el mejor dato del proyecto.
 5. Si YouTube sirve el audio en galego fuera del público galegofalante (hipótesis VaniMani).
@@ -577,5 +692,8 @@ con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léx
 - Nós, Llama-3.1-Carballo-Instr3: https://huggingface.co/proxectonos/Llama-3.1-Carballo-Instr3
 - OutlierKit, resumen de la ofensiva contra el *slop* en 2026: https://outlierkit.com/resources/youtube-ai-slop-crackdown-2026/
 - Listón de referencia: `../referencia.md` (yt-dlp sobre https://www.youtube.com/@HistoriaDesconocida-m4j).
+- Medidas propias usadas en la v2: `../medidas/escala/extrapolacion.md` (tiempos), `../medidas/c0-irmandinos-apertura/`
+  y `../medidas/c0-irmandinos-apertura-r3/` (C0), `../medidas/r2-*/qa.json` (WER, LUFS, ritmo),
+  `../../../herramientas/pipeline/dossier/samos/` (dossier cronometrado).
 - Reutilizado del Gauntlet 1: `../../gauntlet/investigacion/retornos.md`, `audiencia.md`, `voz_guion.md`;
   `../../gauntlet/piezas/pipeline.md`, `gtm_riesgos.md`, `voz.md`; `../../tribunal.md`.
