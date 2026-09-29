@@ -390,9 +390,11 @@ def planos(frases, tempos, dur):
         t0, t1 = tempos[f['i']]
         obx = rampa(pal, *PLANO_S)
         pal += len(f['texto'].split())
-        if (t1 - t0) > 1.7 * obx:
+        if cur and t1 - cur['t0'] > 1.3 * obx:      # a frase non cabe no plano aberto: pechalo antes
+            out.append(cur); cur = None
+        if (t1 - t0) > 1.25 * obx:
             if cur: out.append(cur); cur = None
-            k = round((t1 - t0) / obx)
+            k = max(2, round((t1 - t0) / obx))
             for j in range(k):
                 out.append({'frases': [f['i']], 't0': t0 + j * (t1 - t0) / k, 'texto': f['texto'],
                             'parte': f'{j + 1}/{k}'})
@@ -619,7 +621,7 @@ def main():
                'guion_llm_bruto': info['guion_llm_bruto'],
                'escenas_prompts_xenericos': info['escenas_prompts_xenericos'],
                'seleccion_feitos': info.get('seleccion_feitos'), 'seleccion_gancho': info.get('seleccion_gancho'),
-               'modo_guion': a.guion}
+               'modo_guion': a.guion, 'nota_execucion': os.environ.get('QA_NOTA')}
         res['lingua_antes_correccion'] = info['lt_antes']
         res['lingua'] = qa.lingua(guion, dossier=ancora(tema))
         res['h1_ancoraxe'] = ancoraxe.ancoraxe(guion, ancora(tema), [tema['aviso']])
@@ -687,6 +689,8 @@ def informe(r, tema, guion):
              '**Hai respostas do LLM que non veñen do servidor local: esta execución NON é desatendida.**'), '']
     if r.get('llm_servidor'):
         L += [f"Servidor LLM arrancado polo propio pipeline: {r['llm_servidor']}.", '']
+    if r.get('nota_execucion'):
+        L += [f"Nota sobre esta execución: {r['nota_execucion']}", '']
     L += ['', '## Ficheiro', '', '| Medida | Valor |', '|---|---|']
     L += [f'| {k} | {v} |' for k, v in f.items()]
     L += [f"| ritmo global (palabras/min, pausas incluídas) | {r['ritmo_palabras_min']} |",
