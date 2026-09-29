@@ -65,7 +65,20 @@ def arrancar():
             raise RuntimeError('O servidor LLM non arrancou (ver LLM_SERVER_LOG)')
         time.sleep(2)
     _SERVER['arranque_s'] = round(time.time() - t, 1)
+    _SERVER['arranque_cpu_s'] = round(_cpu_servidor() or 0, 1)
+    _SERVER['comando'] = cmd
     print(f'servidor LLM listo en {_SERVER["arranque_s"]} s', flush=True)
+
+
+def _cpu_servidor():
+    p = _SERVER.get('proc')
+    if not p:
+        return None
+    try:
+        x = open(f'/proc/{p.pid}/stat').read().rsplit(')', 1)[1].split()
+        return (int(x[11]) + int(x[12])) / os.sysconf('SC_CLK_TCK')
+    except Exception:
+        return None
 
 
 def parar():
@@ -120,7 +133,10 @@ def complete(prompt_name, backend=None, **vars):
     if backend == 'openai':
         arrancar()
         (CACHE / f'{prompt_name}-{h}.prompt.md').write_text(prompt)
+        c0 = _cpu_servidor()
         txt, meta = _chamar(prompt)
+        if c0 is not None:
+            meta['cpu_s_servidor'] = round(_cpu_servidor() - c0, 1)
         out.write_text(txt + '\n')
         out.with_suffix('.meta.json').write_text(json.dumps(meta, ensure_ascii=False, indent=1))
         print(f"LLM {prompt_name}: {meta['segundos']} s, {meta['usage']}", flush=True)

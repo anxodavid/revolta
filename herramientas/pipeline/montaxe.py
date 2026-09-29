@@ -1,4 +1,7 @@
-"""Etapa MONTAXE: Ken Burns lento + brétema animada + viñeta + fundidos longos, 1920x1080 a 24 fps.
+"""Etapa MONTAXE: Ken Burns + brétema animada lixeira + viñeta + fundidos curtos, 1920x1080 a 24 fps.
+
+Ronda 2: fundidos de 1,2 s (antes 3 s: a dobre exposición víase moito tempo) e brétema ao 6 % (antes 13 %,
+que lavaba todas as imaxes cun ton verde-gris uniforme).
 
 Os fotogramas xéranse en Python (PIL + numpy) en 4 procesos en paralelo, cada un codifica o seu
 treito sen perdas visibles (x264 crf 14) e logo concaténanse e codifícase a versión final co audio
@@ -15,8 +18,8 @@ FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 OW, OH, FPS = 1920, 1080, 24
 SW, SH = 2400, 1350          # imaxe fonte reescalada (1,25x a saída) para o movemento
 ZOOM = 1.12                   # percorrido máximo do zoom/paneo
-XF = 3.0                      # fundido encadeado entre escenas (s)
-NEBOA = 0.13                  # opacidade máxima da brétema
+XF = 1.2                      # fundido encadeado entre escenas (s)
+NEBOA = 0.06                  # opacidade máxima da brétema
 
 _G = {}
 

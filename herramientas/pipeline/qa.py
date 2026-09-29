@@ -175,12 +175,17 @@ def imaxes(pngs):
     return res
 
 
-def folla_contactos(mp4, dur, out, n=12, cols=4):
+def folla_contactos(mp4, dur, out, n=12, cols=4, evitar=(), xf=0.0):
+    """12 fotogramas a intervalos regulares. Se un cae dentro dun fundido encadeado (cortes `evitar`, fundido
+    de `xf` s), desprázase ao fotograma limpo máis próximo (fóra do fundido) para que a folla mostre as imaxes."""
     tw, th = 480, 270
     sheet = Image.new('RGB', (tw * cols, th * (n // cols)), 'black')
     d = ImageDraw.Draw(sheet)
     for k in range(n):
         t = (k + 0.5) * dur / n
+        for c in evitar:
+            if abs(t - c) < xf / 2 + 0.15:
+                t = c + (xf / 2 + 0.2 if t >= c else -(xf / 2 + 0.2))
         raw = subprocess.run([FFMPEG, '-loglevel', 'error', '-ss', f'{t:.2f}', '-i', str(mp4), '-frames:v', '1',
                               '-vf', f'scale={tw}:{th}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                              capture_output=True).stdout

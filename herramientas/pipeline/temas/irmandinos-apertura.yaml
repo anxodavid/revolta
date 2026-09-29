@@ -4,10 +4,11 @@
 id: irmandinos-apertura
 titulo: "A Revolta Irmandiña, contada para durmir"
 tema: "Os irmandiños: a irmandade que entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove botou abaixo moitas fortalezas de Galicia"
-fragmento: "a apertura do episodio: aviso, entrada suave coa Rocha Forte, fórmula fixa, resumo, invitación a durmir e o comezo do relato (a terra, os señores e as torres arredor da metade do século quince)"
-palabras: 440
+fragmento: "a apertura do episodio: aviso, gancho curto con contrastes verdadeiros do dossier, fórmula fixa, resumo, invitación a durmir e o comezo do relato (a terra, os señores e as torres arredor da metade do século quince)"
+palabras: 500
+escala_inicio: 1.05   # escala de duracións da voz no gancho (sobe ata `escala` despois)
+escala: 1.25
 aviso: "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático."
-escenas: 16
 dossier: |
   - [RF] Ao sur de Compostela hai un outeiro con restos da fortaleza da Rocha Forte: anacos de muralla e a planta dos muros entre a vexetación; o sitio está en ruínas.
   - [RF, Preito Tabera-Fonseca] Desde a Rocha Forte asegurábanse os camiños que ían cara a Pontevedra, Padrón, Muros, Noia e Fisterra (cara ao mar).

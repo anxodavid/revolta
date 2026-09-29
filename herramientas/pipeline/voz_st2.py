@@ -4,7 +4,8 @@ Execútase como subproceso desde pipeline.py, co directorio do modelo (ST2_DIR) 
 PATH/PYTHONPATH que necesita Cotovía (ver README). Entrada: JSON [{"i":..,"texto":..}].
 Saída: <dir>/NNN.wav (24 kHz, mono) por frase. As pausas pono pipeline.py.
 Parámetros de inferencia: os do banco de probas (alpha 0,3, beta 0,7, 5 pasos de difusión),
-escala de duracións SCALE (1,2 = ritmo para durmir).
+escala de duracións por frase (campo "escala" do JSON; se falta, SCALE): o pipeline pon ~1,05 no gancho
+e sobe ata ~1,25 (ritmo para durmir).
 """
 import sys, os, json
 frases_json, outdir = sys.argv[1], sys.argv[2]
@@ -40,7 +41,7 @@ ALPHA, BETA, STEPS = 0.3, 0.7, 5
 SCALE = float(os.environ.get('SCALE', '1.2'))
 
 
-def infer(text):
+def infer(text, scale=SCALE):
     ps = clean_output(run_cotovia_with_phrase(text.strip()))
     tokens = tc(ps); tokens.insert(0, tc([" "], mode="phoneme")[0])
     tokens = torch.LongTensor(tokens).unsqueeze(0)
@@ -53,7 +54,7 @@ def infer(text):
         s = s_pred[:, 128:]; ref = s_pred[:, :128]
         ref = ALPHA * ref + (1 - ALPHA) * ref_s[:, :128]; s = BETA * s + (1 - BETA) * ref_s[:, 128:]
         d = model.predictor.text_encoder(d_en, s, il, tm); x, _ = model.predictor.lstm(d)
-        dur = torch.sigmoid(model.predictor.duration_proj(x)).sum(axis=-1) * SCALE
+        dur = torch.sigmoid(model.predictor.duration_proj(x)).sum(axis=-1) * scale
         pd = torch.round(dur.squeeze()).clamp(min=1)
         aln = torch.zeros(il, int(pd.sum())); c = 0
         for i in range(aln.size(0)): aln[i, c:c + int(pd[i])] = 1; c += int(pd[i])
@@ -68,7 +69,7 @@ log = []
 for f in json.load(open(frases_json)):
     p = os.path.join(outdir, f['wav'])
     if os.path.exists(p): continue
-    w, ps = infer(f['texto'])
+    w, ps = infer(f['texto'], float(f.get('escala', SCALE)))
     sf.write(p, w, 24000)
     log.append({'i': f['i'], 'fonemas': ps, 's': round(len(w) / 24000, 2)})
     print(f"voz {f['i']:3d} {len(w)/24000:5.1f}s {f['texto'][:60]}", flush=True)
