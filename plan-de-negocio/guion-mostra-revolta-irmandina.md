@@ -1,5 +1,8 @@
 # Guion mostra: "A Revolta Irmandiña, contada para durmir"
 
+> **Aviso (29-09-2026):** este guion es del **plan v1**, que contaba con corrector profesional. Tras la decisión D5 (canal desatendido, sin revisión humana, ver `decisiones.md`) se ha cambiado el aviso hablado para que no afirme una revisión que no existe. La versión vigente del proceso está en `herramientas/pipeline/` y el vídeo de ejemplo en `gauntlet2/video/`.
+
+
 Piloto de registro del canal **Serán · Historia de Galicia para durmir**. Son las primeras ~770 palabras del episodio (≈ 7 min): la entrada suave completa y el comienzo del Acto I, "A terra e as torres".
 
 - **Versión:** v5.1 = v4 del gauntlet + correcciones de la integración + **reescritura del tribunal final (29-09-2026)** para cumplir las densidades del §3.2 y del §3.5 del plan, más tres correcciones de su 2.ª ronda (Castela ou Portugal, "dúas primaveras", "todas as partes"). El detalle está al final, en "Cambios".
@@ -15,7 +18,7 @@ Piloto de registro del canal **Serán · Historia de Galicia para durmir**. Son 
 
 ### Entrada suave (0:15-2:27)
 
-Boas noites. A voz que vas escoitar é sintética. O texto revisouno enteiro un corrector profesional de lingua galega.
+Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.
 
 Ao sur de Compostela hai un outeiro onde a brétema da mañá se demora máis ca noutros sitios. Entre a follaxe asoman unhas pedras vellas. Non hai torres nin ameas: só uns anacos de muralla e a planta dos muros, debuxada no chan, coma a lembranza dun edificio.
 
@@ -79,7 +82,7 @@ Os que derrubaban as torres aquel verán non sabían aínda que a súa obra ía 
 ### Aviso inicial
 | Dato del guion | Fuente | Comentario |
 |---|---|---|
-| "A voz que vas escoitar é sintética. O texto revisouno enteiro un corrector profesional de lingua galega." | AI Act, art. 50 (§7.3 del plan) y aviso hablado recomendado para audio en el Código de Práctica de la UE; regla del aviso en el §4.5 | Es la variante **de proveedor** y **de revisión íntegra**. Vale si este episodio (sexto tema de la Etapa 1 en el §3.7) sale entre los episodios 1-6, en los que el RLC revisa el texto completo (§4.7), o si su muestra no pasa y se revisa entero. **Si sale como episodio 7-12 con la muestra aceptada, se usa la frase por muestreo** ("Un corrector profesional de lingua galega revisa o texto por mostraxe"). En un episodio revisado por muestreo se usa la variante "revísao por mostraxe". Si la voz es de Nós o licenciada, se usa la variante que nombra a la persona (§4.5). **Corregido en el tribunal final:** "revisárono persoas galegofalantes" no era una cualificación. |
+| "A voz que vas escoitar é sintética, e este texto preparouno un proceso automático." | AI Act, art. 50 (§7.3 del plan) y aviso hablado recomendado para audio en el Código de Práctica de la UE; regla del aviso en el §4.5 | Aviso del **canal desatendido** (D5): declara la voz sintética y que el texto lo preparó un proceso automático, sin afirmar ninguna revisión humana. En el plan v1 había variantes con corrector profesional; ya no aplican. |
 
 ### Entrada: la Rocha Forte
 | Dato del guion | Fuente | Comentario |
