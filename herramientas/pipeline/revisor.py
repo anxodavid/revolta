@@ -25,7 +25,8 @@ MAN_DIST = 0.14
 
 # (etiqueta, expresión regular sobre a descrición en inglés e os obxectos de <OD>)
 LISTA = [
-    ('xanelas de vidro', r'\bglass (window|pane)s?\b|\bwindow ?panes?\b|\bglazed\b'),
+    # as vidreiras das igrexas góticas si son de época: "stained glass" non conta
+    ('xanelas de vidro', r'(?<!stained )\bglass (window|pane)s?\b|\bwindow ?panes?\b|\bglazed\b'),
     ('balcóns', r'\bbalcon(y|ies)\b'),
     ('tellados laranxas', r'\b(red|orange|terracotta|clay)[- ]?(tiled? )?roofs?\b|\broof tiles\b|\btiled roofs?\b'),
     ('vehículos modernos', r'\b(car|cars|truck|bus|bicycle|motorcycle|train|airplane|traffic light)\b'),

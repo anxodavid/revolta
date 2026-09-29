@@ -2,8 +2,9 @@
 
 Para cada plano: xera, revisa (revisor.py) e, se a revisión falla, rexenera con outra semente. Desde o
 intento INTENTO_PRUDENTE engade ao prompt unha cola "prudente" (figuras de corpo enteiro, sen primeiros
-planos de mans). Tras MAX_INTENTOS escolle o intento con menos problemas e márcao como non aprobado
-(a porta `imaxes_revisadas` do QA falla e o vídeo sae NON PUBLICABLE).
+planos de mans). Se MAX_INTENTOS fallan, fai un último intento de reserva co prompt XENÉRICO (aldeáns
+diante dunha casa torre: un plano que case sempre pasa). Se tamén falla, escolle o intento con menos
+problemas e márcao como non aprobado (a porta `imaxes_revisadas` do QA falla: NON PUBLICABLE).
 
 Licenza do modelo: Stability AI Community License (uso non comercial e comercial ata 1 M USD de
 ingresos anuais, con rexistro). Ver README. O estilo común vai aquí, non no LLM, para que todas as
@@ -31,30 +32,40 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
     paths, rexistro = [], []
     for i, e in enumerate(escenas):
         clave = f"{i:03d}-{hashlib.sha256(e['prompt'].encode()).hexdigest()[:8]}"
-        if clave in feito and (outdir / feito[clave]['ficheiro']).exists():
-            r = feito[clave]
+        previo = feito.get(clave)
+        if previo and (outdir / previo['ficheiro']).exists() and (previo['ok'] or len(previo['intentos']) > MAX_INTENTOS):
+            r = previo
         else:
-            if pipe is None:
-                import torch
-                from diffusers import AutoPipelineForText2Image
-                torch.set_num_threads(int(os.environ.get('NTH', '4')))
-                pipe = AutoPipelineForText2Image.from_pretrained(MODELO, torch_dtype=torch.bfloat16, variant='fp16')
-                pipe.set_progress_bar_config(disable=True)
-                if revisar:
-                    import revisor
-                    rev = revisor.Revisor()
             import torch
-            intentos = []
-            for k in range(MAX_INTENTOS):
-                pr = ESTILO.format(p=e['prompt'].strip().rstrip('.')) + (PRUDENTE if k >= INTENTO_PRUDENTE else '')
+            torch.set_num_threads(int(os.environ.get('NTH', '4')))
+            if rev is None and revisar:
+                import revisor
+                rev = revisor.Revisor()
+            intentos = list(previo['intentos']) if previo else []     # continúa onde quedou (p. ex. falta a reserva)
+            if intentos and rev is not None:     # se o revisor cambiou desde entón, volve revisar os intentos gardados
+                for it in intentos:
+                    rv = rev.revisar(outdir / it['ficheiro'])
+                    if rv['problemas'] != it['problemas']:
+                        it['problemas_revision_anterior'] = it['problemas']; it['problemas'] = rv['problemas']
+                        it['descricion'] = rv.get('descricion', ''); it['obxectos'] = rv.get('obxectos', [])
+                        print(f"imaxe {i:3d} intento {it['intento']} revisado de novo: {it['problemas'] or 'ok'}", flush=True)
+            for k in range(len(intentos), MAX_INTENTOS + 1):
+                if any(not x['problemas'] for x in intentos):
+                    break
+                base = XENERICO if k == MAX_INTENTOS else e['prompt']
+                pr = ESTILO.format(p=base.strip().rstrip('.')) + (PRUDENTE if k >= INTENTO_PRUDENTE else '')
                 seed = int(hashlib.sha256(f'{seed_base}-{i}-{pr}-{k}'.encode()).hexdigest()[:8], 16)
+                if pipe is None:
+                    from diffusers import AutoPipelineForText2Image
+                    pipe = AutoPipelineForText2Image.from_pretrained(MODELO, torch_dtype=torch.bfloat16, variant='fp16')
+                    pipe.set_progress_bar_config(disable=True)
                 f = outdir / f'{clave}-{k}.png'
                 t = time.time()
                 im = pipe(prompt=pr, width=W, height=H, num_inference_steps=PASOS, guidance_scale=0.0,
                           generator=torch.Generator().manual_seed(seed)).images[0]
                 im.save(f)
                 it = {'intento': k, 'ficheiro': f.name, 'seed': seed, 's': round(time.time() - t, 1), 'prompt': pr,
-                      'problemas': []}
+                      'problemas': [], 'reserva': k == MAX_INTENTOS}
                 if rev is not None:
                     t = time.time(); rv = rev.revisar(f)
                     it.update({'problemas': rv['problemas'], 'descricion': rv.get('descricion', ''),
