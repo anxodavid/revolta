@@ -10,8 +10,8 @@ TASK
 Group the sentences, in order and without gaps, into about {n_escenas} scenes. Each scene is shown on screen for 12-20 seconds (roughly 25-45 narrated words, usually 2-4 sentences). For each scene write ONE image prompt that evokes what is being narrated, in the visual style of a quiet historical film.
 
 RULES FOR THE IMAGE PROMPTS
-1. Concrete and visual: place, time of day, weather, light, 1-3 subjects, camera distance. 25-45 words. Do not repeat the style words (the pipeline adds them).
-2. Historically plausible for fifteenth-century Galicia: granite stone, slate or thatched roofs, oak and chestnut woods, green hills, rías and the Atlantic, Romanesque and Gothic churches, stone tower-houses and castles, hórreos, peasants in wool and linen, lords in late-medieval Castilian dress, clergy in habits. No modern objects, no firearms, no plate armour showpieces, no fantasy.
+1. Concrete and visual: place, time of day, weather, light, 1-3 subjects, camera distance. 20-35 words (the image model reads only about 60 words and the pipeline already adds the style words at the start). Put the most important subject first.
+2. Historically plausible for fifteenth-century Galicia: grey granite stone, dark slate or thatched roofs, small scattered hamlets rather than big towns, oak and chestnut woods, green rainy hills, rías and the Atlantic, Romanesque and Gothic churches, square stone tower-houses and castles, hórreos, peasants in wool and linen, lords in late-medieval Castilian dress, clergy in habits. Galicia is Atlantic, not Mediterranean: never describe hill towns of stucco houses, cypresses, palms, olive groves or dry golden landscapes. No modern objects, no firearms, no plate armour showpieces, no fantasy.
 3. Calm, never violent: no blood, no battles in progress, no fire destroying buildings; conflict is suggested (a crowd walking with tools at dawn, a ruined wall, a closed gate).
 4. People are seen from a distance, from behind or in silhouette; no close-up faces (faces change between images). No famous real people.
 5. No text, letters, signs, banners with writing, books with legible pages or maps.

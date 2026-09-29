@@ -30,7 +30,7 @@ CFG = {
     'ref_wav': os.environ.get('REF_WAV', f'{SCRATCH}/tts/kit/t1/brais_1_human.wav'),
     'whisper_dir': os.environ.get('WHISPER_DIR', f'{SCRATCH}/bench/wgl_ct2'),
 }
-OFFSET, GAP_FRASE, GAP_PAR, COLA = 4.0, 0.7, 0.9, 6.0   # segundos
+OFFSET, GAP_FRASE, GAP_PAR, COLA = 4.0, 1.4, 1.0, 6.0   # segundos
 UMBRAIS = {'dur_min_s': 180, 'dur_max_s': 300, 'wer_max': 0.25, 'desfase_av_max_s': 0.1,
            'pct_sincronia_min': 95.0, 'mb_max': 50, 'lt_max': 2, 'lufs': (-24, -18)}
 
@@ -133,14 +133,19 @@ def main():
         save_t(); print(e); sys.exit(3)
 
     # 4 voz
+    escala = tema.get('escala', 1.25)
     with Etapa('4_voz'):
+        import hashlib
+        for f in frases:
+            f['wav'] = f"{f['i']:03d}-{hashlib.sha256(f['texto'].encode()).hexdigest()[:8]}.wav"
         fj = W / 'frases.json'; fj.write_text(json.dumps(frases, ensure_ascii=False, indent=1))
         env = dict(os.environ, PATH=f"{CFG['st2_path']}:{os.environ['PATH']}", PYTHONPATH=CFG['st2_stubs'],
-                   ST2_DIR=CFG['st2_dir'], REF_WAV=CFG['ref_wav'], SCALE=str(tema.get('escala', 1.2)))
-        subprocess.run([CFG['python_tts'], str(HERE / 'voz_st2.py'), str(fj), str(W / 'voz')], env=env, check=True)
+                   ST2_DIR=CFG['st2_dir'], REF_WAV=CFG['ref_wav'], SCALE=str(escala))
+        vdir = W / f'voz_escala{escala}'
+        subprocess.run([CFG['python_tts'], str(HERE / 'voz_st2.py'), str(fj), str(vdir)], env=env, check=True)
         sr = 24000; parts = []; tempos = {}; t = OFFSET
         for k, f in enumerate(frases):
-            w, _ = sf.read(W / 'voz' / f"{f['i']:03d}.wav")
+            w, _ = sf.read(vdir / f['wav'])
             tempos[f['i']] = (round(t, 3), round(t + len(w) / sr, 3))
             parts.append(w); t += len(w) / sr
             if k + 1 < len(frases):
@@ -155,7 +160,7 @@ def main():
     # 5 imaxes
     with Etapa('5_imaxes'):
         import imaxes
-        rex = imaxes.xerar(escenas, W / 'imaxes', seed_base=tema['id'])
+        imgs, rex = imaxes.xerar(escenas, W / 'imaxes', seed_base=tema['id'])
         if rex:
             (W / 'imaxes' / 'rexistro.json').write_text(json.dumps(rex, ensure_ascii=False, indent=1))
     save_t()
@@ -175,7 +180,6 @@ def main():
             esc_t.append({'b0': b0, 'movemento': e.get('movemento', 'zoom_in')})
         for k in range(len(esc_t)):
             esc_t[k]['b1'] = esc_t[k + 1]['b0'] if k + 1 < len(esc_t) else dur
-        imgs = [str(W / 'imaxes' / f'{k:03d}.png') for k in range(len(escenas))]
         mp4 = S / 'ejemplo.mp4'
         montaxe.render(esc_t, imgs, dur, str(W / 'mestura.wav'), str(W / 'subtitulos.srt'), mp4, W / 'montaxe',
                        queimar=a.queimar_subtitulos)

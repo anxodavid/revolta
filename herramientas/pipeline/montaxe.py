@@ -131,7 +131,7 @@ def render(escenas, imgs, dur, audio, srt, out, work, procs=4, queimar=False, vb
         '-pix_fmt', 'yuv420p', '-r', str(FPS), '-c:a', 'aac', '-b:a', '128k', '-ar', '48000']
     if not queimar:
         cmd += ['-c:s', 'mov_text', '-metadata:s:s:0', 'language=glg']
-    cmd += ['-metadata:s:a:0', 'language=glg', '-movflags', '+faststart', '-shortest', str(out)]
+    cmd += ['-metadata:s:a:0', 'language=glg', '-movflags', '+faststart', str(out)]
     subprocess.run(cmd, check=True)
     for p in parts:
         os.remove(p)

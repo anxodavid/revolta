@@ -1,0 +1,483 @@
+{
+ "umbrais": {
+  "dur_min_s": 180,
+  "dur_max_s": 300,
+  "wer_max": 0.25,
+  "desfase_av_max_s": 0.1,
+  "pct_sincronia_min": 95.0,
+  "mb_max": 50,
+  "lt_max": 2,
+  "lufs": [
+   -24,
+   -18
+  ]
+ },
+ "son": {
+  "lufs_voz_obxectivo": -21.0,
+  "choiva_rel_db": -17.0,
+  "lufs_mestura_pyloudnorm": -18.0,
+  "pico": 0.792
+ },
+ "llm": {
+  "guion": {
+   "cache": "guion-86cb43ec62b3.txt",
+   "backend": "manual",
+   "model": "Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline",
+   "data": "2026-09-29",
+   "nota": "Resposta escrita seguindo literalmente o prompt renderizado (llm_pending/guion-86cb43ec62b3.prompt.md), sen edición humana."
+  },
+  "corrixir": {
+   "cache": "corrixir-29a6ee9f9e7b.txt",
+   "backend": "manual",
+   "model": "Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline",
+   "data": "2026-09-29",
+   "nota": "Resposta ao prompt renderizado llm_pending/corrixir-29a6ee9f9e7b.prompt.md: acepta REFLEXIVOS (demorarse -> queda); considera falsos positivos a concordancia de Esta noite imos, e camiñaran xuntos (suxeito os vasalos)."
+  },
+  "escenas": {
+   "cache": "escenas-11c8e046d451.txt",
+   "backend": "manual",
+   "model": "Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline",
+   "data": "2026-09-29",
+   "nota": "Resposta ao prompt renderizado llm_pending/escenas-11c8e046d451.prompt.md, sen edición humana."
+  }
+ },
+ "lingua_antes_correccion": [
+  {
+   "regra": "REFLEXIVOS",
+   "mensaxe": "Algúns verbos non admiten nunca construcións reflexivas. Será mellor \"demora\"?",
+   "contexto": "... verde, e nas mañás de outono a brétema demórase alí moito tempo. Entre as árbores asoma...",
+   "suxestions": [
+    "demora"
+   ]
+  },
+  {
+   "regra": "GENERAL_VERB_AGREEMENT_ERRORS",
+   "mensaxe": "Posíbel erro de concordancia verbal.",
+   "contexto": "...erán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Duran...",
+   "suxestions": [
+    "Esta noite vai"
+   ]
+  },
+  {
+   "regra": "GENERAL_GENDER_AGREEMENT_ERRORS",
+   "mensaxe": "Posíbel erro de concordancia de xénero.",
+   "contexto": "...ñas formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade...",
+   "suxestions": [
+    "xuntas cara",
+    "xuntos caros"
+   ]
+  }
+ ],
+ "lingua": [
+  {
+   "regra": "GENERAL_VERB_AGREEMENT_ERRORS",
+   "mensaxe": "Posíbel erro de concordancia verbal.",
+   "contexto": "...erán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Duran...",
+   "suxestions": [
+    "Esta noite vai"
+   ]
+  },
+  {
+   "regra": "GENERAL_GENDER_AGREEMENT_ERRORS",
+   "mensaxe": "Posíbel erro de concordancia de xénero.",
+   "contexto": "...ñas formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade...",
+   "suxestions": [
+    "xuntas cara",
+    "xuntos caros"
+   ]
+  }
+ ],
+ "estilo": {
+  "palabras": 475,
+  "palabras_obxectivo": 440,
+  "desvio_palabras_pct": 8.0,
+  "cifras": [],
+  "signos_prohibidos": [],
+  "preguntas": 0,
+  "palabras_vetadas": [],
+  "aviso_literal": true,
+  "formula_literal": true,
+  "frases_fora_8_25": [],
+  "nomes_propios_distintos": [
+   "Andrade",
+   "Compostela",
+   "Europa",
+   "Forte",
+   "Galicia",
+   "Lemos",
+   "Mariñas",
+   "Rocha",
+   "Serán"
+  ],
+  "max_nomes_novos_por_110_palabras": 4
+ },
+ "asr": {
+  "mestura": {
+   "wer": 0.023,
+   "sub": 5,
+   "del": 2,
+   "ins": 4,
+   "palabras_ref": 475,
+   "hipotese": "as noites, a voz que vas escoitar é sintética e este texto preparouno un proceso automático. Ao sur de Compostela hai un outeiro verde e nas mañás do outono a brétema queda alí moito tempo. Dentro as árbores asoman unhas pedras vellas, cubertas de musgo e de follas molladas. Son os restos dunha fortaleza, uns anacos de muralla e a planta dos muros debuxada no chan. árona do mar. Hoxe só se escoita a choiva lenta sobre as follas e, lonxe, algún paxaro. Aquela fortaleza chamábase a Rocha Forte e era do arcebispo de Compostela. Desde ela vixiábanse os camiños que baixaban cara ao mar. Un día, a xente da cidade e os labregos da comarca decidiron que aquela torre xa non tiña que seguir en pé e botárona abaixo. Isto é serán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Durante uns poucos anos labregos, artesáns, mariñeiros, clérigos e mesmo algúns fidalgos xuntáronse nunha irmandade e botaron abaixo moitas das torres do país. Falaremos da vida baixo aquelas torres e dos tempos difíciles que viñeran antes. E, xa cara ao final, lembrarémolo que contaron moito despois os vellos que o viran de mozos.  Non tes que lembrar nada do que che conte. Acomódate, apaga a luz aínda está acesa e deixa que o corpo pese un pouco máis. Deixa tamén que a respiración vaia máis amodo e imos alá, a aquel tempo. Arredor da metade do século XV, Galicia era unha terra de labregos, de artesáns, de mariñeiros e de mercadores. Moitos deles vivían nas terras dun señor e eran os seus vasalos. Pagábanlle tributos en diñeiro e en especie e debíanlle traballo nas obras da fortaleza e servizo coas armas. E eran cargas pesadas e moitas familias labregas vivían sempre á beira da pobreza. O señor era tamén o xuíz na súa terra. Había xa un século que mandaba unha nobreza nova, máis violenta ca a de antes, e o país enchérase de fortalezas. Algunhas eran das grandes casas nobres, como a de Lemos ou a de Andrade.  Outras eran dos bispos e, sobre todo, do arcebispo de Compostela. Desde aquelas torres, dicían os vasalos, viñan os males e os danos. Moitos anos despois, as testemuñas aínda lles chamaban refuxios de malfeitores. Non era a primeira vez que a xente se xuntaba contra os señores. Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e camiñaran xuntos cara a Compostela.  Aquela primeira irmandade foi vencida e os que a formaran foron castigados. Os tempos, ademais, eran difíciles porque desde a peste negra as rendas dos señores viñan minguando en toda Europa. E, como cobraban menos, moitos señores esixían cada vez máis aos seus vasalos. Así, pouco a pouco, nas casas e nos camiños, ía medrando a memoria daquelas irmandades, coma unha semente que agarda outra primavera.",
+   "wer_por_frase": {
+    "1": 0.5,
+    "2": 0.0,
+    "3": 0.05,
+    "4": 0.07,
+    "5": 0.0,
+    "6": 0.21,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0,
+    "13": 0.0,
+    "14": 0.11,
+    "15": 0.0,
+    "16": 0.06,
+    "17": 0.0,
+    "18": 0.05,
+    "19": 0.0,
+    "20": 0.0,
+    "21": 0.08,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0,
+    "31": 0.0,
+    "32": 0.0,
+    "33": 0.0
+   },
+   "frases_wer_mais_0_5": [],
+   "sincronia": {
+    "palabras_aliñadas": 468,
+    "pct_dentro_da_sua_frase": 99.8,
+    "desfase_inicio_frase_s_mediana": -0.26,
+    "desfase_inicio_frase_s_max_abs": 1.39,
+    "frases_medidas": 31
+   }
+  },
+  "voz": {
+   "wer": 0.082,
+   "sub": 6,
+   "del": 32,
+   "ins": 1,
+   "palabras_ref": 475,
+   "hipotese": "Boas noites. A voz que vas escoitar é sintética e este texto preparouno un proceso automático. Ao sur de Compostela hai un outeiro verde e nas mañás de outono a brétema queda alí moito tempo. Dentro as árbores asoman unhas pedras vellas, cubertas de musgo e de follas molladas.  hoxe só se escoita a choiva lenta sobre as follas e, lonxe, algún paxaro. Naquela fortaleza chamábase a Rocha Forte e era do arcebispo de Compostela. Desde ela vixiábanse os camiños que baixaban cara ao mar. Un día, a xente da cidade e os labregos da comarca decidiron que aquela torre xa non tiña que seguir en pé e botárona abaixo. Isto é serán, historia de Galicia para durmir.  Esta noite imos contar a historia dos irmandiños. Durante uns poucos anos labregos, artesáns, mariñeiros, clérigos e mesmo algúns fidalgos xuntáronse nunha irmandade e botaron abaixo moitas das torres do país. Falaremos da vida baixo aquelas torres e dos tempos difíciles que viñeran antes. E, xa cara ao final, lembrarémolo que contaron moito despois os vellos que o viran de mozos. ada do que che conte. Acomódate, apaga a luz se aínda está acesa e deixa que o corpo pese un pouco máis. Deixa tamén que a respiración vaia máis amodo e imos alá, a aquel tempo. Arredor da metade do século XV, Galicia era unha terra de labregos, de artesáns, de mariñeiros e de mercadores. Moitos deles vivían nas terras dun señor e eran os seus vasalos.  nas obras da fortaleza e servizo coas armas. E eran cargas pesadas e moitas familias labregas vivían sempre á beira da pobreza. O señor era tamén o xuíz na súa terra. Había xa un século que mandaba unha nobreza nova, máis violenta ca a de antes, e o país encheirase de fortalezas. Algunhas eran das grandes casas nobres, como a de Lemos ou a de Andrade. Outras eran dos bispos e, sobre todo, do arcebispo de Compostela. . Desde aquelas torres, dicían os vasalos, viñan os males e os danos. Moitos anos despois, as testemuñas aínda lles chamaban refuxios de malfeitores. Non era a primeira vez que a xente se xuntaba contra os señores. Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade foi vencida e os que a formaran foron castigados. os tempos, ademais, eran difíciles, porque desde a peste negra as rendas dos señores viñan minguando en toda Europa. E, como cobraban menos, moitos señores esixían cada vez máis aos seus vasalos. Así, pouco a pouco, nas casas e nos camiños, ía medrando a memoria daquelas irmandades, coma unha semente que agarda outra primavera."
+  }
+ },
+ "ficheiro": {
+  "mb": 31.0,
+  "resolucion": "1920x1080",
+  "fps": 24.0,
+  "pista_subtitulos": true,
+  "dur_video_s": 203.37,
+  "dur_audio_s": 203.52,
+  "dur_prevista_s": 209.53,
+  "desfase_av_s": 0.15,
+  "lufs_integrado": -18.0,
+  "lra_lu": 5.7,
+  "pico_real_dbtp": -2.0
+ },
+ "imaxes": [
+  {
+   "imaxe": "000.png",
+   "luminancia": 117.1,
+   "contraste": 47.1,
+   "similitude_coa_anterior": null
+  },
+  {
+   "imaxe": "001.png",
+   "luminancia": 86.9,
+   "contraste": 37.5,
+   "similitude_coa_anterior": 0.39
+  },
+  {
+   "imaxe": "002.png",
+   "luminancia": 101.5,
+   "contraste": 46.6,
+   "similitude_coa_anterior": 0.24
+  },
+  {
+   "imaxe": "003.png",
+   "luminancia": 133.7,
+   "contraste": 59.7,
+   "similitude_coa_anterior": 0.65
+  },
+  {
+   "imaxe": "004.png",
+   "luminancia": 108.6,
+   "contraste": 37.9,
+   "similitude_coa_anterior": 0.38
+  },
+  {
+   "imaxe": "005.png",
+   "luminancia": 35.1,
+   "contraste": 22.9,
+   "similitude_coa_anterior": 0.0
+  },
+  {
+   "imaxe": "006.png",
+   "luminancia": 35.5,
+   "contraste": 25.8,
+   "similitude_coa_anterior": -0.1
+  },
+  {
+   "imaxe": "007.png",
+   "luminancia": 133.1,
+   "contraste": 49.0,
+   "similitude_coa_anterior": -0.14
+  },
+  {
+   "imaxe": "008.png",
+   "luminancia": 102.0,
+   "contraste": 41.0,
+   "similitude_coa_anterior": 0.09
+  },
+  {
+   "imaxe": "009.png",
+   "luminancia": 95.6,
+   "contraste": 42.1,
+   "similitude_coa_anterior": 0.07
+  },
+  {
+   "imaxe": "010.png",
+   "luminancia": 98.2,
+   "contraste": 43.7,
+   "similitude_coa_anterior": 0.66
+  },
+  {
+   "imaxe": "011.png",
+   "luminancia": 63.9,
+   "contraste": 38.4,
+   "similitude_coa_anterior": 0.64
+  },
+  {
+   "imaxe": "012.png",
+   "luminancia": 136.6,
+   "contraste": 53.5,
+   "similitude_coa_anterior": 0.46
+  },
+  {
+   "imaxe": "013.png",
+   "luminancia": 104.3,
+   "contraste": 32.6,
+   "similitude_coa_anterior": 0.59
+  },
+  {
+   "imaxe": "014.png",
+   "luminancia": 76.1,
+   "contraste": 38.8,
+   "similitude_coa_anterior": 0.02
+  }
+ ],
+ "escenas": [
+  {
+   "escena": 0,
+   "frases": [
+    1,
+    2,
+    3
+   ],
+   "dur_s": 19.0,
+   "movemento": "zoom_in",
+   "prompt": "wide view at dawn of a green wooded hill south of Santiago de Compostela, thick morning fog lying in the valley, oak and chestnut trees, faint grey stones on the hilltop, pale golden light"
+  },
+  {
+   "escena": 1,
+   "frases": [
+    4,
+    5,
+    6
+   ],
+   "dur_s": 18.8,
+   "movemento": "pan_right",
+   "prompt": "ruins of a medieval granite wall among oak trees, stones covered in green moss and wet fallen leaves, low foundations of walls outlined on the ground, light rain, soft grey daylight"
+  },
+  {
+   "escena": 2,
+   "frases": [
+    7,
+    8
+   ],
+   "dur_s": 9.8,
+   "movemento": "zoom_out",
+   "prompt": "a stone castle with two square towers on a hill, seen from far away, dirt roads winding down through green valleys toward a distant estuary and the Atlantic sea, calm late afternoon light"
+  },
+  {
+   "escena": 3,
+   "frases": [
+    9,
+    10
+   ],
+   "dur_s": 13.6,
+   "movemento": "pan_up",
+   "prompt": "a large crowd of peasants and townspeople seen from behind, walking slowly up a misty hillside path at dawn carrying wooden tools, a dark castle silhouette above them in the fog"
+  },
+  {
+   "escena": 4,
+   "frases": [
+    11,
+    12
+   ],
+   "dur_s": 14.0,
+   "movemento": "pan_left",
+   "prompt": "a medieval village square of granite houses with slate roofs, small groups of peasants, craftsmen, fishermen and a monk in a brown habit gathered and talking quietly, seen from a distance, overcast morning"
+  },
+  {
+   "escena": 5,
+   "frases": [
+    13,
+    14
+   ],
+   "dur_s": 13.4,
+   "movemento": "zoom_in",
+   "prompt": "interior of a humble stone house at night, an old man seen from behind sitting by the hearth fire, warm orange firelight on rough granite walls, wooden bench, clay pots"
+  },
+  {
+   "escena": 6,
+   "frases": [
+    15,
+    16,
+    17
+   ],
+   "dur_s": 15.5,
+   "movemento": "zoom_in",
+   "prompt": "a quiet medieval bedroom at night, simple wooden bed with wool blankets, a single candle on a stool, small window with rain drops and blue night outside, warm dim light"
+  },
+  {
+   "escena": 7,
+   "frases": [
+    18,
+    19
+   ],
+   "dur_s": 12.2,
+   "movemento": "pan_right",
+   "prompt": "wide landscape of the Galician countryside in the fifteenth century, small fields and stone walls, a hamlet with thatched roofs and a granite granary on stilts, a river estuary with small fishing boats in the distance, soft morning mist"
+  },
+  {
+   "escena": 8,
+   "frases": [
+    20,
+    21
+   ],
+   "dur_s": 13.8,
+   "movemento": "pan_left",
+   "prompt": "peasants seen from behind carrying sacks of grain and baskets along a muddy track toward a stone tower house, oxen cart, autumn trees, overcast grey sky"
+  },
+  {
+   "escena": 9,
+   "frases": [
+    22,
+    23
+   ],
+   "dur_s": 11.1,
+   "movemento": "zoom_out",
+   "prompt": "a tall square stone tower house of a lord dominating a green valley at dusk, small peasant houses below, smoke from chimneys, cold blue and violet evening light"
+  },
+  {
+   "escena": 10,
+   "frases": [
+    24,
+    25
+   ],
+   "dur_s": 10.9,
+   "movemento": "pan_right",
+   "prompt": "a great medieval castle with high granite walls and towers on a rocky hill above a river, and far away the towers of a Romanesque cathedral in a walled city, golden evening light, clouds"
+  },
+  {
+   "escena": 11,
+   "frases": [
+    26,
+    27
+   ],
+   "dur_s": 11.3,
+   "movemento": "zoom_in",
+   "prompt": "a dark stone fortress tower at night under a cloudy sky with a pale moon, below it a few peasant houses with small warm lit windows, quiet and still, fog on the ground"
+  },
+  {
+   "escena": 12,
+   "frases": [
+    28,
+    29,
+    30
+   ],
+   "dur_s": 18.4,
+   "movemento": "pan_left",
+   "prompt": "a long line of peasants walking together along a muddy road through fog, seen from behind and far away, toward a distant walled medieval city with cathedral towers, grey morning light"
+  },
+  {
+   "escena": 13,
+   "frases": [
+    31,
+    32
+   ],
+   "dur_s": 13.7,
+   "movemento": "zoom_out",
+   "prompt": "empty autumn fields and an abandoned farmhouse of granite with a collapsed roof, bare trees, grey low clouds, crows in the sky, melancholic quiet atmosphere"
+  },
+  {
+   "escena": 14,
+   "frases": [
+    33
+   ],
+   "dur_s": 14.0,
+   "movemento": "zoom_in",
+   "prompt": "close view of weathered hands of a peasant woman placing seeds into a small clay jar on a wooden table, warm hearth light, a window showing a spring morning with blossoming trees"
+  }
+ ],
+ "ritmo_palabras_min": 142.8,
+ "tempos": {
+  "1_guion": {
+   "parede_s": 0.0,
+   "cpu_s": 0.0
+  },
+  "2_corrixir": {
+   "parede_s": 19.5,
+   "cpu_s": 43.0
+  },
+  "3_escenas": {
+   "parede_s": 0.0,
+   "cpu_s": 0.0
+  },
+  "4_voz": {
+   "parede_s": 222.7,
+   "cpu_s": 202.9
+  },
+  "5_imaxes": {
+   "parede_s": 321.2,
+   "cpu_s": 1167.6
+  },
+  "6_son": {
+   "parede_s": 5.2,
+   "cpu_s": 5.1
+  },
+  "7_montaxe": {
+   "parede_s": 284.9,
+   "cpu_s": 1062.6
+  },
+  "8_qa": {
+   "parede_s": 128.3,
+   "cpu_s": 237.0,
+   "nota": "inclúe a folla de contactos"
+  }
+ },
+ "portas": {
+  "duracion": true,
+  "wer_mestura": true,
+  "sincronia_av": false,
+  "sincronia_subtitulos": true,
+  "lingua_lt": true,
+  "estilo": true,
+  "sonoridade": true,
+  "peso": true,
+  "resolucion": true
+ },
+ "publicable": false
+}

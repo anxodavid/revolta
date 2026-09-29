@@ -66,7 +66,7 @@ def infer(text):
 os.makedirs(outdir, exist_ok=True)
 log = []
 for f in json.load(open(frases_json)):
-    p = os.path.join(outdir, f"{f['i']:03d}.wav")
+    p = os.path.join(outdir, f['wav'])
     if os.path.exists(p): continue
     w, ps = infer(f['texto'])
     sf.write(p, w, 24000)
