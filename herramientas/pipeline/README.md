@@ -1,100 +1,135 @@
 # Pipeline automático de "Serán" (historia de Galicia para durmir)
 
 De una **ficha de tema** (YAML con título, extensión y dossier de fuentes verificadas) a un **MP4 1920x1080 en
-galego** con voz sintética de Nós, imágenes generadas en CPU, lluvia de fondo, subtítulos galegos y un informe de
-QA automático. Sin revisión humana entre la entrada y el MP4 (decisión D5): la única acción humana es lanzar el
-comando. Todo el software y los modelos son abiertos o de pesos abiertos; todo corre en CPU (4 núcleos, 15 GB).
+galego** con voz sintética de Nós, imágenes generadas en CPU y revisadas por una puerta automática, lluvia de fondo,
+subtítulos galegos y un informe de QA. **Un solo comando, sin revisión humana (D5)**: el pipeline arranca su propio
+LLM local, escribe el guion, lo valida, lo narra, genera y revisa las imágenes, monta y mide. Todo el software y los
+modelos son abiertos o de pesos abiertos y corren en CPU (4 núcleos, 15 GB).
 
+    source entorno-llm.sh        # variables del LLM local (ver abajo); nada más
     PY=$SCRATCH/tts/venv/bin/python
-    $PY pipeline.py temas/irmandinos-apertura.yaml --saida ../../plan-de-negocio/gauntlet2/video
-    # opcional: --queimar-subtitulos (subtítulos grabados en la imagen; por defecto van en pista aparte)
-    # opcional: --llm openai  (LLM local con API compatible: LLM_URL, LLM_MODEL)
+    $PY pipeline.py temas/irmandinos-apertura.yaml --llm openai --traballo DIR_VACÍO --saida ../../plan-de-negocio/gauntlet2/video
 
-Salida en `--saida`: `ejemplo.mp4`, `subtitulos.gl.srt`, `contactsheet.jpg` (4x3 fotogramas), `qa.json` y `qa.md`
-(veredicto automático PUBLICABLE / NON PUBLICABLE con sus puertas). Los intermedios (guion, frases, WAV, PNG)
-quedan en `--traballo` (por defecto `$SCRATCH/pipeline_work/<id>`) y cada etapa se salta si ya está hecha.
+Salida en `--saida`: `ejemplo.mp4` (escrito de forma atómica: primero `.ejemplo.tmp.mp4` y se renombra al acabar),
+`subtitulos.gl.srt`, `contactsheet.jpg` (4x3 fotogramas), `qa.json` y `qa.md` (veredicto PUBLICABLE / NON PUBLICABLE
+con sus puertas). Los intermedios (respuestas del LLM con sus prompts y metadatos, guion, WAV, PNG de todos los
+intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si ya está hecha.
+
+## Historia honesta de la muestra
+
+- **Ronda 1 (29-09-2026, archivada en `plan-de-negocio/gauntlet2/video/ronda1/`)**: las tres etapas LLM las respondió
+  Claude Opus 5.5 en modo `manual` (el pipeline paraba con código 3 y se relanzaba). **No fue una ejecución
+  desatendida** aunque el README y el qa.md de entonces lo decían. Su QA daba PUBLICABLE 9/9 sin mirar el contenido de
+  las imágenes: el plano final tenía cuatro manos (un par sin cuerpo), una aldea con ventanas de vidrio y balcones y una
+  multitud con picas y cruces.
+- **Ronda 2 (esta versión)**: `--llm openai` contra un LLM local arrancado por el propio pipeline, en un directorio de
+  trabajo vacío, y puerta automática de imágenes con regeneración. El modo `manual` queda solo para depurar prompts.
 
 ## Etapas
 
 | # | Etapa | Qué hace | Software / modelo (licencia) |
 |---|---|---|---|
-| 1 | guion | Escribe el texto narrado solo con datos del dossier | LLM, `prompts/guion.md` (ver abajo) |
-| 2 | corrixir | LanguageTool gl-ES revisa el guion; si hay avisos, el LLM corrige (una vuelta) | LanguageTool 6.8 (LGPL-2.1) con hunspell gl; `prompts/corrixir.md` |
-| 3 | escenas | El LLM agrupa las frases en escenas de 12-20 s y escribe un prompt de imagen por escena | LLM, `prompts/escenas.md` |
-| 4 | voz | Narra frase a frase; pausas de 1,4 s entre frases y 2,4 s entre párrafos (≈124 palabras/min medidas); 4 s de lluvia antes de la voz y 6 s al final | Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC), escala de duraciones 1,25 (`escala` en la ficha); Cotovía para fonemas |
-| 5 | imaxes | Una imagen 1024x576 por escena, 4 pasos, bfloat16, semilla fija por escena | SDXL-Turbo (Stability AI Community License) con `diffusers` 0.35 |
-| 6 | son | Lluvia sintetizada por código (ruido filtrado + gotas de Poisson + rumor grave): no usa grabaciones de terceros, no hay licencia que anotar. Voz a -17 LUFS (medida en estéreo; antes -20, cambiado para cumplir A2 del plan), lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
-| 7 | montaxe | Ken Burns lento (zoom 1,00-1,12 o paneo), niebla animada semitransparente, viñeta, fundidos encadenados de 3 s, fundido de entrada y salida; x264 CRF 22 con tope de 1,1 Mb/s; AAC 128 kb/s; subtítulos `mov_text` en pista `glg` | PIL, numpy, ffmpeg de `imageio-ffmpeg` (el ffmpeg del sistema no tiene codificadores) |
-| 8 | qa | Controles automáticos y hoja de contactos (abajo) | faster-whisper + Whisper turbo galego de Nós, LanguageTool, ffmpeg `ebur128` |
+| 1 | guion | **Por bloques** (por defecto): el LLM elige 2-3 hechos del dossier para el gancho y los reescribe; escribe el resumen y la invitación a dormir; elige los hechos del relato y escribe **un párrafo por hecho** (tono que baja de vivo a sereno). Cada bloque se valida (cifras, signos, preguntas, "imaxina", frases > 30 palabras, nombres y cantidades no anclados en el dossier) y se reintenta hasta 2 veces con los problemas. El aviso y la fórmula son texto fijo que pone el código. Alternativa `--guion enteiro`: un solo prompt (`prompts/guion.md`) con validación y 2 revisiones (`prompts/revisar.md`) | LLM local, `prompts/bloque_*.md` |
+| 2 | corrixir | LanguageTool gl-ES por párrafo; si hay avisos, el LLM corrige ese párrafo; solo se acepta si baja el número de avisos y no empeora la validación | LanguageTool 6.8 (LGPL-2.1) con hunspell gl; `prompts/corrixir_parrafo.md` |
+| 3 | voz | Narra frase a frase con **ritmo en embudo** (feedback del promotor): escala de duraciones 1,05 en las primeras 150 palabras que sube hasta 1,25 hacia la palabra 320; pausas de 0,55 s entre frases al principio que suben hasta 1,35 s, más 0,45-1,0 s entre párrafos y un ajuste por longitud de la frase siguiente (la cadencia ya no es fija) | Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC), Cotovía para fonemas |
+| 4 | escenas | El **código** corta los planos con las duraciones reales de la voz: ~5,5 s en el gancho, subiendo a ~12,5 s; una frase larga se reparte en varios planos. El LLM escribe un prompt de imagen por plano (`prompts/escenas.md`: personas haciendo cosas, planos medios, luz variada, lista de anacronismos prohibidos) | LLM local |
+| 5 | imaxes | SDXL-Turbo 1024x576, 4 pasos. **Puerta de imágenes** (`revisor.py`): cada imagen se revisa y, si falla, se regenera con otra semilla (desde el 3.er intento, con una coletilla prudente: figuras de cuerpo entero); tras 5 intentos se queda la de menos problemas y la puerta `imaxes_revisadas` falla | SDXL-Turbo (Stability AI Community License); MediaPipe (Apache-2.0); Florence-2-large (MIT) |
+| 6 | son | Lluvia sintetizada por código (sin grabaciones de terceros). Voz a -17 LUFS, lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
+| 7 | montaxe | Ken Burns, niebla ligera (6 %, antes 13 %: lavaba todo de verde), viñeta, **fundidos de 1,2 s** (antes 3 s: la doble exposición se veía mucho), x264 CRF 22 con tope de 1,1 Mb/s, AAC 128 kb/s, subtítulos `mov_text` `glg` | PIL, numpy, ffmpeg de `imageio-ffmpeg` |
+| 8 | qa | Controles automáticos y hoja de contactos (sus 12 fotogramas se desplazan fuera de los fundidos) | faster-whisper + Whisper turbo galego de Nós, LanguageTool, ffmpeg `ebur128` |
+
+## La puerta de imágenes (`revisor.py`)
+
+1. **Manos y cuerpos** (MediaPipe `hand_landmarker` + `pose_landmarker_full`): una mano cuya muñeca está a más de 0,14
+   (distancia normalizada) de la muñeca de cualquier cuerpo detectado es "man sen corpo"; más de dos manos por cuerpo
+   también falla.
+2. **Lista de anacronismos y vetos** sobre la descripción detallada y los objetos que ve **Florence-2-large** (MIT):
+   ventanas de vidrio, balcones, tejados rojos o de teja, vehículos, objetos modernos (farolas, relojes, cables...),
+   interiores modernos (dormitorios, lámparas, cortinas), texto o letras, cruces portadas, armas de fuego, sangre o
+   edificios ardiendo.
+
+**Calibración con las 15 imágenes de la ronda 1** (`probas/revisor_ronda1.jsonl`): marca la del cierre con cuatro
+manos ("man sen corpo"), la aldea de 1:15 (tejados), la multitud con cruces, el dormitorio moderno, el reloj de la torre
+y los pueblos de tejado rojo. Deja pasar paisajes, el anciano junto al fuego y los caminantes. Coste: ≈20 s por imagen
+en CPU (dos pasadas de Florence-2) además de ≈16 s de generación.
+
+Límites: MediaPipe solo ve manos medianas o grandes (las de una multitud lejana no se revisan, pero tampoco se notan);
+Florence-2 describe objetos y materiales pero no cuenta dedos ni detecta caras deformes; la lista de palabras es
+conservadora (falsos positivos = una regeneración más). No sustituye a una mirada humana: reduce la frecuencia de los
+defectos graves, no la anula [S].
+
+## El LLM local
+
+`llm.py` renderiza cada prompt de `prompts/`, calcula su hash y guarda en `<traballo>/llm_cache/` el prompt, la
+respuesta y sus metadatos (modelo, sha256 del GGUF, tokens, segundos, CPU del servidor). Con `LLM_SERVER_CMD` el
+propio pipeline arranca el servidor si no hay uno escuchando y lo para al acabar la etapa 4 (libera ~9 GB de RAM para
+SDXL-Turbo y Florence-2).
+
+Modelos probados en CPU el 29-09-2026 (llama-cpp-python 0.3.19, Q4_K_M, 4 hilos), con el mismo prompt de guion:
+
+| Modelo (licencia) | Resultado | Evidencia |
+|---|---|---|
+| `proxectonos/Llama-3.1-Carballo-Instr3` (Llama 3.1), GGUF `sdocio/...-Q4_K_M` | No trae plantilla de chat; con el formato `User:/Assistant:` de sus datos de instrucciones **no hace la tarea**: escribe un texto genérico sobre el canal. 1,1 tokens/s de media | `probas/llm_carballo_instr3/` |
+| `proxectonos/Carvalho-Salamandra-Instruct` (MIT, "versión preliminar"), GGUF `mradermacher/...Q4_K_M` | Copia el dossier, luego **degenera** (repeticiones, traducciones y noticias en portugués) hasta el tope de 2.200 tokens | `probas/llm_carvalho_salamandra/` |
+| **`utter-project/EuroLLM-9B-Instruct-2512`** (Apache-2.0, el gallego está entre sus lenguas), GGUF `mradermacher/...Q4_K_M` | Sigue la estructura y escribe en gallego. Con un solo prompt escribe corto, repite ejemplos del prompt y **se inventa datos** (fechas, cifras, una frase gritada): `probas/llm_eurollm_enteiro/`. Por eso el modo por bloques: tareas pequeñas de reescritura de 1-3 hechos, temperatura 0,3, validación y reintento por bloque | `probas/llm_eurollm_enteiro/`, `probas/llm_eurollm_bloques_proba/` |
+
+Variables (`entorno-llm.sh` de la muestra): `LLM_URL`, `LLM_MODEL`, `LLM_FORMATO=chat`, `LLM_TEMP=0.3`,
+`LLM_MAX_TOKENS=1600`, `LLM_SERVER_CMD="python -m llama_cpp.server --model EuroLLM-9B-Instruct-2512.Q4_K_M.gguf
+--n_ctx 8192 --n_threads 4 --use_mmap false"`, `LLM_MODEL_FILE`, `LLM_MODEL_SHA256`. `--use_mmap false` evita tener los
+pesos dos veces en RAM (mmap + reempaquetado), que provocó un OOM al compartir la máquina con Florence-2.
 
 ## Controles automáticos (etapa 8) y puertas de publicación
 
 | Control | Cómo | Puerta |
 |---|---|---|
-| Inteligibilidad | WER de ASR sobre la **mezcla final** (voz + lluvia) y sobre la voz sola, con `proxectonos/whisper-large-v3-turbo-gl-v1.0` convertido a CTranslate2 int8; WER por frase (frases > 0,5 = posible error de pronunciación) | WER mezcla ≤ 0,06 (A1 del plan; medido: 0,023 y 0,025 en las dos ejecuciones, 0,015 en 16 min) |
-| Sincronía subtítulos-voz | Marcas de tiempo por palabra del ASR alineadas con el texto (jiwer); % de palabras que caen dentro del intervalo de su frase en el SRT (±0,5 s) y desfase al inicio de frase | ≥ 95 % |
-| Sincronía A/V | Duración decodificada de la pista de vídeo y de audio | desfase ≤ 0,1 s |
-| Duración | Duración del vídeo | 180-300 s en esta muestra (3-5 min) |
-| Lengua | LanguageTool gl-ES (incluye hunspell); los nombres del dossier no cuentan como error ortográfico | ≤ 2 avisos tras la corrección [S] |
-| H1-léxico (`ancoraxe.py`) | Nombres propios y cantidades del guion que no están en el dossier, por palabra entera | 0 sin anclar |
-| Estilo del canal | Sin cifras ni signos que la voz no lea, sin preguntas, sin "imaxina"/CTA, aviso y fórmula literales, frases de 8-25 palabras, nombres propios nuevos por cada 110 palabras | sin cifras/signos/vetadas; aviso y fórmula presentes |
-| Sonoridad | `ebur128` sobre el MP4 (integrado, LRA, pico real) | -18 a -16 LUFS (A2 del plan). El `video/ejemplo.mp4` actual mide -20,0 LUFS y **no pasaría**: hay que rehacer las etapas 6-8 (borrar la caché de la etapa 6); con +3 dB mide -17,0 LUFS |
-| Imágenes | Luminancia, contraste y similitud con la anterior (para detectar negras, lavadas o repetidas) | informativo |
-| Peso y formato | MB, resolución, fps, pista de subtítulos | ≤ 50 MB, 1920x1080 |
+| LLM local desatendido | Todas las respuestas del LLM vienen del servidor local (backend `openai`), ninguna de `manual` | obligatorio |
+| Inteligibilidad | WER de ASR sobre la mezcla final y sobre la voz sola (`proxectonos/whisper-large-v3-turbo-gl-v1.0` en CTranslate2 int8); WER por frase | WER mezcla ≤ 0,06 (A1 del plan) |
+| Sincronía subtítulos-voz | Marcas de tiempo por palabra del ASR contra el SRT (±0,5 s) | ≥ 95 % |
+| Sincronía A/V | Duración decodificada de vídeo y audio | ≤ 0,1 s |
+| Duración | Duración del vídeo | 180-300 s en esta muestra |
+| Lengua | LanguageTool gl-ES; los nombres del dossier no cuentan como error ortográfico | ≤ 2 avisos [S] |
+| H1-léxico (`ancoraxe.py`) | Nombres propios y cantidades que no están en el dossier ni en la ficha del tema | 0 sin anclar |
+| Estilo | Sin cifras, signos que la voz no lee, preguntas ni palabras vetadas; aviso y fórmula literales | todo cumplido |
+| **Imágenes** | `revisor.py` sobre la imagen escogida de cada plano | todas aprobadas |
+| Sonoridad | `ebur128` sobre el MP4 | -18 a -16 LUFS (A2 del plan) |
+| Peso y formato | MB, resolución | ≤ 50 MB, 1920x1080 |
 
-## El LLM
-
-El guion y el guion visual los escribe un LLM a partir de los prompts versionados en `prompts/`. `llm.py` renderiza el
-prompt, calcula su hash y busca la respuesta en `llm_cache/` (así el proceso es reproducible y auditable). Backends:
-
-- `openai`: cualquier servidor compatible con la API de OpenAI (llama.cpp `llama-server`, vLLM, Ollama). Candidatos
-  abiertos en galego: `proxectonos/Llama-3.1-Carballo-Instr3` (8B, Nós) o `proxectonos/Carvalho-Salamandra-Instruct`
-  (https://huggingface.co/proxectonos). **No se han probado todavía en este pipeline** [S]: su calidad de guion y su
-  velocidad en CPU están por medir (un 8B en Q4 con llama.cpp en 4 núcleos rinde del orden de unos pocos tokens/s [S],
-  unos 10-20 min para las tres llamadas de esta muestra).
-- `manual`: si falta la respuesta, el pipeline escribe el prompt renderizado en `llm_pending/` y sale con código 3;
-  un LLM externo escribe la respuesta en `llm_cache/` y se relanza el mismo comando.
-
-**En la muestra del 29-09-2026 el LLM fue Claude Opus 5.5 (`claude-opus-5-5`) en modo `manual`**, siguiendo
-literalmente los tres prompts renderizados (están en `llm_pending/`, y las respuestas y su nota en `llm_cache/*.meta.json`).
-No es un modelo abierto: para el canal real hay que sustituirlo por uno de los anteriores y repetir el QA.
+Lo que **no** controla: la verdad de lo que el texto dice sin nombres ni cifras (una causa inventada, un sujeto
+cambiado: sería H2, un juez LLM, sin implementar), la naturalidad del gallego más allá de LanguageTool, caras
+deformes o ropas anacrónicas que Florence-2 no nombre.
 
 ## Instalación (CPU)
 
-- Python 3.11 con `torch` (CPU), `diffusers==0.35.2`, `huggingface-hub<1.0` (diffusers 0.40 exige hub ≥ 1.23, que
-  rompe `transformers` 4.57), `transformers<5`, `accelerate`, `faster-whisper`, `jiwer`, `language_tool_python`
-  (descarga LanguageTool 6.8, 259 MB; necesita Java ≥ 17), `pyloudnorm`, `imageio-ffmpeg`, `soundfile`, `scipy`, `pyyaml`.
-- StyleTTS2 de Nós: copia de https://huggingface.co/proxectonos/Nos_StyleTTS2-Brais-GL en `ST2_DIR`, Cotovía 0.5 en
-  `ST2_PATHBIN` y los *stubs* de `monotonic_align`/`speechmos` en `ST2_STUBS` (ver `herramientas/voz/README.md`);
-  `REF_WAV`: grabación de referencia de estilo del corpus Nos_Brais-GL (CC-BY-4.0).
-- ASR: `ct2-transformers-converter --model proxectonos/whisper-large-v3-turbo-gl-v1.0 --output_dir wgl_ct2
-  --copy_files tokenizer.json preprocessor_config.json` y `WHISPER_DIR=wgl_ct2`.
-- SDXL-Turbo: se descarga solo (variante fp16, 6,5 GB) la primera vez.
+- Python 3.11 con `torch` (CPU), `diffusers==0.35.2`, `huggingface-hub<1.0`, `transformers<5` (4.57, que ya trae
+  `Florence2ForConditionalGeneration`), `accelerate`, `faster-whisper`, `jiwer`, `language_tool_python` (Java ≥ 17),
+  `pyloudnorm`, `imageio-ffmpeg`, `soundfile`, `scipy`, `pyyaml`, `mediapipe` (1.0.1; necesita `libegl1` y `libgles2`
+  del sistema).
+- Modelos de MediaPipe en `REVISOR_DIR`: `hand_landmarker.task` y `pose_landmarker_full.task`
+  (https://storage.googleapis.com/mediapipe-models/). Florence-2: `florence-community/Florence-2-large` (1,55 GB).
+- LLM: `llama-cpp-python[server]==0.3.19` en su propio venv, compilado desde PyPI (GitHub no es accesible desde el
+  contenedor, así que no hay ruedas precompiladas), y el GGUF de EuroLLM (5,6 GB).
+- StyleTTS2 de Nós, Cotovía y ASR: ver `herramientas/voz/README.md` y las variables de `CFG` en `pipeline.py`.
 
-Rutas por defecto: las de la sesión del 29-09-2026 bajo `$SCRATCH`; se cambian con las variables de entorno de
-`CFG` en `pipeline.py`.
+## Medidas de la muestra
 
-## Medidas de la muestra (29-09-2026, ejecución limpia en `--traballo` vacío)
-
-Vídeo de 4 min 01 s, 15 imágenes, 36,6 MB, veredicto automático PUBLICABLE (9/9 puertas). Tiempo: 21,4 min de
-reloj y 0,73 h de CPU de núcleo (voz 4,1 min, imágenes 9,6 min de las que ≈6 min son la carga de SDXL-Turbo y
-≈16 s por imagen, montaje 5,1 min, QA 2,3 min). Extrapolación lineal a 60 min: ≈4,1 h de reloj y ≈8,8 h de CPU
-de núcleo [S]. Detalle en `plan-de-negocio/gauntlet2/video/qa.md`. Para regenerar solo el informe:
-`python pipeline.py --so-informe qa.json tema.yaml guion.txt qa.md`.
+Ver `plan-de-negocio/gauntlet2/video/qa.md` (tiempos por etapa con el CPU del servidor LLM incluido, llamadas al LLM
+con tokens y segundos, puerta de imágenes con los intentos rechazados) y `comparacion-llm.md` (guion del LLM local
+frente al de Claude de la ronda 1 con los mismos controles).
 
 ## Licencias a vigilar
 
 - **SDXL-Turbo**: Stability AI Community License (https://huggingface.co/stabilityai/sdxl-turbo/blob/main/LICENSE.md):
-  uso gratuito, también comercial, por debajo de 1 M USD de ingresos anuales, con registro en Stability AI para uso
-  comercial. No es una licencia OSI. Alternativa más abierta: SD 1.5 + LCM (CreativeML OpenRAIL-M) con peor imagen [S].
-- Voz Nós StyleTTS2 y Whisper galego: ver las fichas de https://huggingface.co/proxectonos (crédito a Nós/USC, D4).
-- LanguageTool: LGPL-2.1. Lluvia: generada por código propio.
+  gratis por debajo de 1 M USD de ingresos anuales, con registro para uso comercial. No es OSI.
+- **EuroLLM-9B-Instruct-2512**: Apache-2.0 (https://huggingface.co/utter-project/EuroLLM-9B-Instruct-2512).
+- **Florence-2-large**: MIT. **MediaPipe** y sus modelos: Apache-2.0.
+- Voz Nós StyleTTS2 y Whisper galego: fichas de https://huggingface.co/proxectonos (crédito a Nós/USC, D4).
+- LanguageTool: LGPL-2.1. Lluvia: código propio.
 
-## Limitaciones conocidas (primera versión)
+## Limitaciones conocidas
 
-- Las imágenes se generan a 1024x576 y se reescalan a 2400x1350 (Lanczos + máscara de enfoque) para el movimiento:
-  en pantalla grande se ve algo blanda. Un reescalador (Real-ESRGAN) mejoraría la nitidez a costa de CPU.
-- La niebla se desplaza en bucle cada ~384 s; en vídeos largos habrá un salto de textura cada 6,4 min.
-- LanguageTool en galego detecta poco (ortografía y algunas concordancias) y da falsos positivos; no sustituye a un
-  corrector humano. Whisper escribe a veces el galego con grafías portuguesas, lo que infla el WER.
-- No hay control automático de rigor histórico más allá de la regla "solo datos del dossier" del prompt.
+- El guion de un LLM local de 9B en CPU es claramente peor que el de un modelo grande (ver la comparación): más
+  avisos de LanguageTool, frases planas y riesgo de datos inventados que H1 no ve. Es el punto débil del canal
+  desatendido y la razón para reportar errores y pedir un modelo instruccional mejor a Nós [S].
+- Las imágenes se generan a 1024x576 y se reescalan: en pantalla grande se ven algo blandas.
+- La niebla se repite cada ~6,4 min.
+- Whisper escribe a veces el galego con grafías portuguesas, lo que infla el WER.

@@ -112,14 +112,24 @@ def texto_fixo(g, aviso):
     return '\n\n'.join(pars)
 
 
+def ancora(tema):
+    """Texto contra o que se ancoran nomes e cantidades (H1): o dossier e a propia ficha do tema (título e tema)."""
+    return '\n'.join([tema['dossier'], tema['titulo'], tema['tema']])
+
+
 def validar_guion(g, tema):
     import qa, ancoraxe
     fr = partir(g)
     e = qa.estilo(g, fr, tema['aviso'], tema['palabras'])
-    h1 = ancoraxe.ancoraxe(g, tema['dossier'], [tema['aviso']])
+    h1 = ancoraxe.ancoraxe(g, ancora(tema), [tema['aviso']])
     p = []
     if abs(e['desvio_palabras_pct']) > 15:
-        p.append(f"Ten {e['palabras']} palabras e debe ter arredor de {tema['palabras']}.")
+        if e['desvio_palabras_pct'] < 0:
+            p.append(f"É curto de máis: ten {e['palabras']} palabras e debe ter arredor de {tema['palabras']}. "
+                     f"Engade ao final do relato uns {max(2, round((tema['palabras'] - e['palabras']) / 50))} parágrafos "
+                     "serenos, cada un cun feito do dossier que aínda non contaches, en orde cronolóxica.")
+        else:
+            p.append(f"É longo de máis: ten {e['palabras']} palabras e debe ter arredor de {tema['palabras']}. Acurta o relato.")
     if e['cifras']:
         p.append(f"Escribe estes números en letra: {', '.join(e['cifras'])}.")
     if e['signos_prohibidos']:
@@ -138,6 +148,184 @@ def validar_guion(g, tema):
             p.append(f"\"{x['texto']}\" non está no dossier: quítao ou cámbiao por un dato do dossier. Frase: \"{x['frase']}\"")
     return p, e, h1
 
+
+
+
+# ------------------------------------------------------------------ normalización determinista para a voz
+_U = ['cero', 'un', 'dous', 'tres', 'catro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'once', 'doce', 'trece',
+      'catorce', 'quince', 'dezaseis', 'dezasete', 'dezaoito', 'dezanove']
+_D = {20: 'vinte', 30: 'trinta', 40: 'corenta', 50: 'cincuenta', 60: 'sesenta', 70: 'setenta', 80: 'oitenta', 90: 'noventa'}
+_C = {1: 'cento', 2: 'douscentos', 3: 'trescentos', 4: 'catrocentos', 5: 'cincocentos', 6: 'seiscentos',
+      7: 'setecentos', 8: 'oitocentos', 9: 'novecentos'}
+
+
+def numero_gl(n):
+    """Número enteiro (0-999999) en letra, galego normativo, masculino."""
+    if n < 20:
+        return _U[n]
+    if n < 100:
+        d, u = divmod(n, 10)
+        return _D[d * 10] + (' e ' + _U[u] if u else '')
+    if n < 1000:
+        c, r = divmod(n, 100)
+        if n == 100:
+            return 'cen'
+        return _C[c] + (' ' + numero_gl(r) if r else '')
+    m, r = divmod(n, 1000)
+    return ('mil' if m == 1 else numero_gl(m) + ' mil') + (' ' + numero_gl(r) if r else '')
+
+
+def normalizar(t):
+    """O que unha voz non le ben arránxao o código, non o LLM: cifras en letra, parénteses e comiñas fóra,
+    exclamacións e preguntas a frases afirmativas. (As preguntas xa son un problema de validación.)"""
+    t = re.sub(r'(\d+)\s*[-–]\s*(\d+)', r'\1 e \2', t)
+    def _num(m):
+        x = numero_gl(int(m.group(1)))
+        if re.match(r'\s+\w+as\b', t[m.end():m.end() + 30]):      # xénero feminino: douscentas catro testemuñas
+            x = re.sub(r'centos\b', 'centas', x); x = re.sub(r'\bun$', 'unha', x); x = re.sub(r'\bdous$', 'dúas', x)
+        return x
+    t = re.sub(r'\b(\d{1,6})\b', _num, t)
+    t = re.sub(r'\s*\(([^)]*)\)', r', \1,', t)
+    t = re.sub(r'\s*[—–]\s*', ', ', t)
+    t = re.sub(r'[«»“”"*_#\[\]]', '', t)
+    t = t.replace('¡', '').replace('!', '.')
+    t = re.sub(r',\s*([.,;:])', r'\1', t)
+    t = re.sub(r'\s+([.,;:])', r'\1', t)
+    return re.sub(r'[ \t]+', ' ', t).strip()
+
+# ------------------------------------------------------------------ guion por bloques
+TONS = ['aínda vivo e concreto, con frases curtas', 'máis calmo, a medio camiño entre o relato vivo e o sereno',
+        'sereno, lento e descritivo, para durmir, con frases longas e suaves']
+
+
+def feitos(tema):
+    """Feitos do dossier sen as etiquetas de fonte (as etiquetas só serven para a auditoría)."""
+    out = []
+    for l in tema['dossier'].strip().splitlines():
+        l = re.sub(r'^\s*-\s*', '', l).strip()
+        l = re.sub(r'^\[[^\]]*\]\s*', '', l)
+        if l:
+            out.append(l)
+    return out
+
+
+def problemas_bloque(t, tema, min_frases=2):
+    import ancoraxe
+    p = []
+    if len(partir(t)) < min_frases:
+        p.append(f'Ten que ter polo menos {min_frases} frases.')
+    if re.findall(r'\d', t):
+        p.append('Escribe os números en letra.')
+    if re.findall(r'[()\[\]"«»“”*#/!¡?¿]', t):
+        p.append('Sen parénteses, comiñas, exclamacións nin preguntas.')
+    if re.search(r'\bimaxina', t, re.I):
+        p.append('Non uses a palabra imaxina.')
+    for f in partir(t):
+        if len(f['texto'].split()) > 30:
+            p.append(f'Parte esta frase, que é longa de máis: {f["texto"]}')
+    vistos = set()
+    for x in ancoraxe.ancoraxe(t, ancora(tema))['non_ancorados']:
+        if x['texto'] not in vistos:
+            vistos.add(x['texto']); p.append(f"{x['texto']} non está nos feitos: quítao.")
+    return p
+
+
+def bloque(nome, tm, backend, info, etapa, **vars):
+    """Unha chamada ao LLM para un bloque, con validación e ata dous reintentos cos problemas atopados."""
+    mellor, hist = None, []
+    extra = ''
+    for k in range(3):
+        v = dict(vars)
+        if extra:   # o reintento leva os problemas ao final do prompt (cambia o hash: nova chamada)
+            clave = 'feito' if 'feito' in v else ('feitos' if 'feitos' in v else ('tema' if 'tema' in v else list(v)[0]))
+            v[clave] = v[clave] + extra
+        t, meta = llm.complete(nome, backend, **v)
+        info['llm'][f'{nome}_{len([x for x in info["llm"] if x.startswith(nome)]) + 1}'] = meta
+        cpu_llm(etapa, meta)
+        t = normalizar(' '.join(limpar_saida_llm(t).split()))
+        pr = problemas_bloque(t, tm)
+        hist.append(pr)
+        if mellor is None or len(pr) < len(mellor[0]):
+            mellor = (pr, t)
+        if not pr:
+            break
+        extra = '\n\n(ATENCIÓN: a versión anterior tiña estes problemas, evítaos: ' + ' '.join(pr) + ')'
+    return mellor[1], {'bloque': nome, 'intentos': len(hist), 'problemas_por_intento': hist}
+
+
+def numeros(t):
+    """Números da resposta dunha selección: a primeira liña que teña unha lista 'a, b, c' ou, se non, a primeira con díxitos."""
+    ls = [l for l in t.splitlines() if re.search(r'\d', l)]
+    lista = [l for l in ls if re.search(r'\d+\s*,\s*\d+', l)]
+    return re.findall(r'\d+', (lista or ls or [''])[0])
+
+
+def guion_por_bloques(tema, backend, info, etapa='1_guion'):
+    fs = feitos(tema)
+    dossier = '\n'.join(f'- {f}' for f in fs)
+    rex = []
+    numerados = '\n'.join(f'{k + 1}. {f}' for k, f in enumerate(fs))
+    sg, meta = llm.complete('bloque_seleccion_gancho', backend, max_tokens=60, feitos=numerados)
+    info['llm']['bloque_seleccion_gancho_1'] = meta; cpu_llm(etapa, meta)
+    ig = []
+    for n in numeros(sg):
+        if 1 <= int(n) <= len(fs) and int(n) - 1 not in ig:
+            ig.append(int(n) - 1)
+    ig = ig[:3] or [0, 1]
+    info['seleccion_gancho'] = {'resposta_llm': sg, 'usados': [i + 1 for i in ig]}
+    gancho, r = bloque('bloque_gancho', tema, backend, info, etapa, tema=tema['tema'],
+                       feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
+    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, tema=tema['tema'], fragmento=tema['fragmento'],
+                       dossier=dossier); rex.append(r)
+    invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, tema=tema['tema']); rex.append(r)
+    fixo = len(tema['aviso'].split()) + len(FORMULA.split())
+    resto = tema['palabras'] - fixo - sum(len(x.split()) for x in (gancho, resumo, invit))
+    nmax = max(3, min(len(fs), round(resto / 50))); nmin = max(2, nmax - 2)
+    sel, meta = llm.complete('bloque_seleccion', backend, max_tokens=80, fragmento=tema['fragmento'], nmin=nmin, nmax=nmax,
+                             feitos=numerados)
+    info['llm']['bloque_seleccion_1'] = meta; cpu_llm(etapa, meta)
+    ids = []
+    for n in numeros(sel):
+        if 1 <= int(n) <= len(fs) and int(n) - 1 not in ids:
+            ids.append(int(n) - 1)
+    seleccion_llm = list(ids)
+    if len(ids) < nmin:            # reserva determinista: os últimos feitos do dossier, na orde da ficha
+        ids = list(range(max(0, len(fs) - nmax), len(fs)))
+    ids = ids[:nmax]
+    info['seleccion_feitos'] = {'resposta_llm': sel, 'escollidos_llm': [i + 1 for i in seleccion_llm],
+                                'usados': [i + 1 for i in ids], 'reserva': ids != seleccion_llm[:nmax]}
+    pars, anterior = [], resumo
+    for k, i in enumerate(ids):
+        ton = TONS[min(k, len(TONS) - 1)]
+        p, r = bloque('bloque_parrafo', tema, backend, info, etapa, tema=tema['tema'], feito=fs[i],
+                      anterior=anterior, ton=ton)
+        r['feito'] = i + 1; rex.append(r)
+        pars.append(p); anterior = p
+    g = '\n\n'.join([tema['aviso'], gancho, FORMULA + ' ' + resumo, invit] + pars)
+    return g, rex
+
+
+def corrixir_por_parrafos(g, tema, backend, info, etapa='2_corrixir'):
+    import qa
+    out, rex = [], []
+    for k, par in enumerate(g.split('\n\n')):
+        if par == tema['aviso']:
+            out.append(par); continue
+        lt = qa.lingua(par, dossier=ancora(tema))
+        if not lt:
+            out.append(par); continue
+        avisos = '\n'.join(f"- [{m['regra']}] {m['mensaxe']} | contexto: \"{m['contexto']}\" | "
+                            f"suxestións: {', '.join(m['suxestions']) or '-'}" for m in lt)
+        c, meta = llm.complete('corrixir_parrafo', backend, parrafo=par, avisos=avisos)
+        info['llm'][f'corrixir_parrafo_{k}'] = meta; cpu_llm(etapa, meta)
+        c = normalizar(' '.join(limpar_saida_llm(c).split()))
+        if FORMULA in par and FORMULA not in c:
+            c = par
+        lt2 = qa.lingua(c, dossier=ancora(tema))
+        ok = len(lt2) < len(lt) and len(problemas_bloque(c, tema, 1)) <= len(problemas_bloque(par, tema, 1))
+        rex.append({'parrafo': k, 'avisos_antes': len(lt), 'avisos_despois': len(lt2), 'aceptada': ok})
+        out.append(c if ok else par)
+    return '\n\n'.join(out), rex
 
 # ------------------------------------------------------------------ subtítulos
 def srt(frases, tempos, out, maxc=84, min_s=1.3):
@@ -239,6 +427,9 @@ def main():
     ap.add_argument('tema'); ap.add_argument('--saida', required=True)
     ap.add_argument('--traballo', default=None); ap.add_argument('--queimar-subtitulos', action='store_true')
     ap.add_argument('--llm', default=os.environ.get('LLM_BACKEND', 'openai'), choices=['manual', 'openai'])
+    ap.add_argument('--guion', default='bloques', choices=['bloques', 'enteiro'],
+                    help='bloques: gancho, resumo, invitación e un parágrafo por feito, cada un validado (por defecto); '
+                         'enteiro: un só prompt para todo o texto (prompts/guion.md)')
     a = ap.parse_args()
     t_inicio = time.time()
     tema = yaml.safe_load(open(a.tema))
@@ -255,52 +446,67 @@ def main():
     try:
         # 1 guion (LLM + validación automática + revisións)
         with Etapa('1_guion'):
-            g, meta = llm.complete('guion', a.llm, titulo=tema['titulo'], tema=tema['tema'],
-                                   fragmento=tema['fragmento'], palabras=tema['palabras'],
-                                   aviso=tema['aviso'], dossier=tema['dossier'].strip())
-            info['llm']['guion'] = meta; cpu_llm('1_guion', meta)
-            if 'arranque_cpu_s' in llm._SERVER and not llm._SERVER.get('contado'):
-                TEMPOS['1_guion']['cpu_s'] = round(TEMPOS['1_guion']['cpu_s'] + llm._SERVER['arranque_cpu_s'], 1)
-                llm._SERVER['contado'] = True
-            orixinal = limpar_saida_llm(g)
-            g = texto_fixo(orixinal, tema['aviso'])
-            info['guion_llm_bruto'] = orixinal
-            info['texto_fixo_engadido_polo_codigo'] = g != orixinal
-            probs, _, _ = validar_guion(g, tema)
-            historial = [{'versión': 0, 'problemas': probs}]
-            mellor = (len(probs), g)
-            for k in range(REVISIONS_GUION):
-                if not probs:
-                    break
-                g2, meta = llm.complete('revisar', a.llm, guion=g, problemas='\n'.join(f'- {x}' for x in probs),
-                                        aviso=tema['aviso'], dossier=tema['dossier'].strip())
-                info['llm'][f'revisar_{k + 1}'] = meta; cpu_llm('1_guion', meta)
-                g = texto_fixo(limpar_saida_llm(g2), tema['aviso'])
+            if a.guion == 'bloques':
+                g, rex = guion_por_bloques(tema, a.llm, info)
+                if 'arranque_cpu_s' in llm._SERVER and not llm._SERVER.get('contado'):
+                    e_ = TEMPOS.setdefault('1_guion', {'parede_s': 0, 'cpu_s': 0})
+                    e_['cpu_s'] = round(e_['cpu_s'] + llm._SERVER['arranque_cpu_s'], 1)
+                    e_['cpu_s_llm'] = round(e_.get('cpu_s_llm', 0) + llm._SERVER['arranque_cpu_s'], 1)
+                    llm._SERVER['contado'] = True
+                info['guion_llm_bruto'] = g; info['texto_fixo_engadido_polo_codigo'] = True
+                info['revisions_guion'] = rex
+                (W / 'guion_1.txt').write_text(g + '\n')
+            else:
+                g, meta = llm.complete('guion', a.llm, titulo=tema['titulo'], tema=tema['tema'],
+                                       fragmento=tema['fragmento'], palabras=tema['palabras'],
+                                       parrafos=round(tema['palabras'] / 50), aviso=tema['aviso'], dossier=tema['dossier'].strip())
+                info['llm']['guion'] = meta; cpu_llm('1_guion', meta)
+                if 'arranque_cpu_s' in llm._SERVER and not llm._SERVER.get('contado'):
+                    TEMPOS['1_guion']['cpu_s'] = round(TEMPOS['1_guion']['cpu_s'] + llm._SERVER['arranque_cpu_s'], 1)
+                    llm._SERVER['contado'] = True
+                orixinal = limpar_saida_llm(g)
+                g = texto_fixo(orixinal, tema['aviso'])
+                info['guion_llm_bruto'] = orixinal
+                info['texto_fixo_engadido_polo_codigo'] = not (orixinal.startswith(tema['aviso']) and FORMULA in orixinal)
                 probs, _, _ = validar_guion(g, tema)
-                historial.append({'versión': k + 1, 'problemas': probs})
-                if len(probs) < mellor[0]:
-                    mellor = (len(probs), g)
-            g = mellor[1]
-            info['revisions_guion'] = historial
-            (W / 'guion_1.txt').write_text(g + '\n')
+                historial = [{'versión': 0, 'problemas': probs}]
+                mellor = (len(probs), g)
+                for k in range(REVISIONS_GUION):
+                    if not probs:
+                        break
+                    g2, meta = llm.complete('revisar', a.llm, guion=g, problemas='\n'.join(f'- {x}' for x in probs),
+                                            aviso=tema['aviso'], dossier=tema['dossier'].strip())
+                    info['llm'][f'revisar_{k + 1}'] = meta; cpu_llm('1_guion', meta)
+                    g = texto_fixo(limpar_saida_llm(g2), tema['aviso'])
+                    probs, _, _ = validar_guion(g, tema)
+                    historial.append({'versión': k + 1, 'problemas': probs})
+                    if len(probs) < mellor[0]:
+                        mellor = (len(probs), g)
+                g = mellor[1]
+                info['revisions_guion'] = historial
+                (W / 'guion_1.txt').write_text(g + '\n')
         # 2 corrección lingüística
         with Etapa('2_corrixir'):
-            lt1 = qa.lingua(g, dossier=tema['dossier'])
-            info['lt_antes'] = lt1
-            guion = g
-            if lt1:
-                avisos = '\n'.join(f"- [{m['regra']}] {m['mensaxe']} | contexto: \"{m['contexto']}\" | "
-                                   f"suxestións: {', '.join(m['suxestions']) or '-'}" for m in lt1)
-                gc, meta = llm.complete('corrixir', a.llm, guion=g, avisos=avisos)
-                info['llm']['corrixir'] = meta; cpu_llm('2_corrixir', meta)
-                gc = texto_fixo(limpar_saida_llm(gc), tema['aviso'])
-                p0, _, _ = validar_guion(g, tema); p1, _, _ = validar_guion(gc, tema)
-                lt2 = qa.lingua(gc, dossier=tema['dossier'])
-                aceptada = len(p1) <= len(p0) and len(lt2) <= len(lt1)
-                info['correccion'] = {'aceptada': aceptada, 'avisos_lt': [len(lt1), len(lt2)],
-                                      'problemas_validacion': [len(p0), len(p1)]}
-                if aceptada:
-                    guion = gc
+            if a.guion == 'bloques':
+                info['lt_antes'] = qa.lingua(g, dossier=ancora(tema))
+                guion, info['correccion'] = corrixir_por_parrafos(g, tema, a.llm, info)
+            else:
+                lt1 = qa.lingua(g, dossier=tema['dossier'])
+                info['lt_antes'] = lt1
+                guion = g
+                if lt1:
+                    avisos = '\n'.join(f"- [{m['regra']}] {m['mensaxe']} | contexto: \"{m['contexto']}\" | "
+                                       f"suxestións: {', '.join(m['suxestions']) or '-'}" for m in lt1)
+                    gc, meta = llm.complete('corrixir', a.llm, guion=g, avisos=avisos)
+                    info['llm']['corrixir'] = meta; cpu_llm('2_corrixir', meta)
+                    gc = texto_fixo(limpar_saida_llm(gc), tema['aviso'])
+                    p0, _, _ = validar_guion(g, tema); p1, _, _ = validar_guion(gc, tema)
+                    lt2 = qa.lingua(gc, dossier=tema['dossier'])
+                    aceptada = len(p1) <= len(p0) and len(lt2) <= len(lt1)
+                    info['correccion'] = {'aceptada': aceptada, 'avisos_lt': [len(lt1), len(lt2)],
+                                          'problemas_validacion': [len(p0), len(p1)]}
+                    if aceptada:
+                        guion = gc
         (W / 'guion.txt').write_text(guion + '\n')
         save_t()
     except llm.PendingLLM as e:
@@ -389,10 +595,12 @@ def main():
                'revisions_guion': info['revisions_guion'], 'correccion': info.get('correccion'),
                'texto_fixo_engadido_polo_codigo': info['texto_fixo_engadido_polo_codigo'],
                'guion_llm_bruto': info['guion_llm_bruto'],
-               'escenas_prompts_xenericos': info['escenas_prompts_xenericos']}
+               'escenas_prompts_xenericos': info['escenas_prompts_xenericos'],
+               'seleccion_feitos': info.get('seleccion_feitos'), 'seleccion_gancho': info.get('seleccion_gancho'),
+               'modo_guion': a.guion}
         res['lingua_antes_correccion'] = info['lt_antes']
-        res['lingua'] = qa.lingua(guion, dossier=tema['dossier'])
-        res['h1_ancoraxe'] = ancoraxe.ancoraxe(guion, tema['dossier'], [tema['aviso']])
+        res['lingua'] = qa.lingua(guion, dossier=ancora(tema))
+        res['h1_ancoraxe'] = ancoraxe.ancoraxe(guion, ancora(tema), [tema['aviso']])
         res['estilo'] = qa.estilo(guion, frases, tema['aviso'], tema['palabras'])
         res['asr'] = qa.asr(str(W / 'mestura.wav'), str(W / 'voz_linea.wav'), frases, tempos, CFG['whisper_dir'])
         res['ficheiro'] = qa.ficheiro(mp4, dur)
@@ -475,8 +683,17 @@ def informe(r, tema, guion):
           '<details><summary>Transcrición ASR da mestura</summary>', '', a['mestura']['hipotese'], '', '</details>', '',
           '## Guion: validación automática e revisións do LLM', '']
     for h in r['revisions_guion']:
-        L.append(f"- versión {h['versión']}: {len(h['problemas'])} problemas" +
-                 (': ' + ' | '.join(h['problemas'][:8]) if h['problemas'] else ''))
+        if 'bloque' in h:     # guion por bloques
+            pp = h['problemas_por_intento']
+            L.append(f"- {h['bloque']}{' (feito ' + str(h['feito']) + ')' if 'feito' in h else ''}: {h['intentos']} intento(s); "
+                     f"problemas por intento: {[len(x) for x in pp]}" + (f"; quedan: {' | '.join(pp[-1])}" if min(len(x) for x in pp) else ''))
+        else:
+            L.append(f"- versión {h['versión']}: {len(h['problemas'])} problemas" +
+                     (': ' + ' | '.join(h['problemas'][:8]) if h['problemas'] else ''))
+    if r.get('seleccion_gancho'):
+        L += ['', f"Feitos do dossier escollidos polo LLM para o gancho: {r['seleccion_gancho']}."]
+    if r.get('seleccion_feitos'):
+        L += ['', f"Feitos do dossier escollidos polo LLM para o relato: {r['seleccion_feitos']}."]
     L += ['', f"O código engadiu ou fixou o aviso e a fórmula literais: {'si' if r['texto_fixo_engadido_polo_codigo'] else 'non'}.", '',
           '## Lingua (LanguageTool 6.8 gl-ES, con hunspell galego)', '',
           f"Avisos antes da corrección automática: {len(r['lingua_antes_correccion'])}. Despois: {len(r['lingua'])}. "

@@ -89,13 +89,13 @@ def parar():
         except subprocess.TimeoutExpired: p.kill()
 
 
-def _chamar(prompt):
+def _chamar(prompt, max_tokens=None):
     fmt = os.environ.get('LLM_FORMATO', 'chat')
     model = os.environ.get('LLM_MODEL', 'local')
     common = {'model': model, 'temperature': float(os.environ.get('LLM_TEMP', '0.6')),
               'top_p': float(os.environ.get('LLM_TOP_P', '0.9')),
               'repeat_penalty': float(os.environ.get('LLM_REPEAT_PENALTY', '1.1')),
-              'max_tokens': int(os.environ.get('LLM_MAX_TOKENS', '2200')),
+              'max_tokens': max_tokens or int(os.environ.get('LLM_MAX_TOKENS', '2200')),
               'seed': int(os.environ.get('LLM_SEED', '1'))}
     if fmt == 'user-assistant':
         url = _url() + '/v1/completions'
@@ -122,7 +122,7 @@ def _chamar(prompt):
     return txt, meta
 
 
-def complete(prompt_name, backend=None, **vars):
+def complete(prompt_name, backend=None, max_tokens=None, **vars):
     backend = backend or os.environ.get('LLM_BACKEND', 'openai')
     prompt = render(prompt_name, **vars)
     h = hashlib.sha256(prompt.encode()).hexdigest()[:12]
@@ -134,7 +134,7 @@ def complete(prompt_name, backend=None, **vars):
         arrancar()
         (CACHE / f'{prompt_name}-{h}.prompt.md').write_text(prompt)
         c0 = _cpu_servidor()
-        txt, meta = _chamar(prompt)
+        txt, meta = _chamar(prompt, max_tokens)
         if c0 is not None:
             meta['cpu_s_servidor'] = round(_cpu_servidor() - c0, 1)
         out.write_text(txt + '\n')
