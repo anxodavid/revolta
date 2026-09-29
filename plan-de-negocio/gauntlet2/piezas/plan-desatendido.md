@@ -1,9 +1,11 @@
 # Pieza del plan v2: el canal desatendido (retornos, costes, pipeline y riesgos de plataforma)
 
-- **Versión:** v2 (ronda 2 del constructor), 29-09-2026. Cambios frente a v1: tiempos de máquina medidos (§4.1), horas
+- **Versión:** v3 (ronda 3 del constructor), 29-09-2026. Cambios frente a v2: sección §A nueva (¿existe el nicho?,
+  veredicto, tres nichos, multi-audio gl + pt + es + en medido, prueba falsable con umbral de parada), §1.3 y §8.2
+  rehechos con el catálogo ampliado, P1 sin zona gris, controles H4 y M1-M6. Versión anterior: v2 (ronda 2), 29-09-2026. Cambios frente a v1: tiempos de máquina medidos (§4.1), horas
   del MVP unificadas (57-85 h), §3.3 nueva con el dossier cronometrado, C0 medido (70 % → 80 % tras corregir un fallo
   de H1) y umbrales del código alineados con los del plan (WER ≤ 6 %, −18 a −16 LUFS). Cadencia ajustada para cumplir D3.
-- **Qué cubre:** retornos esperables con comparables reales, costes, horas (D3), cadencia, arquitectura del pipeline
+- **Qué cubre:** si el nicho existe (§A, pregunta obligatoria), retornos esperables con comparables reales, costes, horas (D3), cadencia, arquitectura del pipeline
   automático, controles automáticos que sustituyen a la revisión humana (qué detectan y qué no), política de YouTube,
   AI Act art. 50, riesgos de lengua e historia sin filtro humano, puertas go/no-go y KPIs para pagar la validación de voz (D1).
 - **Qué no cubre (otras piezas del Gauntlet 2):** el vídeo piloto y su especificación visual fina, y el análisis a fondo
@@ -18,9 +20,18 @@
 
 ## 0. Resumen
 
+0. **¿Existe el nicho? Veredicto: no hay evidencia suficiente; lo más probable es que sea marginal** (§A). A favor:
+   0 competidores en galego, 108 K vistas de "Galicia para dormir" (lendas) en castellano. En contra: solo el 3,59 %
+   ve audiovisual sobre todo en galego y el mercado atendible es de 2.000-20.000 personas. Se estiman tres nichos por
+   separado: (a) historia en galego, 15-100 vistas por vídeo; (b) toda Galicia en galego (lendas, mar, idiosincrasia),
+   25-200, **la opción del plan**; (c) (b) con pistas pt/en/es, 40-400 en total, con el riesgo de que el galego quede
+   en minoría. **Prueba falsable:** 8 episodios (4 de historia y 4 de Galicia ampliada) y decisión a las ≈ 10 semanas (el episodio 8 sale en la semana 6; se esperan sus 30 días).
+   Si la mediana a 30 días es < 40 vistas, o menos del 15 % viene de Galicia sin ningún comentario en galego, se para.
+   Con 40-149, modo mínimo; con ≥ 150, plan. Las pistas pt + en se prueban después en 4 de esos 8 vídeos, con 4 de
+   control. El castellano va al final y con condiciones, porque es la pista que desplaza al galego en Galicia (§A.4).
 1. **En dinero, el canal casi seguro pierde un poco; el caso es cultural y técnico, no económico.** Escenario central a
    12 meses: 0 € de ingresos y 20-100 € de gasto; ≈ 85-140 h del promotor el primer año natural (57-85 h de montaje + 25-55 h
-   de régimen en las ≈ 40 semanas restantes, §3). Solo en el escenario optimista (≈ 5-10 % [S]) llega al YPP, y aun así a 10-60 €/mes (§1).
+   de régimen en las ≈ 40 semanas restantes, §3). Solo en el escenario optimista (≈ 8-12 % [S]) llega al YPP, y aun así a 10-60 €/mes (§1).
 2. **El listón de referencia es un pico, no la media:** *Historia Desconocida* hace ≈ 1,0 M de vistas con 21 vídeos, pero
    el 67 % viene de 3 vídeos de una semana de abril; sus vídeos de ago-sep 2026 hacen 1.300-6.400 vistas en castellano
    [F, `../referencia.md`]. En galego, el techo es 1-2 órdenes de magnitud menor (§1.2).
@@ -58,7 +69,190 @@
     abierta**, que acaba en los corpus con que se entrenan los próximos modelos en galego. Mitigación obligatoria: todo
     texto publicado va marcado como sintético y nunca se ofrece como corpus limpio (§8.3).
 13. **D1 (validación de voz, 850-1.500 €) solo se paga si se cumplen a la vez tracción (2 de 3 KPIs), permiso de
-    Nós/USC y ninguna alarma de plataforma abierta.** Probabilidad de llegar a pagarla en 12 meses: ≈ 5-10 % [S] (§9).
+    Nós/USC y ninguna alarma de plataforma abierta.** Probabilidad de llegar a pagarla en 12 meses: ≈ 8-12 % [S] (§9).
+
+---
+
+## A. ¿Existe el nicho? (pregunta obligatoria del promotor, 29-09-2026)
+
+Datos nuevos de esta sección: 10 búsquedas en YouTube con yt-dlp y una prueba de traducción y voces en pt/es/en, todo
+en `../medidas/nicho/` (README con la tabla de tiempos, `busquedas-yt.txt` con las URLs de cada vídeo citado).
+
+### A.1 Veredicto
+
+**Veredicto: NO HAY EVIDENCIA SUFICIENTE de que exista un público en galego para historia y cultura de Galicia para
+dormir. La hipótesis más probable [S] es que, si existe, es MARGINAL: decenas a pocos cientos de oyentes por vídeo.**
+Lo que sí está demostrado es que **el tema** existe: "Galicia para dormir", sobre todo las lendas, funciona **en
+castellano**. El plan no necesita que el nicho exista para tener sentido como hobby (D6), pero sí para justificar
+horas: por eso la prueba de §A.4 lo decide en ≈ 10 semanas desde la primera publicación, con un umbral de parada sin
+zona gris.
+
+| A favor de que exista | Cifra | Fuente |
+|---|---|---|
+| El tema engancha en castellano | Relatos al Oído: **107.875** vistas (lendas de Galicia, 2 h), 17.264 (mosteiro), 13.904 (Compostela), 7.829 (Lugo); Misterios para Dormir Profundo: 9.135; El Pergamino Mágico (Santa Compaña): 5.106 | [P `../medidas/nicho/busquedas-yt.txt`] |
+| Hueco total en galego | **0** canales o vídeos de historia o lendas para dormir en galego en 10 búsquedas (y 0 en el censo del Gauntlet 1) | [P] [R `audiencia.md` §5] |
+| Hay público galego de historia y cultura en YouTube | Burla Negra 614-12.072 vistas por documental; Orgullo Galego 300-3.200; lendas en galego sin formato para dormir 522-1.577 (politicalinguistica), 1.396 (SAGA) | [R `retornos.md` §4.4] [P] |
+| Acepta galego más gente de la que lo prefiere | 28 % mezcla ("máis castelán") además del 3,59 % | [R `audiencia.md` §2.4] |
+| El hábito de dormirse con audio es masivo | 48 % de los oyentes de pódcast los usa para dormirse (Acast 2023) | [R `audiencia.md` §6.2] |
+| **En contra** | | |
+| Consumo audiovisual en galego mínimo | **3,59 %** de los mayores de 16 que ven contenidos audiovisuales los ve siempre o sobre todo en galego (IGE, EEF 2023; 68,1 % siempre en castellano) ≈ **60.000-84.000 personas** (sobre ≈ 2,34 M mayores de 16, según cuántos vean audiovisual [S]) | [R `audiencia.md` §2.4] |
+| Mercado atendible pequeño | **2.000-20.000** oyentes habituales posibles | [R `audiencia.md` §8] |
+| "0 competidores" también es una señal mala | Nadie lo ha intentado o nadie lo ha sostenido; la búsqueda no distingue entre hueco y desierto | [S] |
+| El galegofalante habitual encaja mal con YouTube | Mayor, rural, del interior; el hábito de YouTube cae después de los 65 | [R `audiencia.md` §2.3 y §3] |
+| Lo que hay en galego hace poco | Lendas en galego: 59-1.577 vistas **acumuladas en años**; la serie de TVG, 0,7-4 K por capítulo | [P] [R] |
+| La demanda en castellano no se traslada | El 96,4 % de los mayores de 16 **no** consume audiovisual sobre todo en galego (3,59 % sí): el que busca "Galicia para dormir" ya lo tiene en castellano, con mejor voz | [R] [S] |
+| La cola larga del tema es muy corta | "Galicia sleep" en inglés: 16-292 vistas (Relax and Let Go, Spain Dreams ASMR, The Dreaming Atlas) | [P] |
+
+Embudo [S sobre R]: ≈ 2,34 M mayores de 16 en Galicia → 3,59 % en galego ≈ 60.000-84.000 → interesados en historia/cultura,
+en YouTube y con hábito de audio para dormir: 2.000-20.000 → alcanzables el primer año sin comunidad previa ni prensa:
+1-5 % → **20-1.000 personas distintas**.
+
+### A.2 Tres nichos, estimados por separado [S]
+
+| Nicho | Audiencia atendible | Competencia directa | Vistas por vídeo a 30 días (mediana) | Suscriptores a 12 meses | P(pasa la parada de §A.4: mediana ≥ 40) | P(mediana ≥ 150) | Veredicto |
+|---|---|---|---|---|---|---|---|
+| **(a) Historia de Galicia para dormir, en galego** (castros, suevos, Camiño, mosteiros, irmandiños) | 1.000-10.000 (la parte "historia" del 2-20 K) | 0 en galego. Indirecta: divulgación en galego sin formato para dormir (Historia a Debate, Burla Negra) | **15-100** | 10-150 | **35-50 %** | 5-10 % | Sin evidencia suficiente; probable marginal |
+| **(b) Toda Galicia para dormir, en galego** (lendas, mar, castros, Camiño, vida cotiá, idiosincrasia) | 2.000-30.000 (las lendas atraen a quien no busca historia) | 0 en galego. Indirecta: Relatos al Oído y 2-3 canales más en castellano | **25-200** | 15-300 | **55-70 %** | 15-25 % | Sin evidencia suficiente; probable marginal, algo mayor que (a). **Es la opción del plan** |
+| **(c) = (b) + pistas pt/en/es en el mismo vídeo** | Teórica: cientos de millones; real: la fracción que acepta una voz open source peor que la de los competidores (§A.3) | pt: género fuerte, **0 vídeos de Galicia**; es: Galicia ya cubierta (8-108 K); en: saturado | **40-400 en total**, de las que el galego se queda con el **25-70 %** del tiempo de visionado | 20-500 | P(las pistas suben ≥ 30 % las vistas, §A.4 fase 2): **40-55 %** | 20-30 % | El tema existe en es (demostrado) y hay hueco en pt; que nuestras voces lo capten: sin evidencia |
+
+Por qué (b) puntúa más que (a): el único vídeo de "Galicia para dormir" con más de 100 K vistas es de **lendas**, no de
+historia [P]; las lendas en galego son lo único con vistas en galego fuera de los canales con comunidad [P]; y los temas
+de mar y Camiño ya los usan los canales de castellano en inglés (Relatos al Oído) [P]. Por qué no puntúa mucho más: el
+público en galego sigue siendo el mismo embudo de 2-20 K; lo que cambia es la proporción que se interesa.
+
+### A.3 Nicho (c) en detalle: pistas multi-audio gl + pt + es + en
+
+**A.3.1 Cómo funciona en YouTube**
+- Desde el 10-09-2025, todos los creadores con acceso a *funciones avanzadas* pueden subir pistas de audio en otros
+  idiomas al mismo vídeo [F https://techcrunch.com/2025/09/10/youtubes-multi-language-audio-feature-for-dubbing-videos-rolls-out-to-all-creators/].
+  Las pistas las pone el creador, deben durar "aproximadamente lo mismo" que el vídeo, y si el contenido de la pista
+  difiere del original, puede retirarse [F https://support.google.com/youtube/answer/13338784?hl=en].
+- **Vistas y horas se suman en un solo vídeo**: todas las pistas cuentan para el mismo contador, para las 8.000 h del
+  YPP y para la señal del algoritmo [F https://ppc.land/youtube-makes-multi-language-audio-available-to-millions-of-creators/].
+  De media, los creadores con pistas extra sacan **más del 25 %** del tiempo de visionado de la lengua no principal
+  [F support.google.com, arriba]; es una media de canales grandes (Jamie Oliver: vistas ×3 [F TechCrunch]), no una
+  previsión para nosotros.
+- **Pista por defecto:** la de la lengua preferida del espectador, **deducida de su historial** [F support.google.com].
+  Consecuencia directa: un galego que ve YouTube sobre todo en castellano (la gran mayoría del 96,4 % que no lo ve sobre todo en galego) oirá **por defecto la pista en castellano**.
+  Ese es el mecanismo principal por el que el galego puede quedar marginal (§A.3.5).
+- **Descubrimiento:** con título y descripción traducidos, el vídeo aparece en búsquedas en esos idiomas [F
+  support.google.com]. Se ve en las búsquedas: Relatos al Oído sale con títulos en inglés [P].
+- **Lo que no sabemos y se comprueba en Studio antes de construir nada [S]:** (1) si el galego está en la lista de
+  idiomas de pista y de idioma del vídeo (si no está, el diseño multi-audio no sirve y (c) se descarta); (2) si la API
+  permite subir pistas (no conocemos método: se supone subida a mano, 3-5 min por pista); (3) si Analytics desglosa el
+  tiempo de visionado por pista (si no, se usa el país como sustituto: Portugal/Brasil ⇒ pt, países anglófonos ⇒ en).
+- La etiqueta de contenido sintético (§7.2) y el aviso del AI Act (§7.3) valen para cada pista: el aviso hablado se
+  traduce y se sintetiza como el resto.
+
+**A.3.2 Competencia por idioma** [P `../medidas/nicho/busquedas-yt.txt`]
+
+| Idioma | Género "historia para dormir" | Galicia en ese idioma | Lectura |
+|---|---|---|---|
+| pt (sobre todo pt-BR) | Fuerte y con IA: Histórias Chatas Para Dormir 439.701; Descanse com Histórias 214-240 K; Historias para relaxar e dormir 32-228 K; História para Acalmar 90.586 | **0 vídeos para dormir**. Señal de interés: "Galicia é de Portugal? A História que te Esconderam" (documental, pt) 129.332 | **El mejor hueco**: lengua hermana, tema sin cubrir, y no compite con el galego dentro de Galicia |
+| es | Saturado (Detrás de la Historia 269-296 K por vídeo; Relatos para Dormir 1,05 M) | **Ya cubierto**: Relatos al Oído 7,8-108 K; Misterios 9,1 K; Pergamino 5,1 K | Donde está la demanda, pero con voces comerciales mejores que las nuestras, y es la pista que desplaza al galego |
+| en | Saturado (Sleepless Historian 265 K-1 M por vídeo) | Cola larga de 16-2.488 vistas (Historify, Spain Dreams ASMR) | Descubrimiento internacional y diáspora; poca esperanza de volumen |
+
+**A.3.3 Coste en CPU y calidad del TTS open source en pt/es/en** [P `../medidas/nicho/README.md`; CPU compartida con
+otro proceso al 300 %, así que los tiempos son pesimistas]
+
+| Paso | Herramienta (licencia) | Medido | Para 60 min narrados (≈ 7.000 palabras) | Nota |
+|---|---|---|---|---|
+| Traducción gl→es | Nós `Nos_MT-CT2-gl-es` (MIT) [F https://huggingface.co/proxectonos/Nos_MT-CT2-gl-es] | 126 palabras en 1,7 s; 9/11 frases bien; 2 errores: "acomódate" → "acuérdate" y "Rocha Forte" → "Roca Forte" | ≈ 2 min | Rápido; los 2 errores son justo los que tiene que cazar §A.3.4 |
+| Traducción gl→en | Nós `Nos_MT-CT2-gl-en` (MIT) | No medido (1,7 GB; sin disco) | ≈ 2 min [S, misma arquitectura] | |
+| Traducción gl→pt | Nós no tiene gl→pt; opciones: el LLM frontier que ya redacta, o Apertium gl-pt (reglas) | No medido | 10-30 min de API; ≈ 0,3-1 USD [S] | Recomendado: LLM, con Nós como juez de ida y vuelta |
+| Voz pt-PT / es | Piper `tugão` / `davefx` (datos CC0, **afinadas desde la voz *lessac***, cuya licencia hay que revisar antes de monetizar [S]) | **RTF 0,13-0,14** | 8-10 min por idioma (15-20 con las pausas de dormir) | Voz de asistente, claramente por debajo de Brais ST2 [S, sin escucha ciega] |
+| Voz pt-BR / en / es | Kokoro-82M (Apache-2.0) [F https://huggingface.co/hexgrad/Kokoro-82M] | **RTF 1,19-1,45** (int8, CPU cargada) | 70-90 min por idioma cargada; 35-60 [S] sin carga | La mejor licencia; pt solo en variante brasileña |
+| Control ASR de ida y vuelta | Whisper multilingüe (small/medium), int8 | No medido | ≈ 12 min por idioma [S: RTF 0,2 como en gl] | |
+| Mezcla y codificación de la pista | ffmpeg | — | ≈ 2 min | Misma lluvia y cola que la pista gl |
+
+- **Por idioma extra: ≈ 30-45 min de CPU con Piper, 90-130 con Kokoro.** Las dos pistas de la fase 2 (pt-BR + en con
+  Kokoro) suman ≈ 3-4,5 h: no caben en la misma noche que el episodio (5-7 h, §4.1), pero a 1 episodio cada 2 semanas
+  la máquina está libre 13 de cada 14 noches: se hacen en una segunda noche.
+- **Dinero:** +0,3-1 USD por episodio si el LLM traduce al pt y al en [S]; electricidad despreciable.
+- **Horas de persona (D3):** subir 2 pistas a mano en Studio, 6-10 min por episodio ⇒ +3-5 min/semana a 1 episodio
+  cada 2 semanas. Construir la etapa: **6-10 h** [S], después del MVP y solo si la fase 1 de §A.4 no manda parar: 1-2 semanas a ~6 h/semana (el ritmo de D3 mientras se monta el pipeline) justo después de la decisión de la semana 10. La comprobación en Studio de que el galego existe como idioma de pista se hace antes, en 5 min.
+- **Calidad frente a la competencia:** los canales de pt/es/en que hacen cientos de miles de vistas usan voces
+  comerciales o humanas [R `formato.md`]; con Piper o Kokoro vamos a peor voz en un mercado más exigente. Por eso (c)
+  no se da por buena: se mide.
+
+**A.3.4 Control de calidad automático de la traducción (M1-M6, solo si hay pistas)**
+
+| # | Control | Umbral de bloqueo [S] | Qué detecta | Ejemplo de la prueba |
+|---|---|---|---|---|
+| M1 | Ida y vuelta: la pista se retraduce al galego (Nós es→gl, en→gl; LLM para pt→gl) y se compara frase a frase con el original (chrF + similitud de *embeddings*) | Frase por debajo del umbral → retraducir ×2 → si sigue, la frase se quita de esa pista; > 5 % de frases quitadas → la pista no sale | Cambios de sentido | "acuérdate" vuelve como "acórdate" ≠ "acomódate" [S: lo cazaría si el umbral es por frase] |
+| M2 | Nombres bloqueados: todo nombre propio del dossier aparece igual, salvo exónimos permitidos (Galiza/Galicia, A Coruña/La Coruña...) | 0 cambios | Topónimos y personas traducidos o "corregidos" | "Rocha Forte" → "Roca Forte" [P: lo caza] |
+| M3 | Cifras y fechas iguales | 0 diferencias | Años y cantidades alterados | |
+| M4 | Encaje en el tiempo: cada frase traducida va en el hueco de la frase gl; si no cabe, se acelera hasta ×1,15 | Ninguna frase fuera de su hueco + 15 %; pista ±1 % de la duración del vídeo | Pistas que se desincronizan con las imágenes o que YouTube rechaza por longitud | |
+| M5 | ASR de la pista contra su texto | WER ≤ 8 % | Palabras comidas o mal pronunciadas por el TTS | |
+| M6 | Marcadores de lenda conservados ("conta a lenda" → "conta a lenda"/"cuenta la leyenda"/"legend has it") y glosario de préstamos (retranca, morriña, meiga, Santa Compaña se mantienen en galego) | 0 lendas sin marcador; 0 préstamos traducidos | Que la traducción convierta una leyenda en hecho o borre el galego del texto | |
+
+**Qué no ven:** traducciones fluidas pero en registro equivocado, mezcla de pt-PT y pt-BR, calcos que la retraducción
+"deshace", y el tono. Igual que en galego (§6.3), el residuo existe y se declara.
+
+**A.3.5 Riesgo de que el galego quede marginal**
+- **Mecanismo:** la pista por defecto sale del historial del espectador [F]. Con un público galegofalante de 2-20 K y
+  públicos pt/es/en de cientos de millones, si las pistas funcionan, **lo normal es que el galego pase a ser minoría del
+  tiempo de visionado** [S]. Y la pista es no solo capta a los de fuera: dentro de Galicia sustituye al galego.
+- **Mitigaciones:** (1) título y miniatura originales en galego; traducciones de metadatos solo a pt y en en la fase 2;
+  (2) cada pista extra abre con una frase fija: "este vídeo foi feito orixinalmente en galego, a lingua de Galicia"
+  (traducida), que convierte la pista en escaparate del galego (tesis pro lingua); (3) **orden: pt y en primero; es
+  al final y condicionado** (§A.4, fase 3), porque es la que desplaza al galego entre los galegos; (4) umbral numérico:
+  si el galego baja del 25 % del tiempo de visionado, se reduce a la pista pt sola.
+
+### A.4 Prueba falsable con el pipeline (sustituye a la P1 de la v2)
+
+**Fase 1: ¿hay público en galego? (de M0 a ≈ semana 10)**
+- **Qué se publica:** los 8 episodios del stock (§4.2), **4 de historia (nicho a) y 4 de Galicia ampliada (nicho b)**,
+  alternados, con la misma duración y la misma receta de embudo (ganchos en el primer minuto, luego tono de dormir).
+  Solo galego. 3 en la primera semana y 1 por semana después. No añade horas: el stock ya está en el MVP (§3.1).
+- **Métricas (Studio, a los 30 días de cada vídeo):** M = mediana de vistas de los 8; Ma y Mb = medianas de cada bloque;
+  **G = % de vistas desde ciudades galegas** (Studio > Audiencia > Geografía > ciudades; si Studio no da ciudades, %
+  de España como techo [S: verificar el informe]); % de espectadores recurrentes; comentarios en galego de personas
+  reales; retención a 2 min; suscriptores netos.
+- **Decisión el día 30 del episodio 8 (≈ semana 10). Toda cifra lleva a una sola acción:**
+
+| Resultado | Acción |
+|---|---|
+| **PARADA:** M < 40, **o** G < 15 % con 0 comentarios en galego | **Nicho declarado inexistente para este formato.** Se para la producción, se publican el código y los informes de error para Nós, y el canal queda quieto. Coste hundido: ≈ 60-95 h y < 30 € |
+| **MÍNIMO:** 40 ≤ M < 150 (y no se cumple la parada) | 1 episodio al mes; el 75 % del catálogo del bloque ganador. En M6 se aplica la misma regla a los 4 últimos episodios: **M < 60 → PARADA; M ≥ 60 → sigue a 1 al mes** |
+| **PLAN:** M ≥ 150 (y no se cumple la parada) | Régimen de §4.2 (1 cada 2 semanas) y puerta P2 (§9) |
+| Reparto del catálogo (se aplica en MÍNIMO y en PLAN) | Mb/Ma ≥ 1,5 → 75 % Galicia ampliada; Mb/Ma ≤ 0,67 → 75 % historia; en otro caso, 50/50 |
+
+- **Por qué 40:** 40 vistas × ≈ 30 episodios × 1,5 (vistas después del día 30) ≈ 1.800 vistas al año × 15-25 min ≈
+  450-750 h de escucha al año ≈ **1,2-2,1 h por noche: menos de dos personas durmiéndose con el canal cada noche.** Es
+  también el 2 % del extremo bajo del mercado atendible (2.000). Por debajo, la tesis "pro lingua" no tiene a quién
+  servir y las horas del promotor no se justifican ni como hobby cultural.
+- **Probabilidades [S]:** PARADA 35-50 %; MÍNIMO 40-50 %; PLAN 10-20 %.
+- **Ruido declarado:** 8 vídeos y una ráfaga inicial; la mediana resiste un vídeo disparado, pero el reparto Ma/Mb con
+  4 contra 4 es orientativo. Se acepta: la prueba decide si seguir, no el catálogo definitivo.
+
+**Fase 2: ¿suman las pistas pt y en? (≈ semanas 12-17; solo si la fase 1 no da PARADA)**
+- **Requisitos:** galego disponible como idioma de pista en Studio (§A.3.1); M1-M6 construidos (6-10 h, semanas 10-12).
+- **Qué se hace:** se añaden pistas **pt-BR y en** (Kokoro) con título y descripción traducidos a **4 de los 8**
+  episodios ya publicados (2 de cada bloque, elegidos a cara o cruz antes de mirar los datos). Los otros 4 son el
+  control. YouTube permite añadir pistas a vídeos publicados. Portugués de Brasil por mercado (los competidores de §A.3.2 son
+  brasileños) y por licencia (Kokoro, Apache-2.0); pt-PT (Piper `tugão`, más cercano al galego) si se aclara la licencia
+  de la voz base *lessac* y el promotor prefiere la variante europea.
+- **Métricas:** R = vistas de los 4 con pistas en los 30 días siguientes / vistas de los 4 de control en los mismos
+  30 días; **L = % del tiempo de visionado en la pista gl** de los 4 con pistas (Studio por pista; si no, por país).
+- **Decisión:**
+
+| Resultado | Acción |
+|---|---|
+| R < 1,3 | Multi-audio descartado: las pistas no pagan su CPU ni sus minutos. Canal solo en galego |
+| R ≥ 1,3 y L ≥ 40 % | pt + en en todos los episodios nuevos; se abre la fase 3 (es) |
+| R ≥ 1,3 y 25 % ≤ L < 40 % | pt + en en todos los episodios nuevos; es, nunca |
+| R ≥ 1,3 y L < 25 % | **Galego marginal:** solo la pista pt en los episodios nuevos (la lengua hermana, que no compite en Galicia); se quita el en; es, nunca |
+
+**Fase 3: castellano (solo si R ≥ 1,3 y L ≥ 40 %)**. Mismo diseño con una pista es en 4 episodios: si L baja por debajo
+del 30 % en esos 4 → se retira la pista es de esos vídeos y no se vuelve a usar; en otro caso, es en todos.
+
+### A.5 Qué cambia en el resto de la pieza
+- §1.3: escenarios rehechos con el catálogo ampliado y la opción multi-audio.
+- §8.2: catálogo ampliado (lendas, mar, castros, Camiño, vida cotiá, idiosincrasia), con la regla "lo legendario como
+  leyenda" convertida en control (H4, §6.1).
+- §9: la P1 es ahora la fase 1 de §A.4.
+- §6.1: controles H4 y M1-M6 añadidos; §2.1: fila de pistas extra; §11: supuestos nuevos.
 
 ---
 
@@ -79,7 +273,8 @@
 | Burla Negra ("Historias da Galiza") | **gl**, documental humano | 1,7 K | — | **614-12.072** en 4 años | El mejor comparable de mercado en galego | [R `retornos.md` §4.4] |
 | Orgullo Galego (conversas de historia) | **gl** | 11,5 K | — | **300-3.200** | Marca con comunidad previa | [R `audiencia.md`] |
 | Relatos al Oído, "Duérmete con las leyendas... de Galicia" | es, sleep, 2 h | — | — | **107.810** en 11 meses | Hay demanda de "Galicia para dormir", **en castellano** | [R `retornos.md` §4.4] |
-| Canal de historia para dormir **en galego** | gl | — | — | — | **No existe ninguno** (nicho vacío: oportunidad y señal de mercado pequeño) | [R] |
+| Canal de historia o lendas para dormir **en galego** | gl | — | — | — | **No existe ninguno** (10 búsquedas el 29-09-2026). Veredicto sobre el nicho en §A.1: **sin evidencia suficiente; probable marginal** | [R] [P `../medidas/nicho/`] |
+| Histórias Chatas Para Dormir / Descanse com Histórias | pt (BR), IA, sleep | — | — | 214-440 K (vídeos más vistos en la búsqueda) | El género existe en portugués; **ningún vídeo sobre Galicia** (nicho c, §A.3.2) | [P `../medidas/nicho/busquedas-yt.txt`] |
 
 Casos de ingresos: Adavia Davis (red de 5 canales IA en inglés, 40-60 K$/mes, verificado por Fortune) y el informe
 Kapwing (278 canales *slop*, ~117 M$/año) [R `retornos.md` §5] son **en inglés, con RPM de primer nivel y de la ola de
@@ -98,33 +293,40 @@ una política que ya existía desde julio de 2025 (§7.1).
   4,8 M de vistas en 10 meses) [R `audiencia.md` §1]. En audio para dormir, entender cada palabra importa menos. Es una
   **hipótesis a medir** en Analytics (geografía e idioma), no un supuesto del plan.
 
-### 1.3 Escenarios a 12 meses desde la primera publicación (≈ 30 episodios) [S]
+### 1.3 Escenarios a 12 meses desde la primera publicación (≈ 30 episodios, catálogo ampliado) [S]
 
-Supuestos: 8 episodios semanales y luego 1 cada 2 semanas (§4.2), de ~90 min (60 narrados + 30 de cola); AVD (duración media de visionado) de 15-25 min;
-conversión a suscriptor del 1-1,5 % de las vistas; RPM de 1,5-4 € solo dentro del YPP [R `retornos.md` §2.4]; umbral
-del YPP para nuevos solicitantes desde el 1-02-2027: **1.000 suscriptores + 8.000 h en 365 días** [F
+Supuestos: catálogo del nicho (b) de §A.2, **mitad historia y mitad Galicia ampliada** (lendas, mar, castros, Camiño,
+vida cotiá, idiosincrasia; §8.2), con las lendas siempre presentadas como lenda; 8 episodios semanales y luego 1 cada 2
+semanas (§4.2), de ~90 min (60 narrados + 30 de cola); AVD (duración media de visionado) de 15-25 min; conversión a
+suscriptor del 1-1,5 % de las vistas; RPM de 1,5-4 € solo dentro del YPP [R `retornos.md` §2.4]; umbral del YPP para
+nuevos solicitantes desde el 1-02-2027: **1.000 suscriptores + 8.000 h en 365 días** [F
 https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/]; fan funding con
-500 subs + 3.000 h [F https://www.youtube.com/creators/earn/youtube-partner-program/].
+500 subs + 3.000 h [F https://www.youtube.com/creators/earn/youtube-partner-program/]. Vistas a 12 meses ≈ mediana ×
+30 episodios × 1,5 (lo que sigue sumando cada vídeo después del día 30).
 
-| Escenario | Prob. [S] | Vistas por vídeo a 30 días (mediana) | Vistas en 12 meses | Horas vistas | Subs a M12 | YPP | Ingresos 12 meses |
-|---|---|---|---|---|---|---|---|
-| **Pesimista:** mercado galego sin empuje; o YouTube lo trata como *slop* y no lo recomienda | 60-70 % | 20-150 | 1-5 K | 200-1.800 h | 10-60 | No | **0 €** |
-| **Base:** nicho vacío + algún eco en redes galegas | 25-30 % | 150-800 | 5-25 K | 1.200-9.000 h | 60-400 | No (faltan subs) | **0 €** |
-| **Optimista:** "a primeira canle de historia para durmir en galego" sale en prensa/TVG o un vídeo se dispara | 5-10 % | 800-5.000 | 25-150 K | 6-50 K h | 400-2.000 | Posible en M8-M12 **si la revisión de YouTube no lo rechaza** (§7.1) | 0-60 €/mes desde la entrada en YPP; **≈ 0-300 € en el año** |
+| Escenario | Prob. [S] | Qué pasa en la prueba de §A.4 | Vistas por vídeo a 30 días (mediana) | Vistas en 12 meses | Horas vistas | Subs a M12 | YPP | Ingresos 12 meses |
+|---|---|---|---|---|---|---|---|---|
+| **Pesimista:** el nicho galego no aparece (ni con lendas); o YouTube lo trata como *slop* y no lo recomienda | 50-60 % | PARADA (M < 40) o MÍNIMO bajo | 15-100 | 0,2-4,5 K (con PARADA en la semana 10, el canal se queda en 8 episodios) | 50-1.900 h | 2-70 | No | **0 €** |
+| **Base:** hueco en galego + las lendas atraen a quien no busca historia + algún eco en redes galegas | 30-38 % | MÍNIMO o PLAN | 100-600 | 4,5-27 K | 1.100-11.000 h | 45-400 | No (faltan subs) | **0 €** |
+| **Optimista:** "a primeira canle para durmir en galego" sale en prensa/TVG, o un vídeo de lendas se dispara | 8-12 % | PLAN | 600-4.000 | 27-180 K | 7-75 K h | 270-2.700 | Posible en M8-M12 **si la revisión de YouTube no lo rechaza** (§7.1) | 0-60 €/mes desde la entrada en YPP; **≈ 0-300 € en el año** |
+| *Suplemento multi-audio (nicho c), solo si la fase 2 de §A.4 da R ≥ 1,3* | 40-55 % condicionado a no PARAR | — | ×1,3-2 sobre la fila que toque; el galego conserva el 25-70 % del tiempo de visionado | ×1,3-2 | ×1,3-2 | ×1,3-2 (subs en pt/en) | Adelanta el YPP en el optimista; no cambia el pesimista | Casi igual: el RPM de pt-BR es bajo [S] |
 
-Las vistas totales bajan ≈ 40 % frente a la v1 porque se publican ≈ 30 episodios en vez de 50: es el precio de cumplir
-D3 (§3.2).
+Frente a la v2, el catálogo ampliado mueve ≈ 10 puntos de probabilidad del pesimista al base y al optimista (el único
+vídeo de "Galicia para dormir" con > 100 K vistas es de lendas, §A.2). Las vistas totales siguen ≈ 40 % por debajo de
+la v1 porque se publican ≈ 30 episodios en vez de 50: es el precio de cumplir D3 (§3.2).
 
-**Valor esperado de ingresos en 12 meses: ≈ 0-20 € [S].** Gasto de caja en 12 meses: ≈ 20-100 € (§2). **Resultado
-esperado en caja: ≈ −20 a −100 €**, más ≈ 85-140 h del promotor el primer año natural (§3). En dinero es un hobby con coste, como decidió el
-promotor (D6); no hay que venderlo como otra cosa.
+**Valor esperado de ingresos en 12 meses: ≈ 0-25 € [S].** Gasto de caja en 12 meses: ≈ 20-100 € (§2), +10-25 € si
+entran las pistas pt/en. **Resultado esperado en caja: ≈ −20 a −120 €**, más ≈ 85-140 h del promotor el primer año
+natural (§3), +6-10 h si se construye la etapa multi-audio. En dinero es un hobby con coste, como decidió el promotor
+(D6); no hay que venderlo como otra cosa.
 
 **Qué no entra en el modelo y podría cambiarlo:**
 - Ayudas y premios en galego (Carballo Interplay: 600 € a la mejor canle; líneas de la SXL a contenidos digitales)
   [R `retornos.md` §7]. **Casi todas exigen un solicitante identificado**, y el canal es anónimo (D6): hay que
   elegir entre anonimato y ayudas. Y un jurado cultural difícilmente premiará un canal sin revisión humana [S].
-- Pista de audio en castellano o canal espejo en castellano: donde está la demanda (Relatos al Oído, 108 K). Choca con
-  el "100 % galego" del contexto; se deja como opción fuera de este plan.
+- Un **canal espejo** en castellano (canal aparte, no pista): donde está la demanda (Relatos al Oído, 108 K). Queda
+  fuera: las pistas del mismo vídeo (aprobadas para explorar, §A.3-§A.4) cubren esa demanda sin partir las vistas y
+  manteniendo el galego como pista original.
 - Spotify Partner Program (España desde el 20-10-2026; 2.000 h en 30 días) [R `retornos.md` §7]: fuera de alcance
   salvo en el optimista.
 
@@ -152,6 +354,7 @@ promotor (D6); no hay que venderlo como otra cosa.
 | Imágenes (≈ 200-240 por episodio) | SDXL-Turbo o SD-Turbo en CPU + reescalado | 0 € | Nano Banana 2 Lite batch | ≈ 7-8 USD (0,034 USD × 220) [R `pipeline.md` §5.2] | **Propia**. Licencia: ver §2.3 |
 | Montaje (Ken Burns lento, fundidos, cola) | ffmpeg (`imageio-ffmpeg`) | 0 € | — | — | Propia |
 | Juez factual de otra familia | LLM abierto local o capa gratuita de otra API | 0-0,2 USD | — | — | Local si cabe en el tiempo de CPU |
+| Pistas pt/en/es (solo desde la fase 2 de §A.4) | Nós MT gl→es/en (MIT) + Kokoro (Apache-2.0) o Piper; control M1-M6 | 0 €; 30-130 min de CPU por idioma [P/S, §A.3.3], en una segunda noche | LLM frontier para gl→pt (Nós no tiene ese par) | ≈ 0,3-1 USD | **Propia salvo gl→pt** |
 
 ### 2.2 Caja mensual (2-5 episodios/mes) [S sobre F/R]
 
@@ -342,6 +545,8 @@ temas.csv (lista cerrada, §8.2)
    │
 [9] Montaje + miniatura + subtítulos gl + metadatos + expediente ──► saída/ (privado)
    │
+[10] (opcional, desde la fase 2 de §A.4) Pistas pt/en: traducción → TTS → M1-M6 → pistas .m4a (segunda noche; subida a mano en Studio)
+   │
 Semáforo: 14 controles (§6). Todo verde → subida en privado → 1 clic del promotor → público.
 Rojo → no sale; se registra el motivo; el episodio siguiente de la cola ocupa su lugar.
 ```
@@ -393,12 +598,15 @@ dossier textos del Consello da Cultura Galega ni obras protegidas (solo verifica
 | H1 | Anclaje de afirmaciones | `afirmacions.csv` + comprobación de que la cita literal existe en el fragmento | ≥ 95 % de frases con dato ancladas; las no ancladas se borran | Invenciones "sin fuente" |
 | H2 | Coherencia con la cita | LLM C (otra familia) juzga "la frase dice lo mismo que la cita" | ≤ 5 % de "no respaldado"; si > 10 %, el episodio no sale | Fechas cambiadas, personajes mezclados, exageraciones |
 | H3 | Temas vetados | Lista cerrada de temas (§8.2) + detector de palabras de zona roja | 0 | Guerra Civil, represión, política reciente, conflictos vivos |
+| H4 | Lenda como lenda (nuevo en v3, por el catálogo ampliado) | `afirmacions.csv` (tipo `lenda`) + regex de marcadores + pregunta al juez H2 | 0 frases `lenda` fuera de un bloque con marcador; 0 frases `feito` que la fuente trata como leyenda | Mouras, Santa Compaña o raqueiros contados como hechos |
 | A1 | Inteligibilidad | ASR Whisper-gl por párrafo, normalizado con Cotovía, WER | ≤ 6 % por párrafo tras 3 regeneraciones [R `pipeline.md` §4.1.1 a]. **En el código:** WER ≤ 0,06 sobre la mezcla entera (medido: 2,3 % y 2,5 %; la voz sola da 8,2-8,6 %, por eso aún no es puerta) | Palabras comidas, cambiadas, tartamudeos, "alucinaciones" del TTS |
 | A2 | Técnica de audio | ffmpeg `ebur128`, `silencedetect`, recortes | −18 a −16 LUFS integrados; sin silencios > 8 s en la parte narrada; 0 recortes. **En el código:** solo la sonoridad; la mezcla apunta ahora a −17 LUFS (`son.py`, antes −20). **El `video/ejemplo.mp4` actual mide −20,0 LUFS y no pasa A2**; con +3 dB mide −17,0 [P, ffmpeg `ebur128`] y el pico real pasa de −5,1 a ≈ −2,1 dBTP: hay que rehacer las etapas 6-8 antes de P0 | Saltos de volumen que despiertan, cortes |
 | I1 | Seguridad de imagen | Clasificador NSFW | 0 positivos | Desnudos, violencia gráfica |
 | I2 | Texto en imagen | OCR (Tesseract) | 0 textos detectados con confianza > umbral | Letras inventadas y rótulos ilegibles, típicos de la IA |
 | I3 | Duplicados y variedad | *Hash* perceptual + similitud entre episodios | ≤ 10 % de planos casi iguales; ≤ 5 % reutilizados de otros episodios | "Plantilla repetitiva" (política de YouTube) |
 | P1 | Variedad entre episodios | Coseno de *embeddings* de guiones + n-gramas compartidos | Coseno < 0,85 y < 2 % de 8-gramas compartidos con cualquier episodio anterior [R `pipeline.md` §8] | Contenido "intercambiable" |
+
+Con pistas de audio extra se suman **M1-M6** (control de la traducción, §A.3.4), que solo bloquean la pista afectada, no el episodio en galego.
 
 Más un control transversal: **C0, errores canario.** En cada ejecución se inyectan en una copia del guion 20 errores
 conocidos (5 castellanismos, 5 fechas cambiadas, 5 nombres intercambiados, 5 frases sin fuente) y se mide cuántos
@@ -553,22 +761,34 @@ del Gauntlet 2 lo lea con ojo de filóloga.)
 | Errores de lengua en cada episodio (§6.3) | Cierta / medio-alto: es lo que más castiga el público galego y lo que cita la crítica | Declararlo en el aviso; lista viva de castellanismos; erratas públicas; alimentar el léxico de Cotovía con cada error de pronunciación |
 | Pronunciación mala de topónimos y vocales | Alta / alto | Léxico de topónimos del episodio pasado por Cotovía antes de sintetizar; errores reportados a Nós (§1.4) |
 | Error histórico con carga identitaria (Irmandiños, Reino de Galicia, emigración) | Media / alto | Temas canónicos de consenso; zonas rojas vetadas; tono descriptivo |
-| Mito presentado como hecho (celtismo romántico, leyendas) | Media / medio | Leyenda solo como leyenda ("contábase que..."), marcada en `afirmacions.csv` con tipo `lenda` |
+| Mito presentado como hecho (celtismo romántico, leyendas); sube con el catálogo ampliado (§8.2), que hace de las lendas la mitad del bloque (b) | Media-alta / medio | Leyenda solo como leyenda ("contábase que..."), marcada en `afirmacions.csv` con tipo `lenda` y comprobada por H4 (§6.1) |
+| Traducción defectuosa en las pistas pt/en/es (§A.3) | Alta si hay pistas / medio | M1-M6 (§A.3.4); la pista que no pasa no sale; el vídeo sale igual en galego |
 | Guerra normativa (RAG frente a reintegracionismo) | Alta / bajo | Norma RAG/ILG declarada; no entrar en debate |
 | Politización | Media / medio | Temas y tono (§8.2) |
 
-### 8.2 Lista cerrada de temas para el primer año [S]
+### 8.2 Catálogo cerrado del primer año: toda Galicia, no solo historia [S]
 
-Solo temas con consenso historiográfico y distancia temporal, en series con arco (control P1 y política de YouTube):
-- *Gallaecia* castrexa y romana (vida cotidiana en un castro, Lucus Augusti, as vías).
-- Reino suevo (sin disputas de identidad nacional: vida, rutas, Braga).
-- O Camiño e Compostela medieval (peregrinos, hospitais, a catedral en obras).
-- Mosteiros e vida monástica (Samos, Oseira, Sobrado).
-- Vida no mar e nas feiras (salga, Muros, feiras medievais).
-- Os irmandiños (con el guion muestra ya corregido como base) [R `../../guion-mostra-revolta-irmandina.md`].
+Directriz del promotor (29-09-2026): enganchar y ser atractivo por encima de la exhaustividad, **sin perder rigor**. El
+catálogo mezcla **mitad historia (nicho a) y mitad Galicia ampliada (nicho b)**; la prueba de §A.4 decide después el
+reparto con datos. Temas en series con arco (control P1 y política de YouTube).
+
+| Bloque | Series del primer año | Gancho verdadero para el primer minuto (tipo de dato, no texto final) | Cuidado específico |
+|---|---|---|---|
+| **Historia** (a) | *Gallaecia* castrexa e romana (vida nun castro, Lucus Augusti, as vías); o reino suevo (vida, rutas, Braga); o Camiño e Compostela medieval (peregrinos, hospitais, a catedral en obras); mosteiros (Samos, Oseira, Sobrado); os irmandiños (con el guion muestra corregido) [R `../../guion-mostra-revolta-irmandina.md`] | Detalle cotidiano sorprendente y documentado (qué comía un peregrino, cuánto duraba un viaje, cómo se dormía en un hospital de peregrinos) | Consenso historiográfico; nada de "o primeiro reino de Europa" sin matiz |
+| **Lendas e mitos** (b) | A Santa Compaña; meigas, bruxas e menciñeiros; mouras e tesouros dos castros; cidades asolagadas (a lagoa de Antela) | Lo que **se contaba** y dónde, y por qué se contaba (la lenda como historia de las mentalidades) | **Siempre como lenda** (control H4, abajo); menciñeiros sin ningún remedio presentado como útil (T5, salud) |
+| **O mar** (b) | Costa da Morte (naufraxios, faros, a lenda dos raqueiros), salga e conserva, baleeiros, redeiras e mariscadoras | Contraste entre la lenda y lo documentado (p. ej. raqueiros: qué se cuenta y qué consta) | Distinguir lenda y hecho en la misma frase |
+| **Vida cotiá de antes** (b) | Feiras, muíños, fiadeiros e seráns, o inverno na aldea | "Así se pasaba unha noite de inverno": el tema más natural para dormir | Evitar la nostalgia inventada: solo costumbres con fuente |
+| **Idiosincrasia: o porqué** (b) | Minifundio (herdanzas e foros); emigración a América 1880-1930 (indianos); retranca e morriña | "Por que Galicia está partida en millóns de leiras": causa histórica documentada | Explicaciones **atribuidas** ("unha explicación habitual é..."), nunca esencias; nada de "carácter celta" ni determinismos étnicos |
+
+**Regla "lo legendario como leyenda", convertida en control automático (H4, §6.1):** en `afirmacions.csv` cada frase
+lleva tipo `feito` o `lenda`; `dossier.py` ya aparta las leyendas de las fuentes (§3.3). Toda frase `lenda` tiene que
+estar dentro de un bloque abierto por un marcador ("conta a lenda", "dicíase que", "segundo a tradición", "hai quen
+di") y el juez H2 comprueba además que ninguna frase `feito` afirme algo que la fuente trata como leyenda. Los ganchos
+del título y del primer minuto tampoco pueden presentar una leyenda como hecho ("A Santa Compaña existiu" no;
+"Durante séculos, en Galicia houbo quen xuraba ter visto a Santa Compaña" sí).
 
 **Vetado:** Guerra Civil y represión, franquismo, política desde 1975, personas vivas, conflictos lingüísticos
-actuales, temas de salud.
+actuales, temas de salud (incluidos remedios de menciñeiros como útiles), y el celtismo presentado como hecho.
 
 ### 8.3 El riesgo que más contradice la tesis "pro lingua": contaminar el corpus
 
@@ -609,8 +829,9 @@ días de publicarse.
 |---|---|---|---|
 | **P0 · Salida** | Antes de publicar el primer episodio | (1) Piloto completo pasa los 14 controles; (1a, P0-a) un episodio de 60 + 30 min sale del pipeline sin intervención en ≤ 8 h de reloj (§4.1 predice 5-7 h); (2) canarios C0 con H2: ≥ 90 % y ≥ 4/5 en "sin fuente" en el conjunto actual, y ≥ 80 % en un conjunto nuevo de otro tema (§6.1). **Hoy: 80 % y 2/5 → no se pasa**; (2a) sonoridad dentro de −18/−16 LUFS en el vídeo que se publique (el ejemplo actual mide −20); (2b) el promotor ha cronometrado 3 dossieres y la media cabe en §3.2; (3) aviso hablado y nota de descripción puestos; etiqueta sintética activada; (4) licencias archivadas (SDXL-Turbo, Apache de Nós); (5) **correo de solicitud de permiso a Nós/USC enviado** (D4). La respuesta no es necesaria para publicar como hobby **sin monetizar** [S, decisión de prudencia] | No se publica |
 | **P0-bis · Voz** | En cuanto responda Nós/USC | Permiso para el uso (y, si Nós lo exige, del locutor) | Si dicen que no: cambiar a otra voz con permiso claro en ≤ 30 días (voces de proveedor gl-ES con licencia comercial) o retirar el audio [R `gtm_riesgos.md` §3.3 bis] |
-| **P1 · Señal** | Tras 8 episodios (~M2) | Mediana a 30 días ≥ 50 vistas **y** ≥ 15 % de espectadores recurrentes (Studio: *espectadores nuevos y recurrentes*) **y** ≥ 3 comentarios de personas reales en galego en total **y** 0 incidentes graves (§10) | Si mediana < 20 vistas: parar la producción, publicar el código y los informes de error para Nós, y dejar el canal quieto (coste hundido ≈ 60-90 h y < 30 €) |
-| **P2 · Hábito** | M6 (~17 episodios) | Mediana a 30 días ≥ 200 vistas **y** ≥ 150 subs **y** ≥ 25 % de espectadores recurrentes **y** ≥ 30 % de las vistas desde listas de reproducción, página del canal o búsqueda de la canle (consumo repetido, no descubrimiento) **y** tasa de erratas señaladas por episodio decreciente | Seguir solo como banco de pruebas técnico, a 1 episodio al mes |
+| **P1 · ¿Existe el nicho?** (fase 1 de §A.4) | Día 30 del episodio 8 (≈ semana 10) | 8 episodios: 4 de historia y 4 de Galicia ampliada, solo en galego. M = mediana de vistas a 30 días; G = % de vistas desde ciudades galegas; y 0 incidentes graves (§10) | **Sin zona gris:** M < 40, **o** G < 15 % con 0 comentarios en galego → **PARADA** (nicho inexistente para este formato; se publican el código y los informes de error para Nós; coste hundido ≈ 60-95 h y < 30 €). 40 ≤ M < 150 → **MÍNIMO** (1 episodio al mes; en M6, M < 60 sobre los 4 últimos → PARADA, M ≥ 60 → sigue). M ≥ 150 → **PLAN** (régimen de §4.2 y P2) |
+| **P1-bis · Pistas pt + en** (fase 2 de §A.4) | ≈ Semanas 12-17, si P1 no da PARADA | Pistas en 4 de los 8 episodios; control con los otros 4. R = cociente de vistas; L = % del tiempo en la pista gl | R < 1,3 → solo galego. R ≥ 1,3 y L ≥ 40 % → pt + en y prueba del es (fase 3). 25 % ≤ L < 40 % → pt + en, sin es. L < 25 % → solo pt |
+| **P2 · Hábito** | M6 (~17 episodios), solo si P1 dio PLAN | Mediana a 30 días ≥ 200 vistas **y** ≥ 150 subs **y** ≥ 25 % de espectadores recurrentes **y** ≥ 30 % de las vistas desde listas de reproducción, página del canal o búsqueda de la canle (consumo repetido, no descubrimiento) **y** tasa de erratas señaladas por episodio decreciente | Seguir solo como banco de pruebas técnico, a 1 episodio al mes |
 | **P3 · Tracción (dispara D1)** | Desde M6, revisión mensual | Ver §9.1 | No se paga la validación |
 | **P4 · YPP** | Cuando se cumplan 1.000 subs y 8.000 h | Solicitar solo con P0-bis resuelto y sin alarmas abiertas | No solicitar |
 
@@ -637,7 +858,7 @@ la voz es el cuello de botella, y D1 se paga con 1 KPI de tracción en lugar de 
 revisor profesional que puntúa la voz frente al listón [R `../../gauntlet/piezas/voz.md`]. Resultado posible: seguir
 con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léxico de corrección de Cotovía.
 
-**Probabilidad de llegar a pagarla en 12 meses:** ≈ 5-10 % [S] (el escenario optimista del §1.3; con ≈ 30 episodios, el base ya no llega a 500 subs).
+**Probabilidad de llegar a pagarla en 12 meses:** ≈ 8-12 % [S] (el escenario optimista del §1.3; con ≈ 30 episodios, el base ya no llega a 500 subs).
 
 ### 9.2 Cuadro de mando mensual (5 min al mes)
 
@@ -677,8 +898,13 @@ con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léx
 3. Tasa de detección de los canarios con H2 y en un conjunto nuevo (hoy, sin H2 y sobre el conjunto conocido: 80 %), y tasa de falsos bloqueos.
 4. Residuos por episodio (§6.3): solo se sabrán si una persona experta mira un episodio. Si alguien de la comunidad lo
    ofrece gratis, aceptarlo es compatible con D5 (no es revisión pagada) y es el mejor dato del proyecto.
-5. Si YouTube sirve el audio en galego fuera del público galegofalante (hipótesis VaniMani).
+5. Si YouTube sirve el audio en galego fuera del público galegofalante (hipótesis VaniMani). Lo mide G en la fase 1 de §A.4.
 6. Si el LLM por suscripción se puede usar de forma automatizada según sus términos o hay que ir a la API (coste ≤ 10 €/mes igualmente).
+7. Si el galego está en la lista de idiomas de pista de audio de YouTube, si las pistas se pueden subir por API y si
+   Analytics desglosa el tiempo de visionado por pista (§A.3.1). Se comprueba en Studio antes de construir M1-M6.
+8. Calidad de oído de Piper y Kokoro en pt/en/es frente a los competidores de cada idioma (no escuchada todavía; §A.3.3),
+   licencia de la voz base *lessac* de Piper, y tiempos sin la CPU compartida.
+9. Si Studio da el informe de ciudades (métrica G de §A.4) o solo el país.
 
 ---
 
@@ -691,6 +917,11 @@ con Brais, cambiar de voz (D2: la más cercana al listón) o invertir en el léx
 - Stability AI, licencias (Community License, < 1 M$): https://stability.ai/license ; ficha SDXL-Turbo: https://huggingface.co/stabilityai/sdxl-turbo
 - Nós, Llama-3.1-Carballo-Instr3: https://huggingface.co/proxectonos/Llama-3.1-Carballo-Instr3
 - OutlierKit, resumen de la ofensiva contra el *slop* en 2026: https://outlierkit.com/resources/youtube-ai-slop-crackdown-2026/
+- YouTube, multi-language audio (pista por defecto según el historial, descubrimiento por título traducido, > 25 % del tiempo en la lengua no principal): https://support.google.com/youtube/answer/13338784?hl=en
+- TechCrunch, multi-audio para todos los creadores (10-09-2025): https://techcrunch.com/2025/09/10/youtubes-multi-language-audio-feature-for-dubbing-videos-rolls-out-to-all-creators/ ; PPC Land, vistas y horas en un solo vídeo: https://ppc.land/youtube-makes-multi-language-audio-available-to-millions-of-creators/
+- Nós MT gl→es (MIT): https://huggingface.co/proxectonos/Nos_MT-CT2-gl-es ; gl→en: https://huggingface.co/proxectonos/Nos_MT-CT2-gl-en
+- Kokoro-82M (Apache-2.0): https://huggingface.co/hexgrad/Kokoro-82M ; Piper, voces y fichas: https://huggingface.co/rhasspy/piper-voices
+- Búsquedas de YouTube y prueba multi-audio propias: `../medidas/nicho/` (README, `busquedas-yt.txt`, `multiaudio/`).
 - Listón de referencia: `../referencia.md` (yt-dlp sobre https://www.youtube.com/@HistoriaDesconocida-m4j).
 - Medidas propias usadas en la v2: `../medidas/escala/extrapolacion.md` (tiempos), `../medidas/c0-irmandinos-apertura/`
   y `../medidas/c0-irmandinos-apertura-r3/` (C0), `../medidas/r2-*/qa.json` (WER, LUFS, ritmo),
