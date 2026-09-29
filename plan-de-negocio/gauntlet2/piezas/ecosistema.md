@@ -1,6 +1,8 @@
 # Pieza del plan v2: el ecosistema galego (riesgos, apoyos y estrategia *pro lingua*)
 
-- **Versión:** v1 (primera versión del constructor), 29-09-2026.
+- **Versión:** v3 (ronda 3 del constructor), 29-09-2026. Cambios: §1.13 (ganchos con picante ante el ecosistema,
+  reglas y lista de títulos en galego), E10 y alarma A9, correo del §5 con el formato de embudo, nombre oficial de la
+  Lei 1/2025 y de la CSAG.
 - **Qué cubre:** análisis de actores (Proxecto Nós/USC/CiTIUS/ILG y Gradiant, CSAG-CRTVG/TVG y Radio Galega, RAG,
   Consello da Cultura Galega, Secretaría Xeral da Lingua, AGPTI, sector de la dobraxe y la locución, comunidad
   tecnológica de software libre, divulgadores de historia, medios y comunidad de hablantes); evaluación crítica de la
@@ -14,7 +16,7 @@
 
 ---
 
-## 0. Resumen en 12 líneas
+## 0. Resumen en 13 líneas
 
 1. **La tesis del promotor es defendible, pero solo en una versión concreta:** el canal no es "contido en galego feito
    con IA", sino **un laboratorio aberto que pon a proba a IA aberta en galego en público** y devuelve datos. Si se
@@ -49,7 +51,12 @@
     correo (§5). No retrasa nada: el MVP tarda 8-10 semanas (§4).
 11. **Hoja de ruta:** correo a Nós esta semana → comunidad de software libre con el código → lanzamiento discreto →
     informe trimestral de errores a Nós → solo con tracción y revisión humana parcial, instituciones (§4).
-12. **Borrador del correo en galego** listo para enviar a `proxecto.nos@usc.gal` [F], firmado con nombre real (§5).
+12. **Borrador del correo en galego** listo para enviar a `proxecto.nos@usc.gal` [F], firmado con nombre real (§5),
+    que describe con honestidad el embudo: inicio vivo con curiosidades verídicas y después tono sereno.
+13. **Los ganchos con picante son el nuevo riesgo principal ante A Mesa, CCG, CSAG y Nós Diario** (tópico de la
+    Galicia atrasada) y ante divulgadores y medios (ganchos falsos). Reglas: gancho 100 % anclado al dossier y
+    verificado por ASR, contraste que apunta hacia arriba y nunca hacia la gente corriente, lista de títulos
+    permitidos y vetados en galego, alarma A9 (§1.13, §6 E10).
 
 ---
 
@@ -75,6 +82,7 @@ Tres rasgos del enfoque generan fricción, y cada actor los pesa distinto:
 | Software libre (Trasno, GALPon, AGASOL, Mancomún, comunidad Common Voice gl) | Pocas; quizá "slop" | Pipeline libre y reproducible en galego; datos abiertos | **Interés** | **Colaboración** (pruebas, correcciones, difusión técnica) |
 | Divulgadores de historia | A (errores), competencia, uso de su trabajo | Enlaces y tráfico; ser fuente citada | Recelo | **No hostilidad**; algunos como fuente citada |
 | Medios (Nós Diario, Praza, GCiencia, Código Cero) | Titular fácil: "IA anónima enche YouTube" | Titular positivo: "experimento aberto que mide a IA en galego" | Nada, salvo polémica | **Una pieza técnica** en un medio de ciencia, cuando haya datos |
+| *Transversal: ganchos con picante (§1.13)* | Tópico de la Galicia atrasada (A Mesa, CCG, CSAG, Nós Diario); ganchos falsos (divulgadores, medios) | Audiencia sin la que no hay datos que devolver | Crítica si hay un gancho malo con eco | **Política de ganchos pública** que nadie pueda citar como burla |
 | Comunidad de hablantes | A (castellanismos, pronunciación), N | Más contenido para dormir en galego, hoy casi inexistente [R] | Mixta: comentarios de errores | **Comunidad de correctores** |
 
 ### 1.1 Proxecto Nós (USC: CiTIUS e ILG) y Gradiant
@@ -135,7 +143,8 @@ https://huggingface.co/proxectonos/Nos_StyleTTS2-Brais-GL]. Contacto oficial de 
 
 ### 1.2 CSAG (antes CRTVG): TVG, Radio Galega, AGalega
 
-**Contexto.** La CRTVG pasó a ser la CSAG con la Ley 1/2025 de medios audiovisuales de Galicia; entre sus proyectos de
+**Contexto.** La CRTVG pasó a ser la CSAG (Corporación de Servizos Audiovisuais de Galicia) con la *Lei 1/2025, do 14 de marzo, de
+servizos dos medios públicos de comunicación audiovisual de Galicia para a sociedade dixital*; entre sus proyectos de
 2025 cita IA, subtitulado automático y recomendación [F https://crtvg.gal/w/a-csag-consolida-a-s%C3%BAa-transformaci%C3%B3n-no-principal-ecosistema-audiovisual-p%C3%BAblico-de-galicia].
 Es ya proveedora de datos de Nós: los guiones de informativos de la TVG 2019-2022 (166.951 frases) están en el corpus
 CC0 de Nós [F https://huggingface.co/datasets/proxectonos/nos_gl_CC0], y hay conjuntos restringidos
@@ -148,7 +157,8 @@ contenidos digitales de hasta 26.000 € por proyecto [R `ingresos_alt.md`].
 
 **Qué podría molestarle.** Poco directamente: el canal es diminuto para ellos. Los riesgos son indirectos: (a) usar
 fragmentos de su archivo (derechos: **prohibido** en el pipeline); (b) un título o miniatura que se confunda con la TVG;
-(c) que un periodista compare el canal con el caso Caamaño y la CSAG tenga que desmarcarse.
+(c) que un periodista compare el canal con el caso Caamaño y la CSAG tenga que desmarcarse; (d) ganchos que vendan
+la Galicia atrasada o mísera, contrarios a su relato institucional (§1.13).
 
 **Qué podría interesarle.** Como institución, casi nada al principio. A medio plazo, **la convocatoria de contenidos
 digitales** es la vía natural si el canal llega a tener revisión humana (el tribunal del Gauntlet 1 ya lo situó ahí).
@@ -348,6 +358,112 @@ di, que debería dicir"), página de erratas con agradecimientos, y un contador 
 erros que xa lle chegaron ao Proxecto Nós"). Es el mecanismo que convierte la tesis *pro lingua* en algo tangible
 (§2.2).
 
+### 1.13 Los ganchos con "picante" ante el ecosistema
+
+**Qué cambia.** Tras ver el vídeo de ejemplo, el promotor pide **ganchos con picante** en el título, la miniatura y
+los primeros 60-120 s, al estilo de la referencia de Versalles ("luxo por fóra, suciedade por dentro", *"non vas crer
+o que facían as persoas daquela"*), y después una bajada gradual hasta el tono de dormir (fórmula de embudo,
+`contexto.md`). Es la decisión con más impacto en el ecosistema desde D4, porque **el gancho es la parte del canal que
+más gente ve** (todo el que ve la miniatura, aunque no pulse) y la que más se comparte y se cita [S]. Un error en el
+minuto 40 lo oye un oyente medio dormido; un error en el título lo lee todo el mundo.
+
+**Dos riesgos distintos:**
+
+1. **El tópico de la Galicia atrasada o mísera.** El contraste "luxo/suciedade" funciona en Versalles porque apunta
+   **hacia arriba**: se ríe de la corte, del poder. Trasladado sin cuidado a Galicia, el blanco natural pasa a ser la
+   gente corriente del pasado (labregos, mariñeiras, emigrantes), y el mensaje implícito es "que atrasados eran". Es
+   justo el prejuicio que asocia el galego con la aldea, la pobreza y el pasado, contra el que trabaja la
+   normalización lingüística desde hace décadas [S; es un lugar común de la sociolingüística galega, no se cita aquí
+   un estudio concreto]. Quién reaccionaría:
+   - **A Mesa** (§1.8): un canal en galego que "vende" la miseria del galegofalante de antes es munición para su
+     crítica a la IA, con un argumento mejor que el de la calidad lingüística.
+   - **CCG** (§1.4): su interés es observar el canal como caso de estudio; si el caso es "IA que reproduce
+     estereotipos", el estudio deja de ser neutro.
+   - **CSAG** (§1.2): su relato institucional es una Galicia contemporánea y orgullosa de sí misma; una miniatura
+     que se confunda con la estética de la TVG y diga "a Galicia máis miserable" es un problema de marca para ellos.
+   - **Nós Diario** (§1.11): es el medio que ya cubrió con dureza el caso Caamaño; el titular *"Unha canle feita con
+     IA ri dos nosos avós"* es más fácil de escribir que el de "slop".
+   - **Nós (USC)** (§1.1): su voz Brais diciendo un gancho ofensivo o sensacionalista liga el nombre del proyecto a
+     ese tono; y **el locutor puede aceptar prestar su voz a un canal sereno y no a uno de *clickbait***. Por eso el
+     correo (§5) tiene que describir el embudo con honestidad.
+2. **Ganchos falsos o exagerados sin revisión humana.** Un LLM que busca "picante" tiende a exagerar la cifra, a
+   convertir una práctica ocasional en costumbre general o a presentar una leyenda como hecho [S; es el fallo típico
+   de la redacción persuasiva]. En un canal sin revisión humana, el gancho es la frase **con más presión para
+   inventar**. Quién reaccionaría:
+   - **Divulgadores** (§1.10): desmentir un gancho viral falso es contenido fácil para ellos, y el canal no tiene cara
+     para responder (§3).
+   - **Medios** (§1.11): "clickbait histórico feito por IA" es el titular malo con un ejemplo concreto.
+   - **Comunidad de hablantes** (§1.12): un gancho falso destruye la confianza en el mecanismo de erratas, que es la
+     base de la tesis *pro lingua* (§2.2).
+
+**Qué ganan los ganchos si se hacen bien.** El promotor tiene razón en el diagnóstico: sin gancho no hay audiencia, y
+sin audiencia no hay errores que devolver a Nós ni comunidad de correctores. Un gancho **verídico y digno** es
+defendible ante todo el ecosistema: la curiosidad sobre la vida cotidiana de antes (cómo se alumbraban, qué comían,
+cómo se curaban) es la base de la buena divulgación y no molesta a nadie si no se burla de nadie [S].
+
+**Reglas (propuesta para `prompts/guion.md`, `afirmacions.csv` y la QA de `plan-desatendido.md` §6):**
+
+1. **Solo ganchos con fuente en el dossier.** Cada afirmación del título, de la miniatura y de los primeros 120 s va
+   en `afirmacions.csv` con `tipo = gancho` y cita literal del dossier. Umbral: **100 % anclado** en H1 (no el 95 %
+   del resto del guion) y **aprobado por el juez H2**; si un gancho no pasa, se sustituye por el siguiente candidato
+   verificado o se usa uno suave. Nunca se publica un gancho sin ancla.
+2. **Verificado también en el audio.** El control ASR (`qa.py`, función `asr`) se aplica al 100 % de las frases de
+   los primeros 120 s (no a una de cada cuatro), para que lo que se oye sea lo que se verificó: un número o un nombre
+   mal pronunciado en el gancho cambia el hecho.
+3. **El texto de la miniatura y el título salen del guion,** no se escriben aparte: cada uno remite a una fila
+   `gancho` de `afirmacions.csv`. Nada de cifras o citas que no se oigan en el vídeo.
+4. **Nada de exotizar ni ridiculizar a la gente del pasado.** El contraste apunta **hacia arriba** (nobleza, alto
+   clero, poder, lujo, instituciones) o **hacia la sorpresa** (lo cotidiano que hoy parece raro), nunca **hacia
+   abajo** (labregos, mariñeiros, mulleres, emigrantes, pobres) como objeto de risa o asco.
+5. **Contraste con dignidad.** Fórmulas del tipo *"o que non contan os libros"*, *"por fóra... e por dentro"*, *"así
+   se facía"*, *"por que..."*; nunca *"que noxo"*, *"que atrasados"*, *"non te imaxinas a miseria"*.
+6. **La leyenda como leyenda también en el gancho:** *"contábase que..."*, *"dicían nas aldeas que..."*. Ningún
+   título afirma que algo sobrenatural "existe" o "pasou".
+7. **Nada de conspiración ni de "o que che ocultaron"**: no hay fuente que lo sostenga y enfrenta al canal con la
+   historiografía.
+8. **Imágenes de la miniatura:** sin personas reales recreadas (regla Caamaño, §1.2), sin fotos de archivo de
+   pobreza o de emigrantes usadas como impacto, sin estética de la TVG.
+9. **Galego natural, no calcos:** *"non vas crer"* (no *"non vas a crer"*), *"segredos"* (no *"secretos"*), y el
+   control de castellanismos de `qa.py` (`lingua`) se aplica al título y a la miniatura, no solo al guion.
+10. **Idiosincrasia (retranca, morriña, minifundio, emigración):** se explica el porqué con fuente; no se convierte
+    en estereotipo ni en chiste sobre "os galegos".
+
+**Lista de títulos (en galego).** Los "permitidos" lo son **solo si el dossier del episodio sostiene cada dato**
+(regla 1); los ejemplos con cifra llevan la cifra entre corchetes para indicar que sale del dossier.
+
+| Permitido (si el dossier lo sostén) | Por qué vale |
+|---|---|
+| *O que non contan os libros sobre a vida nun mosteiro medieval* | Curiosidade sen burla; o contraste apunta á institución |
+| *Así se vivía nun castro hai [N] anos: o que revelan as escavacións* | Dato con fonte arqueolóxica; sorpresa, non desprezo |
+| *Non vas crer como se alumeaban as casas antes da luz eléctrica* | Gancho da referencia en galego natural; cotián e verificable (candís, lareira) |
+| *Pedra nobre por fóra, fume e frío por dentro: así eran os pazos* | Contraste "luxo/suciedade" cara arriba (fidalguía), non cara aos labregos |
+| *Os irmandiños: a revolta que derrubou [N] fortalezas* | Feito histórico forte; a cifra, do dossier |
+| *A Santa Compaña: o que se contaba nas aldeas e por que* | Lenda presentada como lenda |
+| *Por que emigraron tantos galegos? A historia detrás das maletas* | Idiosincrasia explicada, con respecto |
+| *Que comían os mariñeiros do século XVI cando pasaban meses no mar* | Detalle cotián sorprendente |
+
+| Vetado | Por que non |
+|---|---|
+| *Que noxo! Así vivían os galegos de antes* | Ridiculiza á xente do pasado |
+| *A Galicia máis miserable: fame, lama e porcos* | Tópico da Galicia mísera, cara abaixo |
+| *Eran os galegos uns atrasados? Non vas crer como vivían* | Tópico do atraso |
+| *A Santa Compaña existe: as probas* | Lenda presentada como feito |
+| *Os segredos que a Igrexa nunca quixo que soubeses* | Conspiración sen fonte |
+| *Por que os galegos nunca din si nin non* | Estereotipo presentado como verdade |
+| *A historia que che ocultaron no colexio* | Gancho falso: non hai ocultación que citar |
+| *Non vas a crer os secretos dos pazos* | Calcos do castelán ("vas a", "secretos") |
+| Calquera título cunha cifra que non estea no dossier | Incumpre a regla 1 |
+
+**Cómo convierte esto el riesgo en apoyo.** La lista y las reglas se publican en la página "Como se fai *Serán*"
+como **política de ganchos**. Ante A Mesa, el CCG o un periodista, el canal puede mostrar que el picante es
+curiosidad verificada y no burla; ante un divulgador que detecta un gancho falso, hay un procedimiento público
+(alarma A9, §4) y un agradecimiento en erratas. La lista se revisa cada trimestre con los títulos que hayan
+generado quejas.
+
+**Tensión que queda abierta [S].** Los ganchos más dignos rinden algo menos en CTR que los más crudos. Es un coste
+aceptado: en un nicho diminuto, una polémica con A Mesa o con Nós Diario cuesta más audiencia galegofalante de la que
+aporta un título agresivo, y además pone en riesgo el permiso de la voz (D4).
+
 ---
 
 ## 2. La tesis del promotor, examinada
@@ -448,7 +564,7 @@ Relojes: S0 = esta semana (29-09-2026). M0 = primera publicación (≈ 8-10 sema
 |---|---|---|---|---|---|
 | **0. Permiso** | S0-S1 | Proxecto Nós (`proxecto.nos@usc.gal`), copia a Gradiant | Enviar el correo del §5 con nombre real | Contactar al locutor directamente; publicar con su voz | Respuesta escrita: sí / sí con condiciones / no |
 | **0-bis. Espera** | S1-S5 | — | Construir el MVP; probar en paralelo Sabela, Icía e Iago en un tramo de 60 min; si no hay respuesta en 30 días, un recordatorio breve | Publicar con Brais sin un sí escrito de Nós | Decisión de voz |
-| **1. Preparación** | Antes de M0 | — | Página "Como se fai *Serán*"; formulario de erratas; métricas del §2.2; comparación Carballo vs. cerrado | Buscar prensa; usar "calidade" en textos | Todo listo para responder a una crítica el primer día |
+| **1. Preparación** | Antes de M0 | — | Página "Como se fai *Serán*" con la política de ganchos (§1.13); formulario de erratas; métricas del §2.2; comparación Carballo vs. cerrado; ganchos al 100 % anclados y con ASR completo | Buscar prensa; usar "calidade" en textos | Todo listo para responder a una crítica el primer día |
 | **2. Aviso previo** | M0 − 1 semana | AGPTI y ADA (solo si Nós y el locutor dijeron sí) | Carta informativa breve: qué es, qué voz y con qué permiso, compromiso de revisión profesional si hay ingresos | Pedir apoyo o aval | Que se enteren por el canal, no por la prensa |
 | **3. Comunidad técnica** | M0 | Trasno, GALPon, AGASOL, Common Voice gl | Publicar el código y un artículo técnico en galego; invitar a revisar la lista de castellanismos | Presentarlo como "producto" | Primeros correctores y usuarios del pipeline |
 | **4. Lanzamiento discreto** | M0 | Público | 3 episodios; aviso hablado; etiqueta sintética; "Para saber máis" con divulgadores humanos | Contactar a A Mesa, RAG, CSAG, medios | Primeras correcciones reales |
@@ -481,6 +597,11 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
   respuesta pública con datos y oferta concreta (revisión profesional si hay ingresos), sin polemizar.
 - **A8:** Nós pide retirar su nombre de los créditos → retirar en 48 h (y seguir con la licencia Apache del modelo
   solo si también autorizan el uso).
+- **A9:** un gancho (título, miniatura o primeros 120 s) resulta falso, o un medio, una entidad o un divulgador lo
+  señala como estigmatizante → cambiar título y miniatura en ≤ 24 h, comentario fijado con la errata, recortar o
+  sustituir el tramo en ≤ 7 días, agradecer en erratas; 4 semanas solo con ganchos suaves y revisión de la lista de
+  títulos. **Dos casos en un trimestre** → suspender los ganchos con cifra o contraste hasta revisar las reglas del
+  §1.13 y el prompt.
 
 ---
 
@@ -495,9 +616,11 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 > Boas tardes:
 >
 > Chámome [nome e apelidos] e escríbovos a título persoal. Estou a preparar, como afección e sen ánimo de lucro polo
-> de agora, unha canle de YouTube e pódcast de historia de Galicia en galego pensada para escoitar antes de durmir:
-> episodios longos, de ton sereno, sobre temas de consenso historiográfico (castros, a *Gallaecia*, o Camiño, os
-> mosteiros, os irmandiños).
+> de agora, unha canle de YouTube e pódcast de historia e cultura de Galicia en galego pensada para escoitar antes de
+> durmir. Os episodios son longos e teñen forma de funil: o título e os primeiros un ou dous minutos son máis vivos,
+> con curiosidades verídicas e sorprendentes da vida doutras épocas (sempre con fonte, sen burlarse de ninguén e sen
+> esaxerar), e despois o ritmo baixa aos poucos ata un ton sereno para durmir. Os temas son de toda Galicia: castros,
+> o Camiño, os mosteiros, os irmandiños, o mar, a vida cotiá de antes e as lendas, contadas sempre como lendas.
 >
 > A canle faise cun proceso automático construído con ferramentas abertas, e o voso traballo é a peza central: a voz
 > é o modelo **Nos_StyleTTS2-Brais-GL**, o control de pronuncia faise co Whisper en galego do Proxecto Nós, e
@@ -509,7 +632,7 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 >
 > 1. Se vedes compatible co espírito das condicións dos datos que unha canle pública de divulgación empregue o
 >    modelo, primeiro sen monetizar e, se algún día chegase a ter ingresos, monetizada.
-> 2. Se o consentimento que deu o locutor cobre este tipo de uso. Se non o cobre ou non está claro, pregaríavos que
+> 2. Se o consentimento que deu o locutor cobre este tipo de uso, incluído ese comezo de ton máis vivo. Se non o cobre ou non está claro, pregaríavos que
 >    lle trasladásedes a consulta vós; non quero contactar con el pola miña conta. Se el prefire que non se use a súa
 >    voz, cambiarei de voz sen máis. Se o acepta, ofrézolle crédito co seu nome ou sen el, como prefira, e unha parte
 >    dos ingresos se algún día os houbese.
@@ -545,7 +668,9 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 > [Ligazón privada a unha mostra de 2-3 minutos do episodio piloto]
 
 **Notas para el promotor (en castellano):**
-- Adjuntar una **muestra corta** (2-3 min) con el aviso hablado incluido, en enlace privado. No enviar el vídeo entero.
+- Adjuntar una **muestra corta** (2-3 min) con el aviso hablado incluido, en enlace privado, que **incluya el gancho
+  inicial tal como irá** (título, miniatura y primeros 60-120 s) y un tramo del tono sereno posterior: Nós y el locutor
+  tienen que ver lo que autorizan. No enviar el vídeo entero.
 - Si Nós pide hablar por teléfono o en persona, aceptar: es la mejor señal posible.
 - El compromiso "non publicarei nada coa voz de Brais ata ter a vosa resposta" **obliga**: si se envía, se cumple
   (ver §4, fase 0-bis y "Silencio tras el recordatorio"). No hay plazo tras el cual se use Brais sin respuesta. Si
@@ -569,6 +694,7 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
 | E7 | Tesis *pro lingua* desmontada por incoherencia (LLM cerrado, textos que contaminan) | Media / medio | Comparación pública Carballo vs. cerrado; marca de sintético; entregar datos | §2.3 |
 | E8 | Divulgadores acusan de usar su trabajo | Baja / medio | Dossier solo con Galipedia y dominio público; "Para saber máis" | §1.10 |
 | E9 | Los datos prometidos nunca se entregan (falta de horas) | **Alta** con 1 h/semana / medio | Automatizar la exportación de errores y métricas en el pipeline; compromiso mínimo: informe de voz trimestral | §2.2 |
+| E10 | Gancho falso o estigmatizante (tópico de la Galicia atrasada o mísera, burla de la gente del pasado, leyenda como hecho) en título, miniatura o primeros 120 s | **Media** con ganchos generados por LLM sin revisión / **alto** (es lo más visible y lo más citable; puede costar el permiso de la voz) | Reglas y lista de títulos del §1.13; gancho 100 % anclado (H1) y aprobado por H2; ASR completo en los primeros 120 s; política de ganchos pública; alarma A9 | §1.13, §4 |
 
 ---
 
@@ -585,6 +711,9 @@ reserva algo peor y se cambia a Brais cuando llegue el sí.
    términos antes].
 7. Que alguna de las voces Sabela, Icía o Iago (VITS/Matcha) aguanta 60 min de narración con calidad aceptable; si
    ninguna lo hace, la reserva pasa a ser un proveedor gl-ES con licencia [S; sin medir].
+8. Que los ganchos dignos del §1.13 no pierden tanto CTR frente a los crudos como para anular el canal [S; medir con
+   las pruebas A/B de miniaturas de YouTube desde el primer mes].
+9. Que el locutor de Brais acepta el tono vivo del inicio y no solo el sereno [S; se pregunta en el correo, §5].
 
 ---
 
