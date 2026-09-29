@@ -76,7 +76,8 @@ def ancoraxe(guion, dossier, ignorar=()):
         for tipo, xs in (('nome', nomes(f)), ('cantidade', cantidades(f))):
             for x in xs:
                 items += 1
-                if _n(x) not in d:
+                # palabra enteira: "dous" non se ancora en "douscentas" nin "cen" en "cincocentos"
+                if not re.search(r'(?<!\w)' + re.escape(_n(x)) + r'(?!\w)', d):
                     fallos.append({'tipo': tipo, 'texto': x, 'frase': f})
     return {'items': items, 'non_ancorados': fallos,
             'pct_ancorado': round(100 * (items - len(fallos)) / items, 1) if items else 100.0}
