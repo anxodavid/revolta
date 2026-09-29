@@ -2,7 +2,7 @@
 
 Canal de YouTube (y feed de audio) de historia de Galicia para quedarse dormido. Está hecho con IA y es 100 % en galego, con la calidad del galego narrado y escrito como condición no negociable.
 
-- **Versión:** integrada (alisado del Gauntlet Loop) · 29-09-2026
+- **Versión:** integrada (alisado del Gauntlet Loop + correcciones del tribunal final en dos rondas, Anexo A.5) · 29-09-2026
 - **Idioma:** redactado en castellano. Todo lo que ve u oye el público va en galego normativo (RAG).
 - **Horizonte:** octubre de 2026 a noviembre de 2029.
 
@@ -17,6 +17,9 @@ Canal de YouTube (y feed de audio) de historia de Galicia para quedarse dormido.
 - **[P]:** prueba propia ejecutada el 29-09-2026 (código y resultados en el directorio de trabajo del gauntlet).
 - **[S]:** supuesto o decisión de diseño. Lo sustituye el dato del piloto.
 - **[INT]:** ajuste hecho en esta integración. Es aritmética sobre cifras de las piezas, con el cálculo a la vista; **no son datos nuevos**.
+- **[COMP]:** comprobación técnica reproducible hecha el 29-09-2026 contra una API o unos datos abiertos (disponibilidad de un *handle* o un dominio, recuento en datos abiertos o en una instancia pública). Las plantillas de consulta están en el Anexo B.
+- **[CALC]:** cálculo propio sobre las cifras que se citan al lado; hereda la etiqueta de sus entradas (por ejemplo, [CALC sobre S]).
+- **[F-sec]:** dato con fuente secundaria (portal, agregador o tarifa de lista), no de la fuente original.
 - **Calendario:** octubre de 2026 es el mes de arranque. Los meses del modelo van de M1 a M36, con **M1 = diciembre de 2026**: el último mes de construcción, igual que el mes 1 sin vídeos del calendario de la pieza de mercado. Así, el lanzamiento cae en M2 (enero de 2027), la P1 en M6 (mayo de 2027), la P2 en M12 (noviembre de 2027), la P3 en M18 (mayo de 2028) y el horizonte en M36 (noviembre de 2029). Ver §1.2.
 
 ---
@@ -27,43 +30,50 @@ Canal de YouTube (y feed de audio) de historia de Galicia para quedarse dormido.
 
 | Etapa | Qué compra | Retorno económico esperable | Coste de caja | Horas del promotor |
 |---|---|---|---|---|
-| **0. Validación de voz y pipeline** (oct 2026 - ene 2027) | Saber si existe una voz en galego al nivel exigido y si el pipeline produce un episodio en las horas previstas | **0 €** | **Paso barato (Puerta V-0): ~0-10 €.** Validación formal, solo si V-0 da señal: **850-1.500 €** una vez (techo de 2.050 €) | ~95 h hasta el lanzamiento (~6 h/semana) |
-| **1. Piloto barato con puertas** (ene-may 2027, 12 vídeos) | Datos de audiencia, retención y hábito, y el veredicto de la comunidad sobre el galego | **0 € por diseño.** En el camino más probable (≈ 62 %) se para en la Puerta 1 | ~35 €/mes | ~5 h/semana (≈ 80 h) |
-| **2. Proyecto lateral** (jun 2027 - may 2028) | Llegar a ingresos recurrentes ≥ caja | **Solo en el camino optimista (≈ 10 %):** 66 €/mes en M12 y 173 €/mes en M18; equilibrio mensual en M15; +3.355 € acumulados en M36. **En el camino base (≈ 17 %): 0 € y sin YPP en 36 meses** | ~110-140 €/mes | 6-10 h/semana |
-| **3. Apuesta seria / red** (desde jun 2028, solo si se pasa la P3) | Voz licenciada y localización es/pt | Valor esperado de **−2.250 € a 36 meses**. Caso ganador (5 %): **~2.000 €/mes**. Recuperación hacia el mes ~50 | 3.000 € + 90 €/mes | ~10 h/semana |
+| **0. Validación de voz y pipeline** (oct 2026 - ene 2027) | Saber si existe una voz en galego al nivel exigido, si hay terceros dispuestos a pagar la calidad y si el pipeline produce un episodio en las horas previstas | **0 €** | **Paso barato (Puerta V-0): ~0-10 €.** **Puerta F** (financiación de la calidad, §1.3): ~0 € y ~10 h. Validación formal, solo si V-0 da señal **y** pasa la Puerta F: **850-1.500 €** una vez (techo de 2.050 €) | ~95 h hasta el lanzamiento (~6 h/semana) + ~10 h de la Puerta F |
+| **1. Piloto barato con puertas** (ene-may 2027, 12 vídeos) | Datos de audiencia, retención y hábito, y el veredicto de la comunidad sobre el galego | **0 € por diseño.** Solo se llega si hay voz **y** terceros pagan la calidad (≈ 10 % del total con la Puerta F, §1.3); en ese caso lo más probable (≈ 85 %) es parar en la Puerta 1 | **Paquete de calidad ≈ 3.680 € (2.390-5.010) en 12 episodios** (corrección de mesa íntegra de cada guion, escucha con texto de los episodios 1-6 y revisión histórica, §4.7 y §5.4): **≈ 500-1.030 €/mes, central ≈ 770 €**, en los 5 meses de la E1 (ene-may). **Con la Puerta F lo pagan terceros** y al promotor le quedan los 35 €/mes de stack. **Sin ella rompe el "< 50 €/mes": D5** | ~5 h/semana (≈ 80 h) |
+| **2. Proyecto lateral** (jun 2027 - may 2028) | Llegar a ingresos recurrentes ≥ caja | **Solo en el camino optimista (P4: 10,2 % de los caminos que publican):** 66 €/mes en M12, 173 €/mes en M18 y 509 €/mes en M36. **Si el promotor paga la garantía (caja ≈ 550 €/mes) no llega al equilibrio mensual en 36 meses** y acaba en ≈ −15.750 €. **Si terceros pagan el diferencial de calidad (Puertas F y F2)**, el optimista acaba en **≈ +1.190 €** (+2.105 € con voz de pago), con una probabilidad del ≈ 0,4 % del total. **En el camino base: 0 € y sin YPP** | **~350-760 €/mes, central ≈ 550 €** con 4 episodios y la garantía (modelo: 110 €). **Fuera del rango de 50-200 €: solo se abre con la Puerta F2** (≥ 440 €/mes comprometidos por terceros) | 8,5-10 h/semana (37-44 h/mes) |
+| **3. Apuesta seria / red** (desde jun 2028, solo si se pasa la P3) | Voz licenciada y localización es/pt | Valor esperado de **−2.250 € a 36 meses**, solo accesible desde el camino P4 (≈ 0,4 % del total con la Puerta F). Caso ganador (5 %): **~2.000 €/mes**. Recuperación hacia el mes ~50 | 3.000 € + 90 €/mes | ~10 h/semana |
 | **Pagos únicos** (en cualquier etapa) | Premios y encargos | **Youtubeiras+:** 810 € netos, con un 4-8 % de probabilidad por edición. **CRTVG (opción):** +7.500 € netos si se gana, pero exige alta de autónomo y ceder la temporada para siempre | — | — |
 
 **Techos.** Con solo galego y solo AdSense y Premium, el techo es de **~410-700 €/mes** capturando todo el mercado atendible. Con fuentes directas (membresías, patrocinio, audio), **~1.500-2.000 €/mes** [S].
 
-**Valor esperado integrado a 36 meses (M36): ≈ −1.250 a −1.900 € de caja y ≈ 400 h.**
-- El modelo de retornos, por sí solo, da **−147 € y 328 h**.
-- La diferencia sale de cuatro costes que ese modelo no incluía y que exigen las otras piezas (§1.3):
-  - la validación de la voz;
-  - dos meses más de construcción;
-  - el revisor lingüístico profesional de la Etapa 2;
-  - no poder presentarse a Youtubeiras+ 2026.
-- **Resultado más probable, en dos casos:**
-  - si la Puerta V-0 descarta las voces, se pierden **~0-10 € y ~20 h**;
-  - si se sigue adelante, se pierden **~1.100-1.800 €** entre la validación y la Etapa 1, y se para en la P1.
-- **Solo el camino optimista (≈ 10 %)** acaba con caja positiva.
+**Valor esperado conjunto a 36 meses (M36), del árbol voz → Puerta F → audiencia del §1.3 [INT sobre S]: ≈ −340 € de caja (−230 a −495 €) y ≈ 55 h.**
+- El modelo de retornos, por sí solo, da **−147 € y 328 h**, pero está condicionado a que haya voz y no paga la calidad que exige el plan.
+- El árbol conjunto empieza en la voz (V-0), sigue con la **Puerta F** (compromiso de terceros que cubra al menos el diferencial de calidad de la E1, ≈ 3.680 €), la Puerta V y la vía (c), y termina en la audiencia (P1-P4), con una **Puerta F2** en la P1 (≥ 440 €/mes para la E2). A cada hoja le suma lo que paga el promotor: V-0 y construcción, validación, vía de voz y la caja del modelo. La calidad la pagan terceros o no se publica.
+- **Resultados (las probabilidades suman el 100 %; P(F) = 25 % y P(F2) = 40 % [S]):**
+  - **45 %:** la V-0 descarta las voces y se espera: **≈ −40 € y ~20 h**;
+  - **41,3 %:** la V-0 da señal, pero nadie compromete la calidad: **presupuesto de hobby** (≤ 300 €, central 100 €) y se espera: **≈ −140 €**;
+  - **3,7 %:** pasa la Puerta F, pero ni la Puerta V ni la vía (c) dan voz: **≈ −2.225 €**;
+  - **8,5 %:** se publican 12 vídeos y se para en la P1 (por los KPI o porque falla la F2): **≈ −1.855 €** (−1.420 a −2.290 €);
+  - **1,5 %:** se sigue a la Etapa 2 con la F2: **entre −3.180 € (P3) y +1.185 € (P4)**.
+- **Probabilidad conjunta de acabar con caja positiva: ≈ 0,3 %** (el optimista con F y F2, voz de pago o de Nós). **Umbral que hace positiva la hoja más probable de las que publican (P1):** que los terceros comprometan **≈ 5.140 €** (3.520-6.800), es decir, el diferencial de la E1 más ≈ 1.460 € de validación, construcción y stack.
+- **Comparación honesta de políticas:** **no gastar nada tras la V-0 es lo que menos pierde** (≈ −40 €). La Puerta F cuesta ≈ 300 € más de valor esperado, pero es la única forma de publicar que no exige al promotor pagar la calidad: condicionada a que pase, el promotor arriesga ≈ −1.930 € (sobre todo la validación). **Si el promotor paga la calidad de su bolsillo** (sin Puerta F), el valor esperado es de ≈ −3.570 € (−2.310 a −4.850) siguiendo las puertas y de ≈ −2.560 € parando siempre en la P1: esa última es solo **la menos mala de las políticas que publican sin financiación**, no la que minimiza la pérdida.
 
 ### 0.2 Recomendación go / no-go
 
-1. **NO-GO como negocio.** En ningún escenario ponderado el canal solo en galego devuelve la inversión en 36 meses. La publicidad no paga el proyecto: en el camino base el canal ni siquiera entra en el YPP. Lo que mueve la aguja es el patrocinio identitario y las membresías, y eso solo ocurre en la rama alta.
-2. **GO como hobby con opción, en dos pasos y con la puerta más barata delante:**
+1. **NO-GO como negocio.** Si el promotor paga la revisión cualificada que exige la calidad del galego y de la historia, **ningún camino acaba con caja positiva a M36** (§1.3). La publicidad no paga el proyecto: en el camino base el canal ni siquiera entra en el YPP. Lo que mueve la aguja es el patrocinio identitario y las membresías, y eso solo ocurre en la rama alta, que tampoco cubre ≈ 550 €/mes de Etapa 2.
+2. **GO como hobby con opción, en tres pasos y con las puertas baratas delante:**
    - **GO inmediato a la Puerta V-0** (semanas 1-4; ~0-10 € y ~20 h). Incluye:
      - pedir permisos a Proxecto Nós y a los locutores;
      - prueba B0 de cómputo;
      - prueba G0 de pronunciación y ritmo;
      - criba R0;
      - preselección ciega por el promotor y su mujer frente a una grabación pública de un narrador galego.
-   - **La excepción de 850-1.500 € (dos narradores de referencia y un revisor profesional) solo se aprueba si V-0 da señal** (§4.4). Si no la da, el plan recomienda **esperar** (reevaluación trimestral de modelos) o ir directamente a una **voz humana licenciada** (1.400-2.500 €), sabiendo que eso rompe el "< 50 €/mes" de la Etapa 1.
-3. **Condición de fondo.** La calidad del galego no se negocia, así que **no se publica con una voz que no pase la Puerta V**. Tampoco con la "menos mala". Hoy es probable (60-80 % [S]) que ninguna voz sintética "de fábrica" lo consiga (§4).
+   - **Puerta F (financiación de la calidad), en paralelo desde la semana 2 y con decisión en la semana 5** (§1.3 y §9). Antes de pagar la validación formal y el paquete de calidad, hace falta un **compromiso firme y por escrito de terceros** que cubra al menos el diferencial de calidad de la E1 (**≈ 3.680 €**, 2.390-5.010). Fuentes: servicios de normalización lingüística de concellos (línea PL400A de la SXL), mecenas y membresías fundadoras o preventa (Ko-fi o Patreon, sin umbral), patrocinio identitario prevendido y convenio con Nós/USC o con la AGPTI que cofinancie la revisión. **Si falla, presupuesto de hobby explícito:** ≤ 50 €/mes y ≤ 300 € en 6 meses, sin validación formal ni publicación; reintento con la convocatoria PL400A de 2027; si falla dos veces, cierre documentado.
+   - **La excepción de 850-1.500 € (dos narradores de referencia y un revisor profesional) solo se aprueba si V-0 da señal y pasa la Puerta F** (§4.4). Si V-0 no da señal, el plan recomienda **esperar** (reevaluación trimestral de modelos) o ir directamente a una **voz humana licenciada** (1.400-2.500 €), sabiendo que eso rompe el "< 50 €/mes" de la Etapa 1.
+   - **La P1 vuelve a decidir:** se sigue a la Etapa 2 solo si se cumplen los KPI de la P1 **y** la **Puerta F2** (terceros comprometen ≥ 440 €/mes, el diferencial de calidad de la E2, durante al menos 6 meses). Si no, se para con el catálogo publicado.
+3. **Condición de fondo.** La calidad del galego no se negocia, así que **no se publica con una voz que no pase la Puerta V** ni sin el paquete de calidad pagado. Tampoco con la "menos mala". Hoy es probable (60-80 % [S]) que ninguna voz sintética "de fábrica" lo consiga (§4).
 4. **Decisiones que necesita el promotor antes de la semana 1:**
-   - **D1.** ¿Acepta la excepción de 850-1.500 € si V-0 da señal?
+   - **D1.** ¿Acepta la excepción de 850-1.500 € si V-0 da señal **y** pasa la Puerta F?
    - **D2.** Si no pasa ninguna voz, ¿qué orden sigue: vía intermedia (c), esperar (a) o locutor licenciado (b)?
-   - **D3.** ¿Acepta ~6 h/semana hasta el lanzamiento y ~5 h/semana después? Si se queda en 4 h/semana, el lanzamiento se va a marzo de 2027.
+   - **D3.** ¿Acepta ~6 h/semana hasta el lanzamiento (más ~10 h de la Puerta F) y ~5 h/semana después? Si se queda en 4 h/semana, el lanzamiento se va a marzo de 2027.
    - **D4.** ¿Acepta el doble permiso (USC y locutor) y la oferta al locutor (100 € + 10 % de los ingresos) si la voz es de Nós?
+   - **D5. Presupuesto de la garantía de calidad (§4.7 y §5.4).** Pagar la corrección de mesa íntegra, la escucha con texto y el historiador cuesta ≈ 305 € por episodio de 75 min en la E1 y ≈ 120 € por episodio de 2 h en la E2 (con inspección reducida del texto). No cabe en el "< 50 €/mes" ni en los 50-200 €/mes. **El plan no rebaja la garantía.** Decide así:
+     - **Etapa 1: la paga la Puerta F, no se quitan episodios.** Paquete de ≈ 3.680 € (2.390-5.010 €) para los 12 vídeos. Con menos de 12 vídeos la P1 no mide nada (§8.3).
+     - **Etapa 2: no se abre por defecto.** Con 4 episodios al mes, la garantía cuesta ≈ 550 €/mes y, si la paga el promotor, ningún camino la recupera en 36 meses. Solo se abre con la **Puerta F2** o si a la P1 llega la señal de rama alta (§8.2) con ingresos directos comprometidos que cubran los ≈ 440 €/mes.
+     - Bajar a 3 episodios al mes ahorra ≈ 140 €/mes, pero obliga a recalibrar la P2: con 3 al mes, la rama base del modelo llega a 91 suscriptores en M12, no a 100.
+   - **D6. Presupuesto de hobby si falla la Puerta F.** Propuesta del plan: ≤ 300 € en 6 meses (≤ 50 €/mes). Pagar la calidad de su bolsillo ("hobby completo", ≈ 4.850 € de validación y paquete de la E1) es posible, pero el promotor lo decide por escrito sabiendo que su valor esperado es de ≈ −2.560 € como mínimo (§1.3).
 
 ### 0.3 El producto en cinco líneas
 - **Nombre y promesa:** **"Serán · Historia de Galicia para durmir"**. Promesa: *"A historia de Galicia contada amodo, nun galego coidado, para que te deixes levar ata o sono. Sen sustos e sen présa."*
@@ -88,10 +98,10 @@ Todas sus proyecciones son [S].
 
 | Etapa | Meses (calendario) | Presupuesto de caja | Horas | Cadencia y formato | Objetivo económico |
 |---|---|---|---|---|---|
-| **0. Construcción y validación** | Oct 2026 - mediados de ene 2027 | ~35 €/mes + la excepción de voz (§4.4) | ~6 h/semana (≈ 95 h) | 0 vídeos; 3 episodios terminados antes de publicar | Ninguno: pasar la Puerta V y la Puerta 0 |
-| **1. Piloto barato con puertas** | Ene - may 2027 (M2-M6) | ≤ 50 €/mes (modelo: 35 €) | ~5 h/semana | Quincenal, 75 min; **12 vídeos en la P1** | **Ninguno.** Comprar datos |
-| **2. Proyecto lateral rentable** | Jun 2027 - may 2028 (M7-M18) | 50-200 €/mes (modelo: 110 €; con revisor profesional ≈ 138 €, §1.3) | 6-10 h/semana | Semanal, ~2 h | Ingresos recurrentes ≥ caja en 12-18 meses |
-| **2b. Mantenimiento** (si no se pasa la P3) | M19-M36 | ~20 €/mes | ~2 h/semana | 1 vídeo al mes | Conservar el catálogo y la elegibilidad para premios |
+| **0. Construcción y validación** | Oct 2026 - mediados de ene 2027 | ~35 €/mes + la excepción de voz (§4.4), solo si pasa la Puerta F | ~6 h/semana (≈ 95 h) + ~10 h de la Puerta F | 0 vídeos; 3 episodios terminados antes de publicar | Ninguno: pasar la V-0, la Puerta F, la Puerta V y la Puerta 0 |
+| **1. Piloto barato con puertas** | Ene - may 2027 (M2-M6) | Stack ≤ 50 €/mes (modelo: 35 €) **+ calidad cualificada ≈ 3.680 € en 12 episodios** (≈ 500-1.030 €/mes en total, central ≈ 770 €; D5, §5.4), **pagada por terceros (Puerta F)** | ~5 h/semana | Quincenal, 75 min; **12 vídeos en la P1** | **Ninguno.** Comprar datos |
+| **2. Proyecto lateral rentable** | Jun 2027 - may 2028 (M7-M18) | 50-200 €/mes pedidos (modelo: 110 €). **Con la garantía de calidad, ≈ 550 €/mes** (350-760 €, §5.4); por eso **no se abre por defecto**: solo con la **Puerta F2** (terceros cubren ≈ 440 €/mes; D5) | 8,5-10 h/semana | Semanal, ~2 h | Ingresos recurrentes ≥ caja en 12-18 meses |
+| **2b. Mantenimiento** (si no se pasa la P3) | M19-M36 | ~20 €/mes en el modelo; **≈ 140 €/mes con la garantía** (1 episodio revisado al mes) | ~2 h/semana | 1 vídeo al mes | Conservar el catálogo y la elegibilidad para premios. **El árbol conjunto (§1.3) supone cierre en M18**, que es lo que ya recomendaba el §1.6 |
 | **3. Apuesta seria / red** | Desde M19, solo si se pasa la P3 | 1.000-5.000 € iniciales (modelo: 3.000 €) + ~90 €/mes | ~10 h/semana | Pistas o canales es/pt y voz licenciada | Techo de cientos a miles de €/mes |
 
 **Puertas de negocio.** Es la tabla única del plan: el modelo de retornos y el plan de pruebas (§8) usan los mismos umbrales.
@@ -102,6 +112,8 @@ Todas sus proyecciones son [S].
 | **P2** | **30-11-2027 · 36** | Vistas a 30 días de los vídeos nuevos **≥ 100**; **≥ 100 suscriptores**; **Youtubeiras+ 2027 presentado**; **≥ 5 propuestas de patrocinio enviadas** | — | 91 / 87 → **para** | **115 / 107 → pasa** | 459 / 475 → pasa |
 | **P3** | **31-05-2028 · 60** | En el YPP con RPM medido, **o** ≥ 50 €/mes recurrentes (media de 3 meses), **o** ayuda o encargo concedido | — | — | 252 suscr., 0 € → **mantenimiento** | YPP en M17 → **pasa; abre la E3** |
 
+- **Calendario de las cifras de esta tabla.** Salen de `puertas_gtm.py` con el **calendario real** (3 vídeos en el lanzamiento y después quincenal). El §1.6 usa el calendario del modelo (`modelo2.py`, 2 vídeos al mes desde M1), y por eso da 25 suscriptores en M6 y 108 en M12 en la rama base, frente a 24 y 107 aquí. **La diferencia es solo de calendario** [INT, tribunal final, 2.ª ronda]; las puertas se leen con esta tabla.
+- **Puerta F2 en la P1** [INT, tribunal final, 2.ª ronda]: con la garantía de calidad, pasar los KPI de la P1 no basta; hace falta además que terceros comprometan ≥ 440 €/mes para la E2 (§0.2, §1.3). Sin la F2, se para con el catálogo publicado.
 - Los márgenes son estrechos (24 frente a 20 suscriptores en la P1; 107 frente a 100 en la P2). **Se recalibran en la lectura temprana** (M4, vídeos 1-4, §8.3). Lo que no cambia es la regla: se sigue solo si la trayectoria se parece a la base o mejor.
 - **Armonización [INT] de la P2:**
   - El modelo de retornos (v3) ya no exigía "≥ 1 solicitud de ayuda", porque la CRTVG obliga a darse de alta de autónomo.
@@ -128,7 +140,7 @@ Por eso:
 |---|---|---|
 | Construcción, Puerta V y Puerta 0 | 1-10 a mediados de enero de 2027 (≈ 15 semanas a ~6 h/semana) | Antes del modelo (oct-nov) y M1 (diciembre) |
 | **Lanzamiento con 3 episodios** | **Domingo 17-01-2027, a las 21:30** | M2 |
-| Episodios 4-12, en domingos alternos (el 7 es el especial del Día Mundial do Sono, el 14-03; el 12, el de las Letras Galegas, el 16-05) | 31-01 a 16-05-2027 | M2-M6 |
+| Episodios 4-12, en domingos alternos: 31-01, 14-02, 28-02, **14-03** (vídeo 7, especial del Día Mundial do Sono: es el domingo anterior al día, que en 2027 cae el **viernes 19-03** [F]), 28-03, 11-04, 25-04 y 09-05. **Única excepción a la cadencia:** el vídeo 12, de las Letras Galegas, se adelanta una semana al **domingo 16-05**, víspera del Día das Letras (lunes 17-05). Si no, tocaría el 23-05, ya pasado el día | 31-01 a 16-05-2027 | M2-M6 |
 | **P1** | 31-05-2027 | M6 |
 | Etapa 2, semanal | Desde junio de 2027 | M7 |
 | **P2** | 30-11-2027 | M12 |
@@ -138,31 +150,109 @@ Por eso:
 - **El modelo no cambia:** sus cifras dependen del número de vídeos y de los meses de vida del canal, no de la fecha del calendario. El desfase de 2-3 meses solo añade construcción previa (§1.3).
 - **Si el promotor se queda en 4 h/semana:** el lanzamiento pasa a marzo de 2027 y todas las puertas se retrasan 2 meses.
 
-### 1.3 Ajustes de integración al valor esperado [INT]
+### 1.3 Árbol conjunto voz → Puerta F → audiencia y valor esperado integrado [INT]
 
-| Concepto | Origen | Efecto en el valor esperado a 36 meses (M36) | Cálculo |
+**Por qué se rehace (tribunal final, dos rondas).**
+- **Primera ronda.** La versión anterior sumaba ajustes sueltos al valor esperado del modelo (−1.250 a −1.900 €). No era un valor esperado conjunto: aplicaba la validación de voz a todos los caminos, ponderaba con probabilidades condicionadas a que hubiera voz y mezclaba una fila de otro árbol, así que sus probabilidades no sumaban el 100 %. Tampoco pagaba la revisión lingüística e histórica cualificada (§4.7). Se rehízo como un solo árbol (`model/arbol_conjunto.py`).
+- **Segunda ronda.** Ese árbol demostraba que ningún camino recupera la caja con la garantía de calidad, y aun así el plan mandaba gastar la validación y el paquete de calidad tras una V-0 positiva, con una política ("parar siempre en la P1") que dejaba la P1 sin decidir nada. Además, el paquete de la E1 estaba infravalorado: la revisión íntegra de los episodios 1-6 no tenía presupuesto (§5.4). Ahora el árbol lleva una **Puerta F** entre la V-0 y la validación, una **Puerta F2** en la P1 y el paquete de calidad recalculado. Es reproducible en `model/arbol_conjunto_f.py` (directorio de trabajo del gauntlet).
+- **Todas sus probabilidades son [S]**, salvo las de audiencia, que vienen del modelo de retornos (§1.6).
+
+**La Puerta F (financiación de la calidad)** [INT, tribunal final, 2.ª ronda]
+- **Qué exige:** antes de pagar la validación formal (850-1.500 €) y el paquete de calidad, un **compromiso firme y por escrito de terceros** que cubra al menos el **diferencial de calidad de la E1: ≈ 3.680 €** (2.390-5.010, §5.4). El compromiso se condiciona a que haya voz: si la Puerta V y la vía (c) fallan, no se cobra.
+- **Cuándo:** se prepara desde la semana 2, en paralelo a la V-0, y se decide en la **semana 5** (29-10 a 04-11-2026), antes de firmar con H1 y H2. Si el compromiso llega más tarde, todo el calendario se desplaza lo mismo.
+- **Fuentes posibles:**
+  - **Servicios de normalización lingüística de los concellos.** La línea **PL400A** de la Secretaría Xeral de Política Lingüística subvenciona a entidades locales de ≥ 3.000 habitantes (solas o agrupadas) para "programas e accións de dinamización lingüística". Entre los productos, cita el "formato dixital" (creaciones en galego "para seren exhibidos en páxinas web, redes sociais ou noutras plataformas dixitais") y el "formato material" (libros y **audiolibros**). En 2026: 350.000 € en total, un mes de plazo desde el DOG del 7-04-2026 y ejecución del 1-01 al 15-10-2026 [F, DOG n.º 63, 7-04-2026: https://www.xunta.gal/dog/Publicados/2026/20260407/AnuncioG0766-180326-0001_gl.html]. **La subvención es para el concello, no para el canal:** el concello tendría que encargar el servicio (episodios con su tema, o licencia de uso del catálogo en su programa) [S]. Como la convocatoria de 2027 no saldrá antes de marzo o abril, una carta de intención condicionada a ella **cuenta solo por la parte que el concello asuma sin la subvención** [S].
+  - **Mecenas, membresías fundadoras o preventa** (Ko-fi o Patreon, sin umbral, §1.4). Solo cuentan los cobros o las promesas con fecha. Antes del lanzamiento no hay audiencia, así que es la fuente menos probable [S].
+  - **Patrocinio identitario prevendido:** una marca gallega que compre la mención de la temporada (§1.4, A14).
+  - **Convenio con Nós/USC o con la AGPTI** que cofinancie la revisión (por ejemplo, textos corregidos como corpus para Nós, o prácticas tuteladas de corrección) [S].
+- **Si falla: presupuesto de hobby (D6).** ≤ 50 €/mes y **≤ 300 € en 6 meses** (central: 100 €), para mantener el pipeline de texto con Claude Pro y reevaluar voces cada trimestre, **sin validación formal ni publicación**. Se reintenta con la convocatoria PL400A de 2027; si falla dos veces, se cierra y se documenta.
+- **Puerta F2 en la P1:** para abrir la E2, además de los KPI de la P1, terceros tienen que comprometer **≥ 440 €/mes** (el diferencial de calidad de la E2, §5.4) durante al menos 6 meses. **Así la P1 vuelve a decidir:** con KPI y F2 se sigue; si falta cualquiera de las dos cosas, se para.
+
+**Probabilidades [S].** Encajan con el 60-80 % de que ninguna voz "de fábrica" pase la Puerta V (§4.1): aquí no pasa ninguna en el 69,7 % de los casos.
+- **V-0 da señal:** 55 %.
+- **Puerta F, si hubo señal:** 25 %. Sensibilidad abajo.
+- **La Puerta V pasa:** 55 %. Dentro de ese caso, Nós con doble permiso en el 60 % y voz de pago en el 40 %.
+- **La vía (c) pasa:** 40 % (el §4.4 da 30-50 %). Si falla, se espera (D2, caso central).
+- **Puerta F2, si la P1 da GO:** 40 %.
+
+```
+Semanas 1-4 ─ Puerta V-0 (~0-10 € + el mes de octubre, ~35 €; ~20 h)
+├─ NO (45,0 %) → esperar, con reevaluación trimestral ............................ Hoja A
+└─ SÍ (55 %) → Puerta F, semana 5 (~0 €; ~10 h)
+      ├─ NO (41,3 % del total) → presupuesto de hobby (≤ 300 €), sin publicar ..... Hoja F
+      └─ SÍ (13,8 %) → validación formal (850-1.500 €) → Puerta V
+            ├─ PASA (7,6 %): Nós con doble permiso (4,5 %) o voz de pago (3,0 %) → PUBLICA
+            └─ FALLA (6,2 %) → vía (c): fine-tune con H1 o H2, 700-1.250 €
+                  ├─ PASA (2,5 %): licencia T2, 300-600 € + 12,5 % de los ingresos → PUBLICA
+                  └─ FALLA (3,7 %) → D2 = esperar (caso central) ....................... Hoja B
+
+PUBLICA (10,0 %) ─ E1: 12 vídeos; el paquete de calidad lo pagan terceros ─ Puerta 1 (M6)
+   ├─ NO (61,7 %) → PARAR ....................................................  6,2 % del total ┐
+   └─ SÍ (38,3 %) → Puerta F2 (≥ 440 €/mes de terceros)                                          │ P1
+         ├─ NO (60 %) → PARAR con el catálogo publicado .........................  2,3 % ────────┘
+         └─ SÍ (40 %) → E2 ─ Puerta 2 (M12)
+               ├─ NO → PARAR ....................................................  0,45 % · P2
+               └─ SÍ → Puerta 3 (M18)
+                     ├─ NO → cierre en M18 ......................................  0,68 % · P3
+                     └─ SÍ → E2 hasta M36 (+ opción de E3, fuera del cálculo)      0,41 % · P4
+```
+Las probabilidades de audiencia son las del §1.6 (61,8/11,1/17,0/10,2 %), renormalizadas porque suman 100,1 %.
+
+**Paquete de calidad de la E1 recalculado** (§4.7 y §5.4; tribunal final, 2.ª ronda): **≈ 3.680 € (2.390-5.010)**, frente a los ≈ 1.550 € de la versión anterior. Sube porque ahora se presupuesta la **corrección de mesa del 100 % del texto de los 12 episodios** antes del render (≈ 8.400 palabras a 0,015-0,025 €/palabra: 126-210 € por episodio) y la **escucha con texto de los episodios 1-6** (9-15 h a 20-35 €/h), que antes se daba por incluida en la excepción de voz.
+
+**Qué suma cada hoja que publica** (caja a M36 en €, caso central, voz de pago). Primero, si el promotor pagara la calidad; después, con las Puertas F y F2:
+
+| Componente | P1 | P2 | P3 | P4 | Origen |
+|---|---|---|---|---|---|
+| Modelo de retornos: ingresos − caja | −210 | −870 | −1.530 | +3.355 | §1.6. El P3 cierra en M18: sin los 360 € ni los 65 € de mantenimiento |
+| V-0 + construcción (octubre y noviembre) | −75 | −75 | −75 | −75 | §1.2 y §4.4 |
+| Validación formal de la voz | −1.175 (−850 a −1.500) | ídem | ídem | ídem | §4.4 |
+| **Calidad cualificada de la Etapa 1** (RLC + historiador, 12 episodios) | **−3.680** (−2.390 a −5.015) | ídem | ídem | ídem | §4.7 y §5.4 |
+| **Etapa 2 con la garantía, por encima de los 110 €/mes del modelo** | 0 | −2.650 (6 meses) | −5.305 (12 meses) | **−13.260** (30 meses) | +442 €/mes (237-648), §5.4 |
+| **Resultado si el promotor paga la calidad** | **−5.140** | **−8.450** | **−11.760** | **−14.835** | |
+| **Resultado con las Puertas F y F2** (terceros pagan las dos filas de calidad) | **−1.460** | **−2.120** | **−2.780** | **+2.105** | |
+| Con voz de Nós: 100 € a la firma + 10 % de los ingresos | −100 | −100 | −100 | −787 | §4.5 |
+| Con la vía (c): 700-1.250 € + T2 300-600 € + 12,5 % de los ingresos | −1.425 | −1.425 | −1.425 | −2.283 | §4.4 |
+| Horas del promotor | 178 | 421 | 664 | 1.393 | Modelo + 61 h de construcción + 15 h de E1 (18-22 h/mes frente a 17) + 5,5 h/mes de E2 (37-44 h/mes frente a 35, §5.4); +15 h con la vía (c); +10 h con la Puerta F |
+
+**Tabla de resultados con las Puertas F y F2** (política recomendada; las probabilidades suman el 100 %; caja a M36 sin valor de la hora):
+
+| Resultado | Probabilidad conjunta [S] | Caja, caso central (rango) | Horas |
 |---|---|---|---|
-| Modelo de retornos, caso central | retornos §8 | **−147 €**, 328 h | Ingresos recurrentes 711 € − caja 905 € + E[Youtubeiras+] 47 € |
-| Dos meses más de construcción (octubre y noviembre de 2026) | Calendario del §1.2 | **−70 €**, ~+60 h (todos los caminos) | 2 × 35 €. Horas: ~95 h previas frente a ~34 h en el modelo |
-| Validación de voz: H1 + H2 + revisor profesional | voz §3 y §8.1 | **−850 a −1.500 €** (techo de 2.050 €) si se ejecuta | Pago único antes del episodio 1 (§4.4) |
-| Youtubeiras+ 2026 no es viable (hacen falta 3 piezas antes del 15-11-2026) | GTM §2.3 | **≈ −9 €** | Los caminos P3 y P4 (27,2 %) pierden 32 €. P1 y P2 pasan a la edición de 2027, porque publican 12 vídeos entre enero y mayo de 2027: efecto neutro |
-| Revisor profesional por muestreo en la Etapa 2 (64-112 €/mes con 4 episodios, frente a los 40-60 € del modelo) | voz §8.2 frente a retornos §5.4 | **≈ −160 €** | +~28 €/mes × ~5,8 meses esperados de Etapa 2 |
-| Oferta al locutor si la voz es de Nós: 100 € a la firma + 10 % de los ingresos netos | GTM §2.6 bis | **≈ −170 €** (solo en el escenario Nós) | 100 € + 10 % × 6.865 € × 10,2 % (P4) |
-| **Total integrado** | | **≈ −1.250 a −1.900 €** (hasta −2.100 € con la oferta de Nós), **~400 h** | |
+| **A.** La V-0 descarta las voces y se espera | **45,0 %** | **≈ −40 €** (−35 a −45) | ~20 |
+| **F.** La V-0 da señal, pero falla la Puerta F: presupuesto de hobby | **41,3 %** | **≈ −140 €** (−35 a −345) | ~30 |
+| **B.** Pasa la F; validación formal y vía (c) sin voz, y se espera | **3,7 %** | **≈ −2.225 €** (−1.620 a −2.830) | ~100 |
+| **P1.** Hay voz, 12 vídeos, se para en la P1 (KPI o F2) | **8,5 %** | **≈ −1.855 €** (−1.420 a −2.290) | ~190 |
+| **P2.** E2 con F2, se para en la P2 | **0,45 %** | ≈ −2.515 € (−2.080 a −2.950) | ~435 |
+| **P3.** Base: cierre en M18 | **0,68 %** | ≈ −3.180 € (−2.740 a −3.610) | ~680 |
+| **P4.** Optimista: Etapa 2 hasta M36 | **0,41 %** | **≈ +1.185 €** (+750 a +1.620) | ~1.405 |
+| **Total** | **100 %** | **Valor esperado ≈ −340 €** (−230 a −495), con E[Youtubeiras+ 2027] | **≈ 55 h** |
 
-**Distribución integrada** (redondeada):
+Los resultados de P1-P4 son medias ponderadas de las tres vías de voz: pago, Nós y (c).
 
-| Resultado | Caja | Probabilidad [S] |
-|---|---|---|
-| **Ninguna voz pasa la Puerta V** y se elige esperar | ~−0-10 € si V-0 ya la descarta; **~−900 a −1.600 €** si se pagó la validación formal | 60-80 % de que ninguna voz "de fábrica" pase (voz §0.14). Parte de ese riesgo lo filtra V-0 |
-| Hay voz, pero se para en la P1 | **~−1.130 a −1.780 €** y ~175 h | ≈ 62 % de los caminos que publican |
-| Hay voz y se para en la P2 | ~−1.950 a −2.600 € | ≈ 11 % |
-| Base, llega a mantenimiento | ~−3.100 a −3.750 € | ≈ 17 % |
-| Optimista | **~+1.700 a +2.400 €** (con la oferta al locutor, ~0,7 k € menos) | ≈ 10 % |
+**Lectura.**
+- **Probabilidad conjunta de acabar con caja positiva: ≈ 0,3 %.** Solo el optimista con F y F2 y voz de pago (+2.105 €) o de Nós (+1.320 €); con la vía (c) queda en −180 €.
+- **Umbrales que hacen positiva alguna hoja:**
+  - con terceros que cubran **solo el diferencial de la E1** (≈ 3.680 €), ninguna hoja es positiva: parar en la P1 le cuesta al promotor ≈ 1.460 € (voz de pago);
+  - con **F + F2** (≈ 3.680 € + ≈ 440 €/mes en la E2), la hoja P4 pasa a positiva;
+  - para que la hoja P1, la más probable de las que publican, salga a cero, los compromisos tienen que llegar a **≈ 5.140 €** (3.520-6.800): el diferencial de la E1 más ≈ 1.460 € de validación, V-0, construcción y stack de la E1. **Es la meta de la Puerta F; el mínimo para pasarla es el diferencial.**
+- **Condicionado a que pase la Puerta F**, el valor esperado para el promotor es de **≈ −1.930 €** (−1.445 a −2.410): lo que arriesga es, sobre todo, la validación de la voz.
+- **Sensibilidad a P(F):** con el 10 %, ≈ −195 €; con el 25 %, ≈ −340 €; con el 50 %, ≈ −585 €; con el 100 %, ≈ −1.080 € (probabilidad de caja positiva del 0,1 %, 0,3 %, 0,6 % y 1,2 %). Cuanto más probable es la F, más se publica y más se gasta en validación. **La F no hace rentable el proyecto: hace que la calidad la pague quien la valora y que el promotor solo arriesgue la validación.** P(F2) apenas mueve el valor esperado (≈ −340 € con el 0 % y con el 100 %), pero decide si hay E2.
+- **Comparación de políticas (caso central):**
 
-Las filas suman al resultado del camino en el modelo los ajustes de la tabla anterior que le tocan: la construcción, la validación, el revisor de la Etapa 2 según los meses de ese camino y Youtubeiras+ 2026.
+| Política | Valor esperado | Horas | Nota |
+|---|---|---|---|
+| **No gastar nada tras la V-0** (esperar siempre) | **≈ −40 €** | ~20 | **La que minimiza la pérdida**, y no compra ningún dato |
+| **Puertas F y F2** (recomendada) | ≈ −340 € (−230 a −495) | ~55 | Compra datos de audiencia solo si terceros pagan la calidad |
+| Sin Puerta F, parar siempre en la P1 | ≈ −2.560 € (−1.770 a −3.360) | ~95 | La menos mala de las que publican pagando el promotor; la P1 no decide nada |
+| Sin Puerta F, seguir las puertas | ≈ −3.570 € (−2.310 a −4.850) | ~190 | Árbol de la 1.ª ronda con el paquete de calidad recalculado |
+| Sin Puerta F, variante D2 = (b) | peor que la anterior (≈ −3.640 € con el paquete antiguo) | ~240 | Gasta ≈ 1.750 € más y publica en caminos que también pierden. No recalculada con el paquete nuevo |
 
-**La lectura cambia respecto al modelo por sí solo.** La entrada al proyecto ya no es "el precio de una cena al mes": es la validación de la voz. Por eso el plan pone delante la **Puerta V-0** (~0 €), que descarta pronto las voces que no están en la liga necesaria (§4.4).
+- **Sin la revisión cualificada** (solo el revisor de escucha, 138 €/mes en la E2), el valor esperado sin Puerta F sería de **≈ −1.150 €** (−890 a −1.420) y la probabilidad de caja positiva, del **≈ 3,1 %**; el equilibrio mensual del optimista llegaría en **M18** (en M17 ingresa 135 € y la caja es de 138 €). Es la cifra que corrige el "M15" y el "+3.355 €" del modelo, que usaba una caja de 110 €/mes. **El plan no adopta esta variante**, porque rebaja la garantía de calidad.
+- **Mantenimiento en lugar de cierre en M18** (como en el modelo): prácticamente igual (≈ −20 € de diferencia en el árbol de la 1.ª ronda).
+- **Horas:** ≈ 55 h esperadas con la Puerta F; ≈ 190 h si el promotor pagara la calidad y siguiera las puertas; ≈ 415 h si se llega a publicar en ese árbol.
+
+**La lectura cambia respecto al modelo por sí solo.** La entrada al proyecto ya no es "el precio de una cena al mes". Son la validación de la voz y ≈ 305 € de revisión cualificada por episodio en la E1. Por eso el plan pone delante dos puertas baratas: la **V-0** (~0-10 €), que descarta pronto las voces que no están en la liga necesaria (§4.4), y la **F**, que descarta pronto un proyecto que nadie más que el promotor está dispuesto a pagar.
 
 ### 1.4 Qué ingresos existen y cuándo se desbloquean
 
@@ -194,7 +284,7 @@ Las filas suman al resultado del camino en el modelo los ajustes de la tabla ant
 | A10-11 | Spotify: horas (% de YouTube) y € por 1.000 h | 10 % / 3 € | 25 % / 5 € | 25 % / 5 € | 40 % / 8 € | [S]; tarifa no publicada |
 | A12-13 | Membresía: % de suscriptores y precio | 0,3 % / 2,99 € | 0,6 % | 0,6 % | 1,0 % / 3,99 € | [F] reparto del 70 %; resto [S] |
 | **A14** | **Patrocinio efectivo = CPM de mercado × tasa de venta** | 0 € | 10 € (20 € × 50 %) | 10 € | 20 € (25 € × 80 %) | CPM [F] patillero.es, jezzmedia.com, euribor.com.es, Libsyn; tasa de venta [S] |
-| A15-17 | Caja y horas | E1: 35 €, 17 h/mes · E2: 110 €, 35 h/mes · mantenimiento: 20 €, 8 h/mes | | | | [S]; el pipeline estima 18-24 € y 88-170 € (§5.3) |
+| A15-17 | Caja y horas | E1: 35 €, 17 h/mes · E2: 110 €, 35 h/mes · mantenimiento: 20 €, 8 h/mes | | | | [S]; el pipeline estima 18-24 € y 88-170 € (§5.3). **Integrado (§5.4): con la garantía de calidad, E1 ≈ 770 €/mes (paquete de ≈ 3.680 € en 5 meses) y 18-22 h/mes; E2 ≈ 550 €/mes y 37-44 h/mes.** El árbol conjunto del §1.3 aplica esas diferencias (a cargo de terceros con las Puertas F y F2) |
 | A18 | Valor de la hora | 15 €/h (también se muestran 0 y 25) | | | | [S] |
 | A20 | Youtubeiras+ neto | 810 € (1.000 € − 19 % de retención) | | | | [F] importe; [S] tipo de retención |
 
@@ -226,7 +316,9 @@ Inicio E1 ─ Puerta 1 (M6)
 
 En el optimista, AdSense + Premium son solo el 12 % del ingreso de M36 (58 de 509 €). **Pesan el patrocinio (53 %) y las membresías (30 %).**
 
-**Resultado acumulado a M36** (modelo de retornos, sin premios ni ajustes de integración):
+**Calendario de estas cifras.** Esta tabla usa el calendario del modelo (`modelo2.py`, 2 vídeos al mes desde M1). Las puertas del §1.1 usan el calendario real (`puertas_gtm.py`: 3 vídeos en el lanzamiento y después quincenal), y por eso allí la rama base tiene 24 suscriptores en la P1 y 107 en la P2, frente a 25 y 108 aquí. Solo cambia el calendario [INT, tribunal final, 2.ª ronda].
+
+**Resultado acumulado a M36** (modelo de retornos, sin premios ni ajustes de integración; **condicionado a que haya voz**, y con la caja del modelo; el resultado integrado está en el §1.3):
 
 | Camino | Prob. | Ingresos | Caja | Horas | Resultado de caja | € por hora |
 |---|---|---|---|---|---|---|
@@ -236,9 +328,9 @@ En el optimista, AdSense + Premium son solo el 12 % del ingreso de M36 (58 de 50
 | P4: optimista | 10,2 % | 6.865 | 3.510 | 1.152 | **+3.355** | +2,9 |
 
 **Puntos de equilibrio.**
-- **P4:** equilibrio mensual en **M15**, acumulado en **M25**. Con las horas a 15 €/h, después de M36.
+- **P4:** en el modelo (caja de 110 €/mes), equilibrio mensual en **M15** y acumulado en **M25**; con las horas a 15 €/h, después de M36. **[INT] Con la caja integrada:** con 138 €/mes (solo el revisor de escucha), el equilibrio mensual pasa a **M18** (en M17 ingresa 135 €); con la garantía de calidad pagada por el promotor (≈ 552 €/mes), **no llega en 36 meses** (509 € en M36). Si terceros pagan el diferencial (Puerta F2), la caja del promotor vuelve a la del modelo y el equilibrio mensual vuelve a **M15**.
 - **P3:** nunca.
-- **Mantenimiento del P3** (~300 € y 144 h): **sin la opción CRTVG no compensa**; es mejor cerrar en M18.
+- **Mantenimiento del P3** (~300 € y 144 h): **sin la opción CRTVG no compensa**; es mejor cerrar en M18. El árbol conjunto (§1.3) aplica ese cierre.
 
 ### 1.7 Premios, encargos y ayudas: qué tiene tasa base
 
@@ -279,10 +371,11 @@ En el optimista, AdSense + Premium son solo el 12 % del ingreso de M36 (58 de 50
 
 ### 1.9 Qué variable manda (sensibilidad)
 
-1. **Manda la probabilidad de estar en la rama alta.** Para que el valor esperado del modelo salga positivo hace falta P(alta) ≥ ~17 % (hoy es 12 %). Dentro de un camino mandan la **cola larga** (la reescucha del catálogo) y el **crecimiento**, y las dos dependen de la calidad del galego y del guion.
-2. **El patrocinio decide el signo del camino optimista** (−720 € ↔ +3.355 €). El precio está anclado en el mercado; lo incierto es la **tasa de venta** a marcas gallegas.
+1. **Manda la probabilidad de estar en la rama alta.** Para que el valor esperado del modelo salga positivo hace falta P(alta) ≥ ~17 % (hoy es 12 %). **[INT]** En el árbol conjunto, si el promotor paga la garantía de calidad, ni siquiera una rama alta segura daría caja positiva a M36; solo con las Puertas F y F2 el optimista sale positivo (§1.3). Dentro de un camino mandan la **cola larga** (la reescucha del catálogo) y el **crecimiento**, y las dos dependen de la calidad del galego y del guion.
+2. **En el modelo, el patrocinio decide el signo del camino optimista** (−720 € ↔ +3.355 €). **[INT]** Si el promotor paga la garantía de calidad ya no lo decide: el optimista es negativo incluso con patrocinio. Con las Puertas F y F2 vuelve a decidirlo (§1.3). El precio está anclado en el mercado; lo incierto es la **tasa de venta** a marcas gallegas.
 3. **El RPM, los anuncios y Spotify casi no importan en galego.**
 4. **El valor de la hora cambia la foto por completo** (−5.070 € con las horas a 15 €/h en el modelo): es un hobby con opción, no un negocio.
+5. **[INT, tribunal final, 2.ª ronda] En la política recomendada manda P(F)**, la probabilidad de que terceros paguen la calidad: decide cuánto se publica y cuánto se gasta en validación (§1.3). Es la primera cifra que el piloto sustituye (§1.10).
 
 ### 1.10 Qué sustituye el piloto
 
@@ -293,6 +386,7 @@ En el optimista, AdSense + Premium son solo el 12 % del ingreso de M36 (58 de 50
 | A6 (conversión) | Suscriptores / vistas | P1 |
 | A14 (tasa de venta del patrocinio) | Respuestas a 5-10 propuestas | M9-M12 (condición de la P2) |
 | Probabilidad de la voz | Resultado de la Puerta V-0 y de la Puerta V | Semanas 4-12 |
+| P(F) y P(F2) | Compromisos firmados de terceros (Puerta F) y, en la P1, para la E2 (Puerta F2) | Semana 5 y M6 |
 | Tasa de la CRTVG | Pregunta directa a la CRTVG y bases de 2027 | Antes de la P3 |
 
 ---
@@ -477,8 +571,8 @@ Pieza "formato" del gauntlet (3 rondas, mejora marginal). **La contradicción de
 
 **Regla de decisión de G0** [S]:
 - Todas las variantes suenan a 115 percibidas, porque solo cambia el reparto entre estiramiento y silencio.
-- Juzgan el promotor y su mujer a ciegas, de 1 a 5, en "durmiríame con isto" y en naturalidad.
-- **Gana la variante con la mejor nota en "durmiríame" que no reciba ninguna marca de "vocais arrastradas"** y cuyo WER no suba más de 1 punto.
+- Juzgan el promotor y su mujer a ciegas, de 1 a 5, en "durmiría con isto" y en naturalidad.
+- **Gana la variante con la mejor nota en "durmiría" que no reciba ninguna marca de "vocais arrastradas"** y cuyo WER no suba más de 1 punto.
 - Los topes anti-"voz de goma" (V máxima, P_frase y P_párrafo máximas) **se fijan a partir de la ganadora** y se escriben en `decision_voz.md`.
 - **Precedente del género:** con silencios largos. History Time tiene 114 pausas de ≥ 8 s en 207 min [MED].
 
@@ -525,7 +619,7 @@ Pieza "formato" del gauntlet (3 rondas, mejora marginal). **La contradicción de
 | 11 | Pre-roll y post-roll | Solo se activan o desactivan juntos [F]. La cola de 20-45 min hace de colchón para el anuncio final |
 | 12 | Mid-rolls | Etapa 1: ninguno **activado por el canal**. Etapa 2 (en el YPP): 0-2, solo en los primeros 20 min |
 | 13 | **Honestidad del "sen cortes"** | **[INT, corrección factual]** Fuera del YPP, YouTube **puede poner anuncios** en los vídeos sin pagar al creador (derecho a monetizar de los Términos de servicio actualizados en 2020-2021, https://www.youtube.com/t/terms). Por eso **en la Etapa 1 no se usa la etiqueta "sen cortes"** en títulos ni miniaturas: no se puede garantizar. Solo se usa en la Etapa 2, en el YPP y con los mid-rolls desactivados |
-| 14 | Temporizador | Línea fija en la descripción: "Podes usar o temporizador de apagado de YouTube" [F] |
+| 14 | Temporizador | Línea fija en la descripción: "Podes usar o temporizador de apagamento de YouTube" [F: la función existe]. **[INT, corrección lingüística]** "Apagado" como sustantivo es un castellanismo: en el DRAG es participio o adjetivo, y el sustantivo de acción es *apagamento* ("Acción e efecto de apagar ou apagarse", https://academia.gal/dicionario/-/termo/busca/apagamento). **Pendiente [S]:** si la interfaz de YouTube en galego tiene una etiqueta propia para la función, se cita esa entre comillas |
 
 ### 3.6 Paisaje sonoro, identidad visual y metadatos
 
@@ -563,7 +657,8 @@ Pieza "formato" del gauntlet (3 rondas, mejora marginal). **La contradicción de
   - **Capítulos sueltos** (Etapa 2).
   - **Compilaciones solo con montaje nuevo:** como mucho 1 al mes y, en la Etapa 1, **solo en el pódcast**, no en el canal principal. **[INT]** La pieza de formato proponía una compilación mensual en el canal desde la Etapa 2; el pipeline y el GTM la frenaban por el riesgo de *reused content*. Se aplica la regla más prudente.
   - **Pistas de audio es/pt:** Etapa 3.
-- **Nombre:** **Serán** [F, Dicionario da RAG: "reunión nocturna… para contar"].
+- **Nombre:** **Serán** [F, Dicionario da RAG, https://academia.gal/dicionario/-/termo/busca/serán: "Parte do día que vai desde que comeza a pórse o sol ata que se fai noite"; "Reunión de mulleres para fiar que se facía destas horas"; "Reunión nocturna de carácter festivo"].
+  - **[INT, corrección de cita]** La versión anterior citaba "reunión nocturna… para contar", que no está en ninguna acepción. El vínculo con el relato nocturno es una **lectura de marca [S]**, no una definición del diccionario.
   - @seran y seran.gal libres [COMP].
   - **Pendiente:** búsqueda de la marca en la OEPM y la EUIPO.
   - Alternativas: "Á Luz do Candil" y "Historia para Durmir" (mejor como subtítulo). Se descartaron "Arrolo" (suena infantil) y "A Lareira da Historia" (espacio saturado).
@@ -640,10 +735,11 @@ Esta sección integra dos piezas del gauntlet:
   - la prueba G0 del pipeline.
 - **Coste:** ~0-10 € y ~15-20 h.
 - **Criterio para pasar a la validación formal:**
-  - alguna voz obtiene ≥ 4/5 en "durmiríame con isto" y ninguna nota ≤ 2 en corrección galega;
+  - alguna voz obtiene ≥ 4/5 en "durmiría con isto" y ninguna nota ≤ 2 en corrección galega;
   - la mujer del promotor, a ciegas, no la sitúa claramente por debajo de la referencia humana;
   - pasa G0: ≥ 90 % de las correcciones de pronunciación audibles y ≥ 8/10 pares é/ó distintos.
 - **Es una preselección, no una puerta de publicación:** las referencias son textos distintos, así que no permite calcular Δ.
+- **[INT, tribunal final, 2.ª ronda] Entre la V-0 y la excepción va la Puerta F** (§1.3): sin un compromiso de terceros que pague la calidad de la E1, no se gasta la validación, porque publicar sin esa calidad no es una opción y pagarla el promotor no se recupera en ningún camino.
 
 ```
 Semana 0-1: correo a Proxecto Nós/Gradiant (permiso de uso comercial + contacto con los locutores)
@@ -654,7 +750,9 @@ Semanas 2-4: G0 (50 palabras de riesgo + A/B de ritmo del §3.3) + V-0 (promotor
 │     Opciones (D2): (a) ESPERAR y reevaluar cada trimestre con modelos nuevos;
 │                    (b)/(c) voz humana licenciada ya (1.400-2.500 €), rompiendo el "< 50 €/mes"
 │
-└─ V-0 SÍ → D1: excepción aprobada → H1 + H2 + revisor profesional (850-1.500 €)
+└─ V-0 SÍ → Semana 5: PUERTA F (§1.3): ¿terceros comprometen ≥ el diferencial de calidad de la E1 (≈ 3.680 €)?
+      ├─ NO → presupuesto de hobby (D6: ≤ 300 € en 6 meses), sin validación; reintento con la PL400A de 2027
+      └─ SÍ → D1: excepción aprobada → H1 + H2 + revisor profesional (850-1.500 €)
       → R1 → R2 → R3 (5-6 semanas) → PASO 0 (¿pasan los controles?)
           ├─ Test inválido → se corrige y se repite (nunca activa el plan B)
           ├─ Pasa una voz de Nós → con DOBLE PERMISO escrito (USC + locutor) → voz del canal
@@ -698,9 +796,15 @@ La pieza de voz exigía solo la confirmación escrita de la USC. La de mercado e
    
    Compatible con la cláusula PASAVE que defiende el sector.
 4. **Nunca:** imitar a una persona concreta, recrear a alguien fallecido, clonar desde grabaciones públicas ni sintetizar la voz de un colaborador.
-5. **Aviso hablado** en los primeros 30 s, que **dice de quién es la voz de base**:
-   - variante Nós: *"A voz que vas escoitar é sintética: está feita a partir da voz de [nome], que nos deu permiso para usala. O texto revisárono persoas galegofalantes."*;
-   - variante de proveedor: *"A voz que vas escoitar é sintética, e o texto revisárono persoas galegofalantes."*
+5. **Aviso hablado** en los primeros 30 s, que **dice de quién es la voz de base** y **qué revisión real tuvo el texto**. **[INT, tribunal final]** Se quita "revisárono persoas galegofalantes": ser galegofalante no es una cualificación, y en los episodios revisados por muestreo la frase prometía más de lo que había. La frase de revisión tiene dos formas, según el episodio (§4.7):
+   - **revisión íntegra** (todos los episodios de la Etapa 1, y en la Etapa 2 cualquier episodio leído entero: por inspección normal o porque su muestra no pasó): *"O texto revisouno enteiro un corrector profesional de lingua galega."* **[INT, tribunal final, 2.ª ronda]** Solo se dice si hubo **corrección de mesa del 100 % del texto** antes del render (§4.7); la escucha con el texto en la mano no basta;
+   - **revisión por muestreo** (inspección reducida de la Etapa 2, §4.7): *"Un corrector profesional de lingua galega revisa o texto por mostraxe."*
+   
+   Las dos variantes completas:
+   - **variante Nós:** *"A voz que vas escoitar é sintética: está feita a partir da voz de [nome], que nos deu permiso para usala."* + la frase de revisión;
+   - **variante de proveedor:** *"A voz que vas escoitar é sintética."* + la frase de revisión.
+   
+   Nombre y cualificación del revisor (y del historiador, cuando lo hubo) van en la descripción y en la página "Como facemos Serán".
 
 ### 4.6 Calidad episodio a episodio: el método de producción
 
@@ -711,25 +815,30 @@ La pieza de voz exigía solo la confirmación escrita de la USC. La de mercado e
   - La hipótesis del ASR se normaliza con Cotovía.
   - Detector de artefactos y "mosaico de risco": 2-4 min con solo las palabras de riesgo, cortadas con los tiempos del propio TTS.
   - El ASR **no detecta el acento**: eso sigue siendo trabajo del oído.
-- **Escucha de corrección firmada** por un revisor calibrado:
+- **Escucha de corrección firmada** por un revisor calibrado. **[INT, tribunal final]** El revisor profesional es el **revisor lingüístico cualificado (RLC)** del §4.7, y **escucha siempre con el texto en la mano**: revisa a la vez el audio y el texto de lo que escucha.
   - **Prueba de defectos sembrados:** 36 defectos por episodio de prueba. Para firmar un episodio en solitario hacen falta ≥ 90 % de acierto en los graves y ≥ 70 % en los leves; la prueba se repite cada trimestre.
-  - **Revisor profesional pagado** en los episodios 1-6 y en cada muestreo de la Etapa 2.
-  - **Etapa 1:** escucha completa de cada episodio.
-  - **Etapa 2:** muestreo de aceptación (40 bloques de 2 min, c = 0), con ~0,5 bloques defectuosos esperados por episodio de 2 h si *p* ≤ 3 %. **No es cero, y el plan lo dice.**
+  - **[INT, tribunal final, 2.ª ronda] Dos muestreos distintos, que no hay que confundir:**
+    - **(1) Escucha del audio (puerta H3)**, del promotor o del revisor calibrado: en la **Etapa 1**, escucha completa de cada episodio; en la **Etapa 2**, **muestreo de aceptación del audio** de 40 bloques de 2 min (80 de los 120 min), c = 0, con ~0,5 bloques defectuosos esperados por episodio de 2 h si *p* ≤ 3 %. **No es cero, y el plan lo dice.**
+    - **(2) Trabajo pagado del RLC sobre el texto** (§4.7): **corrección de mesa del 100 % del texto antes del render** en los 12 episodios de la Etapa 1; después, **escucha completa con el texto** en los episodios 1-6 (≈ 1,5-2,5 h por episodio, 9-15 h en total) y **muestra de 12 bloques de 2 min** con el texto en los episodios 7-12. En la Etapa 2, bajo inspección reducida, **muestra de 20 bloques de 2 min con el texto** (≈ 4.600 palabras); bajo inspección normal, mesa íntegra.
+  - **Antes** (versión anterior), la escucha completa de los episodios 1-6 se daba por "incluida en la excepción de voz", cuyo revisor (250-500 €, §4.4) es para el panel de la Puerta V y no existe si la V-0 dice que no o si se va por la vía (b); y el texto solo recibía ~0,4 h de trabajo por episodio para ~8.400 palabras. **No era una revisión íntegra**, aunque el aviso la prometía. Ahora está presupuestada aparte (§5.4).
 - **[INT] Horas.** El pipeline presupuestaba para la puerta H3 solo 0,8 h (mosaico + 10 min + 3 catas). La pieza de voz exige escucha completa. **Se adopta la escucha completa**, y las horas por episodio se recalculan en el §5.4.
 
 ### 4.7 Guion en galego: calidad y veracidad
 
 - **Escritura directa en galego**, no traducida.
 - **Cinturón lingüístico:** Hunspell-gl, LanguageTool-gl, lista negra de castellanismos y un LLM revisor distinto del redactor. CarvalhoChat_GEC entra cuando se conceda el acceso.
-- **Lectura íntegra humana del guion, siempre**, repartida entre el promotor y su mujer.
+- **Lectura íntegra humana del guion, siempre**, repartida entre el promotor y su mujer. **Es un control de la casa, no una garantía cualificada:** la garantía la dan el RLC y el historiador (abajo).
 - **Veracidad determinista:**
   - Cada afirmación lleva un **ancla** que propone el LLM. La cita exacta la **extrae una herramienta** (`extrae_cita.py`) de la instantánea de la fuente, con sus desplazamientos.
   - `verifica_citas.py` comprueba el hash, los desplazamientos y el texto exacto, y bloquea las citas inventadas.
   - Un **juez de otra familia** (Gemini frente a Claude) decide si la cita respalda la frase.
   - Revisión humana del **100 % de fechas, cifras, causas y atribuciones**, más una muestra del resto.
   - **Prototipo probado [P]:** 0 bloqueos falsos en 480 copias ruidosas; 145 de 145 falsificaciones bloqueadas o enviadas a revisión.
-- **Guion muestra** (`guion-mostra-revolta-irmandina.md`, ~1.180 palabras): todo dato concreto descansa en literatura académica, sobre todo Carlos Barros (USC). Lo que no tenía fuente académica se retiró. En la integración se aplicaron las últimas correcciones del crítico medievalista:
+- **Guion muestra** (`guion-mostra-revolta-irmandina.md`, v5.1, ~770 palabras: la entrada completa y el comienzo del Acto I): todo dato concreto descansa en literatura académica, sobre todo Carlos Barros (USC). Lo que no tenía fuente académica se retiró.
+  - **[INT, tribunal final]** La versión anterior (~1.180 palabras) **incumplía las densidades del §3.2**, aunque aquí se presentaba como conforme. La entrada tenía 3 fechas y 5-6 nombres propios; el Acto I, ~3,5 nombres nuevos por minuto, años completos y cifras largas.
+  - La v5 se reescribió: abre con el lugar en calma, el derribo va como "final ya anticipado", Castilla queda en una frase, hay una sola fecha redondeada por bloque y como máximo 3 nombres nuevos en 60 s.
+  - Lleva adjunta la **auditoría automática** (`auditoria/audita_densidade.py`): nombres por minuto, fechas y cifras por bloque y activación 1-5 por párrafo. **Pasa.**
+  - Se mantienen las correcciones del crítico medievalista de la integración:
   - Pulgar deja de ser "o cronista" en 1467;
   - la Rocha Forte se reduce a lo que respaldan Barros y el Preito;
   - los asistentes a Melide se presentan como recuerdo de un testigo;
@@ -738,7 +847,31 @@ La pieza de voz exigía solo la confirmación escrita de la USC. La de mercado e
   - La prosa de muestra se compara, a igualdad de lengua, con la traducción al galego de la apertura de History at Night.
   - **Criterio unificado [INT]:** empatar o ganar en ≥ 3 de 5 criterios, sin ninguna nota ≤ 2 en lengua, y ≤ 1 error normativo por cada 1.000 palabras tras el control automático, contado por un nativo.
   - Sustituye al "2 de 4" de la pieza de mercado.
-- **Revisión histórica:** 50-150 € por episodio [S], como mínimo 1 de cada 4 episodios. En la Etapa 2, asesor de la USC para la serie "Gallaecia".
+- **[INT, tribunal final] Garantía cualificada: dos roles pagados.** Antes, pasado el panel E2 de la P0, la garantía dependía de personas sin cualificación acreditada, y la revisión histórica ("como mínimo 1 de cada 4") no estaba en la caja.
+  - **Revisor/a lingüístico/a cualificado/a (RLC).**
+    - **Perfil [S]:** titulación en Filoloxía Galega o en Tradución e Interpretación con galego como lengua A, o ≥ 3 años de corrección profesional acreditada en galego (por ejemplo, socio/a de la AGPTI). Lo selecciona la prueba de defectos sembrados del §4.6.
+    - **Qué revisa, siempre sobre el TEXTO** [INT, tribunal final, 2.ª ronda: endurecido]:
+      - **Inspección normal (por defecto): corrección de mesa del 100 % del texto de cada episodio antes del render TTS** (≈ 8.400 palabras en 75 min; ≈ 13.800 en 2 h). Se aplica a **los 12 episodios de la Etapa 1**.
+      - **Después, en la Etapa 1, escucha con el texto en la mano:** completa en los episodios 1-6 y en muestra de 12 bloques de 2 min en los 7-12. La escucha ya no sustituye a la mesa: comprueba lo que la voz hace con un texto ya corregido.
+      - **Inspección reducida (solo en la Etapa 2):** muestra estratificada de 20 bloques de 2 min con el texto en la mano (≈ 4.600 palabras, ≈ 1/3). Los bloques los elige un script al azar dentro de cada acto, e incluyen siempre la entrada y el aviso. **Solo se pasa a la reducida tras 10 episodios seguidos "limpios" en inspección normal**: en la mesa del RLC aparecieron 0 errores graves y ≤ 1 error normativo por cada 1.000 palabras (medido sobre el texto que le llega, después del cinturón automático y de la lectura de la casa). Con los 12 de la Etapa 1 limpios, la Etapa 2 empieza en reducida; si no, empieza en normal.
+      - **Vuelta a la normal:** si una muestra no pasa, ese episodio se lee entero en mesa antes de publicar y **se vuelve a la inspección normal** hasta encadenar otra vez 10 episodios limpios. También se vuelve si fallan 2 de las últimas 5 muestras. (Reglas de cambio al estilo de la ISO 2859-1; **la norma no se ha consultado** y los números son decisión de diseño [S].)
+    - **Criterio de aceptación explícito:** 0 errores graves (castellanismo léxico o sintáctico, error de concordancia o de colocación del pronombre, topónimo no oficial, o cualquier error que se oiga y avergüence) y ≤ 1 error normativo por cada 1.000 palabras. Es el mismo listón que la G1.
+    - **Qué garantiza la muestra y qué no** [CALC sobre S, Poisson]:
+      - **Detecta un proceso que empeora:** con 4.600 palabras y el criterio de ≤ 1 por 1.000, un proceso que deja pasar 2 errores por 1.000 palabras aprueba la muestra solo en el ≈ 5 % de los casos, y uno de 3 por 1.000, en el ≈ 0,2 %. Pero uno que está justo en el límite (1 por 1.000) aprueba solo la mitad de las veces: por eso la probabilidad de lectura íntegra (10 % [S], §5.4) es optimista si el proceso va justo.
+      - **No corrige los 2/3 que no se leen.** Con el proceso en el límite, la parte no leída de un episodio de 2 h (≈ 9.200 palabras) puede llevar hasta ~9 errores normativos leves. Para los graves, 10 episodios limpios (≈ 84.000 palabras sin ningún grave) acotan su tasa por debajo de ≈ 0,036 por 1.000 palabras (regla del tres, 95 %), es decir, ≤ 0,33 graves esperados en la parte no leída de cada episodio. **No es cero, y por eso el aviso dice "por mostraxe" en esos episodios** (§4.5).
+      - **Antes** (versión anterior), los episodios 7-12 de la Etapa 1 pasaban solo con una muestra de 1/3 y sin racha previa demostrada: la tolerancia no tenía justificación.
+    - **Tarifa [S]:** 20-35 €/h de escucha con texto, y 0,015-0,025 €/palabra en lectura de mesa. Anclas: la corrección en galego se anuncia "desde 0,010 €/palabra" (ortográfica) más "desde 0,004-0,006 €/palabra" (estilo), por "corrector titulado en traducción o lingüista" [F-sec, https://shoptexto.com/correccion-ortografica-y-de-estilo-en-gallego/, precios "desde"], y la corrección en castellano sale a 0,015-0,03 €/palabra [F-sec, §4.4]. Se cierra con 3 presupuestos en la semana 1.
+  - **Revisor/a histórico/a cualificado/a (RHC).**
+    - **Perfil [S]:** doctorado o docencia universitaria en historia (medieval o moderna, según el tema), o investigación publicada sobre el tema del episodio.
+    - **Qué revisa: el 100 % de las afirmaciones de hecho de la "folla de afirmacións"** (fechas, cifras, causas, atribuciones y nombres), cada una con su cita extraída por la herramienta.
+    - **Regla de qué episodios lo exigen:**
+      - (a) **todos los de la Etapa 1**;
+      - (b) en la Etapa 2, todo episodio de **tema de riesgo**: revuelta o conflicto armado; Iglesia e instituciones eclesiásticas; orígenes e identidad (castros, suevos, Santiago); personas reales identificables; debate historiográfico abierto;
+      - (c) el primer episodio de cada serie;
+      - (d) todo episodio en el que el juez de otra familia marque ≥ 3 afirmaciones como "no respaldadas".
+      - Los demás episodios de la Etapa 2 (vida cotidiana, oficios o paisaje dentro de una serie ya revisada) salen con la verificación determinista y la revisión humana del 100 % de fechas, cifras, causas y atribuciones. El RHC **audita 1 de cada 4 después de publicar**, con corrección en < 72 h. Se estima que el RHC revisa antes de publicar ≈ 60 % de los episodios de la Etapa 2 [S].
+    - **Tarifa [S]:** 50-150 € por episodio (pieza de mercado; no hay tarifa de referencia). Se cierra con 3 presupuestos. En la Etapa 2 puede ser el asesor de la USC de la serie "Gallaecia".
+  - **Coste (cálculo en el §5.4):** ≈ 305 € por episodio en la Etapa 1 (200-420 €; antes, ≈ 130 €, sin la mesa íntegra) y ≈ 120 € en la Etapa 2 con inspección reducida (≈ 335 € por episodio mientras dure la normal: mesa íntegra de 207-345 € más el historiador). **No cabe en los límites del promotor. El plan no rebaja la garantía: la pagan terceros (Puertas F y F2) o no se publica (D5, §0.2).**
 
 ---
 
@@ -808,17 +941,27 @@ Pieza "pipeline" del gauntlet: se paró en 5 rondas por presupuesto. Su carencia
 
 **Incluso el stack más caro se queda por debajo de 10 USD por hora narrada.** Una hora de revisión humana a 15 €/h ya cuesta más que toda la IA de un episodio.
 
-**Caja mensual** (cuadrada con el §1):
+**Caja mensual** (cuadrada con el §1; **[INT, tribunal final]** con la garantía cualificada del §4.7):
 
-| Partida (€/mes) | Etapa 1 | Etapa 2 (4 episodios de 2 h) |
+| Partida (€/mes) | Etapa 1 (2 episodios de 75 min) | Etapa 2 (4 episodios de 2 h) |
 |---|---|---|
 | Claude Pro | 14,8-17,4 | 14,8-17,4 |
 | GPU en Runpod (solo si B0 descarta la CPU) | 0-1,4 | 0-3 |
 | IA variable | ~3,3 | ~33-56 |
 | Música con licencia | 0 | 0-15,6 |
-| **Revisión lingüística profesional por muestreo** | 0 (los episodios 1-6 van dentro de la excepción de voz) | **64-112** (pieza de voz; sustituye a los 40-80 del pipeline) |
-| **Total** | **≈ 18-24 €** (el modelo usa 35 € para imprevistos) | **≈ 112-202 €, central ≈ 138 €** (modelo: 110 €; ajuste en el §1.3) |
-| Límite del promotor | < 50 € ✔ | 50-200 € ✔, en el límite alto |
+| **Subtotal del stack** | **≈ 18-24** (el modelo usa 35 € para imprevistos) | **≈ 48-92, central ≈ 70** |
+| **RLC: revisión lingüística cualificada del texto** (§4.7) | **[INT, tribunal final, 2.ª ronda]** **Mesa íntegra antes del render, ep. 1-12:** 12 × ≈ 8.400 palabras × 0,015-0,025 €/palabra = 12 × 126-210 € → **1.510-2.520 €**. **Escucha con texto, ep. 1-6:** 9-15 h × 20-35 €/h → **180-525 €** (central 12 h × 27,5 € = 330 €). **Muestra de audio con texto, ep. 7-12:** 6 × 16-28 € → **96-168 €**. **Total de la E1: ≈ 1.790-3.210 € (central ≈ 2.480 €)**; antes, 260-445 €, porque la escucha de los ep. 1-6 se cargaba a la excepción de voz y no había mesa | **Inspección reducida** (tras 10 episodios limpios, §4.7): muestra de 24-42 € + 10 % [S] de lectura íntegra (207-345 €) → 45-77 € por episodio → **≈ 180-306 €/mes (central ≈ 242 €)**. En inspección normal, 4 × 207-345 € ≈ 830-1.380 €/mes. Sustituye a los 64-112 € del revisor solo de escucha |
+| **RHC: revisión histórica de la hoja de afirmaciones** | 12 × 50-150 € → **≈ 600-1.800 € (central ≈ 1.200 €)** | 4 × 60 % × 50-150 € → **≈ 120-360 €/mes (central ≈ 240 €)** |
+| **Total** | **Stack + ≈ 2.390-5.010 € de calidad en 12 episodios** (≈ 200-420 € por episodio, central ≈ 305 €; RLC ≈ 2.480 € + RHC ≈ 1.200 €) → **≈ 500-1.030 €/mes en los 5 meses de la Etapa 1 (ene-may, M2-M6, como en el §1.1), central ≈ 770 €** (modelo: 35 €). Los episodios 1-3 se producen en diciembre (M1), así que parte del pago cae ese mes; repartido en los 6 meses de producción (dic-may), serían ≈ 650 €/mes. **Con la Puerta F lo pagan terceros** | **≈ 350-760 €/mes, central ≈ 550 €** (modelo: 110 €; antes, 138 €) |
+| Límite del promotor | < 50 € **✘: se rompe** si lo paga el promotor; **✔ con la Puerta F** (le quedan ≈ 35 €) | 50-200 € **✘: se rompe** si lo paga el promotor; **✔ con la Puerta F2** (le quedan ≈ 110 €) |
+
+**Decisión (D5, §0.2).** La garantía no se rebaja; se financia con terceros o no se publica:
+- **Etapa 1: la paga la Puerta F** y se mantienen los 12 vídeos, porque la P1 no mide nada con menos (§8.3). Coste extra: ≈ 3.680 € (2.390-5.010).
+- **Etapa 2: no se abre por defecto.** Con 4 episodios al mes cuesta ≈ 550 €/mes, y el camino optimista ingresa 509 €/mes en M36: si la paga el promotor, no hay equilibrio en 36 meses (§1.3). Solo se abre con la **Puerta F2** (≥ 440 €/mes de terceros).
+  - Con 3 episodios al mes, ≈ 410 €/mes, pero hay que recalibrar la P2.
+  - Con 2 al mes, ≈ 280 €/mes, y los ingresos del optimista caen a la mitad (3.490 € frente a 6.865 € acumulados en el modelo).
+  - Ninguna cadencia cabe en 200 €/mes con la garantía. Con 1 episodio al mes (≈ 150 €/mes) la Etapa 2 es, en la práctica, el mantenimiento.
+- **Qué podría bajar el coste sin rebajar la garantía [S]:** bibliografías de serie ya revisadas, que reducen la parte de episodios con RHC. No entran en las cifras hasta tener datos. **La inspección reducida ya está en las cifras de la Etapa 2** y solo se gana tras 10 episodios limpios en mesa íntegra (§4.7): si la Etapa 1 no deja esa racha, la Etapa 2 empieza en inspección normal y el RLC cuesta ≈ 830-1.380 €/mes en lugar de ≈ 180-306 €/mes.
 
 **Horas humanas por episodio [INT]:**
 
@@ -834,7 +977,7 @@ Pieza "pipeline" del gauntlet: se paró en 5 rondas por presupuesto. Su carencia
 | **Total por episodio** | **≈ 6,7-8,7 h** (los 3 primeros, el doble) | ≈ 7,1-8,8 h |
 
 - **Etapa 1:** 2 episodios al mes + ~1 h/semana de comunidad = **~18-22 h al mes, ≈ 4,1-5,0 h/semana**. Supera las 4 h/semana del promotor: se pide aceptar ~5 h (decisión D3). El orden de recorte de la comunidad (§6.5) es la salvaguarda.
-- **Etapa 2:** con 4 episodios al mes (lo que usa el modelo) salen ~28-35 h + ~9 h de comunidad ≈ **8,5-10 h/semana**, en el límite alto. **Con 3 al mes hay holgura.** Si solo caben 3, el calendario de la P2 se alarga ~2 meses.
+- **Etapa 2:** con 4 episodios al mes (lo que usa el modelo) salen ~28-35 h + ~9 h de comunidad ≈ **37-44 h/mes, 8,5-10 h/semana**, en el límite alto. **[INT]** El modelo de retornos usa 35 h/mes (A15-17). El árbol conjunto del §1.3 suma la diferencia (+5,5 h/mes en el centro). **Con 3 al mes hay holgura.** Si solo caben 3, el calendario de la P2 se alarga ~2 meses.
 - **Construcción inicial:**
   - MVP de **32,5-35,5 h** [S] y G0/G1 (~6-8 h);
   - después, 12-20 h de controles aplazados (similitud, CLIP, ECAPA…), entre los episodios 2 y 6, **siempre antes de pedir el YPP**.
@@ -875,7 +1018,7 @@ Pieza "mercado, marca, lanzamiento" del gauntlet: se paró en 5 rondas. Sus corr
 |---|---|---|---|
 | **0. Silenciosa** | Oct 2026 - mediados de ene 2027 | Voz (Puerta V-0 y Puerta V), guion (G1), permisos, **3 episodios terminados antes de publicar**; panel privado E2 (10-15 nativos, 1 filólogo, 1 historiador) | Puerta 0 (§8.2) |
 | **1. Suave** | 17-01-2027 a marzo de 2027 (M2-M4) | Episodios 1-3 juntos y después **cada dos domingos a las 21:30, con estrea**. Difusión en el entorno del panel, en 2-3 entidades de la diáspora y en 1-2 servicios de normalización. Desde el día 1: "Carta do serán", Telegram, Bluesky, mastodon.gal, Podgalego y Obradoiro Dixital Galego. Sin prensa | Lectura temprana en M4 (vídeos 1-4) |
-| **2. Pública** | Marzo - mayo de 2027 (M4-M6) | Nota de prensa ("primeira canle de historia para durmir en galego"), propuesta a Radio Galega, correos a la diáspora y a mediadores, colaboraciones con divulgadores. **Especiales:** Día Mundial do Sono (14-03) y **Letras Galegas 2027, dedicadas a Xosé Neira Vilas (episodio el 16-05)** [F RAG] | Puerta 1 (31-05-2027) |
+| **2. Pública** | Marzo - mayo de 2027 (M4-M6) | Nota de prensa ("primeira canle de historia para durmir en galego"), propuesta a Radio Galega, correos a la diáspora y a mediadores, colaboraciones con divulgadores. **Especiales:** Día Mundial do Sono, que en 2027 cae el **viernes 19-03** (viernes anterior al equinoccio de marzo, que es el sábado 20-03 [F]); el episodio especial se publica el **domingo anterior, 14-03**, y la nota de prensa sale esa semana. Y **Letras Galegas 2027, dedicadas a Xosé Neira Vilas: episodio el domingo 16-05**, víspera del Día das Letras (lunes 17-05) [F RAG]. Es la única excepción a la cadencia quincenal (§1.2) | Puerta 1 (31-05-2027) |
 
 - **Samaín 2026 no:** el pipeline no está listo. Samaín 2027 será el primer gran episodio de temporada.
 - **Youtubeiras+ 2026 no:** exige 3 piezas antes del 15-11-2026. Se va a **Youtubeiras+ 2027** (Revelación y Pódcast) con catálogo; es condición de la P2.
@@ -950,7 +1093,7 @@ Pieza "mercado, marca, lanzamiento" del gauntlet: se paró en 5 rondas. Sus corr
 | R2 | **Contenido inauténtico** (política de YouTube del 16-07-2026) | Media / alto | Los 12 controles del §5.5; expediente por episodio; si llega un aviso de "limited ads", se congela la producción y se apela |
 | R3 | **Rechazo del sector cultural gallego a la voz IA** (ADA, AGPTI y A Mesa sobre RTVE, febrero de 2026; críticas a la CSAG por recrear a Begoña Caamaño, mayo de 2026 [F]) | Media / medio-alto | Doble permiso, aviso que nombra la voz de base, diálogo previo, voz licenciada en la Etapa 3 |
 | R4 | **Voz de un profesional gallego usada sin su consentimiento comercial** | Baja con la regla / muy alto si ocurre | Doble permiso como condición de la Puerta 0 (§4.5) |
-| R5 | **Errores de lengua o de historia publicados** | Media / alto | Cinturón lingüístico, revisor calibrado, citas extraídas por herramienta, revisión histórica, corrección pública en < 72 h |
+| R5 | **Errores de lengua o de historia publicados** | Media / alto | Cinturón lingüístico; **RLC cualificado sobre el texto** (corrección de mesa íntegra en toda la Etapa 1 y en inspección normal; muestra con criterio de aceptación solo tras 10 episodios limpios); citas extraídas por herramienta; **RHC sobre el 100 % de las afirmaciones** en la Etapa 1 y en los temas de riesgo (§4.7); corrección pública en < 72 h |
 | R6 | **Demanda insuficiente** (3,59 % de consumo audiovisual en galego) | Alta / alto | La P1 lo mide pronto; salida hacia un modelo audio-primero o hacia la Etapa 3 |
 | R7 | **Anuncios que despiertan al oyente** [F SBS] | **[INT] Existe ya antes del YPP**: YouTube puede monetizar vídeos de canales fuera del programa (Términos de servicio, "derecho a monetizar") | Sin promesa de "sen cortes" en la Etapa 1 (§3.5, regla 13); cola de ambiente de colchón; se vigila si aparecen anuncios en los vídeos propios |
 | R8 | **Tiempo del promotor** (la Etapa 1 real pide ~5 h/semana) | Media-alta / alto | D3; orden de recorte; el pipeline absorbe la producción |
@@ -990,7 +1133,8 @@ Es obligatoria para el contenido **realista**. Declarar no reduce ni el alcance 
 
 ### 7.5 Lista de cumplimiento previa al primer episodio
 - [ ] Voz con la Puerta V superada y cadena de consentimiento documentada (doble permiso si es de Nós; términos archivados si es de proveedor; contrato T0-T2 si es licenciada).
-- [ ] Aviso hablado en los primeros 30 s que dice de quién es la voz de base.
+- [ ] Aviso hablado en los primeros 30 s que dice de quién es la voz de base y qué revisión tuvo el texto (íntegra o por muestreo, §4.5).
+- [ ] RLC y RHC contratados, con la cualificación acreditada archivada y el criterio de aceptación por escrito (§4.7).
 - [ ] Carta a ADA y AGPTI enviada y su respuesta registrada.
 - [ ] Voz de reserva validada, para poder sustituir la principal en ≤ 30 días.
 - [ ] Generador de imágenes con licencia comercial (sin FLUX.1 [dev]).
@@ -1015,7 +1159,7 @@ Es obligatoria para el contenido **realista**. Declarar no reduce ni el alcance 
 |---|---|---|---|
 | Construcción y validación | Oct 2026 - mediados de ene 2027 | 0 publicados; 3 terminados | 0 |
 | M2 | Ene 2027 | Lanzamiento con 3 (17-01) + 1 (31-01) | 4 |
-| M3-M6 | Feb - may 2027 | Quincenal, en domingo (especiales el 14-03 y el 16-05) | 6 · 8 · 10 · **12 → P1 (31-05)** |
+| M3-M6 | Feb - may 2027 | Quincenal, en domingo: 14-02, 28-02, 14-03, 28-03, 11-04, 25-04, 09-05 y **16-05**. Especiales: el 14-03 (domingo anterior al Día Mundial do Sono, viernes 19-03) y el 16-05 (Letras; **única excepción a la cadencia**: adelantado una semana, del 23-05 al 16-05) | 6 · 8 · 10 · **12 → P1 (31-05)** |
 | M7-M12 (Etapa 2) | Jun - nov 2027 | Semanal (26 semanas con 2 de descanso) | **36 → P2 (30-11)** |
 | M13-M18 | Dic 2027 - may 2028 | Semanal | **60 → P3 (31-05-2028)** |
 | Mantenimiento | Desde jun 2028 | 1 al mes | 78 en M36 |
@@ -1027,12 +1171,13 @@ Es obligatoria para el contenido **realista**. Declarar no reduce ni el alcance 
 | **B0 (cómputo)** | Semana 1 | En el equipo del promotor: RTF_TTS ≤ 0,6, RTF_ASR ≤ 1,5 y ≥ 8 GB de RAM libres | Runpod por horas (+3 h de montaje) |
 | **G0 (pronunciación y ritmo)** | Semanas 2-4 | ≥ 90 % de los ítems corregidos se oyen bien (los dos jueces); ≥ 8/10 pares é/ó audibles; 0 regresiones; una variante de ritmo del §3.3 sin "vocales arrastradas"; regenerar el párrafo 5 deja idénticos los párrafos 6-10 | Siguiente voz del kit. Si el contraste é/ó no llega al audio, es un límite del modelo |
 | **V-0 (preselección de voz)** [INT] | Semanas 3-4 | §4.4 | **No se gasta la excepción.** D2: esperar o voz licenciada |
+| **F (financiación de la calidad)** [INT, tribunal final, 2.ª ronda] | Semana 5 (29-10 a 04-11-2026), solo si V-0 = sí | Compromisos firmes y por escrito de terceros (concello vía PL400A, mecenas o preventa, patrocinio, convenio con Nós/USC o AGPTI) **≥ el diferencial de calidad de la E1 (≈ 3.680 €)**, condicionados a que haya voz. Meta: ≈ 5.140 €, para que parar en la P1 no le cueste nada al promotor (§1.3) | **No se gasta la excepción ni se publica.** Presupuesto de hobby (D6: ≤ 300 € en 6 meses); reintento con la PL400A de 2027; si falla dos veces, cierre |
 | **Puerta V (V-1 + V-2)** | Semanas 6-12 | §4.3: control positivo y negativo válidos; Δ ≤ U; exactitud equilibrada ≤ 0,60; < 20 % "non é galego" | (c) → (a) o (b), en el orden decidido en D2. **Nunca se publica con la "menos mala"** |
 | **G1 (guion)** | Semanas 4-8 | ≥ 3/5 criterios frente al listón, ninguna nota ≤ 2 en lengua, ≤ 1 error normativo por 1.000 palabras | Otro redactor o reescritura del lingüista |
 | **G2 (veracidad)** | Semanas 6-10 | 0 anclas falsas plantadas aceptadas; el juez detecta ≥ 4/5 respaldos falsos; ≤ 2 % de bloqueos falsos; canarios activos | Se corrige el verificador |
 | **G3 (máster)** | Semanas 10-12 | 20 min de máster sin fallos de "sono seguro"; la mujer del promotor lo aguanta sin quejas de lengua | Se corrige y se repite |
 | **P0 (publicable)** | ~10-01-2027 | 3 episodios terminados; voz con la Puerta V superada y doble permiso o licencia; **panel E2 superado** (≥ 70 % "volvería a escoitalo", filólogo con 0 errores graves, historiador con 0 errores de hecho, ≤ 20 % molestos por la IA); prueba de defectos sembrados superada; lista de cumplimiento (§7.5) | Como mucho 2 iteraciones de ≤ 4 semanas; si no, parar |
-| **P1 (señal de mercado)** | 31-05-2027 · 12 vídeos | Vistas a 30 días ≥ 60; ≥ 20 suscriptores; AVD ≥ 20 min; E5 cumplido (≤ 1 error verificado por hora, corregido en < 72 h). **El hábito decide el tipo de GO (§8.4)** | **Parar**, sin prórroga. El catálogo queda publicado |
+| **P1 (señal de mercado)** | 31-05-2027 · 12 vídeos | Vistas a 30 días ≥ 60; ≥ 20 suscriptores; AVD ≥ 20 min; E5 cumplido (≤ 1 error verificado por hora, corregido en < 72 h); **Puerta F2: ≥ 440 €/mes comprometidos por terceros para la E2 durante ≥ 6 meses** [INT, tribunal final, 2.ª ronda]. **El hábito decide el tipo de GO (§8.4)** | **Parar**, sin prórroga. El catálogo queda publicado |
 | **Control de hábito** | 31-08-2027 (M9), solo si hubo GO condicionado | Se para si H1 < 25 %, H4+H5 < 35 % **y** vistas a 30 días < 103 | Parada anticipada (ahorro de ~330 € y ~105 h) |
 | **P2 (proyecto lateral viable)** | 30-11-2027 · 36 vídeos | Vistas a 30 días ≥ 100; ≥ 100 suscriptores; Youtubeiras+ 2027 presentado; ≥ 5 propuestas de patrocinio enviadas | Parar la producción; conservar el catálogo |
 | **P3 (Etapa 3)** | 31-05-2028 · 60 vídeos | En el YPP, **o** ≥ 50 €/mes recurrentes, **o** ayuda o encargo concedido | Mantenimiento (o cierre si no se ejerce la opción CRTVG) |
@@ -1091,6 +1236,7 @@ En la P2, la misma lógica con los umbrales de la P2. Con hábito bajo: segunda 
 | E5 | Calidad percibida pública | Continuo | K6 | **Sí** |
 | E8 | Transparencia sobre la IA | Continuo | ≤ 30 % de negativos (Puerta roja si > 50 %) | Solo la Puerta roja |
 | E12 | Patrocinio | M9-M12 | ≥ 5 propuestas enviadas (A14: tasa de venta) | **Sí** (P2) |
+| E16 | Financiación de la calidad | Semanas 2-5; M4-M6 | Puerta F: compromisos ≥ ≈ 3.680 € (meta ≈ 5.140 €). F2: ≥ 440 €/mes para la E2 | **Sí** (F y P1) |
 | E7 | Geografía y desbordamiento | 1-2 | Si > 25 % de las horas viene de fuera de España, se abre la pregunta de las pistas es/pt | No |
 | E9 | Mediadores | 1-2 | ≥ 3 de cada 20 entidades responden | No |
 | E10 | Audio primero | 1-2 | Horas de audio ≥ 25 % de las de YouTube | No |
@@ -1101,14 +1247,14 @@ En la P2, la misma lógica con los umbrales de la P2. Con hábito bajo: segunda 
 
 | Mes | Producción | Pruebas y puertas | Go-to-market | Cumplimiento y financiación |
 |---|---|---|---|---|
-| **Oct 2026** | MVP, bloques 1, 6 y 11 (repositorio, capa de voz, cómputo) | B0, G0, **V-0**; D1-D4 | Registrar @seran y seran.gal; alta en Spotify for Creators (SPP en España desde el 20-10); funciones avanzadas del canal; cuentas en Bluesky, mastodon.gal y Telegram; Carta preparada | Correo a Nós/Gradiant (semana 1); 3 presupuestos de narradores y revisor; OEPM y EUIPO; "O teu Xacobeo": **no** (exige alta) |
-| **Nov 2026** | MVP, bloques 2-5 y 7-10 | Puerta V formal (si V-0 = sí): H1/H2, R1-R3; G1 | Lista de vídeos semilla con URL | Consentimiento del locutor (si la voz es de Nós); **carta a ADA y AGPTI**; Youtubeiras+ 2026: **no** |
+| **Oct 2026** | MVP, bloques 1, 6 y 11 (repositorio, capa de voz, cómputo) | B0, G0, **V-0**; D1-D6; **Puerta F** preparada (dossier y peticiones desde la semana 2) | Registrar @seran y seran.gal; alta en Spotify for Creators (SPP en España desde el 20-10); funciones avanzadas del canal; cuentas en Bluesky, mastodon.gal y Telegram; Carta preparada | Correo a Nós/Gradiant (semana 1); 3 presupuestos de narradores y revisor; OEPM y EUIPO; "O teu Xacobeo": **no** (exige alta) |
+| **Nov 2026** | MVP, bloques 2-5 y 7-10 | **Decisión de la Puerta F (semana 5, hasta el 04-11)**; Puerta V formal (si V-0 = sí y F = sí): H1/H2, R1-R3; G1 | Lista de vídeos semilla con URL | Consentimiento del locutor (si la voz es de Nós); **carta a ADA y AGPTI**; Youtubeiras+ 2026: **no** |
 | **Dic 2026** | Episodios 1-3 (cada uno cuesta el doble) | Paso 0 y decisión de voz; G2, G3; prueba de defectos sembrados | Web "Como facemos Serán" | Lista de cumplimiento |
 | **Ene 2027 (M2)** | **Lanzamiento el 17-01 con 3 episodios**; el 4.º el 31-01 | E2 (panel) → **P0**; empiezan E3, E5 y E8 | Fase suave; ritual; Carta n.º 1; alta en Podgalego y Obradoiro (cuando haya ≥ 1 publicación al mes) | — |
 | **Feb 2027 (M3)** | 2 · 6 | — | Primera oleada a la diáspora (España y Europa); 3 divulgadores | YPP: regla de 8.000 h desde el 1-02 |
-| **Mar 2027 (M4)** | 2 · 8 (especial Día Mundial do Sono, 14-03) | **Lectura temprana** (vídeos 1-4): recalibrar la P1 | **Fase pública:** nota de prensa, Radio Galega | — |
-| **Abr 2027 (M5)** | 2 · 10 | — | Primer intercambio con un pódcast; Reddit | Ayudas del Ministerio: no (exigen alta) |
-| **May 2027 (M6)** | 2 · **12** (Letras, Neira Vilas, 16-05) | **P1 (31-05)** con la matriz de hábito | Serán das Letras; oleada a Argentina y Cuba | Revisión de derechos del episodio de las Letras |
+| **Mar 2027 (M4)** | 2 · 8 (especial del Día Mundial do Sono el domingo 14-03; el día es el viernes 19-03) | **Lectura temprana** (vídeos 1-4): recalibrar la P1 | **Fase pública:** nota de prensa, Radio Galega | — |
+| **Abr 2027 (M5)** | 2 · 10 | — | Primer intercambio con un pódcast; Reddit | Ayudas del Ministerio: no (exigen alta). **Puerta F2:** pedir compromisos para la E2 (concellos con la PL400A de 2027 resuelta, patrocinio, membresías) |
+| **May 2027 (M6)** | 2 · **12** (09-05 y, como excepción a la cadencia, Letras, Neira Vilas, el domingo 16-05) | **P1 (31-05)** con la matriz de hábito | Serán das Letras; oleada a Argentina y Cuba | Revisión de derechos del episodio de las Letras |
 | **Jun 2027 (M7)** | Etapa 2: 4 · 16 (2 h) | E11 y E4 con la regla de tamaño mínimo | Carta quincenal; primer tema votado | **CRTVG (~junio): solo como opción** (alta y cesión); preguntar la tasa |
 | **Jul 2027 (M8)** | 4 · 20. Serie "Historias do Camiño" (Año Santo 2027) | E6 y E13 (si hay volumen) | Xacobeo; espejo de los vídeos del Camino | — |
 | **Ago 2027 (M9)** | 4 · 24 | **Control de hábito** (si hubo GO condicionado) | Visitas de verano de la diáspora | — |
@@ -1118,23 +1264,25 @@ En la P2, la misma lógica con los umbrales de la P2. Con hábito bajo: segunda 
 
 ---
 
-## 9. Próximos pasos: las primeras 4 semanas
+## 9. Próximos pasos: las primeras 5 semanas
 
-**Objetivo del mes: llegar a la decisión V-0 gastando casi nada.** Es la puerta más barata del plan: si no hay una voz en la liga necesaria, se sabe antes de gastar 850-1.500 €.
+**Objetivo: llegar a las decisiones V-0 y F gastando casi nada.** Son las puertas más baratas del plan: si no hay una voz en la liga necesaria, o si nadie más que el promotor está dispuesto a pagar la calidad, se sabe antes de gastar 850-1.500 € de validación y ≈ 3.680 € de calidad.
 
 | Semana | Tareas concretas | Horas | Coste |
 |---|---|---|---|
-| **1 (1-7 oct)** | **Decisiones D1-D4** (§0.2), por escrito. **Permisos de voz:** correo a Proxecto Nós (proxecto.nos@usc.gal, con copia a Gradiant; para Sabela-Nós, Icía, Iago y Paulo, al CRPIH de la USC y al GTM de la UVigo), que pide: (a) confirmación del uso comercial en YouTube y pódcast; (b) el alcance del consentimiento de los locutores; (c) que trasladen nuestra petición a cada locutor. **Marca:** registrar @seran y seran.gal; búsqueda en OEPM y EUIPO. **Presupuestos:** pedir 3 por escrito a narradores (al menos 2 hombres y 2 mujeres) y 3 a revisores lingüísticos (directorio de la AGPTI, estudios de dobraxe), **sin firmar nada**. **Técnica:** repositorio y subagentes vacíos (bloque 1 del MVP); **prueba B0** en el equipo del promotor (10 min de audio) | ~6 h | ~20-30 € (dominio) [S] |
-| **2 (8-14 oct)** | **Capa de voz** con Claude Code (bloque 6 del MVP): Cotovía fijado por hash con el canario *eu porto*, `g2p_override.py` a partir del prototipo y parche de `DUR_SCALE` + semilla + pausas + `s_prev`. **Kit de voz** (`kit_voz.py`): texto trampa y muestras M1-M3, revisados con su mujer. **R0 automática.** Elegir la **referencia humana pública** de V-0 (60 s de un narrador galego nativo en registro tranquilo: un audiolibro o la Radio Galega; anotar la URL y el minuto; solo para uso interno) | ~6 h | 0 € (+~5 USD si se prueba ElevenLabs) |
-| **3 (15-21 oct)** | **G0:** 50 palabras de riesgo (línea base → léxico → ABX ciego) y **A/B de ritmo con las variantes A-E del §3.3** sobre las 2-3 voces finalistas de R0. **V-0:** escucha ciega del promotor y su mujer (rúbrica del §4.4) | ~6 h (+~2 h de ella) | 0 € |
-| **4 (22-28 oct)** | **Decisión V-0**, escrita en `decision_voz.md`. **Si es SÍ:** con D1 aprobada, firmar H1 y H2 (T0 + las opciones T1/T2) y el revisor profesional; sellar `preregistro_voz.md`; programar las grabaciones; redactar la carta a ADA y AGPTI (se envía con la voz decidida). **Si es NO:** aplicar D2 (esperar con reevaluación trimestral, o pedir presupuesto de voz licenciada) y dejar el pipeline de texto (bloques 2-5) a ritmo bajo. **En los dos casos:** empezar el investigador y `extrae_cita.py` (bloques 2-3) con las fuentes del Episodio 1 (Reino suevo) | ~6 h | 0 € (la excepción, si se aprueba, se paga en noviembre) |
+| **1 (1-7 oct)** | **Decisiones D1-D6** (§0.2), por escrito. **Permisos de voz:** correo a Proxecto Nós (proxecto.nos@usc.gal, con copia a Gradiant; para Sabela-Nós, Icía, Iago y Paulo, al CRPIH de la USC y al GTM de la UVigo), que pide: (a) confirmación del uso comercial en YouTube y pódcast; (b) el alcance del consentimiento de los locutores; (c) que trasladen nuestra petición a cada locutor. **Marca:** registrar @seran y seran.gal; búsqueda en OEPM y EUIPO. **Presupuestos:** pedir 3 por escrito a narradores (al menos 2 hombres y 2 mujeres) y 3 a revisores lingüísticos cualificados (directorio de la AGPTI, estudios de dobraxe), por hora de escucha con texto y por palabra, más **3 a historiadores** para la revisión de la hoja de afirmaciones (§4.7), **sin firmar nada**. **Técnica:** repositorio y subagentes vacíos (bloque 1 del MVP); **prueba B0** en el equipo del promotor (10 min de audio) | ~6 h | ~20-30 € (dominio) [S] |
+| **2 (8-14 oct)** | **Capa de voz** con Claude Code (bloque 6 del MVP): Cotovía fijado por hash con el canario *eu porto*, `g2p_override.py` a partir del prototipo y parche de `DUR_SCALE` + semilla + pausas + `s_prev`. **Kit de voz** (`kit_voz.py`): texto trampa y muestras M1-M3, revisados con su mujer. **R0 automática.** Elegir la **referencia humana pública** de V-0 (60 s de un narrador galego nativo en registro tranquilo: un audiolibro o la Radio Galega; anotar la URL y el minuto; solo para uso interno). **Puerta F:** dossier de 2 páginas (qué es Serán, garantía de calidad, paquete de ≈ 3.680 € y qué recibe cada financiador) y lista de destinatarios: servicios de normalización lingüística de concellos de ≥ 3.000 habitantes (PL400A), 3-5 marcas gallegas afines, Proxecto Nós/USC y AGPTI | ~6 h (+~3 h de la F) | 0 € (+~5 USD si se prueba ElevenLabs) |
+| **3 (15-21 oct)** | **G0:** 50 palabras de riesgo (línea base → léxico → ABX ciego) y **A/B de ritmo con las variantes A-E del §3.3** sobre las 2-3 voces finalistas de R0. **V-0:** escucha ciega del promotor y su mujer (rúbrica del §4.4). **Puerta F:** enviar el dossier y abrir la página de mecenas o preventa (Ko-fi, sin umbral) | ~6 h (+~2 h de ella; +~3 h de la F) | 0 € |
+| **4 (22-28 oct)** | **Decisión V-0**, escrita en `decision_voz.md`. **Si es SÍ:** seguimiento de la Puerta F; dejar listos, **sin firmar**, los contratos de H1 y H2 (T0 + las opciones T1/T2) y del revisor profesional; redactar `preregistro_voz.md` y la carta a ADA y AGPTI (se envía con la voz decidida). **Si es NO:** aplicar D2 (esperar con reevaluación trimestral, o pedir presupuesto de voz licenciada) y dejar el pipeline de texto (bloques 2-5) a ritmo bajo. **En los dos casos:** empezar el investigador y `extrae_cita.py` (bloques 2-3) con las fuentes del Episodio 1 (Reino suevo) | ~6 h | 0 € (la excepción, si se aprueba, se paga en noviembre) |
+| **5 (29-10 a 04-11)** | **Decisión de la Puerta F**, escrita en `decision_financiacion.md`: suma de compromisos firmes (solo cuentan los firmados y, de una carta condicionada a la PL400A de 2027, la parte que el concello asuma sin ella). **Si llega al diferencial (≈ 3.680 €):** con D1 aprobada, firmar H1, H2 y el revisor, sellar el prerregistro y programar las grabaciones. **Si no llega:** presupuesto de hobby (D6), sin validación ni publicación; calendario del reintento | ~4 h | 0 € (la excepción, si se aprueba, se paga en noviembre) |
 
-**Entregables al final del mes:**
+**Entregables al final de la semana 5:**
 - `decision_voz.md` (resultado de V-0 y de G0, variante de ritmo ganadora y topes);
 - informe de B0;
 - `lexico_gl.tsv` v0 con las entradas verificadas;
 - respuestas (o no) de Nós;
-- presupuestos de narradores y revisor;
+- presupuestos de narradores, RLC (por palabra en mesa y por hora de escucha) e historiador, con la decisión D5;
+- `decision_financiacion.md` (Puerta F: compromisos firmados, importe y condiciones);
 - @seran y seran.gal registrados.
 
 ---
@@ -1162,7 +1310,7 @@ En la P2, la misma lógica con los umbrales de la P2. Con hábito bajo: segunda 
 
 | Pieza | Crítico (perfil) | Listón o referencia elegida | Rondas y resultado | Qué quedó abierto al final | Qué hizo la integración |
 |---|---|---|---|---|---|
-| **Retornos y modelo financiero** | Crítico del modelo financiero (perfil no registrado en la pieza) | **Solo tasas base observables:** 9 canales clónicos medidos, 126 inscritos en Youtubeiras+ 2025, bases de la CRTVG leídas página a página; las ayudas sin tasa base pasan a ser opciones | **3 rondas · GANA.** Sin carencias en la última | Nada, dentro de la pieza | Se ajusta a los costes de las demás piezas (§1.3): el valor esperado pasa de −147 € a ≈ −1.250/−1.900 €. **Aviso:** ese ajuste es aritmética de integración y no pasó por el crítico |
+| **Retornos y modelo financiero** | Crítico del modelo financiero (perfil no registrado en la pieza) | **Solo tasas base observables:** 9 canales clónicos medidos, 126 inscritos en Youtubeiras+ 2025, bases de la CRTVG leídas página a página; las ayudas sin tasa base pasan a ser opciones | **3 rondas · GANA.** Sin carencias en la última | Nada, dentro de la pieza | Se ajusta a los costes de las demás piezas en un **árbol conjunto voz → audiencia** (§1.3, rehecho en el tribunal final): el valor esperado pasa de −147 € (condicionado a que haya voz) a **≈ −3.570 €** conjunto si el promotor paga la garantía de calidad (0 % de caja positiva), y a **≈ −340 €** con las Puertas F y F2 de la 2.ª ronda del tribunal (≈ 0,3 % de caja positiva). **Aviso:** ese ajuste es aritmética de integración con probabilidades de voz y de financiación [S] y no pasó por el crítico de la pieza |
 | **Producto y formato** | Productor de un canal de historia para dormir | **History at Night, "The Great Maya Collapse"** (listón) y History Time, "After Rome" (techo) | **3 rondas · mejora marginal** | **Ritmo incoherente entre secciones:** brief a 120-135 de habla pura, receta que da ~143, checklist de 105-130 frente a una QA de 115 ±5 %, "+10 %" frente a "+35 %" de pausa en el Acto III | **Resuelto:** tabla única de ritmo (§3.3) con la velocidad real de la voz (191,5) y una decisión por prueba ciega (G0). Los topes definitivos quedan pendientes de G0 |
 | **Guion muestra en galego** | Historiador medievalista | **Literatura académica** (Carlos Barros, USC, con página; ediciones documentales a través de él). Galipedia, solo de apoyo | **4 rondas · mejora marginal** | Pulgar llamado "cronista" en 1467 (anacronismo); la escena de la Rocha Forte apoyada en Galipedia; los asistentes a Melide narrados como hecho seguro | **Aplicado en la copia:** se quita "o cronista"; la Rocha Forte se reduce a Barros y el Preito; Melide pasa a recuerdo de un testigo y se retira el nombre ambiguo de Andrade. **Pendiente:** citar la memoria de excavación si se quiere recuperar la escena completa |
 | **Voz y protocolo A/B** | Ingeniero de audio y director de doblaje | **"No se distingue de un narrador nativo profesional"** en una prueba ciega (MUSHRA con control positivo humano + identificación humano/IA con N ≥ 20) | **5 rondas · se paró por presupuesto (NO ganó)** | **Falta una prueba ciega de escucha larga (R3-L, 20-25 min continuos, 40-60 oyentes)**, que es el formato real del producto. Precisión menor: la fecha de publicación de Nós | **No resuelto:** se declara en el §4.3 como carencia y se recomienda antes de R4. La fecha se corrige ("2026"). Se añade la Puerta V-0 barata (§4.4) |
@@ -1174,12 +1322,12 @@ En la P2, la misma lógica con los umbrales de la P2. Con hábito bajo: segunda 
 | Contradicción | Piezas | Resolución |
 |---|---|---|
 | Calendario: lanzamiento el 22-11-2026, frente a un pipeline listo en la semana 10-12 y 5-7 semanas de protocolo de voz | GTM, pipeline, voz | Lanzamiento el **17-01-2027**; P1 el 31-05-2027, P2 el 30-11-2027, P3 el 31-05-2028 (§1.2) |
-| Coste de la Etapa 1: 210 € frente a una excepción de voz de 850-1.500 € | Retornos, voz | Se suma en el §1.3, y se pone delante la Puerta V-0 barata |
-| Listón de la voz: "≥ 4/5 durmiríame" (E0) frente a "indistinguible de un profesional" (Puerta V) | GTM, voz | E0 pasa a ser la **preselección V-0**; la Puerta V es la de publicación |
+| Coste de la Etapa 1: 210 € frente a una excepción de voz de 850-1.500 € | Retornos, voz | Se suma en el §1.3, y se pone delante la Puerta V-0 barata. **Tribunal final, 2.ª ronda:** además, la Puerta F, para que la calidad la paguen terceros |
+| Listón de la voz: "≥ 4/5 durmiría" (E0) frente a "indistinguible de un profesional" (Puerta V) | GTM, voz | E0 pasa a ser la **preselección V-0**; la Puerta V es la de publicación |
 | Voz de reserva de proveedor "que no bloquea" frente a "solo si pasa la Puerta V" | GTM, voz | Solo si pasa la Puerta V (§4.5) |
 | Consentimiento: solo la USC frente a la USC + el locutor | Voz, GTM | **Doble permiso** (§4.5) |
 | Escucha H3 de 0,8 h frente a escucha completa firmada | Pipeline, voz | Escucha completa; horas recalculadas (§5.4) |
-| Revisor lingüístico en la Etapa 2: 40-60 / 40-80 / 64-112 €/mes | Retornos, pipeline, voz | 64-112 €/mes; caja central de la Etapa 2 ≈ 138 € (§5.4) |
+| Revisor lingüístico en la Etapa 2: 40-60 / 40-80 / 64-112 €/mes | Retornos, pipeline, voz | 64-112 €/mes y caja de ≈ 138 € en la integración. **Sustituido en el tribunal final** por el RLC sobre el texto y el RHC: ≈ 550 €/mes (§5.4, D5), a cargo de terceros (Puerta F2) |
 | Condición de la P2: "≥ 1 solicitud de ayuda" (GTM) frente a nada (retornos v3) | GTM, retornos | Youtubeiras+ 2027 presentado (§1.1) |
 | Promesa con "sen cortes" frente a sin él | GTM, formato | Sin él; la etiqueta solo en el YPP (§3.5) |
 | Compilación mensual en el canal frente a solo en el pódcast | Formato, pipeline | En la Etapa 1, solo en el pódcast (§3.7) |
@@ -1194,8 +1342,39 @@ En la P2, la misma lógica con los umbrales de la P2. Con hábito bajo: segunda 
 - **Las tarifas gallegas** de narración, revisión lingüística y revisión histórica: no hay ninguna publicada.
 - **El volumen de búsqueda en galego:** no hubo acceso a Google Trends.
 - **Las probabilidades de rama del árbol** son [S], argumentadas con una tasa base de canales en castellano.
-- **Los ajustes de integración del §1.3** no los revisó ningún crítico del gauntlet.
+- **Los ajustes de integración del §1.3** no los revisó ningún crítico del gauntlet de su pieza; el árbol conjunto sale de la ronda del tribunal final (A.5).
+- **Las probabilidades de la voz del árbol conjunto** (V-0 55 %, Puerta V 55 %, vía (c) 40 %) son [S], coherentes con el 60-80 % de suspenso del §4.1, pero sin tasa base.
+- **Las tarifas del RLC y del historiador** y la tasa de fallo de muestra de la Etapa 2 (10 %) son [S]. Solo hay anclas de precio de lista de corrección, no de revisión histórica.
+- **Que la Puerta F se pueda pasar.** P(F) = 25 % y P(F2) = 40 % son [S] sin tasa base. No se sabe si algún servicio de normalización ha encargado alguna vez contenido de este tipo, ni si un concello puede comprometer gasto de 2027 en noviembre de 2026; antes del lanzamiento no hay audiencia que haga preventa.
+- **Que la inspección reducida de la Etapa 2 sea suficiente:** deja hasta ~9 errores normativos leves sin leer por episodio de 2 h si el proceso va justo en el límite (§4.7); lo declara el aviso.
+- **Que el guion de un episodio completo cumpla las densidades:** la auditoría del §4.7 cubre ~7 min de la muestra, no un episodio de 75 min.
 
+### A.5 Tribunal final
+
+Después del alisado, un **tribunal** revisó el plan y el guion muestra en dos rondas. Cada juez daba carencias y errores factuales, y un agente de alisado aplicó las correcciones en esta versión (29-09-2026).
+
+#### A.5.1 Primera ronda (tres jueces)
+
+| Juez (perfil) | Veredicto | Qué señaló | Qué se corrigió |
+|---|---|---|---|
+| **Inversor** | No aprobado: el valor esperado no era un valor esperado conjunto | El "−1.250 a −1.900 €" aplicaba la validación a todos los caminos y mezclaba probabilidades condicionadas a que hubiera voz con el 60-80 % de otro árbol, así que la tabla no sumaba el 100 %. La fila optimista no descontaba el revisor de la Etapa 2. "Equilibrio en M15" y "+3.355 €" usaban una caja de 110 €/mes. El "≈ 10 %" era condicional. Las "~400 h" infravaloraban la Etapa 2 (35 frente a 37-44 h/mes) | **§1.3 rehecho** como árbol único voz → audiencia (`model/arbol_conjunto.py`). Tabla de resultados que suma el 100 %, valor esperado de caja y horas y probabilidad conjunta de caja positiva. Equilibrio del P4 con 138 €/mes en M18. Propagado a §0.1, §0.2, §1.1, §1.5, §1.6, §1.9 y A.2-A.3 |
+| **Galego** (lengua y veracidad) | No aprobado: pasada la P0, la garantía dependía de personas sin cualificación acreditada, y la revisión histórica no estaba en la caja | El texto solo lo revisaban el promotor y su mujer; en los episodios 7-12, 0 € de revisión profesional. Historiador en 1 de cada 4 episodios y fuera de la tabla de caja. Aviso "revisárono persoas galegofalantes". Cita falsa del DRAG en "Serán". "Temporizador de apagado". "Polo de agora". [COMP] sin definir. Día Mundial do Sono | **Roles RLC y RHC** con perfil, alcance, criterio de aceptación y regla por temas (§4.7), costeados en el §5.4 (≈ 130 € por episodio) y metidos en el árbol. **No caben en los límites: decisión D5** (se sube el límite de la E1 y la E2 no se abre por defecto), sin rebajar la garantía. Aviso con la cualificación real (§4.5). Cita del DRAG corregida (§3.7). "Apagamento" (§3.5). "Por agora" (guion). [COMP], [CALC] y [F-sec] definidas |
+| **Operador** (producción) | No aprobado: el guion muestra incumplía las densidades del §3.2 y el §4.7 lo daba por conforme | Entrada con 3 fechas y 6 nombres; Acto I con ~3,5 nombres nuevos por minuto, 8 años completos, "cento vinte e oito" y "seis de xullo"; apertura en asalto. Cadencia rota por el vídeo 12. Día Mundial do Sono mal fechado | **Guion v5 reescrito** (~770 palabras) con apertura en calma, derribo anticipado y Castilla en una frase, más la **auditoría automática** adjunta (`auditoria/audita_densidade.py`): entrada con 1 fecha y 2 nombres; Acto I con un máximo de 3 nombres nuevos en 60 s, 1 fecha redondeada y activación ≤ 3. **Calendario:** Día Mundial do Sono 2027 = viernes 19-03, con el especial el domingo anterior (14-03); vídeo 12 el 16-05 como única excepción declarada a la cadencia (§1.2, §6.2, §8.1, §8.6) |
+
+**Qué cambió en la conclusión (primera ronda).** El NO-GO como negocio se reforzó. Con la calidad pagada por el promotor, ningún camino recupera la caja a 36 meses, y el plan recomendaba **publicar los 12 vídeos y parar en la P1** (≈ −1.715 € de valor esperado frente a ≈ −2.720 € si se seguían las puertas). **La segunda ronda corrigió esa lectura** (A.5.2): era la menos mala de las políticas que publican, no la que minimiza la pérdida, y dejaba la P1 sin decidir nada. El GO a la Puerta V-0, que casi no cuesta nada, no cambió.
+
+**Lo que la primera ronda no cerró:** las tarifas reales del RLC y del historiador (3 presupuestos en la semana 1); la etiqueta de la interfaz de YouTube en galego para el temporizador; y la confirmación histórica de "mosteiros" y de la estación del derribo de la Rocha Forte en el guion (marcadas [S]).
+
+#### A.5.2 Segunda ronda (dos jueces)
+
+| Juez (perfil) | Veredicto | Qué señaló | Qué se corrigió |
+|---|---|---|---|
+| **Inversor** | Con carencias: la recomendación no tenía una puerta que diera valor a lo que se compra | Tras una V-0 positiva, el plan mandaba gastar ≈ 2.700-3.400 € (validación + paquete de calidad de la E1) aunque su propio árbol demostraba que ningún camino recupera la caja, y bajo una política ("parar siempre en la P1") que dejaba la P1 sin decidir nada. **Errores:** llamar "la que minimiza la pérdida" a parar en la P1 (≈ −1.715 €) cuando no gastar tras la V-0 da ≈ −40 €; 24 frente a 25 y 107 frente a 108 suscriptores entre el §1.1 y el §1.6; los 1.550 € de la E1 repartidos en 6 meses (dic-may) frente a una E1 de 5 meses (ene-may); la escucha íntegra de los episodios 1-6 (9-15 h de RLC) cargada a una excepción de voz que no la presupuesta (≈ 200-500 € de menos); "40 bloques" frente a "20 bloques" en el §4.6 sin decir que son dos muestreos distintos | **Puerta F** entre la V-0 y la validación (compromiso de terceros ≥ el diferencial de calidad de la E1; fuentes: PL400A de la SXL [F, DOG 7-04-2026], mecenas o preventa, patrocinio prevendido, convenio con Nós/USC o AGPTI) y **Puerta F2** en la P1 (≥ 440 €/mes para la E2), con lo que la P1 vuelve a decidir. **§1.3 recalculado** (`model/arbol_conjunto_f.py`): valor esperado ≈ −340 € (−230 a −495), ≈ 0,3 % de caja positiva; umbral para que la hoja P1 salga a cero, ≈ 5.140 €; **presupuesto de hobby** si falla la F (D6: ≤ 300 € en 6 meses). Tabla de políticas: **no gastar tras la V-0 (≈ −40 €) es la que minimiza la pérdida**; parar siempre en la P1 sin F (≈ −2.560 €) es solo la menos mala de las que publican. Suscriptores: se explica que el §1.1 usa el calendario real y el §1.6 el del modelo. E1 repartida en los 5 meses del §1.1 (≈ 770 €/mes; ≈ 650 €/mes en 6). Escucha de los ep. 1-6 presupuestada aparte. Los dos muestreos del §4.6 separados: audio (H3, 40 bloques) y texto del RLC (20 bloques). Propagado a §0.1, §0.2, §1.1, §1.5, §1.6, §1.9, §1.10, §4.4-§4.7, §5.4, §8.2, §8.5, §8.6, §9 y A.2-A.4 |
+| **Galego** (lengua y veracidad) | Con carencias: el aviso prometía una "revisión íntegra" que no estaba hecha ni presupuestada | La "revisión íntegra" de los ep. 1-6 era la escucha con texto, sin corrección de mesa, cargada a la excepción de voz (que no existe si la V-0 dice que no o por la vía (b)) y con ~0,4 h de texto para ~8.400 palabras. La tolerancia de la muestra de los ep. 7 y siguientes (≤ 1/1.000 sobre 1/3 del texto) no estaba justificada. **Errores:** "durmiríame con isto" (el DRAG recoge *durmir* como intransitivo y transitivo, no pronominal); en el guion, "marcharon cara a Castela" (incompleto: parte de los señores fue a Portugal, y de allí vino parte de la reacción de 1469); "pouco máis de dous anos" desde el verano de 1467 (son menos de dos); "en todas partes" (*todo* ante sustantivo lleva artigo) | **Corrección de mesa del 100 % del texto antes del render** en los 12 episodios de la E1 (0,015-0,025 €/palabra, 126-210 € por episodio), seguida de la escucha con texto de los ep. 1-6. **Inspección normal por defecto** y reducida (muestra de 20 bloques) solo tras 10 episodios limpios, con vuelta a la normal al primer fallo; qué garantiza la muestra y qué no, calculado (§4.7). El aviso de "revisión íntegra" solo si hubo mesa (§4.5). **Paquete de la E1: ≈ 3.680 € (2.390-5.010), ≈ 305 € por episodio**, propagado a D5, §0.1, §1.3 y §5.4. "Durmiría con isto" (§3.3, §4.4, A.3; verificado en el DRAG). **Guion v5.1:** "cara a Castela ou a Portugal" [F-sec, con cotejo pendiente en Barros], "ata dúas primaveras despois" y "en todas as partes" ([S], a confirmar por el RLC); auditoría de densidad repetida: sigue pasando (máximo de 3 nombres nuevos en 60 s) |
+
+**Qué cambia en la conclusión (segunda ronda).** El NO-GO como negocio no cambia: con la calidad pagada por el promotor, el paquete de la E1 casi se duplica y el valor esperado empeora a ≈ −3.570 €. Lo que cambia es la recomendación: **tras la V-0 no se gasta nada más sin un compromiso de terceros que pague la calidad (Puerta F)**, y la P1 vuelve a decidir con la Puerta F2. Con esa política, el promotor arriesga ≈ −340 € de valor esperado y, si pasa la F, ≈ −1.930 €, que es sobre todo la validación de la voz.
+
+**Lo que la segunda ronda no cerró:** P(F) y P(F2) sin tasa base (se miden en la semana 5 y en la P1); si un concello puede comprometer en noviembre gasto de 2027 ligado a la PL400A; la norma ISO 2859-1 (no consultada; las reglas de cambio son de diseño); la corrección "en todas as partes", pendiente del RLC; y el cotejo de la huida a Portugal con Barros (hoy, fuente secundaria).
 
 ---
 
@@ -1206,6 +1385,14 @@ Estas son todas las URLs citadas en las seis piezas del gauntlet, sin duplicados
 **Añadidas en la integración:**
 - Conversación de origen (solo se tomó el concepto): https://share.gemini.google/1zO2a3MXJETr
 - Términos de servicio de YouTube, derecho a monetizar el contenido (anuncios en vídeos de canales fuera del YPP; corrección factual de §3.5 y §7.1): https://www.youtube.com/t/terms
+
+**Añadidas en el tribunal final (consultadas el 29-09-2026):**
+- DRAG, "serán" (acepciones 1-4; corrección de la cita del §3.7): https://academia.gal/dicionario/-/termo/busca/serán
+- DRAG, "apagamento" (§3.5, regla 14): https://academia.gal/dicionario/-/termo/busca/apagamento
+- DRAG, "agora", locución "por agora" (guion muestra): https://academia.gal/dicionario/-/termo/busca/agora
+- Día Mundial do Sono, "el viernes anterior al equinoccio de marzo": https://en.wikipedia.org/wiki/World_Sleep_Day (la página days.to/world-sleep-day/2027, ya citada, devolvió 403 en esta consulta)
+- Equinoccio de marzo de 2027 (sábado 20-03): https://es.wikipedia.org/wiki/Equinoccio_de_marzo
+- Tarifa de corrección en galego ("desde 0,010 €/palabra"; "corrector titulado en traducción o lingüista") [F-sec]: https://shoptexto.com/correccion-ortografica-y-de-estilo-en-gallego/
 
 **Comprobaciones técnicas reproducibles (plantillas)**, usadas para el nombre del canal:
 - `https://www.youtube.com/@<handle>`
@@ -1255,6 +1442,8 @@ Estas son todas las URLs citadas en las seis piezas del gauntlet, sin duplicados
 - https://www.audiovisual451.com/la-crtvg-abre-una-nueva-convocatoria-para-la-produccion-de-contenidos-digitales-destinados-a-sus-plataformas/
 - https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/ [pipeline, mercado]
 - https://www.audiovisual451.com/tvg-abre-una-convocatoria-de-seleccion-de-proyectos-digitales-en-gallego/
+- https://www.xunta.gal/dog/Publicados/2026/20260407/AnuncioG0766-180326-0001_gl.html [Puerta F: PL400A 2026, DOG n.º 63, 7-04-2026; tribunal final, 2.ª ronda]
+- https://sede.xunta.gal/detalle-procedemento?codtram=PL400A&ano=2022&numpub=1 [ficha del procedimiento PL400A]
 
 ### B.2 Producto, formato, referencias de escucha, Episodio 1 y catálogo (pieza "formato")
 
@@ -1349,6 +1538,9 @@ Estas son todas las URLs citadas en las seis piezas del gauntlet, sin duplicados
 - https://gl.wikipedia.org/wiki/Gran_Guerra_Irmandi%C3%B1a
 - https://www.despertaferro-ediciones.com/2020/revuelta-gran-guerra-irmandina-galicia-1467-1469/
 - https://es.wikipedia.org/wiki/Alfonso_de_Castilla
+- https://es.wikipedia.org/wiki/Gran_Guerra_Irmandi%C3%B1a [huida a Castilla y a Portugal; tribunal final, 2.ª ronda; F-sec]
+- https://academia.gal/dicionario/-/termo/busca/durmir [DRAG: *durmir*, intransitivo y transitivo]
+- https://academia.gal/dicionario/-/termo/busca/parte [DRAG: *parte*, sin locución con "todas partes"]
 
 ### B.4 Voz: modelos, licencias, tarifas, protocolo y sector (pieza "voz")
 
