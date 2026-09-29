@@ -43,9 +43,10 @@
    informada**. Apoyo público de CSAG, CCG o RAG a un canal sin revisión humana: probabilidad baja (≈ 5-10 %) [S] (§1).
 9. **Qué convierte una crítica en neutralidad:** avisar antes de publicar, permiso de la voz, transparencia completa,
    erratas públicas, código y datos abiertos, y ninguna pretensión de sustituir a profesionales (§4).
-10. **No publicar con la voz de Brais antes de la respuesta de Nós** (o de 30 días de silencio anunciados en el
-    correo). Esto corrige la P0 de `plan-desatendido.md` §9, que permitía publicar sin respuesta. No retrasa nada: el
-    MVP tarda 8-10 semanas (§4).
+10. **No publicar nunca con la voz de Brais sin un sí de Nós.** Si hay silencio, se publica con otra voz: las de
+    Nós que no son de actores de dobraxe (Sabela, locutora de radio; Icía e Iago, aficionados; datos CC-BY 4.0) [F].
+    Esto corrige la P0 de `plan-desatendido.md` §9, que permitía publicar sin respuesta, y es lo mismo que promete el
+    correo (§5). No retrasa nada: el MVP tarda 8-10 semanas (§4).
 11. **Hoja de ruta:** correo a Nós esta semana → comunidad de software libre con el código → lanzamiento discreto →
     informe trimestral de errores a Nós → solo con tracción y revisión humana parcial, instituciones (§4).
 12. **Borrador del correo en galego** listo para enviar a `proxecto.nos@usc.gal` [F], firmado con nombre real (§5).
@@ -117,8 +118,15 @@ https://huggingface.co/proxectonos/Nos_StyleTTS2-Brais-GL]. Contacto oficial de 
 **Cómo convertirlo en apoyo.**
 1. **Preguntar antes de publicar con la voz**, con el correo del §5, firmado con nombre real (anonimato solo ante el
    público).
-2. **Ofrecer cambiar de voz** si lo prefieren (p. ej. a una voz cuyo consentimiento cubra usos públicos, si la hay), y
-   dejar en sus manos la conversación con el locutor.
+2. **Ofrecer cambiar de voz** si lo prefieren, y dejar en sus manos la conversación con el locutor. Hay alternativa
+   dentro del propio Nós: los modelos VITS/Matcha de **Sabela** (locutora profesional de radio, 14 h 28 min), **Icía**
+   (aficionada, 4 h) e **Iago** (aficionado, 1 h 13 min), entrenados con el corpus CRPIH_UVigo-GL-Voices, licencia
+   CC-BY 4.0, cuyas grabaciones los locutores "donaron" según la ficha [F
+   https://zenodo.org/records/8027725; https://huggingface.co/proxectonos/Nos_TTS-sabela-vits-phonemes;
+   https://huggingface.co/proxectonos/Nos_TTS-icia-vits-phonemes; https://huggingface.co/proxectonos/Nos_TTS-iago-vits-phonemes].
+   No son voces de actores de dobraxe, así que no chocan con PASAVE ni con ADA. Coste: son arquitecturas anteriores
+   (VITS/Matcha) y su calidad en narración de 60 min está sin medir; puede ser claramente peor que StyleTTS2 [S].
+   Sabela es voz profesional (de radio): acreditarla también y no darla por "libre de persona".
 3. **Preguntarles cómo quieren que se marque el texto sintético** para no contaminar sus corpus: es la pregunta que
    demuestra que se entiende su trabajo.
 4. **Entregar datos, no solo pedir:** informe trimestral de errores (formato del §2.2) y el código del pipeline.
@@ -439,7 +447,7 @@ Relojes: S0 = esta semana (29-09-2026). M0 = primera publicación (≈ 8-10 sema
 | Fase | Cuándo | Con quién | Qué se hace | Qué NO se hace | Resultado que se busca |
 |---|---|---|---|---|---|
 | **0. Permiso** | S0-S1 | Proxecto Nós (`proxecto.nos@usc.gal`), copia a Gradiant | Enviar el correo del §5 con nombre real | Contactar al locutor directamente; publicar con su voz | Respuesta escrita: sí / sí con condiciones / no |
-| **0-bis. Espera** | S1-S5 | — | Construir el MVP; si no hay respuesta en 30 días, un recordatorio breve | Publicar con Brais antes de respuesta o de 30 días de silencio **anunciados en el correo** | Decisión de voz |
+| **0-bis. Espera** | S1-S5 | — | Construir el MVP; probar en paralelo Sabela, Icía e Iago en un tramo de 60 min; si no hay respuesta en 30 días, un recordatorio breve | Publicar con Brais sin un sí escrito de Nós | Decisión de voz |
 | **1. Preparación** | Antes de M0 | — | Página "Como se fai *Serán*"; formulario de erratas; métricas del §2.2; comparación Carballo vs. cerrado | Buscar prensa; usar "calidade" en textos | Todo listo para responder a una crítica el primer día |
 | **2. Aviso previo** | M0 − 1 semana | AGPTI y ADA (solo si Nós y el locutor dijeron sí) | Carta informativa breve: qué es, qué voz y con qué permiso, compromiso de revisión profesional si hay ingresos | Pedir apoyo o aval | Que se enteren por el canal, no por la prensa |
 | **3. Comunidad técnica** | M0 | Trasno, GALPon, AGASOL, Common Voice gl | Publicar el código y un artículo técnico en galego; invitar a revisar la lista de castellanismos | Presentarlo como "producto" | Primeros correctores y usuarios del pipeline |
@@ -452,17 +460,21 @@ Relojes: S0 = esta semana (29-09-2026). M0 = primera publicación (≈ 8-10 sema
 - **Sí sin condiciones:** crédito con su fórmula; informe trimestral de errores.
 - **Sí para hobby, no para monetizar:** publicar sin monetización con Brais; la P4 (YPP) queda bloqueada hasta nuevo
   permiso o cambio de voz. Encaja con D6.
-- **Sí si consiente el locutor:** esperar a que Nós traslade la petición; mientras, voz de reserva.
-- **No:** cambiar a otra voz con permiso claro (proveedor gl-ES con licencia, `plan-desatendido.md` P0-bis) o a otra
-  de Nós que ellos indiquen; agradecer y ofrecer igualmente los datos de error de ASR y texto.
-- **Silencio a 30 días:** recordatorio; a 45 días, publicar **sin monetizar** con aviso en la descripción ("solicitouse
-  permiso ao Proxecto Nós o [data]; retirarase a voz se o piden"), o usar la voz de reserva. Decisión del promotor;
-  recomiendo la voz de reserva si la diferencia de calidad es pequeña [S].
+- **Sí si consiente el locutor:** esperar a que Nós traslade la petición; mientras, voz de reserva (la mejor de
+  Sabela, Icía o Iago en la prueba de 60 min).
+- **No:** cambiar a otra voz con permiso claro: primero Sabela, Icía o Iago (CC-BY 4.0, locutores no de dobraxe),
+  preguntando a Nós si lo ven bien; si ninguna aguanta 60 min, proveedor gl-ES con licencia (`plan-desatendido.md`
+  P0-bis). Agradecer y ofrecer igualmente los datos de error de ASR y texto.
+- **Silencio a 30 días:** recordatorio breve. **Silencio tras el recordatorio:** publicar con la voz de reserva
+  (Sabela, Icía o Iago), acreditada según la licencia CC-BY 4.0, y **nunca con Brais** hasta tener respuesta. Es lo
+  que dice el correo ("usaría outra voz ata que puidésemos falalo"); no hay opción de publicar con Brais por
+  silencio.
 
 **Cambio respecto a `plan-desatendido.md` §9 (P0):** allí la respuesta de Nós "no es necesaria para publicar como
-hobby sin monetizar". Aquí se recomienda **no publicar con la voz de Brais antes de la respuesta o del plazo
-anunciado**. Motivo: pedir permiso y publicar sin esperarlo es peor que no pedirlo (el mensaje recibido es "pregunto
-por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que el plazo.
+hobby sin monetizar". Aquí se recomienda **no publicar con la voz de Brais sin un sí de Nós**, y usar mientras tanto
+una voz de reserva. Motivo: pedir permiso y publicar sin esperarlo es peor que no pedirlo (el mensaje recibido es "pregunto
+por cortesía, pero me da igual"). Coste: bajo, porque el MVP tarda más que el plazo y, en el peor caso, se lanza con una voz de
+reserva algo peor y se cambia a Brais cuando llegue el sí.
 
 **Alarmas nuevas para `plan-desatendido.md` §10** (propuesta):
 - **A7:** una asociación profesional (AGPTI, ADA) o un medio cita el canal como ejemplo negativo → pausa de 2 semanas,
@@ -489,7 +501,7 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
 >
 > A canle faise cun proceso automático construído con ferramentas abertas, e o voso traballo é a peza central: a voz
 > é o modelo **Nos_StyleTTS2-Brais-GL**, o control de pronuncia faise co Whisper en galego do Proxecto Nós, e
-> queremos probar tamén os vosos modelos de lingua para redactar os guións. Antes de publicar nada con esa voz
+> quero probar tamén os vosos modelos de lingua para redactar os guións. Antes de publicar nada con esa voz
 > quería preguntarvos directamente, porque sei que o modelo ten licenza Apache 2.0, pero os datos de voz de Brais
 > teñen condicións de uso para investigación e, sobre todo, porque detrás hai unha persoa.
 >
@@ -503,9 +515,9 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
 >    dos ingresos se algún día os houbese.
 > 3. Como preferides que figure o crédito (por exemplo: "Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto
 >    Nós (USC), desenvolvido por Gradiant, licenza Apache 2.0").
-> 4. Como preferides que marquemos os textos (descricións, subtítulos e guións) para que non acaben nos corpus de
+> 4. Como preferides que marque os textos (descricións, subtítulos e guións) para que non acaben nos corpus de
 >    adestramento como se fosen galego revisado. Os guións xéraos unha IA e non hai revisión humana previa, e
->    preocúpame non contribuír a empeorar os datos cos que traballades.
+>    preocúpame contribuír a empeorar os datos cos que traballades.
 >
 > A cambio, gustaríame devolvervos algo útil:
 >
@@ -520,8 +532,9 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
 > A canle publicarase co nome da canle e sen o meu nome. Pídovos, se non vos importa, que non fagades público quen
 > está detrás; vós si sabedes con quen falades, e contestarei a calquera cousa que precisedes.
 >
-> Non publicarei nada coa voz de Brais ata ter a vosa resposta. Se nun mes non souben de vós, volverei escribir; e se
-> despois dese tempo seguise sen resposta, usaría outra voz ata que poidamos falalo.
+> Non publicarei nada coa voz de Brais ata ter a vosa resposta. Se nun mes non sei nada de vós, volverei escribir; e
+> se despois diso seguise sen resposta, usaría outra voz ata que puidésemos falalo, por exemplo algunha das voces do
+> corpus CRPIH_UVigo-GL-Voices (Sabela, Icía ou Iago), se vos parece ben.
 >
 > Moitas grazas polo traballo que facedes. Grazas a Nós é posible pensar en facer isto en galego.
 >
@@ -535,8 +548,10 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
 - Adjuntar una **muestra corta** (2-3 min) con el aviso hablado incluido, en enlace privado. No enviar el vídeo entero.
 - Si Nós pide hablar por teléfono o en persona, aceptar: es la mejor señal posible.
 - El compromiso "non publicarei nada coa voz de Brais ata ter a vosa resposta" **obliga**: si se envía, se cumple
-  (ver §4, fase 0-bis). Si el promotor no quiere comprometerse, hay que borrar esa frase y aceptar el coste
-  reputacional descrito en el §4.
+  (ver §4, fase 0-bis y "Silencio tras el recordatorio"). No hay plazo tras el cual se use Brais sin respuesta. Si
+  el promotor no quiere comprometerse, hay que borrar esa frase y aceptar el coste reputacional descrito en el §4.
+- Antes de enviar, escuchar Sabela, Icía e Iago en un tramo de narración: el correo las nombra como alternativa y
+  conviene saber si aguantan.
 - Revisar el texto con un galegofalante antes de enviarlo (es el primer "producto" que verá Nós).
 
 ---
@@ -546,7 +561,7 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
 | # | Riesgo | Prob. / impacto [S] | Mitigación | Sección |
 |---|---|---|---|---|
 | E1 | El locutor o ADA descubren la voz sin haber sido preguntados | Media sin D4 / alto | D4 antes de publicar; Nós traslada la consulta; cambio de voz en ≤ 30 días | §1.7, §4 |
-| E2 | Nós pide no usar su nombre o su voz | Baja-media / medio | Voz de reserva lista; agradecer; seguir ofreciendo datos | §4 |
+| E2 | Nós pide no usar su nombre o su voz | Baja-media / medio | Voz de reserva lista (Sabela, Icía o Iago, CC-BY 4.0, probadas en 60 min); agradecer; seguir ofreciendo datos | §1.1, §4 |
 | E3 | Crítica pública de AGPTI/ADA/A Mesa ("IA contra o galego") | Media si hay eco / alto | Aviso previo; no sustitución; compromiso de revisión profesional; alarma A7 | §1.6-1.8 |
 | E4 | Titular "canle anónima de slop" | Media / medio | Página de transparencia; seudónimo con responsable conocido por Nós | §3, §1.11 |
 | E5 | Comparación con el caso Caamaño | Baja / alto | Nunca recrear personas ni voces de personas concretas | §1.2 |
@@ -568,6 +583,8 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
    revisó Hugging Face].
 6. Que la RAG permite consultar su diccionario de forma automatizada para el control de palabras [S; revisar sus
    términos antes].
+7. Que alguna de las voces Sabela, Icía o Iago (VITS/Matcha) aguanta 60 min de narración con calidad aceptable; si
+   ninguna lo hace, la reserva pasa a ser un proveedor gl-ES con licencia [S; sin medir].
 
 ---
 
@@ -581,6 +598,8 @@ por cortesía, pero me da igual"). Coste: ninguno, porque el MVP tarda más que 
 - Listado de conjuntos de datos de Nós (63): https://huggingface.co/api/datasets?author=proxectonos
 - Errores sistemáticos ES-GL: https://huggingface.co/datasets/proxectonos/erros_sistematicos_traducion_es_gl
 - Corpus CC0 (incluye guiones de la TVG): https://huggingface.co/datasets/proxectonos/nos_gl_CC0
+- Corpus CRPIH_UVigo-GL-Voices (Sabela: locutora profesional de radio; Icía, Iago, Paulo: aficionados; CC-BY 4.0): https://zenodo.org/records/8027725 ; https://huggingface.co/datasets/proxectonos/CRPIH_UVigo-GL-Voices_extended
+- Modelos TTS de Sabela, Icía e Iago (Apache-2.0): https://huggingface.co/proxectonos/Nos_TTS-sabela-vits-phonemes ; https://huggingface.co/proxectonos/Nos_TTS-icia-vits-phonemes ; https://huggingface.co/proxectonos/Nos_TTS-iago-vits-phonemes
 - Agradecimientos TTS de Nós: https://tts.nos.gal/agradecementos
 - Nós, "a IA ao servizo da lingua": https://www.lingua.gal/recursos/todos/_/promovelo/contido_607/nos-intelixencia-artificial-servizo-lingua-galega ; https://nos.gal/en/proxecto-nos/news/usc-xunta-ponen-intelixencia-artificial-servizo-lingua-galega-traves-proxecto
 - Campaña "Doa galego": https://praza.gal/ciencia-e-tecnoloxia/doa-galego-o-proxecto-nos-busca-voces-para-acadar-1000-horas-de-gravacion
