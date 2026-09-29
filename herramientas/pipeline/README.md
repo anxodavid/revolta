@@ -22,8 +22,13 @@ intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si
   desatendida** aunque el README y el qa.md de entonces lo decían. Su QA daba PUBLICABLE 9/9 sin mirar el contenido de
   las imágenes: el plano final tenía cuatro manos (un par sin cuerpo), una aldea con ventanas de vidrio y balcones y una
   multitud con picas y cruces.
-- **Ronda 2 (esta versión)**: `--llm openai` contra un LLM local arrancado por el propio pipeline, en un directorio de
-  trabajo vacío, y puerta automática de imágenes con regeneración. El modo `manual` queda solo para depurar prompts.
+- **Ronda 2 (esta versión)**: `--llm openai` contra un LLM local (EuroLLM-9B) arrancado por el propio pipeline, en un
+  directorio de trabajo vacío, y puerta automática de imágenes con regeneración. Ninguna respuesta del LLM ni ninguna
+  imagen se tocó a mano. El mismo comando se relanzó 4 veces en el mismo directorio para corregir código (cortes de
+  plano, reservas y lista del revisor, bloqueo de la montaje, esqueletos y hogueras que la lista no cubría). Las etapas
+  ya hechas se leyeron de la caché de esa misma ejecución. Todo está detallado en la nota de `qa.md` y en
+  `video/execucion/logs/`. **Veredicto automático: NON PUBLICABLE** (10/12 puertas): falla lengua (11 avisos de
+  LanguageTool) y H1 (1 falso positivo del tokenizador). El modo `manual` queda solo para depurar prompts.
 
 ## Etapas
 
@@ -45,10 +50,12 @@ intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si
    también falla.
 2. **Lista de anacronismos y vetos** sobre la descripción detallada y los objetos que ve **Florence-2-large** (MIT):
    ventanas de vidrio, balcones, tejados rojos o de teja, vehículos, objetos modernos (farolas, relojes, cables...),
-   interiores modernos (dormitorios, lámparas, cortinas), texto o letras, cruces portadas, armas de fuego, sangre o
-   edificios ardiendo.
+   interiores modernos (dormitorios, lámparas, cortinas), texto o letras (también "writing"), cruces portadas, armas de
+   fuego, sangre, edificios ardiendo, esqueletos, calaveras o cadáveres y hogueras grandes en el exterior. Las
+   vidrieras góticas ("stained glass") no cuentan como ventanas modernas. `VERSION` sube cuando cambia la lista, y
+   `imaxes.py` vuelve a revisar las imágenes guardadas con una versión anterior.
 
-**Calibración con las 15 imágenes de la ronda 1** (`probas/revisor_ronda1.jsonl`): marca la del cierre con cuatro
+**Calibración con las 15 imágenes de la ronda 1** (`probas/revisor_ronda1.jsonl`, versión 3): marca 9 de 15, entre ellas la del cierre con cuatro
 manos ("man sen corpo"), la aldea de 1:15 (tejados), la multitud con cruces, el dormitorio moderno, el reloj de la torre
 y los pueblos de tejado rojo. Deja pasar paisajes, el anciano junto al fuego y los caminantes. Coste: ≈20 s por imagen
 en CPU (dos pasadas de Florence-2) además de ≈16 s de generación.
@@ -110,7 +117,15 @@ deformes o ropas anacrónicas que Florence-2 no nombre.
   contenedor, así que no hay ruedas precompiladas), y el GGUF de EuroLLM (5,6 GB).
 - StyleTTS2 de Nós, Cotovía y ASR: ver `herramientas/voz/README.md` y las variables de `CFG` en `pipeline.py`.
 
-## Medidas de la muestra
+## Medidas de la muestra (29-09-2026, ronda 2)
+
+Vídeo de 3 min 24 s, 24 planos (9 en el primer minuto), 30,4 MB, -17,1 LUFS, WER de la mezcla 0,026, sincronía de
+subtítulos 100 %. Puerta de imágenes: 43 imágenes generadas para 24 planos; 18 aprobadas a la primera, 6 tras
+regenerar (una con el prompt genérico de reserva) y 0 sin aprobar. Tiempo acumulado: 91,7 min de reloj y **4,69 h de
+CPU de núcleo**, de las que 1,69 h son del LLM local (28 llamadas, 2-4 tokens/s de salida y 5-12 tokens/s de lectura
+de prompt). No se cuentan unos 30 min de trabajo interrumpido por los relanzamientos. Extrapolación lineal a 60 min:
+≈27 h de reloj y ≈83 h de CPU [S]. Con estos números, un episodio de 60 min no cabe en una noche de esta máquina: o
+se paraleliza (dos máquinas, o GPU), o se bajan los intentos de imagen y las llamadas al LLM.
 
 Ver `plan-de-negocio/gauntlet2/video/qa.md` (tiempos por etapa con el CPU del servidor LLM incluido, llamadas al LLM
 con tokens y segundos, puerta de imágenes con los intentos rechazados) y `comparacion-llm.md` (guion del LLM local
@@ -133,3 +148,7 @@ frente al de Claude de la ronda 1 con los mismos controles).
 - Las imágenes se generan a 1024x576 y se reescalan: en pantalla grande se ven algo blandas.
 - La niebla se repite cada ~6,4 min.
 - Whisper escribe a veces el galego con grafías portuguesas, lo que infla el WER.
+- Puerta de imágenes (ronda 2): Florence-2 no nombra detalles pequeños, así que pasan tejados rojos lejanos en algún
+  plano (p. ej., el primero). Cuando el LLM pide una escena que la lista veta por diseño (un escriba escribiendo, una
+  torre en llamas), la imagen de reserva genérica encaja peor con lo que se narra. Los prompts de escenas llegaron con
+  `**` de Markdown del LLM y el código no los limpia todavía.
