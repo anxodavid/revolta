@@ -1,0 +1,138 @@
+"""Etapa MONTAXE: Ken Burns lento + brétema animada + viñeta + fundidos longos, 1920x1080 a 24 fps.
+
+Os fotogramas xéranse en Python (PIL + numpy) en 4 procesos en paralelo, cada un codifica o seu
+treito sen perdas visibles (x264 crf 14) e logo concaténanse e codifícase a versión final co audio
+e cos subtítulos galegos como pista aparte (mov_text, lingua glg) ou queimados (--queimar-subtitulos).
+"""
+import os, subprocess, math
+from multiprocessing import Pool
+from pathlib import Path
+import numpy as np
+from PIL import Image, ImageFilter
+import imageio_ffmpeg
+
+FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
+OW, OH, FPS = 1920, 1080, 24
+SW, SH = 2400, 1350          # imaxe fonte reescalada (1,25x a saída) para o movemento
+ZOOM = 1.12                   # percorrido máximo do zoom/paneo
+XF = 3.0                      # fundido encadeado entre escenas (s)
+NEBOA = 0.13                  # opacidade máxima da brétema
+
+_G = {}
+
+
+def _fog(seed=3):
+    rng = np.random.default_rng(seed)
+    w = OW * 3
+    acc = np.zeros((OH, w), np.float32)
+    for (gh, gw, amp) in [(6, 48, 1.0), (12, 96, 0.5), (24, 192, 0.25)]:
+        small = Image.fromarray((rng.random((gh, gw)) * 255).astype(np.uint8))
+        acc += np.asarray(small.resize((w, OH), Image.BICUBIC), np.float32) / 255 * amp
+    acc = (acc - acc.min()) / (acc.max() - acc.min())
+    acc = np.clip((acc - 0.35) / 0.65, 0, 1) ** 1.5
+    grad = np.linspace(0.45, 1.0, OH, dtype=np.float32)[:, None]
+    return acc * grad
+
+
+def _vignette():
+    y, x = np.mgrid[0:OH, 0:OW].astype(np.float32)
+    r = np.sqrt(((x - OW / 2) / (OW / 2)) ** 2 + ((y - OH / 2) / (OH / 2)) ** 2)
+    return np.clip(1 - 0.28 * np.clip(r - 0.55, 0, None) ** 1.6, 0, 1)
+
+
+def _init(imgs):
+    _G['src'] = {}
+    for i, p in enumerate(imgs):
+        im = Image.open(p).convert('RGB').resize((SW, SH), Image.LANCZOS)
+        _G['src'][i] = im.filter(ImageFilter.UnsharpMask(radius=2, percent=40, threshold=2))
+    _G['fog'] = _fog(); _G['vig'] = _vignette()[..., None]
+
+
+def _crop(mov, u):
+    """Caixa de recorte (x0, y0, x1, y1) na fonte para o progreso u en [0, 1]."""
+    full_w, full_h = SW, SH
+    if mov == 'zoom_in':
+        z = 1 + (ZOOM - 1) * u
+    elif mov == 'zoom_out':
+        z = ZOOM - (ZOOM - 1) * u
+    else:
+        z = ZOOM
+    w, h = full_w / z, full_h / z
+    cx, cy = full_w / 2, full_h / 2
+    mx, my = (full_w - w) / 2, (full_h - h) / 2
+    if mov == 'pan_left':
+        cx = full_w / 2 + mx * (1 - 2 * u)
+    elif mov == 'pan_right':
+        cx = full_w / 2 - mx * (1 - 2 * u)
+    elif mov == 'pan_up':
+        cy = full_h / 2 + my * (1 - 2 * u)
+    return (cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2)
+
+
+def _frame(t, esc, dur):
+    acc = None
+    for k, e in enumerate(esc):
+        a0, a1 = e['vis']
+        if not (a0 <= t < a1):
+            continue
+        u = (t - a0) / (a1 - a0)
+        im = np.asarray(_G['src'][k].transform((OW, OH), Image.EXTENT, _crop(e['movemento'], u),
+                                               resample=Image.BILINEAR), np.float32)
+        alpha = 1.0
+        if k > 0 and t < e['b0'] + XF / 2:
+            alpha = (t - (e['b0'] - XF / 2)) / XF
+        acc = im if acc is None else acc * (1 - alpha) + im * alpha
+    fog = _G['fog'][:, int(t * 10) % (OW * 2): int(t * 10) % (OW * 2) + OW]
+    a = NEBOA * (0.75 + 0.25 * math.sin(t / 9.0))
+    f = fog[..., None] * a
+    out = acc * (_G['vig'] * (1 - f)) + f * np.array([215, 220, 226], np.float32)
+    fade = min(1.0, t / 2.5, (dur - t) / 4.0)
+    if fade < 1:
+        out *= max(fade, 0)
+    return np.clip(out, 0, 255).astype(np.uint8)
+
+
+def _chunk(args):
+    idx, f0, f1, esc, dur, imgs, out = args
+    _init(imgs)
+    cmd = [FFMPEG, '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{OW}x{OH}',
+           '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '14',
+           '-pix_fmt', 'yuv420p', out]
+    p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    for fr in range(f0, f1):
+        p.stdin.write(_frame(fr / FPS, esc, dur).tobytes())
+    p.stdin.close(); p.wait()
+    return out
+
+
+def render(escenas, imgs, dur, audio, srt, out, work, procs=4, queimar=False, vbr='1100k'):
+    """escenas: [{'b0': inicio, 'b1': fin, 'movemento': ...}] sobre a liña de tempo final."""
+    work = Path(work); work.mkdir(parents=True, exist_ok=True)
+    esc = []
+    for k, e in enumerate(escenas):
+        a0 = max(0.0, e['b0'] - XF / 2); a1 = min(dur, e['b1'] + XF / 2)
+        esc.append({**e, 'vis': (a0, a1)})
+    nf = int(round(dur * FPS))
+    step = math.ceil(nf / procs)
+    jobs = [(i, i * step, min(nf, (i + 1) * step), esc, dur, imgs, str(work / f'treito_{i}.mp4'))
+            for i in range(procs) if i * step < nf]
+    with Pool(len(jobs)) as pool:
+        parts = pool.map(_chunk, jobs)
+    lst = work / 'treitos.txt'
+    lst.write_text(''.join(f"file '{p}'\n" for p in parts))
+    vf = []
+    if queimar:
+        vf = ['-vf', f"subtitles={srt}:force_style='FontSize=20,Outline=1,Shadow=0,MarginV=40'"]
+    cmd = [FFMPEG, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', str(lst), '-i', audio]
+    if not queimar:
+        cmd += ['-i', srt]
+    cmd += ['-map', '0:v', '-map', '1:a'] + ([] if queimar else ['-map', '2:s']) + vf + [
+        '-c:v', 'libx264', '-preset', 'slow', '-crf', '22', '-maxrate', vbr, '-bufsize', '2200k',
+        '-pix_fmt', 'yuv420p', '-r', str(FPS), '-c:a', 'aac', '-b:a', '128k', '-ar', '48000']
+    if not queimar:
+        cmd += ['-c:s', 'mov_text', '-metadata:s:s:0', 'language=glg']
+    cmd += ['-metadata:s:a:0', 'language=glg', '-movflags', '+faststart', '-shortest', str(out)]
+    subprocess.run(cmd, check=True)
+    for p in parts:
+        os.remove(p)
+    return out

@@ -1,0 +1,1 @@
+{"backend": "manual", "model": "Claude Opus 5.5 (claude-opus-5-5) actuando como LLM do pipeline", "data": "2026-09-29", "nota": "Resposta ao prompt renderizado llm_pending/corrixir-29a6ee9f9e7b.prompt.md: acepta REFLEXIVOS (demorarse -> queda); considera falsos positivos a concordancia de Esta noite imos, e camiñaran xuntos (suxeito os vasalos)."}
