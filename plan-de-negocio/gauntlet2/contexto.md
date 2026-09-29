@@ -84,3 +84,13 @@ El promotor sospecha que el nicho (gente que consume en galego contenido de hist
    (vistas, retención, % de audiencia en galego, suscriptores, comentarios) y **qué umbral concreto declara el nicho
    inexistente y manda parar**.
 4. Los críticos y el tribunal deben suspender cualquier pieza que esquive esta pregunta o la conteste sin cifras.
+
+## Decisión del promotor: explorar pistas de audio multilingües (29-09-2026)
+- **Aprobado explorarlo** (sustituye al "aún no decidido" anterior): vídeo con **pista original en galego** y pistas
+  adicionales en **portugués** (el más natural por cercanía lingüística y cultural: pt-PT y/o pt-BR), **castellano** e **inglés**.
+- El plan debe estimar el nicho (c) con estas cuatro lenguas: audiencias, competencia de canales de historia/"para dormir"
+  en cada idioma, coste y calidad del TTS open source en pt/es/en, traducción automática gl→pt/es/en con control de
+  calidad automático, y cómo funcionan y cuentan en YouTube las pistas multi-audio (métricas consolidadas, descubrimiento).
+- Riesgo a tratar: que el galego acabe siendo una pista marginal. La identidad del canal sigue siendo galega
+  (título/miniatura/pista por defecto a decidir con datos) y eso encaja con la tesis pro lingua.
+- Si es barato y viable, el pipeline puede añadir al vídeo de ejemplo al menos una pista extra (portugués) como prueba.

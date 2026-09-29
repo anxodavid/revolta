@@ -1,0 +1,141 @@
+# Saída do extractor (LLM: Claude Opus 5.5 actuando como LLM do pipeline, prompts/dossier.md), 29-09-2026, sen edición humana.
+- fontes: [GL-MOST]
+  feito: O mosteiro de San Xulián de Samos é un mosteiro medieval fundado no século sexto.
+  cita: "é un mosteiro medieval fundado no século VI"
+- fontes: [GL-MOST]
+  feito: Segundo a tradición, fundouno Martiño de Dumio.
+  tipo: lenda
+  cita: "segundo a tradición por Martiño de Dumio"
+- fontes: [GL-MOST]
+  feito: Chegou a ser un dos mosteiros de maior importancia de Galicia e hoxe está en bo estado de conservación.
+  cita: "que chegou a ser un dos de maior importancia de Galicia , e que na actualidade se atopa en bo estado de conservación"
+- fontes: [GL-MOST]
+  feito: Pertence á orde dos beneditinos e está no concello de Samos, na provincia de Lugo.
+  cita: "Pertence á orde dos beneditinos e está no concello de Samos"
+- fontes: [GL-MOST]
+  feito: Froitoso de Braga renovouno no século sétimo.
+  cita: "foi renovado por Froitoso de Braga no século VII"
+- fontes: [GL-MOST, ES-MOST]
+  feito: O primeiro escrito que o menciona é unha inscrición nos muros do claustro da portaría, que di que o reconstruíu o bispo de Lugo Ermefredo.
+  cita: "unha inscrición nos muros do claustro da portaría que di que foi reconstruído polo bispo de Lugo Ermefredo"
+- fontes: [GL-MOST]
+  feito: Despois foi abandonado coa invasión musulmá, ata a reconquista do rei Froila I.
+  cita: "foi abandonado coa invasión musulmá , até a reconquista do rei Froila I das Asturias"
+- fontes: [GL-MOST]
+  feito: Cando asasinaron a Froila, a súa viúva e o seu fillo, o futuro Afonso II o Casto, atoparon refuxio no mosteiro.
+  cita: "atoparon refuxio nel a súa viúva e o seu fillo, o futuro Afonso II, o Casto"
+- fontes: [GL-SAMOS]
+  feito: O futuro rei Afonso II pasou alí a adolescencia.
+  cita: "Nel pasou a súa adolescencia o futuro rei Afonso II o Casto"
+- fontes: [GL-MOST]
+  feito: Así gañou a protección real, empezando por propiedades de media milla á redonda.
+  cita: "Gañou con isto a protección real, comezando polas propiedades en media milla á redonda"
+- fontes: [GL-MOST]
+  feito: A comezos do século décimo o bispo Ero de Lugo quixo facerse co mosteiro e expulsou os monxes.
+  cita: "A comezos do século X o bispo Ero de Lugo tentou facerse co seu control e expulsou os monxes"
+- fontes: [ES-MOST]
+  feito: Os condes Arias e Gutierre Menéndez repoboaron o mosteiro con monxes novos.
+  cita: "fueron requeridos para repoblar el monasterio con nuevos monjes"
+- fontes: [GL-MOST]
+  feito: No mesmo século volveu ocuparse por vontade do rei Ordoño II.
+  cita: "no mesmo século foi reocupado a instancias do rei Ordoño II"
+- fontes: [GL-MOST]
+  feito: Desde o ano novecentos sesenta a comunidade viviu baixo a regra de San Bieito.
+  cita: "Desde 960 a comunidade viviu baixo a regra de San Bieito"
+- fontes: [GL-MOST]
+  feito: No século doce sumouse á reforma cluniacense.
+  cita: "no século XII durante o bispado de Xoán de Lugo, se sumou á reforma cluniacense"
+- fontes: [GL-MOST, ES-MOST]
+  feito: Na Idade Media tivo moita importancia; posuía duascentas vilas e quiñentos lugares.
+  cita: "posuía duascentas vilas e quiñentos lugares"
+- fontes: [GL-SAMOS]
+  feito: O papa Alexandre III concedeulle unha bula con dereitos e rendas sobre moitas igrexas de todo o reino.
+  cita: "o papa Alexandre III lle concedeu unha bula no ano 1175 outorgándolle dereitos e rendas sobre 105 igrexas de todo o reino"
+- fontes: [GL-MOST]
+  feito: No ano mil cincocentos cincuenta e oito un incendio obrigou a reconstruílo enteiro.
+  cita: "En 1558 , incorporado xa a San Benito El Real de Valladolid , sufriu un incendio que obrigou á súa total reedificación"
+- fontes: [GL-MOST]
+  feito: A comunidade foi exclaustrada en mil oitocentos trinta e cinco.
+  conflito: true
+  cita: "A comunidade foi exclaustrada en 1835"
+- fontes: [ES-MOST]
+  feito: A comunidade foi exclaustrada en mil oitocentos trinta e seis, coa desamortización de Mendizábal.
+  conflito: true
+  cita: "La comunidad fue exclaustrada en 1836, con la desamortización de Mendizábal"
+- fontes: [GL-MOST]
+  feito: Os monxes beneditinos volveron en mil oitocentos oitenta.
+  cita: "os monxes beneditinos regresaron en 1880"
+- fontes: [GL-MOST]
+  feito: En setembro de mil novecentos cincuenta e un sufriu outro incendio e reconstruíuse.
+  cita: "Sufriu outro incendio en setembro de 1951 , tras o que foi reconstruído"
+- fontes: [GL-MOST]
+  feito: O escritor Ramón Cabanillas viviu alí un tempo e dedicoulle a súa última obra publicada en vida.
+  cita: "Neste mosteiro residiu un tempo o escritor cambadés Ramón Cabanillas"
+- fontes: [GL-MOST]
+  feito: No mosteiro hai tres estilos, o gótico tardío, o renacentista e o barroco.
+  cita: "Nel atópanse tres estilos arquitectónicos, o gótico tardío, o renacentista e o barroco"
+- fontes: [GL-MOST]
+  feito: A igrexa barroca construíuse entre mil setecentos trinta e catro e mil setecentos corenta e oito.
+  cita: "A igrexa , barroca , foi construída entre 1734 e 1748"
+- fontes: [GL-MOST]
+  feito: O interior da igrexa é luminoso e solemne, e a bóveda ilumínana oito óculos.
+  cita: "O interior é luminoso e solemne. A bóveda está iluminada por oito óculos"
+- fontes: [GL-MOST]
+  feito: A fachada vai precedida dunha escalinata en forma de lazo que lembra a do Obradoiro.
+  cita: "vai precedida dunha escalinata en forma de lazo que recorda a do Obradoiro"
+- fontes: [GL-MOST]
+  feito: A biblioteca mide trinta e un metros de longo e garda uns vinte e cinco mil volumes.
+  cita: "A biblioteca, de 31 m. de longo, conta cun fondo de 25.000 volumes"
+- fontes: [GL-MOST]
+  feito: O Claustro Grande construíuse entre mil seiscentos oitenta e cinco e mil seiscentos oitenta e nove e é o maior de España.
+  cita: "O Claustro Grande foi construído entre 1685 e 1689 e ten 3.000 m² (54 m de lado), polo que é o maior de España"
+- fontes: [GL-MOST]
+  feito: Chámase do padre Feijoo porque este tomou alí o hábito beneditino.
+  cita: "por tomar este o hábito beneditino neste mosteiro en 1690"
+- fontes: [GL-MOST]
+  feito: Preside o claustro unha estatua de Feijoo feita por Francisco Asorey.
+  cita: "está presidido por unha estatua súa, obra de Francisco Asorey"
+- fontes: [GL-MOST]
+  feito: O Claustro Pequeno, ou das Nereidas, construíuse entre mil cincocentos trinta e nove e mil cincocentos oitenta e dous.
+  cita: "O Claustro Pequeno ou \"das Nereidas \" foi construído entre 1539 e 1582"
+- fontes: [GL-MOST]
+  feito: Nunha clave do Claustro Pequeno hai unha inscrición de broma que di "¿Qué miras, bobo?".
+  cita: "como a inscrición humorística \"¿Qué miras, bobo?\" nunha clave"
+- fontes: [GL-MOST]
+  feito: No centro do Claustro Pequeno está a fonte barroca das Nereidas.
+  cita: "O centro do claustro ocúpao a fonte barroca das Nereidas"
+- fontes: [GL-MOST]
+  feito: O mosteiro é parada importante do Camiño de Santiago porque ten hospedaría.
+  cita: "é parada importante do Camiño de Santiago , xa que conta cunha hospedaría"
+- fontes: [GL-SAMOS]
+  feito: Moitos peregrinos desvíanse do camiño entre Triacastela e Sarria para visitar o mosteiro.
+  cita: "moitos peregrinos desvíanse do camiño de Santiago entre Triacastela e Sarria para visitar o Mosteiro"
+- fontes: [GL-CAPELA]
+  feito: Detrás do mosteiro está a capela de San Salvador, ou do Ciprés, unha construción sinxela do século noveno.
+  cita: "é unha sinxela construción relixiosa que data do século IX e que se atopa tras do mosteiro de Samos"
+- fontes: [GL-CAPELA]
+  feito: Dentro da capela hai frescos do século décimo con cruces, portadas e decoracións florais.
+  cita: "O interior agocha uns importantes frescos, datados no século X que representan cruces, portadas, alfices"
+- fontes: [GL-CAPELA]
+  feito: A capela está abrazada polo río, e pode que estea onde estaba o primeiro mosteiro.
+  tipo: lenda
+  cita: "pode levar a pensar que a capela se sitúa onde estaba o primeiro mosteiro de Samos"
+- fontes: [GL-CAPELA]
+  feito: Co tempo a capela quedou abandonada e serviu de alpendre para gardar aveños do campo.
+  cita: "foi un pendello onde se gardaban aveños de traballar no campo"
+- fontes: [GL-CAPELA]
+  feito: Leva o nome dun ciprés próximo de vinte e sete metros de altura.
+  cita: "A capela recibe este nome por un ciprés próximo de 27 m de altura"
+- fontes: [GL-SAMOS]
+  feito: Samos está nas serras orientais de Galicia; o relevo é moi accidentado e a altitude media pasa dos setecentos metros.
+  cita: "O relevo é moi accidentado; a altitude media é superior aos 700 m."
+- fontes: [GL-SAMOS]
+  feito: O nome vén de Samanos, que quizais se refire a un lugar habitado por unha comunidade relixiosa.
+  tipo: lenda
+  cita: "O nome provén de Samanos , que posibelmente fai referencia a un lugar habitado por unha comunidade relixiosa"
+- fontes: [GL-SAMOS]
+  feito: Nos séculos dezasete e dezaoito fixéronse moitas obras que lle deron a arquitectura actual.
+  cita: "Nos séculos XVII e XVIII leváronse a cabo numerosas obras nel, dándolle a súa arquitectura actual"
+- fontes: [GL-SAMOS]
+  feito: Polo concello baixa o río Sarria, afluente do Miño.
+  cita: "O río Sarria , afluente do Miño , drena a vertente occidental"
