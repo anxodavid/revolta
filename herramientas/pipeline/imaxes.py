@@ -2,8 +2,8 @@
 
 Para cada plano: xera, revisa (revisor.py) e, se a revisión falla, rexenera con outra semente. Desde o
 intento INTENTO_PRUDENTE engade ao prompt unha cola "prudente" (figuras de corpo enteiro, sen primeiros
-planos de mans). Se MAX_INTENTOS fallan, fai un último intento de reserva co prompt XENÉRICO (aldeáns
-diante dunha casa torre: un plano que case sempre pasa). Se tamén falla, escolle o intento con menos
+planos de mans). Se MAX_INTENTOS fallan, fai ata RESERVAS intentos de reserva co prompt XENÉRICO (aldeáns
+diante dunha casa torre: un plano que case sempre pasa). Se tamén fallan, escolle o intento con menos
 problemas e márcao como non aprobado (a porta `imaxes_revisadas` do QA falla: NON PUBLICABLE).
 
 Licenza do modelo: Stability AI Community License (uso non comercial e comercial ata 1 M USD de
@@ -18,10 +18,10 @@ from pathlib import Path
 ESTILO = "cinematic film still, fifteenth-century Galicia, {p}, natural light, detailed, painterly realism"
 PRUDENTE = ", full-body figures seen from a few metres away, hands not in focus"
 XENERICO = ("villagers in wool cloaks walking past a granite tower-house in a small hamlet, "
-            "slate roofs, overcast morning light, wide shot")
+            "dark grey slate roofs, overcast morning light, wide shot")
 MODELO = os.environ.get('IMG_MODEL', 'stabilityai/sdxl-turbo')
 W, H, PASOS = 1024, 576, int(os.environ.get('IMG_STEPS', '4'))
-MAX_INTENTOS, INTENTO_PRUDENTE = int(os.environ.get('IMG_MAX_INTENTOS', '5')), 2
+MAX_INTENTOS, INTENTO_PRUDENTE, RESERVAS = int(os.environ.get('IMG_MAX_INTENTOS', '5')), 2, 3
 
 
 def xerar(escenas, outdir, seed_base='sera', revisar=True):
@@ -33,7 +33,9 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
     for i, e in enumerate(escenas):
         clave = f"{i:03d}-{hashlib.sha256(e['prompt'].encode()).hexdigest()[:8]}"
         previo = feito.get(clave)
-        if previo and (outdir / previo['ficheiro']).exists() and (previo['ok'] or len(previo['intentos']) > MAX_INTENTOS):
+        import revisor as _rv
+        vella = previo and previo.get('version_revisor') != _rv.VERSION and revisar
+        if previo and not vella and (outdir / previo['ficheiro']).exists() and (previo['ok'] or len(previo['intentos']) >= MAX_INTENTOS + RESERVAS):
             r = previo
         else:
             import torch
@@ -49,10 +51,10 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
                         it['problemas_revision_anterior'] = it['problemas']; it['problemas'] = rv['problemas']
                         it['descricion'] = rv.get('descricion', ''); it['obxectos'] = rv.get('obxectos', [])
                         print(f"imaxe {i:3d} intento {it['intento']} revisado de novo: {it['problemas'] or 'ok'}", flush=True)
-            for k in range(len(intentos), MAX_INTENTOS + 1):
+            for k in range(len(intentos), MAX_INTENTOS + RESERVAS):
                 if any(not x['problemas'] for x in intentos):
                     break
-                base = XENERICO if k == MAX_INTENTOS else e['prompt']
+                base = XENERICO if k >= MAX_INTENTOS else e['prompt']
                 pr = ESTILO.format(p=base.strip().rstrip('.')) + (PRUDENTE if k >= INTENTO_PRUDENTE else '')
                 seed = int(hashlib.sha256(f'{seed_base}-{i}-{pr}-{k}'.encode()).hexdigest()[:8], 16)
                 if pipe is None:
@@ -65,7 +67,7 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
                           generator=torch.Generator().manual_seed(seed)).images[0]
                 im.save(f)
                 it = {'intento': k, 'ficheiro': f.name, 'seed': seed, 's': round(time.time() - t, 1), 'prompt': pr,
-                      'problemas': [], 'reserva': k == MAX_INTENTOS}
+                      'problemas': [], 'reserva': k >= MAX_INTENTOS}
                 if rev is not None:
                     t = time.time(); rv = rev.revisar(f)
                     it.update({'problemas': rv['problemas'], 'descricion': rv.get('descricion', ''),
@@ -78,7 +80,7 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
                     break
             best = min(range(len(intentos)), key=lambda j: (len(intentos[j]['problemas']), j))
             r = {'ficheiro': intentos[best]['ficheiro'], 'escollida': best, 'ok': not intentos[best]['problemas'],
-                 'intentos': intentos}
+                 'intentos': intentos, 'version_revisor': _rv.VERSION}
             feito[clave] = r
             rexf.write_text(json.dumps(feito, ensure_ascii=False, indent=1))
         paths.append(str(outdir / r['ficheiro'])); rexistro.append(r)

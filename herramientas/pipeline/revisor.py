@@ -22,6 +22,7 @@ from pathlib import Path
 MODELOS = Path(os.environ.get('REVISOR_DIR', '/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/revisor'))
 FLORENCE = os.environ.get('REVISOR_VLM', 'florence-community/Florence-2-large')
 MAN_DIST = 0.14
+VERSION = 3   # súbese cando cambia a lista; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
 
 # (etiqueta, expresión regular sobre a descrición en inglés e os obxectos de <OD>)
 LISTA = [
@@ -36,7 +37,9 @@ LISTA = [
     ('texto na imaxe', r'\b(text|letters?|words?|writing|written|sign that reads|watermark|logo|caption|signature)\b'),
     ('cruces portadas', r'\b(carrying|holding|with) (large |wooden )?(crosses|a cross|crucifix(es)?)\b'),
     ('armas', r'\b(guns?|rifles?|muskets?|pistols?|cannons?|swords? drawn)\b'),
-    ('violencia', r'\b(blood|bloody|corpses?|dead bod(y|ies)|burning (building|house|castle|village)s?|flames engulf)'),
+    ('violencia', r'\b(blood|bloody|corpses?|dead bod(y|ies)|burning (building|house|castle|village|keep|tower|fortress)s?|flames engulf)'),
+    ('morte', r'\b(skeletons?|skulls?|bones|corpses?|dead)\b'),
+    ('lume grande no exterior', r'\b(large|big|huge|raging|massive) (fire|bonfire|blaze)s?\b|\bbonfires?\b|\bon fire\b'),
 ]
 
 

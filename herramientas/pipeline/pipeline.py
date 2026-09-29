@@ -586,8 +586,11 @@ def main():
 
     # 5 imaxes + porta de revisión
     with Etapa('5_imaxes'):
-        import imaxes
-        imgs, rex = imaxes.xerar(pl, W / 'imaxes', seed_base=tema['id'])
+        # nun proceso fillo (spawn): SDXL-Turbo e Florence-2 ocupan ~11 GB e deixan fíos de torch/OpenMP; se
+        # quedan no proceso principal, os procesos da montaxe (fork) quedan sen memoria ou bloqueados.
+        import multiprocessing as mp_, imaxes
+        with mp_.get_context('spawn').Pool(1) as pool_:
+            imgs, rex = pool_.apply(imaxes.xerar, (pl, W / 'imaxes'), {'seed_base': tema['id']})
         info['imaxes_rexistro'] = rex
         info['imaxes_xeracion_s'] = sum(i['s'] for r in rex for i in r['intentos'] if 's' in i)
         info['imaxes_revision_s'] = sum(i.get('s_revision', 0) for r in rex for i in r['intentos'])
