@@ -209,9 +209,29 @@ def feitos(tema):
     return out
 
 
-def problemas_bloque(t, tema, min_frases=2):
+def _parecida(a, b):
+    wa, wb = set(re.findall(r'\w+', a.lower())), set(re.findall(r'\w+', b.lower()))
+    return len(wa & wb) / max(1, min(len(wa), len(wb)))
+
+
+def sen_repeticions(t, previo):
+    """Quita as frases que xa se dixeron (os LLM pequenos copian o parágrafo anterior que se lles dá de contexto)."""
+    vellas = [f['texto'] for f in partir(previo)] if previo else []
+    novas, out = [], []
+    for f in partir(t):
+        if any(_parecida(f['texto'], v) > 0.6 for v in vellas + novas):
+            continue
+        novas.append(f['texto']); out.append(f['texto'])
+    return ' '.join(out) if out else t
+
+
+def problemas_bloque(t, tema, min_frases=2, previo=''):
     import ancoraxe
     p = []
+    vellas = [f['texto'] for f in partir(previo)] if previo else []
+    rep = [f['texto'] for f in partir(t) if any(_parecida(f['texto'], v) > 0.6 for v in vellas)]
+    if rep:
+        p.append('Non repitas frases que xa se dixeron antes: ' + ' '.join(rep[:2]))
     if len(partir(t)) < min_frases:
         p.append(f'Ten que ter polo menos {min_frases} frases.')
     if re.findall(r'\d', t):
@@ -230,7 +250,7 @@ def problemas_bloque(t, tema, min_frases=2):
     return p
 
 
-def bloque(nome, tm, backend, info, etapa, **vars):
+def bloque(nome, tm, backend, info, etapa, previo='', **vars):
     """Unha chamada ao LLM para un bloque, con validación e ata dous reintentos cos problemas atopados."""
     mellor, hist = None, []
     extra = ''
@@ -243,14 +263,15 @@ def bloque(nome, tm, backend, info, etapa, **vars):
         info['llm'][f'{nome}_{len([x for x in info["llm"] if x.startswith(nome)]) + 1}'] = meta
         cpu_llm(etapa, meta)
         t = normalizar(' '.join(limpar_saida_llm(t).split()))
-        pr = problemas_bloque(t, tm)
+        pr = problemas_bloque(t, tm, previo=previo)
         hist.append(pr)
         if mellor is None or len(pr) < len(mellor[0]):
             mellor = (pr, t)
         if not pr:
             break
         extra = '\n\n(ATENCIÓN: a versión anterior tiña estes problemas, evítaos: ' + ' '.join(pr) + ')'
-    return mellor[1], {'bloque': nome, 'intentos': len(hist), 'problemas_por_intento': hist}
+    t = sen_repeticions(mellor[1], previo)    # rede de seguridade determinista
+    return t, {'bloque': nome, 'intentos': len(hist), 'problemas_por_intento': hist}
 
 
 def numeros(t):
@@ -275,7 +296,7 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
     info['seleccion_gancho'] = {'resposta_llm': sg, 'usados': [i + 1 for i in ig]}
     gancho, r = bloque('bloque_gancho', tema, backend, info, etapa, tema=tema['tema'],
                        feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
-    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, tema=tema['tema'], fragmento=tema['fragmento'],
+    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, tema=tema['tema'], fragmento=tema['fragmento'],
                        dossier=dossier); rex.append(r)
     invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, tema=tema['tema']); rex.append(r)
     fixo = len(tema['aviso'].split()) + len(FORMULA.split())
@@ -297,8 +318,9 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
     pars, anterior = [], resumo
     for k, i in enumerate(ids):
         ton = TONS[min(k, len(TONS) - 1)]
-        p, r = bloque('bloque_parrafo', tema, backend, info, etapa, tema=tema['tema'], feito=fs[i],
-                      anterior=anterior, ton=ton)
+        ult = ' '.join(f['texto'] for f in partir(anterior)[-2:])
+        p, r = bloque('bloque_parrafo', tema, backend, info, etapa, previo='\n\n'.join([gancho, resumo] + pars),
+                      tema=tema['tema'], feito=fs[i], anterior=ult, ton=ton)
         r['feito'] = i + 1; rex.append(r)
         pars.append(p); anterior = p
     g = '\n\n'.join([tema['aviso'], gancho, FORMULA + ' ' + resumo, invit] + pars)
