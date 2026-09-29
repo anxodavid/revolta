@@ -1,0 +1,52 @@
+voz   1   1.7s Boas noites.
+voz   2   5.5s A voz que vas escoitar é sintética, e este texto preparouno 
+voz   3   5.9s Ao sur de Compostela hai un outeiro verde, e nas mañás de ou
+voz   4   5.2s Entre as árbores asoman unhas pedras vellas, cubertas de mus
+voz   5   6.1s Son os restos dunha fortaleza: uns anacos de muralla e a pla
+voz   6   5.1s Hoxe só se escoita a choiva lenta sobre as follas e, lonxe, 
+voz   7   4.9s Aquela fortaleza chamábase a Rocha Forte, e era do arcebispo
+voz   8   3.6s Desde ela vixiábanse os camiños que baixaban cara ao mar.
+voz   9   7.2s Un día, a xente da cidade e os labregos da comarca decidiron
+voz  10   3.5s Isto é Serán, historia de Galicia para durmir.
+voz  11   3.4s Esta noite imos contar a historia dos irmandiños.
+voz  12   9.8s Durante uns poucos anos, labregos, artesáns, mariñeiros, clé
+voz  13   5.1s Falaremos da vida baixo aquelas torres e dos tempos difícile
+voz  14   6.4s E, xa cara ao final, lembraremos o que contaron moito despoi
+voz  15   2.9s Non tes que lembrar nada do que che conte.
+voz  16   5.1s Acomódate, apaga a luz se aínda está acesa e deixa que o cor
+voz  17   4.9s Deixa tamén que a respiración vaia máis amodo, e imos alá, a
+voz  18   6.8s Arredor da metade do século quince, Galicia era unha terra d
+voz  19   4.4s Moitos deles vivían nas terras dun señor, e eran os seus vas
+voz  20   6.6s Pagábanlle tributos en diñeiro e en especie, e debíanlle tra
+voz  21   5.3s Eran cargas pesadas, e moitas familias labregas vivían sempr
+voz  22   3.2s O señor era tamén o xuíz na súa terra.
+voz  23   7.0s Había xa un século que mandaba unha nobreza nova, máis viole
+voz  24   4.7s Algunhas eran das grandes casas nobres, como a de Lemos ou a
+voz  25   4.3s Outras eran dos bispos e, sobre todo, do arcebispo de Compos
+voz  26   4.6s Desde aquelas torres, dicían os vasalos, viñan os males e os
+voz  27   5.1s Moitos anos despois, as testemuñas aínda lles chamaban refux
+voz  28   4.2s Non era a primeira vez que a xente se xuntaba contra os seño
+voz  29   7.2s Unhas décadas antes, os vasalos dun gran señor das Mariñas f
+voz  30   4.9s Aquela primeira irmandade foi vencida, e os que a formaran f
+voz  31   7.0s Os tempos, ademais, eran difíciles, porque desde a peste neg
+voz  32   6.2s E, como cobraban menos, moitos señores esixían cada vez máis
+voz  33   7.9s Así, pouco a pouco, nas casas e nos camiños, ía medrando a m
+imaxe   0  24.0s
+imaxe   1  20.5s
+imaxe   2  16.4s
+imaxe   3  19.4s
+imaxe   4  15.6s
+imaxe   5  14.0s
+imaxe   6  16.2s
+imaxe   7  17.3s
+imaxe   8  14.3s
+imaxe   9  12.6s
+imaxe  10  15.7s
+imaxe  11  16.5s
+imaxe  12  14.9s
+imaxe  13  13.6s
+imaxe  14  12.1s
+Loading pipeline components...: 100%|██████████| 7/7 [05:23<00:00, 46.20s/it]
+real	21m30.538s
+user	38m42.509s
+sys	5m20.115s

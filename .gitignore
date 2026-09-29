@@ -1,2 +1,3 @@
 __pycache__/
 plan-de-negocio/gauntlet2/medidas/escala/asr_longo_x4.wav
+plan-de-negocio/gauntlet2/medidas/escala/*.wav

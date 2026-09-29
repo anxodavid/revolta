@@ -1,0 +1,23 @@
+{
+ "n_copias": 4,
+ "dur_audio_s": 963.1,
+ "parede_s": 193.3,
+ "rtf": 0.201,
+ "nota": "inclúe a carga do modelo (unha vez)",
+ "cpu_s": 464.4,
+ "wer_mestura": 0.015,
+ "sub": 14,
+ "del": 5,
+ "ins": 9,
+ "palabras_ref": 1900,
+ "sincronia": {
+  "palabras_aliñadas": 1881,
+  "pct_dentro_da_sua_frase": 100.0,
+  "desfase_inicio_frase_s_mediana": -0.31,
+  "desfase_inicio_frase_s_max_abs": 0.58,
+  "frases_medidas": 129
+ },
+ "frases_wer_mais_0_5": 0,
+ "hipotese_inicio": "Boas noites. A voz que vas escoitar é sintética e este texto preparouno un proceso automático. Ao sur de Compostela hai un outeiro verde e nas mañás do outono a brétema queda alí moito tempo. Nentre as árbores asuman unhas pedras vellas, cubertas de musgo e de follas molladas. as. Son os restos dunha fortaleza, uns anacos de muralla e a planta dos muros debuxada no chan. Hoxe só se escoita a choiv",
+ "hipotese_final": "la primeira irmandade foi vencida e os que a formaran foron castigados. os tempos, ademais, eran difíciles, porque desde a peste negra as rendas dos señores viñan minguando en toda Europa. E, como cobraban menos, moitos señores esixían cada vez máis aos seus vasalos. Así, pouco a pouco, nas casas e nos camiños ía medrando a memoria daquelas irmandades, coma unha semente que agarda outra primavera."
+}
