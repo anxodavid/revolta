@@ -2,30 +2,43 @@
 
 ### Operador escéptico de canales faceless: PIERDE/NO APRUEBA
 
-Las cifras de costes y horas del modo desatendido (una noche de CPU por episodio de 60-90 min, ≈1 h/semana del promotor, 14 controles que bloquean la publicación) no están medidas y no coinciden con el pipeline real:
-- No se ha producido ningún episodio: la carpeta gauntlet2/video está vacía y no existe ningún qa.json.
-- El código genera vídeos de 3-5 min y sus umbrales son otros: WER 0,25 frente a ≤6 %, y −24/−18 LUFS frente a −16/−18.
-- El código no implementa H1, H2, P1 ni los canarios C0.
-- El dossier de fuentes, que el plan da por automático, está curado a mano.
+El plan no incorpora las medidas que ya tiene. Hay que hacer cuatro cosas:
+(a) Rehacer §0, §3.1 y §4.1 con los tiempos medidos que da medidas/escala/extrapolacion.py: voz 47-69 min, imágenes 69-100 min, montaje 115-126 min, subtotal sin LLM 4,4-5,8 h. También hay que unificar las horas del MVP, que hoy son 45-60 h en el resumen y 62-92 h en la tabla.
+(b) Escribir la §3.3, que falta, midiendo con un cronómetro los minutos por episodio que exige el dossier semimanual, y sumarlos al régimen estable de §3.2. Si el total pasa de 1 h/semana, hay que decir cómo se cumple la D3: bajando la cadencia o reutilizando dossieres.
+(c) Declarar que el C0 real es del 70 % (solo 2 de 5 invenciones 'sen_fonte' detectadas), es decir, que hoy no se pasa P0, y decir qué control (H2 u otro) lo sube al 80 % y con qué medida.
+(d) Alinear los umbrales de pipeline.py con los del plan: WER ≤ 6 % y sonoridad de −16 a −18 LUFS.
 
-Qué hacer:
-1. Ejecutar el pipeline de extremo a extremo con el tema de los irmandiños y medir la duración real de cada etapa: segundos por imagen con SDXL-Turbo en CPU, montaje, ASR y proporción de episodios que el semáforo bloquea.
-2. Extrapolar esas medidas a 60 min y rehacer §4.1 y §3.2 con datos medidos [P].
-3. Presupuestar en horas (o automatizar y medir) la creación del dossier de cada episodio.
-4. Alinear los umbrales del código con los del plan, o corregir el plan.
-5. Añadir P0 un criterio medido: que un episodio de ≥60 min pase por el pipeline sin intervención humana en ≤8 h de reloj.
+Errores factuales: §4.1: voz con RTF 0,28-0,4 = 17-25 min para 60 min; lo medido en el pipeline (extrapolacion.py, ronda r2) es 0,76-1,15 s de reloj por segundo narrado, es decir, 47-69 min | §0, punto 4: MVP de 45-60 h y 8-10 semanas; la tabla de §3.1 del mismo documento dice 62-92 h y 11-15 semanas | §3.1, §3.3 y §5.1 remiten a una §3.3 que no existe | §5.1 dice 'Ver C0 medido en §6.1', pero §6.1 no da ninguna cifra; la medida real (medidas/c0-irmandinos-apertura/canarios.md) es del 70 %, por debajo del umbral del 80 % del P0 | §4.2(a) atribuye a TubeFilter (13-07-2026) que la frecuencia de subida es una señal de contenido inauténtico; el artículo no lo dice | §3.1 habla de un 'pipeline de 8 etapas'; §0 y §5.1 dicen 9 | A2 exige −16 a −18 LUFS; el código acepta −24 a −18 y el vídeo publicable mide −20 LUFS; el código acepta un WER de hasta 0,25 frente al ≤6 % del plan
 
-Errores factuales: La nota de TubeFilter del 13-07-2026 dice expresamente que es una aclaración de la política y no una norma nueva; el plan la presenta como un endurecimiento ('por qué YouTube endureció la política'). Es un matiz: el contenido afectado ya estaba excluido de la monetización. | Los umbrales de QA del plan (A1: WER ≤6 %; A2: −16 a −18 LUFS) no coinciden con los que aplica el código (herramientas/pipeline/pipeline.py: UMBRAIS wer_max 0,25; LUFS −24 a −18). | El plan describe la etapa [1] Fuentes→dossier como automática, pero el único dossier que existe (temas/irmandinos-apertura.yaml) se curó a mano a partir de notas de fuentes ya verificadas.
+He leído entera /home/user/revolta/plan-de-negocio/gauntlet2/piezas/plan-desatendido.md y la he contrastado con las medidas reales que hay en gauntlet2/medidas/, con el código de /home/user/revolta/herramientas/pipeline/ y con la web.
 
-El plan (/home/user/revolta/plan-de-negocio/gauntlet2/piezas/plan-desatendido.md) es honesto con el dinero y con la plataforma. Asume que el canal pierde dinero. Toma la referencia como un pico y no como la media, y los datos de /home/user/revolta/plan-de-negocio/gauntlet2/referencia.md encajan con esa lectura. Da por probable el rechazo o la retirada del YPP, obliga a activar la etiqueta de contenido sintético, trata el art. 50 del AI Act y propone puertas con números. He comprobado en la web lo más sensible:
-- El blog de YouTube confirma que, desde el 1-02-2027, los nuevos solicitantes del YPP necesitan 8.000 horas vistas cualificadas en 365 días y que los umbrales de fan funding no cambian.
-- TubeFilter (13-07-2026) confirma las tres categorías, con 'image slideshows' y 'templated storylines' como ejemplos, y que la política se aplica a nivel de canal. Además dice que es una aclaración y no una norma nueva, un matiz que el plan no recoge pero que no cambia el análisis.
+Lo que está bien:
+- Es honesto con el dinero: la pérdida esperada es de 30 a 120 € y los ingresos esperados de 0 a 30 €.
+- Trata la referencia como un pico y no como la media. referencia.md lo respalda: los vídeos de ago-sep de Historia Desconocida hacen 1.300-6.400 vistas.
+- Verificado en el blog de YouTube: desde el 1-02-2027 los nuevos solicitantes del YPP necesitan 8.000 horas vistas cualificadas, y los umbrales de fan funding no cambian.
+- Verificado en TubeFilter: la nota del 13-07-2026 es una aclaración y no una norma nueva, recoge los ejemplos 'image slideshows and templated storylines' y se aplica a nivel de canal.
+- La etiqueta de contenido sintético y el art. 50 del AI Act están bien razonados, y hay puertas cuantificadas (P1, P2 y P3).
 
-Un operador no lo firmaría porque todo el régimen desatendido (1 episodio de 60-90 min cada noche en 4 CPU, ≈1 h/semana, 14 controles) está sin medir y no coincide con el pipeline real:
-(a) En gauntlet2/video no hay ningún vídeo ni ningún qa.json. No se ha producido ni un episodio, así que el tiempo por imagen, el tiempo de montaje y el total de 3,5-6,5 h son [S].
-(b) El código real (/home/user/revolta/herramientas/pipeline/pipeline.py) está hecho para vídeos de 180-300 s. Sus umbrales contradicen los del plan: WER máx. 0,25 frente al ≤6 % del control A1, y −24 a −18 LUFS frente a −16/−18. Además no implementa H1, H2, P1, I1-I3 ni los canarios C0.
-(c) La etapa [1] 'Fuentes → dossier', que el plan presenta como automática, en la práctica es un dossier curado a mano en temas/irmandinos-apertura.yaml. Viene de las notas del guion muestra ya revisado por humanos. Con 50 episodios al año, alguien tiene que construir 50 dossieres, y ese trabajo no aparece en las horas de §3.2. Si se automatiza con Galipedia y obras de dominio público, vuelve el problema de los mitos románticos que el propio plan reconoce.
-Hay carencias menores:
-- Los comparables anglófonos y en castellano ([R], como Sleepless Historian) no se han vuelto a verificar hoy.
-- El AVD como KPI de puerta es engañoso en contenido para dormir, porque la gente se duerme con el vídeo puesto y se escucha en pestañas en segundo plano. Hace falta otra métrica de apoyo, como el porcentaje de retorno de espectadores o las sesiones repetidas.
-- El 40-60 % de probabilidad de rechazo del YPP no se apoya en casos comparables de canales de voz IA con presentación de imágenes que hayan sido admitidos o rechazados en 2026.
+Aun así, un operador no lo firmaría, porque el plan contradice sus propias medidas y no presupuesta el trabajo manual recurrente:
+
+(1) La §4.1 sigue siendo un supuesto [S] y se queda corta, aunque ya hay medidas [P] en el repo. Según medidas/escala/extrapolacion.py y las ejecuciones r2:
+- La voz tarda 0,76-1,15 s de reloj por cada segundo narrado (47-69 min), no el RTF 0,28-0,4 (17-25 min) que dice el plan.
+- El montaje tarda 115-126 min.
+- El subtotal sin LLM es de 4,4-5,8 h, frente a los 3,5-6,5 h del plan con el tramo bajo sin base.
+
+(2) El resumen (§0, punto 4) dice 45-60 h y 8-10 semanas, pero la tabla de §3.1 dice 62-92 h y 11-15 semanas. Además, §3.3 se cita cuatro veces y no existe.
+
+(3) La prueba C0 medida detecta 14 de 20 errores (70 %), por debajo del umbral del 80 % que el propio plan fija en P0 y A6. La familia 'sen_fonte' solo detecta 2 de 5: pasan invenciones plausibles como 'a revolta máis grande de toda Europa'. El plan no lo menciona, aunque en §5.1 remite a 'C0 medido en §6.1' y ahí no hay ninguna cifra. Con la cadena actual, el P0 no se cumple.
+
+(4) El régimen de ≈1 h/semana de §3.2 no incluye el dossier de cada episodio. El diagrama lo describe como semimanual: el promotor elige de 3 a 6 fuentes. El único dossier que existe (18 hechos) se hizo a mano. Para 50 episodios al año, eso es trabajo humano recurrente sin medir que puede romper la D3.
+
+(5) Los umbrales del código siguen sin coincidir con los del plan:
+- pipeline.py admite un WER de hasta 0,25 y una sonoridad de −24 a −18 LUFS; el plan fija WER ≤ 6 % y −16 a −18 LUFS.
+- El vídeo publicable mide −20 LUFS, fuera del rango del plan.
+- El código solo acepta vídeos de 180-300 s.
+
+(6) En §4.2(a) se cita a TubeFilter para decir que la frecuencia de subida es una señal de contenido inauténtico, y el artículo no dice eso.
+
+Carencias menores:
+- Los comparables anglófonos y en castellano ([R]) no se han vuelto a verificar hoy.
+- La probabilidad de rechazo del YPP (40-60 %) sigue siendo un supuesto puro.
