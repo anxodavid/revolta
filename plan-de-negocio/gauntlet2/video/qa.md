@@ -167,3 +167,25 @@ Desde aquelas torres, dicían os vasalos, viñan os males e os danos. Moitos ano
 Non era a primeira vez que a xente se xuntaba contra os señores. Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e camiñaran xuntos cara a Compostela. Aquela primeira irmandade foi vencida, e os que a formaran foron castigados.
 
 Os tempos, ademais, eran difíciles, porque desde a peste negra as rendas dos señores viñan minguando en toda Europa. E, como cobraban menos, moitos señores esixían cada vez máis aos seus vasalos. Así, pouco a pouco, nas casas e nos camiños, ía medrando a memoria daquelas irmandades, coma unha semente que agarda outra primavera.
+
+---
+
+## Notas del constructor (añadidas a mano, fuera del informe automático; en castellano)
+
+- **Ejecución**: `pipeline.py temas/irmandinos-apertura.yaml --saida plan-de-negocio/gauntlet2/video --traballo <vacío>`,
+  un solo comando, sin intervención humana entre la ficha y el MP4. `time` del proceso completo: 21 min 31 s de
+  reloj; 38 min 43 s user + 5 min 20 s sys = **0,73 h de CPU** (coincide con la suma por etapas). Máquina: 4 núcleos,
+  15 GB, sin GPU. Coste económico: 0 € en licencias; la electricidad no se ha medido [S].
+- **LLM**: las tres llamadas (guion, corrección, escenas) las respondió Claude Opus 5.5 en modo `manual`, siguiendo
+  literalmente los prompts renderizados de `herramientas/pipeline/llm_pending/`; las respuestas quedan en
+  `llm_cache/` con su hash. No es un modelo abierto ni se ha medido su tiempo: en producción hay que sustituirlo por un
+  LLM local (p. ej. Carballo de Nós) y repetir este QA.
+- **Versión anterior**: la primera ejecución (19:19) salió NON PUBLICABLE por desfase A/V de 0,15 s (el `-shortest`
+  de ffmpeg recortaba el vídeo) y con ritmo de 143 palabras/min. Corregido: sin `-shortest`, pausas más largas y
+  escala 1,25; ahora desfase 0,01 s y 124 palabras/min, dentro del objetivo 110-125 de `referencia.md`.
+- **Lo que las puertas automáticas no ven** (revisado a ojo en la hoja de contactos, no bloquea el veredicto):
+  anacronismos leves en las imágenes (ventanas de cristal y cortinas en el dormitorio, tejados de teja roja y algún
+  ciprés en el castillo de 0:50 y la aldea de 2:10), la multitud de 1:10 lleva útiles que pueden leerse como picas, y
+  el castillo cambia de forma entre escenas (coherencia débil, como en la referencia). WER ASR 0,025 mide que se
+  entiende, no que la prosodia sea natural; la naturalidad de la voz sigue pendiente del test ciego humano (D1/D2).
+- **Si se regenera** con `--so-informe`, esta sección se pierde: volver a añadirla.
