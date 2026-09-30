@@ -271,6 +271,7 @@ términos de uso que prohíben difundirlas: se quedan en el scratchpad y no se s
 |---|---|
 | Voz (`voz_st2.py`, 2 frases, el mismo env que pone `pipeline.py`) | carga del modelo + 1.ª frase 31,7 s; **RTF 0,39** después |
 | Imagen SDXL-Turbo 1024x576, 4 pasos, bf16 | carga 14-15 s; **25-26 s por imagen** (Gauntlet 2: mediana 18,1 s) |
+| Imagen SDXL-Lightning 1344x768, 4 pasos (por defecto desde el Gauntlet 3; `proba_entorno.py` usa `imaxes.cargar_pipe`) | carga 18 s (≈10 min con el disco frío tras reiniciar el contenedor); **47,6 s por imagen** de mediana con otros agentes en la máquina, 31-38 s sin competencia |
 | `python revisor.py` | carga + 1.ª imagen 29,7 s; **18,9 s por imagen** después |
 | ASR (faster-whisper + Whisper gl) sobre la voz | carga 4 s; **WER 0,0** |
 | LanguageTool gl-ES / NLI | detecta "Os rapaces foi"; contradicción 0,998 en un par negado |

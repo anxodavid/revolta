@@ -14,7 +14,8 @@ if [ -z "${SCRATCH:-}" ]; then
 fi
 export SCRATCH
 
-# Modelos de Hugging Face (SDXL-Turbo, Florence-2, NLI, CLIP) en la caché estándar dentro de SCRATCH.
+# Modelos de Hugging Face (SDXL-Lightning + VAE de SDXL base + codificadores de texto del repo de SDXL-Turbo,
+# Florence-2, NLI, CLIP) en la caché estándar dentro de SCRATCH. IMG_MODEL=lightning|turbo (imaxes.py).
 export HF_HOME="$SCRATCH/hf"
 # Descarga por HTTP normal (puente xet de HF) y no por el protocolo xet: el primero funciona tras el proxy.
 export HF_HUB_DISABLE_XET=1
