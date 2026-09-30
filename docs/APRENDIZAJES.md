@@ -148,3 +148,9 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   artículo ("facelo lume"), cosas que el corpus de entrenamiento no tiene; `-p1` las quita.
 - **El WER de Whisper sobre un audio largo con pausas engaña:** el mismo pasaje da 0,18-0,28 entero y ≤ 0,054 frase a
   frase (se salta frases enteras). El QA del vídeo largo transcribe cada frase en su tramo (`qa.asr_por_frases`).
+- **Sonido, resultado (pieza SON):** de 4 opciones (A lluvia continua, B lluvia y lareira por escena, C catálogo
+  completo por escena, D sin ambiente) se recomienda **C**, que es la preferencia del promotor (D14): DNSMOS OVRL 3,02
+  (D 3,37; A 2,65), la voz no se degrada (SIG 3,57-3,62 en todas), WER frase a frase 0,026, **0 sustos en la zona de
+  dormir** y monotonía del 11 % (A: 93 %). El murmullo de gentío con 6-12 voces de nuestra propia voz TTS es
+  ininteligible para Whisper. **La lista de planos decide el ritmo del sonido:** alternar sonido en cada plano da un
+  parpadeo (62 cambios cada 10 min); la QA avisa por encima de 30 cambios cada 10 min en el gancho y de 10 al dormir.
