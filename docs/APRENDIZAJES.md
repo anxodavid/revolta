@@ -100,3 +100,25 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
 - **Fuente de oro para meigas:** el PDF de la exposición "Meigas, feitizos das menciñeiras" del Arquivo do Reino de
   Galicia (2020), con transcripciones de procesos reales. Las fuentes discrepan en fechas (la única hoguera: 1627 o
   1579): se dice sin el año.
+
+## Dossier (hechos verificados)
+
+- **Una sola fuente de verdad con citas literales comprobadas por código:** `gauntlet3/dossier/feitos.yaml` guarda
+  cada hecho en galego con su cita literal de la fuente; `xerar.py comprobar` busca cada cita en el texto descargado
+  (350 citas, más una prueba negativa) y `xerar.py ficha` genera la ficha del pipeline (180 de 244 hechos).
+- **LanguageTool sobre los hechos antes del guion**: evita que el guionista copie redacciones que la puerta de lengua
+  rechaza (reflexivos, "decomisado" → "comisado", "ungüento").
+- **El diccionario de la RAG como fuente de detalles tranquilos y verdaderos** (lareira, escano, orballo, lousa...),
+  con URL por palabra: material para la parte de dormir.
+- **La veracidad automática no para falsedades hechas con palabras del dossier** ("María Soliña morreu queimada",
+  "Feijoo naceu en Samos" pasan): la lista **"Non dicir"** tiene que ir en el encargo del guion y en el crítico.
+  Dejar fuera de la ficha los años y nombres en conflicto sí funciona: H1 impide decirlos.
+- Galiciana sirve un desafío anti-bot en JavaScript (no saltarlo); la API de Galipedia da 429, la página normal con
+  4 s entre peticiones funciona.
+
+## Sonido
+
+- El promotor oyó la lluvia de la muestra como **ruido blanco**: medida, era ruido gaussiano filtrado (curtosis 3,07,
+  energía entre 2 y 8 kHz). La nueva lluvia con gotas, goteos y ráfagas (curtosis 9, 11-20 dB menos por encima de
+  4 kHz) le gustó más, sobre todo con lareira, pero pidió **ambiente por escena, sin fondo constante y con tramos de
+  voz limpia** (D13), variado para no cansar y con **murmullo de gentío** cuando la escena lo tenga (D14).
