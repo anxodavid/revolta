@@ -287,3 +287,10 @@ reses en manada.
 `over-the-shoulder shot from behind [persona A de espaldas, ropa], facing [persona B: cara, ropa, gesto], [lugar],
 [luz]`. Ejemplo: `over-the-shoulder shot from behind a kneeling village woman in a dark wool shawl, facing a stern
 court scribe in a black doublet holding a quill at a table, a single tallow candle, deep black shadows`.
+
+**`negativo` y `clave`: qué funciona** (medido en las hojas r1 y r2). CLIP rechaza **todas** las imágenes si el
+`negativo` se parece al propio sujeto: `cauldron` en la queimada (r1), `molten metal` en la queimada y `herd` en una
+vaca ordeñada (r2) fallaron en todos los intentos. El `negativo` debe nombrar algo **distinto** del sujeto (`city
+lights` en un paisaje, `street lamps` en una calle, `cushions` en una cocina). La `clave` tiene que ser un objeto
+grande y reconocible (`cow`, `boat`, `stone cross`, `embers`); `maize` sobre una era no lo reconoce nunca: mejor no
+ponerla que gastar siete intentos.
