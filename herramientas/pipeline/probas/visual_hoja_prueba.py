@@ -54,7 +54,7 @@ def main():
             p['pal0'] = round(a0 + (j + 0.5) * (a1 - a0) / len(grupo))
             p['u'] = round(p['pal0'] / a.palabras, 4)
     t0 = time.time()
-    paths, rex = imaxes.xerar(pl, W / 'imaxes', seed_base='visual-r1', n_total=a.planos_episodio)
+    paths, rex = imaxes.xerar(pl, W / 'imaxes', seed_base=f'visual-{Path(a.saida).name}', n_total=a.planos_episodio)
     t_xer = time.time() - t0
     t0 = time.time()
     grad = imaxes.graduar(paths, W / 'imaxes_graduadas', escenas=pl)
@@ -63,6 +63,10 @@ def main():
     folla(grad, S / 'contactsheet_320.jpg', 320, 180, numeros=True, calidade=90)
     import shutil
     shutil.copy(W / 'imaxes_graduadas' / 'graduacion.json', S / 'graduacion.json')
+    from PIL import Image
+    (S / 'imaxes').mkdir(exist_ok=True)
+    for k, g in enumerate(grad):     # as imaxes escollidas e graduadas, en JPEG, para non ter que rexeneralas
+        Image.open(g).convert('RGB').save(S / 'imaxes' / f'{k + 1:02d}.jpg', quality=85)
     # prompts e porta
     pr = []
     L = ['# Puerta de revisión de la hoja de prueba (automático)', '',
