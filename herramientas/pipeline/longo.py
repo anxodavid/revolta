@@ -265,6 +265,9 @@ def main():
     if not all(pt['portas_texto'].values()):
         print('NON PUBLICABLE (texto): ver', W / 'porta_texto.json'); sys.exit(4)
     P.VER.clear(); qa.pechar_lt()
+    # produción do 30-09-2026: o servidor Java de LanguageTool seguía vivo (0,55 GB) e, co NLI sen liberar, a etapa de
+    # imaxes (12,3 GB) pasou do límite de memoria do cgroup e o OOM matouna. Péchase á forza.
+    subprocess.run(['pkill', '-f', 'languagetool-server.jar'], check=False)
     import gc; gc.collect()
 
     # 2 voz, coa curva do embude
@@ -350,8 +353,11 @@ def main():
     # 4 imaxes + porta de revisión
     with P.Etapa('5_imaxes'):
         import multiprocessing as mp_, imaxes
-        with mp_.get_context('spawn').Pool(1) as pool_:
-            imgs, rex = pool_.apply(imaxes.xerar, (pl, W / 'imaxes'), {'seed_base': tema['id']})
+        from concurrent.futures import ProcessPoolExecutor
+        # ProcessPoolExecutor e non Pool: se o OOM mata o proceso das imaxes, Pool queda colgado para sempre
+        # (visto o 30-09-2026); o executor lanza BrokenProcessPool e lanzar.sh volve empezar (o feito queda na caché)
+        with ProcessPoolExecutor(1, mp_context=mp_.get_context('spawn')) as ex_:
+            imgs, rex = ex_.submit(imaxes.xerar, pl, W / 'imaxes', seed_base=tema['id']).result()
         kw = {'escenas': pl} if 'escenas' in inspect.signature(imaxes.graduar).parameters else {}
         imgs = imaxes.graduar(imgs, W / 'imaxes_graduadas', **kw)
     save_t()
