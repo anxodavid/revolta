@@ -34,6 +34,12 @@ FALSOS_POSITIVOS_LT = [
 _LT = None
 
 
+def pechar_lt():
+    global _LT
+    if _LT is not None:
+        _LT.close(); _LT = None
+
+
 def lingua(texto, dossier=''):
     """Avisos de LanguageTool. Os erros ortográficos (hunspell) en palabras que xa están no dossier de
     fontes (nomes propios verificados: Andrade, Lemos...) descártanse; o resto de erros de hunspell
@@ -43,6 +49,8 @@ def lingua(texto, dossier=''):
     if _LT is None:
         import language_tool_python as L
         _LT = L.LanguageTool('gl-ES')     # un só servidor Java para todo o proceso (antes: un por chamada)
+        import atexit
+        atexit.register(_LT.close)        # sen isto quedaban servidores Java orfos (~1 GB cada un)
     tool = _LT
     res = []
     for m in tool.check(texto):

@@ -733,6 +733,11 @@ def main():
                                  f"## Guion rexeitado\n\n{guion}\n")
         print('NON PUBLICABLE (texto):', pt['portas_texto']); sys.exit(4)
     frases = partir(guion)
+    # memoria (ronda 3): o servidor LLM (~8 GB), o NLI e LanguageTool non caben xunto coa voz StyleTTS2 (~3 GB) nos
+    # ~13 GB do contedor (OOM na primeira execución). Páranse aquí; o LLM volve arrancar só para a etapa 4.
+    llm.parar(); VER.clear(); qa.pechar_lt()
+    import gc; gc.collect()
+    arranque_previo = llm._SERVER.get('arranque_cpu_s')
 
     # 3 voz, ritmo en embude
     esc_min, esc_max = tema.get('escala_inicio', 1.05), tema.get('escala', 1.25)
@@ -778,6 +783,10 @@ def main():
         # subtítulos: as frases partidas en varios planos seguen sendo un só subtítulo
         srt(frases, tempos, W / 'subtitulos.srt')
     llm.parar()
+    if llm._SERVER.get('arranque_cpu_s') not in (None, arranque_previo):     # segundo arranque do servidor (etapa 4)
+        e_ = TEMPOS.setdefault('4_escenas', {'parede_s': 0, 'cpu_s': 0})
+        e_['cpu_s'] = round(e_['cpu_s'] + llm._SERVER['arranque_cpu_s'], 1)
+        e_['cpu_s_llm'] = round(e_.get('cpu_s_llm', 0) + llm._SERVER['arranque_cpu_s'], 1)
     info['llm_servidor'] = {k: v for k, v in llm._SERVER.items() if k != 'proc'}
     save_t()
 
