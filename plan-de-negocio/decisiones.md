@@ -30,3 +30,5 @@ Respuestas a las decisiones D1-D6 del §0.2 de `plan-de-negocio.md`, tomadas tra
 | D12 | Método | Trabajar con agentes, guardando el trabajo parcial en git cada poco y documentando los aprendizajes cada poco. |
 
 Contexto y reglas del Gauntlet 3: `plan-de-negocio/gauntlet3/contexto.md`.
+| D13 | Ambiente sonoro (tras oír la muestra, 30-09-2026) | **Nada de ruido constante.** La lluvia solo cuando la escena tiene lluvia; el crepitar solo cuando hay fuego; **tramos de voz limpia**. "En cualquier caso, que el Gauntlet mida la mejor opción." |
+

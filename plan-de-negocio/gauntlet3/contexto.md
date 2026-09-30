@@ -100,7 +100,11 @@ Cada ronda: borrador + veredicto (ganó/perdió, mayor carencia) → commit y pu
 
 ## 7. Decisiones nuevas del promotor durante el Gauntlet
 
-(ninguna todavía)
+- **D13 (30-09-2026, tras oír la lluvia de la muestra):** "Si es lluvia lo acoplaría con la escena si la escena tiene
+  lluvia y si tiene fuego metería crepitar pero no pondría ruido blanco constante. Dejaría tramos de voz limpia también.
+  En cualquier caso que el gauntlet mida la mejor opción." → Ambiente **por escena** (campo `son` de cada plano:
+  `choiva`, `lume`, `mar`, `vento` o nada) y voz limpia en el resto; el Gauntlet compara opciones con medidas (DNSMOS,
+  WER, % de voz limpia, coherencia con la imagen) y una muestra A/B/C para el oído del promotor.
 
 ## 8. Tema elegido y ajustes OBLIGATORIOS del crítico (veredicto `veredictos/tema-r1.md`: GANA condicionado)
 
