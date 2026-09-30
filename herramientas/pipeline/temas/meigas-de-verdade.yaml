@@ -1,0 +1,261 @@
+# Ficha de tema para longo.py (Gauntlet 3): "As meigas de verdade".
+# Xerada por plan-de-negocio/gauntlet3/dossier/xerar.py a partir de feitos.yaml (cada feito ten a súa cita literal
+# comprobada por código na fonte; táboa, conflitos e "Non dicir" en plan-de-negocio/gauntlet3/dossier/dossier.md).
+# O dossier escribiuno Claude (axente constructor da peza DOSSIER); ningunha persoa o revisou.
+#
+# Notas para o guionista (non van no texto do dossier):
+# - As liñas "- [== ... ==]" son separadores de capítulo do arco (contexto.md §8): feitos() do pipeline sáltaas
+#   porque, sen a etiqueta, quedan baleiras.
+# - Os anos e cifras van en letra (porta H1). Non hai ano para a única fogueira da Inquisición: as fontes non
+#   concordan (1579 / 1627). Por iso ningún dos dous anos está no dossier e o guion non pode dicilos.
+# - Nunca dicir que Galicia "se librou" ou "quedou á marxe" da caza de bruxas: a Inquisición foi branda; a xustiza
+#   ordinaria, máis dura (F040-F043).
+# - O conxuro da queimada está rexistrado (2001; o autor morreu en 2022): como moito o primeiro verso, co autor.
+#   O poema "María Soliña" de Celso Emilio Ferreiro (morto en 1979) está protexido: nomealo, non recitalo.
+# - Lenda e costume contados como tales ("críase", "contan", "segundo a tradición"); remedios nunca como consello.
+# - Na zona de durmir (desde o minuto dez) nada de intrusións nocturnas, demos, caveiras nin o asalto de Cangas.
+id: meigas-de-verdade
+titulo: "As meigas de verdade"
+titulo_youtube: "As meigas de verdade (e por que o conxuro da queimada é de 1967) | Cousas de Galiza para durmir"
+titulo_rotulo: "As meigas de verdade"
+tema: "As meigas de verdade: o que contan os procesos por bruxería da Real Audiencia de Galicia e as cifras da Inquisición de Santiago, e despois as crenzas e os costumes, contados como lenda, desde o conxuro da queimada de mil novecentos sesenta e sete ata a noite de san Xoán e o frade Feijoo"
+palabras: 3500
+duracion_s: [1500, 2100]
+aviso: "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático."
+capitulo_inicial: "Un conxuro de 1967"
+autoria:
+  guion: "Claude (Anthropic), con axentes no Gauntlet 3: un axente constructor escribe e críticos independentes revisan. Non é unha execución desatendida nin un LLM por API. Ningunha persoa o revisou."
+  dossier: "Claude (Anthropic), axente constructor do dossier: escolleu as fontes, redactou os feitos en galego e comprobou por código que cada cita está literalmente na súa fonte. Ningunha persoa o revisou."
+  escenas: "Claude (Anthropic), un axente escribe un prompt por plano."
+  automatico: "voz (Nós StyleTTS2), imaxes e a súa porta de revisión, son, montaxe e controis automáticos"
+descricion: |
+  Quen eran de verdade as meigas galegas? Neste episodio para durmir abrimos os procesos por bruxería que garda o Arquivo do Reino de Galicia: unha parteira de Vilalba, un gato que ninguén deu collido en Xinzo de Limia, unhas veciñas que foron á fonte a noite de san Xoán en Campo Lameiro. Tamén as cifras da Inquisición de Santiago, que coas meigas foi máis branda ca a xustiza ordinaria. Despois, amodo, as herbas, o mal de ollo, a noite de san Xoán e o frade Feijoo, que dubidaba das historias de bruxas. E unha sorpresa ao comezo: o conxuro da queimada escribiuse en Vigo en 1967.
+  Eu non creo nas meigas, mais habelas, hainas: as lendas cóntanse como lendas, e os datos levan fonte.
+  As imaxes están xeradas con intelixencia artificial e representan lugares reais: son contido sintético.
+creditos:
+  - "Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto Nós (Universidade de Santiago de Compostela), licenza Apache-2.0."
+  - "Texto e dossier de fontes preparados con intelixencia artificial (Claude, de Anthropic) a partir das fontes citadas. Ningunha persoa os revisou."
+  - "Imaxes xeradas con intelixencia artificial e revisadas por unha porta automática: contido sintético, non son fotografías. Choiva sintetizada por código."
+  - "Conxuro da queimada: primeiro verso, de Mariano Marcos Abalo (1967), obra rexistrada."
+
+# Dossier: un feito por liña, en galego, coa etiqueta das fontes entre corchetes (as etiquetas non se len).
+# Todo nome propio e toda cantidade que diga o guion ten que estar aquí (porta H1).
+dossier: |
+  - [== C0. Arranque en frío (0:00-0:40): o conxuro de 1967 e a parteira de Vilalba ==]
+  - [GL-QUEIMADA, GCIENCIA-21] O conxuro máis coñecido da queimada comeza así: «Mouchos, curuxas, sapos e bruxas».
+  - [ATLANTICO, GCIENCIA-21, GL-QUEIMADA] Ese conxuro escribiuno Mariano Marcos Abalo en Vigo, no ano mil novecentos sesenta e sete.
+  - [ATLANTICO, CORREO] Moita xente cre que o conxuro da queimada vén da noite dos tempos, pero ten autor coñecido e é de mil novecentos sesenta e sete.
+  - [CORREO, GL-QUEIMADA] Mariano Marcos Abalo escribiuno a bordo dun vello barco comisado, amarrado no porto de Vigo, onde se xuntaba cos amigos para facer queimadas.
+  - [ATLANTICO] Segundo contou el mesmo, quería darlles un pouco de ritual ás queimadas que facía cos amigos nos anos sesenta.
+  - [ARG] En mil seiscentos dezasete, en Vilalba, a Real Audiencia de Galicia xulgou a Dorotea do Barro e á súa filla, María do Barro.
+  - [ARG] Dorotea do Barro, a nai, era parteira.
+  - [ARG] Segundo declarou unha testemuña, Andrés da Pena, Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home que estivese ao seu carón.
+  - [ARG] Abondaba, segundo esa testemuña, con quitarlle os zapatos á muller que ía parir e calzarllos ao home, dicindo unhas palabras que ela sabía.
+  - [ARG] E, segundo a mesma testemuña, dixera que o home saltaría coma un poldro bravo.
+  - [ARG, RAG] A filla, María do Barro, foi acusada de alcaiota: dicían que acollía na súa casa homes casados e mulleres solteiras.
+  - [== CQ. A queimada: o vello e o novo (arranque en frío ou peche) ==]
+  - [ATLANTICO, GL-QUEIMADA] Unha empresa vendeu copias do conxuro sen o nome do autor, e por iso moita xente pensou que era un texto popular e anónimo.
+  - [GL-QUEIMADA, CORREO] En dous mil un, Mariano Marcos Abalo rexistrou o conxuro como propiedade intelectual.
+  - [GL-QUEIMADA] Popularmente atribúenselle á queimada orixes celtas, pero en mil novecentos setenta e dous o catedrático Carlos Alonso del Real escribiu que iso era imposible, porque o alambique chegou a Galicia na Idade Media.
+  - [GCIENCIA-21] O historiador Xavier Castro, da Universidade de Santiago, di que a queimada é unha tradición inventada.
+  - [GL-QUEIMADA] O antropólogo Xosé Manuel González Reboredo sitúa arredor dos anos cincuenta do século vinte o costume de tomar queimada nas festas, entre galegos que vivían fóra.
+  - [GL-QUEIMADA] En mil novecentos cincuenta e cinco, o oleiro de Mondoñedo Tito Freire creou a tarteira de barro con patas na que hoxe se adoita facer a queimada.
+  - [GCIENCIA-21] Na taberna de Eligio, en Vigo, escritores e artistas como Cunqueiro, Castroviejo, Laxeiro, Lugrís e Blanco Amor foron construíndo o ritual arredor do pote.
+  - [GCIENCIA-21] Castroviejo dicía que botarlle grans de café á queimada era unha horrible herexía moderna.
+  - [GL-QUEIMADA] A queimada faise con augardente e azucre, e adoita levar casca de limón ou de laranxa e uns poucos grans de café.
+  - [GL-QUEIMADA] Préndeselle lume e reméxese amodo, deixando que suban as lapas, ata que se esgota case todo o alcohol.
+  - [GL-QUEIMADA] Mentres se fai, a xente reúnese arredor do pote, mellor coas luces apagadas, e o conxuro recítase cara ao final.
+  - [GL-QUEIMADA] Segundo a tradición, o ritual da queimada serve para afastar os malos espíritos e as meigas.
+  - [== C0B. Os papeis que falan (0:55-2:00): a Inquisición, os xuíces e a lista da fonte ==]
+  - [ARG] Segundo o Arquivo do Reino de Galicia, entre mil cincocentos setenta e catro e mil setecentos a Inquisición de Santiago procesou por bruxería noventa e dúas mulleres e corenta e oito homes.
+  - [ARG, ESPANOL] Segundo o Arquivo do Reino de Galicia, a Inquisición de Santiago levou á fogueira unha soa muller acusada de bruxería.
+  - [ESPANOL] O historiador Diego Valor Bravo tamén di que, en tres séculos, a Inquisición en Galicia só condenou a morte unha meiga.
+  - [ARG, ESPANOL] As fontes non concordan no ano nin no nome daquela muller.
+  - [ARG] O Arquivo do Reino di que esas cifras son terribles, pero moi baixas comparadas coas doutros tribunais da Inquisición de España e de Europa.
+  - [ESPANOL] Coas meigas, a temida Inquisición foi branda: segundo Diego Valor Bravo, as súas sentenzas foron benignas.
+  - [ESPANOL] Segundo o historiador Diego Valor Bravo, a xustiza ordinaria foi moito máis dura coas meigas ca a Inquisición: perseguiu e matou moitas.
+  - [ESPANOL] Valor Bravo conta que algunhas mulleres acabaron aforcadas pola xustiza ordinaria, aínda que a Inquisición as declarara inocentes.
+  - [GCIENCIA-26] Nos preitos civís que estuda o historiador Rodrigo Pousa aparece tamén a pena de morte por bruxería, aínda que non se sabe como se executou.
+  - [CCG-MEIGAS] O Consello da Cultura Galega lembra que houbo mulleres condenadas a morrer na fogueira por bruxería, e que nalgúns casos as sentenzas se cumpriron.
+  - [GCIENCIA-26] Rodrigo Pousa di que a febre das bruxas chegou a Galicia, aínda que sen a histeria doutras partes de Europa.
+  - [GCIENCIA-26] Rodrigo Pousa di que na Galicia de hai catrocentos anos as meigas, as curandeiras e as menciñeiras eran figuras apreciadas e necesarias para o pobo.
+  - [GCIENCIA-26, CCG-MEIGAS] Na Galicia de hai catrocentos anos, a meiga non era a bruxa dos contos: era a que curaba, a que axudaba nos partos e a que sabía de herbas.
+  - [ARG] En Campo Lameiro, uns veciños fixeron unha lista coas mulleres que foran á fonte a noite de san Xoán.
+  - [== C1. Catro aldeas (2:00-5:00): Vilalba e Xinzo de Limia; as crenzas ==]
+  - [ARG] Dorotea e María do Barro eran de San Xiao de Mourence, en Vilalba.
+  - [ARG] Segundo unha testemuña, cando María do Barro tiña o gando no monte, dicía unhas palabras, unhas caladas e outras en voz alta.
+  - [ARG] Entre esas palabras, dicía que o seu gando bebese auga de sete fontes e trouxese leite de sete cortes e de sete montes.
+  - [ARG] No papel quedou escrita ata a corrección: que trouxese auga, digo, leite.
+  - [ARG] O vicario xeral do bispado de Mondoñedo excomungou as acusadas e mandou que ninguén lles dese pan, sal, auga nin lume.
+  - [ARG] En Xinzo de Limia, en mil seiscentos doce, a xustiza do conde de Monterrei abriu un proceso contra Ana González, que tiña fama de meiga.
+  - [ARG] Unha veciña, María Feijoa, contou que unha noite estivo esperta, agardando para ver quen lle facía mal.
+  - [ARG] Dixo que viu a Ana González en figura de gato, que andaba saltando dun lado para outro.
+  - [ARG] Segundo ela, o gato non o puideron coller, e escapou por un burato da porta.
+  - [ARG] Ana González foi queixarse a unha veciña de que o home desta, Rodrigo Colmenero, andaba chamándoa meiga.
+  - [ARG, RAG] Cando Ana González saía polas portas do curral, volveu mirar para a veciña, e nese momento a arracada da veciña rompeu en tres anacos.
+  - [ARG] A veciña tiña por moi certo que a arracada rompera polo mal mirar de Ana González.
+  - [ARG] Contaban que, mentres a meiga voaba ás xuntanzas, na súa cama quedaba durmindo un corpo finxido.
+  - [ARG] Crían que as meigas se transformaban en gatos, en sapos ou en lobos.
+  - [ARG] Críase que con bebedizos, ungüentos e obxectos como terra ou pelos podían estragar o leite, facer morrer as vacas e botar a perder as colleitas.
+  - [ARG] E admitíase que algunhas meigas eran boas, capaces de protexer e de curar.
+  - [GCIENCIA-26] Segundo Rodrigo Pousa, no acervo das galegas daquel tempo non entraba o voo en vasoira.
+  - [== C2. O tribunal e os xuíces (5:00-8:00) ==]
+  - [GL-INQUISICION] O Tribunal da Inquisición estableceuse definitivamente en Santiago de Compostela en mil cincocentos setenta e catro.
+  - [GL-INQUISICION, ARG] A última sede da Inquisición en Santiago, a Casa Grande de Calo, fronte á Porta da Mámoa, derrubouse en mil novecentos trece, e no seu sitio levantouse o Hotel Compostela.
+  - [ARG] A bruxería era un delito de foro mixto: podían xulgala a xustiza civil, a eclesiástica e a Inquisición.
+  - [ARG] O Arquivo do Reino fala do suposto racionalismo dos inquisidores hispánicos, máis escépticos ca os seus colegas europeos.
+  - [CCG-MEIGAS] Segundo o investigador Jaime Contreras, citado polo Consello da Cultura Galega, o Consello Xeral da Inquisición interrompeu as queimas colectivas de bruxas de Laxe e de Cangas.
+  - [ARG] O Arquivo do Reino de Galicia garda uns trinta procesos por bruxería da xustiza real, que aínda están sen estudar.
+  - [ARG] Nos procesos da Real Audiencia, todas as acusadas eran mulleres.
+  - [ARG] Algúns procesos acabaron en condenas de tormento, desterro, azoutes ou emplumamento e vergonza pública.
+  - [ARG] En mil seiscentos trinta e nove, a Real Audiencia procesou a María Cibreira e a outras veciñas de Pazos de Arenteiro, en Boborás.
+  - [ARG] María Cibreira declarou que exercía o oficio desde había uns doce anos e que llo ensinara a súa nai, Guiomar Douteiro.
+  - [ARG] Á casa da súa nai acudía moita xente, e ela facíalles curas e menciñas.
+  - [ARG, GCIENCIA-26] María Cibreira confesou despois de ser torturada.
+  - [ARG] Confesou que as noites de san Xoán e as do primeiro de maio as meigas ían ás xuntanzas do demo nas areas de Sevilla.
+  - [GCIENCIA-26] Rodrigo Pousa explica que as mulleres torturadas non sabían que declarar: as respostas xa ían nas preguntas.
+  - [ARG] Aínda en mil oitocentos vinte e seis, en Santiago de Compostela, a Real Audiencia condenou a adiviña Benita Montero a saír do cárcere emplumada e montada nunha besta, un día de mercado, coa baralla colgada do pescozo.
+  - [ARG] Na casa de Benita Montero atoparon unha baralla vella, un rosario e un escapulario da Virxe do Carme cunha figa de acibeche.
+  - [GL-SOLINO] María Soliña, ou María Soliño, era unha veciña de Cangas á que a Inquisición xulgou por bruxería.
+  - [CCG-SOLINA] O Consello da Cultura Galega advirte de que dela temos poucos datos persoais.
+  - [CANGAS, LVG-2017] Segundo o Concello de Cangas, en mil seiscentos vinte e dous foi condenada a perder os seus bens e a levar o hábito de penitente durante medio ano.
+  - [CANGAS, LVG-2017] Tiña daquela uns setenta anos.
+  - [LVG-2017, CCG-SOLINA] A María Soliña non a queimaron na fogueira.
+  - [CANGAS, LVG-2017] Non se sabe cando nin como morreu: a súa acta de defunción non apareceu.
+  - [CCG-SOLINA, GL-LONGANOITE] O poeta Celso Emilio Ferreiro dedicoulle un poema, María Soliña, no libro Longa noite de pedra, publicado en mil novecentos sesenta e dous.
+  - [CCG-SOLINA, GL-SOLINO] Hoxe María Soliña é un símbolo do sufrimento do pobo, e sobre todo das mulleres; en Cangas ten unha estatua desde dous mil dezaseis.
+  - [== C3. Quen eran de verdade (8:00-10:00): aquí rematan os xuízos ==]
+  - [RAG] Para o dicionario da Real Academia Galega, meiga é a persoa con coñecementos de medicina natural á que se lle supoñen poderes sobrenaturais, que adiviña o porvir e fai curacións.
+  - [RAG] E tamén a muller á que se lle atribuía un pauto co demo, do que recibía poderes para facer meigallos.
+  - [RAG] Menciñeira é a muller que cura a xente ou o gando sen ser médica nin veterinaria; e parteira, a muller sen título que axudaba a dar a luz.
+  - [GL-MEIGA] A etimoloxía máis común fai vir a palabra meiga do latín medica.
+  - [CCG-MEIGAS] Segundo o Consello da Cultura Galega, as curandeiras ou meigas, sobre todo se eran solteiras ou viúvas, foron as vítimas máis frecuentes das denuncias.
+  - [ARG] Moitas das acusadas eran parteiras e menciñeiras que aprenderan o oficio doutras mulleres, a miúdo das súas nais.
+  - [GCIENCIA-26] Rodrigo Pousa atopou nos papeis esta expresión: «Maldita a nai que non ensina a súa filla a meigar».
+  - [GCIENCIA-26] Segundo Pousa, eran necesarias porque resolvían os problemas de cada día: a saúde, as colleitas e o gando.
+  - [ESPANOL] O historiador Diego Valor Bravo di que a meiga non era algo estraño, senón alguén que tiña sentido na sociedade do seu tempo.
+  - [ARG, GCIENCIA-26] Moitas denuncias nacían de xenreiras e liortas entre veciños.
+  - [GCIENCIA-26] Rodrigo Pousa conta que ás veces se falaba de bruxería cando, en realidade, as ovellas dun veciño lle comeran a viña ao outro.
+  - [GCIENCIA-26] Nos papeis daqueles procesos aparecen tamén frases en galego, un tesouro para a historia da lingua.
+  - [ARG] En mil seiscentos corenta e tres, a Real Audiencia procesou a Inés de Maquieira e a outras mulleres de Santa Mariña das Fragas, en Campo Lameiro.
+  - [ARG] Uns veciños dicían que Inés de Maquieira lles fixera morrer becerras e leitóns, porque estaban rifados con ela.
+  - [ARG] Unha testemuña contou que, pola sospeita que tiñan delas, uns veciños foran espreitar as mulleres á fonte a noite de san Xoán do ano anterior.
+  - [ARG] Era a fonte da Nogueira, no lugar de Reboredo.
+  - [ARG] Alí viron e recoñeceron as mulleres, e apuntáronas nunha lista porque eran moitas.
+  - [GL-HERBAS, GL-SANXOAN] Na crenza popular, a noite de san Xoán era a noite en que as meigas andaban máis libres e facían as súas maiores xuntanzas, como no areal de Coiro ou en Sevilla.
+  - [GL-SANXOAN] E a noite de san Xoán era costume ir ás fontes, porque se cría que a auga desa noite tiña virtudes especiais.
+  - [GCIENCIA-26] Segundo Pousa, a caza de bruxas nos tribunais civís decaeu despois do primeiro terzo do século dezasete.
+  - [GCIENCIA-26] Pousa pensa que axudou a chegada do millo de América, que aliviou a fame.
+  - [== C4. Herbas, leite e mal de ollo (10:00-16:00): costumes, nunca consellos ==]
+  - [ARG] En mil seiscentos once, na parroquia de Palio, en Lalín, a Real Audiencia procesou a Marta de Quián, que tiña fama de meiga feiticeira.
+  - [ARG] Unha veciña queixábase de que o leite das súas vacas se lle derramaba.
+  - [ARG] Marta de Quián díxolle que faría unha menciña para que as meigas non llo derramasen nin llo levasen.
+  - [ARG] Outra testemuña declarou que Marta de Quián ofrecía, por catro ou cinco reais, facer que unha moza deixase de mirar para un home.
+  - [ARG] Para iso pedía terra da pegada que el deixaba ao pisar e cabelos da moza dos que quedaban no peite.
+  - [GL-MALDEOLLO] O mal de ollo era, segundo a crenza, o dano que a mirada dalgunhas persoas podía facerlle á saúde da xente ou dos animais.
+  - [GL-MALDEOLLO] Vicente Risco recolleu que algúns pastores e labregos cuspían no gando cando alguén lles gababa os animais, por se acaso.
+  - [GL-MALDEOLLO] Segundo o antropólogo Xosé Ramón Mariño Ferro, a crenza no mal de ollo servía para explicar desgrazas que non tiñan explicación.
+  - [GL-MALDEOLLO] E servía tamén para conter a envexa, porque ninguén quería que o acusasen de botar o mal de ollo.
+  - [GL-MALDEOLLO, RAG] O meigallo era outra cousa: un feitizo, a obra dunha meiga.
+  - [GL-MALDEOLLO] Contra o mal de ollo levábanse amuletos: unha castaña brava, un dente de allo, un corno pequeno.
+  - [GL-FIGA, RAG] A figa é un amuleto con forma de man pechada, usado tradicionalmente contra o mal de ollo e os meigallos.
+  - [GCIENCIA-26] Nos anos sesenta, o antropólogo danés Gustav Henningsen fotografou en Galicia os amuletos cos que se protexían as vacas do mal de ollo.
+  - [GL-LAREIRA] Nas casas galegas, a cociña era a estancia máis importante e acolledora: alí recibían as visitas, comían e facían faladoiros.
+  - [GL-LAREIRA] A lareira era o lugar do lume, e servía para cociñar e para quentar a casa.
+  - [GL-LAREIRA, RAG] A carón do lume estaba o escano, un banco de madeira, normalmente de castiñeiro, onde a xente sentaba a comer, a quentarse ou a matar o tempo.
+  - [GL-LAREIRA, RAG] Os potes colgaban sobre o lume dunha cadea de ferro, a gramalleira.
+  - [GL-LAREIRA, RAG] Nas paredes da cociña había ocos, as lacenas, onde se gardaban os alimentos.
+  - [RAG] O hórreo é unha construción erguida sobre pés, con aberturas nas paredes para que corra o aire, onde se garda o millo.
+  - [GL-HORREO] Os pés do hórreo afástano da humidade e dos animais.
+  - [GL-HORREO] O hórreo, tal como o coñecemos, estendeuse co cultivo do millo, que chegou a Galicia no século dezasete.
+  - [RAG] A malva é moi empregada polos menciñeiros.
+  - [== C5. A noite de san Xoán (16:00-22:00) ==]
+  - [GL-SANXOAN] A noite de san Xoán é a noite entre os días vinte e tres e vinte e catro de xuño, preto do solsticio de verán.
+  - [GL-SANXOAN, RAG] Nesa noite préndense fogueiras, as cacharelas.
+  - [GL-SANXOAN] Arredor do lume, a xente comía sardiñas, cachelos e broa de millo.
+  - [GL-SANXOAN] Cando a fogueira xa case se apagaba, saltábase por riba das últimas lapas.
+  - [GL-SANXOAN] Ao saltar dicíase: «Salto por riba do lume de san Xoán, para que non me morda cadela nin can».
+  - [GL-SANXOAN] Nesta noite afumábase o gando para protexelo do meigallo.
+  - [GL-HERBAS] Na véspera de san Xoán apáñanse as herbas de san Xoán: plantas e flores, moitas delas medicinais.
+  - [GL-HERBAS] Adoita dicirse que han ser sete herbas distintas.
+  - [GL-HERBAS, GL-SANXOAN] Entre elas están o fiúncho, o romeu, o codeso, o fento, a malva, a herba luísa e as follas de sabugueiro.
+  - [RAG] O fiúncho ten flores amarelas e un cheiro agradable e doce, e abunda moito en Galicia.
+  - [RAG] O romeu é un arbusto aromático de follas pequenas e flores azuis ou abrancazadas.
+  - [GL-HERBAS] Crían que as vasoiras de codeso varrían da casa os malos espíritos.
+  - [RAG] Polo san Xoán florean as abelurias, de flores de cor púrpura.
+  - [GL-HERBAS] Para facer o cacho, collían auga de sete fontes.
+  - [GL-HERBAS, RAG] Deixaban as herbas nunha talla con auga, á intemperie, para que lles caese o orballo da noite.
+  - [RAG] Orballo chámase á humidade do aire que, co frío da noite, se condensa en pingas pequenas; e tamén á chuvia miúda.
+  - [GL-HERBAS] Crían que era o orballo o que lles daba ás herbas as súas virtudes; co cristianismo, pasou a dicirse que era san Xoán quen as bendicía.
+  - [GL-HERBAS] Á mañá seguinte lavábase a cara con esa auga verde e recendente.
+  - [GL-HERBAS, GL-SANXOAN] Poñíanse ramos de herbas e flores nas portas e nas fiestras, para que non entrasen as meigas.
+  - [GL-HERBAS] Despois secábanse e colgábanse nalgún lugar da casa, para que a protexesen o resto do ano.
+  - [GL-HERBAS] Un refrán di: «En san Xoán, as bruxas fuxirán».
+  - [ARG] Meigas fóra é unha expresión de sobra coñecida en Galicia.
+  - [GL-SANXOAN] Chamábase flor da auga á primeira auga da fonte ao amencer do día de san Xoán, e crían que daba saúde e beleza.
+  - [GL-SANXOAN] Moita xente cría que o sol baila ao amencer do día de san Xoán, e subía aos montes para velo.
+  - [GL-SANXOAN] Outra copla di: «Madrugada de san Xoán, madrugada máis garrida, que baila o sol cando nace e ri cando morre o día».
+  - [GCIENCIA-26] Gustav Henningsen rexistrou nos anos sesenta o ritual das nove ondas da Lanzada e o lavado da cara coas herbas de san Xoán.
+  - [== C6. O frade que dubidaba: Feijoo (22:00-26:30) ==]
+  - [GL-FEIJOO] Benito Xerónimo Feijoo naceu en Casdemiro, no Pereiro de Aguiar, o oito de outubro de mil seiscentos setenta e seis.
+  - [GL-FEIJOO] O oito de outubro de dous mil vinte e seis fai trescentos cincuenta anos que naceu.
+  - [GL-FEIJOO] Era o fillo maior dunha familia fidalga, pero renunciou á herdanza para facerse frade da orde de San Bieito, pouco antes de facer os catorce anos.
+  - [GL-FEIJOO] Ordenouse sacerdote no mosteiro de Samos.
+  - [GL-FEIJOO] Desde mil setecentos nove viviu en Oviedo, onde foi catedrático da universidade.
+  - [GL-FEIJOO] Escribiu o Teatro crítico universal, oito volumes publicados entre mil setecentos vinte e seis e mil setecentos trinta e nove.
+  - [GL-FEIJOO] Porque escribía contra as falsas crenzas e as supersticións, chamáronlle o desenganador das Españas.
+  - [FEIJOO-INDICE] O terceiro tomo do Teatro crítico, de mil setecentos vinte e nove, dedicoullo ao abade e ao convento de Samos.
+  - [FEIJOO-INDICE, FEIJOO-MAXIA] Nun discurso sobre a maxia, no segundo tomo do Teatro crítico, de mil setecentos vinte e oito, Feijoo escribiu que había feiticeiros, pero non tantos como cría o vulgo.
+  - [FEIJOO-MAXIA] Advertía que as fábulas de bruxería pasan do pobo aos libros, e dos libros outra vez ao pobo.
+  - [FEIJOO-MAXIA] E que así unha fábula nacida no recuncho dunha aldea chega a encher o mundo enteiro.
+  - [FEIJOO-MAXIA] Feijoo contou cinco causas de que houbese tantas fábulas de bruxería.
+  - [FEIJOO-MAXIA] Segundo Feijoo, moitas veces a xente atribuíalle ao demo o que era natural ou froito do traballo.
+  - [FEIJOO-MAXIA] Contaba o caso dun labrego romano acusado de meigallo porque a súa leira daba máis froito ca as dos veciños: defendeuse mostrando que traballaba máis e mellor ca eles.
+  - [FEIJOO-MAXIA] E outra causa era a malevolencia ou a xenreira contra as persoas acusadas.
+  - [FEIJOO-MAXIA] Feijoo riu dunha historia na que unhas bruxas que voaban máis rápido ca as aguias non daban alcanzado un burro.
+  - [FEIJOO-MAXIA] Contou que coñecera unha vella que tiña fama de feiticeira porque ela mesma quería tela: así ninguén lle negaba unha esmola nin un anaco de pan.
+  - [FEIJOO-MAXIA] Recollía que moitos autores crían que o voo das bruxas era un soño: o ungüento só as adormecía profundamente, e soñaban que voaban.
+  - [FEIJOO-MAXIA] E Feijoo admitía que moitas veces o voo das bruxas era só soñado.
+  - [FEIJOO-MAXIA] Pero non negaba que houbese bruxas: pensaba que dicir que todo era ilusión era o outro extremo.
+  - [FEIJOO-MAXIA] Escribiu tamén que a procesión nocturna que nalgúns lugares chaman Hueste, e que din que é de bruxas, é unha fábula nacida de luces e exhalacións acesas.
+  - [GL-FEIJOO] No primeiro tomo do Teatro crítico, en mil setecentos vinte e seis, Feijoo defendeu que as mulleres tiñan a mesma capacidade de entendemento ca os homes.
+  - [GL-FEIJOO] Feijoo pensaba que o galego e o portugués eran unha mesma lingua, e non un dialecto do castelán.
+  - [CCG-MEIGAS, GL-FEIJOO] No século dezaoito, frei Martín Sarmiento defendeu o saber das curandeiras, as meigas, coma o de auténticos médicos e botánicos.
+  - [GL-FEIJOO] Morreu en Oviedo o día vinte e seis de setembro de mil setecentos sesenta e catro.
+  - [GL-FEIJOO] No claustro grande do mosteiro de Samos hai unha estatua de Feijoo, obra de Asorey.
+  - [== C7. Peche (26:30-30:00): habelas, hainas; chove na lousa ==]
+  - [GL-MEIGA] A frase «eu non creo nas meigas, mais habelas, hainas» é un dito moi coñecido, polo que se recoñece a cultura galega en boa parte de España e de Portugal.
+  - [CIBERDUVIDAS] Ninguén lle coñece autor: é un dito popular, tamén en castelán, ao que se lle atribúe orixe galega.
+  - [QUIXOTE] A frase non aparece no Quixote de Cervantes.
+  - [ARG] O Arquivo do Reino de Galicia abre a súa exposición con expresións de sobra coñecidas: mouchos, curuxas, sapos e bruxas; habelas, hainas; meigas fóra; María Soliña.
+  - [ARG] En dous mil vinte, polo Día Internacional da Muller, o Arquivo do Reino de Galicia mostrou seis procesos por bruxería da Real Audiencia.
+  - [RAG] A lousa é unha pedra gris ou negra que se parte doadamente en láminas.
+  - [RAG] O lousado é o tellado dunha casa cuberto de lousas.
+fontes:
+  ARG: https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf
+  CCG-MEIGAS: https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=29953
+  CCG-SOLINA: https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=3781
+  ESPANOL: https://www.elespanol.com/mujer/mujeres-historia/20210309/verdad-caza-meigas-perseguidas-justicia-ordinaria-inquisicion/564444343_0.html
+  GCIENCIA-26: https://www.gciencia.com/retro/a-persecucion-das-bruxas-na-galicia-de-hai-400-anos-eran-apreciadas-e-necesarias-para-o-pobo/
+  GCIENCIA-21: https://www.gciencia.com/desmontando-mitos/queimada-entre-lendas-e-conxuros-asi-se-inventou-unha-tradicion/
+  ATLANTICO: https://www.atlantico.net/articulo/vigo/conxuro-queda-padre-fallece-vigo-mariano-marcos/20220207232642892177.html
+  CORREO: https://www.elcorreogallego.es/galicia/2019/05/27/mariano-marcos-creo-pobrense-conxuro-109904997.html
+  GL-QUEIMADA: https://gl.wikipedia.org/wiki/Queimada
+  GL-SANXOAN: https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n
+  GL-HERBAS: https://gl.wikipedia.org/wiki/Herbas_de_san_Xo%C3%A1n
+  GL-MEIGA: https://gl.wikipedia.org/wiki/Meiga
+  GL-SOLINO: https://gl.wikipedia.org/wiki/Mar%C3%ADa_Soli%C3%B1o
+  GL-INQUISICION: https://gl.wikipedia.org/wiki/Inquisici%C3%B3n_espa%C3%B1ola
+  GL-FEIJOO: https://gl.wikipedia.org/wiki/Benito_Xer%C3%B3nimo_Feijoo
+  GL-MALDEOLLO: https://gl.wikipedia.org/wiki/Mal_de_ollo
+  GL-FIGA: https://gl.wikipedia.org/wiki/Figa
+  GL-LAREIRA: https://gl.wikipedia.org/wiki/Lareira
+  GL-HORREO: https://gl.wikipedia.org/wiki/H%C3%B3rreo
+  GL-LONGANOITE: https://gl.wikipedia.org/wiki/Longa_noite_de_pedra
+  CANGAS: https://cangas.gal/gl/areas/turismo/nosa-historia/maria-solina
+  LVG-2017: https://www.lavozdegalicia.es/noticia/vigo/cangas/2017/12/12/mito-meiga-maria-solina/0003_201712V12C6991.htm
+  FEIJOO-MAXIA: https://www.filosofia.org/bjf/bjft205.htm
+  FEIJOO-INDICE: https://www.filosofia.org/bjf/bjft000.htm
+  CIBERDUVIDAS: https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-frase-eu-nao-acredito-em-bruxas-mas/16796
+  QUIXOTE: https://www.gutenberg.org/cache/epub/2000/pg2000.txt
+  RAG: https://academia.gal/dicionario
