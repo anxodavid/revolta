@@ -70,17 +70,17 @@ Los sustos de B son los chasquidos de la lareira de 7541a9e, que no estaban limi
 
 1. **La voz no se degrada con ningún ambiente** (SIG 3,57-3,62 en las cuatro). DNSMOS BAK y OVRL bajan con cualquier
    fondo por diseño (se entrenó para puntuar supresores de ruido, https://ieeexplore.ieee.org/document/9746108: el
-   mejor fondo para él es el silencio), así que D
-   gana siempre y la medida solo dice cuánto "cuesta" el ambiente, no si ayuda a dormir. A cuesta más (fondo en el
-   100 % del tiempo y el más cercano a la voz, 15,9 dB por debajo); C cuesta algo más que B porque tiene sonido en
-   más tiempo, pero con cada sonido más lejos de la voz (22,2 dB de mediana).
+   mejor fondo para él es el silencio), así que D gana siempre y la medida solo dice cuánto "cuesta" el ambiente, no
+   si ayuda a dormir. A cuesta más (fondo en el 100 % del tiempo y el más cercano a la voz, 15,9 dB por debajo); C
+   cuesta algo más que B porque tiene sonido en más tiempo, pero con cada sonido más lejos de la voz (22,2 dB de
+   mediana).
 2. **El WER del texto largo mide un defecto de Whisper, no el ambiente.** En la zona de dormir, Whisper se salta frases
    enteras tras los silencios largos: con voz sola (D) borra 31 de 77 palabras y solo reconoce mal una ("Pouco" →
-   "ouco", igual en las cuatro opciones). Con lluvia continua (A) se salta solo 2 palabras, con B y C 11-14: el ambiente rellena el silencio [S].
-   Las palabras reconocidas son las mismas en las cuatro opciones: ningún ambiente tapa palabras. El WER frase a frase
-   (cada frase cortada con 0,3 s de margen) evita ese defecto: PENDIENTE. Aviso para la QA del pipeline: `qa.asr`
-   transcribe el episodio entero y puede suspender la puerta de WER (0,06) en la zona de dormir por este defecto y
-   no por la voz; convendría medirlo por frases o con `vad_filter` [S].
+   "ouco", igual en las cuatro opciones). Con lluvia continua (A) se salta solo 2 palabras, con B y C 11-14: el
+   ambiente rellena el silencio [S]. Las palabras reconocidas son las mismas en las cuatro opciones. El WER frase a
+   frase (cada frase cortada con 0,3 s de margen) evita ese defecto: PENDIENTE. Aviso para la QA del pipeline:
+   `qa.asr` transcribe el episodio entero y puede suspender la puerta de WER (0,06) en la zona de dormir por este
+   defecto y no por la voz; convendría medirlo por frases o con `vad_filter` [S].
 3. **El murmullo de gentío no se entiende**: Whisper no transcribe nada en 2 de 3 semillas de 40 s de `xente` solo (a
    −20 LUFS, más fuerte que en el vídeo) y en la tercera alucina 8 palabras sin sentido ("as causas causas causas...
    ¿non?") con confianza baja (logprob medio −1,15). Las mismas frases del banco en seco las transcribe perfectas.
@@ -103,7 +103,7 @@ Los sustos de B son los chasquidos de la lareira de 7541a9e, que no estaban limi
 
 **Recomendación: C**, que es lo que hace ya `longo.py` por defecto (`ambiente: escena`), con la lista de planos
 escrita según [`guia-son.md`](guia-son.md). Es la única opción que cumple a la vez D13 y D14: sonido de cada escena
-(9 tipos), voz limpia donde la imagen no tiene sonido, sin fondo constante, sin monotonía (8-11 % frente al 93 % de
+(9 tipos), voz limpia donde la imagen no tiene sonido, sin fondo constante, sin monotonía (9-11 % frente al 93 % de
 A), murmullo ininteligible en los gentíos, 0 sustos en la zona de dormir y, con una lista según la guía, un ritmo
 de cambios que no parpadea (9,5 cada 10 min al dormir). Lo paga con un fondo presente más tiempo
 que B (DNSMOS OVRL 3,02 frente a 3,16), sin perder palabras.
