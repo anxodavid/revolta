@@ -93,3 +93,74 @@ oscurecer lo que el generador pintó claro: el arco de dormir se decide en el pr
 | 14 | dormir · bodegón | La idea es buena (el agua de San Xoán) pero sale mal: una jardinera gigante de flores en mitad de un valle alpino, sin agua visible y con una escala imposible. Es tan luminoso como el gancho. | `extreme close-up detail of a clay bowl of water with floating wild flowers and fennel on a granite windowsill at night, moonlight on the water surface, very dim`: tipo `detalle`, sin paisaje detrás. |
 | 15 | dormir · plano medio → reserva | La carballeira con niebla es el mejor cierre para dormir de la hoja. Pero es la reserva: el Feijoo pedido (un monje en su celda con una vela) cayó dos veces como "persoa á lareira", un falso positivo (una vela no es una lareira), y se perdió el único plano de Feijoo. El aviso dice "xa no plano 11" cuando es el 12 (`revisor.py` imprime el índice desde 0). | Puerta: arquetipo "persoa á lareira" con texto más estrecho y sin aplicarlo si el prompt no nombra fuego (§4); imprimir `prev[-1]+1` y `j+1`. Guion de planos: Feijoo en calma y no en dormir (en dormir ≤ 30 % de personas), con `a closed leather-bound book`. |
 | 16 | dormir · detalle | Es el cliché que la biblia veta, en el último plano: caldero negro con un líquido rojo que brilla (Florence: "a potion") y llamas vivas a los lados, no brasas. Es el plano con más altas luces de la fase de dormir (0,97 %, más que el 4 del gancho). | Sin olla en el centro: `extreme close-up detail of dying embers and grey ash on a granite hearth stone, the black iron leg of a pot at the edge of the frame, faint red glow, soft darkness`; `negativo: cauldron, potion`. Puerta: veto de clichés de bruja y de llama en dormir (§4). |
+
+## 4. Mejoras para la puerta automática (`herramientas/pipeline/revisor.py`)
+
+Por orden de rendimiento. Los umbrales marcados [S] hay que calibrarlos con `probas/visual_calibrar_clip.py`.
+
+1. **Comprobar lo que se pidió, no solo lo vetado.** Añadir a `planos.json` un campo `clave` con los 1-3 elementos
+   que tienen que verse (`wooden yoke`, `red wax seal`, `iron oil lamp`), y revisarlo con CLIP igual que `negativo`
+   pero al revés: sim("a photo with X") − sim("a photo") ≥ margen [S]. Está pensado para cazar los 12 planos de esta
+   hoja a los que les falta el elemento clave; hoy la puerta solo mira lo que sobra.
+2. **Luz eléctrica sin depender de Florence.** `street lamps` y `lamp posts` ya están en la regex, pero Florence
+   describió el 2 como "lanterns hanging from the ceiling" y en el 13 no nombró la ciudad. Pares CLIP nuevos, por
+   calibrar [S]:
+   - `('luz eléctrica (CLIP)', 'a street at night lit by rows of electric street lamps', 'a dark lane at night lit only by a hand-held lantern')`
+   - `('luces de cidade (CLIP)', 'city lights glowing in a valley at night', 'dark hills at night with no lights')`
+   - `('salón moderno (CLIP)', 'a cozy living room with cushions and a fireplace with a mantelpiece', 'a smoke-blackened peasant kitchen with an open stone hearth at floor level')`
+   - `('patio mediterráneo (CLIP)', 'an arcaded courtyard with potted plants and hanging lanterns', 'a granite village fountain with a stone trough')`
+   - `('casas británicas (CLIP)', 'English stone cottages with gable chimneys and sash windows', 'low granite houses with small openings and slate roofs')`
+   - `('caldeiro de meiga (CLIP)', "a witch's cauldron with a glowing potion", 'an iron cooking pot over embers in a peasant hearth')`
+
+   Probé además a contar puntos de luz pequeños en la imagen. Separa el 2 (99 puntos), pero el 6 da 100 por el cielo
+   y el follaje, así que solo serviría combinado con un "exterior de noche" de CLIP.
+3. **Regex de Florence** (baratas; las palabras salen de las descripciones de esta hoja):
+   - `obxectos modernos` += `lanterns? hanging|hanging lanterns?|city lights?|town lights?|streetlights?|tea ?lights?|glass jar|jar candle|sliced bread|slices? of bread|kettle|teapot|coffee pot|feather boa`
+   - `interior moderno` += `cushions?|upholstered|window seat|mantel(piece)?|potted plants?|flower ?pots?|vase of flowers|large window|view from the window`
+   - `texto na imaxe` += `open book|book open|pages of|document|newspaper`
+   - nueva `clichés de meiga`: `potion|witch(es|craft)?|broom(stick)?|pointed hat|spell|magic(al)?|crystal ball`. Además, `cauldron` deja de servir de excepción al fuego grande cuando va con `glowing|bubbling|potion|red liquid|green liquid`.
+   - nueva `animais en grupo`: `(three|four|five|several|many|a herd of|a group of) (cows|oxen|cattle|bulls|sheep|goats|horses|cats|dogs)`
+   - `lume grande no exterior` += `campfire|burning brightly`
+4. **Reglas por fase.** En dormir, rechazar `flames|burning brightly|campfire|bonfire|blaze` si no hay
+   `embers|glowing coals`, y rechazar más de un 0,5 % de píxeles por encima de 0,85 [S] (aquí el 16 da 0,97 % y el 14
+   y el 15 dan 0 %). En `graduar`, poner un techo de luminancia media por fase (p. ej. calma ≤ 0,33 y dormir ≤ 0,18
+   [S]) y una saturación ≤ 0,6 en dormir [S]. Hoy la fase de dormir sale tan luminosa como el gancho.
+5. **Arquetipos.**
+   - A `camiñantes de costas` le falta un segundo texto, `a lone person seen from behind walking away along a path or street`: el 5 no se detectó.
+   - `persoa á lareira` debería usar `a person sitting beside an open hearth fire` y no aplicarse cuando el prompt no nombra fuego ni lareira. El monje con vela del 15 cayó dos veces por un falso positivo y se perdió Feijoo.
+   - Los mensajes deben numerar desde 1 (`prev[-1]+1` en "arquetipo seguido" y `j+1` en "repetida"). Hoy "xa no plano 11" señala un plano equivocado.
+6. **Corrección del reintento según interior o exterior** (`imaxes.py`). La corrección `dark slate roofs, granite
+   walls, green hills` delante de un interior creó el ventanal panorámico del 6.
+7. **Un plano con relato no debe acabar en reserva.** Si un plano narrativo falla dos veces, hay que reescribir el
+   prompt o darle un intento con SDXL base, CFG y prompt negativo (más lento [S]) antes de cambiarlo por un paisaje
+   vacío. La reserva sin personas solo tiene sentido en dormir.
+
+## 5. Mejoras para la biblia (`gauntlet3/visual/biblia.md`)
+
+1. **Personas en relación y la premisa del episodio.** Es lo que decide el ciego. En el gancho y en la transición,
+   al menos 1 de cada 4 planos debe mostrar a dos personas que se relacionan: la curandera y una vecina, el escribano
+   y la acusada, un cura leyendo un edicto a la puerta de la iglesia. Se resuelve en *over-the-shoulder*, con una cara
+   grande enfocada y la otra de espaldas, así que respeta el tope de caras. El gancho tiene que enseñar la premisa
+   (denuncia, tribunal, cárcel) y no solo ambiente; la biblia cita `over-the-shoulder` pero ningún prompt lo usó.
+2. **Trampas de prompt descubiertas en esta hoja** (para §4 y §6):
+   - luces "far away" de noche → ciudad; "old town at night" + "puddles reflecting the light" → farolas;
+   - "document" o "letter" → papeles con pseudotexto (mejor el detalle del sello y el lacre);
+   - "iron oil lamp" → vela en vaso (hay que describir la forma del candil);
+   - "iron pot" junto al fuego → caldero con poción (dejar la olla en el borde o fuera);
+   - capucha → monja o bruja (mejor pañuelo y chal);
+   - "fountain with a stone basin" → pila mediterránea (mejor `granite wall fountain with a stone spout and a long trough`);
+   - "oxen" → cuernos largos y manada (mejor `two ... with short horns`, encuadre de cabezas);
+   - casas con chimenea en los hastiales → casitas británicas;
+   - "dozing" y "backlit" no salen: el modelo pinta los ojos abiertos y luz frontal.
+3. **Lista negativa ampliada:** farolas y apliques, luces de ciudad, velas rojas o de colores, velas de té, velas en
+   vaso, pan de molde, teteras y cafeteras metálicas, bancos tapizados y cojines, chimeneas con repisa, ventanales con
+   vistas, macetas y tiestos, patios porticados con farolillos, casitas británicas.
+4. **Queimada.** El conxuro es de 1967. El plano tiene que ser un detalle sin época (cuenco, cazo y llama azul en la
+   oscuridad), no una cocina del XVII.
+5. **Dormir y calma.** En dormir, nada de llama viva en todo el tramo: solo brasas, luna y niebla (la carballeira del
+   15 es el modelo), con metas numéricas de luz por fase compartidas con `graduar` y la puerta [S]. En calma, sin
+   amaneceres rosas, que son de la transición: la calma tiene que ir más oscura que la transición.
+
+---
+Quién hizo qué: la comparación a ciegas, el veredicto, la tabla y las medidas de luz son de Claude (agente crítico),
+mirando las hojas y con un script propio. No hay revisión humana.
