@@ -132,3 +132,19 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   nuevo que vuelva a leerlo todo. Solo se relanza desde cero el que apenas había empezado.
 - Conviene guardar en el repo, y no solo en el scratchpad, las utilidades que crean los agentes (p. ej. el comprobador
   rápido del guion).
+
+## Voz en embudo (gancho → dormir)
+
+- **Resultado medido (sin escucha humana):** arousal 0,64 → 0,43, variación de la F0 4,8 → 2,6 semitonos y
+  182 → 113 palabras/min (con pausas), bajando en cada punto de la curva, con WER frase a frase ≤ 0,054. Referencia
+  "viva" = media de 3 grabaciones de Brais; "calma" = 1. Muestra: `gauntlet3/voz/mostra-embude.m4a`.
+- **El ritmo es la palanca grande** del tono (escala 1,3 → −0,09 de arousal); la referencia de estilo pesa poco con los
+  parámetros de siempre y solo se nota bajando `beta` (0,4-0,6). Hace falta juntar varias palancas pequeñas en el
+  mismo sentido (ritmo, rango de F0, referencia calma, algo de altura).
+- **Ampliar el rango de la F0 mete voz cascada** (tramos < 75 Hz): `voz_st2.py` no baja ningún tramo de 80 Hz.
+- Algunas referencias con `beta` bajo hacen tartamudear al modelo ("di di diante"): probar el WER de cada referencia
+  en su punto de la curva.
+- **Cotovía compilada de Nós en modo `-p1`**: en modo síntesis dice "Cousas de Galiza **pra** durmir" y contrae el
+  artículo ("facelo lume"), cosas que el corpus de entrenamiento no tiene; `-p1` las quita.
+- **El WER de Whisper sobre un audio largo con pausas engaña:** el mismo pasaje da 0,18-0,28 entero y ≤ 0,054 frase a
+  frase (se salta frases enteras). El QA del vídeo largo transcribe cada frase en su tramo (`qa.asr_por_frases`).
