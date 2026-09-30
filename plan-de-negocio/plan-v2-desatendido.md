@@ -5,7 +5,8 @@ Canal de YouTube de historia, lendas y cultura de Galicia para quedarse dormido,
 (`plan-de-negocio.md`, con garantía humana de calidad), que quedó sin efecto tras las decisiones del promotor D1-D6
 (`decisiones.md`) y las posteriores del 29 y 30-09-2026 (`gauntlet2/contexto.md`).
 
-- **Versión:** v2 integrada (agente de integración del Gauntlet 2) · 30-09-2026.
+- **Versión:** v2 integrada (agente de integración del Gauntlet 2) · 30-09-2026 · alisada tras la ronda 1 del
+  tribunal (0/3 aprueban; ver Anexo A.4).
 - **Idioma:** plan en castellano. Todo lo que ve u oye el público va en galego normativo (RAG-ILG).
 - **Piezas de origen:** `gauntlet2/piezas/plan-desatendido.md` (v4), `gauntlet2/piezas/ecosistema.md` (v4),
   `gauntlet2/referencia.md`, el vídeo de ejemplo y su QA (`gauntlet2/video/`), `../herramientas/pipeline/README.md` y los
@@ -14,7 +15,7 @@ Canal de YouTube de historia, lendas y cultura de Galicia para quedarse dormido,
 - **Convenciones:** [F] dato con fuente (URL al lado o en la pieza citada); [R] reutilizado del Gauntlet 1 o de una
   pieza (allí están las URLs); [P] medida propia en este entorno; [S] supuesto o estimación propia, sin verificar.
   1 USD = 0,87 € [S, el mismo tipo de trabajo del Gauntlet 1].
-- **Relojes:** S0 = semana del 30-09-2026. M0 = primera publicación (≈ semana 12-14, §8).
+- **Relojes:** S0 = semana del 30-09-2026. M0 = primera publicación (≈ semana 15-20, §8).
 
 ---
 
@@ -36,40 +37,61 @@ Canal de YouTube de historia, lendas y cultura de Galicia para quedarse dormido,
   retención a 2 min < 25 %, < 35 % de Galicia en el tráfico sembrado.**
 
 **2. Retornos esperables: en dinero, el canal casi seguro pierde un poco** (§3). Ingresos esperados a 12 meses ≈
-0-25 €; gasto de caja ≈ 30-150 €; ≈ 90-145 h del promotor el primer año. Solo el escenario optimista (8-12 % [S]) se
+0-25 €; gasto de caja ≈ 30-150 €; ≈ 105-175 h del promotor el primer año. Solo el escenario optimista (8-12 % [S]) se
 acerca al YPP. El valor está en lo cultural y en lo técnico: datos de error para Nós, un pipeline libre y horas de
 escucha en galego donde hoy no hay nada.
 
 **3. Qué demostró el vídeo de ejemplo** ([`gauntlet2/video/ejemplo.mp4`](gauntlet2/video/ejemplo.mp4), QA en
 [`gauntlet2/video/qa.md`](gauntlet2/video/qa.md), hoja de contactos en
 [`gauntlet2/video/contactsheet.jpg`](gauntlet2/video/contactsheet.jpg)):
-- **Imagen, voz, sonido y montaje dan el pego.** 3 min 11 s, 1080p, voz StyleTTS2 Brais de Nós, WER de la mezcla
-  0,037, −17,2 LUFS, subtítulos alineados al 99,7 %, 29 planos revisados por una puerta automática de imágenes (manos,
-  anacronismos, multitudes, repeticiones), un solo comando desatendido, veredicto automático PUBLICABLE 13/13 [P]. El
-  promotor lo vio y lo juzgó "cerca de algo publicable sin dar vergüenza ajena".
+- **Lo técnico funciona: voz, sonido, sincronía y ejecución desatendida.** 3 min 11 s, 1080p, voz StyleTTS2 Brais de
+  Nós, WER de la mezcla 0,037, −17,2 LUFS, subtítulos alineados al 99,7 %, un solo comando desatendido, veredicto
+  automático PUBLICABLE 13/13 [P].
+- **La imagen todavía no da el pego.** Los 29 planos pasaron una puerta automática (manos, anacronismos, multitudes,
+  repeticiones), pero la hoja de contactos y los fotogramas muestran defectos que la puerta aprobó [P, tribunal r1]:
+  a 1:43-1:44, una multitud con caras deformes, una farola con cables, fachadas pastel mediterráneas y un obispo con
+  casulla verde en plena calle; a 2:31 y 2:46, grupos numerosos de soldados; a 0:55, cipreses toscanos, una llanura que
+  no es gallega, sombreros de ala del XIX, un carro de ruedas de radios (el carro de bois galego es de rueda maciza) y
+  bueyes con la anatomía fundida. La causa: la puerta busca palabras en la descripción que hace Florence-2, y si la
+  descripción no nombra el defecto, la imagen pasa (en el plano 24 detectó multitud en 5 intentos y aceptó el sexto,
+  de reserva) [P `gauntlet2/video/qa.md`]. El endurecimiento está en §5.3 y es condición de P-guion y P0 (§8.1).
+- **Ningún humano ha aprobado todavía un vídeo desatendido.** El juicio del promotor "cerca de algo publicable sin dar
+  vergüenza ajena" (29-09) se hizo sobre el vídeo de 4:00 de la **ronda 1** (commit `7679395`), cuyo guion escribió
+  Claude a mano en modo `manual`: no era desatendido. El vídeo actual (ronda 3, commit `b5ce409`, 30-09) no lo ha
+  juzgado ninguna persona.
 - **El guion con un LLM local no da el pego.** Con EuroLLM-9B en CPU el guion **inventa historia** ("a irmandade
   venceu", cuando fue derrotada en 1469) **y palabras** ("fortaleiras") (ronda 2). Con las puertas de verdad
   bloqueantes (ronda 3), el LLM no consiguió **ni uno** de los 18 párrafos del relato limpio en tres intentos: lo que se
-  oye es el dossier casi literal, verdadero pero seco, con repeticiones ("botou abaixo moitas fortalezas" ×5) y un
-  gancho sin referente [P, `gauntlet2/video/qa.md`; veredicto `video-r3.md`].
+  oye es el dossier casi literal, verdadero pero seco, con repeticiones ("botou abaixo moitas fortalezas" y
+  variantes, unas 6 veces en 3 min contando "derrubaron moitas fortalezas": una lista, no una narración) y un gancho
+  sin referente [P, `gauntlet2/video/qa.md`; veredicto `video-r3.md`].
 - **Decisión ya tomada por el promotor (30-09-2026):** el guion lo escribe **un LLM potente por API**; voz, imágenes,
   montaje y controles siguen siendo open source y locales, y los controles (veracidad, LanguageTool, ASR) se quedan como
-  red de seguridad. Coste del guion por API: **≈ 1-3 USD por episodio de 60 min en el caso central** (0,05-0,15 USD por
-  una muestra de 3 min), hasta ≈ 7 USD en el peor caso (§3.3).
+  red de seguridad. Coste del guion por API: **≈ 1-1,7 USD por episodio de 60 min en el caso central** (Sonnet 5.5 con
+  caché y lotes), 2-3,5 USD con Opus 5.5 optimizado y 6-11 USD en el peor caso (Opus sin caché ni lotes); 0,05-0,15 USD
+  por una muestra de 3 min (§3.3). **Que el guion por API dé el pego no está demostrado:** es la puerta P-guion (semanas
+  2-4, §8.1), con umbrales numéricos y una escucha ciega, y si no se pasa el proyecto para o cambia de formato antes de
+  invertir el resto del MVP.
 
-**4. Recomendación: construir y hacer la prueba del nicho, con cuatro condiciones que no se negocian.**
+**4. Recomendación: construir y hacer la prueba del nicho, con cinco condiciones que no se negocian.**
 1. **Ningún episodio con la voz de Brais sin un sí escrito de Nós/USC** (y, a través de Nós, del locutor). "Sin
    monetizar" no existe en YouTube: la cláusula *Right to Monetize* deja a YouTube poner anuncios en vídeos de canales
-   fuera del YPP [F https://support.google.com/youtube/answer/10090902]. Voz de reserva lista: Sabela, Icía o Iago de
-   Nós (datos donados, CC-BY 4.0) [F https://zenodo.org/records/8027725] (§6, §7).
+   fuera del YPP [F https://support.google.com/youtube/answer/10090902]. Voz de reserva lista: Sabela, Icía, Iago o
+   Paulo, del corpus CRPIH_UVigo-GL-Voices del Centro Ramón Piñeiro (CRPIH) y del Grupo de Tecnoloxías Multimedia de la
+   Universidade de Vigo (CC-BY 4.0), cuya versión extendida y modelos publica Nós [F https://zenodo.org/records/8027725]
+   (§6, §7).
 2. **Aviso hablado veraz al empezar cada vídeo:** "a voz é sintética e este texto preparouno un proceso automático".
    Nunca afirmar una revisión humana que no existe (§7.3).
 3. **Ganchos solo al principio y siempre verdaderos:** título, miniatura y primeros 60-120 s con curiosidad
    verificada contra el dossier; después, bajada al tono de dormir. Las lendas, como lendas (§4).
 4. **Parar cuando lo digan los umbrales**, fijados hoy y no retocables (§2.4, §8).
+5. **Ninguna publicación sin un vídeo desatendido aprobado por personas:** la muestra regenerada con el guion por API
+   pasa P-guion (umbrales numéricos, escucha ciega del promotor, prueba ciega de 2 min frente a la referencia) y el
+   piloto de 60 min pasa P0 (puerta de lengua medida y lectura ciega de 2 galegofalantes) (§8.1).
 
-Si la prueba manda parar, el coste hundido es ≈ 70-110 h y < 50 € [S], y queda lo que no depende del nicho: el código
-libre y un informe de errores de voz, texto y traducción para el Proxecto Nós (§6).
+Si P-guion manda parar en la semana 4, el coste hundido es ≈ 24-30 h y < 5 € [S]. Si la prueba del nicho manda parar,
+es ≈ 85-130 h y < 50 € [S]. En los dos casos queda lo que no depende del nicho: el código libre, el banco de pruebas
+de redacción y un informe de errores de voz, texto y traducción para el Proxecto Nós (§6).
 
 ---
 
@@ -85,13 +107,13 @@ decidió entonces (`decisiones.md`, 29-09-2026) y en los días siguientes (`gaun
 | D6 | Si nadie financia la calidad, hobby en anónimo | Éxito medido en audiencia y datos devueltos, no en ingresos. Seudónimo ante el público, identidad conocida por los socios (§6.3) |
 | D1 | Validación formal de la voz (850-1.500 €) solo si el canal muestra tracción | Puerta P3 con KPIs (§8.2). Probabilidad de pagarla en 12 meses ≈ 8-12 % [S] |
 | D2 | Si ninguna voz pasa el listón, la más cercana | StyleTTS2 Brais de Nós (mejor en el kit A/B y en ASR) **si Nós dice sí**; si no, la mejor de las voces de reserva (§7.1) |
-| D3 | ~6 h/semana mientras se monta; ~1 h/semana después | MVP en ≈ 12-15 semanas; régimen de **1 episodio cada 2 semanas**, porque el dossier de cada episodio pide 25-75 min de persona (§3.4) |
+| D3 | ~6 h/semana mientras se monta; ~1 h/semana después | MVP en ≈ 14-20 semanas, tras la puerta P-guion de la semana 4; régimen de **1 episodio cada 2 semanas**, porque el dossier de cada episodio pide 25-75 min de persona (§3.4) |
 | D4 | Pedir permiso a Nós/USC y darles crédito | El correo a Nós está listo (§6.4). **Endurecido:** sin sí escrito no se publica con Brais (condición 1 del §0) |
 | 29-09 | Ritmo más vivo al principio y ganchos "con picante" como la referencia | Fórmula de **embudo**: ganchos solo en título, miniatura y primeros 60-120 s; después el ritmo baja al de dormir (§4.3). Implementado en el pipeline (voz y cortes de plano en embudo) |
 | 29-09 | Temas de toda Galicia, no solo historia medieval | Catálogo con mitad historia y mitad lendas, mar, vida cotiá e idiosincrasia (§4.2) |
 | 29-09 | Pregunta obligatoria: ¿el nicho existe? | Veredicto, tres nichos y prueba falsable con umbral de parada (§2) |
 | 29-09 | Explorar pistas de audio gl + pt + es + en | Fase 2 de la prueba, solo si la fase 1 no manda parar; **pt y en primero, es no el primer año** (§4.4) |
-| 30-09 | El guion lo escribe un LLM potente por API | Coste de 1-3 USD por episodio (§3.3); el resto del stack sigue open source y local; comparación pública trimestral con los modelos abiertos en galego (§6.2) |
+| 30-09 | El guion lo escribe un LLM potente por API | Coste de ≈ 1-1,7 USD por episodio en el caso central (§3.3); puerta P-guion antes de invertir en el MVP (§8.1); el resto del stack sigue open source y local; comparación pública trimestral con los modelos abiertos en galego (§6.2) |
 
 **Lo que se conserva del v1:** la investigación de audiencia y retornos del Gauntlet 1, la lista de temas vetados,
 el aviso de IA, la etiqueta de contenido sintético, la regla de fuentes con licencia abierta y la estrategia de
@@ -228,7 +250,7 @@ menciona suscriptores, así que **el requisito de 1.000 suscriptores es un supue
 | **Optimista:** "a primeira canle para durmir en galego" sale en prensa o un vídeo de lendas se dispara | 8-12 % | PLAN | 600-4.000 | 27-180 K | 270-2.700 | 0-300 € en el año, **si la revisión del YPP no lo rechaza** (§7.1) |
 | *Suplemento multi-audio (c), solo si la fase 2 da R ≥ 1,3* | 40-55 %, condicionado | — | ×1,3-2 | ×1,3-2 | ×1,3-2 | Casi igual: RPM de pt-BR bajo [S] |
 
-**Valor esperado de ingresos en 12 meses ≈ 0-25 € [S]. Resultado esperado en caja ≈ −30 a −150 €**, más ≈ 90-145 h
+**Valor esperado de ingresos en 12 meses ≈ 0-25 € [S]. Resultado esperado en caja ≈ −30 a −150 €**, más ≈ 105-175 h
 del promotor el primer año natural (§3.4). Es un hobby con coste, como decidió el promotor (D6).
 
 Qué no entra en el modelo: ayudas y premios en galego (casi todas exigen solicitante identificado, y el canal es
@@ -236,9 +258,12 @@ anónimo) [R `retornos.md` §7]; un canal espejo en castellano (descartado: part
 lingua); Spotify Partner Program (fuera de alcance salvo en el optimista) [R].
 
 **Retorno no monetario** (lo que justifica el hobby): informe de errores de voz para Nós en narración larga; pares
-"galego da máquina → galego corrixido" de la audiencia; un banco de preguntas de historia de Galicia con fuente (Nós
-no tiene ninguno entre sus 63 conjuntos en Hugging Face [P https://huggingface.co/api/datasets?author=proxectonos]);
-el pipeline libre; horas de escucha en galego (§6.2).
+de corrección (texto generado → texto corregido por una persona) en el esquema de `galician-gec-corpora` de Nós; un
+**conjunto de evaluación de fidelidad narrativa larga** (dossier → texto divulgativo, con cada frase anotada como
+apoyada o sin apoyo), que no aparece entre los 63 conjuntos de Nós en Hugging Face (preguntas de patrimonio sí hay:
+`gl_QA_bensculturais` y otros, §6.2) [P https://huggingface.co/api/datasets?author=proxectonos, 30-09-2026]; el
+banco de pruebas de redacción; el pipeline libre; horas de escucha en galego (§6.2). Todo depende de horas de "oído
+galegofalante", presupuestadas en §3.4.
 
 ### 3.3 Costes por episodio y por mes
 
@@ -272,8 +297,9 @@ llamadas), con hasta 3 reintentos por bloque, y además pide ≈ 290 descripcion
 | **Sonnet 5.5 con caché + lotes (caso central recomendado para empezar)** | **≈ 1-1,7 USD (≈ 0,9-1,5 €)** |
 | Muestra de 3 min como la del ejemplo (≈ 20 llamadas) | ≈ 0,05-0,15 USD |
 
-Las "céntimas por episodio" de la decisión valen para la muestra de 3 min; para un episodio de 60 min son de 1 a 3 USD
-en el caso central. Qué modelo se usa se decide en la semana 2 con la muestra regenerada (§9): el más barato que pase
+Las "céntimas por episodio" de la decisión valen para la muestra de 3 min; para un episodio de 60 min son ≈ 1-1,7 USD
+en el caso central (Sonnet 5.5 con caché y lotes, ≈ 0,02-0,03 USD por minuto narrado) y 2-3,5 USD con Opus optimizado.
+P-guion (§8.1) exige ≤ 0,05 USD por minuto narrado medido en la muestra regenerada, reintentos incluidos. Qué modelo se usa se decide en la semana 2 con la muestra regenerada (§9): el más barato que pase
 las puertas con menos reintentos, midiendo el coste real por episodio completo (no por llamada).
 
 **Caja mensual (2 episodios al mes en régimen, hasta 4-5 en el arranque) [S sobre F/R]:**
@@ -305,29 +331,52 @@ con una cifra de 5-7 h que no contaba la puerta de imágenes).
 
 ### 3.4 Horas del promotor (D3)
 
-**Construcción del MVP (≈ 70-95 h a ~6 h/semana ≈ 12-15 semanas) [S]:** lo de la pieza del plan (57-85 h: orquestador y
+**Construcción del MVP (≈ 85-118 h a ~6 h/semana ≈ 14-20 semanas) [S]:** lo de la pieza del plan (57-85 h: orquestador y
 reanudación, guion por capítulos y embudo, cinturón lingüístico, H2, QA de audio por párrafo, montaje por tramos,
 canarios, piloto de 60 min, `dossier.py` con PDF, stock de 8 dossieres) **más** lo que añadieron las rondas del vídeo y
 la decisión del 30-09: backend de API en `llm.py` con caché y lotes (3-5 h), puerta de coherencia narrativa (sin
 n-gramas repetidos de ≥ 4 palabras, referentes introducidos antes de usarse, orden cronológico) (3-5 h), prueba de las
-voces de reserva en 60 min (2-3 h) y página "Como se fai *Serán*" con la política de ganchos (2 h).
+voces de reserva en 60 min (2-3 h) y página "Como se fai *Serán*" con la política de ganchos (2 h), **más** lo que
+pidió el tribunal (ronda 1): puerta de imágenes endurecida con conteo de personas, caras e iconografía galega (4-6 h),
+puerta de lengua medida con conjunto de oro y revisor por API (5-8 h), P-guion y pruebas ciegas (3-4 h) y el elemento
+original por episodio en el pipeline (tesis, fuentes citadas en voz, mapa o documento en pantalla; 3-5 h).
+**Orden:** hasta la semana 4 solo se construye lo que necesita P-guion (≈ 24-30 h); el resto, solo si P-guion da GO.
 
 **Régimen estable:**
 
 | Cadencia | Min/semana | ¿Cumple D3? |
 |---|---|---|
 | 1/semana con dossier del stock y siembra (8 primeros episodios) | 40-70 | Sí |
-| 1/semana con dossier nuevo | 55-130 | **No** |
-| **1 cada 2 semanas con dossier nuevo** (régimen tras el stock) | **40-90 (centro ≈ 62)** | Sí en el centro |
-| 1 cada 2 semanas reutilizando dossier en series de 2 episodios | 36-75 | Sí |
+| 1/semana con dossier nuevo | 60-145 | **No** |
+| **1 cada 2 semanas con dossier nuevo** (régimen tras el stock) | **43-98 (centro ≈ 67)** | Justo en el centro |
+| 1 cada 2 semanas reutilizando dossier en series de 2 episodios | 38-80 | Sí |
 
 Tareas fijas: semáforo de controles (5 min), comentarios y erratas (10-20, con tope), mantenimiento (10-15). Por
 episodio: pasar a público (5-10; la API de YouTube deja en privado lo que suben proyectos no auditados [F
 https://developers.google.com/youtube/v3/docs/videos/insert]), **dossier 25-75 min** (elegir 8-12 fuentes y leer el
 informe de `dossier.py`; medido en volumen con Samos: 45 hechos, 2 fuera por conflicto de fuentes 1835/1836 [P
-`../herramientas/pipeline/dossier/samos/`]) y siembra (10-15 en la fase 1). **Regla:** el promotor apunta sus minutos;
+`../herramientas/pipeline/dossier/samos/`]), elegir el elemento original del episodio (tesis y mapa o documento con
+licencia abierta, §7.2: 5-15 min [S]) y siembra (10-15 en la fase 1). **Regla:** el promotor apunta sus minutos;
 si la media de 4 semanas pasa de 70, series de 2 episodios, luego 1 cada 3 semanas, luego pausa. Nunca más horas.
 **Condición de P0:** el promotor cronometra los 3 primeros dossieres.
+
+**Oído galegofalante (presupuestado tras el tribunal; sin él, R9 se cumple).** El informe de voz, los pares de
+corrección y la puerta de lengua dependen de que una persona que domine el galego confirme los errores [S sobre las
+tareas del §6.2]:
+
+| Tarea | Horas | Quién |
+|---|---|---|
+| Conjunto de oro de lengua: anotar los errores de la muestra y revisar 100-200 pares de `galician-gec-corpora` | 4-6 h, una vez, antes de P0 | Promotor [S: si su galego lo permite] con comprobación de un voluntario |
+| Prueba ciega de los primeros 2 min (P-guion) | 10-15 min por persona × 5-10 personas (o promotor + 2); 1 h del promotor para organizarla | Voluntarios galegofalantes |
+| Lectura ciega del piloto de 60 min (P0) | 1,5-2 h por persona × 2 | 2 voluntarios (Trasno o el círculo del promotor; la comunidad de erratas aún no existe antes de M0) |
+| Confirmar 30-60 fragmentos de voz marcados por ASR y prosodia para el informe trimestral | 1-1,5 h/trimestre (dentro de las 2-3 h del §6.2) | Promotor o voluntario |
+| Confirmar erratas de la audiencia y de las puertas para los pares de corrección | 10-15 min/semana | Promotor |
+
+En régimen suma ≈ 15-25 min/semana, de los que ≈ 10 ya estaban en "comentarios y erratas": 1 episodio cada 2 semanas
+sube a un centro de ≈ 72-77 min, **por encima de D3**. Resolución, en este orden: (1) 1-2 voluntarios estables
+confirman la voz y los pares (vuelve a ≈ 67); (2) si no los hay, informe de voz semestral y pares solo de las erratas de
+la audiencia (≈ 70); (3) la regla de arriba (> 70 min de media → series de 2 episodios, luego 1 cada 3 semanas). Sin
+voluntarios para la lectura ciega del piloto, **P0 no se pasa**.
 
 ---
 
@@ -342,12 +391,13 @@ y sin fuentes, anacronismos evidentes [F `gauntlet2/referencia.md`].
 
 | Tomamos | Cambiamos |
 |---|---|
-| Imágenes IA de época, estilo evocativo | Una paleta única por episodio y sin multitudes (la puerta las veta); personajes de espaldas o en grupo pequeño, nunca caras de personas reales |
+| Imágenes IA de época, estilo evocativo | Una paleta única por episodio; **iconografía galega exigida** (granito, tejado de lousa, hórreo, carro de rueda maciza, carballos, néboa) y vetada la ajena (cipreses, fachadas pastel mediterráneas, llanura cerealista, tejas naranjas, farolas y cables); sin multitudes ni caras en primer plano: **hoy la puerta no lo garantiza** (la muestra aprobó multitudes y caras deformes a 1:43-1:44, 2:31 y 2:46; endurecimiento en §5.3); personajes de espaldas o en grupo pequeño, nunca caras de personas reales |
 | Cambio de imagen cada 5-6 s en el gancho | Planos que se alargan hasta 12,5 s en la parte de dormir, con Ken Burns lento y fundidos de 1,2 s |
 | Narración continua | 60 min narrados + 20-30 de cola; ritmo en embudo (≈ 140 palabras/min en el gancho, bajando) |
 | El gancho de contraste y curiosidad | **Solo al principio** y siempre verdadero y anclado al dossier (§4.3) |
 | Sin texto en pantalla | Subtítulos galegos en pista aparte (el guion, no los automáticos) |
 | — | Descripción con fuentes, crédito a Nós, aviso de IA y erratas públicas |
+| Guion de plantilla ("image slideshow + templated storyline") | **Un elemento original por episodio**: tesis narrativa, fuentes citadas en voz y un mapa o documento real con licencia abierta en pantalla (§7.2) |
 
 ### 4.2 Temas de toda Galicia (catálogo cerrado del primer año) [S]
 
@@ -442,7 +492,8 @@ de tema (YAML con dossier) a un MP4 1920x1080 con informe de QA. **Muestra actua
 [`gauntlet2/video/qa.md`](gauntlet2/video/qa.md) · hoja de contactos 4x3 a 960x540:
 [`gauntlet2/video/contactsheet.jpg`](gauntlet2/video/contactsheet.jpg) · rondas anteriores archivadas en
 `gauntlet2/video/ronda1/` y `ronda2/` · comparación de guiones Claude frente a EuroLLM en
-`gauntlet2/video/ronda2/comparacion-llm.md`.
+`gauntlet2/video/ronda2/comparacion-llm.md`. **Ningún humano ha aprobado todavía un vídeo desatendido:** el juicio
+"cerca de publicable" del promotor fue sobre el vídeo de la ronda 1, con guion escrito a mano por Claude (§0.3).
 
 | # | Etapa | Software (licencia) | Estado |
 |---|---|---|---|
@@ -451,7 +502,7 @@ de tema (YAML con dossier) a un MP4 1920x1080 con informe de QA. **Muestra actua
 | 2 | Corrección: LanguageTool gl-ES + hunspell; el LLM corrige solo lo marcado | LanguageTool (LGPL-2.1) | Hecho |
 | 3 | Voz frase a frase con ritmo en embudo | StyleTTS2 Brais de Nós (modelo Apache-2.0; datos con condiciones, §7.1), Cotovía | Hecho |
 | 4 | Planos: el código corta con las duraciones reales de la voz; el LLM describe cada plano | Pasa a API | Hecho en local |
-| 5 | Imágenes + **puerta de imágenes** (manos sin cuerpo, lista de anacronismos y vetos, multitudes, repeticiones; regenera con otra semilla) | SDXL-Turbo (Stability Community License, gratis < 1 M USD/año, registro para uso comercial) [F https://stability.ai/license]; MediaPipe (Apache-2.0); Florence-2-large (MIT) | Hecho |
+| 5 | Imágenes + **puerta de imágenes** (manos sin cuerpo, lista de anacronismos y vetos, multitudes, repeticiones; regenera con otra semilla) | SDXL-Turbo (Stability Community License, gratis < 1 M USD/año, registro para uso comercial) [F https://stability.ai/license]; MediaPipe (Apache-2.0); Florence-2-large (MIT) | Hecho, pero **insuficiente**: aprobó multitudes, caras deformes y paisajes no gallegos en la muestra (§0.3); endurecimiento en §5.3 |
 | 6 | Sonido: lluvia sintetizada, voz a −17 LUFS | Código propio | Hecho |
 | 7 | Montaje: Ken Burns, niebla ligera, fundidos de 1,2 s, subtítulos `glg` | ffmpeg (`imageio-ffmpeg`) | Hecho; falta cargar las imágenes por tramos para 60 min |
 | 8 | QA y semáforo | faster-whisper + Whisper turbo galego de Nós, LanguageTool, `ebur128` | 13 puertas |
@@ -483,25 +534,31 @@ trimestre. El día que un modelo abierto pase las puertas con una tasa de reinte
 
 | Control | Umbral de bloqueo | Estado |
 |---|---|---|
-| **Lengua** (LanguageTool gl-ES + hunspell; lista cerrada de falsos positivos de estilo, nunca de hunspell) | 0 avisos, por bloque y sobre el guion entero, antes de la voz | Bloqueante |
+| **Lengua** (LanguageTool gl-ES + hunspell; lista cerrada de falsos positivos de estilo, nunca de hunspell) | 0 avisos, por bloque y sobre el guion entero, antes de la voz | Bloqueante, pero **sin medir**: no vio "lembrando co que viran" ni "ao limiar" |
+| **Lengua medida** (nuevo, tribunal r1): conjunto de oro con los errores reales de la muestra ("lembrando co que viran" → "lembrando o que viran"; "ao limiar" → "no limiar"; la tautología de los subtítulos 22-24; el gancho "Dicían que eran refuxios de malfeitores" sin referente) y 100-200 pares de `galician-gec-corpora` (partes de errores humanos como `cortegal` y `wikipedia_breobot`, no la sintética) [F https://huggingface.co/datasets/proxectonos/galician-gec-corpora]; LanguageTool **más un revisor de galego por API** (llamada aparte que solo marca, no reescribe) | Recall ≥ 80 % sobre el conjunto de oro, con los falsos positivos medidos sobre las frases corregidas; **tasa de errores confirmados por 1.000 palabras publicada** en cada episodio | Por hacer (semana 4); condición de P0 |
 | **H1-léxico** (nombres propios y cantidades anclados al dossier, por palabra entera) | 0 sin anclar | Bloqueante |
 | **Veracidad** (NLI mDeBERTa-v3 + coincidencia léxica + reglas de desenlace y de quién hizo qué) | 0 frases sin apoyo; gancho: todas apoyadas | Bloqueante. Rechaza "a irmandade venceu", "os señores derrubaron as fortalezas dos irmandiños" [P `probas/veracidade_calibracion.md`] |
 | Estilo (sin cifras escritas, preguntas ni palabras vetadas; aviso literal) | Todo cumplido | Bloqueante |
 | **Coherencia narrativa** (nuevo: sin n-gramas repetidos de ≥ 4 palabras, referentes introducidos, orden cronológico) | 0 | **Por hacer** (carencia del veredicto `video-r3.md`) |
-| Imágenes (`revisor.py`) | Todas aprobadas tras ≤ 5 intentos | Bloqueante |
+| Imágenes (`revisor.py`), hoy: vetos por palabras sobre la descripción de Florence-2 + manos con MediaPipe | Todas aprobadas tras ≤ 5 intentos (+ 3 de reserva) | Bloqueante, pero dejó pasar 0:55, 1:43-1:44, 2:31 y 2:46 |
+| **Imágenes endurecidas** (nuevo, tribunal r1): (1) **conteo de personas** con las cajas `person` del `<OD>` de Florence-2, que ya se ejecuta, y un segundo detector abierto [S: MediaPipe Object Detector, licencia por confirmar]; (2) **caras**: detector y *landmarker* de caras de MediaPipe; toda cara de tamaño medio sin malla coherente veta, y muchas caras pequeñas cuentan como multitud al fondo; (3) **lista positiva de iconografía galega** con un modelo abierto de imagen-texto (tipo CLIP/SigLIP [S: modelo y licencia por elegir]): puntuación de granito, tejado de lousa, hórreo, carro de rueda maciza, carballos, costa atlántica y néboa frente a cipreses, fachadas pastel mediterráneas, llanura cerealista, tejas naranjas, carro de ruedas de radios, farolas y cables; (4) los prompts de plano llevan la misma lista positiva | ≤ 6 personas por plano [S]; 0 caras deformes; margen positivo de iconografía galega en planos de exterior [S]. **Calibración:** rechaza 4 de 4 en los planos conocidos (0:55, 1:43-1:44, 2:31, 2:46) y ≤ 30 % de falsos positivos sobre los 29 planos de la muestra [S] | Por hacer (semana 3); condición de P-guion y P0 |
 | ASR (Whisper galego de Nós) | WER de la mezcla ≤ 6 %; por párrafo en el diseño | Mezcla hecho; por párrafo por hacer |
 | Sonoridad | −18 a −16 LUFS | Bloqueante (muestra: −17,2) |
 | Sincronía A/V y subtítulos | ≤ 0,1 s; ≥ 95 % | Bloqueante |
 | H2: juez LLM de otra familia sobre cada frase frente al dossier | ≤ 5 % no respaldado | Por hacer |
 | H4: lenda como lenda (marcadores + tipo en `afirmacions.csv`) | 0 fuera de bloque marcado | Por hacer |
-| P1: variedad entre episodios (coseno de *embeddings*, 8-gramas) | Coseno < 0,85; < 2 % compartido | Por hacer (política de YouTube, §7.1) |
+| P1: variedad entre episodios (coseno de *embeddings*, 8-gramas) | Coseno < 0,85; < 2 % compartido | Por hacer (política de YouTube, §7.2) |
+| **Elemento original** (nuevo, tribunal r1): tesis en `afirmacions.csv`, ≥ 3 fuentes citadas en voz, ≥ 1 mapa o documento con licencia abierta en pantalla (§7.2) | Todo presente | Por hacer; bloqueante desde P0 |
 | **C0, errores canario**: 20 errores inyectados por ejecución | Detecta ≥ 80 % o no se publica | Medido 70 % → 80 % sin H2; "sin fuente" 2/5 [P `gauntlet2/medidas/c0-*`] |
 
 **Lo que no detectan (lectura honesta):** una frase falsa construida solo con palabras del dossier; errores de una
 fuente mala (Galipedia, un clásico del XIX); selección y énfasis; castellanismos sutiles fuera de listas y giros
 torpes que LanguageTool no marca (en la muestra: "lembrando co que viran", "vivían ao limiar"); prosodia que el ASR
-entiende igual (vocales abiertas y cerradas); anacronismos visuales que Florence-2 no nombra (tejados naranjas lejanos en
-1:43 y 2:46 de la muestra); tono. **Estimación de residuos por episodio de 60 min [S]:** 3-10 errores de lengua visibles
+entiende igual (vocales abiertas y cerradas); nombres propios mal pronunciados cuando el WER global es bajo (el ASR del
+QA transcribió "Taveira Fonseca" y "Para os Irmandiños" y la puerta aprobó); con la puerta de imágenes actual, lo que
+Florence-2 no nombra: tejados naranjas lejanos (1:43, 2:46), cipreses, llanura no gallega, sombreros del XIX, carro de
+ruedas de radios y bueyes fundidos (0:55), farola con cables, fachadas pastel y obispo con casulla verde en la calle
+(1:44), multitudes y caras deformes (1:43-1:44, 2:31, 2:46); tono. **Estimación de residuos por episodio de 60 min [S]:** 3-10 errores de lengua visibles
 para una filóloga, 1-4 imprecisiones históricas, decenas de detalles de prosodia. **El canal publicará errores cada
 semana**; la defensa es declararlo (§7.3), corregir en ≤ 7 días y publicar la tasa.
 
@@ -536,8 +593,10 @@ real; (N) anonimato.
 **Precisión sobre Nós (corrige la pieza de ecosistema):** la ficha del modelo `Nos_StyleTTS2-Brais-GL` **incluye el
 entretenimiento** entre sus usos previstos (herramientas de accesibilidad, asistentes, agentes conversacionales,
 entretenimiento) [F https://huggingface.co/proxectonos/Nos_StyleTTS2-Brais-GL], mientras que las condiciones del
-*dataset* `Nos_Brais-GL` dicen *"solely for research purposes"* y prohíben la *"public exposure"* de las grabaciones [F
-https://huggingface.co/datasets/proxectonos/Nos_Brais-GL]. La tensión real está entre esos dos textos, y es lo que se
+*dataset* `Nos_Brais-GL` limitan su uso a *"research purposes and for developing artificial intelligence tools focused
+on linguistic objectives"*, en proyectos promovidos por el Centro Ramón Piñeiro y la USC, y prohíben la *"public
+exposure"* de las grabaciones [F https://huggingface.co/datasets/proxectonos/Nos_Brais-GL]. Un canal de divulgación no
+es obviamente ninguna de las dos cosas. La tensión real está entre esos dos textos, y es lo que se
 pregunta a Nós. Además, Nós identifica públicamente a los locutores: Brais es la voz del actor de dobraxe Gaspar
 González Somoza [F tts.nos.gal, comprobado por el panel crítico, `gauntlet2/veredictos/ecosistema-r4.md`]. Riesgo
 añadido: que parte del público reconozca la voz y crea que el actor respalda el canal. Por eso la frase de crédito dice
@@ -550,11 +609,30 @@ La tesis ("non é contra o galego, senón ao contrario") **es defendible en una 
 datos**. Presentado como producto de contenido, choca de frente con lo que AGPTI, ADA y A Mesa denunciaron en 2026
 (RTVE, 20-02-2026) [F https://www.agpti.org/ada-agpti-mesa-reclaman-tve-cumpra-lei-dobrando-subtitulando-galego-servizos-profesionais-calidade/].
 
+**Inventario de partida** (tribunal r1: las aportaciones de la versión anterior se diseñaron sin él). Nós publica 63
+conjuntos en Hugging Face [P https://huggingface.co/api/datasets?author=proxectonos, consultado el 30-09-2026]:
+evaluación de LLM (`belebele_gl`, `galcola`, `mgsm_gl`, `openbookqa_gl`, `truthfulqa_gl`, `veritasqa_gl`, `xnli_gl`,
+`xstorycloze_gl`, `PAWS-gl`, `calame-gl`, `GlBBQ`, `GlobalPIQA_gl`, `Galician-Generative-Eval-Prompts`,
+`summarization_gl`); preguntas de patrimonio (`gl_QA_bensculturais`, `gl_MQA_bensculturais`, `gl_MQA_museo_virtual_USC`,
+`gl_MQA_arte_galego_USC`, `gl_MQA_artistas_mulleres_USC`, `patrimonio_instruct`, `wikipedia_multiple_choice_qa`);
+corrección (`galician-gec-corpora`, `erros_sistematicos_traducion_es_gl`); traducción y paralelos (`MT_es-gl`,
+`MT_en-gl`, `DGT-GL`, `SciELO-GL` y otros); voz (`Nos_Brais-GL`, `CRPIH_UVigo-GL-Voices_extended`, `Nos_Celtia-GL`,
+`Nos_Transcrispeech-GL`, `Nos_Parlaspeech-GL`, `Nos_RG-Podcast-GL`, `Nos_Telexornais-GL`, `Nos_ImosNavegando-GL`);
+corpus e instrucciones (`corpusnos`, `nos_gl_CC0`, `corpus_dominio_*`, `Dolly-gl`, `oasst2_gl`, `aya_nos`); RAG
+(`dog-rag`, `nos-rag-news`).
+
+**Descartado:** el "banco de preguntas de historia de Galicia" de la versión anterior. Ya existen
+`gl_QA_bensculturais` (1.714 preguntas y respuestas de patrimonio cultural galego, CC-BY 4.0), los `gl_MQA_*`,
+`patrimonio_instruct` y `wikipedia_multiple_choice_qa` (1.486 preguntas en gl) [F URL de arriba; cifras comprobadas por
+el tribunal r1]. También se cambia el formato de los pares: `erros_sistematicos_traducion_es_gl` es de errores de
+traducción; para corregir texto generado en galego, el recurso de Nós es `galician-gec-corpora` (corrección gramatical:
+`cortegal`, `gec_synthetic`, `wikipedia_breobot`…, CC-BY 4.0) [F https://huggingface.co/datasets/proxectonos/galician-gec-corpora].
+
 | Aportación | Valor para el galego [S] | Condición | Horas |
 |---|---|---|---|
-| **Informe trimestral de errores de voz** (Cotovía + StyleTTS2) en narración larga: palabra, pronunciación esperada y producida, minuto, audio de 3-5 s | Alto: la evaluación de la ficha llega a textos de "> 60 s" | Errores confirmados por un oído galegofalante | 2-3 h/trimestre |
-| Pares "galego da máquina → galego corrixido" de la audiencia, en el formato de `erros_sistematicos_traducion_es_gl` de Nós [F https://huggingface.co/datasets/proxectonos/erros_sistematicos_traducion_es_gl] | Medio-alto si hay volumen (0-250 al año) | Correcciones humanas | 1 h/mes |
-| Banco de preguntas de historia de Galicia con fuente | Alto como hueco | Una persona verifica una muestra | 3-5 h/trimestre |
+| **Informe trimestral de errores de voz** (Cotovía + StyleTTS2) en narración larga: palabra, pronunciación esperada y producida, minuto, audio de 3-5 s | Alto: la evaluación de la ficha llega a textos de "> 60 s" | Errores confirmados por un oído galegofalante (horas en §3.4) | 2-3 h/trimestre |
+| **Conjunto de evaluación de fidelidad narrativa larga** (sustituye al banco de preguntas): por episodio, el dossier (hechos con cita literal), el texto divulgativo generado y cada frase anotada como apoyada, sin apoyo o lenda, que es justo lo que miden las puertas de veracidad y H1; los rechazos reales de las puertas (p. ej. "a irmandade venceu") entran como negativos. CC-BY 4.0, marcado como texto sintético | Alto como hueco [S]: en el inventario hay preguntas de patrimonio, resúmenes y veracidad por preguntas, pero ninguna ficha de fidelidad frase a frase de un texto largo frente a sus fuentes [P, por los nombres y fichas; se pregunta a Nós en el correo] | Una persona verifica ≥ 30 frases por trimestre (las etiquetas de la máquina no son la verdad) | 2-4 h/trimestre |
+| **Pares de corrección** (erratas de la audiencia, errores detectados por las puertas y por las lecturas ciegas) en el esquema de `galician-gec-corpora` (pares fuente/corrección), CC-BY 4.0, publicados en Hugging Face o Zenodo con ficha y el lado fuente marcado como texto sintético | Medio-alto si hay volumen (0-250 al año) | Solo correcciones confirmadas por una persona | 1 h/mes |
 | **Banco de pruebas de redacción en galego** (nuevo tras el 30-09): mismo dossier, prompts y puertas para cada LLM abierto; métricas públicas (avisos de lengua, frases sin apoyo, reintentos, CPU) | Medio-alto: medida continua de lo que le falta a un modelo abierto para escribir divulgación en galego | Metodología estable; se ejecuta sobre 2 temas fijos, no en cada episodio (en CPU cuesta ≈ 40 h por episodio) | 2-3 h/trimestre |
 | Errores de la MT de Nós en dominio histórico (con pistas) | Medio | Confirmados por una persona | 0,5 h/trimestre |
 | Pipeline libre documentado en galego | Medio | Que funcione fuera de este entorno | 5-10 h una vez |
@@ -607,8 +685,8 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 > cada trimestre co mesmo material e publicar os resultados, por se vos serven.
 >
 > Antes de publicar nada con esa voz quería preguntarvos directamente. Vexo que a ficha do modelo menciona o
-> entretemento entre os usos previstos, pero as condicións dos datos de Brais falan de investigación; e, sobre todo,
-> detrás hai unha persoa. Concretamente, gustaríame saber:
+> entretemento entre os usos previstos, pero as condicións dos datos de Brais falan de investigación e de ferramentas
+> de IA con fins lingüísticos, e prohiben a exposición pública das gravacións; e, sobre todo, detrás hai unha persoa. Concretamente, gustaríame saber:
 >
 > 1. Como interpretades esas dúas cousas para unha canle pública de divulgación. Debo dicirvos que, aínda que eu non
 >    monetice a canle, YouTube pode poñer anuncios nos vídeos pola súa conta; e que, se algún día a canle tivese
@@ -627,8 +705,11 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 > - **Un informe trimestral de erros de pronuncia** en narración longa (máis dunha hora seguida): topónimos, nomes
 >   medievais, vogais abertas e pechadas, números e cambios de prosodia ao longo do audio, con fragmentos de son e a
 >   forma correcta.
-> - **As correccións que faga a audiencia**, en pares "texto xerado / texto corrixido".
-> - **Un conxunto de preguntas de historia de Galicia con fonte**, por se vos serve para avaliar modelos.
+> - **As correccións que faga a audiencia e os erros que atopen os controis e os lectores**, en pares "texto xerado /
+>   texto corrixido" co mesmo esquema de galician-gec-corpora, con licenza CC-BY 4.0 e marcados como texto sintético.
+> - **Un conxunto de avaliación de fidelidade en textos longos**: para cada episodio, o dossier de fontes, o texto
+>   xerado e cada frase marcada como apoiada ou non nas fontes. Vin que xa tedes preguntas de patrimonio
+>   (gl_QA_bensculturais e outros) e non atopei nada parecido para textos divulgativos longos; se me equivoco, dicídemo.
 > - **O código de todo o proceso**, con licenza libre, e as métricas de cada episodio.
 >
 > Quero contarvos tamén unha cousa que aínda non está decidida. Se a canle ten público en galego, nunha segunda fase
@@ -645,7 +726,8 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 >
 > Non publicarei nada coa voz de Brais ata ter a vosa resposta. Se nun mes non sei nada de vós, volverei escribir; e se
 > despois diso seguise sen resposta, usaría outra voz ata que puidésemos falalo, por exemplo algunha das voces do
-> corpus CRPIH_UVigo-GL-Voices (Sabela, Icía ou Iago), se vos parece ben.
+> corpus CRPIH_UVigo-GL-Voices do Centro Ramón Piñeiro e da Universidade de Vigo (Sabela, Icía, Iago ou Paulo), se vos
+> parece ben e co crédito que indiquedes.
 >
 > Moitas grazas polo traballo que facedes. Grazas a Nós é posible pensar en facer isto en galego.
 >
@@ -661,11 +743,14 @@ las pistas; corrige la redundancia señalada en la ronda 4.
   el guion por API (semana 2), sin retrasar el correo más de una semana.
 - El compromiso "non publicarei nada coa voz de Brais ata ter a vosa resposta" **obliga**. No hay plazo tras el cual se
   use Brais sin respuesta.
-- Antes de enviar: escuchar Sabela, Icía e Iago en un tramo de narración (el correo las nombra) y pedir a un
+- Antes de enviar: escuchar Sabela, Icía, Iago y Paulo en un tramo de narración (el correo las nombra) y pedir a un
   galegofalante que relea el texto.
+- Si se acaba usando una voz de reserva, el crédito y la consulta incluyen al CRPIH y al Grupo de Tecnoloxías
+  Multimedia de la UVigo, autores del corpus, además de Nós, que publica la versión extendida y los modelos [F
+  https://zenodo.org/records/8027725].
 - **Qué hacer ante cada respuesta:** sí sin condiciones → crédito con su fórmula e informe trimestral; sí para hobby
   pero no para monetizar → se publica, P4 (YPP) queda bloqueada y se pide a YouTube lo que permitan sus ajustes; sí si
-  consiente el locutor → voz de reserva mientras tanto; no → Sabela, Icía o Iago preguntando a Nós, o proveedor gl-ES con
+  consiente el locutor → voz de reserva mientras tanto; no → Sabela, Icía, Iago o Paulo preguntando a Nós y al CRPIH/UVigo, o proveedor gl-ES con
   licencia comercial; silencio tras el recordatorio → voz de reserva, nunca Brais.
 
 ### 6.5 Hoja de ruta de acercamiento
@@ -679,7 +764,7 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 | 3. Comunidad técnica | M0 | Trasno, GALPon, AGASOL, Common Voice gl | Código y artículo técnico en galego | Presentarlo como producto |
 | 4. Lanzamiento discreto | M0 | Público | 3 episodios, aviso, etiqueta, siembra declarada | Contactar a A Mesa, RAG, CSAG, medios |
 | 4-bis. Pistas pt/en | M0 + 12-17 semanas, con condiciones (§4.4) | Público; aviso a Nós | Reglas del §4.4 | Pista es; voz de actor |
-| 5. Primera devolución | M0 + 3 meses | Nós | Informe de voz, pares de corrección, banco de pruebas | Pedir respaldo público |
+| 5. Primera devolución | M0 + 3 meses | Nós | Informe de voz, pares de corrección (esquema `galician-gec-corpora`), conjunto de fidelidad narrativa larga, banco de pruebas | Pedir respaldo público |
 | 6. Caso de estudio | M0 + 6 meses, si P2 da GO | Código Cero, GCiencia; CCG | Datos agregados | Titulares de éxito |
 | 7. Institucional | Con tracción y revisión humana parcial | CSAG, SXL, RAG | Solo con identidad pública o entidad | Pedir dinero para un canal sin revisión |
 
@@ -691,7 +776,7 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 
 | Riesgo | Tratamiento |
 |---|---|
-| **Voz de Brais sin permiso.** El modelo es Apache-2.0, pero la voz de la persona no la cubre esa licencia (derecho a la propia voz, LO 1/1982, art. 7.6) [R `gauntlet/piezas/gtm_riesgos.md` §3.3 bis], y los datos dicen "solely for research". Con *Right to Monetize*, YouTube puede poner anuncios en vídeos de canales fuera del YPP [F https://support.google.com/youtube/answer/10090902]: el uso no es "no comercial" aunque el promotor no cobre | **P0: sin sí escrito de Nós/USC (y del locutor si Nós lo pide) no se publica con Brais.** Voz de reserva lista antes de M0: Sabela (locutora de radio), Icía o Iago (aficionados), datos donados CC-BY 4.0, modelos Apache-2.0 [F https://zenodo.org/records/8027725 ; https://huggingface.co/proxectonos/Nos_TTS-sabela-vits-phonemes], acreditadas; si ninguna aguanta 60 min, proveedor gl-ES con licencia comercial. **Plan B de fechas:** si a S5 no hay respuesta, M0 se hace con la voz de reserva y no se retrasa |
+| **Voz de Brais sin permiso.** El modelo es Apache-2.0, pero la voz de la persona no la cubre esa licencia (derecho a la propia voz, LO 1/1982, art. 7.6) [R `gauntlet/piezas/gtm_riesgos.md` §3.3 bis], y las condiciones de los datos limitan el uso a investigación y a herramientas de IA con fines lingüísticos y prohíben la exposición pública de las grabaciones [F https://huggingface.co/datasets/proxectonos/Nos_Brais-GL]. Con *Right to Monetize*, YouTube puede poner anuncios en vídeos de canales fuera del YPP [F https://support.google.com/youtube/answer/10090902]: el uso no es "no comercial" aunque el promotor no cobre | **P0: sin sí escrito de Nós/USC (y del locutor si Nós lo pide) no se publica con Brais.** Voz de reserva lista antes de M0: Sabela (locutora de radio), Icía, Iago o Paulo (aficionados), del corpus CRPIH_UVigo-GL-Voices del Centro Ramón Piñeiro y el GTM de la UVigo (CC-BY 4.0; Nós publica la versión extendida y los modelos, Apache-2.0) [F https://zenodo.org/records/8027725 ; https://huggingface.co/proxectonos/Nos_TTS-sabela-vits-phonemes], acreditadas a CRPIH, UVigo y Nós; si ninguna aguanta 60 min, proveedor gl-ES con licencia comercial. **Plan B de fechas:** si a S5 no hay respuesta, M0 se hace con la voz de reserva y no se retrasa |
 | **Funciones avanzadas de YouTube** (A/B de títulos y miniaturas, pistas multi-audio). Un teléfono no basta: hace falta documento de identidad, verificación por vídeo o historial del canal [F https://support.google.com/youtube/answer/9890437] | **Requisito de P0:** el promotor se verifica con DNI o vídeo ante Google en la semana 1 (no es público; compatible con D6). Sin ello, la ventana NO CONCLUYENTE usa solo cambios manuales de título y miniatura, y la fase 2 no existe |
 | SDXL-Turbo | Stability Community License: gratis < 1 M USD/año; registro para uso comercial [F https://stability.ai/license] → registrarse antes de M0 y archivar los términos |
 | API del LLM | Términos de uso automatizado del proveedor; el texto generado va marcado como IA |
@@ -707,9 +792,20 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 - **Nos toca de lleno:** el canal es imágenes + voz IA + plantilla, sin revisión. Probabilidad de que el YPP se deniegue
   si se solicita: **40-60 % [S puro**, sin casos comparables documentados]. Desmonetización tras entrar: 20-30 % [S].
   Cierre del canal: < 5 % si se etiqueta y no se engaña [S].
-- Mitigaciones: variedad real entre episodios (control P1, I3), series con arco, fuentes en la descripción, cadencia
-  lenta y fija (nunca diario: que la frecuencia refuerce la impresión de producción masiva es inferencia propia [S]),
-  no copiar la plantilla de títulos de la referencia, copia del catálogo fuera de YouTube.
+- **Mitigación principal (tribunal r1): un elemento original concreto en cada episodio.** La variedad entre episodios
+  no basta: un canal variado de diapositivas con guion de plantilla sigue siendo "image slideshow + templated
+  storyline". Cada episodio lleva, con control bloqueante (§5.3):
+  1. **Un ángulo narrativo con tesis:** una pregunta que ordena el episodio y una respuesta atribuida a sus fuentes
+     (p. ej., "Por que Galicia está partida en millóns de leiras", §4.2), escrita en el dossier y anclada como `tese` en
+     `afirmacions.csv`. No es una lista de hechos.
+  2. **Fuentes citadas en voz:** ≥ 3 por episodio, con autor u obra ("segundo o preito Tabera-Fonseca…").
+  3. **Un mapa o documento real con licencia abierta mostrado en pantalla** (dominio público o CC, con crédito en la
+     descripción), distinguido de las imágenes IA; nunca una imagen IA presentada como documento.
+- Además: variedad real entre episodios (control P1, I3), series con arco, fuentes en la descripción, cadencia lenta y
+  fija (nunca diario: que la frecuencia refuerce la impresión de producción masiva es inferencia propia [S]), no copiar
+  la plantilla de títulos de la referencia, copia del catálogo fuera de YouTube.
+- Antes de M0 hay una prueba de producto con personas (P-guion y P0, §8.1): si el vídeo no retiene a galegofalantes en
+  una prueba ciega, tampoco lo hará en YouTube.
 - **Con D6, el éxito no puede depender de monetizar.** Las puertas miden audiencia y datos devueltos.
 
 ### 7.3 Etiquetado, AI Act art. 50 y aviso hablado veraz
@@ -754,7 +850,7 @@ las pistas; corrige la redundancia señalada en la ronda 4.
 | R6 | Crítica de AGPTI, ADA o A Mesa ("IA contra o galego") | Media si hay eco / alto | Aviso previo; no sustitución; A7 |
 | R7 | Pistas traducidas leídas como dobraxe con IA o salida del galego | Media con es; baja con las reglas / alto | Reglas del §4.4; A10 |
 | R8 | Tesis pro lingua desmontada (LLM cerrado, corpus) | Media / medio | Banco de pruebas trimestral; marca de sintético |
-| R9 | Los datos prometidos a Nós no se entregan (falta de horas) | **Alta** / medio | Exportación automática de errores y métricas; mínimo: informe de voz trimestral |
+| R9 | Los datos prometidos a Nós no se entregan (falta de horas de oído galegofalante) | **Alta** sin voluntarios; media con 1-2 / medio | Horas de oído presupuestadas (§3.4); exportación automática de errores, métricas y anotaciones de fidelidad; mínimo sin voluntarios: informe de voz semestral y pares solo de la audiencia |
 | R10 | YPP rechazado o canal desmonetizado | Media-alta / bajo para un hobby | §7.2 |
 
 **Alarmas que paran la publicación:** A1 aviso o *strike* de YouTube → pausa y apelación con el expediente; A2 rechazo
@@ -774,7 +870,8 @@ pistas en ≤ 48 h.
 
 | Puerta | Cuándo | Condición para seguir |
 |---|---|---|
-| **P0 · Salida** | Antes de M0 | (1) Piloto de 60 + 30 min pasa todos los controles bloqueantes, incluida la coherencia narrativa, sin intervención en ≤ 16 h de reloj; (2) C0 con H2: ≥ 90 % y ≥ 4/5 en "sin fuente" en el conjunto actual, y ≥ 80 % en un conjunto nuevo de otro tema (**hoy: 80 % y 2/5, no se pasa**); (3) −18/−16 LUFS; (4) el promotor ha cronometrado 3 dossieres y caben en §3.4; (5) aviso hablado, nota de descripción y etiqueta sintética; (6) licencias archivadas y registro de Stability; (7) **voz con permiso: sí escrito de Nós para Brais, o voz de reserva acreditada**; (8) funciones avanzadas activas o renuncia explícita a A/B y pistas; (9) comunidades de siembra verificadas; (10) umbrales de §2.4 congelados en el repo |
+| **P-guion · ¿El guion por API da el pego?** (nueva, tribunal r1) | Medida en la semana 2; decisión al cierre de la semana 4, **antes de invertir el resto del MVP** (≈ 60-90 h) | Muestra de 10-15 min (irmandiños) regenerada con el LLM por API y las mismas puertas bloqueantes. Umbrales congelados hoy [S]: (1) **≥ 90 % de los bloques escritos por el LLM**, sin caer a reserva literal ni mixta; (2) **0 n-gramas repetidos de ≥ 4 palabras**; (3) **0 avisos de LanguageTool y 0 de veracidad**; (4) **coste ≤ 0,05 USD por minuto narrado**, reintentos incluidos; (5) **gancho con referente**, de contraste o de detalle cotidiano, verdadero y anclado; (6) **escucha ciega del promotor**: la muestra junto a un fragmento de la ronda 1 escrito a mano, sin saber cuál es cuál, con la pregunta "¿lo publicarías?": sí para la muestra; (7) **prueba ciega de los primeros 2 min** frente a los de la referencia de Versalles, en orden aleatorio, con 5-10 galegofalantes (o el promotor + 2): "seguiría viendo" en la mayoría y **ningún plano marcado como "non é Galicia" o como cara deforme** (con la puerta de imágenes endurecida del §5.3). **Si falla:** un segundo intento en la semana 4 (otro modelo o prompts); si vuelve a fallar, **PARADA del MVP**, o cambio de formato solo por decisión explícita del promotor. Coste hundido ≈ 24-30 h; se publican el banco de pruebas y el código |
+| **P0 · Salida** | Antes de M0 | (1) Piloto de 60 + 30 min pasa todos los controles bloqueantes, incluida la coherencia narrativa, sin intervención en ≤ 16 h de reloj; (2) C0 con H2: ≥ 90 % y ≥ 4/5 en "sin fuente" en el conjunto actual, y ≥ 80 % en un conjunto nuevo de otro tema (**hoy: 80 % y 2/5, no se pasa**); (3) −18/−16 LUFS; (4) el promotor ha cronometrado 3 dossieres y caben en §3.4; (5) aviso hablado, nota de descripción y etiqueta sintética; (6) licencias archivadas y registro de Stability; (7) **voz con permiso: sí escrito de Nós para Brais, o voz de reserva acreditada**; (8) funciones avanzadas activas o renuncia explícita a A/B y pistas; (9) comunidades de siembra verificadas; (10) umbrales de §2.4 congelados en el repo; **(11) producto (tribunal r1):** P-guion pasado, y los primeros 15 min del piloto cumplen de nuevo 0 bloques con n-gramas repetidos de ≥ 4 palabras, gancho con referente verdadero y la prueba ciega de 2 min frente a Versalles (mayoría "seguiría viendo", 0 planos "non é Galicia" o con cara deforme); **(12)** puerta de imágenes endurecida calibrada (rechaza 4 de 4 planos defectuosos conocidos, §5.3); **(13)** puerta de lengua medida con recall ≥ 80 % sobre el conjunto de oro y la tasa de errores por 1.000 palabras publicada (§5.3); **(14)** lectura ciega del piloto de 60 min por 2 galegofalantes voluntarios, con umbral declarado hoy [S]: ≤ 2 errores de lengua confirmados por 1.000 palabras y 0 errores graves (dato falso, frase agramatical que cambia el sentido, gancho o referente sin antecedente); **(15)** elemento original presente en el piloto (§7.2) |
 | **P1 · ¿Existe el nicho?** | Día 30 del episodio 8 (≈ M0 + 10 semanas); hasta M0 + 18 si hay ventanas | §2.4 |
 | **P1-bis · Pistas pt + en** | M0 + 12-17 semanas, si P1 no da PARADA | §4.4, regla 3 |
 | **P2 · Hábito** | M0 + 6 meses, solo si P1 dio PLAN | Mediana a 30 días ≥ 200 **y** ≥ 150 subs **y** ≥ 25 % de recurrentes **y** ≥ 30 % de vistas desde listas, canal o búsqueda **y** erratas por episodio decrecientes. Si no: banco de pruebas técnico a 1 episodio al mes |
@@ -792,6 +889,7 @@ pistas en ≤ 48 h.
 | AVD | Solo informativo (mide sueño e interés a la vez) |
 | Recurrentes / subs netos | < 10 % / negativos dos meses |
 | Erratas por episodio | Subiendo tres meses |
+| Tasa de errores de lengua confirmados por 1.000 palabras (publicada por episodio) | > 2 o subiendo dos meses |
 | C0 y episodios bloqueados | < 80 % / > 25 % |
 | Coste de API por episodio | > 5 USD: revisar modelo, caché y lotes |
 | Errores enviados a Nós por trimestre | 0 → la tesis pro lingua no se usa en público |
@@ -801,18 +899,18 @@ pistas en ≤ 48 h.
 
 | Semanas | Fechas aproximadas | Hito |
 |---|---|---|
-| S0-S4 | 30-09 a 27-10-2026 | Primeras 4 semanas (§9): correo a Nós, verificaciones, guion por API, muestra regenerada, voces de reserva |
+| S0-S4 | 30-09 a 27-10-2026 | Primeras 4 semanas (§9): correo a Nós, verificaciones, guion por API, muestra regenerada, puerta de imágenes endurecida, pruebas ciegas, conjunto de oro de lengua, voces de reserva. **Decisión P-guion** al cierre de S4 |
 | S5 | ≈ 3-11-2026 | Recordatorio a Nós si no hay respuesta; decisión de voz del piloto |
-| S5-S12 | Nov-dic 2026 | Resto del MVP: H2, H4, P1, ASR por párrafo, montaje por tramos, `dossier.py` con PDF, piloto de 60 min, stock de 8 dossieres |
-| S12-S14 | ≈ finales de diciembre 2026 a mediados de enero 2027 | P0. M0 si pasa (3 episodios la primera semana) |
-| M0 + 5 | ≈ febrero 2027 | Episodio 8 publicado |
-| M0 + 10 | ≈ marzo 2027 | **Decisión P1** (o primera ventana NO CONCLUYENTE) |
-| M0 + 12-17 | Abril-mayo 2027 | Fase 2 de pistas pt/en, si procede |
-| M0 + 13 | ≈ abril 2027 | Primera devolución trimestral a Nós |
-| M0 + 26 | ≈ julio 2027 | P2 (si PLAN) o repetición de la prueba en modo MÍNIMO |
-| M0 + 52 | ≈ enero 2028 | Revisión anual: pista es (§4.4, regla 4), balance de la tesis |
+| S5-S19 | Nov-2026 a feb-2027 | Resto del MVP, solo si P-guion dio GO: coherencia completa, H2, H4, P1, elemento original, ASR por párrafo, montaje por tramos, `dossier.py` con PDF, piloto de 60 min y su lectura ciega, stock de 8 dossieres |
+| S15-S20 | ≈ mediados de enero a mediados de febrero de 2027 | P0. M0 si pasa (3 episodios la primera semana) |
+| M0 + 5 | ≈ finales de febrero a finales de marzo de 2027 | Episodio 8 publicado |
+| M0 + 10 | ≈ abril 2027 | **Decisión P1** (o primera ventana NO CONCLUYENTE) |
+| M0 + 12-17 | Abril-junio 2027 | Fase 2 de pistas pt/en, si procede |
+| M0 + 13 | ≈ abril-mayo 2027 | Primera devolución trimestral a Nós |
+| M0 + 26 | ≈ julio-agosto 2027 | P2 (si PLAN) o repetición de la prueba en modo MÍNIMO |
+| M0 + 52 | ≈ enero-febrero 2028 | Revisión anual: pista es (§4.4, regla 4), balance de la tesis |
 
-Si P0 no se pasa en S14, M0 se retrasa en bloques de 2 semanas; no se publica con puertas en rojo. El nuevo umbral del
+Si P0 no se pasa en S20, M0 se retrasa en bloques de 2 semanas; no se publica con puertas en rojo. El nuevo umbral del
 YPP (1-02-2027) se aplica: el canal será un solicitante nuevo.
 
 ---
@@ -822,13 +920,15 @@ YPP (1-02-2027) se aplica: el canal será un solicitante nuevo.
 | Semana | Tareas (≈ 6 h/semana) | Entregable verificable |
 |---|---|---|
 | **1** (30-09 a 6-10) | Releer y enviar el correo a Nós (§6.4) con la muestra actual o la regenerada si llega a tiempo; verificar la identidad ante Google para las funciones avanzadas; comprobar en Studio si el galego es idioma de pista y de vídeo; congelar en el repo los umbrales de §2.4; empezar el backend de API en `llm.py` (con caché de prompt, lotes y registro de coste por llamada) | Correo enviado (fecha); `umbrais-p1.md` en el repo; resultado de Studio anotado |
-| **2** (7-13 oct) | Terminar el backend de API; regenerar la muestra de irmandiños con el guion por API (10-15 min, como pidió el crítico del vídeo) con las mismas puertas bloqueantes; medir coste real, reintentos por bloque y avisos; comparar con EuroLLM en la misma tabla; elegir modelo (§3.3) | Nuevo `ejemplo.mp4` y `qa.md` (con escritura atómica y comprobación de decodificación antes del commit); coste real por minuto narrado |
-| **3** (14-20 oct) | Puerta de coherencia narrativa; resolver en el dossier el conflicto de testigos (183/204) del preito Tabera-Fonseca; escuchar Sabela, Icía e Iago en un tramo de 10 min y pasar el ASR; registrarse en la Community License de Stability; verificar las comunidades de siembra y sus normas | Puerta en `pipeline.py` con prueba; informe de voces de reserva; lista de comunidades |
-| **4** (21-27 oct) | `dossier.py` con PDF y conectado a `pipeline.py`; el promotor cronometra el primer dossier del stock (un tema de lendas y uno de historia); página "Como se fai *Serán*" con la política de ganchos; primer tramo de 20 min del piloto para medir tiempos de máquina reales sin el LLM local | 2 dossieres con `cronometro.md`; página de transparencia en borrador; tiempos por etapa |
+| **2** (7-13 oct) | Terminar el backend de API; primera parte de la puerta de coherencia (contador de n-gramas repetidos de ≥ 4 palabras y registro de bloques caídos a reserva); regenerar la muestra de irmandiños con el guion por API (10-15 min, como pidió el crítico del vídeo) con las mismas puertas bloqueantes; medir coste real, reintentos por bloque y avisos; comparar con EuroLLM en la misma tabla; elegir modelo (§3.3) | Nuevo `ejemplo.mp4` y `qa.md` (con escritura atómica y comprobación de decodificación antes del commit); tabla de P-guion con los umbrales (1)-(5) medidos; coste real por minuto narrado |
+| **3** (14-20 oct) | Puerta de imágenes endurecida (conteo de personas, caras, lista positiva de iconografía galega) y calibrada con los 4 planos defectuosos conocidos; regenerar las imágenes de la muestra; escucha ciega del promotor frente a la ronda 1; escuchar Sabela, Icía, Iago y Paulo en un tramo de 10 min y pasar el ASR; registrarse en la Community License de Stability | `revisor.py` nuevo con su calibración; resultado de la escucha ciega; informe de voces de reserva |
+| **4** (21-27 oct) | Prueba ciega de los primeros 2 min frente a Versalles (5-10 galegofalantes o promotor + 2); conjunto de oro de lengua y recall medido de LanguageTool + revisor por API; resolver en el dossier el conflicto de testigos (183/204) del preito Tabera-Fonseca; verificar las comunidades de siembra y sus normas; **decisión P-guion** | `p-guion.md` con cada umbral, GO o PARADA; `ouro-lingua/` con el recall; lista de comunidades |
 
-Al final de la semana 4 se sabe: si el guion por API pasa las puertas sin caer a texto literal (si no, el formato no da
-el pego y hay que replantearlo antes de gastar más horas), cuánto cuesta de verdad, si hay voz utilizable y si YouTube
-permite las funciones que la prueba necesita.
+`dossier.py` con PDF, el cronometraje de los dossieres, la página "Como se fai *Serán*" y el primer tramo de 20 min del
+piloto pasan a las semanas 5-8, **solo si P-guion da GO**. Al final de la semana 4 se sabe, con umbrales y no con
+impresiones: si el guion por API escribe de verdad (sin caer a texto literal), si la imagen deja de parecer otro sitio,
+si alguien que no es el constructor seguiría viendo, cuánto cuesta, si hay voz utilizable y si YouTube permite las
+funciones que la prueba necesita. Si no, se para antes de gastar las ≈ 60-90 h restantes.
 
 ---
 
@@ -864,7 +964,7 @@ de los suspensos: varias rondas perdieron por no incorporar una decisión poster
 | Funciones avanzadas por teléfono | Verificación con DNI o vídeo en la semana 1, requisito de P0 (§7.1) | Sí, en el papel |
 | 1.000 subs atribuidos al blog de YouTube | Marcado [S]; solo las 8.000 h con fuente (§3.2) | Sí |
 | Usos previstos del modelo de Nós y locutor identificado | Corregido en §6.1; pregunta 1 del correo reescrita; riesgo de reconocimiento (R5) | Sí |
-| Guion con LLM local: sin narración, repeticiones, sin picante | Guion por API (decisión del 30-09), coste con fuente (§3.3), puerta de coherencia (§5.3) | **No demostrado:** la muestra publicada sigue siendo la del LLM local; la regenerada es la tarea de la semana 2 |
+| Guion con LLM local: sin narración, repeticiones, sin picante | Guion por API (decisión del 30-09), coste con fuente (§3.3), puerta de coherencia (§5.3) | **No demostrado:** la muestra publicada sigue siendo la del LLM local; la regenerada es la tarea de la semana 2 y la decide P-guion (A.4) |
 | Muestra de 3 min frente a un formato de 60 min | Piloto de 60 min como condición de P0; tiempos rehechos con la puerta de imágenes (8-15 h) | **No demostrado** |
 | Dato en conflicto (183 o 204 testigos) | Tarea de la semana 3 (§9); regla de conflictos en §4.2 | Pendiente |
 | C0 por debajo del umbral en "sin fuente" | P0 lo exige con H2 | Pendiente (H2 sin construir) |
@@ -873,10 +973,38 @@ de los suspensos: varias rondas perdieron por no incorporar una decisión poster
 "nunca sin sí" (ecosistema) → gana la segunda; fase 3 de castellano condicionada (plan) frente a ninguna pista es el
 primer año (ecosistema) → gana la segunda; umbral de parada antiguo del ecosistema (M < 40 o G < 15 %) → sustituido por
 la prueba en dos pasos del plan v4; duración del MVP (8-10 semanas en ecosistema, 10-14 en el plan) → 12-15 semanas con el
-trabajo añadido; tiempo de máquina (5-7 h del plan frente a 28,6 h extrapoladas del vídeo) → 8-15 h con el guion por API;
-coste del guion (1-2 USD del plan, "céntimos" de la decisión) → 1-3 USD por episodio en el caso central y céntimos solo
-para la muestra; comparación Carballo frente al modelo cerrado "en cada episodio" (≈ 40 h de CPU por episodio) → banco de
+trabajo añadido (14-20 tras el tribunal, §3.4); tiempo de máquina (5-7 h del plan frente a 28,6 h extrapoladas del vídeo) → 8-15 h con el guion por API;
+coste del guion (1-2 USD del plan, "céntimos" de la decisión) → ≈ 1-1,7 USD por episodio en el caso central (hasta
+3,5 con Opus optimizado) y céntimos solo para la muestra; comparación Carballo frente al modelo cerrado "en cada episodio" (≈ 40 h de CPU por episodio) → banco de
 pruebas trimestral sobre 2 temas fijos.
 
 **Lo que este plan v2 no es:** un plan aprobado por sus críticos. Es la integración honesta de tres piezas que
 perdieron, con las correcciones que pidieron sus últimos veredictos, y pasa ahora al tribunal.
+
+### A.4 Tribunal
+
+**Ronda 1 (30-09-2026): 0 de 3 aprueban** (`gauntlet2/veredictos/tribunal-r1.md`). Los tres jueces leyeron
+`contexto.md` y el plan completos; el operador y el realista inspeccionaron además el MP4, la hoja de contactos,
+fotogramas extraídos, el SRT y `qa.md`.
+
+| Juez | Veredicto | Carencia principal | Tratamiento en esta versión (alisado) |
+|---|---|---|---|
+| **Operador** (canales *faceless* con IA) | NO APRUEBA | Ninguna puerta demuestra antes de M0 que el producto supera el listón de YouTube (retención y contenido inauténtico); el plan decía que la imagen "da el pego" y la muestra lo contradice (multitudes y caras deformes a 1:43-1:44, 2:31 y 2:46; cipreses, carro de radios y bueyes fundidos a 0:55; farola, pastel y obispo a 1:44) | P0 (11)-(12) con umbrales sobre la muestra y el piloto; puerta de imágenes endurecida con conteo de personas, caras y lista positiva de iconografía galega (§5.3); elemento original por episodio en §7.2 y como control; §0.3, §4.1 y §5.3 rebajados y con la lista completa de defectos; repeticiones ×6 |
+| **Ecosistema** (Nós, CRTVG, sociolingüística) | NO APRUEBA | Aportaciones pro lingua diseñadas sin inventariar los 63 conjuntos de Nós ("banco de preguntas" como hueco cuando ya existen `gl_QA_bensculturais` y otros) y ninguna puerta mide la calidad del galego | Inventario en §6.2; banco de preguntas descartado; conjunto de evaluación de fidelidad narrativa larga; pares en el esquema de `galician-gec-corpora` (CC-BY 4.0, HF o Zenodo, ficha y marca de sintético); puerta de lengua medida (recall ≥ 80 %, tasa por 1.000 palabras) en §5.3; lectura ciega del piloto por 2 galegofalantes en P0 (14); horas de oído galegofalante en §3.4 y R9; crédito a CRPIH y UVigo y cuarta voz (Paulo); cita exacta de las condiciones de `Nos_Brais-GL` (§6.1, §7.1, correo) |
+| **Realista** | NO APRUEBA | No hay puerta de producto con umbrales numéricos antes de invertir las horas del MVP; el "cerca de publicable" del promotor se atribuía al vídeo desatendido cuando era el de la ronda 1, con guion a mano | Nueva puerta **P-guion** (§8.1, §9) al cierre de la semana 4 con 7 umbrales y PARADA si falla; §0.3 y §5.1 corregidos ("ningún humano ha aprobado un vídeo desatendido"); coste central del guion corregido a 1-1,7 USD por episodio |
+
+**Errores factuales señalados y corregidos:** "sin multitudes (la puerta las veta)" (§4.1, §0.3); lista corta de
+anacronismos no detectados (§5.3); "×5" → unas 6 repeticiones; "1-3 USD en el caso central" → 1-1,7 (§0.3, §1, §3.3,
+A.3); juicio del promotor atribuido al vídeo de la ronda 3 (§0.3, §5.1); "Nós no tiene ningún banco de preguntas"
+(§3.2, §6.2, correo); formato `erros_sistematicos_traducion_es_gl` → `galician-gec-corpora` (§6.2); autoría del corpus
+CRPIH_UVigo-GL-Voices y voz de Paulo omitida (§0, §6.4, §7.1); "solely for research" a secas (§6.1, §7.1); errores de
+galego de la muestra no detectados ("lembrando co que viran", "ao limiar", tautología de los subtítulos 22-24, gancho
+sin referente) y nombres propios mal transcritos por el ASR que la puerta de WER aprobó (§5.3). **Confirmado como
+correcto por el tribunal:** umbral del YPP de 8.000 h desde el 1-02-2027 sin mención de suscriptores; pista de audio
+por defecto según el historial; las 204 testemuñas del preito Tabera-Fonseca.
+
+**Coste del alisado para el calendario:** ≈ 15-23 h más de MVP (85-118 h; 14-20 semanas; M0 ≈ semana 15-20 en lugar de
+12-14) y ≈ 15-25 min/semana de oído galegofalante en régimen, que llevan 1 episodio cada 2 semanas por encima de D3 si no
+hay voluntarios (§3.4). A cambio, el proyecto puede pararse en la semana 4 con ≈ 24-30 h hundidas en lugar de descubrir en
+M0 + 10 semanas que el producto no retiene. **No resuelto en papel:** nada de lo anterior está construido ni medido; la
+muestra publicada sigue siendo la de la ronda 3 (no se re-renderizó en el alisado).
