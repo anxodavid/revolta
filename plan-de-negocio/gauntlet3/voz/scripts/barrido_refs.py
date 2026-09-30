@@ -8,7 +8,7 @@ como referencia cada unha das 40 grabacións de Brais (ou vectores medios de var
 
 --refs: lista separada por comas; cada elemento pode ser un vector medio de varias grabacións unidas con ':'.
 Mide por referencia: sílabas/s, F0 (Hz, sd e rango en semitons), enerxía, HNR/jitter/shimmer, alpha ratio, arousal
-(audeering, só avaliación interna) e WER (Whisper galego) da pasaxe enteira. Todo automático.
+(audeering, só avaliación interna) e, con --wer, WER (Whisper galego) frase a frase. Todo automático.
 """
 import argparse, json, os, sys, time
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -21,6 +21,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument('saida'); ap.add_argument('--refs', default=None); ap.add_argument('--escala', type=float, default=1.0)
 ap.add_argument('--beta', type=float, default=None); ap.add_argument('--alpha', type=float, default=None)
 ap.add_argument('--etiqueta', default='barrido')
+ap.add_argument('--wer', action='store_true', help='WER frase a frase (lento: ~6 s por frase)')
 a = ap.parse_args(); a.saida = os.path.abspath(a.saida)
 S = os.environ['SCRATCH']; RD = os.environ['REFS_DIR']
 OUT = os.path.join(S, 'voz', a.etiqueta); os.makedirs(OUT, exist_ok=True)
@@ -47,7 +48,7 @@ V.M.clear()
 import gc; gc.collect()
 
 import modelos
-em = modelos.Emocion(); asr = modelos.ASR()
+em = modelos.Emocion(); asr = modelos.ASR() if a.wer else None
 res = []
 for r in refs:
     d = os.path.join(OUT, nome(r))
@@ -55,13 +56,13 @@ for r in refs:
     for k, t in enumerate(textos.PASAXE):
         p = os.path.join(d, f'{k}.wav')
         m = A.medir(p, t); m.update(em.medir(p)); fr.append(m)
-    # pasaxe enteira con 0,6 s entre frases para o WER
-    ws = [sf.read(os.path.join(d, f'{k}.wav'))[0] for k in range(len(textos.PASAXE))]
-    tot = np.concatenate([np.concatenate([w, np.zeros(int(0.6 * 24000))]) for w in ws])
-    sf.write(os.path.join(d, 'pasaxe.wav'), tot.astype(np.float32), 24000)
-    wr = asr.wer(os.path.join(d, 'pasaxe.wav'), ' '.join(textos.PASAXE))
+    wr = None
+    if asr:     # WER frase a frase (sen o risco de que Whisper salte tramos nun audio longo)
+        ws = [asr.wer(os.path.join(d, f'{k}.wav'), t) for k, t in enumerate(textos.PASAXE)]
+        wr = {'wer': round(sum(w['erros'] for w in ws) / sum(w['palabras_ref'] for w in ws), 4),
+              'hipotese': ' | '.join(w['hipotese'] for w in ws)}
     media = lambda x: round(float(np.mean([f[x] for f in fr if f.get(x) is not None])), 3)
-    x = {'ref': nome(r), 'ficheiros': r, 'wer': wr['wer'], 'hipotese': wr['hipotese'],
+    x = {'ref': nome(r), 'ficheiros': r, 'wer': wr and wr['wer'], 'hipotese': wr and wr['hipotese'],
          **{k: media(k) for k in ('sil_s', 'sil_s_articulacion', 'f0_mediana_hz', 'f0_media_st', 'f0_sd_st', 'f0_rango_st',
                                   'dinamica_db', 'rms_db', 'lufs', 'hnr_db', 'jitter_pct', 'shimmer_pct', 'alpha_ratio_db',
                                   'arousal', 'dominancia', 'valencia', 'f0_baixo_75', 'pico')},

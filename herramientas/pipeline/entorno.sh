@@ -24,13 +24,20 @@ export HF_HUB_DISABLE_TELEMETRY=1 TOKENIZERS_PARALLELISM=false
 export PY_TTS="$SCRATCH/tts/venv/bin/python"
 export PY="$PY_TTS"
 
-# Voz: Nos_StyleTTS2-Brais-GL (código + Models/galician), binario de Cotovía y stubs para importar el código.
+# Voz: Nos_StyleTTS2-Brais-GL (código + Models/galician) y stubs para importar el código.
 export ST2_DIR="$SCRATCH/bench/st2"
-export ST2_PATHBIN="$SCRATCH/bench/pathbin"
 export ST2_STUBS="$SCRATCH/bench/stubs"
-# Cotovía compilada desde Nos_StyleTTS2 (instalar.sh cotovia_nova): da los fonemas del entrenamiento (vocales abiertas).
-# No es la de por defecto; para probarla en la voz: export ST2_PATHBIN="$COTOVIA_NOVA_PATHBIN"
+# Cotovía (fonemas de la voz). Por defecto, la compilada desde Nos_StyleTTS2 (instalar.sh cotovia_nova, en modo -p1):
+# da los fonemas con los que se entrenó el modelo (vocales abiertas, monosílabos átonos, sin "pra" ni "facelo lume").
+# A/B y medidas: plan-de-negocio/gauntlet3/voz/informe.md. Si no está compilada, la 0.5 del .deb (bench/pathbin).
+# Para forzar la 0.5 después de este source: export ST2_PATHBIN="$COTOVIA_05_PATHBIN"
+export COTOVIA_05_PATHBIN="$SCRATCH/bench/pathbin"
 export COTOVIA_NOVA_PATHBIN="$SCRATCH/bench/pathbin_nova"
+if [ -x "$COTOVIA_NOVA_PATHBIN/cotovia" ]; then
+  export ST2_PATHBIN="$COTOVIA_NOVA_PATHBIN"
+else
+  export ST2_PATHBIN="$COTOVIA_05_PATHBIN"
+fi
 # Referencia de estilo (grabación humana del corpus Nos_Brais-GL, test) y banco de referencias variadas.
 export REF_WAV="$SCRATCH/tts/kit/t1/brais_1_human.wav"
 export REFS_DIR="$SCRATCH/tts/refs"

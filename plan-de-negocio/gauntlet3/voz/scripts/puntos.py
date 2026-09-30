@@ -14,7 +14,8 @@ REF_WAV (viva) e REF_WAV_CALMO (calma) veñen do contorno.
 Medidas por punto: palabras/min (pausas incluídas, como o QA de longo.py), sílabas/s da fala, F0 (media en Hz,
 desviación e rango p5-p95 en semitons), enerxía (LUFS da pasaxe tras a ganancia e dinámica), HNR, jitter,
 shimmer, alpha ratio, fracción de F0 < 75 Hz, pico, arousal/dominancia/valencia (audeering, só avaliación interna) e
-WER (Whisper galego de Nós) da pasaxe enteira. Todo automático: ninguén escoitou os audios.
+WER (Whisper galego de Nós) frase a frase (e, con --wer-pasaxe, da pasaxe enteira). Todo automático: ninguén
+escoitou os audios.
 """
 import argparse, copy, json, os, sys, time
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -74,6 +75,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('saida'); ap.add_argument('--curva', default=None); ap.add_argument('--etiqueta', default='puntos')
     ap.add_argument('--sen-medir', action='store_true')
+    ap.add_argument('--wer-pasaxe', action='store_true', help='WER tamén sobre a pasaxe enteira, como o QA')
     a = ap.parse_args(); a.saida = os.path.abspath(a.saida)
     cv = curva_candidata(a.curva)
     base = os.path.join(os.environ['SCRATCH'], 'voz', a.etiqueta)
@@ -98,7 +100,14 @@ def main():
         for p, tx in zip(wavs, textos.PASAXE):
             m = A.medir(p, tx); m.update(em.medir(p)); fr.append(m)
         pas = os.path.join(d, 'pasaxe.wav')
-        wr = asr.wer(pas, ' '.join(textos.PASAXE))
+        # WER frase a frase (Whisper nun audio longo ás veces salta tramos enteiros: ver informe) e, con --wer-pasaxe,
+        # tamén sobre a pasaxe enteira coas pausas, como o QA
+        ws = [asr.wer(p, tx) for p, tx in zip(wavs, textos.PASAXE)]
+        wr = {'wer': round(sum(x['erros'] for x in ws) / sum(x['palabras_ref'] for x in ws), 4),
+              'erros': sum(x['erros'] for x in ws), 'hipotese': ' | '.join(x['hipotese'] for x in ws)}
+        if a.wer_pasaxe:
+            wp = asr.wer(pas, ' '.join(textos.PASAXE))
+            wr['wer_pasaxe'] = wp['wer']
         w = sf.read(pas)[0]
         pal_tot = sum(A.palabras(t) for t in textos.PASAXE)
         media = lambda x: round(float(np.mean([f[x] for f in fr if f.get(x) is not None])), 3)
@@ -107,7 +116,7 @@ def main():
              'pausa_frase': round(c['pausa_frase'], 3), 'ganancia_db': round(c['ganancia_db'], 2),
              'palabras_min': round(60 * pal_tot / (tempos[-1][1] - tempos[0][0]), 1),
              'lufs_pasaxe': round(float(pyln.Meter(SR).integrated_loudness(w)), 2),
-             'wer': wr['wer'], 'erros_asr': wr['erros'], 'hipotese': wr['hipotese'],
+             'wer': wr['wer'], 'erros_asr': wr['erros'], 'wer_pasaxe': wr.get('wer_pasaxe'), 'hipotese': wr['hipotese'],
              **{k: media(k) for k in ('sil_s', 'sil_s_articulacion', 'pal_min_fala', 'f0_mediana_hz', 'f0_media_st',
                                       'f0_sd_st', 'f0_rango_st', 'dinamica_db', 'hnr_db', 'jitter_pct', 'shimmer_pct',
                                       'alpha_ratio_db', 'f0_baixo_75', 'arousal', 'dominancia', 'valencia')},

@@ -10,7 +10,7 @@
 #
 # Pasos (en este orden):
 #   sistema      apt: libegl1, libgles2 (MediaPipe), libgl1 (cv2), libportaudio2 (sounddevice); Java si falta
-#   cotovia      Cotovía 0.5 (.deb de SourceForge) extraído en $SCRATCH/cotovia + envoltorio en bench/pathbin
+#   cotovia      Cotovía 0.5 (.deb de SourceForge) extraído en $SCRATCH/cotovia + envoltorio en bench/pathbin (respaldo)
 #   venv_base    venv con Python 3.11 del sistema en tts/venv + huggingface-hub (para empezar a descargar ya)
 #   --- en paralelo (registros en $SCRATCH/logs/instalar-<paso>.log):
 #   paquetes     torch/torchaudio CPU y el resto de paquetes (lista PAQUETES)
@@ -23,7 +23,8 @@
 #   stubs        módulos stub para importar el código de StyleTTS2 en CPU (bench/stubs)
 #   whisper      conversión del Whisper galego a CTranslate2 int8 (bench/wgl_ct2) y borrado del original
 #   languagetool LanguageTool (descarga de language_tool_python en $LTP_PATH) y prueba gl-ES
-#   cotovia_nova (opcional; si falla, solo avisa) compila la Cotovía de Nos_StyleTTS2 en bench/pathbin_nova
+#   cotovia_nova compila la Cotovía de Nos_StyleTTS2 en bench/pathbin_nova: la de POR DEFECTO de la voz (entorno.sh);
+#                si falla, solo avisa y la voz usa la 0.5
 #   limpieza     borra temporales y la caché de pip; resumen de tamaños
 #
 # Requisitos: Ubuntu 24.04 con Python 3.11 (/usr/bin/python3.11), acceso a PyPI, download.pytorch.org,
@@ -107,17 +108,17 @@ paso_cotovia() {
     baixar "$d/$f" "https://downloads.sourceforge.net/project/cotovia/Debian%20packages/$f"
     dpkg-deb -x "$d/$f" "$SCRATCH/cotovia"
   done
-  mkdir -p "$ST2_PATHBIN"
-  cat > "$ST2_PATHBIN/cotovia" <<EOF
+  mkdir -p "$COTOVIA_05_PATHBIN"
+  cat > "$COTOVIA_05_PATHBIN/cotovia" <<EOF
 #!/bin/sh
 # Envoltorio de Cotovía 0.5 extraído en \$SCRATCH/cotovia (generado por instalar.sh). Acepta UTF-8 en la entrada y
 # escribe ISO-8859-1 (phonemize.py de Nos_StyleTTS2 descodifica con respaldo latin-1).
 exec "$SCRATCH/cotovia/usr/bin/cotovia" -D "$SCRATCH/cotovia/usr/share/cotovia/data" "\$@"
 EOF
-  chmod +x "$ST2_PATHBIN/cotovia"
+  chmod +x "$COTOVIA_05_PATHBIN/cotovia"
   # prueba: transcripción fonética de una frase con tildes y eñe
   local saida
-  saida="$(echo "Os mariñeiros saíron á mar." | "$ST2_PATHBIN/cotovia" -n -S -A0 2>/dev/null | iconv -f latin1 -t utf-8)"
+  saida="$(echo "Os mariñeiros saíron á mar." | "$COTOVIA_05_PATHBIN/cotovia" -n -S -A0 2>/dev/null | iconv -f latin1 -t utf-8)"
   [[ "$saida" == *'mariJe^jros'* ]] || { echo "Cotovía non transcribe: $saida"; return 1; }
 }
 
@@ -312,33 +313,46 @@ EOF
 }
 
 paso_cotovia_nova() {
-  # OPCIONAL. Compila la Cotovía que trae Nos_StyleTTS2 (Utils/cotovia, la de proxectonos/cotovia) y usa sus datos de
-  # lengua. A diferencia del .deb 0.5 de SourceForge, marca las vocales abiertas (pÓrta, tÉrra) y deja átonos los
-  # monosílabos (a, de, que), como las transcripciones con las que se entrenó el modelo. Medido con
-  # probas/comparar_cotovia.py en 122 frases del corpus: 0,9 % de caracteres distintos (Cotovía 0.5: 7,8 %).
-  # NO es la de por defecto (la voz de la ronda 3 se midió con la 0.5); para usarla: ST2_PATHBIN=$COTOVIA_NOVA_PATHBIN.
-  # cmake baja string_theory de GitHub y PCRE 8.45 de SourceForge y los compila; se compila solo el ejecutable cotovia.
+  # Compila la Cotovía que trae Nos_StyleTTS2 (Utils/cotovia, la de proxectonos/cotovia) y usa sus datos de lengua. Es
+  # la de POR DEFECTO de la voz (entorno.sh la pone en ST2_PATHBIN si existe). A diferencia del .deb 0.5 de
+  # SourceForge, marca las vocales abiertas (pÓrta, tÉrra) y deja átonos los monosílabos (a, de, que), como las
+  # transcripciones con las que se entrenó el modelo. El envoltorio la llama en modo "reconocimiento" (-p1): en el modo
+  # de síntesis aplica además la segunda forma del artículo ("facer o lume" -> faTélo lúme, "vas a casa" -> bála
+  # kása) y "para" -> "pra" ("Cousas de Galiza pra durmir"), que no están en ese corpus; "ao(s)" se pasa a mano a
+  # "O(s)", como en el corpus. Medido con probas/comparar_cotovia.py en 122 frases del corpus: 0,8 % de caracteres
+  # distintos (modo síntesis: 0,9 %; Cotovía 0.5: 7,8 %). A/B completo: plan-de-negocio/gauntlet3/voz/informe.md.
+  # cmake baja string_theory de GitHub y PCRE 8.45 de SourceForge y los compila; se compila solo el ejecutable cotovia
+  # y solo si no está ya compilado (FORZAR=1 rehace el envoltorio sin recompilar; para recompilar, borrar
+  # $SCRATCH/cotovia_nova).
   local faltan=() p b="$SCRATCH/cotovia_nova/build" saida
-  for p in build-essential cmake bison flex libfl-dev libasound2-dev libexpat1-dev; do
-    dpkg -s "$p" >/dev/null 2>&1 || faltan+=("$p")
-  done
-  if [ ${#faltan[@]} -gt 0 ]; then
-    $SUDO apt-get update -qq
-    DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y -qq --no-install-recommends "${faltan[@]}"
+  if [ ! -x "$b/cotovia/cotovia" ]; then
+    for p in build-essential cmake bison flex libfl-dev libasound2-dev libexpat1-dev; do
+      dpkg -s "$p" >/dev/null 2>&1 || faltan+=("$p")
+    done
+    if [ ${#faltan[@]} -gt 0 ]; then
+      $SUDO apt-get update -qq
+      DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y -qq --no-install-recommends "${faltan[@]}"
+    fi
+    mkdir -p "$b"
+    (cd "$b" && flock "$CPU_LOCK" cmake -DCMAKE_BUILD_TYPE=Release "$ST2_DIR/Utils/cotovia/src" > "$LOGS/cotovia_nova_cmake.log" 2>&1 \
+       && flock "$CPU_LOCK" make -j"$(nproc)" cotovia > "$LOGS/cotovia_nova_make.log" 2>&1) \
+      || { tail -20 "$LOGS"/cotovia_nova_*.log; return 1; }
   fi
-  mkdir -p "$b"
-  (cd "$b" && flock "$CPU_LOCK" cmake -DCMAKE_BUILD_TYPE=Release "$ST2_DIR/Utils/cotovia/src" > "$LOGS/cotovia_nova_cmake.log" 2>&1 \
-     && flock "$CPU_LOCK" make -j"$(nproc)" cotovia > "$LOGS/cotovia_nova_make.log" 2>&1) \
-    || { tail -20 "$LOGS"/cotovia_nova_*.log; return 1; }
   mkdir -p "$COTOVIA_NOVA_PATHBIN"
-  cat > "$COTOVIA_NOVA_PATHBIN/cotovia" <<EOF
+  cat > "$COTOVIA_NOVA_PATHBIN/cotovia.tmp" <<EOF
 #!/bin/sh
-# Cotovía compilada desde Nos_StyleTTS2/Utils/cotovia (generado por instalar.sh cotovia_nova), con sus datos de lengua.
-exec "$b/cotovia/cotovia" -D "$ST2_DIR/Utils/cotovia/data" "\$@"
+# Cotovía compilada desde Nos_StyleTTS2/Utils/cotovia (generado por instalar.sh cotovia_nova), con sus datos de lengua,
+# en modo "reconocimiento" (-p1): sin segunda forma del artículo ni "pra" (no están en el corpus de entrenamiento de
+# la voz). -p1 escribe antes el texto preprocesado en una línea sin tabulador: se quita. "ao(s)" -> "O(s)", como en el
+# corpus.
+"$b/cotovia/cotovia" -D "$ST2_DIR/Utils/cotovia/data" "\$@" -p1 | awk -F'\t' 'index(\$0, "\t") == 0 { next } \$1 == "ao" { print "ao\tO "; next } \$1 == "aos" { print "aos\tOs "; next } { print }'
 EOF
-  chmod +x "$COTOVIA_NOVA_PATHBIN/cotovia"
-  saida="$(echo "A porta da terra." | "$COTOVIA_NOVA_PATHBIN/cotovia" -n -S -A0 2>/dev/null | iconv -f latin1 -t utf-8)"
-  [[ "$saida" == *'pO^rta'* ]] || { echo "La Cotovía compilada no marca la vocal abierta: $saida"; return 1; }
+  chmod +x "$COTOVIA_NOVA_PATHBIN/cotovia.tmp"
+  mv "$COTOVIA_NOVA_PATHBIN/cotovia.tmp" "$COTOVIA_NOVA_PATHBIN/cotovia"
+  # prueba: vocal abierta, "para" y "facer o" sin contraer, "ao" -> O
+  saida="$(echo "A porta da terra, para facer o lume ao lonxe." | "$COTOVIA_NOVA_PATHBIN/cotovia" -n -S -A0 2>/dev/null | iconv -f latin1 -t utf-8)"
+  [[ "$saida" == *'pO^rta'* && "$saida" == *'faTe^r'* && "$saida" != *'pra'* && "$saida" == *$'ao\tO'* ]] \
+    || { echo "La Cotovía compilada no da la transcripción esperada: $saida"; return 1; }
 }
 
 paso_limpieza() {
@@ -391,8 +405,9 @@ else
   for p in sistema cotovia venv_base; do correr "$p"; done
   en_paralelo paquetes st2 brais revisor sdxl florence nli clip whisper_hf
   for p in stubs whisper languagetool; do correr "$p"; done
-  # opcional: en otro proceso para que un fallo no pare la instalación (la voz por defecto usa Cotovía 0.5)
-  bash "$HERE/instalar.sh" cotovia_nova || log "aviso: cotovia_nova falló (opcional; ver $LOGS/cotovia_nova_*.log)"
+  # Cotovía de Nós (la de por defecto de la voz): en otro proceso para que un fallo no pare la instalación; si falla,
+  # entorno.sh usa la 0.5 del .deb
+  bash "$HERE/instalar.sh" cotovia_nova || log "AVISO: cotovia_nova falló: la voz usará Cotovía 0.5 (ver $LOGS/cotovia_nova_*.log)"
   correr limpieza
 fi
 log "instalar.sh: terminado en $(((SECONDS - T0) / 60)) min $(((SECONDS - T0) % 60)) s"
