@@ -1,6 +1,13 @@
 # Ficha de tema: única entrada do pipeline (ademais do comando).
 # O dossier sae das notas de fontes verificadas do guion mostra
 # (plan-de-negocio/guion-mostra-revolta-irmandina.md, cotexadas o 29-09-2026).
+# Ronda 3: engadido o DESENLACE (derrota de 1469 e reconstrución das fortalezas) para que o LLM non o invente.
+# Citas: B-PODER "Después del fin de la Santa Hermandad, en 1469, sobreviene una década [...] de una furiosa
+# reacción señorial centrada en recuperar el poder y reconstruir a la fuerza las fortalezas derrocadas. La represión
+# consistió, no tanto en ejecutar a cabecillas y participantes, como gravarles durante años con impuestos y serventías
+# para la reedificación de las fortalezas"; GL-GUERRA "en pouco tempo a maior parte da Irmandade foi derrotada" e
+# "Setenta e tres fortificacións, menos da metade das que foron arrasadas, foron reconstruídas"; B-2006 "parte de
+# las que así y todo fueron reconstruidas –una minoría–".
 id: irmandinos-apertura
 titulo: "A Revolta Irmandiña, contada para durmir"
 tema: "Os irmandiños: a irmandade que entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove botou abaixo moitas fortalezas de Galicia"
@@ -13,12 +20,15 @@ dossier: |
   - [RF] Ao sur de Compostela hai un outeiro con restos da fortaleza da Rocha Forte: anacos de muralla e a planta dos muros entre a vexetación; o sitio está en ruínas.
   - [RF, Preito Tabera-Fonseca] Desde a Rocha Forte asegurábanse os camiños que ían cara a Pontevedra, Padrón, Muros, Noia e Fisterra (cara ao mar).
   - [B-EUR] A Rocha Forte era do arcebispo de Compostela.
-  - [B-PODER] A xente da cidade e os labregos da súa comarca decidiron botar abaixo a Rocha Forte despois dun asalto.
+  - [B-PODER] Despois dun asalto, a xente da cidade e os labregos da comarca decidiron botar abaixo a Rocha Forte.
   - [B-2024] O alzamento irmandiño foi entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove.
   - [B-EUR, B-PODER] Na irmandade xuntáronse labregos, artesáns, mariñeiros, burgueses, clérigos (cóengos e monxes) e parte da pequena nobreza, que achegou experiencia militar.
   - [B-VR p. 211, B-2006] Os irmandiños derrubaron moitas das fortalezas do reino (non dar cifras).
   - [B-2024] En mil catrocentos sesenta e nove houbo unha reacción armada dos señores, que regresaron.
-  - [B-2006] Moito despois, entre mil cincocentos vinte e seis e mil cincocentos vinte e sete, douscentas catro testemuñas vellas declararon ante escribáns no Preito Tabera-Fonseca e lembraban o que viran de mozos.
+  - [B-PODER, GL-GUERRA] En mil catrocentos sesenta e nove os señores volveron coas súas tropas e a irmandade foi derrotada.
+  - [B-PODER] Despois da derrota o castigo non foron tanto as execucións como os tributos e o traballo que os vasalos tiveron que dar durante anos para reconstruír as fortalezas derrubadas.
+  - [B-2006, GL-GUERRA] Só unha parte das fortalezas derrubadas se volveu levantar.
+  - [B-2006] Moito despois, entre mil cincocentos vinte e seis e mil cincocentos vinte e sete, douscentas catro testemuñas vellas declararon ante escribáns no Preito Tabera-Fonseca. Lembraban o que viran de mozos.
   - [B-EUR, B-GUERRA] Arredor da metade do século quince, Galicia era unha sociedade de labregos, artesáns, mariñeiros e mercadores; moitos eran vasalos dun señor.
   - [B-XUNTA] Os vasalos pagaban tributos en diñeiro e en especie e debían servizos persoais: traballo nas fortalezas e servizo de armas.
   - [B-PODER] Moitas familias labregas vivían no limiar da pobreza.
@@ -37,3 +47,4 @@ fontes:
   B-2006: https://cbarros.com/lo-que-sabemos-de-los-irmandinos-2006/
   B-GUERRA: https://cbarros.com/la-guerra-de-los-caballeros-en-la-galicia-medieval/
   B-XUNTA: https://cbarros.com/as-orixes-medievais-da-xunta-de-galicia/
+  GL-GUERRA: https://gl.wikipedia.org/wiki/Gran_Guerra_Irmandi%C3%B1a

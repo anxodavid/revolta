@@ -54,9 +54,15 @@ def cantidades(frase):
     while j < len(ws):
         if ws[j] in NUMERAIS or ws[j] in ('século', 'séculos'):
             k = j
-            while k + 1 < len(ws) and (ws[k + 1] in NUMERAIS or (ws[k + 1] == 'e' and k + 2 < len(ws)
-                                                                  and ws[k + 2] in NUMERAIS)):
-                k += 1
+            # "un"/"unha" só continúan unha cantidade despois de "e" (mil ... e un): en "sesenta e sete un
+            # movemento" o "un" é artigo (falso positivo de H1 na ronda 2)
+            while True:
+                if k + 1 < len(ws) and ws[k + 1] in NUMERAIS and ws[k + 1] not in FEBLES:
+                    k += 1
+                elif k + 2 < len(ws) and ws[k + 1] == 'e' and ws[k + 2] in NUMERAIS:
+                    k += 2
+                else:
+                    break
             exp = ' '.join(ws[j:k + 1])
             if exp not in FEBLES and exp not in ('século', 'séculos'):
                 out.append(exp)

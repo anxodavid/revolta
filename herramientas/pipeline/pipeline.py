@@ -37,11 +37,14 @@ FORMULA = 'Isto é Serán, historia de Galicia para durmir.'
 # CALMA palabras transición lineal; despois, ritmo de durmir.
 GANCHO, CALMA = 150, 320
 PAUSA = {'frase': (0.55, 1.35), 'paragrafo': (0.45, 1.0)}      # (inicio, calma), en segundos
-PLANO_S = (5.5, 12.5)                                            # duración obxectivo dun plano (inicio, calma)
+PLANO_S = (5.5, 11.0)                                            # duración obxectivo dun plano (inicio, calma)
+PLANO_MAX = 12.5                                                 # ningún plano dura máis (ronda 3)
 # Umbrais aliñados co plan (plan-de-negocio/gauntlet2/piezas/plan-desatendido.md §6.1): A1 WER <= 6 %,
 # A2 sonoridade integrada entre -18 e -16 LUFS, H1 0 nomes/cantidades sen ancorar no dossier.
+# Ronda 3: lingua (0 avisos; hunspell sen excepcións), H1 (0) e veracidade (todas as frases) son BLOQUEANTES antes
+# da voz; se fallan non se xera vídeo. Se falla calquera porta despois do render, o MP4 non se publica.
 UMBRAIS = {'dur_min_s': 180, 'dur_max_s': 300, 'wer_max': 0.06, 'desfase_av_max_s': 0.1,
-           'pct_sincronia_min': 95.0, 'mb_max': 50, 'lt_max': 2, 'lufs': (-18, -16), 'h1_non_ancorados_max': 0}
+           'pct_sincronia_min': 95.0, 'mb_max': 50, 'lt_max': 0, 'lufs': (-18, -16), 'h1_non_ancorados_max': 0}
 REVISIONS_GUION, INTENTOS_ESCENAS = 2, 3
 
 TEMPOS = {}
@@ -225,8 +228,27 @@ def sen_repeticions(t, previo):
     return ' '.join(out) if out else t
 
 
-def problemas_bloque(t, tema, min_frases=2, previo=''):
-    import ancoraxe
+VER = {}
+INVITACION_FIXA = ('Acomódate, apaga a luz e respira amodo. Non tes que lembrar nada do que escoites: '
+                   'deixa que a historia pase coma a chuvia na xanela.')
+
+
+def literal(f):
+    """Un feito do dossier tal cal, para ler en voz alta: sen as notas para o guionista ("non dar cifras")."""
+    return normalizar(re.sub(r'\s*\((non |sen )[^)]*\)', '', f))
+
+
+def verificador(tema):
+    if 'v' not in VER:
+        import veracidade
+        VER['v'] = veracidade.Verificador([literal(f) for f in feitos(tema)])
+    return VER['v']
+
+
+def problemas_bloque(t, tema, min_frases=2, previo='', modo=None, feito=None, detalle=None):
+    """Problemas dun bloque de texto. Con `modo` ('gancho' ou 'relato') engade as portas bloqueantes da ronda 3:
+    LanguageTool (unha palabra que hunspell non coñece bloquea sempre) e veracidade (veracidade.py)."""
+    import ancoraxe, qa
     p = []
     vellas = [f['texto'] for f in partir(previo)] if previo else []
     rep = [f['texto'] for f in partir(t) if any(_parecida(f['texto'], v) > 0.6 for v in vellas)]
@@ -247,31 +269,52 @@ def problemas_bloque(t, tema, min_frases=2, previo=''):
     for x in ancoraxe.ancoraxe(t, ancora(tema))['non_ancorados']:
         if x['texto'] not in vistos:
             vistos.add(x['texto']); p.append(f"{x['texto']} non está nos feitos: quítao.")
+    if modo:
+        for m in qa.lingua(t, dossier=ancora(tema)):
+            if m['hunspell']:
+                p.append(f'A palabra "{m["palabra"]}" non existe en galego: cámbiaa por unha palabra dos feitos'
+                         + (f' (quizais {", ".join(m["suxestions"])})' if m['suxestions'] else '') + '.')
+            else:
+                p.append(f'Erro de lingua en "{m["palabra"]}": {m["mensaxe"]} Reescribe esa parte.')
+        pv, rs = verificador(tema).texto(t, modo, feito_propio=feito)
+        p += pv
+        if detalle is not None:
+            detalle['veracidade'] = rs
     return p
 
 
-def bloque(nome, tm, backend, info, etapa, previo='', **vars):
-    """Unha chamada ao LLM para un bloque, con validación e ata dous reintentos cos problemas atopados."""
+def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, reserva=None, **vars):
+    """Unha chamada ao LLM para un bloque, con validación e ata dous reintentos cos problemas atopados.
+    Se despois dos reintentos o bloque aínda ten problemas (lingua, H1, veracidade...), NON se usa: vai a
+    `reserva` (o texto literal dos feitos do dossier, un texto fixo do canal, ou nada)."""
     mellor, hist = None, []
     extra = ''
     for k in range(3):
         v = dict(vars)
         if extra:   # o reintento leva os problemas ao final do prompt (cambia o hash: nova chamada)
-            clave = 'feito' if 'feito' in v else ('feitos' if 'feitos' in v else ('tema' if 'tema' in v else list(v)[0]))
+            clave = 'feito_txt' if 'feito_txt' in v else ('feitos' if 'feitos' in v else ('tema' if 'tema' in v else list(v)[0]))
             v[clave] = v[clave] + extra
         t, meta = llm.complete(nome, backend, **v)
         info['llm'][f'{nome}_{len([x for x in info["llm"] if x.startswith(nome)]) + 1}'] = meta
         cpu_llm(etapa, meta)
-        t = normalizar(' '.join(limpar_saida_llm(t).split()))
-        pr = problemas_bloque(t, tm, previo=previo)
+        t = sen_repeticions(normalizar(' '.join(limpar_saida_llm(t).split())), previo)
+        pr = problemas_bloque(t, tm, previo=previo, modo=modo, feito=feito)
         hist.append(pr)
         if mellor is None or len(pr) < len(mellor[0]):
             mellor = (pr, t)
         if not pr:
             break
         extra = '\n\n(ATENCIÓN: a versión anterior tiña estes problemas, evítaos: ' + ' '.join(pr) + ')'
-    t = sen_repeticions(mellor[1], previo)    # rede de seguridade determinista
-    return t, {'bloque': nome, 'intentos': len(hist), 'problemas_por_intento': hist}
+    r = {'bloque': nome, 'intentos': len(hist), 'problemas_por_intento': hist, 'texto_llm': mellor[1]}
+    if mellor[0]:
+        t = reserva if reserva is not None else ''
+        r['reserva'] = 'omitido' if not t else 'literal'
+        if t:
+            det = {}
+            pr = problemas_bloque(t, tm, min_frases=1, previo=previo, modo=modo, feito=feito, detalle=det)
+            r['problemas_reserva'] = pr
+        return t, r
+    return mellor[1], r
 
 
 def numeros(t):
@@ -294,11 +337,13 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
             ig.append(int(n) - 1)
     ig = ig[:3] or [0, 1]
     info['seleccion_gancho'] = {'resposta_llm': sg, 'usados': [i + 1 for i in ig]}
-    gancho, r = bloque('bloque_gancho', tema, backend, info, etapa, tema=tema['tema'],
+    gancho, r = bloque('bloque_gancho', tema, backend, info, etapa, modo='gancho',
+                       reserva=' '.join(literal(fs[i]) for i in ig), tema=tema['tema'],
                        feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
-    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, tema=tema['tema'], fragmento=tema['fragmento'],
-                       dossier=dossier); rex.append(r)
-    invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, tema=tema['tema']); rex.append(r)
+    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, modo='relato', reserva='',
+                       tema=tema['tema'], fragmento=tema['fragmento'], dossier=dossier); rex.append(r)
+    invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, previo=gancho + '\n\n' + resumo, modo='relato',
+                      reserva=INVITACION_FIXA, tema=tema['tema']); rex.append(r)
     fixo = len(tema['aviso'].split()) + len(FORMULA.split())
     resto = tema['palabras'] - fixo - sum(len(x.split()) for x in (gancho, resumo, invit))
     nmax = max(3, min(len(fs), round(resto / 50))); nmin = max(2, nmax - 2)
@@ -319,20 +364,69 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
     for k, i in enumerate(ids):
         ton = TONS[min(k, len(TONS) - 1)]
         ult = ' '.join(f['texto'] for f in partir(anterior)[-2:])
-        p, r = bloque('bloque_parrafo', tema, backend, info, etapa, previo='\n\n'.join([gancho, resumo] + pars),
-                      tema=tema['tema'], feito=fs[i], anterior=ult, ton=ton)
+        p, r = bloque('bloque_parrafo', tema, backend, info, etapa, previo='\n\n'.join([gancho, resumo, invit] + pars),
+                      modo='relato', feito=literal(fs[i]), reserva=literal(fs[i]),
+                      tema=tema['tema'], feito_txt=fs[i], anterior=ult, ton=ton)
         r['feito'] = i + 1; rex.append(r)
         pars.append(p); anterior = p
-    g = '\n\n'.join([tema['aviso'], gancho, FORMULA + ' ' + resumo, invit] + pars)
+    info['estrutura'] = (['aviso', 'gancho', 'resumo', 'invitacion'] + [f'feito:{i + 1}' for i in ids])
+    g = '\n\n'.join([tema['aviso'], gancho, (FORMULA + ' ' + resumo).strip(), invit] + pars)
     return g, rex
 
 
+def modo_parrafo(k, tema, info):
+    """Modo de veracidade e feito propio do parágrafo k do guion (0 = aviso)."""
+    e = (info.get('estrutura') or [])
+    x = e[k] if k < len(e) else 'relato'
+    if x == 'aviso':
+        return None, None
+    if x == 'gancho':
+        return 'gancho', None
+    if x.startswith('feito:'):
+        return 'relato', literal(feitos(tema)[int(x[6:]) - 1])
+    return 'relato', None
+
+
+def porta_texto(guion, tema, info):
+    """Portas de texto BLOQUEANTES (ronda 3): lingua, H1, estilo e veracidade sobre o guion final, antes da voz.
+    Se algunha falla, o pipeline para (código 4) e non se xera vídeo."""
+    import qa, ancoraxe
+    res = {'lingua': qa.lingua(guion, dossier=ancora(tema)),
+           'h1_ancoraxe': ancoraxe.ancoraxe(guion, ancora(tema), [tema['aviso']]),
+           'estilo': qa.estilo(guion, partir(guion), tema['aviso'], tema['palabras'])}
+    ver = []
+    for k, par in enumerate(guion.split('\n\n')):
+        modo, feito = modo_parrafo(k, tema, info)
+        if not modo:
+            continue
+        txt = par.replace(FORMULA, '').strip()
+        if not txt:
+            continue
+        pv, rs = verificador(tema).texto(txt, modo, feito_propio=feito)
+        ver.append({'parrafo': k, 'modo': modo, 'problemas': pv, 'frases': rs})
+    res['veracidade'] = ver
+    e = res['estilo']
+    res['portas_texto'] = {
+        'lingua_lt': not res['lingua'],
+        'h1_ancoraxe': not res['h1_ancoraxe']['non_ancorados'],
+        'veracidade': all(not v['problemas'] for v in ver),
+        'estilo': not (e['cifras'] or e['signos_prohibidos'] or e['palabras_vetadas'] or e['preguntas'])
+                  and e['aviso_literal'] and e['formula_literal'],
+    }
+    return res
+
+
 def corrixir_por_parrafos(g, tema, backend, info, etapa='2_corrixir'):
+    """Rede de seguridade: os bloques xa saen sen avisos de lingua (ou van á reserva literal), pero se un parágrafo
+    aínda ten avisos, o LLM corríxeo; só se acepta se os problemas (lingua, H1, veracidade...) baixan. Se despois
+    segue con avisos, o parágrafo substitúese pola súa reserva (feito literal ou texto fixo) ou omítese."""
     import qa
     out, rex = [], []
+    fs = feitos(tema)
     for k, par in enumerate(g.split('\n\n')):
         if par == tema['aviso']:
             out.append(par); continue
+        modo, feito = modo_parrafo(k, tema, info)
         lt = qa.lingua(par, dossier=ancora(tema))
         if not lt:
             out.append(par); continue
@@ -344,9 +438,20 @@ def corrixir_por_parrafos(g, tema, backend, info, etapa='2_corrixir'):
         if FORMULA in par and FORMULA not in c:
             c = par
         lt2 = qa.lingua(c, dossier=ancora(tema))
-        ok = len(lt2) < len(lt) and len(problemas_bloque(c, tema, 1)) <= len(problemas_bloque(par, tema, 1))
-        rex.append({'parrafo': k, 'avisos_antes': len(lt), 'avisos_despois': len(lt2), 'aceptada': ok})
-        out.append(c if ok else par)
+        ok = len(lt2) < len(lt) and len(problemas_bloque(c, tema, 1, modo=modo, feito=feito)) \
+            <= len(problemas_bloque(par, tema, 1, modo=modo, feito=feito))
+        novo = c if ok else par
+        r = {'parrafo': k, 'avisos_antes': len(lt), 'avisos_despois': len(lt2), 'aceptada': ok}
+        if qa.lingua(novo, dossier=ancora(tema)):
+            e = (info.get('estrutura') or [])[k] if k < len(info.get('estrutura') or []) else ''
+            if e.startswith('feito:'):
+                novo = literal(fs[int(e[6:]) - 1]); r['reserva'] = 'feito literal'
+            elif e == 'invitacion':
+                novo = INVITACION_FIXA; r['reserva'] = 'texto fixo'
+            elif e == 'resumo':
+                novo = FORMULA; r['reserva'] = 'resumo omitido'
+        rex.append(r)
+        out.append(novo)
     return '\n\n'.join(out), rex
 
 # ------------------------------------------------------------------ subtítulos
@@ -414,10 +519,22 @@ def planos(frases, tempos, dur):
     movs = ['zoom_in', 'pan_right', 'zoom_out', 'pan_left', 'zoom_in', 'pan_up']
     for k, p in enumerate(out):
         p['b0'] = 0.0 if k == 0 else max(0.0, p['t0'] - (0.25 if 'parte' not in p or p['parte'].startswith('1/') else 0))
-        p['movemento'] = movs[k % len(movs)]
     for k, p in enumerate(out):
         p['b1'] = out[k + 1]['b0'] if k + 1 < len(out) else dur
-    return out
+    # tope duro (ronda 3): un plano de 19 s deixaba a mesma imaxe en dous fotogramas da folla de contactos
+    # e parecía unha toma repetida. Os planos máis longos ca PLANO_MAX pártense en varios con imaxes distintas.
+    fin = []
+    for p in out:
+        d = p['b1'] - p['b0']
+        k = math.ceil(d / PLANO_MAX - 1e-9)
+        if k <= 1:
+            fin.append(p); continue
+        for j in range(k):
+            q = dict(p, b0=p['b0'] + j * d / k, b1=p['b0'] + (j + 1) * d / k, parte=f'{j + 1}/{k}')
+            fin.append(q)
+    for k, p in enumerate(fin):
+        p['movemento'] = movs[k % len(movs)]
+    return fin
 
 
 def escenas_llm(tema, pl, backend):
@@ -434,7 +551,8 @@ def escenas_llm(tema, pl, backend):
         for l in raw.splitlines():
             m = re.match(r'^\s*(?:shot\s*)?(\d+)\s*[.):-]\s*(.+)$', l.strip(), re.I)
             if m and 1 <= int(m.group(1)) <= len(pl) and int(m.group(1)) not in prompts:
-                pr = re.sub(r'^\(?\d+ ?s[^)]*\)\s*', '', m.group(2)).strip().strip('"')
+                pr = re.sub(r'^\(?\d+ ?s[^)]*\)\s*', '', m.group(2))
+                pr = re.sub(r'[*_#`]+', '', pr).strip().strip('"')      # o LLM devolvía **negriñas** de Markdown
                 if len(pr.split()) >= 6:
                     prompts[int(m.group(1))] = pr
         if len(prompts) == len(pl):
@@ -535,6 +653,20 @@ def main():
         save_t()
     except llm.PendingLLM as e:
         save_t(); print(e); sys.exit(3)
+    # portas de texto BLOQUEANTES: se o texto non pasa, non hai voz, nin imaxes, nin vídeo
+    with Etapa('2b_porta_texto'):
+        pt = porta_texto(guion, tema, info)
+        (W / 'porta_texto.json').write_text(json.dumps(pt, ensure_ascii=False, indent=1))
+    save_t()
+    if not all(pt['portas_texto'].values()):
+        mp4 = S / 'ejemplo.mp4'
+        if mp4.exists():
+            mp4.unlink()      # non deixar na saída un vídeo vello coma se fose deste texto
+        (S / 'qa.md').write_text(f"# QA automático: {tema['titulo']}\n\n**Veredicto automático: NON PUBLICABLE. "
+                                 f"O texto non pasou as portas bloqueantes e non se xerou vídeo.**\n\n"
+                                 f"Portas de texto: {pt['portas_texto']}\n\nDetalle en {W / 'porta_texto.json'}\n\n"
+                                 f"## Guion rexeitado\n\n{guion}\n")
+        print('NON PUBLICABLE (texto):', pt['portas_texto']); sys.exit(4)
     frases = partir(guion)
 
     # 3 voz, ritmo en embude
@@ -592,6 +724,8 @@ def main():
         with mp_.get_context('spawn').Pool(1) as pool_:
             imgs, rex = pool_.apply(imaxes.xerar, (pl, W / 'imaxes'), {'seed_base': tema['id']})
         info['imaxes_rexistro'] = rex
+        imgs_orixinais = imgs
+        imgs = imaxes.graduar(imgs, W / 'imaxes_graduadas')      # unha soa paleta para todo o episodio
         info['imaxes_xeracion_s'] = sum(i['s'] for r in rex for i in r['intentos'] if 's' in i)
         info['imaxes_revision_s'] = sum(i.get('s_revision', 0) for r in rex for i in r['intentos'])
     save_t()
@@ -605,7 +739,8 @@ def main():
     # 7 montaxe (escritura atómica: o MP4 final só aparece cando está completo)
     with Etapa('7_montaxe'):
         import montaxe
-        mp4 = S / 'ejemplo.mp4'; tmp = S / '.ejemplo.tmp.mp4'
+        # o render queda no directorio de traballo; só se copia á saída como ejemplo.mp4 se pasa TODAS as portas
+        mp4 = W / 'render.mp4'; tmp = W / '.render.tmp.mp4'
         montaxe.render([{'b0': p['b0'], 'b1': p['b1'], 'movemento': p['movemento']} for p in pl], imgs, dur,
                        str(W / 'mestura.wav'), str(W / 'subtitulos.srt'), tmp, W / 'montaxe',
                        queimar=a.queimar_subtitulos)
@@ -626,9 +761,10 @@ def main():
                'seleccion_feitos': info.get('seleccion_feitos'), 'seleccion_gancho': info.get('seleccion_gancho'),
                'modo_guion': a.guion, 'nota_execucion': os.environ.get('QA_NOTA')}
         res['lingua_antes_correccion'] = info['lt_antes']
-        res['lingua'] = qa.lingua(guion, dossier=ancora(tema))
-        res['h1_ancoraxe'] = ancoraxe.ancoraxe(guion, ancora(tema), [tema['aviso']])
-        res['estilo'] = qa.estilo(guion, frases, tema['aviso'], tema['palabras'])
+        res['estrutura'] = info.get('estrutura')
+        pt = porta_texto(guion, tema, info)
+        res['lingua'], res['h1_ancoraxe'], res['estilo'], res['veracidade'] = \
+            pt['lingua'], pt['h1_ancoraxe'], pt['estilo'], pt['veracidade']
         res['asr'] = qa.asr(str(W / 'mestura.wav'), str(W / 'voz_linea.wav'), frases, tempos, CFG['whisper_dir'])
         res['ficheiro'] = qa.ficheiro(mp4, dur)
         res['imaxes'] = qa.imaxes(imgs)
@@ -642,7 +778,7 @@ def main():
                                                  ((tempos[lim[-1]['i']][1] - OFFSET) / 60), 1)
         res['planos_primeiro_minuto'] = sum(1 for p in pl if p['b0'] < 60)
         cortes = [p['b0'] for p in pl[1:]]
-        qa.folla_contactos(mp4, dur, S / 'contactsheet.jpg', evitar=cortes, xf=montaxe.XF)
+        qa.folla_contactos(mp4, dur, W / 'contactsheet.jpg', evitar=cortes, xf=montaxe.XF)
     TEMPOS['8_qa']['nota'] = 'inclúe a folla de contactos'
     save_t()
     res['tempos'] = TEMPOS
@@ -655,17 +791,27 @@ def main():
         'wer_mestura': res['asr']['mestura']['wer'] <= UMBRAIS['wer_max'],
         'sincronia_av': f['desfase_av_s'] <= UMBRAIS['desfase_av_max_s'],
         'sincronia_subtitulos': res['asr']['mestura']['sincronia']['pct_dentro_da_sua_frase'] >= UMBRAIS['pct_sincronia_min'],
-        'lingua_lt': len(res['lingua']) <= UMBRAIS['lt_max'],
-        'h1_ancoraxe': len(res['h1_ancoraxe']['non_ancorados']) <= UMBRAIS['h1_non_ancorados_max'],
-        'estilo': not (res['estilo']['cifras'] or res['estilo']['signos_prohibidos'] or res['estilo']['palabras_vetadas']
-                       or res['estilo']['preguntas'])
-                  and res['estilo']['aviso_literal'] and res['estilo']['formula_literal'],
+        'lingua_lt': pt['portas_texto']['lingua_lt'],
+        'h1_ancoraxe': pt['portas_texto']['h1_ancoraxe'],
+        'veracidade': pt['portas_texto']['veracidade'],
+        'estilo': pt['portas_texto']['estilo'],
         'imaxes_revisadas': all(r['ok'] for r in res['revision_imaxes']),
         'sonoridade': UMBRAIS['lufs'][0] <= f['lufs_integrado'] <= UMBRAIS['lufs'][1],
         'peso': f['mb'] <= UMBRAIS['mb_max'],
         'resolucion': f['resolucion'] == '1920x1080',
     }
     res['publicable'] = all(res['portas'].values())
+    if res['publicable']:
+        # escritura atómica na saída: copia a un temporal e renomea
+        for orixe, dest in ((mp4, 'ejemplo.mp4'), (W / 'contactsheet.jpg', 'contactsheet.jpg')):
+            shutil.copy(orixe, S / f'.{dest}.tmp'); os.replace(S / f'.{dest}.tmp', S / dest)
+    else:
+        # o pipeline NON publica: o render queda no directorio de traballo como rexeitado e retírase
+        # da saída calquera ejemplo.mp4 vello, para que non pase por deste guion
+        os.replace(mp4, W / 'rexeitado.mp4')
+        res['mp4_rexeitado'] = str(W / 'rexeitado.mp4')
+        if (S / 'ejemplo.mp4').exists():
+            (S / 'ejemplo.mp4').unlink()
     (S / 'qa.json').write_text(json.dumps(res, ensure_ascii=False, indent=1))
     (S / 'qa.md').write_text(informe(res, tema, guion))
     print('publicable:', res['publicable'], res['portas'])
@@ -715,7 +861,9 @@ def informe(r, tema, guion):
         if 'bloque' in h:     # guion por bloques
             pp = h['problemas_por_intento']
             L.append(f"- {h['bloque']}{' (feito ' + str(h['feito']) + ')' if 'feito' in h else ''}: {h['intentos']} intento(s); "
-                     f"problemas por intento: {[len(x) for x in pp]}" + (f"; quedan: {' | '.join(pp[-1])}" if min(len(x) for x in pp) else ''))
+                     f"problemas por intento: {[len(x) for x in pp]}"
+                     + (f"; **rexeitado o texto do LLM, vai a reserva ({h['reserva']})**. Problemas do mellor intento: "
+                        f"{' | '.join(min(pp, key=len))}" if h.get('reserva') else ''))
         else:
             L.append(f"- versión {h['versión']}: {len(h['problemas'])} problemas" +
                      (': ' + ' | '.join(h['problemas'][:8]) if h['problemas'] else ''))
@@ -735,6 +883,17 @@ def informe(r, tema, guion):
     L += ['', f"## H1: nomes e cantidades ancorados no dossier", '',
           f"{h1['items']} elementos, {h1['pct_ancorado']} % ancorados. Sen ancorar: "
           + (', '.join(f"\"{x['texto']}\"" for x in h1['non_ancorados']) or 'ningún') + '.']
+    ver = r.get('veracidade') or []
+    nfr = sum(len(v['frases']) for v in ver)
+    L += ['', '## Veracidade (veracidade.py: NLI mDeBERTa-v3 multilingüe + coincidencia léxica + regras de desenlace)', '',
+          f"{nfr} frases avaliadas; con problemas: {sum(1 for v in ver for x in v['frases'] if not x['ok'])}. "
+          'Modo gancho: todas as frases apoiadas nun feito (NLI >= 0,6 e coincidencia >= 0,5, ou coincidencia >= 0,8). '
+          'Modo relato: frases con nome, tempo longo ou desenlace apoiadas; o parágrafo conta o seu feito.', '',
+          '| Par. | Modo | Frase | NLI | Coincid. | Feitos de apoio | Resultado |', '|---|---|---|---|---|---|---|']
+    for v in ver:
+        for x in v['frases']:
+            L.append(f"| {v['parrafo']} | {v['modo']} | {x['frase']} | {x['E']} | {x['cobertura']} | {x['apoio']} | "
+                     f"{'ok' if x['ok'] else 'FALLA: ' + x['motivo']} |")
     L += ['', '## Estilo e densidade (regras do canal)', '', '| Control | Valor |', '|---|---|']
     L += [f'| {k} | {v} |' for k, v in e.items()]
     L += ['', '## Son', '', '| Medida | Valor |', '|---|---|'] + [f'| {k} | {v} |' for k, v in r['son'].items()]

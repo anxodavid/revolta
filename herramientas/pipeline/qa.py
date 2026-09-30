@@ -21,16 +21,38 @@ def norm(t):
 
 
 # ---------------------------------------------------------------- lingua
+# Falsos positivos de LanguageTool comprobados no dicionario da RAG (https://academia.gal/dicionario). Só regras
+# de estilo/xenismo, NUNCA HUNSPELL: unha palabra que o dicionario ortográfico non coñece bloquea sempre (ronda 3).
+# (regra, expresión regular sobre o texto marcado, en minúsculas)
+FALSOS_POSITIVOS_LT = [
+    ('GL_BARBARISM_REPLACE', r'ceo'),   # "ceo" = firmamento (RAG); LT tómao polo xenismo CEO (director executivo)
+    # "Esta noite contamos/imos/viaxamos": "esta noite" é complemento de tempo, non suxeito (LT 6.8 marca a concordancia)
+    ('GENERAL_VERB_AGREEMENT_ERRORS', r'esta noite \w+'),
+]
+
+
+_LT = None
+
+
 def lingua(texto, dossier=''):
     """Avisos de LanguageTool. Os erros ortográficos (hunspell) en palabras que xa están no dossier de
-    fontes (nomes propios verificados: Andrade, Lemos...) descártanse."""
-    import language_tool_python as L
-    tool = L.LanguageTool('gl-ES')
-    ms = [m for m in tool.check(texto) if not (m.rule_id.startswith('HUNSPELL') and
-          texto[m.offset:m.offset + m.error_length] in dossier)]
-    res = [{'regra': m.rule_id, 'mensaxe': m.message, 'contexto': m.context,
-            'suxestions': m.replacements[:3]} for m in ms]
-    tool.close()
+    fontes (nomes propios verificados: Andrade, Lemos...) descártanse; o resto de erros de hunspell
+    (palabras que non existen: "fortaleiras", "teituras") contan sempre. Cada aviso leva 'palabra' e
+    'hunspell' para que o pipeline poida dicir ao LLM que palabra cambiar."""
+    global _LT
+    if _LT is None:
+        import language_tool_python as L
+        _LT = L.LanguageTool('gl-ES')     # un só servidor Java para todo o proceso (antes: un por chamada)
+    tool = _LT
+    res = []
+    for m in tool.check(texto):
+        pal = texto[m.offset:m.offset + m.error_length]
+        if m.rule_id.startswith('HUNSPELL') and pal in dossier:
+            continue
+        if any(m.rule_id == r and re.fullmatch(x, pal.lower()) for r, x in FALSOS_POSITIVOS_LT):
+            continue
+        res.append({'regra': m.rule_id, 'mensaxe': m.message, 'contexto': m.context, 'palabra': pal,
+                    'hunspell': m.rule_id.startswith('HUNSPELL'), 'suxestions': m.replacements[:3]})
     return res
 
 
@@ -178,7 +200,7 @@ def imaxes(pngs):
 def folla_contactos(mp4, dur, out, n=12, cols=4, evitar=(), xf=0.0):
     """12 fotogramas a intervalos regulares. Se un cae dentro dun fundido encadeado (cortes `evitar`, fundido
     de `xf` s), desprázase ao fotograma limpo máis próximo (fóra do fundido) para que a folla mostre as imaxes."""
-    tw, th = 480, 270
+    tw, th = 960, 540     # ronda 3: fotogramas a 960x540 (folla 3840x1620) para ver os artefactos finos
     sheet = Image.new('RGB', (tw * cols, th * (n // cols)), 'black')
     d = ImageDraw.Draw(sheet)
     for k in range(n):
@@ -192,6 +214,6 @@ def folla_contactos(mp4, dur, out, n=12, cols=4, evitar=(), xf=0.0):
         im = Image.frombytes('RGB', (tw, th), raw[:tw * th * 3])
         x, y = (k % cols) * tw, (k // cols) * th
         sheet.paste(im, (x, y))
-        d.text((x + 8, y + 6), f'{int(t // 60)}:{int(t % 60):02d}', fill=(255, 255, 255))
+        d.text((x + 12, y + 10), f'{int(t // 60)}:{int(t % 60):02d}', fill=(255, 255, 255), font_size=28)
     sheet.save(out, quality=88)
     return out
