@@ -40,8 +40,8 @@ Dos bancos de prueba:
 | DNSMOS BAK (cuánto molesta el fondo; 5 = nada) | 2,77 | 3,75 | 3,51 | 4,14 |
 | DNSMOS OVRL (global) | 2,65 | 3,16 | 3,02 | 3,37 |
 | OVRL en la zona de dormir | 2,45 | 2,89 | 2,74 | 3,37 |
-| WER Whisper gl, texto de cada tramo | 0,022 | 0,063 | 0,070 | 0,133 |
-| WER Whisper gl, frase a frase | PENDIENTE | | | |
+| WER Whisper gl, texto de cada tramo (ver §4.2) | 0,022 | 0,063 | 0,070 | 0,133 |
+| **WER Whisper gl, frase a frase** (errores en 271 palabras) | 0,022 (6) | 0,022 (6) | 0,026 (7) | 0,018 (5) |
 | % del tiempo de voz sin ambiente (voz limpia) | 0 | 64,8 | 17,8 | 100 |
 | Ambiente bajo la voz (mediana, dB) | 15,9 | 18,8 | 22,2 | — |
 | Zona de dormir: pico de eventos en 50 ms sobre su fondo (dB) | 9,7 | 14,3 | 6,9 | — |
@@ -77,8 +77,11 @@ Los sustos de B son los chasquidos de la lareira de 7541a9e, que no estaban limi
 2. **El WER del texto largo mide un defecto de Whisper, no el ambiente.** En la zona de dormir, Whisper se salta frases
    enteras tras los silencios largos: con voz sola (D) borra 31 de 77 palabras y solo reconoce mal una ("Pouco" →
    "ouco", igual en las cuatro opciones). Con lluvia continua (A) se salta solo 2 palabras, con B y C 11-14: el
-   ambiente rellena el silencio [S]. Las palabras reconocidas son las mismas en las cuatro opciones. El WER frase a
-   frase (cada frase cortada con 0,3 s de margen) evita ese defecto: PENDIENTE. Aviso para la QA del pipeline:
+   ambiente rellena el silencio [S]. El WER frase a frase (cada frase cortada con 0,3 s de margen) evita ese defecto
+   y da **0,018-0,026 en las cuatro opciones**, muy por debajo de la puerta del pipeline (0,06): los errores son casi
+   los mismos con y sin ambiente (variantes ortográficas de Whisper: "á outra", "ó pé", "alousa"). El ambiente solo
+   añade 1-2 palabras átonas perdidas en 271: un "e" bajo la lareira o la lluvia (A, B y C) y "ao pé" → "OPE" bajo
+   los pájaros de la aldea (C). Aviso para la QA del pipeline:
    `qa.asr` transcribe el episodio entero y puede suspender la puerta de WER (0,06) en la zona de dormir por este
    defecto y no por la voz; convendría medirlo por frases o con `vad_filter` [S].
 3. **El murmullo de gentío no se entiende**: Whisper no transcribe nada en 2 de 3 semillas de 40 s de `xente` solo (a
@@ -106,7 +109,8 @@ escrita según [`guia-son.md`](guia-son.md). Es la única opción que cumple a l
 (9 tipos), voz limpia donde la imagen no tiene sonido, sin fondo constante, sin monotonía (9-11 % frente al 93 % de
 A), murmullo ininteligible en los gentíos, 0 sustos en la zona de dormir y, con una lista según la guía, un ritmo
 de cambios que no parpadea (9,5 cada 10 min al dormir). Lo paga con un fondo presente más tiempo
-que B (DNSMOS OVRL 3,02 frente a 3,16), sin perder palabras.
+que B (DNSMOS OVRL 3,02 frente a 3,16) y 1-2 palabras átonas de 271 que Whisper pierde (WER por frase 0,026 frente a
+0,018 sin ambiente).
 
 Condiciones y cosas abiertas:
 
