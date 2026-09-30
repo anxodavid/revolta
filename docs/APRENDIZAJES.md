@@ -122,3 +122,13 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   energía entre 2 y 8 kHz). La nueva lluvia con gotas, goteos y ráfagas (curtosis 9, 11-20 dB menos por encima de
   4 kHz) le gustó más, sobre todo con lareira, pero pidió **ambiente por escena, sin fondo constante y con tramos de
   voz limpia** (D13), variado para no cansar y con **murmullo de gentío** cuando la escena lo tenga (D14).
+
+## Método: cortes por límite de uso
+
+- **Con 5 agentes a la vez se agotó el límite de uso de la sesión en ~5 h** (corte a las 16:30 UTC). Gracias a los
+  commits frecuentes solo se perdió el contexto de los agentes; lo que no habían subido seguía en disco y se subió al
+  volver. El contenedor se reinició, pero el scratchpad (entorno y modelos) sobrevivió esta vez.
+- **Retomar un agente cortado con `SendMessage` a su id** lo reanuda con su contexto intacto: mejor que lanzar uno
+  nuevo que vuelva a leerlo todo. Solo se relanza desde cero el que apenas había empezado.
+- Conviene guardar en el repo, y no solo en el scratchpad, las utilidades que crean los agentes (p. ej. el comprobador
+  rápido del guion).

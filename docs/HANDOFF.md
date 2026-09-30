@@ -11,12 +11,16 @@ Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 | Pieza | Estado | Dónde |
 |---|---|---|
 | Entorno | Hecho: `instalar.sh` en una orden (≈6 min) | `herramientas/pipeline/instalar.sh`, `entorno.sh` |
-| Tema | Elegido: **"As meigas de verdade"** (crítico en curso) | `gauntlet3/tema/investigacion.md`, `veredictos/tema-r1.md` |
-| Dossier | En curso | `herramientas/pipeline/temas/meigas-de-verdade.yaml`, `gauntlet3/dossier/` |
-| Guion | Pendiente (Gauntlet: constructor + 2 críticos, hasta 3 rondas) | `gauntlet3/guion/` |
-| Voz (embudo) | En curso | `voz_st2.py`, `curva.py`, `gauntlet3/voz/` |
-| Visual | En curso (SDXL-Lightning, biblia visual, puertas CLIP) | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
-| Vídeo | Pendiente: `longo.py` (guion y planos escritos por agentes; curva de embudo; capítulos) | `herramientas/pipeline/longo.py` |
+| Tema | Hecho: **"As meigas de verdade"**, GANA condicionado (ajustes en `contexto.md` §8) | `gauntlet3/tema/investigacion.md`, `veredictos/tema-r1.md` |
+| Dossier | Hecho: 244 hechos con cita comprobada; ficha de 180 | `herramientas/pipeline/temas/meigas-de-verdade.yaml`, `gauntlet3/dossier/` |
+| Guion | Ronda 1 en curso (constructor); luego 2 críticos, hasta 3 rondas | `gauntlet3/guion/` |
+| Voz (embudo) | En curso: Cotovía de Nós por defecto; faltan curva e informe | `voz_st2.py`, `curva.py`, `gauntlet3/voz/` |
+| Visual | En curso: SDXL-Lightning 4 pasos 1344x768, estilo filme, gradación por fase, puerta CLIP; falta hoja r1 y crítico | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
+| Son | Muestras A/B/C/D enviadas al promotor (D13, D14); faltan medidas | `son.py`, `gauntlet3/son/` |
+| Vídeo | Pendiente: `longo.py` (guion y planos escritos por agentes; curva de embudo; capítulos; ambiente por escena) | `herramientas/pipeline/longo.py` |
+
+**Corte del 30-09-2026 a las 16:30 UTC** (límite de uso con 5 agentes a la vez): se perdió solo el contexto de los
+agentes; el trabajo estaba en git o en disco. Se retomaron con `SendMessage` a su id (conservan su contexto).
 
 ## 1. Qué es el proyecto
 
