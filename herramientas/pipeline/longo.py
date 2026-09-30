@@ -205,7 +205,7 @@ def ler_escenas(path, pl):
     for p in pl:
         x = por_n[p['n']]
         p['prompt'] = re.sub(r'[*_#`]+', '', str(x['prompt'])).strip().strip('"')
-        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son'):
+        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son', 'clave'):
             if x.get(k):
                 p[k] = x[k]
     return pl
