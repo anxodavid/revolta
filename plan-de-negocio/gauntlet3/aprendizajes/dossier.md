@@ -8,7 +8,7 @@ episodio. Resultado: `plan-de-negocio/gauntlet3/dossier/` (`feitos.yaml`, `xerar
 
 - **Una sola fuente de verdad**: `feitos.yaml` con cada hecho en galego y sus evidencias `{fonte, cita}`, donde la cita
   es un trozo **literal** del texto descargado. `xerar.py comprobar` busca cada cita en su fuente (normalizando
-  mayúsculas, espacios y comillas, como `dossier.py` del pipeline) y `xerar.py ficha` genera la ficha. Las 344 citas
+  mayúsculas, espacios y comillas, como `dossier.py` del pipeline) y `xerar.py ficha` genera la ficha. Las 350 citas
   pasaron a la primera porque se copiaron del texto ya extraído; una prueba negativa (tres citas alteradas) confirmó que
   el comprobador falla cuando debe.
 - **Proba negativa también para "no está"**: campo `ausente` (p. ej. "las hay, las hay" en el *Quijote* de Gutenberg).

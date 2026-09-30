@@ -316,7 +316,7 @@ feitos:
 - id: F037
   cap: C0B
   tipo: H
-  feito: "As fontes non concordan no ano nin no nome daquela muller."
+  feito: "As fontes non concordan no ano daquela fogueira, e non todas dan o nome da muller."
   nota: "Arquivo do Reino: 1627, sen nome. Valor Bravo e o CCG: María Rodríguez, 1579. Non dicir ningún dos dous anos."
   evidencias:
   - {fonte: ARG, cita: "queimou a unha muller en 1627"}
@@ -411,7 +411,7 @@ feitos:
   cap: C0B
   tipo: H
   feito: "En Campo Lameiro, uns veciños fixeron unha lista coas mulleres que foran á fonte a noite de san Xoán."
-  nota: "Bucle aberto: presentalo aquí (arredor de 1:45) e resolvelo no capítulo C3 (minutos 8-10). Sen os demos do camiño."
+  nota: "Bucle aberto: presentalo aquí (arredor de 1:45) e resolvelo no capítulo C3 (minutos 8-10). Sen os demos do camiño. O extracto non di quen fixo a lista: veciños é a lectura do contexto (a sospeita que delas tiñan)."
   evidencias:
   - {fonte: ARG, cita: "las abían escripto en una memoria por ser mucho número dellas"}
   - {fonte: ARG, cita: "e por la sospecha que dellas tienen dice el testigo que la noche de San Juan de junio deste ano próximo pasado"}
@@ -593,6 +593,7 @@ feitos:
   evidencias:
   - {fonte: GL-INQUISICION, cita: "e a Casa Grande de Calo, fronte a Porta da Mámoa"}
   - {fonte: GL-INQUISICION, cita: "Este último edificio foi derrubado en 1913 para construír o actual Hotel Compostela"}
+  - {fonte: GL-INQUISICION, cita: "Las nuevas casas de la Inquisición en Santiago de Compostela: del palacio de Monterrey a la sede de Porta da Mámoa"}
   - {fonte: ARG, cita: "Hotel Compostela, onde estaba situado o Tribunal da Inquisición de Galicia"}
 - id: F077
   cap: C2
@@ -960,7 +961,7 @@ feitos:
 - id: F130
   cap: C3
   tipo: H
-  feito: "Uns veciños dicían que Inés de Maquieira lles fixera morrer becerras e leitóns, porque estaban rifados con ela."
+  feito: "Uns veciños dicían que unha das acusadas fixera morrer as súas becerras e os seus leitóns, porque estaban rifados con ela."
   evidencias:
   - {fonte: ARG, cita: "le murieron dos bacas terneras y quatro lechones"}
   - {fonte: ARG, cita: "les a echo con sus envençiones açellos morir por hestaren reñidos"}
@@ -1041,7 +1042,7 @@ feitos:
 - id: F142
   cap: C4
   tipo: H
-  feito: "Outra testemuña declarou que Marta de Quián ofrecía, por catro ou cinco reais, facer que unha moza deixase de mirar para un home."
+  feito: "Outra testemuña declarou que Marta de Quián lle dixera que, por catro ou cinco reais, faría que unha moza deixase de mirar para un home."
   evidencias:
   - {fonte: ARG, cita: "si le dava quatro o cinco reales aría que ella no mirase para el dicho Amaro Capateiro"}
 - id: F143
