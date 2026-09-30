@@ -1,0 +1,520 @@
+{
+ "metodo": "WER frase a frase (cada frase transcrita soa co Whisper galego de Nós), 33 frases x 2 sementes; rec = compilada en modo -p1 (só cambia a frase 14, medida aparte)",
+ "resumo": {
+  "0.5": {
+   "test": {
+    "erros": 20,
+    "palabras": 488,
+    "wer": 0.041
+   },
+   "propia": {
+    "erros": 5,
+    "palabras": 288,
+    "wer": 0.0174
+   },
+   "todas": {
+    "erros": 25,
+    "palabras": 776,
+    "wer": 0.0322
+   }
+  },
+  "nova": {
+   "test": {
+    "erros": 21,
+    "palabras": 488,
+    "wer": 0.043
+   },
+   "propia": {
+    "erros": 2,
+    "palabras": 288,
+    "wer": 0.0069
+   },
+   "todas": {
+    "erros": 23,
+    "palabras": 776,
+    "wer": 0.0296
+   }
+  },
+  "rec": {
+   "test": {
+    "erros": 20,
+    "palabras": 488,
+    "wer": 0.041
+   },
+   "propia": {
+    "erros": 2,
+    "palabras": 288,
+    "wer": 0.0069
+   },
+   "todas": {
+    "erros": 22,
+    "palabras": 776,
+    "wer": 0.0284
+   }
+  }
+ },
+ "frases": [
+  {
+   "k": 0,
+   "texto": "¿Como van executar todas estas funcións que lles están a pedir?",
+   "orixe": "test",
+   "palabras": 11,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 1,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 1,
+   "texto": "A defensa institucional faina ese goberno e quen goberne, ¿non?",
+   "orixe": "test",
+   "palabras": 10,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 1,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 2,
+   "texto": "Hai xiros da linguaxe con sentido figurado que non deben interpretarse en sentido literal.",
+   "orixe": "test",
+   "palabras": 14,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 3,
+   "texto": "A sentenza completa publicarase nos próximos días.",
+   "orixe": "test",
+   "palabras": 7,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 4,
+   "texto": "As temperaturas descenden lixeiramente, pero seguirán elevadas pola tarde.",
+   "orixe": "test",
+   "palabras": 9,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 5,
+   "texto": "Era un dos máis interesantes proxectos nados na Internet galaica.",
+   "orixe": "test",
+   "palabras": 10,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 6,
+   "texto": "Falamos xa do tempo: hai avisos no litoral e nalgunhas zonas do interior por vento.",
+   "orixe": "test",
+   "palabras": 15,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 7,
+   "texto": "É difícil, ¿non?",
+   "orixe": "test",
+   "palabras": 3,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 1,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 8,
+   "texto": "A escaseza de vacinas en Europa podería complicar a administración da segunda dose.",
+   "orixe": "test",
+   "palabras": 13,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 9,
+   "texto": "As medidas afectan en Galicia a máis dun cento de barcos e dous milleiros de mariñeiros.",
+   "orixe": "test",
+   "palabras": 16,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 10,
+   "texto": "O carballo da Retorta ten unha folla revirada que lla revirou o aire unha noite de xeada.",
+   "orixe": "test",
+   "palabras": 17,
+   "erros": {
+    "0.5_11": 2,
+    "0.5_22": 2,
+    "nova_11": 2,
+    "nova_22": 1,
+    "rec_11": 2,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 11,
+   "texto": "¿Ordenámolos en parágrafos de catro liñas ou de seis?",
+   "orixe": "test",
+   "palabras": 9,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 12,
+   "texto": "É licenciada en Ciencias Económicas e desenvolveu a meirande parte da súa carreira profesional na Administración Pública.",
+   "orixe": "test",
+   "palabras": 17,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 13,
+   "texto": "Os enxeñeiros cualificaron a obra de moi complexa debido á orografía das zonas polas que discorre a vía.",
+   "orixe": "test",
+   "palabras": 18,
+   "erros": {
+    "0.5_11": 4,
+    "0.5_22": 1,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 14,
+   "texto": "Ti xa sabes o que debes facer.",
+   "orixe": "test",
+   "palabras": 7,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 1,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 15,
+   "texto": "Terás algo que contar...",
+   "orixe": "test",
+   "palabras": 4,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 16,
+   "texto": "-¡A curuxa!, -berrou o vello.",
+   "orixe": "test",
+   "palabras": 5,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 1,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 17,
+   "texto": "A erupción provoca a emanación de gases á atmosfera.",
+   "orixe": "test",
+   "palabras": 9,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 18,
+   "texto": "As autoestradas da Xunta (Vigo-Baiona e A Coruña-Carballo) estarán rematadas no ano mil novecentos noventa e sete.",
+   "orixe": "test",
+   "palabras": 19,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 19,
+   "texto": "Investigadores estadounidenses identifican o xene responsable da propagación das células canceríxenas.",
+   "orixe": "test",
+   "palabras": 11,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 0,
+    "nova_11": 1,
+    "nova_22": 0,
+    "rec_11": 1,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 20,
+   "texto": "¡Ai!, e xogando ó trompo tamén había xente que o collía á uña, ¿non sabes?; e velo coller á uña...",
+   "orixe": "test",
+   "palabras": 20,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 1,
+    "nova_11": 1,
+    "nova_22": 1,
+    "rec_11": 1,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 21,
+   "texto": "A porta da torre estaba aberta, e o home entrou sen facer ruído.",
+   "orixe": "propia",
+   "palabras": 13,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 22,
+   "texto": "O óso quedou no chan, preto da pedra do forno vello.",
+   "orixe": "propia",
+   "palabras": 11,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 23,
+   "texto": "Rosalía de Castro naceu en Santiago de Compostela e morreu en Padrón.",
+   "orixe": "propia",
+   "palabras": 12,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 24,
+   "texto": "Pardo de Cela foi degolado en Mondoñedo, diante da catedral.",
+   "orixe": "propia",
+   "palabras": 10,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 25,
+   "texto": "Xelmírez mandou erguer torres e murallas arredor da cidade.",
+   "orixe": "propia",
+   "palabras": 9,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 26,
+   "texto": "O mar de Fisterra é bravo no inverno, e as ondas baten nas rochas.",
+   "orixe": "propia",
+   "palabras": 14,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 27,
+   "texto": "Nesta terra de néboa, cada pedra garda unha historia vella.",
+   "orixe": "propia",
+   "palabras": 10,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 28,
+   "texto": "Dixo que si, que o faría, pero non o fixo nunca.",
+   "orixe": "propia",
+   "palabras": 11,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 29,
+   "texto": "Ela veu á feira de Ourense co seu irmán e coa súa nai.",
+   "orixe": "propia",
+   "palabras": 13,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 0,
+    "nova_11": 1,
+    "nova_22": 0,
+    "rec_11": 1,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 30,
+   "texto": "Onte á noite choveu moito sobre os tellados de lousa de Lugo.",
+   "orixe": "propia",
+   "palabras": 12,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 1,
+    "rec_11": 0,
+    "rec_22": 1
+   }
+  },
+  {
+   "k": 31,
+   "texto": "Din que a Santa Compaña pasa de noite polos camiños de Lalín e do Carballiño.",
+   "orixe": "propia",
+   "palabras": 15,
+   "erros": {
+    "0.5_11": 0,
+    "0.5_22": 0,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  },
+  {
+   "k": 32,
+   "texto": "O corvo pousou na pena, e a moza botou a correr cara á ponte.",
+   "orixe": "propia",
+   "palabras": 14,
+   "erros": {
+    "0.5_11": 1,
+    "0.5_22": 3,
+    "nova_11": 0,
+    "nova_22": 0,
+    "rec_11": 0,
+    "rec_22": 0
+   }
+  }
+ ]
+}
