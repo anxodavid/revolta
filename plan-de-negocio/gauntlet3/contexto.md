@@ -101,3 +101,32 @@ Cada ronda: borrador + veredicto (ganó/perdió, mayor carencia) → commit y pu
 ## 7. Decisiones nuevas del promotor durante el Gauntlet
 
 (ninguna todavía)
+
+## 8. Tema elegido y ajustes OBLIGATORIOS del crítico (veredicto `veredictos/tema-r1.md`: GANA condicionado)
+
+Tema: **"As meigas de verdade"** (`tema/investigacion.md`). Antes y durante el guion se aplican estos ajustes (si no,
+el veredicto pasa a PIERDE):
+
+1. **Nunca decir que Galicia "se libró" o "quedó al margen" de la caza de brujas.** Lo verdadero y más sorprendente:
+   la Inquisición de Santiago procesó por brujería a 92 mujeres y 48 hombres (1574-1700) y solo llevó una a la
+   hoguera (Arquivo do Reino): **fue la más blanda; la justicia ordinaria (Real Audiencia) fue mucho más dura**
+   (Valor Bravo en *El Español*; *GCiencia*; CCG). Se dice una vez y sin detalle. Sin año de la hoguera mientras el
+   dossier no resuelva si fueron una o dos (1579 / 1627).
+2. **Títulos:** principal **"As meigas de verdade (e por que o conxuro da queimada é de 1967) | Cousas de Galiza para
+   durmir"**; prueba A/B "1617: a meiga que dicía poder pasarlle ao home as dores do parto | ..."; de búsqueda "Lendas
+   e verdades das meigas galegas | ...". Fuera "os papeis da Inquisición" (los casos son de la Real Audiencia).
+3. **Orden de ganchos:** 0:00-0:40 conxuro de 1967 (un solo verso, con autor) y la parteira de Vilalba (**Dorotea**
+   do Barro, atribuido: "segundo declarou unha testemuña"); aviso y reclamo; 0:55-2:00 gancho de la Inquisición
+   corregido, la meiga como curandeira (Pousa) y un **bucle abierto** que se resuelva hacia el min 8-10 (p. ej. la
+   lista de mujeres que fueron a la fuente la noche de San Xoán en Campo Lameiro). La confesión de Cibreira ("as areas
+   de Sevilla") **fuera del primer minuto** y nunca en tono cómico (fue bajo tortura).
+4. **Arco:** historias con nombre **antes del minuto 10**; los juicios acaban ahí. Después: herbas, leite e mal de ollo
+   (costumbre, nunca consejo ni eficacia médica); a noite de San Xoán; Feijoo; peche "Chove na lousa". En la zona de
+   dormir, **nada de intrusiones nocturnas** (gatos en la cama, demonios en el camino), cabezas de muerto, torturas ni
+   el asalto de Cangas. María Soliña, si sale, como nombre y poema (Celso Emilio Ferreiro, 1962), sin biografía
+   inventada.
+5. **Imagen y publicación:** marcar el vídeo en YouTube como contenido alterado o sintético (imágenes de IA de lugares
+   reales) y decirlo en la descripción. Vetos de miniatura e imagen: nariz ganchuda, verrugas, sombrero de pico,
+   caldero, escoba, autos de fe, capirotes, llamas sobre personas, partos explícitos.
+6. **Propuesta abierta para el promotor (no decidida):** una cola de 30-60 min de lluvia sobre lousa con imágenes ya
+   generadas y fundidos lentos, porque los competidores para dormir duran 1-2 h.
