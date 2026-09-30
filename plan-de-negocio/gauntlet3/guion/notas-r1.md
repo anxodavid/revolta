@@ -25,7 +25,7 @@ mano. **Ninguna persona ha revisado este guion.**
 | Estilo (cifras, signos, preguntas, palabras vetadas, aviso y fórmula literales) | **verde** |
 | Frases fuera de 8-25 palabras | 6, todas en el gancho (permitido) |
 | Veracidad léxica (comprobador rápido) | 0 frases exigidas sin apoyo |
-| Veracidad con NLI (`longo.py`) | ver §5 |
+| Veracidad con NLI (`longo.py --so-texto`) | **0 frases marcadas de 208** (0 sin justificar) |
 
 **Las dos estimaciones de duración no concuerdan** (§7, duda 1). El modelo B sale de sintetizar de verdad un pasaje de
 111 palabras en 7 frases con la curva actual (182 palabras/min con pausas en el gancho, 145 al empezar el tramo de
@@ -144,7 +144,28 @@ Posiciones clave (palabra de inicio; tiempo A / B):
   - "o orballo lles daba ás herbas": `GENERAL_NUMBER_AGREEMENT_ERRORS`, falso positivo con el doblado del
     complemento indirecto. Volví a la redacción del dossier (F191), que es igual de natural.
 
-**Puerta completa** (`longo.py --so-texto`, con candado de CPU; incluye el NLI): PENDIENTE (se completa abajo).
+**Puerta completa** (`longo.py --so-texto`, código de la rama con el commit 2d829b5 de la veracidad rápida). Guion con
+md5 `661b07eab707de047468ce2b93d00a59`, igual que [`guion-r1.txt`](guion-r1.txt). Salida copiada en
+[`porta_texto-r1.json`](porta_texto-r1.json):
+
+```
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 3503 | frases marcadas pola veracidade: 0 | sen xustificar: 0
+```
+
+| Puerta | Resultado |
+|---|---|
+| Lengua (LanguageTool gl-ES + hunspell, bloqueante) | 0 avisos |
+| H1 (bloqueante) | 192 nombres y cantidades, 0 sin anclar (100 %) |
+| Estilo (bloqueante) | 0 cifras, 0 signos prohibidos, 0 preguntas, 0 palabras vetadas; aviso y fórmula literales; 6 frases fuera de 8-25, todas en el gancho; máximo de 9 nombres nuevos por 110 palabras |
+| Veracidad (NLI mDeBERTa + coincidencia léxica + reglas duras) | 208 frases evaluadas, **0 marcadas**. No hace falta fichero de excepciones |
+| Tiempo | 144 s de reloj, 481 s de CPU |
+
+Cómo se ejecutó:
+- Primer intento con el candado de CPU y el código anterior (NLI contra los 180 hechos en cada frase). Esperó ~15 min
+  en la cola y lo canceló el orquestador tras 43 min de reloj (≈ 155 min de CPU), porque bloqueaba al agente visual.
+  No llegó a escribir resultados.
+- Segundo intento, el que vale: por indicación del orquestador, sin candado, con `nice -n 5` y `OMP_NUM_THREADS=2`,
+  y el NLI solo contra los hechos con coincidencia ≥ 0,5.
 
 ## 6. Hechos del dossier fuera de la ficha
 

@@ -62,5 +62,9 @@ texto.
 
 - El candado de CPU no es una cola ordenada: `flock` despierta a cualquiera de los que esperan. La puerta de texto
   (NLI) esperó más de 30 min detrás de trabajos de SON y VOZ.
+- **La puerta de veracidad antigua no escalaba a un guion largo**: NLI contra los 180 hechos en cada una de las 208
+  frases, más de 43 min de reloj (≈ 155 min de CPU) sin terminar. Con el commit 2d829b5 (NLI solo con los hechos de
+  coincidencia ≥ 0,5) el mismo guion pasó en 144 s de reloj y 481 s de CPU, sin candado, con `nice -n 5` y 2 hilos:
+  0 frases marcadas.
 - Lanzar la puerta sobre una **copia congelada** del guion (en el scratchpad, con su md5) permite seguir editando. Si
   el proceso aún no ha arrancado, basta con actualizar la copia: el texto se lee al empezar, no al entrar en la cola.
