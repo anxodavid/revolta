@@ -124,3 +124,14 @@ Resultados completos en `$SCRATCH/visual/calib/calibracion.json` (no se sube: ru
   6/6 de los etiquetados con 0,220 y ningún falso (la más alta sin caminantes, 0,217). "Persona junto al fuego" a
   0,205 también cuenta las lareiras sin persona (mismo arquetipo visual, lo que interesa para el tope). Sin datos
   para "retrato" [S].
+
+## Entorno: disco frío tras reiniciar el contenedor
+
+- Tras el reinicio del contenedor (corte por límite de uso, 30-09-2026 ~14:10-16:55 UTC) el scratchpad sobrevivió,
+  pero **la primera carga de SDXL-Lightning tardó ~10 min** en vez de 18 s: `vmstat` daba 6-13 MB/s de lectura y
+  `/proc/pressure/io` un 64 % de espera (la caché de páginas estaba vacía y el disco del scratchpad es lento en frío).
+  Florence-2 y CLIP (3,3 GB) pagan lo mismo la primera vez. Conviene lanzar el primer trabajo de imagen tras un
+  reinicio sabiendo que los primeros minutos son de disco, no de CPU (con el candado cogido).
+- La carga de la UNet con `safe_open` tensor a tensor tiene un RSS de ~9 GB durante la carga (páginas del fichero
+  mapeado más las copias en bf16), no ~5 GB como decía el comentario: las páginas del fichero se pueden liberar, pero
+  cuentan mientras se lee.

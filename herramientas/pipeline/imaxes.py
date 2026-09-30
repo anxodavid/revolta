@@ -82,7 +82,7 @@ def cargar_pipe(nome=None):
         with init_empty_weights():
             unet = UNet2DConditionModel.from_config(UNet2DConditionModel.load_config(BASE, subfolder='unet'))
         sd = {}
-        with safe_open(hf_hub_download(LIGHTNING, m['unet']), framework='pt') as g:   # tensor a tensor: pico de RAM ~5 GB
+        with safe_open(hf_hub_download(LIGHTNING, m["unet"]), framework="pt") as g:   # tensor a tensor (RSS ~9 GB ao cargar: páxinas do ficheiro + copias bf16)
             for k in g.keys():
                 sd[k] = g.get_tensor(k).to(dt)
         unet.load_state_dict(sd, strict=True, assign=True)

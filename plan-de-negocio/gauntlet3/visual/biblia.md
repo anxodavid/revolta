@@ -128,21 +128,36 @@ del mismo arquetipo tienen que estar al menos a 5 planos de distancia):
 SDXL no conoce las palabras gallegas: hay que **describir** el objeto. Poner lo que identifica el lugar (granito,
 lousa) **al principio** del trozo de lugar, porque el modelo pesa más lo primero.
 
+**Lo que SDXL-Lightning NO sabe dibujar** (experimento del 30-09-2026, `comparativa/iconografia_*.jpg`; juicio de
+Claude mirando las imágenes):
+- **El hórreo**: tres descripciones distintas (con la palabra "horreo", con "Galicia, Spain" y describiéndolo pieza a
+  pieza: pies de granito con remate de seta, paredes de lamas, cruz en el piñón) dieron una cabaña de teito, una casa
+  de piedra con tejado de hierba y una casa de dos plantas. **No pedir el hórreo como sujeto** ni contar con que salga:
+  si el guion lo nombra, mostrar su entorno (aldea de granito y lousa, era, maíz, cruceiro) o personas en la era. Es un
+  problema abierto (haría falta un LoRA o fotos propias con licencia).
+- **La rueda maciza del carro del país**: los cinco carros de la comparativa y los tres del experimento (también "close-up
+  of a solid wooden wheel made of three joined oak planks") salen con **ruedas de radios**. **No enseñar las ruedas**:
+  los bueyes con el yugo en primer plano, el carro de lejos cargado de hierba o de espaldas entre muros, o nada de carro.
+- Sí salen bien: el **cruceiro** (`a tall granite stone cross with a carved crucifix on a stepped stone base`), la
+  **palloza** (`a round stone house with a conical thatched straw roof`), la carballeira, la costa de granito, la
+  lareira (aunque tiende a hacer una chimenea alta: pedir `open stone hearth at floor level`), las casas de granito con
+  lousa y los interiores con vela o candil.
+
 **Lista positiva** (usar; en inglés tal cual):
 
 | Qué | Cómo pedirlo |
 |---|---|
 | granito | `grey granite stone walls`, `rough granite blocks`, `moss-covered granite` |
 | lousa (tejado de pizarra) | `dark grey slate roofs` (en la montaña de Lugo y Ourense; en la costa la teja era de barro oscuro y con musgo: pedirla como `weathered dark brown clay tiles covered with moss`, nunca "red" ni "orange") |
-| hórreo | `a long narrow granite granary raised on stone pillars, with a small cross on the roof` |
-| cruceiro | `a tall granite wayside cross on a stepped stone base` |
-| palloza | `a round stone house with a conical thatched straw roof` |
+| hórreo | **no sale** (ver arriba): mostrar el entorno, no el hórreo |
+| cruceiro | `a tall granite stone cross with a carved crucifix on a stepped stone base` (sale bien) |
+| palloza | `a round stone house with a conical thatched straw roof` (sale bien) |
 | lareira con pote | `an open stone hearth at floor level with an iron pot hanging from a chain, smoke-blackened walls` |
 | escano, lar | `a wooden high-backed bench beside the hearth` |
 | carballeira | `an ancient oak grove with thick mossy trunks` |
 | souto | `old chestnut trees with huge hollow trunks` |
 | costa atlántica | `rugged Atlantic coast, dark granite rocks, rough grey sea`, `a small fishing harbour with wooden boats` |
-| carro de bois | `an ox cart with solid wooden disc wheels pulled by two golden-brown oxen` |
+| carro de bois | **las ruedas salen de radios**: `two golden-brown oxen under a wooden yoke`, en primer plano, sin ruedas a la vista |
 | muíño | `a small stone watermill beside a stream` |
 | castro | `the ruins of round stone houses of an Iron Age hillfort` |
 | igrexa | `a small Romanesque granite church with a bell gable` |
@@ -201,7 +216,7 @@ Ejemplos (uno por fase y tipo; en la hoja de prueba `visual/r1/` hay 16):
 | gancho | `primeiro_plano` | `close-up of an old woman's face lit from below by the open hearth fire, deep wrinkles, dark wool headscarf, smoke, deep black shadows` |
 | gancho | `detalle` | `extreme close-up detail of a hand holding a tallow candle in a dark stone corridor, the flame lighting rough granite, darkness around` |
 | gancho | `contraluz` | `backlit silhouette of a man in a wool cloak standing in the doorway of a granite house, storm outside, cold flash of lightning, rain` |
-| transición | `xeral` | `wide establishing shot of a hamlet of grey granite houses with dark grey slate roofs and a long narrow granite granary raised on stone pillars, morning sunlight through mist` |
+| transición | `xeral` | `wide establishing shot of a hamlet of grey granite houses with dark grey slate roofs, a stone threshing floor with maize drying, morning sunlight through mist` |
 | transición | `plano_medio` | `medium shot of a woman in a long dark wool skirt carrying a basket of chestnuts along a sunken lane between mossy stone walls, low winter sun, long shadows` |
 | calma | `paisaxe` | `wide landscape of the rugged Atlantic coast at sunset, dark granite rocks, waves breaking, a small stone chapel on the headland, warm low sun` |
 | calma | `bodegon` | `still life of a small iron oil lamp, a loaf of rye bread and a clay jug on a rough oak table, warm light of the oil lamp, dark stone wall` |
