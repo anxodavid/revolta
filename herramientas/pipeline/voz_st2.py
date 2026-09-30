@@ -11,7 +11,9 @@ Campos opcionais por frase (a curva do embude, curva.py; se faltan, a voz é a d
   estilo           0 = referencia viva (REF_WAV) ... 1 = referencia calma (REF_WAV_CALMO): interpola o vector de
                    estilo das dúas (se REF_WAV_CALMO non está definida, non fai nada)
   f0_media         multiplica a F0 (altura media da voz)
-  f0_rango         escala a desviación do log F0 arredor da súa media na frase (amplitude da entoación)
+  f0_rango         escala a desviación do log F0 arredor da súa media na frase (amplitude da entoación). Nin
+                   f0_rango nin f0_media baixan ningún tramo por debaixo de 80 Hz (F0_CHAN) se non o estaba xa:
+                   así o rango ampliado do gancho non mete voz cascada nos finais de frase
   enerxia          multiplica a enerxía N (log da norma do espectro mel) que recibe o descodificador. Efecto
                    medido: sobre todo volume (0,8 -> -1,8 dB) e algo menos de HNR; non suaviza o timbre
   alpha, beta      mestura do estilo predito co da referencia (0,3 e 0,7): canto máis baixos, máis manda a referencia
@@ -33,6 +35,7 @@ LIMITES = {'escala': (0.7, 1.6), 'estilo': (0.0, 1.0), 'f0_media': (0.85, 1.15),
            'enerxia': (0.7, 1.3), 'alpha': (0.0, 1.0), 'beta': (0.0, 1.0), 'embedding_scale': (0.5, 3.0),
            'pasos': (3, 20)}
 F0_PISO = 40.0            # Hz: por debaixo, tramo xordo ou transición (non se toca)
+F0_CHAN = 80.0            # Hz: a manipulación da F0 non leva ningún tramo por debaixo disto (voz cascada)
 M = {}                    # modelo cargado (cargar)
 
 
@@ -86,16 +89,20 @@ def _limitar(k, v):
 
 
 def axustar_f0(F0, media=1.0, rango=1.0):
-    """F0 (Hz) dos tramos sonoros: log F0 -> media + rango * (log F0 - media) + log(media). Os xordos quedan igual."""
+    """F0 (Hz) dos tramos sonoros: log F0 -> media + rango * (log F0 - media) + log(media). Os xordos quedan igual e
+    ningún tramo baixa de F0_CHAN se non estaba xa por debaixo (nese caso queda como estaba)."""
     if media == 1.0 and rango == 1.0:
         return F0
     torch = M['torch']
     v = F0 > F0_PISO
     if int(v.sum()) < 3:
         return F0
-    lf = torch.log(F0[v]); mu = lf.mean()
+    orig = F0[v]
+    lf = torch.log(orig); mu = lf.mean()
+    novo = torch.exp(mu + rango * (lf - mu) + math.log(media))
+    novo = torch.maximum(novo, torch.clamp(orig, max=F0_CHAN)).clamp(max=400.0)
     F0 = F0.clone()
-    F0[v] = torch.exp(mu + rango * (lf - mu) + math.log(media)).clamp(50.0, 400.0)
+    F0[v] = novo
     return F0
 
 

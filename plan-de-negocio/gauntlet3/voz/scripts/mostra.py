@@ -3,11 +3,11 @@
 
     source herramientas/pipeline/entorno.sh
     PATH=$COTOVIA_NOVA_PATHBIN:$PATH PYTHONPATH=$ST2_STUBS:$SCRATCH/voz/pylib flock "$CPU_LOCK" \
-        $PY plan-de-negocio/gauntlet3/voz/scripts/mostra.py SAIDA.m4a
+        $PY plan-de-negocio/gauntlet3/voz/scripts/mostra.py SAIDA.m4a [--curva CANDIDATA.json]
 
 1. As mesmas 3 frases en ton de gancho (palabra 0 da curva) e despois en ton de durmir (palabra 3600).
 2. O embude enteiro en ~80 s: 11 frases, cada unha no seu punto da curva (de 0 a 3600 palabras), coas pausas e a
-   ganancia de curva.py, como as montaría longo.py.
+   ganancia de curva.py (ou da candidata --curva, co formato de puntos.py), como as montaría longo.py.
 Voz seca, sen choiva (para escoitar a voz). Escritura atómica e validación con ffmpeg. Ninguén a escoitou antes de
 subila: as medidas son automáticas.
 """
@@ -16,7 +16,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI); sys.path.insert(0, '/home/user/revolta/herramientas/pipeline')
 import numpy as np, soundfile as sf
 import imageio_ffmpeg
-import curva, textos
+import curva, textos, puntos
 
 SR = 24000
 VOZ_KW = ('escala', 'estilo', 'f0_media', 'f0_rango', 'enerxia', 'alpha', 'beta', 'embedding_scale', 'pasos')
@@ -38,14 +38,19 @@ EMBUDE = [
 ]
 
 
-def voz(V, texto, pal):
-    c = curva.en(pal, 3600)
+def voz(V, texto, pal, cv):
+    c = puntos.en(pal, cv)
     w, _ = V.infer(texto, **{k: c[k] for k in VOZ_KW if k in c})
     return w * 10 ** (c['ganancia_db'] / 20), c
 
 
 def main():
-    saida = os.path.abspath(sys.argv[1])
+    import argparse
+    ap = argparse.ArgumentParser(); ap.add_argument('saida'); ap.add_argument('--curva', default=None)
+    a = ap.parse_args()
+    saida = os.path.abspath(a.saida)
+    cv = puntos.curva_candidata(a.curva)
+    os.environ.update(puntos.refs_de(cv))
     import voz_st2 as V
     V.cargar()
     sil = lambda s: np.zeros(int(s * SR))
@@ -53,12 +58,12 @@ def main():
     for nome, pal in (('gancho', 0), ('durmir', 3600)):
         marcas.append((nome, round(t, 1)))
         for k, tx in enumerate(PARTE1):
-            w, c = voz(V, tx, pal)
+            w, c = voz(V, tx, pal, cv)
             partes += [w, sil(c['pausa_frase'] + 0.3)]; t += len(w) / SR + c['pausa_frase'] + 0.3
         partes.append(sil(1.5)); t += 1.5
     marcas.append(('embude', round(t, 1)))
     for k, (pal, tx, par) in enumerate(EMBUDE):
-        w, c = voz(V, tx, pal)
+        w, c = voz(V, tx, pal, cv)
         partes.append(w); t += len(w) / SR
         if k + 1 < len(EMBUDE):
             seg = EMBUDE[k + 1]
@@ -79,7 +84,8 @@ def main():
     if p.returncode or p.stderr.strip():
         raise SystemExit(f'm4a con erros: {p.stderr[:300]}')
     os.replace(tmp, saida); os.remove(wav)
-    json.dump({'duracion_s': round(len(x) / SR, 1), 'marcas_s': marcas,
+    json.dump({'duracion_s': round(len(x) / SR, 1), 'marcas_s': marcas, 'curva': a.curva or 'curva.py',
+               'ref_wav': os.environ.get('REF_WAV'), 'ref_wav_calmo': os.environ.get('REF_WAV_CALMO'),
                'embude': [{'pal': pal, 'texto': tx} for pal, tx, _ in EMBUDE], 'parte1': PARTE1},
               open(saida.replace('.m4a', '.json'), 'w'), ensure_ascii=False, indent=1)
     print('mostra', saida, round(len(x) / SR, 1), 's', marcas, round(os.path.getsize(saida) / 1e6, 2), 'MB')
