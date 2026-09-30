@@ -4,6 +4,12 @@ Agente de voz (Claude), 30-09-2026. Todo lo que sigue son medidas automáticas (
 de Nós, modelo de emoción de audEERING) y decisiones de Claude a partir de ellas. **Nadie ha escuchado la voz.**
 Informe completo: [`../voz/informe.md`](../voz/informe.md).
 
+## Resultado en una línea
+
+Curva final (candidata F de 6 probadas): en los 5 nodos, arousal 0,643 → 0,432, F0 sd 4,76 → 2,60 st y 7,56 → 5,19
+síl/s (182 → 113 pal/min con pausas), bajando en cada paso, con WER frase a frase ≤ 0,054. Viva = media de 3
+grabaciones de Brais (11535, 01372, 04078); calma = 03720. Muestra: `../voz/mostra-embude.m4a`.
+
 ## Cotovía (fonemas de la voz)
 
 - **La Cotovía compilada de Nós tiene dos modos y el bueno para esta voz no es el de por defecto.** En modo síntesis
@@ -48,6 +54,23 @@ Informe completo: [`../voz/informe.md`](../voz/informe.md).
   las grabaciones humanas): riesgo de voz cascada. Solución en `voz_st2.py`: la manipulación no baja ningún tramo de
   80 Hz si no lo estaba ya.
 
+## Qué funcionó y qué no (curva)
+
+- **Funcionó**: juntar varias palancas pequeñas en el mismo sentido (ritmo + rango de F0 + referencia calma con
+  `beta` bajo + algo de altura). Ninguna sola basta: la referencia sola mueve el arousal ±0,03 con beta 0,7.
+- **Funcionó**: medir con el mismo texto y la misma semilla en todos los puntos; así cualquier diferencia es de los
+  parámetros y las curvas salen monótonas sin ruido (6 candidatas, todas monótonas).
+- **Funcionó**: un suelo de 80 Hz en la manipulación de la F0; con él, el gancho con rango 1,2 baja del 1,8 % al
+  0,6 % de tramos por debajo de 75 Hz.
+- **No aportó**: `enerxia` (volumen, no suavidad), `alpha`, `pasos` de difusión. `embedding_scale` 1,4 en el gancho
+  da un poco más de rango de F0 y de arousal (+0,006): se deja, pero es marginal.
+- **La valencia baja con la calma** (0,45 → 0,39): el modelo oye la voz lenta y grave algo "apagada". Hay que
+  preguntar al oído del promotor si el final suena sereno o triste.
+- **La referencia más activada no mete entonación de pregunta**: 11535 termina en "¿non?", pero en la media con dos
+  afirmativas todas las frases acaban bajando (pendiente de F0 negativa en los últimos 400 ms).
+- **Cambiar de pasaje cambia el suelo de WER**: con el de la Santa Compaña había ~0,04 de homófonos; con el de las
+  meigas, 0-0,054 y casi todo son cifras que Whisper escribe en números ("16 17").
+
 ## Medir con Whisper
 
 - **Whisper se salta frases enteras en audio largo con silencios** (33 frases seguidas con 1 s entre ellas, sin VAD y
@@ -71,8 +94,12 @@ Informe completo: [`../voz/informe.md`](../voz/informe.md).
 
 ## Entorno
 
-- CPU compartida con el agente visual: los trabajos esperan el candado decenas de minutos. Conviene juntar en un solo
-  proceso (una sola carga de modelos) todo lo que se pueda medir de una vez.
+- CPU compartida con los agentes visual, de sonido y de guion: los trabajos esperan el candado 10-40 min por turno (y
+  `flock` no respeta el orden de llegada). **Juntar en un solo lote bajo un solo candado** todo lo que se pueda (varias
+  candidatas por ejecución, la muestra en el mismo lote): el reloj se va esperando, no calculando (una candidata en 5
+  puntos: ~1 min de voz + ~4 min de WER frase a frase).
+- La sesión se cortó por el límite de uso a media tarea (16:30); el lote que corría terminó y el coordinador subió
+  los datos. Subir cada resultado en cuanto sale.
 - `voz_st2.py` cambia de directorio (`os.chdir(ST2_DIR)`) al cargar el modelo: las rutas de salida relativas de los
   scripts que lo importan se rompen (se perdió una vez el JSON del A/B). Usar siempre rutas absolutas.
 - Disco: quedaban 4,2 GB libres a media tarde (la caché de HF creció a 21 GB con los modelos del agente visual).
