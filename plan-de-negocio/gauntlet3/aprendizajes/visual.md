@@ -221,3 +221,17 @@ parece al sujeto pedido (un patio con fuente frente a una fuente de aldea; un ca
 - **La hoja murió por memoria** (~21:15 UTC): usaba 11,8 GB (SDXL-Lightning ~7 + Florence-2 ~3 + CLIP ~1,7) y otro
   proceso corría a la vez fuera del candado; el cgroup la mató. Se relanzó con el mismo comando: los planos ya
   cerrados salen de `revision.json` y solo se regenera el que estaba a medias.
+
+## Hoja r2: resultado (`plan-de-negocio/gauntlet3/visual/r2/`)
+
+- 68 imágenes para 16 planos (4,3 por plano; en la r1, 1,6): **2 aprobadas a la primera, 9 tras regenerar, 5 sin
+  aprobar** (queimada, ordeño, anciana en la lareira, cuenco de agua, brasas: queda la imagen con menos problemas,
+  marcada FALLA en `porta.md`). 28,9 s por imagen + 16,1 s de revisión (mediana); los intentos guiados, ~50 s.
+- **La puerta v6 es demasiado estricta tal como está**. Rechazos: `negativo` 21 (casi todos por conceptos pegados al
+  sujeto: "molten metal", "herd", "fireplace mantel", "cauldron"), altas luces en durmir 15 (el umbral de 0,12 % lo
+  superan la luna reflejada en el agua y el brillo de las brasas: hay que subirlo a ~0,5 % o medirlo solo en tonos
+  cálidos) [S], "interior moderno" 12, objetos modernos 9, `clave` 8.
+- Lo que funcionó: el intento guiado rescató 3 planos (escribano, candil, monje); las luces eléctricas y la ciudad ya
+  no pasan; la durmir sale oscura; la reserva ya no es un paisaje vacío fuera de durmir.
+- Para la r3: negativos solo "distintos del sujeto"; altas luces en durmir más tolerantes; revisar la regla de manos
+  (5 "man sen corpo" en planos de dos personas).
