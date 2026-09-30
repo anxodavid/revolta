@@ -41,7 +41,51 @@ WER.
 
 ## 2. Referencias de estilo
 
-(pendiente)
+**Medida de las 40 grabaciones humanas** de Brais (`REFS_DIR`, corpus Nos_Brais-GL: 21 de test y 19 de train; no se
+suben al repo) con `scripts/referencias.py` (`datos/referencias-humanas.json`): velocidad en sílabas/s (contador
+ortográfico de sílabas del gallego sobre la duración de la fala), F0 con Praat (mediana en Hz; desviación y rango
+p5-p95 en semitonos), dinámica de energía (p95-p10 del RMS por tramos de 25 ms) y arousal (audEERING).
+
+| Medida (40 grabaciones) | mínimo | mediana | máximo |
+|---|---|---|---|
+| sílabas/s | 5,16 | 7,42 | 8,70 |
+| F0 mediana (Hz) | 129,6 | 154,1 | 237,3 |
+| F0 desviación (st) | 2,39 | 3,93 | 6,47 |
+| F0 rango p5-p95 (st) | 7,96 | 13,32 | 18,89 |
+| dinámica (dB) | 18,0 | 21,3 | 26,4 |
+| arousal | 0,42 | 0,58 | 0,68 |
+
+**Lo que importa es lo que la referencia hace en la voz sintética**, así que se sintetizó el pasaje de prueba con cada
+una de las 40 como referencia, con los parámetros neutros (escala 1,0, alpha 0,3, beta 0,7) (`scripts/barrido_refs.py`,
+`datos/barrido-refs.json`, ordenadas con `scripts/analizar_barrido.py`): arousal 0,557-0,644, F0 desviación 3,29-4,87
+st, pero velocidad casi fija (7,08-7,46 síl/s). La referencia transmite bien la variación de la F0 (correlación
+humano-sintético 0,83), a medias el arousal (0,52) y casi nada la velocidad (0,16): **el ritmo lo tiene que poner
+`escala`, no la referencia.**
+
+Preseleccionadas (criterios de Claude: viva = más arousal y más desviación de F0 en la voz sintética, algo de agilidad,
+sin F0 ni brillo extremos y sin preguntas; calma = menos arousal, F0 estrecha, más lenta y suave, sin voz cascada) y
+medidas con WER frase a frase (`datos/variantes-refs.json`; viva con los parámetros neutros; calma con beta 0,3 y
+escala 1,25, como al final de la curva):
+
+| Referencia | Grabación humana | arousal sint. | F0 sd (st) | síl/s | WER |
+|---|---|---|---|---|---|
+| viva 04078 | "Ti xa sabes o que debes facer." (2,4 s) | 0,620 | 4,03 | 7,39 | 0,067 |
+| viva 01372 | "A escaseza de vacinas en Europa…" (5,1 s) | 0,623 | 3,98 | 7,27 | 0,052 |
+| viva 00856 | "A sentenza completa publicarase…" (3,7 s) | 0,608 | 4,04 | 7,35 | 0,067 |
+| viva 11535 | "A defensa institucional… ¿non?" (3,8 s; arousal humano 0,667, el segundo más alto de las 40) | 0,644 | 4,21 | 7,37 | 0,052 |
+| viva 07496 | "As autoestradas da Xunta…" (6,6 s) | 0,617 | 4,03 | 7,18 | 0,060 |
+| **viva media 04078 + 01372 + 00856** | vector de estilo medio | 0,619 | 4,04 | 7,34 | **0,045** |
+| calma 08964 | "¡Que fonda mudanza…!" leída baja y plana (F0 130 Hz, 2,39 st: la más estrecha de las 40) | 0,510 | 2,66 | 6,60 | 0,067 |
+| calma 03720 | "O amansamento dunha fera, do vento, do mar…" (la más lenta, 5,16 síl/s, y la menos activada, 0,423) | 0,528 | 3,40 | 6,07 | 0,052 |
+| calma 15278 | "Informounos de que o caso era grave…" | 0,545 | 3,10 | 6,48 | 0,105 |
+| calma 08334 | "¿Que queres? -berrou el…" | 0,508 | 3,04 | 6,20 | 0,067 |
+| calma media 08964 + 03720 + 15278 | vector medio | 0,523 | 3,06 | 6,41 | 0,075 |
+
+- Con este pasaje hay un suelo de ~0,04 de WER que no es de la voz: "casa sen lareira" y "casas en lareira" suenan
+  igual (4 errores por versión), "auga mansa" sale "augamansa" y "avoas" "avóas".
+- **15278 queda fuera**: repite sílabas al empezar frase con beta bajo ("co contan", "di di diante", "Eh si").
+
+(Elección final: ver §4.)
 
 ## 3. Controles de la voz en `voz_st2.py`
 
