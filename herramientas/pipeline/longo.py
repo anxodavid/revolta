@@ -14,6 +14,9 @@ montaxe e QA. Cambia o que é propio dun episodio longo:
 - A lista de planos tamén vén de fóra: se falta --escenas, o pipeline escribe <traballo>/planos.json (o texto que
   se escoita en cada plano, a súa duración, capítulo e fase) e sae co código 3; un axente escribe un prompt por
   plano nun JSON [{"n": 1, "prompt": "..."}, ...] e vólvese lanzar o mesmo comando.
+- Son (decisión D13 do promotor): nada de ambiente continuo. Cada plano pode levar `son` (choiva, lume, mar, vento)
+  na lista de planos (se falta, dedúcese das palabras do prompt); o resto é voz limpa. `ambiente` na ficha do tema:
+  'escena' (por defecto), 'choiva2' (choiva continua, para comparar) ou 'ningun'.
 - Portas de texto: lingua (LanguageTool + hunspell), H1 (nomes e cantidades no dossier) e estilo son bloqueantes;
   a veracidade (veracidade.py) márcase por frase e cada frase marcada ten que ter unha xustificación escrita no
   ficheiro de excepcións (`--excepcions`, YAML [{frase, xustificacion}]); se queda algunha sen xustificar, non hai vídeo.
@@ -139,6 +142,21 @@ def planos(frases, tempos, dur, inicio_cap, tot):
     return fin
 
 
+SON_PALABRAS = [('lume', r'\b(fire|firelight|hearth|embers|flames?|bonfires?|burning logs)\b'),
+                ('choiva', r'\b(rain|raining|rainy|drizzle|downpour|raindrops)\b'),
+                ('mar', r'\b(sea|waves?|shore|surf|seashore|ocean|breakers)\b'),
+                ('vento', r'\b(wind|windy|storm|gale|gusts?)\b')]
+
+
+def son_do_prompt(prompt):
+    """Ambiente dun plano a partir do seu prompt (se a lista de planos non trae `son`): o primeiro que apareza
+    en SON_PALABRAS; se non hai ningún, voz limpa."""
+    for tipo, rx in SON_PALABRAS:
+        if re.search(rx, prompt, re.I):
+            return tipo
+    return None
+
+
 def ler_escenas(path, pl):
     d = json.loads(Path(path).read_text())
     d = d.get('escenas', d) if isinstance(d, dict) else d
@@ -149,7 +167,7 @@ def ler_escenas(path, pl):
     for p in pl:
         x = por_n[p['n']]
         p['prompt'] = re.sub(r'[*_#`]+', '', str(x['prompt'])).strip().strip('"')
-        for k in ('movemento', 'luz', 'tipo', 'negativo'):
+        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son'):
             if x.get(k):
                 p[k] = x[k]
     return pl
@@ -300,7 +318,8 @@ def main():
         imgs = imaxes.graduar(imgs, W / 'imaxes_graduadas', **kw)
     save_t()
 
-    # 5 son: choiva nova co nivel da curva (case nada no gancho) e lume nos planos de lareira
+    # 5 son (decisión D13 do promotor): ambiente só onde a escena o ten (campo `son` de cada plano ou, se falta,
+    # palabras do prompt), voz limpa no resto; o nivel segue a curva (case nada no gancho)
     with P.Etapa('6_son'):
         import son
         ini = sorted((tempos[f['i']][0], f['pal0']) for f in frases)
@@ -308,15 +327,19 @@ def main():
         for seg in range(int(dur) + 1):
             p0 = next((pal for t0_, pal in reversed(ini) if t0_ <= seg), 0)
             rel_db.append(round(curva.en(p0, tot)['ambiente_db'], 2))
-        lume_tramos = []
+        escena_tramos = []
         for p in pl:
-            if re.search(r'\b(fire|firelight|hearth|embers|flames?|bonfire)\b', p['prompt'], re.I):
-                if lume_tramos and p['b0'] - lume_tramos[-1][1] < 0.5:
-                    lume_tramos[-1] = (lume_tramos[-1][0], p['b1'])
-                else:
-                    lume_tramos.append((p['b0'], p['b1']))
+            tipo = p.get('son') or son_do_prompt(p['prompt'])
+            if tipo not in son.AMBIENTES:
+                continue
+            if escena_tramos and escena_tramos[-1][2] == tipo and p['b0'] - escena_tramos[-1][1] < 0.5:
+                escena_tramos[-1] = (escena_tramos[-1][0], p['b1'], tipo)
+            else:
+                escena_tramos.append((p['b0'], p['b1'], tipo))
+        modo = tema.get('ambiente', 'escena')
         info_son = son.mesturar(voz, dur, OFFSET, str(W / 'mestura.wav'), str(W / 'voz_linea.wav'),
-                                ambiente='choiva2', rel_db=rel_db, lume_tramos=lume_tramos)
+                                ambiente=modo, rel_db=rel_db, escena_tramos=escena_tramos)
+        info_son['tramos'] = escena_tramos
     save_t()
 
     # 6 montaxe (escritura atómica)
@@ -405,6 +428,9 @@ def informe(r, tema):
           f"- Planos por fase: {r['planos_por_fase']}; duración media por fase (s): {r['duracion_media_plano_por_fase_s']}.",
           f"- ASR (Whisper galego de Nós) sobre a mestura: WER {a['wer']}; sincronía de subtítulos {a['sincronia']['pct_dentro_da_sua_frase']} %.",
           f"- Sonoridade: {f['lufs_integrado']} LUFS, LRA {f['lra_lu']} LU, pico real {f['pico_real_dbtp']} dBTP; desfase A/V {f['desfase_av_s']} s.",
+          f"- Ambiente sonoro (D13): modo {r['son'].get('ambiente')}; "
+          + (', '.join(f"{k} {v['segundos']} s" for k, v in (r['son'].get('escena') or {}).items() if isinstance(v, dict))
+             or 'ningún') + f"; voz limpa {(r['son'].get('escena') or {}).get('pct_voz_limpa', '?')} % do tempo de voz.",
           f"- Lingua (LanguageTool gl-ES + hunspell): {len(r['porta_texto']['lingua'])} avisos. H1: {len(r['porta_texto']['h1_ancoraxe']['non_ancorados'])} sen ancorar.",
           f"- Veracidade: {ve['frases_avaliadas']} frases, {len(ve['marcadas'])} marcadas polo verificador automático, "
           f"{len(ve['sen_xustificar'])} sen xustificación (as xustificacións escribiunas o crítico de veracidade, un axente Claude).",

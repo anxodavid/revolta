@@ -131,6 +131,43 @@ def lume(dur, seed=5):
     return out / (np.abs(out).max() + 1e-9) * 0.5
 
 
+def mar(dur, seed=17):
+    """Mar en calma desde a costa: ondas lentas (8-12 s) de ruído rosa grave que crecen e rompen cun chiado de escuma."""
+    rng = np.random.default_rng(seed)
+    n = int(dur * SR)
+    out = np.zeros((n, 2), np.float32)
+    sos_corpo = signal.butter(2, [60, 1200], 'bandpass', fs=SR, output='sos')
+    sos_escuma = signal.butter(2, [1500, 6000], 'bandpass', fs=SR, output='sos')
+    t = np.arange(n) / SR
+    for ch in range(2):
+        per = rng.uniform(8.5, 11.5)
+        ph = 2 * np.pi * (t / per + rng.random())
+        onda = ((np.sin(ph) + 1) / 2) ** 3 * (0.7 + 0.3 * _rafaga(n, rng, periodo=40.0, profundidade=0.5))
+        corpo = signal.sosfilt(sos_corpo, _rosa(n, rng)).astype(np.float32); corpo /= _rms(corpo)
+        escuma = signal.sosfilt(sos_escuma, rng.standard_normal(n)).astype(np.float32); escuma /= _rms(escuma)
+        rompe = np.clip(np.gradient(onda) * SR * per / 6, 0, None) ** 1.5
+        out[:, ch] = corpo * (0.35 + onda) + escuma * 0.35 * rompe
+    return out / (np.abs(out).max() + 1e-9) * 0.5
+
+
+def vento(dur, seed=23):
+    """Vento suave entre as árbores: ruído rosa nunha banda que se despraza amodo, con refachos."""
+    rng = np.random.default_rng(seed)
+    n = int(dur * SR)
+    out = np.zeros((n, 2), np.float32)
+    for ch in range(2):
+        base = _rosa(n, rng)
+        baixo = signal.sosfilt(signal.butter(2, [150, 600], 'bandpass', fs=SR, output='sos'), base)
+        alto = signal.sosfilt(signal.butter(2, [600, 1800], 'bandpass', fs=SR, output='sos'), base)
+        m = _rafaga(n, rng, periodo=6.0, profundidade=0.7)
+        x = (baixo / _rms(baixo) * (1 - 0.5 * m) + alto / _rms(alto) * 0.6 * m) * _rafaga(n, rng, periodo=15.0, profundidade=0.6)
+        out[:, ch] = x
+    return out / (np.abs(out).max() + 1e-9) * 0.5
+
+
+AMBIENTES = {'choiva': (choiva2, -18.0), 'lume': (lume, -21.0), 'mar': (mar, -20.0), 'vento': (vento, -24.0)}
+
+
 def tramos_envolvente(n, tramos, fundido=1.5):
     """Envolvente 0-1 (por mostra) que vale 1 dentro dos tramos [(t0, t1)] con fundidos de `fundido` s."""
     env = np.zeros(n, np.float32)
@@ -146,10 +183,13 @@ def tramos_envolvente(n, tramos, fundido=1.5):
 
 
 def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiva=-17.0, ambiente='choiva',
-             rel_db=None, lume_tramos=None, rel_lume=-21.0):
+             rel_db=None, lume_tramos=None, rel_lume=-21.0, escena_tramos=None):
     """voz: array mono 24 kHz (sen o offset). Devolve datos de sonoridade.
     Gauntlet 3: `ambiente='choiva2'` usa a choiva nova; `rel_db` (un valor por segundo, en dB, sumado a rel_choiva)
-    fai que o ambiente siga o embude; `lume_tramos` [(t0, t1)] engade o crepitar da lareira neses tramos."""
+    fai que o ambiente siga o embude; `lume_tramos` [(t0, t1)] engade o crepitar da lareira neses tramos.
+    `ambiente='escena'` (decisión D13 do promotor): nada de ambiente continuo; cada son (`AMBIENTES`: choiva, lume,
+    mar, vento) soa só nos seus `escena_tramos` [(t0, t1, tipo)], con fundidos, e o resto é voz limpa.
+    `ambiente='ningun'`: só a voz."""
     v = signal.resample_poly(voz, 2, 1).astype(np.float32)
     n = int(dur_total * SR)
     vt = np.zeros(n, np.float32); o = int(offset * SR)
@@ -157,9 +197,25 @@ def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiv
     meter = pyln.Meter(SR)
     l_v = meter.integrated_loudness(np.stack([v, v], 1))   # medida en estéreo, como se escoita
     vt *= 10 ** ((voz_lufs - l_v) / 20)
-    r = choiva2(dur_total) if ambiente == 'choiva2' else choiva(dur_total)
-    l_r = meter.integrated_loudness(r)
-    r *= 10 ** ((voz_lufs + rel_choiva - l_r) / 20)
+    info_escena = None
+    if ambiente in ('escena', 'ningun'):
+        r = np.zeros((n, 2), np.float32)
+        info_escena = {}
+        for tipo, (fn, rel) in AMBIENTES.items():
+            tr = [(a, b) for a, b, t_ in (escena_tramos or []) if t_ == tipo] if ambiente == 'escena' else []
+            if not tr:
+                continue
+            x = fn(dur_total)
+            x *= 10 ** ((voz_lufs + rel - meter.integrated_loudness(x)) / 20)
+            e_ = tramos_envolvente(n, tr, fundido=2.0)
+            r += x * e_[:, None]
+            info_escena[tipo] = {'rel_db': rel, 'tramos': len(tr), 'segundos': round(float(e_.sum()) / SR, 1)}
+        con = np.abs(r).max(1) > 1e-6 if ambiente == 'escena' else np.zeros(n, bool)
+        info_escena['pct_voz_limpa'] = round(100 * float(1 - con[o:o + len(v)].mean()) if len(v) else 100.0, 1)
+    else:
+        r = choiva2(dur_total) if ambiente == 'choiva2' else choiva(dur_total)
+        l_r = meter.integrated_loudness(r)
+        r *= 10 ** ((voz_lufs + rel_choiva - l_r) / 20)
     if rel_db is not None:
         g = np.interp(np.arange(n) / SR, np.arange(len(rel_db)), np.asarray(rel_db, np.float32)).astype(np.float32)
         r *= (10 ** (g / 20))[:, None]
@@ -182,5 +238,5 @@ def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiv
     sf.write(out_voz, vt, SR, subtype='PCM_16')
     return {'lufs_voz_obxectivo': voz_lufs, 'choiva_rel_db': rel_choiva, 'ambiente': ambiente,
             'ambiente_rel_db_min_max': [round(float(np.min(rel_db)), 1), round(float(np.max(rel_db)), 1)] if rel_db is not None else None,
-            'lume': info_lume,
+            'lume': info_lume, 'escena': info_escena,
             'lufs_mestura_pyloudnorm': round(meter.integrated_loudness(mix), 1), 'pico': round(float(np.abs(mix).max()), 3)}
