@@ -95,8 +95,8 @@ narran (`longo.py`: "non se narra: vai nun rótulo"), mientras que RO dice en vo
   mejor dato para un título "As meigas de verdade":
 
   > Na Galiza de hai catrocentos anos, a meiga non era a bruxa dos contos. A propia palabra vén, segundo a etimoloxía
-  > máis común, do latín médica. Era a que curaba, a que axudaba nos partos, a que sabía de herbas. O historiador
-  > Rodrigo Pousa di que eran figuras apreciadas e necesarias para o pobo.
+  > máis común, do latín médica. Era a que curaba, a que axudaba nos partos, a que sabía de herbas. Rodrigo Pousa,
+  > historiador, di que eran figuras apreciadas e necesarias para o pobo.
 
 - **l. 15 (el bucle).** Ahora promete "por que a fixeron", y esa respuesta es floja: "porque eran moitas" (l. 51). El
   remate fuerte es el de la l. 53, "A mesma fonte, a mesma noite, e dúas maneiras de mirala", así que el bucle tiene
@@ -355,3 +355,4 @@ ni el "gústame", que están vetados:
 | Lectura y medidas | `json3_txt.py` (bloques de 30 s), `medir.py` y `medir_ref.py` en `scratchpad/criticoA-guion-r1/`. Los textos de terceros no se suben al repo | Tablas de "Medidas" |
 | Tiempos por párrafo | Interpolación lineal entre las anclas del modelo B de `notas-r1.md` §2 | Los minutos citados |
 | Hechos y puerta de estilo | `grep` en `dossier/feitos.yaml`, en el texto de Feijoo del scratchpad y en `herramientas/pipeline/qa.py` (veta "imaxina", las cifras, los signos y las preguntas) | Las propuestas en galego no usan "imaxina" ni signos vetados y tienen frases de 8-25 palabras fuera del gancho |
+| Lengua de las propuestas | `qa.lingua` (LanguageTool gl-ES + hunspell, la función de la puerta) sobre los 17 bloques en galego de este veredicto | **0 avisos**. Hubo un falso positivo en "O historiador Rodrigo Pousa" (lee "Rodrigo" como el verbo *rodrigar*) y se quitó escribiendo "Rodrigo Pousa, historiador", como en r1. La veracidad NLI no se pasó: la pasa la ronda 2 |
