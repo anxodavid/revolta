@@ -1,3 +1,5 @@
+> **Sustituido (30-09-2026):** este plan v1 queda sustituido por [`plan-v2-desatendido.md`](plan-v2-desatendido.md) tras las decisiones del promotor (`decisiones.md` y `gauntlet2/contexto.md`). Se conserva como referencia histórica.
+
 # Plan de negocio: Serán · Historia de Galicia para durmir
 
 Canal de YouTube (y feed de audio) de historia de Galicia para quedarse dormido. Está hecho con IA y es 100 % en galego, con la calidad del galego narrado y escrito como condición no negociable.
