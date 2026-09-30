@@ -9,7 +9,13 @@ consultas, las reglas de limpieza (qué vídeo cuenta como "narrativo sobre el t
 galego, la verificación de los hechos en las fuentes, las puntuaciones y la recomendación. Ninguna persona ha revisado
 este documento.
 
-> Estado: **parte 1 (datos)**. La puntuación, el ranking, la recomendación, los ganchos y el arco van en la parte 2.
+> **Recomendación (detalle en §6):** el episodio de octubre debe ser **"As meigas de verdade"**: la brujería real en
+> Galicia según los papeles de la Inquisición y de la Real Audiencia, más la lenda contada como lenda, con el conxuro
+> de la queimada (escrito en 1967) como arranque en frío. Gana en el ranking (39 puntos ponderados; §5) por tener los
+> **ganchos verdaderos más fuertes**, una segunda mitad **serena de verdad** y el **pico de octubre** de "brujas" en
+> YouTube; su punto débil es que "meigas" como palabra se busca poco. **Segundo: Camiño de Santiago** (37; el mejor dato
+> "para dormir" de un tema gallego: 182.379 vistas). **Alternativa de temporada para el 1-2 de noviembre: Santa
+> Compaña** (la más buscada y la más estacional, pero su público es de terror).
 
 ## 1. Método y límites
 
@@ -33,6 +39,8 @@ sobre Galicia; las bruxas en general van aparte como **comparables**.
 - La búsqueda de YouTube es una **muestra** (20 resultados por consulta, sesgada por el algoritmo y por el cliente, que
   pide inglés: muchos títulos salen traducidos al inglés, pero el vídeo es el mismo).
 - Las **vistas son acumuladas**: los vídeos viejos llevan ventaja. Por eso se da la antigüedad y el vídeo reciente.
+  Las vistas de un mismo vídeo pueden variar unas decenas entre la tabla 2 (búsqueda) y la 3 (metadatos): se
+  tomaron con horas de diferencia.
 - La fecha de la búsqueda es **aproximada** (YouTube dice "hace 2 años"): error de hasta un año en los vídeos viejos.
   Las fechas exactas solo están en los 42 vídeos de la tabla 3.
 - Google Trends da **índices relativos** (0-100 dentro de cada consulta), no búsquedas absolutas. Con términos pequeños
@@ -120,7 +128,7 @@ no, semanal de 5 años (marcado).
 | magosto | 2,5 | 5,0 (5a, 74 % ceros) | 2,8 (5a, 95 % ceros) | 4,7 (5a) | noviembre | Pico de noviembre |
 | meigas | 0,4 | 1,14 | 0,93 (58 % ceros) | 1,14 | agosto/junio | El término "meigas" **no** es estacional y en YouTube es pequeño (≈ 1/4-1/7 de Santa Compaña) |
 | **brujas** (comparable) | ≈ 34 × Santa Compaña (lote aparte) | **1,69** | **1,99** | **1,82** | **octubre** | Término enorme y **de octubre** (Halloween = "noche de brujas") |
-| Samaín | 0,3 | 10,4 (79 % ceros) | 13,1 (93 % ceros) | 11,0 (84 % ceros) | octubre | Casi solo existe el 31 de octubre, y con poco volumen |
+| Samaín | 0,3 | 10,4 (79 % ceros) | 13,1 (93 % ceros) | 11,0 (84 % ceros) | octubre | Casi solo se busca en torno al 31 de octubre, y con poco volumen |
 | María Pita | 0,4 | 0,45 (5a, 39 % ceros) | - | 0,06 (5a) | agosto | Nada de octubre |
 | Romasanta | 0,2 | 1,13 (5a, 65 % ceros) | - | - | enero | Pequeño |
 | batalla de Rande | 0,1 | ruido (94 % ceros) | - | - | - | Muy pequeño (aniversario: 23-10-1702) |
@@ -130,3 +138,222 @@ no, semanal de 5 años (marcado).
 Lectura: en octubre **suben "Santa Compaña" (× 2,3-3,2) y "brujas" (× 1,7-2,4)**; "meigas" y "queimada" no se mueven.
 En volumen de YouTube España, de los temas gallegos de folclore solo "Santa Compaña" y "queimada" tienen algo; "meigas"
 es pequeño como palabra de búsqueda, pero "brujas" es enorme y de octubre.
+
+## 5. Puntuación (1-5) y ranking
+
+Criterios del encargo: **D** demanda medida (§2-§4); **G** gancho verdadero para los primeros 60-120 s; **S**
+compatibilidad con dormir (sin terror ni violencia explícita; segunda mitad serena posible); **V** riqueza visual con
+iconografía galega y poco riesgo de imágenes absurdas; **F** fuentes fiables accesibles; **I** identidad galega y
+afinidad con "Cousas de Galiza"; **E** estacionalidad de octubre. **Ponderada** = suma con D y G contados dos veces,
+porque el objetivo es "más gancho y más audiencia". Regla para D (a mano, sobre la tabla 2): 5 = ≥ 10 vídeos > 10 K y
+≥ 5 > 100 K; 4 = ≥ 10 > 10 K; 3 = 5-9 > 10 K; 2 = 1-4 > 10 K; 1 = ninguno.
+
+| # | Tema | D | G | S | V | F | I | E | Suma | Ponderada |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | **Meigas: historia real + lenda** | 3* | 5 | 4 | 5 | 5 | 5 | 4 | **31** | **39** |
+| 2 | Camiño de Santiago | 5 | 4 | 5 | 4 | 5 | 3 | 2 | 28 | 37 |
+| 2 | Queimada e conxuro | 4 | 5 | 4 | 3 | 4 | 5 | 3 | 28 | 37 |
+| 4 | Santa Compaña | 5 | 3 | 2 | 3 | 4 | 5 | 5 | 27 | 35 |
+| 5 | Santo André de Teixido (extra) | 2 | 4 | 4 | 5 | 4 | 5 | 2 | 26 | 32 |
+| 5 | Castros e celtas (extra) | 5 | 3 | 4 | 3 | 3 | 4 | 2 | 24 | 32 |
+| 7 | Lobishome / Romasanta | 5 | 4 | 1 | 2 | 4 | 3 | 3 | 22 | 31 |
+| 7 | Costa da Morte (extra) | 3 | 4 | 2 | 4 | 4 | 5 | 2 | 24 | 31 |
+| 9 | Mouras e tesouros dos castros | 2 | 2 | 5 | 4 | 4 | 5 | 2 | 24 | 28 |
+| 9 | Galeóns de Rande | 2 | 4 | 3 | 3 | 4 | 3 | 3 | 22 | 28 |
+| 9 | Noite de San Xoán | 3 | 3 | 3 | 4 | 4 | 4 | 1 | 22 | 28 |
+| 12 | Magosto (extra) | 1 | 2 | 5 | 4 | 3 | 5 | 4 | 24 | 27 |
+| 12 | Samaín | 2 | 3 | 3 | 2 | 3 | 4 | 5 | 22 | 27 |
+| 14 | María Pita | 3 | 3 | 2 | 2 | 4 | 4 | 1 | 19 | 25 |
+| 14 | Muiñeira / gaita | 2 | 2 | 3 | 3 | 4 | 5 | 2 | 21 | 25 |
+
+\* **Meigas, D = 3 en vez de 2** por demanda adyacente: por la regla estricta tendría 2 (solo 3 vídeos gallegos > 10 K),
+pero "brujas" es ≈ 34 veces "Santa Compaña" en YouTube España y sube × 2,0 en octubre, y la historia real de brujas ya
+funciona en formato para dormir (tabla 3). Que ese público llegue a un vídeo en galego es un **supuesto [S]**.
+**Sensibilidad:** con D = 2, meigas queda en 30 / 37 y **empata** con Camino y queimada; gana el desempate por
+estacionalidad (4 frente a 2 y 3) y compatibilidad con dormir. Sin ponderar, gana igual (31 o 30 frente a 28).
+
+**Justificación por tema** (gancho de ejemplo verificado entre paréntesis):
+- **Meigas**: D 3 (tabla 2: 3 vídeos > 10 K, máx. 69.964 en 5 semanas; demanda adyacente enorme); G 5 (actas reales
+  con detalles sorprendentes y cifras contraintuitivas, §8); S 4 (hay tortura y una hoguera en la historia: se nombran
+  una vez y sin detalle; la meiga como curandeira y parteira da una segunda mitad tranquila); V 5 (lareira, candeas,
+  fontes, hórreos, carballeiras, herbas, papeles de archivo; luz variada); F 5 (Arquivo do Reino de Galicia con
+  transcripciones, Consello da Cultura Galega, historiador de la UVigo/USC); I 5; E 4 ("brujas" × 1,7-2,4 en octubre,
+  aunque "meigas" no sube).
+- **Camiño de Santiago**: D 5 (22 vídeos > 10 K; 182.379 en formato para dormir); G 4 (el *Códice Calixtino*, del
+  s. XII, lo robó en 2011 un electricista que trabajó 25 años en la catedral y apareció en 2012 en un garaje del
+  Milladoiro: https://gl.wikipedia.org/wiki/Códice_Calixtino); S 5; V 4 (riesgo de paisaje genérico de España); F 5;
+  I 3 (es más europeo y católico que "cousa de Galiza"); E 2 (pico en agosto; octubre × 0,8).
+- **Queimada**: D 4 (15 > 10 K, pero de 2007-2013); G 5 (conxuro de 1967, §8); S 4; V 3 (fuego y pota de barro durante
+  30 min se repiten); F 4; I 5; E 3 (pico en junio, San Xoán). **Se integra en el episodio de meigas como arranque en
+  frío**, así que su demanda también se aprovecha.
+- **Santa Compaña**: D 5 (15 > 10 K, 7 > 100 K; pico de octubre × 2,3-3,2); G 3 (es lenda; lo verificable es
+  etnográfico o literario; que aparezca en documentos de la Inquisición del s. XVI-XVII lo dice Galipedia,
+  https://gl.wikipedia.org/wiki/Santa_Compaña, sin fuente primaria comprobada); S 2 (procesión de muertos que anuncia
+  la muerte: su público es de terror; en formato para dormir hace 5-6 K frente a 100-200 K en terror); V 3 (procesiones
+  encapuchadas en la niebla = la composición repetida que penalizó el juez del Gauntlet 2); F 4; I 5; E 5.
+- **Santo André de Teixido**: D 2; G 4 ("vai de morto quen non foi de vivo"; primera mención en un testamento de
+  Viveiro de 1391: https://gl.wikipedia.org/wiki/Santo_André_de_Teixido); S 4; V 5 (acantilados, santuario, mar); F 4;
+  I 5; E 2. Buen tema para otro episodio.
+- **Castros e celtas**: D 5 (14 > 10 K, sobre todo "celtas" en general); G 3 (el celtismo está discutido y los
+  "ganchos" que circulan son de clic fácil, p. ej. "40.000 años de ADN celta"); S 4; V 3 (riesgo de druidas y
+  Stonehenge genéricos); F 3; I 4; E 2.
+- **Romasanta**: D 5 (13 > 10 K, 8 > 100 K); G 4 (Isabel II le conmutó la pena de muerte en 1854 tras la carta de un
+  médico francés que alegaba licantropía clínica: https://gl.wikipedia.org/wiki/Manuel_Blanco_Romasanta); **S 1**
+  (nueve asesinatos probados; es *true crime*); V 2; F 4; I 3; E 3.
+- **Costa da Morte**: D 3; G 4 (naufragio del *HMS Serpent* el 10-11-1890: 172 muertos y 3 supervivientes;
+  https://gl.wikipedia.org/wiki/HMS_Serpent_(1887)); S 2 (tragedias); V 4; F 4; I 5; E 2.
+- **Mouras**: D 2 (máx. 10.608); G 2 (no encontré un dato verdadero que sorprenda en 10 s); S 5; V 4; F 4; I 5; E 2.
+- **Rande**: D 2; G 4 (Jules Verne llevó los tesoros de Rande a *Vinte mil leguas*; la batalla fue el 23-10-1702:
+  https://gl.wikipedia.org/wiki/Batalla_de_Rande); S 3 (batalla naval); V 3 (galeones de IA con aparejos imposibles);
+  F 4; I 3; E 3 (aniversario en octubre, pero volumen ínfimo).
+- **San Xoán**: D 3 (demanda de San Juan en general); G 3; S 3; V 4; F 4; I 4; **E 1** (junio).
+- **Magosto**: D 1; G 2; S 5; V 4; F 3; I 5; E 4 (pico en noviembre).
+- **Samaín**: D 2 (el Samaín galego: máx. 10.091, TVG); G 3 (lo verdadero es que su recuperación empezó en los años
+  noventa en Cedeira: https://gl.wikipedia.org/wiki/Samaín; eso desinfla el gancho "Halloween es gallego"); S 3; V 2
+  (calabazas = iconografía de Halloween americano); F 3; I 4; E 5.
+- **María Pita**: D 3; G 3 (se casó cuatro veces; la frase "Quen teña honra, que me siga" es solo tradición:
+  https://gl.wikipedia.org/wiki/María_Pita); S 2 (asedio y batalla); V 2 (multitudes: caras deformes); F 4; I 4; E 1.
+- **Muiñeira**: D 2 (la demanda es musical); G 2 (el nombre viene de "muíño"; del baile antiguo casi no hay
+  documentación: https://gl.wikipedia.org/wiki/Muiñeira); S 3; V 3 (manos, pies y gaitas deformes); F 4; I 5; E 2.
+
+## 6. Recomendación: "As meigas de verdade"
+
+**Tema y ángulo.** Quiénes eran de verdad las meigas en Galicia, contado desde **los papeles que se conservan**
+(procesos de la Inquisición de Santiago y de la Real Audiencia de Galicia) y, en la segunda mitad, desde **la lenda y
+la costumbre, contadas como lenda** ("din que", "contaban"). El tono pasa de la sorpresa ("non vas crer o que
+declaraban as testemuñas") a la calma: la meiga no era la bruja de los cuentos, sino la **curandeira, la parteira, la
+que sabía de herbas**, y Galicia, "terra de meigas", **quedó al margen de la gran caza de brujas europea**. La
+**queimada** entra como arranque en frío: el conxuro que todos creen ancestral se escribió en Vigo en 1967.
+
+**Por qué este y no otro (cifras):**
+1. **Gancho**: es el tema con **más ganchos verdaderos, documentados y sorprendentes** (cinco en §8, y tres de reserva), sacados de actas
+   reales publicadas por el Arquivo do Reino de Galicia. Justo lo que pidió el promotor ("non vas crer o que facían as
+   persoas daquela") y lo que le faltó a la muestra anterior.
+2. **Audiencia**: "brujas" es un término enorme en YouTube España (≈ 34 × "Santa Compaña") que **sube × 2,0 en
+   octubre**; la historia real de brujas ya funciona para dormir (Relatos al Oído 36.121, Sleepless Historian 39.863,
+   Contando Carneiros 6.178); hay señal reciente sobre Galicia (*Cuarto Milenio*, 69.964 en 5 semanas), y el listón del
+   nicho, las lendas de Galicia para dormir (108.105), **se publicó un 9 de octubre**. **En galego no hay nada**: ni de
+   meigas ni para dormir.
+3. **Dormir**: la segunda mitad sale serena sin forzarla (herbas, fontes, lareira, noche de San Xoán, un fraile
+   escribiendo a la luz de una vela). Con la Santa Compaña cuesta y con Romasanta es imposible.
+4. **Imagen**: la iconografía gallega aparece sola (aldeas de granito y lousa, hórreos, lareiras, fontes, carballeiras,
+   soportales de Compostela) con **luz variada** (lumbre y vela frente a niebla azul, hogueras de San Xoán, amanecer), lo
+   que corrige la luz plana de la ronda 3.
+5. **Encargo**: "meigas" es el primer tema que citó el promotor, y el reclamo "Cousas de Galiza" le va como anillo al
+   dedo.
+6. **Calendario**: octubre ("noite de bruxas") y un aniversario redondo y verdadero dentro del episodio: **Feijoo nació
+   el 8-10-1676** (350 años el 8-10-2026: https://gl.wikipedia.org/wiki/Benito_Xerónimo_Feijoo).
+
+**Punto débil (sin maquillar).** "meigas" como palabra se busca poco (en YouTube España, ≈ 1/4-1/7 de "Santa
+Compaña") y no sube en octubre; los vídeos gallegos de meigas tienen pocas vistas (3 pasan de 10 K). **Mitigación**:
+"meigas" en el título con una promesa de historia real, "bruxas" en la descripción y los capítulos, y, **si el promotor
+lo aprueba** (no decidido), título y descripción traducidos al castellano como puerta de entrada ("Las meigas de
+verdad…") [S]. Expectativa realista: con un canal nuevo en galego, cientos o pocos miles de vistas [S].
+
+**Publicación.** Entre el **8 y el 17 de octubre** [S]: deja 2-3 semanas para acumular antes del pico de Halloween y
+coincide con cuando publicaron sus éxitos Relatos al Oído (9-10-2025), Crónicas de la Historia (12-10-2025) y Noche de
+Lluvia (15-10-2024). El 8 de octubre coincide con el aniversario de Feijoo.
+
+**Segundo candidato: Camiño de Santiago** (37). Es el mejor tema "para dormir" medido (182.379 vistas en un canal de
+20.800 suscriptores) y es de fondo de catálogo, pero no de octubre. **Alternativa de temporada: Santa Compaña** para el
+1-2 de noviembre (Defuntos), si se acepta contar una lenda de terror en tono sereno; tiene la mayor demanda y el pico de
+octubre-noviembre, pero en formato para dormir rinde poco (5-6 K) y exige vigilar la imagen (procesiones repetidas).
+
+## 7. Título de trabajo (galego, con el reclamo)
+
+1. **"As meigas de verdade: o que contan os papeis da Inquisición | Cousas de Galiza para durmir"** (principal: promesa
+   de verdad + documento; 90 caracteres, bajo el límite de 100).
+2. "Por que en Galicia case non se queimaron meigas? | Cousas de Galiza para durmir" (pregunta contraintuitiva y
+   verdadera: una sola condenada a la hoguera por la Inquisición de Santiago; "case" cubre las fuentes que hablan de
+   "algúns casos").
+3. "Habelas, hainas: a historia real das meigas galegas | Cousas de Galiza para durmir" (la frase que todos conocen).
+
+En la lista de YouTube solo se ven ~60-70 caracteres: lo primero es el gancho y el reclamo puede quedar cortado; el
+reclamo va también en la miniatura (opcional) y al principio de la descripción. Fechas y cifras de los títulos: todas
+verificadas en §8.
+
+## 8. Ganchos verdaderos para el primer minuto (con fuente)
+
+Todos se dicen como **hechos documentados** y con su atribución ("segundo contou unha testemuña", "confesou"), nunca
+como si el narrador lo supiera de primera mano. Las cifras van en letra en el guion (Cotovía).
+
+| # | Gancho (texto público, galego) | Fuente | Notas |
+|---|---|---|---|
+| 1 | «*Mouchos, curuxas, sapos e bruxas…* Seguramente oíches este conxuro nunha queimada e pensas que é antiquísimo. Non o é: escribiuno en Vigo, en 1967, Mariano Marcos Abalo, para unha festa nun barco amarrado no porto.» | https://gl.wikipedia.org/wiki/Queimada (cita a *La Voz de Galicia*, 19-10-2008); *Atlántico Diario*, 7-2-2022: https://www.atlantico.net/articulo/vigo/conxuro-queda-padre-fallece-vigo-mariano-marcos/20220207232642892177.html | El conxuro tiene **propiedad intelectual registrada** (2001; el autor murió en 2022): citar solo el primer verso, con autoría. "curuxa" es la forma normativa (RAG), aunque el texto popular diga "coruxas". Galipedia añade que el origen celta de la queimada es imposible (el alambique llegó en la Edad Media; Alonso del Real, *Grial*, 1972) |
+| 2 | «Segundo o Arquivo do Reino de Galicia, entre 1574 e 1700 a Inquisición de Santiago procesou por bruxería noventa e dúas mulleres e corenta e oito homes, e só levou unha á fogueira. Mentres noutras terras de Europa ardían as fogueiras, Galicia, a terra das meigas, quedou á marxe da caza de bruxas.» | Arquivo do Reino de Galicia (Xunta), exposición "Meigas, feitizos das menciñeiras", 2020, p. "Galicia: a Inquisición e a Real Audiencia": https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf | **No decir el año** de la única hoguera: el Arquivo dice 1627; *El Español* (citando a Diego Valor Bravo) dice María Rodríguez, 30-11-1579: https://www.elespanol.com/mujer/mujeres-historia/20210309/verdad-caza-meigas-perseguidas-justicia-ordinaria-inquisicion/564444343_0.html. El CCG habla de condenas a la hoguera cumplidas "nalgúns casos" (https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=29953): el dossier debe resolverlo; mientras, "case ningunha" es la forma segura |
+| 3 | «En Vilalba, en 1617, unha testemuña declarou que a parteira Dorotea do Barro dicía que lle podía quitar as dores do parto a unha muller e pasarllas a un home: abondaba con calzarlle a el os zapatos dela e dicir unhas palabras. E que o home saltaría coma un poldro bravo.» | Mismo PDF del Arquivo do Reino, proceso de Dorotea do Barro e María do Barro (Real Audiencia de Galicia, 1617, sig. 19602/96), testimonio de Andrés da Pena | Divertido, cotidiano y sin violencia: el mejor "non vas crer". El extracto publicado no deja del todo claro si la parteira es Dorotea (la madre) o María (la hija, acusada también de "alcaiota"); el dossier debe confirmarlo en el expediente o decir "unha das acusadas, parteira" |
+| 4 | «En 1639, en Boborás, María Cibreira confesou —despois de ser torturada— que as noites de San Xoán e as do primeiro de maio as meigas ían ás xuntanzas do demo… nas areas de Sevilla.» | Mismo PDF (María Cibreira e outras, Real Audiencia, 1639, sig. 24667/29); *GCiencia*, 26-01-2026: https://www.gciencia.com/retro/a-persecucion-das-bruxas-na-galicia-de-hai-400-anos-eran-apreciadas-e-necesarias-para-o-pobo/ | La tortura se nombra y no se describe (el PDF detalla los garrotes: no usarlos) |
+| 5 | «Na Galicia de hai catrocentos anos, a meiga non era a bruxa dos contos: era a que curaba, a que axudaba a parir, a que sabía de herbas. "Figuras apreciadas e necesarias para o pobo", resume o historiador Rodrigo Pousa.» | *GCiencia*, 26-01-2026 (enlace de arriba); CCG, Álbum de Galicia, "Meigas" (Anxos Sumai, 2007): https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=29953 | Es el giro que abre la bajada hacia el tono de dormir |
+
+**De reserva** (para el cuerpo o el cierre):
+- R1. «Aínda en 1826, en Compostela, unha adiviña, Benita Montero, foi condenada a saír do cárcere emplumada e montada
+  nunha besta, un día de mercado, coa baralla colgada do pescozo.» Fuente: mismo PDF (Real Audiencia, 1826, sig.
+  49054/5).
+- R2. «O 8 de outubro de 2026 fai 350 anos que naceu en Casdemiro o frade Benito Xerónimo Feijoo, "o desenganador das
+  Españas", que pasou a vida escribindo contra as supersticións.» Fuente:
+  https://gl.wikipedia.org/wiki/Benito_Xerónimo_Feijoo
+- R3. «A frase "eu non creo nas meigas, pero habelas, hainas" atribúese ás veces ao Quixote. Non está nel.» Fuente:
+  búsqueda en el texto completo del *Quijote* (Project Gutenberg, https://www.gutenberg.org/cache/epub/2000/pg2000.txt,
+  0 apariciones; comprobación hecha por Claude con `grep`). Su origen **no** está documentado: no afirmar que sea
+  gallega (Ciberdúvidas solo dice que se le "atribuye" origen gallego:
+  https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-frase-eu-nao-acredito-em-bruxas-mas/16796).
+
+## 9. Miniatura (concepto)
+
+- **Una sola imagen con la tesis del título**, como la de Versalles: **la curandeira querida y el papel que la
+  acusa**. Interior de una casa de **granito** de noche; una **mujer mayor** (menciñeira) sentada junto a la
+  **lareira**, luz cálida de lumbre y candea en la cara de perfil, un **manojo de herbas** en las manos; en primer plano,
+  sobre una mesa de castaño, un **papel doblado con sello de lacre** (el proceso); por una ventana pequeña, **niebla
+  azul** y la silueta de un **hórreo**. Contraste ámbar/azul; plano medio (evita caras deformes).
+- Texto opcional, 2-3 palabras en galego y grandes: **"MEIGAS DE VERDADE"**.
+- **Evitar** (vetos para la pieza visual): sombrero de pico, caldero, escoba, piel verde, calabazas, gatos negros de
+  Halloween, castillos, cipreses, tejados de teja naranja.
+- Variante B (si el arranque en frío es la queimada): primer plano de una **pota de barro con lume azul** en una cocina
+  de piedra a oscuras y unas manos viejas removiendo; texto "1967". Solo si el vídeo cuenta lo de 1967 en el primer
+  minuto (no inducir a error).
+
+## 10. Arco de ≈ 30 min (≈ 3.400 palabras), del gancho al tono de dormir
+
+Tipo: **H** = historia documentada (con fuente en el dossier); **L** = lenda o creencia popular, contada como tal
+("din que", "contaban", "cría a xente"); **A** = ambiente, sin datos. Ritmo orientativo de la voz en palabras por minuto
+(ppm), bajando con el embudo. Títulos de capítulo en galego (sirven para la descripción de YouTube).
+
+| Tiempo | Capítulo | Contenido | Tipo | Palabras (ppm) | Imagen y luz |
+|---|---|---|---|---|---|
+| 0:00-0:40 | Arranque en frío: "Un conxuro de 1967" | Ganchos 1 y 2: el conxuro no es antiguo; la Inquisición de Santiago apenas quemó meigas | H | ≈ 95 (140) | Noche, lume azul de queimada, soportales de piedra mojados; cortes de 6-8 s |
+| 0:40-0:55 | Aviso y reclamo | "A voz que vas escoitar é sintética, e este texto preparouno un proceso automático." "Isto é Cousas de Galiza para durmir." | - | ≈ 30 | Título sobre niebla y aldea |
+| 0:55-2:00 | "Os papeis que falan" | Ganchos 3, 4 y 5: la parteira de Vilalba, las "areas de Sevilla", la meiga como curandeira; promesa: "esta noite imos abrir eses papeis, a modo" | H | ≈ 150 (135) | Legajos, pluma, archivo a la luz de vela; parteira en una cocina de piedra |
+| 2:00-6:00 | 1. "Quen eran as meigas" | Curandeiras, parteiras, menciñeiras; viudas y solteras, las más denunciadas; los nombres (meiga, bruxa, feiticeira, menciñeira); lo que la gente creía que hacían: volar a las xuntanzas dejando un cuerpo fingido en la cama, volverse gato, sapo o lobo | H (etnografía documentada) + L (las creencias, como creencias) | ≈ 480 (125) | Aldea de granito y lousa al atardecer, carballeira, herbas colgadas en la lareira |
+| 6:00-10:00 | 2. "O tribunal de Santiago" | El tribunal (1574), las cifras (92 + 48), una sola hoguera, el supuesto "racionalismo" de los inquisidores hispanos, más escépticos que los europeos (así lo presenta el Arquivo, que pide estudiarlo mejor); la justicia ordinaria (unos 30 procesos en el Arquivo do Reino) y sus penas (destierro, azotes, emplumamento), dichas sin detalle | H | ≈ 470 (120) | Compostela de noche, lluvia en la piedra, sala de audiencia con velas. **Desde aquí baja el ritmo** |
+| 10:00-16:00 | 3. "Catro aldeas, catro papeis" | Marta de Quián (Lalín, 1611: la leche de las vacas y los remedios contra las meigas); Ana González (Xinzo de Limia, 1612: la mujer que, decían, entraba como un gato); Inés de Maquieira (Campo Lameiro, 1643: los vecinos que apuntaron a las mujeres de la fuente la noche de San Xoán); Dorotea y María do Barro (Vilalba, 1617: según un testigo, María, cuando llevaba el ganado al monte, decía que bebiese "auga de sete fontes" y trajese "leite de sete cortes e de sete montes") | H (lo que declararon los testigos; sin decidir si era verdad) | ≈ 680 (115) | Vacas, hórreos, una fonte de piedra de noche, gatos en la lareira; planos detalle y generales alternos |
+| 16:00-19:00 | 4. "María Soliña e o mar de Cangas" | El ataque turco a Cangas (1617), el símbolo, el poema de Celso Emilio Ferreiro en *Longa noite de pedra* (1962); **"dela sabemos moi pouco"** (no hay documentos del juicio, según el CCG) | H (el ataque y el poema) + símbolo (la vida, como incierta) | ≈ 330 (110) | Ría de Vigo con mar calmo, barcas, costa atlántica al amanecer |
+| 19:00-24:00 | 5. "A noite de San Xoán" | Herbas de San Xoán, hogueras, agua de siete fuentes, "meigas fóra"; el mal de ollo y el meigallo, y cómo se "desfacían" | L / tradición (contada como costumbre; el dossier fija cada práctica con fuente) | ≈ 530 (105) | Hogueras lejanas, herbas en agua bajo las estrellas, rocío; luz muy baja y cálida |
+| 24:00-27:30 | 6. "O frade que non cría nas meigas" | Feijoo (Casdemiro, 8-10-1676; benedictino; *Teatro crítico universal*, 1726-1739), que escribió contra las supersticiones: la calma de la razón; 350 años este mes | H | ≈ 360 (100) | Celda de monasterio, vela, pluma, lluvia en la ventana, soutos de castaños de Ourense |
+| 27:30-30:00 | Peche: "Chove na lousa" | "Habelas, hainas?" como sonrisa; la aldea duerme, lluvia en los tejados de lousa, brasas; sin llamadas a suscribirse o una sola línea suave | A | ≈ 240 (95) | Brasas, tejados de lousa bajo la lluvia, fundidos largos a negro |
+
+**Reglas del arco para las piezas de guion y dossier:**
+- **Sin terror ni violencia explícita**: tortura y hoguera se nombran una vez cada una, sin detalles (nada de garrotes,
+  potro ni llamas sobre personas). Nada de "chuchonas" que chupan sangre en la segunda mitad.
+- **No inventar**: ningún diálogo ni pensamiento de las procesadas; las citas de los procesos, traducidas al galego y
+  atribuidas ("segundo declarou…").
+- **Dudoso = se dice o se omite**: el año de la única hoguera; la biografía de María Soliña (¿nació en 1551 o en 1601?, ¿murió de "loucura, fame e miseria"?);
+  el origen de "habelas, hainas"; que la Santa Compaña aparezca en papeles de la Inquisición (no usar sin fuente
+  primaria).
+- **Queimada**: nada de "tradición celta"; como mucho "a súa orixe non está clara" (Galipedia) y el conxuro de 1967.
+- Lo que tiene que verificar el dossier: todo lo marcado H, contra el PDF del Arquivo do Reino, el CCG, GCiencia,
+  Galipedia y, si se puede, Contreras (*El Santo Oficio de la Inquisición en Galicia 1560-1700*, 1982) y Lisón
+  Tolosana para lo etnográfico.
+
+## 11. Supuestos [S] y riesgos
+
+- [S] Que el público de "brujas" en castellano llegue a un vídeo en galego: no hay datos; es la principal incertidumbre
+  de la recomendación.
+- [S] La ventana de publicación (8-17 de octubre) depende de que el vídeo esté listo; 30 min son ≈ 50 h de CPU de
+  núcleo con el pipeline actual (CLAUDE.md: 3 min ≈ 5 h), unas 14 h de reloj con los 4 núcleos (HANDOFF: 60 min ≈
+  28,6 h), más las rondas de guion e imagen.
+- Riesgo de imagen: la palabra "bruxa" arrastra el cliché de Halloween (sombrero de pico, caldero); la pieza visual
+  debe vetarlo y usar la lista positiva de iconografía gallega.
+- Riesgo de rigor: las fuentes discrepan en fechas (§8, gancho 2; María Soliña). El dossier decide o se omite.
+- Riesgo legal menor: el texto del conxuro está registrado; citar solo un verso con autoría.
+- Los datos de YouTube son una muestra y las vistas son acumuladas (§1): sirven para ordenar temas, no para prever
+  vistas.
