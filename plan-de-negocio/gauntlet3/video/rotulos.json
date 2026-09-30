@@ -1,0 +1,83 @@
+[
+ {
+  "t0": 45.799,
+  "t1": 51.897,
+  "texto": "As meigas de verdade",
+  "sub": "Cousas de Galiza para durmir",
+  "y": 0.46,
+  "tam": 60,
+  "fundido": 0.8
+ },
+ {
+  "t0": 115.235,
+  "t1": 120.275,
+  "texto": "Sete fontes e un gato",
+  "sub": "Capítulo I",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 277.711,
+  "t1": 283.726,
+  "texto": "O conxuro do barco",
+  "sub": "Capítulo II",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 398.652,
+  "t1": 405.312,
+  "texto": "O tribunal e os xuíces",
+  "sub": "Capítulo III",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 554.003,
+  "t1": 560.755,
+  "texto": "Quen eran de verdade",
+  "sub": "Capítulo IV",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 728.741,
+  "t1": 736.089,
+  "texto": "Á beira da lareira",
+  "sub": "Capítulo V",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 980.876,
+  "t1": 988.823,
+  "texto": "A noite de san Xoán",
+  "sub": "Capítulo VI",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 1368.893,
+  "t1": 1377.09,
+  "texto": "O frade que dubidaba",
+  "sub": "Capítulo VII",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 1611.318,
+  "t1": 1619.603,
+  "texto": "Chove na lousa",
+  "sub": "Capítulo VIII",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ }
+]
