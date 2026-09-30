@@ -54,10 +54,31 @@ intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si
 | 2 | corrixir | LanguageTool gl-ES por párrafo; si hay avisos, el LLM corrige ese párrafo; solo se acepta si baja el número de avisos y no empeora la validación | LanguageTool 6.8 (LGPL-2.1) con hunspell gl; `prompts/corrixir_parrafo.md` |
 | 3 | voz | Narra frase a frase con **ritmo en embudo** (feedback del promotor): escala de duraciones 1,05 en las primeras 150 palabras que sube hasta 1,25 hacia la palabra 320; pausas de 0,55 s entre frases al principio que suben hasta 1,35 s, más 0,45-1,0 s entre párrafos y un ajuste por longitud de la frase siguiente (la cadencia ya no es fija) | Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC), Cotovía para fonemas |
 | 4 | escenas | El **código** corta los planos con las duraciones reales de la voz: ~5,5 s en el gancho, subiendo a ~12,5 s; una frase larga se reparte en varios planos. El LLM escribe un prompt de imagen por plano (`prompts/escenas.md`: personas haciendo cosas, planos medios, luz variada, lista de anacronismos prohibidos) | LLM local |
-| 5 | imaxes | SDXL-Turbo 1024x576, 4 pasos. **Puerta de imágenes** (`revisor.py`): cada imagen se revisa y, si falla, se regenera con otra semilla (desde el 3.er intento, con una coletilla prudente: figuras de cuerpo entero); tras 5 intentos se queda la de menos problemas y la puerta `imaxes_revisadas` falla | SDXL-Turbo (Stability AI Community License); MediaPipe (Apache-2.0); Florence-2-large (MIT) |
+| 5 | imaxes | **Gauntlet 3:** SDXL base + UNet **SDXL-Lightning 4 pasos a 1344x768** (`IMG_MODEL=lightning`, por defecto; `turbo` = SDXL-Turbo 1024x576 del Gauntlet 2), estilo común de fotograma de cine de época con matiz y luz por fase (biblia visual `plan-de-negocio/gauntlet3/visual/biblia.md`). **Puerta de imágenes** (`revisor.py` v5): cada imagen se revisa y, si falla, se regenera con otra semilla y una corrección según el motivo (lousa y granito delante si salen tejados naranjas; menos gente si hay multitud); si el prompt repite arquetipo o imagen dos veces, o tras 5 intentos, va a la **reserva de la fase** (un plano sin personas). `graduar` **por fase** (sección siguiente) | SDXL base 1.0 + SDXL-Lightning (CreativeML OpenRAIL++-M); MediaPipe (Apache-2.0); Florence-2-large (MIT); CLIP ViT-L/14 (MIT) |
 | 6 | son | Lluvia sintetizada por código (sin grabaciones de terceros). Voz a -17 LUFS, lluvia 17 dB por debajo | numpy/scipy, pyloudnorm |
 | 7 | montaxe | Ken Burns, niebla ligera (6 %, antes 13 %: lavaba todo de verde), viñeta, **fundidos de 1,2 s** (antes 3 s: la doble exposición se veía mucho), x264 CRF 22 con tope de 1,1 Mb/s, AAC 128 kb/s, subtítulos `mov_text` `glg` | PIL, numpy, ffmpeg de `imageio-ffmpeg` |
 | 8 | qa | Controles automáticos y hoja de contactos (sus 12 fotogramas se desplazan fuera de los fundidos) | faster-whisper + Whisper turbo galego de Nós, LanguageTool, ffmpeg `ebur128` |
+
+## Imágenes en el Gauntlet 3 (modelo, estilo por fase, gradación y puerta v5)
+
+El crítico visual de la ronda 3 vio luz plana y monótona, composiciones repetidas, "óleo genérico de IA",
+iconografía no gallega (cipreses, ruedas de radios, fachadas mediterráneas, tejados naranjas) e imágenes blandas.
+Cambios (detalle y medidas en `plan-de-negocio/gauntlet3/aprendizajes/visual.md`):
+
+- **Modelo**: SDXL-Lightning 4 pasos (UNet destilada por ByteDance sobre SDXL base) a 1344x768: 47,6 s por imagen
+  (mediana, 4 núcleos) frente a 25,5 s de Turbo a 1024x576, más nítido y más "de cine". Los codificadores de texto
+  se cargan del repo de Turbo (mismo sha256 que los de SDXL base). `montaxe.py` recorta a 16:9 sin deformar.
+- **Estilo**: `cinematic film still, period drama, photorealistic` más un matiz corto por fase (gancho `dramatic
+  chiaroscuro`, calma `soft light`, durmir `dim and quiet`). Las palabras de luz y color de los prompts del agente
+  **ya no se quitan**; si un prompt no trae luz, se añade una luz por defecto de su fase (rotando). Los prompts sin fase
+  (LLM del pipeline corto) solo pierden `sepia, neon, vivid...`.
+- **Gradación por fase** (`imaxes.graduar(paths, outdir, escenas)`): sustituye la igualación a la media del episodio,
+  que aplanaba la luz. Por imagen: la luminancia media se lleva al rango de su fase solo si se sale (gancho 0,13-0,45;
+  transición 0,25-0,58; calma 0,18-0,48; durmir 0,08-0,30), contraste y brillo de `curva.py`, nivel de negro por fase
+  (negros profundos en el gancho, levantados al durmir), saturación por fase con tope de croma y un virado común muy
+  ligero. Los parámetros se suavizan con los planos vecinos (±60 palabras de guion): no hay saltos entre fases.
+  `graduacion.json` guarda lo aplicado a cada imagen.
+- **Puerta v5**: CLIP para la iconografía y la repetición en todo el episodio (punto 4 de la sección siguiente).
 
 ## La puerta de imágenes (`revisor.py`)
 
@@ -74,6 +95,18 @@ intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si
 3. **Repetición** (`imaxes.repetida`, ronda 3): la imagen no puede parecerse de más a ninguna de las 4 anteriores del
    episodio (correlación de la imagen en grises desenfocada a 48x27 > 0,6, o Jaccard de las palabras de la descripción
    de Florence-2 > 0,5). En las 24 imágenes de la ronda 2 el p95 de la correlación era 0,50 y el máximo 0,67.
+   Versión 5 (Gauntlet 3): en la lista, iconografía no gallega (cypress, olive trees, palm trees, eucalyptus,
+   whitewashed, stucco, mediterranean, tuscan, spoked...); sin "procession" (una Santa Compaña de 3-4 figuras es
+   legítima; los cuerpos los cuenta MediaPipe: más de 5 es multitud); "lamp" solo con adjetivos modernos (el candil
+   es la luz de la fase calma) y el fuego grande no cuenta si es de la lareira (fireplace, hearth, pot...).
+4. **CLIP ViT-L/14** (versión 5): (a) **iconografía**: pares "malo/bueno" (teja naranja/lousa, encalado/granito,
+   ciprés/carballo, olivo/prado, palmera/carballo, rueda de radios/rueda maciza, paisaje seco/atlántico,
+   eucalipto/carballeira) en tres recortes cuadrados (izquierda, centro, derecha: CLIP solo ve un cuadrado y los
+   tejados suelen estar en los lados); falla si sim(malo) − sim(bueno) supera el margen calibrado y el concepto es
+   pertinente; también los conceptos del campo `negativo` del plano; (b) **repetición contra todas las imágenes
+   aceptadas del episodio** (coseno de los embeddings > `SIM_CLIP`); (c) **arquetipos** de composición con tope por
+   episodio y separación mínima de 5 planos (los "caminantes de espaldas" que el crítico vio 3-4 veces: 3 %).
+   Calibración: `probas/visual_calibrar_clip.py` (ver aprendizajes).
 
 **Coherencia visual (ronda 3).** El crítico visual vio una "toma repetida" (era un plano de 18,9 s que caía en dos
 fotogramas de la hoja) y una paleta que saltaba de pictórica a saturada y a sepia. Cambios: (a) ningún plano dura más
@@ -191,7 +224,7 @@ Python 3.11 del sistema, Java ≥ 17):
 | Pieza | Dónde (`$SCRATCH/...`) | Tamaño | Tiempo en limpio |
 |---|---|---|---|
 | venv único: torch CPU + ~80 paquetes | `tts/venv` | 2,4 GB | 2 min 19 s (*) |
-| SDXL-Turbo fp16 | `hf/` | 6,95 GB | 2 min 39 s (*) |
+| SDXL-Lightning 4 pasos (UNet 5,14 GB) + VAE de SDXL base (0,17) + codificadores de texto de Turbo (1,64); `sdxl_turbo` (opcional) añade la UNet y el VAE de Turbo (5,3) | `hf/` | 6,95 GB | 2 min (UNet de Lightning: 121 s) |
 | Florence-2-large / CLIP ViT-L/14 / NLI mDeBERTa | `hf/` | 1,56 / 1,71 / 0,56 GB | 2 min 40 s / 56 s / 17 s (*) |
 | Nos_StyleTTS2-Brais-GL (sin 1.ª etapa ni optimizador) | `bench/st2` | 1,1 GB | 1 min 43 s (*) + 31 s |
 | Whisper galego de Nós en CTranslate2 int8 | `bench/wgl_ct2` | 788 MB | 1 min 42 s (*) + 22 s |
@@ -253,6 +286,8 @@ Ronda 2 (archivada): 3 min 24 s, 30,4 MB, WER 0,026, 4,69 h de CPU, NON PUBLICAB
 
 ## Licencias a vigilar
 
+- **SDXL-Lightning** (https://huggingface.co/ByteDance/SDXL-Lightning) sobre **SDXL base 1.0**: CreativeML OpenRAIL++-M
+  (uso comercial permitido con las restricciones de uso de la licencia). Es el modelo por defecto desde el Gauntlet 3.
 - **SDXL-Turbo**: Stability AI Community License (https://huggingface.co/stabilityai/sdxl-turbo/blob/main/LICENSE.md):
   gratis por debajo de 1 M USD de ingresos anuales, con registro para uso comercial. No es OSI.
 - **EuroLLM-9B-Instruct-2512**: Apache-2.0 (https://huggingface.co/utter-project/EuroLLM-9B-Instruct-2512).
@@ -277,7 +312,7 @@ Ronda 2 (archivada): 3 min 24 s, 30,4 MB, WER 0,026, 4,69 h de CPU, NON PUBLICAB
 - El guion de un LLM local de 9B en CPU es claramente peor que el de un modelo grande (ver `video/ronda2/comparacion-llm.md`): más
   avisos de LanguageTool, frases planas y riesgo de datos inventados (ahora los para la puerta de veracidad, en parte). Es el punto débil del canal
   desatendido y la razón para reportar errores y pedir un modelo instruccional mejor a Nós [S].
-- Las imágenes se generan a 1024x576 y se reescalan: en pantalla grande se ven algo blandas.
+- Las imágenes se generan a 1344x768 (Gauntlet 3; antes 1024x576) y se reescalan x1,43 a 1080p.
 - La niebla se repite cada ~6,4 min.
 - Whisper escribe a veces el galego con grafías portuguesas, lo que infla el WER.
 - Puerta de imágenes (ronda 2): Florence-2 no nombra detalles pequeños, así que pasan tejados rojos lejanos en algún

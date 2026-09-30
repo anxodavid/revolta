@@ -59,6 +59,30 @@ def main():
         u = mellor_umbral([v for v, _ in bb], [v for v, _ in mm]) if mm else None
         print(f'\n{lab}: malas {mm}\n   boas (as 6 máis altas) {bb[:6]}\n   dubidosas {dud}\n   umbral óptimo {u}')
         out['pares'][lab] = {'malas': mm, 'boas_top': bb[:10], 'umbral': u}
+    # conceptos do campo `negativo`: sim("a photo with X") nas imaxes que o teñen e nas que non
+    NEG = {'tellados laranxas (CLIP)': 'orange roof tiles', 'ciprés (CLIP)': 'cypress trees', 'palmeiras (CLIP)': 'palm trees',
+           'rodas de raios (CLIP)': 'spoked wheels', 'oliveiras (CLIP)': 'olive trees',
+           'muros encalados (CLIP)': 'whitewashed walls', 'eucaliptos (CLIP)': 'eucalyptus trees'}
+    print('\n== Campo negativo: sim("a photo with X") (máx. dos 3 recortes)')
+    out['negativo'] = {}
+    todos_bos, todos_malos, rel_bos, rel_malos = [], [], [], []
+    base = cl.textos(['a photo'])[0]
+    Es = {r['f']: cl.analizar(r['f'])[0] for r in rows}
+    for lab, x in NEG.items():
+        t = cl.textos([f'a photo with {x}'])[0]
+        val = lambda r: float((Es[r['f']] @ t).max())
+        rel = lambda r: float((Es[r['f']] @ t - Es[r['f']] @ base).max())   # fronte a "a photo" (mesmo recorte)
+        con = [r for r in rows if lab in r.get('malos', []) and not r.get('dudosa')]
+        sen = [r for r in rows if not r.get('malos') and not r.get('dudosa')]
+        si, no = sorted(round(val(r), 3) for r in con), sorted(round(val(r), 3) for r in sen)
+        rsi, rno = sorted(round(rel(r), 3) for r in con), sorted(round(rel(r), 3) for r in sen)
+        todos_bos += no; todos_malos += si; rel_bos += rno; rel_malos += rsi
+        print(f'{x}: con {si} | sen: máx {no[-3:]} p95 {round(float(np.percentile(no, 95)), 3)}')
+        print(f'   relativo a "a photo": con {rsi} | sen: máx {rno[-3:]}')
+        out['negativo'][x] = {'con': si, 'sen_top': no[-5:], 'rel_con': rsi, 'rel_sen_top': rno[-5:]}
+    u = mellor_umbral(todos_bos, todos_malos); ur = mellor_umbral(rel_bos, rel_malos)
+    print('umbral común óptimo (absoluto)', u, '| (relativo a "a photo")', ur)
+    out['negativo']['umbral_comun'] = u; out['negativo']['umbral_relativo'] = ur
     # repetición
     grupos = {}
     for k, r in enumerate(rows):

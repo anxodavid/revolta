@@ -1,0 +1,367 @@
+{
+ "sr": 16000,
+ "voz": "Nos_StyleTTS2-Brais-GL (voz_st2.py)",
+ "autoria_textos": "Claude (axente de son)",
+ "frases": [
+  {
+   "escala": 1.006,
+   "f0_media": 1.025,
+   "f0_rango": 1.135,
+   "semente": 5000,
+   "ref": "brais-norm-12828.wav",
+   "texto": "Este ano as castañas viñeron cedo e son ben grandes.",
+   "ini": 0,
+   "fin": 40960
+  },
+  {
+   "escala": 1.034,
+   "f0_media": 0.884,
+   "f0_rango": 0.994,
+   "semente": 5001,
+   "ref": "brais-norm-12290.wav",
+   "texto": "Mira que caro está o millo, non hai quen o compre.",
+   "ini": 44960,
+   "fin": 80160
+  },
+  {
+   "escala": 0.964,
+   "f0_media": 0.966,
+   "f0_rango": 1.274,
+   "semente": 5002,
+   "ref": "brais-norm-08334.wav",
+   "texto": "Onte estiven na casa da túa tía e deume uns ovos.",
+   "ini": 84160,
+   "fin": 121600
+  },
+  {
+   "escala": 0.906,
+   "f0_media": 0.942,
+   "f0_rango": 1.147,
+   "semente": 5003,
+   "ref": "brais-norm-12932.wav",
+   "texto": "Á tarde imos baixar ao muíño, se non chove.",
+   "ini": 125600,
+   "fin": 156960
+  },
+  {
+   "escala": 0.85,
+   "f0_media": 0.911,
+   "f0_rango": 0.969,
+   "semente": 5004,
+   "ref": "brais-norm-11781.wav",
+   "texto": "A vaca marela xa pariu, e o becerro está san.",
+   "ini": 160960,
+   "fin": 194880
+  },
+  {
+   "escala": 0.875,
+   "f0_media": 1.103,
+   "f0_rango": 1.044,
+   "semente": 5005,
+   "ref": "brais-norm-08497.wav",
+   "texto": "Non sei se chegaremos a tempo á misa das doce.",
+   "ini": 198880,
+   "fin": 232800
+  },
+  {
+   "escala": 0.951,
+   "f0_media": 1.024,
+   "f0_rango": 1.049,
+   "semente": 5006,
+   "ref": "brais-norm-08497.wav",
+   "texto": "Tráeme o cesto das mazás, que pesa moito.",
+   "ini": 236800,
+   "fin": 272320
+  },
+  {
+   "escala": 0.871,
+   "f0_media": 1.076,
+   "f0_rango": 1.221,
+   "semente": 5007,
+   "ref": "brais-norm-11535.wav",
+   "texto": "Canto pides por ese porco? É moito, home, é moito.",
+   "ini": 276320,
+   "fin": 317920
+  },
+  {
+   "escala": 0.9,
+   "f0_media": 1.075,
+   "f0_rango": 1.009,
+   "semente": 5008,
+   "ref": "brais-norm-11535.wav",
+   "texto": "Ai, muller, que ben estás, parece que non pasan os anos por ti.",
+   "ini": 321920,
+   "fin": 367360
+  },
+  {
+   "escala": 0.867,
+   "f0_media": 0.958,
+   "f0_rango": 0.925,
+   "semente": 5009,
+   "ref": "brais-norm-10814.wav",
+   "texto": "O señor cura vai falar despois da procesión.",
+   "ini": 371360,
+   "fin": 406560
+  },
+  {
+   "escala": 0.878,
+   "f0_media": 1.009,
+   "f0_rango": 1.359,
+   "semente": 5010,
+   "ref": "brais-norm-11559.wav",
+   "texto": "Aquí hai viño e pan para todos, collede sen medo.",
+   "ini": 410560,
+   "fin": 446720
+  },
+  {
+   "escala": 0.935,
+   "f0_media": 1.015,
+   "f0_rango": 1.006,
+   "semente": 5011,
+   "ref": "brais-norm-10814.wav",
+   "texto": "Mañá cedo hai que ir segar o prado de abaixo.",
+   "ini": 450720,
+   "fin": 484960
+  },
+  {
+   "escala": 0.942,
+   "f0_media": 1.067,
+   "f0_rango": 1.019,
+   "semente": 5012,
+   "ref": "brais-norm-08964.wav",
+   "texto": "Xa che dixen que o gando non entra na horta.",
+   "ini": 488960,
+   "fin": 524480
+  },
+  {
+   "escala": 1.088,
+   "f0_media": 0.899,
+   "f0_rango": 1.236,
+   "semente": 5013,
+   "ref": "brais-norm-13050.wav",
+   "texto": "Onde deixaches a chave do hórreo, rapaz?",
+   "ini": 528480,
+   "fin": 560800
+  },
+  {
+   "escala": 0.981,
+   "f0_media": 1.021,
+   "f0_rango": 1.349,
+   "semente": 5014,
+   "ref": "brais-norm-12828.wav",
+   "texto": "A min contáronmo na fonte, e eu non digo nada.",
+   "ini": 564800,
+   "fin": 604160
+  },
+  {
+   "escala": 0.958,
+   "f0_media": 1.026,
+   "f0_rango": 1.221,
+   "semente": 5015,
+   "ref": "brais-norm-08047.wav",
+   "texto": "Este inverno foi moi longo e choveu moito.",
+   "ini": 608160,
+   "fin": 641440
+  },
+  {
+   "escala": 0.918,
+   "f0_media": 0.986,
+   "f0_rango": 1.077,
+   "semente": 5016,
+   "ref": "brais-norm-08050.wav",
+   "texto": "Os rapaces andan xogando na eira desde a mañá.",
+   "ini": 645440,
+   "fin": 681280
+  },
+  {
+   "escala": 1.126,
+   "f0_media": 1.077,
+   "f0_rango": 1.386,
+   "semente": 5017,
+   "ref": "brais-norm-11535.wav",
+   "texto": "Veña, sentade aquí, que hai sitio para todos.",
+   "ini": 685280,
+   "fin": 720160
+  },
+  {
+   "escala": 1.028,
+   "f0_media": 0.989,
+   "f0_rango": 1.336,
+   "semente": 5018,
+   "ref": "brais-norm-12290.wav",
+   "texto": "Que bo está este caldo, parece o da miña avoa.",
+   "ini": 724160,
+   "fin": 763840
+  },
+  {
+   "escala": 0.915,
+   "f0_media": 0.975,
+   "f0_rango": 1.133,
+   "semente": 5019,
+   "ref": "brais-norm-08334.wav",
+   "texto": "Hai que levar o trigo ao muíño antes do sábado.",
+   "ini": 767840,
+   "fin": 802400
+  },
+  {
+   "escala": 1.024,
+   "f0_media": 0.948,
+   "f0_rango": 0.938,
+   "semente": 5020,
+   "ref": "brais-norm-12290.wav",
+   "texto": "O tratante quería pagar pouco polo xato, pero non llo dei.",
+   "ini": 806400,
+   "fin": 853440
+  },
+  {
+   "escala": 0.962,
+   "f0_media": 0.899,
+   "f0_rango": 1.396,
+   "semente": 5021,
+   "ref": "brais-norm-11470.wav",
+   "texto": "Se vés á festa, trae a gaita, que hai baile.",
+   "ini": 857440,
+   "fin": 893920
+  },
+  {
+   "escala": 0.85,
+   "f0_media": 1.1,
+   "f0_rango": 1.195,
+   "semente": 5022,
+   "ref": "brais-norm-11535.wav",
+   "texto": "A miña nai sempre dicía que a lúa nova trae choiva.",
+   "ini": 897920,
+   "fin": 943680
+  },
+  {
+   "escala": 0.952,
+   "f0_media": 1.097,
+   "f0_rango": 1.355,
+   "semente": 5023,
+   "ref": "brais-norm-08497.wav",
+   "texto": "Levaba tres días sen saír da casa co catarro.",
+   "ini": 947680,
+   "fin": 982880
+  },
+  {
+   "escala": 0.947,
+   "f0_media": 0.942,
+   "f0_rango": 1.085,
+   "semente": 5024,
+   "ref": "brais-norm-11781.wav",
+   "texto": "Pois eu vin a túa curmá na feira o outro día.",
+   "ini": 986880,
+   "fin": 1023040
+  },
+  {
+   "escala": 1.096,
+   "f0_media": 1.031,
+   "f0_rango": 0.981,
+   "semente": 5025,
+   "ref": "brais-norm-10814.wav",
+   "texto": "Isto non se fai así, hai que ter paciencia.",
+   "ini": 1027040,
+   "fin": 1064800
+  },
+  {
+   "escala": 0.901,
+   "f0_media": 1.023,
+   "f0_rango": 0.997,
+   "semente": 5026,
+   "ref": "brais-norm-12290.wav",
+   "texto": "Deume o recado para ti, pero esquecinme del.",
+   "ini": 1068800,
+   "fin": 1101760
+  },
+  {
+   "escala": 0.858,
+   "f0_media": 1.015,
+   "f0_rango": 1.183,
+   "semente": 5027,
+   "ref": "brais-norm-08047.wav",
+   "texto": "Vai frío, pero o sol xa quenta un pouco.",
+   "ini": 1105760,
+   "fin": 1137120
+  },
+  {
+   "escala": 1.095,
+   "f0_media": 0.973,
+   "f0_rango": 1.238,
+   "semente": 5028,
+   "ref": "brais-norm-08047.wav",
+   "texto": "Compramos unha manta de la para o inverno.",
+   "ini": 1141120,
+   "fin": 1176000
+  },
+  {
+   "escala": 1.101,
+   "f0_media": 1.078,
+   "f0_rango": 0.925,
+   "semente": 5029,
+   "ref": "brais-norm-12932.wav",
+   "texto": "Moi boas, como vai iso? Ben, grazas, e vós?",
+   "ini": 1180000,
+   "fin": 1217120
+  },
+  {
+   "escala": 0.921,
+   "f0_media": 0.886,
+   "f0_rango": 1.306,
+   "semente": 5030,
+   "ref": "brais-norm-11470.wav",
+   "texto": "O viño deste ano saíu mellor ca o do ano pasado.",
+   "ini": 1221120,
+   "fin": 1259520
+  },
+  {
+   "escala": 1.058,
+   "f0_media": 1.108,
+   "f0_rango": 1.231,
+   "semente": 5031,
+   "ref": "brais-norm-12290.wav",
+   "texto": "Díxenlle que non, e el marchou todo enfadado.",
+   "ini": 1263520,
+   "fin": 1301280
+  },
+  {
+   "escala": 1.113,
+   "f0_media": 0.936,
+   "f0_rango": 1.398,
+   "semente": 5032,
+   "ref": "brais-norm-08334.wav",
+   "texto": "Temos que arranxar o tellado antes de que veñan as choivas.",
+   "ini": 1305280,
+   "fin": 1350400
+  },
+  {
+   "escala": 1.098,
+   "f0_media": 1.09,
+   "f0_rango": 1.36,
+   "semente": 5033,
+   "ref": "brais-norm-11535.wav",
+   "texto": "Pasade, pasade, que aínda queda polbo na pota.",
+   "ini": 1354400,
+   "fin": 1391520
+  },
+  {
+   "escala": 1.144,
+   "f0_media": 0.919,
+   "f0_rango": 0.939,
+   "semente": 5034,
+   "ref": "brais-norm-12932.wav",
+   "texto": "E logo, que tal a colleita das patacas?",
+   "ini": 1395520,
+   "fin": 1428480
+  },
+  {
+   "escala": 0.946,
+   "f0_media": 0.971,
+   "f0_rango": 1.295,
+   "semente": 5035,
+   "ref": "brais-norm-08497.wav",
+   "texto": "Ata a semana que vén, se Deus quere.",
+   "ini": 1432480,
+   "fin": 1461920
+  }
+ ]
+}

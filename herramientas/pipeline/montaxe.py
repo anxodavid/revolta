@@ -100,7 +100,8 @@ def _fonte(tam, fonte=None):
 
 def _rotulo(r):
     """Capa RGBA (OHxOW) co texto do rótulo: liña pequena opcional (r['sub'], p. ex. "Capítulo II") e o título
-    (r['texto']), centrados, en branco cálido cunha sombra suave para que se lean sobre calquera imaxe."""
+    (r['texto']), centrados, en branco cálido cunha sombra suave e unha banda escura difusa detrás (r['banda'],
+    opacidade 0,30 por defecto) para que se lean sobre calquera imaxe."""
     from PIL import ImageDraw
     capa = Image.new('RGBA', (OW, OH), (0, 0, 0, 0))
     d = ImageDraw.Draw(capa)
@@ -109,7 +110,14 @@ def _rotulo(r):
     liñas = [(r['sub'], f2)] if r.get('sub') else []
     liñas.append((r['texto'], f1))
     alto = sum(d.textbbox((0, 0), t, font=f)[3] + 18 for t, f in liñas)
-    y = int(OH * r.get('y', 0.5)) - alto // 2
+    y = y0 = int(OH * r.get('y', 0.5)) - alto // 2
+    ancho = max(d.textbbox((0, 0), t, font=f)[2] for t, f in liñas)
+    # Gauntlet 3: banda escura moi difusa detrás do bloque de texto (r['banda'] = opacidade): sen ela, un título
+    # sobre escuma, ceo ou néboa claros perdía contraste (proba: probas/visual_rotulo_proba.py)
+    banda = Image.new('RGBA', (OW, OH), (0, 0, 0, 0))
+    ImageDraw.Draw(banda).rounded_rectangle(((OW - ancho) // 2 - 90, y0 - 45, (OW + ancho) // 2 + 90, y0 + alto + 35),
+                                           radius=60, fill=(0, 0, 0, int(255 * r.get('banda', 0.30))))
+    banda = banda.filter(ImageFilter.GaussianBlur(45))
     sombra = Image.new('RGBA', (OW, OH), (0, 0, 0, 0)); ds = ImageDraw.Draw(sombra)
     for t, f in liñas:
         w = d.textbbox((0, 0), t, font=f)[2]
@@ -118,7 +126,7 @@ def _rotulo(r):
         d.text((x, y), t, font=f, fill=(245, 238, 225, 255))
         y += d.textbbox((0, 0), t, font=f)[3] + 18
     sombra = sombra.filter(ImageFilter.GaussianBlur(6))
-    return np.asarray(Image.alpha_composite(sombra, capa), np.float32)
+    return np.asarray(Image.alpha_composite(Image.alpha_composite(banda, sombra), capa), np.float32)
 
 
 def _crop(mov, u):

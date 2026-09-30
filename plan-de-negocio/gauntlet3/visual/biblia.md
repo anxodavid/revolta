@@ -102,6 +102,10 @@ Reglas de rotación:
   paisaje; durmir 40 % paisaje, 30 % bodegón y detalle, 30 % resto.
 - Una acción concreta por plano (remover el pote, encender una vela, cerrar una puerta, hilar, amasar, mirar al
   mar), no "gente de pie". La referencia gana porque cada plano hace algo.
+- **Personas en pantalla** (con el tope de la sección 5: una a tres): en el gancho y la transición, **≥ 70 %** de los
+  planos con alguien haciendo algo (o sus manos); en calma, ≥ 50 %; en durmir, ≤ 30 % (paisaje, bodegón, detalle).
+  El crítico ciego de la ronda 1 del Gauntlet 2 dio la victoria a la referencia porque en nuestra hoja "8 de 12
+  fotogramas eran paisajes o B-roll vacío"; en la referencia hay personas en ~14 de cada 16 (storyboard).
 
 **Topes por arquetipo** (los cuenta la puerta de CLIP en todo el episodio, `revisor.ARQUETIPOS`; además, dos planos
 del mismo arquetipo tienen que estar al menos a 5 planos de distancia):

@@ -56,3 +56,28 @@ Lo que vio Claude en las imágenes (juicio de Claude, no de una persona):
   vez de lareira, una farola junto al cruceiro. Florence-2 (ventanas, farolas) y la lista de la puerta deben pararlos.
 - "a traditional village in Galicia, Spain, stone houses" dio una aldea de piedra con tejado gris verosímil
   (1 imagen): **la palabra "Galicia, Spain" no confunde a SDXL** como supuse; se corrige la biblia (se desaconsejaba).
+
+## Gradación por fase (`imaxes.graduar`, sustituye la igualación a la media del episodio)
+
+- La igualación de la ronda 3 (transferencia de media y desviación en YCbCr hacia la media del episodio, saturación
+  0,85) es justo lo que aplanaba la luz: llevaba el plano de lumbre y el de mediodía al mismo gris. Ahora cada imagen
+  conserva su luz y solo se corrigen los extremos: si la luminancia media se sale del rango de su fase, una gamma la
+  lleva al borde (no a la media); contraste alrededor de su propia media y brillo de `curva.py`; nivel de negro por
+  fase; saturación por fase con tope de croma; virado común muy ligero.
+- Prueba con 6 fotogramas de la ronda 3 (antes/después mirado por Claude): el plano de durmir (luminancia 0,415) baja
+  a 0,31 con gamma 1,37, contraste 0,92 y saturación 0,80; el del gancho sube el contraste a 1,07. **Primer intento
+  con negros levantados (toe 0,012) en todas las fases: lavaba el "negro profundo" del gancho**; ahora el nivel de
+  negro es por fase (0 en el gancho, 0,02 al durmir).
+- **Suavizado**: con una media móvil de ±3 planos, en una hoja de 16 planos (4 por fase) se mezclaban fases enteras;
+  ahora la ventana va en palabras del guion (±60, ~30 s de narración): solo mezcla cerca de los cambios de fase.
+
+## Rótulos y grano (`montaxe.py`)
+
+- Fotograma de prueba (`probas/visual_rotulo_proba.py`) con el título sobre una carballeira nocturna y sobre una costa
+  al atardecer: sobre lo oscuro se lee bien; sobre espuma y cielo claros el título perdía contraste. Se añade una
+  **banda oscura muy difusa** detrás del bloque de texto (opacidad 0,30, desenfoque 45 px): se lee en los dos casos sin
+  que se vea una caja (juicio de Claude mirando los fotogramas).
+- **Grano de película** opcional (`MONTAXE_GRAO`, 0 por defecto): ruido gaussiano a media resolución (grano de ~2 px),
+  6 texturas alternadas cada 2 fotogramas, más fuerte en tonos medios. Al 3 % se ve "sucio" en el cielo; al 1,5 % es
+  sutil. **No se activa por defecto** hasta medir su coste en bitrate (x264 CRF 22 con tope de 1,4 Mb/s: el grano es
+  lo primero que el codificador se come y lo que más bits gasta) [S].

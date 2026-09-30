@@ -133,7 +133,7 @@ TIPO_FRASE = {   # tipo de plano (gramática da biblia) -> fórmula de cámara s
     'xeral': 'wide establishing shot of', 'contraluz': 'backlit silhouette shot of', 'bodegon': 'still life of',
     'paisaxe': 'wide landscape of',
 }
-CAMARA_RX = r'\b(close-up|closeup|medium shot|wide shot|establishing|still life|detail|landscape|silhouette|overhead|portrait|long shot|full shot)\b'
+CAMARA_RX = r'\b(close-up|closeup|medium shot|wide shot|establishing|still life|detail|landscape|silhouette|backlit|overhead|portrait|long shot|full shot)\b'
 # Correccións ao reintentar, segundo o motivo do rexeitamento. A de iconografía vai ao principio (pesa máis) desde
 # o 2.º intento; as colas, ao final desde o intento INTENTO_PRUDENTE, e só para o seu motivo (Gauntlet 2: a cola de
 # "figuras de corpo enteiro" engadíase sempre, tamén a paisaxes rexeitadas por tellados).

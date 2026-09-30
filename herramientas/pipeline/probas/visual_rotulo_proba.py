@@ -20,7 +20,7 @@ def main():
     texto = args[2] if len(args) > 2 else 'As meigas de verdade'
     sub = args[3] if len(args) > 3 else 'Cousas de Galiza para durmir'
     if '--grao' in sys.argv:
-        montaxe.GRAO = max(montaxe.GRAO, 0.03)
+        montaxe.GRAO = max(montaxe.GRAO, 0.015)
     rot = {'t0': 0.0, 't1': 10.0, 'texto': texto, 'sub': sub, 'y': 0.46, 'tam': 60, 'fundido': 0.8}
     montaxe._init([img], None, [rot])
     esc = [{'b0': 0.0, 'b1': 10.0, 'vis': (0.0, 10.0), 'movemento': 'zoom_in', 'xf': 1.0}]
