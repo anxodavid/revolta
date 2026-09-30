@@ -343,11 +343,13 @@ def repetida(f, descricion, aceptadas):
 # ------------------------------------------------------------------ gradación por fase
 # Obxectivo de cada fase (biblia visual): rango de luminancia media (0-1, sRGB) e saturación. A luz de cada imaxe
 # consérvase: só se corrixen os extremos (unha imaxe fóra do rango lévase ata o bordo, non á media do episodio).
+# croma = media de |RGB - luminancia|: nas 55 imaxes da comparativa, mediana 0,043 e máximo 0,099 (un prado verde ao sol);
+# os "verdes de videoxogo" da ronda 2 dan 0,057 despois da brétema da montaxe. O tope só actúa nos extremos.
 LOOK = {   # toe: nivel de negro (0 = negros profundos do claroscuro; máis alto = negros levantados, baixo contraste)
-    'gancho':     {'lum': (0.13, 0.45), 'sat': 1.00, 'croma_max': 0.16, 'toe': 0.000},
-    'transicion': {'lum': (0.25, 0.58), 'sat': 0.97, 'croma_max': 0.14, 'toe': 0.008},
-    'calma':      {'lum': (0.18, 0.48), 'sat': 0.92, 'croma_max': 0.13, 'toe': 0.012},
-    'durmir':     {'lum': (0.08, 0.30), 'sat': 0.80, 'croma_max': 0.10, 'toe': 0.020},
+    'gancho':     {'lum': (0.13, 0.45), 'sat': 1.00, 'croma_max': 0.100, 'toe': 0.000},
+    'transicion': {'lum': (0.25, 0.58), 'sat': 0.97, 'croma_max': 0.085, 'toe': 0.008},
+    'calma':      {'lum': (0.18, 0.48), 'sat': 0.92, 'croma_max': 0.075, 'toe': 0.012},
+    'durmir':     {'lum': (0.08, 0.30), 'sat': 0.80, 'croma_max': 0.060, 'toe': 0.020},
 }
 FILME = {'ombro': 0.86, 'sombra': (-0.008, 0.002, 0.010), 'luz': (0.012, 0.004, -0.010)}
 SUAVIZADO = 60   # xanela triangular de ±60 palabras (~30 s de narración) nos parámetros: as fases cambian sen saltos
