@@ -133,7 +133,8 @@ stone pillars") en vez de nombrarlo, y poner la lousa y el granito al principio 
 
 Las imágenes son la etapa más cara del vídeo largo. Con torch 2.10.0+cpu (CPU con AVX512 y AMX-BF16, 4 hilos) una
 imagen tarda **25-26 s** (Gauntlet 2: mediana 18,1 s en 63 imágenes, con otro contenedor y otra versión de torch).
-Desglose medido (`$SCRATCH/tmp/perfil_*.py`, con el candado):
+Desglose medido con un script ad hoc (pipeline con `output_type='latent'` y el VAE aparte, 1024x576, con el
+candado; no se guardó):
 
 | Variante | Tiempo |
 |---|---|
