@@ -23,8 +23,9 @@ Como decide, por frase (premisa = feito ou par de feitos do dossier, hipótese =
 Modos:
 - `gancho` (gancho e resumo, o que se escoita no primeiro minuto): TODAS as frases teñen que estar apoiadas
   (implicación >= E_MIN, ou coincidencia >= COB_MIN), e ademais pasar as regras duras.
-- `relato` (parágrafos para durmir): as frases descritivas sen nomes, tempo nin desenlace poden ser ambientais
-  (chuvia, pedra, camiños); o resto, como no gancho. E polo menos unha frase do parágrafo ten que contar o feito.
+- `relato` (parágrafos para durmir): só as frases sen nomes, sen persoas (ACTORES), sen tempo longo e sen desenlace
+  poden ser de ambiente (chuvia, pedra, camiños), e como moito unha por parágrafo; o resto, como no gancho. E polo
+  menos unha frase do parágrafo ten que contar o feito.
 
 Que NON garante: o NLI non entende ben o galego e a coincidencia léxica é feble; unha frase falsa construída só
 con palabras do dossier pode pasar. Rexeita de máis antes que de menos (un falso positivo custa unha
@@ -40,6 +41,9 @@ E_MIN, COB_NLI, COB_NLI_GANCHO, COB_MIN = 0.6, 0.5, 0.6, 0.8
 DESENLACE = ['venc', 'venceu', 'gañ', 'gana', 'triunf', 'vitori', 'vitorio', 'derrot', 'fracas', 'rendi', 'rendeu',
              'liberou', 'liberad', 'conquist', 'perdeu', 'perderon', 'perdid', 'sometid', 'someteu', 'acabou co',
              'puxo fin', 'rematou co']
+ACTORES = re.compile(r'\b(senor|labreg|xente|irmand|vasal|nobre|nobrez|campes|arcebisp|bisp|cleri|artes|marin|burgu|'
+                     r'rebel|testem|famili|home|homes|muller|pobo|vecin|soldad|tropa|cabaleir|conde|rei|monx|coeng|'
+                     r'escrib|malfeit|persoa|xentes|todos|eles|elas|quen)', re.I)
 TEMPO_LONGO = r'\b(s[eé]culos?|para sempre|nunca|xamais|eternamente|milenios?|d[eé]cadas enteiras|toda a vida)\b'
 STOP = set('''a o as os un unha uns unhas de do da dos das no na nos nas ao aos á ás e ou que se non máis mais pero
 con sen por para polo pola polos polas en entre como cando onde xa moi tan tamén aínda despois antes desde ata
@@ -130,7 +134,10 @@ class Verificador:
         motivos = []
         ds = desenlaces(f)
         tempo = re.search(TEMPO_LONGO, _sen_acentos(f).replace('seculo', 'século'))
-        esixida = modo == 'gancho' or ten_nome(f) or tempo or ds
+        # relato: unha frase que fala de persoas (actores) afirma algo delas e ten que estar apoiada; só as frases
+        # sen nomes, sen actores, sen tempo longo e sen desenlace (chuvia, pedra, camiños) poden ser de ambiente
+        actor = bool(ACTORES.search(_sen_acentos(f)))
+        esixida = modo == 'gancho' or ten_nome(f) or tempo or ds or actor
         if ds:
             dossier_ds = set(desenlaces(' '.join(self.feitos)))
             falta = [d for d in ds if d not in dossier_ds]
@@ -149,8 +156,9 @@ class Verificador:
                     motivos.append('desenlace distinto do que di o dossier')
         if esixida and not apoiada:
             motivos.append('afirmación sen apoio no dossier' if modo == 'gancho' else
-                           'nome, tempo longo ou desenlace sen apoio no dossier')
+                           'fala de persoas, nomes, tempo longo ou desenlace sen apoio no dossier')
         r['ok'] = not motivos
+        r['ambiente'] = not esixida and not apoiada
         r['motivo'] = '; '.join(motivos)
         if feito_propio is not None:
             r['conta_o_feito'] = self.nli(feito_propio, f)['E'] >= 0.5 or cobertura(f, feito_propio) >= 0.6
@@ -160,6 +168,8 @@ class Verificador:
         fr = [s for s in re.split(r'(?<=[.!?…])\s+', ' '.join(t.split())) if s.strip()]
         rs = [self.frase(f, modo, feito_propio) for f in fr]
         prob = [f"Esta frase non se pode afirmar co dossier ({r['motivo']}): {r['frase']}" for r in rs if not r['ok']]
+        if modo == 'relato' and sum(1 for r in rs if r.get('ambiente')) > 1:   # (modo 'invitacion': sen tope)
+            prob.append('Como moito unha frase de ambiente por parágrafo: quita as frases de recheo.')
         if feito_propio is not None and rs and not any(r.get('conta_o_feito') for r in rs):
             prob.append('O parágrafo non conta o feito que se pediu: cóntao con palabras parecidas ás do feito.')
         return prob, rs

@@ -375,7 +375,7 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
                        feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
     resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, modo='relato', reserva='',
                        tema=tema['tema'], fragmento=tema['fragmento'], dossier=dossier); rex.append(r)
-    invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, previo=gancho + '\n\n' + resumo, modo='relato',
+    invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, previo=gancho + '\n\n' + resumo, modo='invitacion',
                       reserva=INVITACION_FIXA, tema=tema['tema']); rex.append(r)
     fixo = len(tema['aviso'].split()) + len(FORMULA.split())
     resto = tema['palabras'] - fixo - sum(len(x.split()) for x in (gancho, resumo, invit))
@@ -390,11 +390,22 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
     seleccion_llm = list(ids)
     if len(ids) < nmin:            # reserva determinista: os últimos feitos do dossier, na orde da ficha
         ids = list(range(max(0, len(fs) - nmax), len(fs)))
-    ids = ids[:nmax]
+    ids = sorted(ids[:nmax])      # a ficha ten os feitos en orde cronolóxica: o relato respéctaa (ronda 3)
     info['seleccion_feitos'] = {'resposta_llm': sel, 'escollidos_llm': [i + 1 for i in seleccion_llm],
                                 'usados': [i + 1 for i in ids], 'reserva': ids != seleccion_llm[:nmax]}
     pars, anterior = [], resumo
-    for k, i in enumerate(ids):
+    k = -1
+    while True:
+        k += 1
+        if k >= len(ids):
+            # os bloques que van á reserva literal son máis curtos: se falta texto, engádense os feitos seguintes
+            # do dossier (en orde) ata achegarse á extensión obxectivo
+            feitas = len(' '.join([tema['aviso'], gancho, resumo, invit] + pars).split()) + len(FORMULA.split())
+            resto_ids = [j for j in range(len(fs)) if j not in ids and j not in ig and j > max(ids)]
+            if feitas >= 0.9 * tema['palabras'] or not resto_ids:
+                break
+            ids.append(resto_ids[0]); info['seleccion_feitos'].setdefault('engadidos_pola_extension', []).append(resto_ids[0] + 1)
+        i = ids[k]
         ton = TONS[min(k, len(TONS) - 1)]
         ult = ' '.join(f['texto'] for f in partir(anterior)[-2:])
         p, r = bloque('bloque_parrafo', tema, backend, info, etapa, previo='\n\n'.join([gancho, resumo, invit] + pars),
@@ -415,6 +426,8 @@ def modo_parrafo(k, tema, info):
         return None, None
     if x == 'gancho':
         return 'gancho', None
+    if x == 'invitacion':
+        return 'invitacion', None
     if x.startswith('feito:'):
         return 'relato', literal(feitos(tema)[int(x[6:]) - 1])
     return 'relato', None
