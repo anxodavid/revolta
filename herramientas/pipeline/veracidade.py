@@ -15,6 +15,8 @@ Como decide, por frase (premisa = feito ou par de feitos do dossier, hipótese =
      só pasa se esa MESMA forma da palabra está nun feito do dossier ("derrotou" non se ancora en "foi
      derrotada") e o NLI dá implicación >= 0,7 dese feito. "A irmandade venceu" non pasa nunca: o dossier só di
      "foi derrotada".
+   - QUEN FIXO QUE: para os verbos de acción (derrubar, reconstruír, vencer, regresar...), o actor que os precede
+     na frase ten que ser da mesma clase (pobo / señores) que nalgún feito con ese verbo.
    - NOMES e TEMPO: unha frase con nome propio ou expresión de tempo longo (séculos, para sempre, nunca...)
      ten que estar implicada (NLI) ou coincidir (léxico) cun feito.
    - CONTRADICIÓN: só se usa no desenlace (contra os feitos que tamén falan de desenlaces). Contra o dossier
@@ -44,6 +46,30 @@ DESENLACE = ['venc', 'venceu', 'gañ', 'gana', 'triunf', 'vitori', 'vitorio', 'd
 ACTORES = re.compile(r'\b(senor|labreg|xente|irmand|vasal|nobre|nobrez|campes|arcebisp|bisp|cleri|artes|marin|burgu|'
                      r'rebel|testem|famili|home|homes|muller|pobo|vecin|soldad|tropa|cabaleir|conde|rei|monx|coeng|'
                      r'escrib|malfeit|persoa|xentes|todos|eles|elas|quen)', re.I)
+# ---- quen fixo que (ronda 3): "os señores ... derrubaron as fortalezas dos irmandiños" pasaba NLI e coincidencia
+# léxica. Regra determinista: para cada verbo de acción da lista, o actor máis próximo á súa esquerda na frase ten
+# que ser da mesma CLASE que nalgún feito do dossier que teña ese verbo.
+CLASES = {'pobo': r'(irmand|labreg|vasal|xente|vecin|campes|artes|marin|burgu|clerig|coeng|monx|pobo|testem|famili)',
+          'señores': r'(senor|nobre|nobrez|arcebisp|bisp|conde|cabaleir|rei)'}
+VERBOS = ['derru', 'botar', 'botou', 'botab', 'derri', 'recon', 'levan', 'asalt', 'casti', 'regre', 'volve', 'volvi',
+          'venc', 'derro', 'march', 'decid', 'manda', 'paga', 'xunta', 'forma', 'decla', 'esixi', 'obrig', 'gober']
+
+
+def papeis(t):
+    """[(verbo, clase do actor máis próximo á esquerda)] dunha frase."""
+    ws = re.findall(r'[a-zñç]+', _sen_acentos(t))
+    out = []
+    for k, w in enumerate(ws):
+        v = next((x for x in VERBOS if w.startswith(x)), None)
+        if not v:
+            continue
+        for j in range(k - 1, -1, -1):
+            cl = next((c for c, rx in CLASES.items() if re.match(rx, ws[j])), None)
+            if cl:
+                out.append((v, cl)); break
+    return out
+
+
 TEMPO_LONGO = r'\b(s[eé]culos?|para sempre|nunca|xamais|eternamente|milenios?|d[eé]cadas enteiras|toda a vida)\b'
 STOP = set('''a o as os un unha uns unhas de do da dos das no na nos nas ao aos á ás e ou que se non máis mais pero
 con sen por para polo pola polos polas en entre como cando onde xa moi tan tamén aínda despois antes desde ata
@@ -160,6 +186,12 @@ class Verificador:
                 cands = [i for i, p in enumerate(self.feitos) if set(ds) & set(desenlaces(p))]
                 if not any(sc[i][1]['E'] >= 0.7 and sc[i][1]['C'] < 0.5 for i in cands):
                     motivos.append('desenlace distinto do que di o dossier')
+        if not r.get('literal'):
+            dossier_pap = {x for p in self.feitos for x in papeis(p)}
+            verbos_d = {v for v, _ in dossier_pap}
+            mal = [f'{c} + {v}' for v, c in papeis(f) if v in verbos_d and (v, c) not in dossier_pap]
+            if mal:
+                motivos.append('quen fixo que non coincide co dossier (' + ', '.join(mal) + ')')
         if esixida and not apoiada:
             motivos.append('afirmación sen apoio no dossier' if modo == 'gancho' else
                            'fala de persoas, nomes, tempo longo ou desenlace sen apoio no dossier')
