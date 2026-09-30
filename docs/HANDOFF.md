@@ -33,6 +33,15 @@ Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
    (JPEG) y la voz (Opus) para no recalcular si se pierde el contenedor.
 4. QA (`qa.md`), vídeo en partes < 50 MB para el repo, tribunal final y documentación.
 
+**Ideas del promotor para después de este vídeo (D15, D16):**
+- **Imágenes de referencia o semilla** para lo que SDXL no conoce (carro de bois, hórreo, pazo, palloza, traje
+  tradicional, armaduras, herramientas): biblioteca de referencias con licencia libre o fotos propias, usadas con
+  img2img, ControlNet (bordes o profundidad) o IP-Adapter, y la puerta CLIP con el campo `clave` para comprobar que el
+  objeto aparece. Búsqueda de la biblioteca: el promotor lanzará un agente barato con el prompt que le pasó Claude.
+- **Animación:** en CPU, paralaje 2,5D con un mapa de profundidad (Depth-Anything-V2-Small, Apache-2.0) y
+  microanimaciones (lume, vela, lluvia, niebla, agua); personas en movimiento con *image-to-video* en GPU alquilada
+  (candidato: Wan 2.2 TI2V-5B, Apache-2.0 [S, verificar]), solo en el gancho, con una puerta de revisión de vídeo.
+
 **Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
 cada agente; lo que estaba en git o en disco no se perdió.
 
