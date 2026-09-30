@@ -307,7 +307,9 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
                       'modelo': m['nome'], 'tokens': ntok, 'truncado': perdido, 'problemas': [],
                       'reserva': k >= MAX_INTENTOS, 'negativo_guiado': neg}
                 if rev is not None:
-                    t = time.time(); rv = rev.revisar(f, prompt=pr, **ctx)
+                    # a reserva é outro motivo: non se lle pide a `clave` do plano (fallo visto na folla r2)
+                    ctx_k = dict(ctx, clave=None) if k >= MAX_INTENTOS else ctx
+                    t = time.time(); rv = rev.revisar(f, prompt=pr, **ctx_k)
                     embs[f.name] = (rv['clip_emb'], rv.get('arquetipo'))
                     it.update({k2: v for k2, v in rv.items() if k2 not in ('ok', 'clip_emb')})
                     it['problemas'] = rv['problemas'] + rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos,
