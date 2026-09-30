@@ -135,3 +135,19 @@ Resultados completos en `$SCRATCH/visual/calib/calibracion.json` (no se sube: ru
 - La carga de la UNet con `safe_open` tensor a tensor tiene un RSS de ~9 GB durante la carga (páginas del fichero
   mapeado más las copias en bf16), no ~5 GB como decía el comentario: las páginas del fichero se pueden liberar, pero
   cuentan mientras se lee.
+
+## Experimento de iconografía (8 prompts, Lightning 4 pasos, `comparativa/iconografia_lightning4.jpg`)
+
+Juicio de Claude mirando las imágenes:
+
+| Qué se pidió | Resultado |
+|---|---|
+| hórreo, 3 variantes: "traditional Galician horreo, a long narrow granite granary raised on stone pillars"; "a horreo in Galicia, Spain, a stone granary on stilts with a small cross"; descripción pieza a pieza (pies de granito con remate de seta, lamas, cruz en el piñón) | **Ninguna**: cabaña de piedra con teito, casa con tejado de hierba, casa de dos plantas con porche |
+| carro de bois con ruedas macizas, 3 variantes (incluido "close-up of the solid round wooden wheel ... made of three joined oak planks") | **Las tres con ruedas de radios** (como los 5 carros de la comparativa) |
+| cruceiro: "a Galician cruceiro, a tall granite stone cross with a carved crucifix on a stepped stone base" | Sí (con una aldea de fondo de casas blancas y tejado rojo pequeño: la puerta tiene que mirarla) |
+| palloza: "a round stone house with a conical thatched straw roof in the misty mountains of Os Ancares" | Sí (más "casa redonda celta" que palloza de planta oval, pero verosímil) |
+
+Conclusión: **el modelo no tiene el concepto** del hórreo ni de la rueda maciza; describirlo mejor no basta. La
+biblia pide no ponerlos como sujeto (mostrar el entorno, el yugo de los bueyes, el carro de lejos). Para tenerlos de
+verdad haría falta un LoRA entrenado con fotos con licencia o fotos propias [S]; queda como problema abierto.
+Tiempo: 31-38 s por imagen (sin nadie más usando la CPU fuera del candado; en la comparativa de la mañana, 47 s).

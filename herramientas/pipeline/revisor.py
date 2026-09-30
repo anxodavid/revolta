@@ -88,7 +88,8 @@ PARES = [
 # pero NON os tellados laranxas e os ciprés apagados polo lavado verde da ronda 3 (neses, CLIP puntúa máis "lousa"):
 # eses quedan para Florence-2. Poucas imaxes malas por par (1-8): son provisionais.
 PAR_MARXE = {'tellados laranxas (CLIP)': 0.045, 'muros encalados (CLIP)': 0.060, 'ciprés (CLIP)': 0.060,
-             'oliveiras (CLIP)': 0.040, 'palmeiras (CLIP)': 0.020, 'rodas de raios (CLIP)': 0.030,
+             'oliveiras (CLIP)': 0.040, 'palmeiras (CLIP)': 0.020,
+             'rodas de raios (CLIP)': 9.0,    # DESACTIVADO: o par estaba invertido; as rodas quedan para Florence ("spoked")
              'paisaxe seca (CLIP)': 0.072, 'eucaliptos (CLIP)': 0.070}
 PAR_PERTINENCIA = 0.15       # (0,20 deixaba fóra a maioría das malas: as similitudes de CLIP-L andan en 0,08-0,30)
 # Conceptos do campo `negativo`: sim("a photo with X") − sim("a photo") no mesmo recorte. Na calibración, as boas

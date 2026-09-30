@@ -79,6 +79,12 @@ Cambios (detalle y medidas en `plan-de-negocio/gauntlet3/aprendizajes/visual.md`
   ligero. Los parámetros se suavizan con los planos vecinos (±60 palabras de guion): no hay saltos entre fases.
   `graduacion.json` guarda lo aplicado a cada imagen.
 - **Puerta v5**: CLIP para la iconografía y la repetición en todo el episodio (punto 4 de la sección siguiente).
+- **Límites medidos** (experimento de iconografía, `plan-de-negocio/gauntlet3/visual/comparativa/`): SDXL-Lightning
+  **no sabe dibujar el hórreo** (tres descripciones: sale una cabaña, una casa con tejado de hierba o una casa de dos
+  plantas) **ni la rueda maciza** del carro del país (ocho carros, todos con radios); el cruceiro y la palloza sí salen.
+  La biblia pide no ponerlos como sujeto. La puerta de CLIP caza los casos foráneos claros (aldea toscana, olivar,
+  palmeras, eucaliptal, paisaje seco) con 0 falsos positivos en 72 imágenes, pero no los tejados naranjas pequeños y
+  apagados (eso queda para Florence-2); el par de ruedas de radios está desactivado porque salía invertido.
 
 ## La puerta de imágenes (`revisor.py`)
 
