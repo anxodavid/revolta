@@ -80,6 +80,9 @@ CABECEIRA = '''\
 #   O poema "María Soliña" de Celso Emilio Ferreiro (morto en 1979) está protexido: nomealo, non recitalo.
 # - Lenda e costume contados como tales ("críase", "contan", "segundo a tradición"); remedios nunca como consello.
 # - Na zona de durmir (desde o minuto dez) nada de intrusións nocturnas, demos, caveiras nin o asalto de Cangas.
+# - Títulos alternativos (contexto.md §8.2, proba A/B): "1617: a meiga que dicía poder pasarlle ao home as dores do
+#   parto | Cousas de Galiza para durmir" (proposta do crítico; máis fiel ao único testemuño sería "…que dixo que
+#   podía…") e "Lendas e verdades das meigas galegas | Cousas de Galiza para durmir".
 id: meigas-de-verdade
 titulo: "As meigas de verdade"
 titulo_youtube: "As meigas de verdade (e por que o conxuro da queimada é de 1967) | Cousas de Galiza para durmir"
