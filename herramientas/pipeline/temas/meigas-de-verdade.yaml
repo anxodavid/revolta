@@ -38,7 +38,7 @@ descricion: |
 creditos:
   - "Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto Nós (Universidade de Santiago de Compostela), licenza Apache-2.0."
   - "Texto e dossier de fontes preparados con intelixencia artificial (Claude, de Anthropic) a partir das fontes citadas. Ningunha persoa os revisou."
-  - "Imaxes xeradas con intelixencia artificial e revisadas por unha porta automática: contido sintético, non son fotografías. Choiva sintetizada por código."
+  - "Imaxes xeradas con intelixencia artificial e revisadas por unha porta automática: contido sintético, non son fotografías. Son ambiente sintetizado por código segundo a escena (choiva, lume, auga, vento, noite, campás); o murmurio da xente faise coa mesma voz sintética."
   - "Conxuro da queimada: primeiro verso, de Mariano Marcos Abalo (1967), obra rexistrada."
 
 # Dossier: un feito por liña, en galego, coa etiqueta das fontes entre corchetes (as etiquetas non se len).
