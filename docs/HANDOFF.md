@@ -19,19 +19,18 @@ Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 | Visual | Hoja de prueba r1 en curso; después, crítico ciego | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
 | Vídeo | Pendiente | `herramientas/pipeline/longo.py` |
 
-**Próximos pasos (en orden):**
-1. Leer los veredictos r1 del guion (`veredictos/guion-r1-formato.md` y `guion-r1-lingua-veracidade.md`) y lanzar la
-   **ronda 2 del guionista** con esas correcciones. Si hace falta llegar a ~30 min, alargar hasta ~4.000 palabras por
-   la parte de dormir. Después, otra ronda de críticos si quedan errores.
-2. **Visual:** hoja r1 (`gauntlet3/visual/r1/`) → crítico visual ciego contra el storyboard de la referencia (el
-   agente visual lo baja con yt-dlp `mweb`) → ajustar.
-3. **Producción** (con el candado de CPU):
-   `source herramientas/pipeline/entorno.sh; cd herramientas/pipeline; flock "$CPU_LOCK" $PY longo.py temas/meigas-de-verdade.yaml --guion ../../plan-de-negocio/gauntlet3/guion/guion-rN.txt --traballo $SCRATCH/longo --saida ../../plan-de-negocio/gauntlet3/video --escenas ../../plan-de-negocio/gauntlet3/video/escenas.json`.
-   La primera vez sale con código 3 tras la voz y deja `$SCRATCH/longo/planos.json`; un agente escribe
-   `escenas.json` (un prompt y un `son` por plano) según `gauntlet3/visual/biblia.md` y `gauntlet3/son/guia-son.md`, y se
-   relanza. Las imágenes tardan ≈ 4 h (unos 130 planos a ≈ 48 s + revisión). Guardar en git las imágenes elegidas
-   (JPEG) y la voz (Opus) para no recalcular si se pierde el contenedor.
-4. QA (`qa.md`), vídeo en partes < 50 MB para el repo, tribunal final y documentación.
+**Estado de la producción (30-09-2026, 22:03 UTC):** guion final `gauntlet3/guion/guion-r3.txt` (3.952 palabras,
+puertas en verde, crítico r2 GANA ajustado); voz sintetizada (31,4 min); 162 planos (`gauntlet3/video/planos.json`);
+lista de planos `gauntlet3/video/escenas.json` (validador sin avisos); puerta de imágenes v7. **Render completo en
+marcha**, desacoplado: `$SCRATCH/longo/lanzar.sh produccion1` (log en `$SCRATCH/longo/produccion1.log`, trabajo en
+`$SCRATCH/longo/w`, límite `IMG_MAX_INTENTOS=4`). Si se corta: `cp gauntlet3/guion/guion-r3.txt $SCRATCH/longo/guion-producion.txt`
+y relanzar `setsid nohup $SCRATCH/longo/lanzar.sh produccionN &` (las etapas hechas se saltan; las imágenes aprobadas
+quedan en `$SCRATCH/longo/w/imaxes/revision.json`). El script `lanzar.sh` hace
+`flock "$CPU_LOCK" $PY longo.py temas/meigas-de-verdade.yaml --guion $SCRATCH/longo/guion-producion.txt --traballo $SCRATCH/longo/w --saida ../../plan-de-negocio/gauntlet3/video --escenas ../../plan-de-negocio/gauntlet3/video/escenas.json`
+desde `herramientas/pipeline` tras `source entorno.sh`. Si el contenedor se perdió: `instalar.sh` y regenerar (voz ≈ 11 min).
+
+**Después del render:** QA (`gauntlet3/video/qa.md`), vídeo en partes < 50 MB para el repo, página privada para verlo,
+tribunal final breve y documentación. La hoja visual r2 no pasó por crítico (se juzgará en el tribunal con el vídeo).
 
 **Ideas del promotor para después de este vídeo (D15, D16):**
 - **Imágenes de referencia o semilla** para lo que SDXL no conoce (carro de bois, hórreo, pazo, palloza, traje
