@@ -36,7 +36,7 @@ CLIP_MODEL = os.environ.get('CLIP_MODEL', 'openai/clip-vit-large-patch14')
 MAN_DIST = 0.14
 MAN_DETALLE = 0.12   # sen corpos na imaxe, unha man máis ancha ca isto (fracción do ancho) é un primeiro plano
 CORPOS_MAX = 5
-VERSION = 6   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
+VERSION = 7   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
 
 # (etiqueta, expresión regular sobre a descrición en inglés e os obxectos de <OD>)
 LISTA = [
@@ -130,6 +130,11 @@ CLAVE_MARXE = 0.020   # r1: colle 7 dos 12 elementos que faltaban, cunha falsa a
 # Versión 6: na fase de durmir, nada de lume vivo: fracción de píxeles con luminancia > 0,85 (as brasas quedan
 # por debaixo; as chamas amarelas, por riba). Na r1: o caldeiro con chamas do plano 16 daba 0,97 %.
 ALTAS_LUCES_DURMIR = 0.0012   # r1: fogueira 0,36 %, caldeiro 2,2 %, vela 0,15-1,4 %; lúa e néboa 0,03-0,10 %
+# Versión 7 (orquestador, tras a folla r2): a fracción de altas luces daba falsos positivos ao durmir (flores amarelas
+# xunto a unha xanela 0,27-0,98 %, a lúa 0,29 %) e 15 rexeneracións inútiles. Agora só contan as altas luces COR DE
+# CHAMA (laranxa: R >= 0,80, 0,25 <= G <= 0,85, B <= 0,45, R-G >= 0,12). Medido: flores e lúa 0,00 %; lareira con
+# chamas 1,1 %; queimada 6,0 %; fogueira de r1 0,33 %; vela nun bodegón 0,40 %; brasas (máis escuras) por debaixo.
+LUME_DURMIR = 0.0025
 # Repetición: coseno dos embeddings medios. Na calibración, prompts distintos ata 0,879 (p99 0,866); o mesmo prompt
 # noutro modelo ou estilo, mediana 0,864 (p10 0,80). 0,90: só as imaxes case iguais en contido e composición.
 SIM_CLIP = 0.90
@@ -247,6 +252,15 @@ def _lista_negativo(negativo):
     return [x.strip() for x in negativo if x and x.strip()][:6]
 
 
+def lume_quente(png):
+    """Fracción de píxeles cor de chama (laranxa brillante): o lume vivo, non a lúa nin unha xanela."""
+    import numpy as np
+    from PIL import Image
+    a = np.asarray(Image.open(png).convert('RGB').resize((672, 384)), np.float32) / 255
+    R, G, B = a[..., 0], a[..., 1], a[..., 2]
+    return float(((R >= 0.80) & (G >= 0.25) & (G <= 0.85) & (B <= 0.45) & ((R - G) >= 0.12)).mean())
+
+
 def altas_luces(png, umbral=0.85):
     """Fracción de píxeles con luminancia (sRGB, 0-1) por riba de `umbral`: chamas vivas, ceos brillantes."""
     import numpy as np
@@ -350,8 +364,10 @@ class Revisor:
         pr, det = self.mans(png)
         luces = altas_luces(png)
         det['altas_luces'] = round(luces, 4)
-        if fase == 'durmir' and luces > ALTAS_LUCES_DURMIR:
-            pr.append(f'lume vivo ao durmir ({luces:.1%} de altas luces)')
+        quente = lume_quente(png)
+        det['lume_quente'] = round(quente, 4)
+        if fase == 'durmir' and quente > LUME_DURMIR:
+            pr.append(f'lume vivo ao durmir ({quente:.1%} de altas luces cor de chama)')
         if self.vlm is not None:
             p2, d2 = self.anacronismos(png)
             pr += p2; det.update(d2)
