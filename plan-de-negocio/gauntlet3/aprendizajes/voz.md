@@ -23,6 +23,31 @@ Informe completo: [`../voz/informe.md`](../voz/informe.md).
   empate: el ASR no distingue *pO^rta* de *po^rta*. El motivo para cambiar es la coincidencia con el entrenamiento,
   no el WER.
 
+## Referencias de estilo
+
+- **La referencia pesa poco con los parámetros de siempre** (alpha 0,3, beta 0,7). Con cada una de las 40 grabaciones
+  de Brais como referencia, el mismo pasaje sale con arousal 0,557-0,644 y 7,08-7,46 síl/s, aunque las grabaciones
+  van de 0,42 a 0,68 y de 5,2 a 8,7 síl/s. Lo que sí pasa es la variación de la F0 (correlación humano-sintético 0,83);
+  el arousal a medias (0,52) y la velocidad casi nada (0,16).
+- Las grabaciones "calmas" (la más lenta, la de F0 más estrecha) bajan el arousal sintético ~0,05-0,11 frente a las
+  "vivas" solo si además se baja `beta` (0,3-0,4) y se ralentiza (`escala`).
+- Una referencia puede meter artefactos con beta bajo: con 15278 ("Informounos de que o caso era grave…"), beta 0,3 y
+  escala 1,25 la voz repite sílabas al empezar frase ("di di diante", "co contan"): WER 0,105. Probar el WER de cada
+  referencia en su punto de la curva, no solo con los parámetros neutros.
+- Los vectores medios de varias grabaciones funcionan y son más estables: la media de 3 vivas dio el mejor WER de las
+  vivas (0,045).
+
+## Qué mueve el arousal (modelo de audEERING, 7 frases)
+
+- **El ritmo es la palanca grande**: escala 1,3 → arousal −0,089 (y HNR +2,2 dB, jitter −0,8: la voz lenta sale más
+  limpia). El rango de F0: ±0,02 por ±0,25. `f0_media`, `beta`: ±0,01. `enerxia`, `embedding_scale`, `alpha`, `pasos`:
+  casi nada. El modelo normaliza el volumen, así que la ganancia no cuenta.
+- Con todo junto (curva de la ronda 1) el arousal baja de 0,63 a 0,44 de forma monótona en los 5 puntos, igual que la
+  desviación de la F0 (4,5 → 2,5 st), la velocidad (7,6 → 5,4 síl/s) y las palabras/min con pausas (183 → 119).
+- Ampliar el rango de la F0 (1,2) mete tramos por debajo de 75 Hz en los finales de frase (1-3 % frente al 0,14 % de
+  las grabaciones humanas): riesgo de voz cascada. Solución en `voz_st2.py`: la manipulación no baja ningún tramo de
+  80 Hz si no lo estaba ya.
+
 ## Medir con Whisper
 
 - **Whisper se salta frases enteras en audio largo con silencios** (33 frases seguidas con 1 s entre ellas, sin VAD y
@@ -30,6 +55,9 @@ Informe completo: [`../voz/informe.md`](../voz/informe.md).
   palabras seguidas que caen en sitios distintos en cada versión. Para comparar voces, WER **frase a frase**. Ojo con
   el QA de `longo.py`, que mide sobre la mezcla entera: puede dar WER altos que no son de la voz.
 - Una frase corta cuesta lo mismo que 30 s (la ventana fija de Whisper): ~6,5 s de CPU por frase en este contenedor.
+- El WER tiene un suelo que no es de la voz: homófonos en habla continua ("casa sen lareira" / "casas en lareira",
+  "quen a atopa" / "quen atopa", "auga mansa" / "augamansa"). Con un pasaje de 120 palabras son ~0,04 de WER fijo;
+  conviene revisar las hipótesis antes de culpar a la voz.
 
 ## Controles de la voz (StyleTTS2)
 
