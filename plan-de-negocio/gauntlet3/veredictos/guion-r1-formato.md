@@ -271,4 +271,87 @@ escena (≈ 10:00, donde empieza la fase de calma). Así el permiso para dormirs
       feiticeira" y las frases en galego de los procesos (l. 65) encajan mejor al final del cap. III, que habla de los
       papeles.
 
-*(Mejoras 8 y siguientes, qué conservar y señales para el crítico B: en el bloque siguiente de este fichero.)*
+### 8. Menos "segundo" y menos Pousa (l. 49-59, sobre todo 55-59)
+
+El rigor es nuestra ventaja sobre RO, pero no hace falta decir en voz alta la nota al pie de cada frase. En las l. 55-59
+(7:12-8:30) hay seis atribuciones en 186 palabras: "Segundo o Consello da Cultura Galega", "Rodrigo Pousa atopou",
+"Para Pousa", "O investigador Diego Valor Bravo di", "Pousa conta" y "Segundo Pousa". Pousa sale 9 veces en el guion y
+"segundo", 15. La propuesta es presentar cada fuente una vez por bloque, con su profesión, y después seguir con "o mesmo
+historiador" o un pronombre, juntando en una frase dos ideas del mismo autor. Antes hay que comprobar con la puerta de
+veracidad que cada frase sigue apoyándose en su hecho: H1 ancla nombres, y no hace falta atribuir cada frase.
+
+### 9. Para la voz sintética
+
+- **Velocidad del gancho.** Va a 182 palabras/min (curvas r1 y r2 de la pieza VOZ): un 30 % más rápido que HD (137) y
+  RO (144). Con la densidad actual, no se puede seguir. En el guion lo arregla la mejora 2 (menos números en el
+  gancho). Para la pieza VOZ: considerar ≤ 160 palabras/min en el gancho [S].
+- **Nombres con riesgo.**
+  - Henningsen sale dos veces (l. 71 y 95): mejor una o ninguna.
+  - Castroviejo y Alonso del Real salen de la zona lenta con la mejora 1.
+  - Riesgo de pronunciación: Feijoo y María Feijoa, Hueste, Colmenero, Guiomar Douteiro, Mourence y Maquieira.
+  - "Reboredo" es un lugar (l. 51) y también el apellido de un antropólogo (l. 119), y con la mejora 1 quedan a 2-3 min
+    uno del otro. Basta "na fonte da Nogueira": sobra "no lugar de Reboredo".
+- **l. 27: pronombres ambiguos al oído.** En "chegou Ana González a dicirlle que o home dela, Rodrigo Colmenero,
+  andaba chamándoa meiga" no se sabe quién es "dela" ni a quién se refiere "-a". Es la testigo misma (F061), y el
+  dossier tiene su respuesta (F062, sin nombres nuevos), que añade un momento humano:
+
+  > O home dunha veciña, Rodrigo Colmenero, andaba chamando meiga a Ana González. Un día, esa veciña estaba á porta
+  > debandando, e chegou Ana González a dicirllo. A veciña respondeulle que se fose con Deus, e que se entendese con el.
+
+- **l. 25.** "O gato non o puideron coller: ninguén o deu collido" dice lo mismo dos veces. Basta con "Ninguén o deu
+  collido, e escapou por un burato da porta."
+- **l. 21.** El lapsus del papel solo funciona si el oído sabe que es una corrección escrita:
+
+  > No papel quedou escrita ata a emenda de quen o escribía: que trouxese auga, digo, leite.
+
+- **l. 91.** La copla "se arraiar, se arraiará, tódalas meigas levará" es difícil de decir y de entender. Si falla la
+  prueba de ASR, se deja solo el refrán "en san Xoán, as bruxas fuxirán". En la l. 85, "abrancazadas" es una palabra
+  rara para la voz.
+
+### 10. Para el promotor, no para la ronda 2 sin su visto bueno: una línea suave de comunidad
+
+Los canales de dormir en inglés (*Sleepless Historian*, por ejemplo) piden la interacción antes de que el oyente se
+duerma, no al final [S: patrón del nicho, no medido aquí]. Al final nadie la oye, y en los primeros 2 min perjudica la
+retención. Si el promotor quiere, puede ir una línea al final de la parte despierta (≈ 9:30), sin pedir la suscripción
+ni el "gústame", que están vetados:
+
+> Se che gustan estas historias, en Cousas de Galiza para durmir haberá máis. E se queres, cóntanos nun comentario desde
+> que recuncho nos escoitas.
+
+## Qué conservar
+
+- Los primeros 32 s (l. 1-3), casi tal cual: son lo mejor del guion y mejores que los arranques de las dos referencias.
+- Los detalles de archivo del cap. I: "auga, digo, leite", "pan, sal, auga nin lume", el gato por el burato de la
+  porta, y la arracada "polo mal mirar" con su eco en el mal de ollo.
+- Cibreira contada con empatía, con el marco de Pousa: "as respostas xa ían nas preguntas".
+- "A mesma fonte, a mesma noite, e dúas maneiras de mirala" (la mejor frase del guion), "maldita a nai que non ensina a
+  súa filla a meigar" y "as ovellas dun veciño lle comeran a viña ao outro".
+- Las dos frases bisagra, "E aquí, amodo, deixamos atrás os tribunais e as testemuñas" y "non tes que lembrar nada do
+  que escoites", el marco "desde a tarde ata o amencer" y el estribillo de las sete fontes.
+- Las líneas sensoriales de san Xoán (sardiñas, cachelos e broa; el humo que sube; el salto sobre las últimas lapas;
+  "esa auga verde e recendente"; la moura que se peina; el sol que baila). Son aburridas en el buen sentido.
+- Nada de violencia ni de intrusiones nocturnas en la zona de dormir, nada inventado y todas las puertas en verde.
+
+## Señales para el crítico B (no las he verificado a fondo)
+
+- **l. 11.** "Coas meigas, a temida Inquisición foi branda" va sin atribuir. En el dossier es de Valor Bravo (F039), y
+  al oído queda pegada al Arquivo, que se cita en la frase anterior. La mejora 2 lo corrige.
+- **l. 1.** "Case todo galego oíu este conxuro". La fuente (*GCiencia*) dice "puido presenciar nalgún momento" y F246
+  dice "oíron algunha vez": el guion lo refuerza un poco.
+- **Suena exagerado, pero es literal** (comprobado en `dossier/feitos.yaml` y, en el caso de Feijoo, en su texto):
+  - "coma un poldro bravo";
+  - "máis rápido ca as aguias [...] un burro": Feijoo escribió "excediendo la velocidad de las águilas, no pudiesen dar
+    alcance a un jumento";
+  - "ser solteira ou viúva xa sinalaba unha muller como diferente" (CCG);
+  - "recoñécese a cultura galega en boa parte de España e de Portugal" (Galipedia).
+- **l. 75.** No verifiqué "que chegou a Galiza no século dezasete".
+
+## Anexo: cómo se midió (Claude, 30-09-2026)
+
+| Qué | Cómo | Resultado |
+|---|---|---|
+| Subtítulos de HD | yt-dlp 2026.08.19 del venv del scratchpad. `mweb` solo dio imágenes y descartó los subtítulos por falta de PO token; `android_vr`, `tv_simply` e `ios` pidieron "Sign in to confirm you're not a bot" (HTTP 429 desde la IP). Funcionó `web_embedded` con `--dump-single-json` y la pista `es-orig` en json3 | 4.979 palabras en 36,3 min (137 palabras/min, igual que `gauntlet2/referencia.md`) |
+| Subtítulos de RO | La URL de subtítulos de los metadatos que la pieza TEMA dejó en caché (`scratchpad/tema/full/ij7nuBjh1PQ.json`, válida hasta las 18:58 UTC del 30-09-2026), pista `es-orig` en json3 | 17.445 palabras en 120,8 min (144 palabras/min) |
+| Lectura y medidas | `json3_txt.py` (bloques de 30 s), `medir.py` y `medir_ref.py` en `scratchpad/criticoA-guion-r1/`. Los textos de terceros no se suben al repo | Tablas de "Medidas" |
+| Tiempos por párrafo | Interpolación lineal entre las anclas del modelo B de `notas-r1.md` §2 | Los minutos citados |
+| Hechos y puerta de estilo | `grep` en `dossier/feitos.yaml`, en el texto de Feijoo del scratchpad y en `herramientas/pipeline/qa.py` (veta "imaxina", las cifras, los signos y las preguntas) | Las propuestas en galego no usan "imaxina" ni signos vetados y tienen frases de 8-25 palabras fuera del gancho |
