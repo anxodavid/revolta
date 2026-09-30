@@ -221,7 +221,7 @@ fiable que documente esa atribución; solo se afirma lo comprobado: que no está
 
 Hechas por el agente guionista (Claude) a partir del veredicto del crítico B
 (`veredictos/guion-r1-lingua-veracidade.md`) y del encargo del orquestador. Todas las citas pasan
-`xerar.py comprobar`: 271 hechos y 388 citas, 0 problemas.
+`xerar.py comprobar`: 273 hechos y 391 citas, 0 problemas.
 
 - **Corregidos**:
   - F089-F090: la confesión de María Cibreira fue **después del tormento**, y el oficio es "de bruxa e feiticeira".
@@ -235,6 +235,8 @@ Hechas por el agente guionista (Claude) a partir del veredicto del crítico B
 - **Reactivados en la ficha**, porque los usa el guion r2: F018, F025, F032, F070, F086, F116, F145, F151, F152, F159,
   F171, F175, F177, F180, F184, F185, F193, F198, F218, F220, F233 y F242.
 - **Reactivado también F204** (las hierbas que se vendían en los mercados).
+- **Nuevos F272 y F273**: el escano apoyado en la pedra do lar para sentarse más cerca del lume; las lapas de la
+  queimada que hacen cascadas.
 - **Nuevo F271**: el Arquivo expuso el discurso de Feijoo sobre las transformaciones mágicas en la página del
   proceso de Xinzo de Limia (p. 9 del PDF).
 - **Nuevos, F247-F270**, sacados de las mismas fuentes en caché (Galipedia "Lareira", "Hórreo", "Noite de san Xoán",
@@ -383,6 +385,7 @@ Cada hecho con su tipo, su evidencia (cita literal de la fuente, enlazada) y la 
 | F268 | A | Tras a cea, na escuridade da noite, os comensais reúnense arredor do pote, mellor coas luces apagadas, para animar os corazóns e estreitar os lazos de amizade. | [GL-QUEIMADA](https://gl.wikipedia.org/wiki/Queimada): «Tras a cea, na escuridade da noite»<br>[GL-QUEIMADA](https://gl.wikipedia.org/wiki/Queimada): «os comensais reúnense arredor do pote no que se elabora, preferibelmente coas luces apagadas, para animar os corazóns e estreitar os lazos de amizade» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 | F269 | A | Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote mentres pronuncia o conxuro. | [GL-QUEIMADA](https://gl.wikipedia.org/wiki/Queimada): «erguendo cun cazo o líquido en chamas e deixándoo caer pouco a pouco no recipiente mentres pronuncia o conxuro» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 | F270 | A | No pote de barro bótanse a augardente e o azucre. | [GL-QUEIMADA](https://gl.wikipedia.org/wiki/Queimada): «bótanse a augardente e o azucre»<br>[GL-QUEIMADA](https://gl.wikipedia.org/wiki/Queimada): «Nun pote de barro cocido» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
+| F273 | A | Reméxese lentamente, deixando que suban as lapas do alcohol, que fan cascadas. | [GL-QUEIMADA](https://gl.wikipedia.org/wiki/Queimada): «A continuación reméxese lentamente, deixando que suban as lapas do alcohol, creando cascadas con elas.» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 
 ### C0B. Os papeis que falan (0:55-2:00): a Inquisición, os xuíces e a lista da fonte
 
@@ -552,6 +555,7 @@ Cada hecho con su tipo, su evidencia (cita literal de la fuente, enlazada) y la 
 | F254 | A | O tellado do hórreo podía ser de tella, de lousa ou de colmo de centeo. | [GL-HORREO](https://gl.wikipedia.org/wiki/H%C3%B3rreo): «cuberta de tella cerámica, lousa de xisto ou colmo de centeo» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 | F255 | A | Había tamén cabazos, pequenos celeiros de pólas ou vimbios tecidos, cubertos cun cono de xesta ou de colmo. | [GL-HORREO](https://gl.wikipedia.org/wiki/H%C3%B3rreo): «pequenos celeiros lixeiros chamados cabazos, formados por un corpo de pólas ou vimbios tecidos, cuberto por un pequeno cono de xesta ou colmo» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 | F256 | A | O millo non agroma ata o comezo do verán, e madurece case no outono. | [GL-HORREO](https://gl.wikipedia.org/wiki/H%C3%B3rreo): «o millo non agroma ata o comezo do verán e madurece case no outono» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
+| F272 | A | Cando a pedra do lar estaba en alto, as patas do escano podían apoiarse nela, e así quedábase sentado máis preto do lume. | [GL-LAREIRA](https://gl.wikipedia.org/wiki/Lareira): «Cando a pedra do lar está en altura pode facérselle un rebaixe nas patas dianteiras para apoiarse nela»<br>[GL-LAREIRA](https://gl.wikipedia.org/wiki/Lareira): «Así lógrase estar sentado máis preto do lume.» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 
 ### C5. A noite de san Xoán (16:00-22:00)
 

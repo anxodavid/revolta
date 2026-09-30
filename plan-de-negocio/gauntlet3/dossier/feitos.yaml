@@ -313,6 +313,13 @@ feitos:
   evidencias:
   - {fonte: GL-QUEIMADA, cita: "bótanse a augardente e o azucre"}
   - {fonte: GL-QUEIMADA, cita: "Nun pote de barro cocido"}
+- id: F273
+  cap: CQ
+  tipo: A
+  feito: "Reméxese lentamente, deixando que suban as lapas do alcohol, que fan cascadas."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-QUEIMADA, cita: "A continuación reméxese lentamente, deixando que suban as lapas do alcohol, creando cascadas con elas."}
 # ------------------------------------------------------------------ C0B os papeis que falan
 - id: F034
   cap: C0B
@@ -1309,6 +1316,14 @@ feitos:
   nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
   evidencias:
   - {fonte: GL-HORREO, cita: "o millo non agroma ata o comezo do verán e madurece case no outono"}
+- id: F272
+  cap: C4
+  tipo: A
+  feito: "Cando a pedra do lar estaba en alto, as patas do escano podían apoiarse nela, e así quedábase sentado máis preto do lume."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "Cando a pedra do lar está en altura pode facérselle un rebaixe nas patas dianteiras para apoiarse nela"}
+  - {fonte: GL-LAREIRA, cita: "Así lógrase estar sentado máis preto do lume."}
 # ------------------------------------------------------------------ C5 a noite de san Xoán
 - id: F168
   cap: C5
