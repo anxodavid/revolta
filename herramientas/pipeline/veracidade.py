@@ -24,8 +24,8 @@ Modos:
 - `gancho` (gancho e resumo, o que se escoita no primeiro minuto): TODAS as frases teñen que estar apoiadas
   (implicación >= E_MIN, ou coincidencia >= COB_MIN), e ademais pasar as regras duras.
 - `relato` (parágrafos para durmir): só as frases sen nomes, sen persoas (ACTORES), sen tempo longo e sen desenlace
-  poden ser de ambiente (chuvia, pedra, camiños), e como moito unha por parágrafo; o resto, como no gancho. E polo
-  menos unha frase do parágrafo ten que contar o feito.
+  quedan fóra da esixencia de apoio, pero son "de ambiente" e NON se aceptan no relato (eran o recheo sen sentido
+  da ronda 2); o resto, como no gancho. E polo menos unha frase do parágrafo ten que contar o feito.
 
 Que NON garante: o NLI non entende ben o galego e a coincidencia léxica é feble; unha frase falsa construída só
 con palabras do dossier pode pasar. Rexeita de máis antes que de menos (un falso positivo custa unha
@@ -174,8 +174,11 @@ class Verificador:
         fr = [s for s in re.split(r'(?<=[.!?…])\s+', ' '.join(t.split())) if s.strip()]
         rs = [self.frase(f, modo, feito_propio) for f in fr]
         prob = [f"Esta frase non se pode afirmar co dossier ({r['motivo']}): {r['frase']}" for r in rs if not r['ok']]
-        if modo == 'relato' and sum(1 for r in rs if r.get('ambiente')) > 1:   # (modo 'invitacion': sen tope)
-            prob.append('Como moito unha frase de ambiente por parágrafo: quita as frases de recheo.')
+        # ronda 3: ningunha frase de ambiente no relato. Eran a orixe do recheo sen sentido ("o lume ardeu en
+        # silencio", "a chuvia mollar a pedra"); o ambiente pono as imaxes e a choiva do son
+        amb = [r['frase'] for r in rs if r.get('ambiente')]
+        if modo == 'relato' and amb:
+            prob.append('Quita estas frases de recheo, que non contan nada do feito: ' + ' '.join(amb))
         if feito_propio is not None and rs and not any(r.get('conta_o_feito') for r in rs):
             prob.append('O parágrafo non conta o feito que se pediu: cóntao con palabras parecidas ás do feito.')
         return prob, rs

@@ -93,7 +93,8 @@ def rampa(x, a, b, x0=GANCHO, x1=CALMA):
 def limpar_saida_llm(t):
     """Quita o que un LLM pequeno adoita engadir arredor do texto (títulos, marcas, notas finais)."""
     t = t.replace('\r', '').strip()
-    t = re.sub(r'^\s*(#+ .*|\*\*[^*]+\*\*|Título:.*|Texto( narrado)?:)\s*\n', '', t)
+    # títulos: só se a liña en negriña é curta ou leva dous puntos (ronda 3: quitaba a única frase do resumo)
+    t = re.sub(r'^\s*(#+ .*|\*\*(?:[^*\n]{0,60}:[^*\n]*|(?:\S+\s+){0,7}\S+)\*\*|Título:.*|Texto( narrado)?:)\s*\n', '', t)
     t = re.sub(r'\n\s*(Nota|Notas|---)\b.*$', '', t, flags=re.S)
     t = re.sub(r'[*_#]+', '', t)
     # etiquetas ao principio dun parágrafo ("Parágrafo completo:", "Gancho:", "1.")
@@ -180,10 +181,17 @@ def numero_gl(n):
     return ('mil' if m == 1 else numero_gl(m) + ' mil') + (' ' + numero_gl(r) if r else '')
 
 
+ORDINAIS_SECULO = {'I': 'primeiro', 'II': 'segundo', 'III': 'terceiro', 'IV': 'cuarto', 'V': 'quinto', 'VI': 'sexto',
+                   'VII': 'sétimo', 'VIII': 'oitavo', 'IX': 'noveno', 'X': 'décimo', 'XI': 'once', 'XII': 'doce',
+                   'XIII': 'trece', 'XIV': 'catorce', 'XV': 'quince', 'XVI': 'dezaseis', 'XVII': 'dezasete',
+                   'XVIII': 'dezaoito', 'XIX': 'dezanove', 'XX': 'vinte', 'XXI': 'vinte e un'}
+
+
 def normalizar(t):
     """O que unha voz non le ben arránxao o código, non o LLM: cifras en letra, parénteses e comiñas fóra,
     exclamacións e preguntas a frases afirmativas. (As preguntas xa son un problema de validación.)"""
     t = re.sub(r'(\d+)\s*[-–]\s*(\d+)', r'\1 e \2', t)
+    t = re.sub(r'\b(séculos?)\s+([IVX]{1,5})\b', lambda m: m.group(1) + ' ' + ORDINAIS_SECULO.get(m.group(2), m.group(2)), t)
     def _num(m):
         x = numero_gl(int(m.group(1)))
         if re.match(r'\s+\w+as\b', t[m.end():m.end() + 30]):      # xénero feminino: douscentas catro testemuñas
@@ -231,7 +239,6 @@ def sen_repeticions(t, previo):
 
 
 VER = {}
-PAL_PARRAFO = 32
 MAX_TOKENS_BLOQUE = {'bloque_gancho': 200, 'bloque_resumo': 180, 'bloque_invitacion': 150, 'bloque_parrafo': 260}
 INVITACION_FIXA = ('Acomódate, apaga a luz e respira amodo. Non tes que lembrar nada do que escoites: '
                    'deixa que a historia pase coma a chuvia na xanela.')
@@ -313,7 +320,7 @@ def salvar(textos, tm, previo, modo, feito, feitos_bloque, antes=False):
 
 
 def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, reserva=None, feitos_bloque=None,
-           **vars):
+           min_frases=2, **vars):
     """Unha chamada ao LLM para un bloque, con validación e ata dous reintentos cos problemas atopados.
     Se despois dos reintentos o bloque aínda ten problemas (lingua, H1, veracidade...), o texto do LLM NON se usa
     tal cal: primeiro a reserva mixta (`salvar`: só as frases do LLM que pasan, máis os feitos literais que falten)
@@ -333,7 +340,7 @@ def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, res
         t = t[0] if nome == 'bloque_resumo' else max(t, key=lambda x: len(x.split()))   # un só parágrafo
         t = sen_repeticions(normalizar(' '.join(t.split())), previo)
         t = re.sub(r'([.!?…])[^.!?…]*$', r'\1', t) if re.search(r'[.!?…]', t) else t    # sen frase cortada ao final
-        pr = problemas_bloque(t, tm, previo=previo, modo=modo, feito=feito)
+        pr = problemas_bloque(t, tm, min_frases=min_frases, previo=previo, modo=modo, feito=feito)
         hist.append(pr); textos.append(t)
         if mellor is None or len(pr) < len(mellor[0]):
             mellor = (pr, t)
@@ -351,7 +358,7 @@ def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, res
         if t:      # a reserva literal tampouco pode repetir o xa dito (p. ex. un feito que xa contou o gancho)
             vellas = [v['texto'] for v in partir(previo)] if previo else []
             t = ' '.join(f['texto'] for f in partir(t) if not any(_parecida(f['texto'], v) > 0.6 for v in vellas))
-        r['reserva'] = 'omitido' if not t else 'literal'
+        r['reserva'] = 'omitido' if not t.strip() else 'literal'
         if t:
             det = {}
             pr = problemas_bloque(t, tm, min_frases=1, previo=previo, modo=modo, feito=feito, detalle=det)
@@ -384,7 +391,7 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
                        reserva=' '.join(literal(fs[i]) for i in ig), feitos_bloque=[literal(fs[i]) for i in ig],
                        tema=tema['tema'],
                        feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
-    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, modo='relato', reserva='',
+    resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, modo='relato', reserva='', min_frases=1,
                        tema=tema['tema'], fragmento=tema['fragmento'], dossier=dossier); rex.append(r)
     # a invitación a durmir é texto fixo do canal, coma o aviso e a fórmula (ronda 3: o LLM escribía "acougue a luz
     # e deixe", en tratamento de vostede, e frases baleiras que ningunha porta podía comprobar)
@@ -405,9 +412,9 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
         ids = list(range(max(0, len(fs) - nmax), len(fs)))
     ids = [i for i in ids if i not in ig][:nmax]       # os feitos do gancho non se repiten no relato (ronda 3)
     engadidos = []
-    # extensión (ronda 3): cada parágrafo validado ou literal ten de media ~PAL_PARRAFO palabras; se a selección non
-    # chega á extensión obxectivo, engádense outros feitos do dossier que non están no gancho
-    while len(ids) * PAL_PARRAFO < resto and len(ids) + len(ig) < len(fs):
+    # extensión (ronda 3): os parágrafos validados ou literais miden máis ou menos o que o feito; se os feitos
+    # escollidos non chegan á extensión obxectivo, engádense outros do dossier que non están no gancho
+    while sum(len(literal(fs[i]).split()) for i in ids) < resto and len(ids) + len(ig) < len(fs):
         j = next(j for j in range(len(fs)) if j not in ids and j not in ig)
         ids.append(j); engadidos.append(j + 1)
     ids = sorted(ids)      # a ficha ten os feitos en orde cronolóxica: o relato respéctaa (ronda 3)
@@ -422,7 +429,9 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
                       modo='relato', feito=literal(fs[i]), reserva=literal(fs[i]), feitos_bloque=[literal(fs[i])],
                       tema=tema['tema'], feito_txt=fs[i], anterior=ult, ton=ton)
         r['feito'] = i + 1; rex.append(r)
-        pars.append(p); anterior = p
+        if p.strip():
+            pars.append(p); anterior = p
+    ids = [int(x['feito']) - 1 for x in rex if 'feito' in x and x.get('reserva') != 'omitido']
     info['estrutura'] = (['aviso', 'gancho', 'resumo', 'invitacion'] + [f'feito:{i + 1}' for i in ids])
     g = '\n\n'.join([tema['aviso'], gancho, (FORMULA + ' ' + resumo).strip(), invit] + pars)
     return g, rex
