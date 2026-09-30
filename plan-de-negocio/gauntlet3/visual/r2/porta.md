@@ -1,0 +1,26 @@
+# Puerta de revisión de la hoja de prueba (automático)
+
+Modelo `lightning` (1344x768, 4 pasos), estilo `filme`, revisor versión 6. Generación + revisión: 30.8 min de reloj; gradación 9 s.
+
+| Plano | Fase | Tipo | Intentos | Problemas de los intentos rechazados | Escogida | s generación | s revisión |
+|---|---|---|---|---|---|---|---|
+| 1 | gancho | detalle | 7 | 0: lume grande no exterior, negativo do plano: molten metal (CLIP); 1: lume grande no exterior, negativo do plano: molten metal (CLIP); 2: negativo do plano: molten metal (CLIP); 3: lume grande no exterior, negativo do plano: molten metal (CLIP); 4: negativo do plano: molten metal (CLIP); 5: falta: blue flames (CLIP); 6: falta: blue flames (CLIP) | 2 (FALLA) | 35.8, 28.8, 28.9, 49.5, 48.6, 28.3, 27.0 | 19.4, 15.0, 15.3, 14.6, 14.5, 15.2, 16.0 |
+| 2 | gancho | plano_medio | 4 | 0: texto na imaxe; 1: texto na imaxe; 2: obxectos modernos, texto na imaxe | 3 (ok) | 28.3, 29.5, 29.3, 51.7 | 16.0, 16.9, 17.5, 18.1 |
+| 3 | gancho | primeiro_plano | 1 | - | 0 (ok) | 28.2 | 16.8 |
+| 4 | gancho | xeral | 2 | 0: obxectos modernos | 1 (ok) | 30.1, 27.3 | 16.9, 15.8 |
+| 5 | transicion | plano_medio | 7 | 0: man sen corpo (1); 1: obxectos modernos; 2: man sen corpo (1); 3: obxectos modernos; 4: paisaxe seca (CLIP); 5: falta: stone trough (CLIP) | 6 (ok, reserva) | 27.7, 29.3, 29.6, 53.1, 52.8, 28.9, 29.9 | 17.4, 16.1, 16.5, 16.1, 16.2, 16.0, 17.7 |
+| 6 | transicion | primeiro_plano | 3 | 0: man sen corpo (1), falta: herbs (CLIP); 1: man sen corpo (1), interior moderno, salón moderno (CLIP), falta: herbs (CLIP) | 2 (ok) | 28.9, 29.7, 28.8 | 17.4, 15.5, 17.4 |
+| 7 | transicion | plano_medio | 7 | 0: muros encalados (CLIP), negativo do plano: herd (CLIP); 1: negativo do plano: herd (CLIP); 2: negativo do plano: herd (CLIP); 3: negativo do plano: herd (CLIP); 4: interior moderno, negativo do plano: herd (CLIP); 5: falta: cow (CLIP); 6: falta: cow (CLIP) | 1 (FALLA) | 28.2, 29.6, 27.6, 50.1, 48.3, 28.7, 29.2 | 15.7, 17.0, 16.3, 14.9, 15.5, 16.0, 16.4 |
+| 8 | transicion | xeral | 1 | - | 0 (ok) | 30.8 | 19.7 |
+| 9 | calma | plano_medio | 3 | 0: interior moderno, texto na imaxe; 1: interior moderno | 2 (ok) | 30.5, 28.5, 27.7 | 17.0, 16.2, 16.2 |
+| 10 | calma | bodegon | 4 | 0: obxectos modernos, interior moderno; 1: obxectos modernos; 2: obxectos modernos | 3 (ok) | 27.1, 26.4, 27.6, 49.0 | 16.3, 14.9, 16.0, 16.9 |
+| 11 | calma | paisaxe | 2 | 0: negativo do plano: fjord (CLIP) | 1 (ok) | 35.1, 31.1 | 18.6, 16.9 |
+| 12 | calma | plano_medio | 7 | 0: obxectos modernos, interior moderno, salón moderno (CLIP), negativo do plano: fireplace mantel (CLIP); 1: negativo do plano: fireplace mantel (CLIP); 2: obxectos modernos, negativo do plano: fireplace mantel (CLIP); 3: negativo do plano: fireplace mantel (CLIP); 4: interior moderno, negativo do plano: fireplace mantel (CLIP); 5: man sen corpo (1); 6: luz eléctrica (CLIP) | 1 (FALLA) | 28.5, 27.8, 30.7, 47.6, 46.6, 26.8, 28.2 | 15.9, 16.2, 15.1, 18.4, 15.2, 15.7, 17.0 |
+| 13 | durmir | paisaxe | 3 | 0: lume vivo ao durmir (0.3% de altas luces); 1: cruces portadas | 2 (ok) | 26.8, 26.9, 28.5 | 13.5, 14.6, 14.6 |
+| 14 | durmir | detalle | 7 | 0: lume vivo ao durmir (0.3% de altas luces), interior moderno; 1: lume vivo ao durmir (1.0% de altas luces), interior moderno; 2: interior moderno, luces de cidade (CLIP); 3: lume vivo ao durmir (2.4% de altas luces); 4: lume vivo ao durmir (2.9% de altas luces), interior moderno; 5: lume vivo ao durmir (0.3% de altas luces); 6: lume vivo ao durmir (3.3% de altas luces) | 3 (FALLA) | 26.5, 28.7, 28.6, 49.2, 50.7, 27.4, 28.4 | 15.9, 15.3, 15.3, 18.0, 15.0, 16.2, 16.1 |
+| 15 | durmir | paisaxe | 3 | 0: lume vivo ao durmir (0.2% de altas luces); 1: lume vivo ao durmir (0.3% de altas luces) | 2 (ok) | 28.1, 28.3, 26.6 | 15.6, 15.6, 14.7 |
+| 16 | durmir | detalle | 7 | 0: lume vivo ao durmir (1.0% de altas luces), interior moderno, negativo do plano: cauldron (CLIP); 1: lume vivo ao durmir (1.1% de altas luces), casas británicas (CLIP); 2: lume vivo ao durmir (0.3% de altas luces), negativo do plano: cauldron (CLIP); 3: lume vivo ao durmir (1.1% de altas luces), casas británicas (CLIP), negativo do plano: cauldron (CLIP), arquetipo seguido: persoa á lareira (xa no plano 12); 4: lume vivo ao durmir (0.9% de altas luces), negativo do plano: cauldron (CLIP), negativo do plano: potion (CLIP), falta: embers (CLIP); 5: repetida (CLIP 0.95 co plano 15), arquetipo seguido: bosque con néboa (xa no plano 15); 6: lume vivo ao durmir (2.3% de altas luces) | 6 (FALLA, reserva) | 30.6, 32.3, 27.6, 52.4, 51.7, 29.3, 29.8 | 15.4, 17.5, 18.6, 14.2, 15.5, 19.0, 16.0 |
+
+Imágenes generadas: 68 para 16 planos; aprobadas a la primera: 2; tras regenerar: 9; sin aprobar: 5.
+Segundos por imagen (generación): mediana 28.9, media 33.2; revisión: mediana 16.1, media 16.2.
+Rechazos por motivo: {"lume grande no exterior": 3, "negativo do plano": 21, "falta": 8, "texto na imaxe": 4, "obxectos modernos": 9, "man sen corpo": 5, "paisaxe seca": 1, "interior moderno": 12, "salón moderno": 2, "muros encalados": 1, "luz eléctrica": 1, "lume vivo ao durmir": 15, "cruces portadas": 1, "luces de cidade": 1, "casas británicas": 2, "arquetipo seguido": 2, "repetida": 1}.
