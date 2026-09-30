@@ -42,7 +42,7 @@ CURVA = {
     'ambiente_db':   [-8.0, -6.0, -3.0, 0.0, 1.5],
     # imaxe (peza VISUAL): intensidade da luz e do contraste da gradación
     'contraste':     [1.08, 1.05, 1.00, 0.94, 0.90],
-    'brillo':        [1.00, 1.00, 0.97, 0.92, 0.88],
+    'brillo':        [1.00, 1.00, 0.96, 0.88, 0.80],   # Gauntlet 3 r2 visual: calma e durmir máis escuros
 }
 VOZ = ('estilo', 'f0_rango', 'f0_media', 'enerxia', 'beta', 'embedding_scale')   # campos por frase de voz_st2.py
 FASES = ('gancho', 'transicion', 'calma', 'durmir')

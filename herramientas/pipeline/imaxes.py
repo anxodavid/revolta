@@ -95,11 +95,14 @@ def cargar_pipe(nome=None):
     return pipe
 
 
-def xerar_unha(pipe, prompt, seed, m=None):
+def xerar_unha(pipe, prompt, seed, m=None, negativo=None, cfg=0.0):
+    """Unha imaxe. Sen CFG (guidance 0) como pide Lightning; con `negativo` e cfg > 1 fai un intento guiado (dúas
+    pasadas da UNet por paso: ~1,6 veces máis lento) para os planos con relato que fallan dúas veces."""
     import torch
     m = m or getattr(pipe, '_revolta', M)
-    return pipe(prompt=prompt, width=m['W'], height=m['H'], num_inference_steps=m['pasos'], guidance_scale=0.0,
-                generator=torch.Generator().manual_seed(seed)).images[0]
+    kw = {'negative_prompt': negativo, 'guidance_scale': cfg} if negativo and cfg > 1 else {'guidance_scale': 0.0}
+    return pipe(prompt=prompt, width=m['W'], height=m['H'], num_inference_steps=m['pasos'],
+                generator=torch.Generator().manual_seed(seed), **kw).images[0]
 
 
 # ------------------------------------------------------------------ prompts (biblia visual)
@@ -137,9 +140,27 @@ CAMARA_RX = r'\b(close-up|closeup|medium shot|wide shot|establishing|still life|
 # Correccións ao reintentar, segundo o motivo do rexeitamento. A de iconografía vai ao principio (pesa máis) desde
 # o 2.º intento; as colas, ao final desde o intento INTENTO_PRUDENTE, e só para o seu motivo (Gauntlet 2: a cola de
 # "figuras de corpo enteiro" engadíase sempre, tamén a paisaxes rexeitadas por tellados).
-CORRECCION = [
-    (r'tellad|encalad|mediterr|ciprés|oliveir|palmeir|paisaxe seca|eucalipt|rodas', 'dark slate roofs, granite walls, green hills, '),
+CORRECCION = [   # (motivo, corrección de exterior, corrección de interior). Versión 6: "green hills" diante dun interior
+    # abría un ventanal ás colinas (plano 6 da r1); nun interior a corrección fecha o cuarto.
+    (r'tellad|encalad|mediterr|ciprés|oliveir|palmeir|paisaxe seca|eucalipt|rodas|británic|patio|cidade|eléctric',
+     'dark slate roofs, low granite houses, ', 'thick granite walls, small shuttered window, '),
+    (r'interior moderno|salón', 'thick granite walls, ', 'smoke-blackened granite walls, open stone hearth at floor level, '),
 ]
+INTERIOR_RX = r'\b(kitchen|room|interior|inside|indoors|hall|cell|chamber|byre|stable|table|bench|hearth|fireplace|bed|desk|doorway)\b'
+# Prompt negativo dos intentos guiados, segundo o motivo do rexeitamento (e o campo `negativo` do plano)
+NEG_MOTIVO = [
+    (r'obxectos modernos|eléctric|cidade', 'street lamps, electric lights, lamp posts, city lights, glass'),
+    (r'interior moderno|salón', 'sofa, cushions, armchair, mantelpiece, large window, potted plants'),
+    (r'tellad|encalad|mediterr|patio|británic', 'orange roof tiles, white walls, arcades, chimneys, sash windows'),
+    (r'texto', 'text, letters, writing, open book'),
+    (r'multitude|corpos|animais', 'crowd, many people, herd'),
+    (r'\bman\b|\bmans\b', 'extra hands, deformed hands, extra fingers'),
+    (r'meiga|caldeiro', 'witch, cauldron, potion, pointed hat'),
+    (r'lume vivo', 'flames, fire, bright light'),
+]
+NEG_BASE = 'modern, electric light, text, watermark, deformed'
+CFG_REINTENTO = float(os.environ.get('IMG_CFG_REINTENTO', '1.5'))   # 0 = sen intentos guiados
+INTENTOS_GUIADOS = (3, 4)      # os intentos 4.º e 5.º dun plano van guiados co prompt negativo
 PRUDENTE = [   # (motivo, cola)
     (r'\bman\b|\bmans\b', ', hands hidden in the sleeves or out of frame'),
     (r'multitude|corpos', ', only one or two people'),
@@ -147,15 +168,15 @@ PRUDENTE = [   # (motivo, cola)
     (r'texto', ', plain surfaces'),
 ]
 # Planos de reserva por fase: sen persoas (sen mans nin caras), galegos e seguros. Rótanse para non repetir.
-RESERVA_FASE = {
-    'gancho': ['still life of a candle burning on a rough oak table in a dark granite room, deep shadows',
-               'an iron pot hanging over the embers of an open stone hearth at night, firelight, smoke'],
-    'transicion': ['a moss-covered granite wayside cross beside a stone wall, green fields, morning mist',
-                   'dry-stone walls and small green fields on a hillside, oak trees, bright overcast daylight'],
-    'calma': ['rain falling on dark grey slate roofs of granite houses at dusk, soft blue light',
-              'a quiet river with an old stone bridge among oak trees, warm evening light'],
+RESERVA_FASE = {   # versión 6: fóra de durmir, a reserva ten persoas (un plano con relato non debe acabar nunha paisaxe baleira)
+    'gancho': ['medium shot of an old woman in a dark wool headscarf holding a tallow candle in a dark granite room, her face lit by the small flame, deep black shadows',
+               'close-up of an old man in a coarse wool cloak beside an open stone hearth at floor level at night, firelight on his face, smoke'],
+    'transicion': ['medium shot of a farmer in a wool jacket resting against a mossy granite wall, green fields, bright overcast daylight',
+                   'medium shot of a woman in a dark wool skirt and headscarf carrying a wicker basket of chestnuts past a granite wall, morning mist'],
+    'calma': ['medium shot of an old woman in a brown wool shawl spinning wool by the warm light of a small iron oil lamp, dark granite wall',
+              'rain falling on dark grey slate roofs of low granite houses at dusk, soft blue light'],
     'durmir': ['an ancient oak forest at night, mist between mossy trunks, pale moonlight, very dim',
-               'glowing embers in a stone hearth in a dark kitchen, faint red glow'],
+               'extreme close-up detail of dying embers and grey ash on a granite hearth stone, faint red glow, soft darkness'],
 }
 XENERICO = RESERVA_FASE['transicion'][1]          # compatibilidade (pipeline.py enche con el os planos sen prompt)
 COR_LLM = r'\b(sepia|neon|vivid|vibrant|saturated|purple|pink|hdr)\b'   # só nos prompts sen fase (LLM do pipeline curto)
@@ -181,9 +202,10 @@ def compor_prompt(e, i=0, intento=0, problemas=(), m=None):
         p = f'{p}, {opcions[i % len(opcions)]}'
     pre = ''
     txt_prob = ' '.join(problemas).lower()
-    for rx, extra in CORRECCION:
+    interior = bool(re.search(INTERIOR_RX, str(e['prompt']), re.I))
+    for rx, ext, inte in CORRECCION:
         if intento >= 1 and re.search(rx, txt_prob):
-            pre += extra
+            pre += inte if interior else ext
     estilo = ESTILOS[os.environ.get('IMG_ESTILO', ESTILO_DEFECTO)] + ESTILO_FASE.get(fase or '', '')
     pr = f'{estilo}, {pre}{p}'
     if intento >= INTENTO_PRUDENTE:
@@ -191,6 +213,13 @@ def compor_prompt(e, i=0, intento=0, problemas=(), m=None):
             if re.search(rx, txt_prob):
                 pr += cola; break
     return pr
+
+
+def negativo_para(e, problemas):
+    """Prompt negativo dun intento guiado: o campo `negativo` do plano + o dos motivos de rexeitamento + un común."""
+    txt = ' '.join(problemas).lower()
+    partes = [str(e.get('negativo') or '')] + [n for rx, n in NEG_MOTIVO if re.search(rx, txt)] + [NEG_BASE]
+    return ', '.join(x for x in partes if x)
 
 
 def tokens(pipe, texto):
@@ -240,10 +269,10 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
             if rev is None and revisar:
                 rev = _rv.Revisor()
             intentos = list(previo['intentos']) if previo else []     # continúa onde quedou
-            ctx = {'negativo': e.get('negativo')}
+            ctx = {'negativo': e.get('negativo'), 'clave': e.get('clave'), 'fase': e.get('fase')}
             if intentos and rev is not None:     # o revisor cambiou desde entón: volve revisar os intentos gardados
                 for it in intentos:
-                    rv = rev.revisar(outdir / it['ficheiro'], **ctx)
+                    rv = rev.revisar(outdir / it['ficheiro'], prompt=it.get('prompt'), **ctx)
                     embs[it['ficheiro']] = (rv['clip_emb'], rv.get('arquetipo'))
                     novos = rv['problemas'] + rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos,
                                                              rv.get('arquetipo'), n_total)
@@ -264,19 +293,21 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
                     pr = compor_prompt(base, i, 0, (), m)
                 else:
                     pr = compor_prompt(e, i, k, previos, m)
+                guiado = k in INTENTOS_GUIADOS and CFG_REINTENTO > 1 and k < MAX_INTENTOS
+                neg = negativo_para(e, previos) if guiado else None
                 seed = int(hashlib.sha256(f'{seed_base}-{i}-{pr}-{k}'.encode()).hexdigest()[:8], 16)
                 if pipe is None:
                     pipe = cargar_pipe()
                 ntok, perdido = tokens(pipe, pr)
                 f = outdir / f'{clave}-{k}.png'
                 t = time.time()
-                im = xerar_unha(pipe, pr, seed, m)
+                im = xerar_unha(pipe, pr, seed, m, negativo=neg, cfg=CFG_REINTENTO if guiado else 0.0)
                 tmp = f.with_suffix('.tmp.png'); im.save(tmp); os.replace(tmp, f)
                 it = {'intento': k, 'ficheiro': f.name, 'seed': seed, 's': round(time.time() - t, 1), 'prompt': pr,
                       'modelo': m['nome'], 'tokens': ntok, 'truncado': perdido, 'problemas': [],
-                      'reserva': k >= MAX_INTENTOS}
+                      'reserva': k >= MAX_INTENTOS, 'negativo_guiado': neg}
                 if rev is not None:
-                    t = time.time(); rv = rev.revisar(f, **ctx)
+                    t = time.time(); rv = rev.revisar(f, prompt=pr, **ctx)
                     embs[f.name] = (rv['clip_emb'], rv.get('arquetipo'))
                     it.update({k2: v for k2, v in rv.items() if k2 not in ('ok', 'clip_emb')})
                     it['problemas'] = rv['problemas'] + rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos,
@@ -349,8 +380,9 @@ def repetida(f, descricion, aceptadas):
 LOOK = {   # toe: nivel de negro (0 = negros profundos do claroscuro; máis alto = negros levantados, baixo contraste)
     'gancho':     {'lum': (0.13, 0.45), 'sat': 1.00, 'croma_max': 0.100, 'toe': 0.000},
     'transicion': {'lum': (0.25, 0.58), 'sat': 0.97, 'croma_max': 0.085, 'toe': 0.008},
-    'calma':      {'lum': (0.18, 0.48), 'sat': 0.92, 'croma_max': 0.075, 'toe': 0.012},
-    'durmir':     {'lum': (0.08, 0.30), 'sat': 0.80, 'croma_max': 0.060, 'toe': 0.020},
+    # versión 6 (veredicto visual-r1: a calma e o durmir saían tan luminosos coma o gancho): teitos máis baixos
+    'calma':      {'lum': (0.15, 0.33), 'sat': 0.88, 'croma_max': 0.075, 'toe': 0.012},
+    'durmir':     {'lum': (0.06, 0.18), 'sat': 0.60, 'croma_max': 0.050, 'toe': 0.020},
 }
 FILME = {'ombro': 0.86, 'sombra': (-0.008, 0.002, 0.010), 'luz': (0.012, 0.004, -0.010)}
 SUAVIZADO = 60   # xanela triangular de ±60 palabras (~30 s de narración) nos parámetros: as fases cambian sen saltos
