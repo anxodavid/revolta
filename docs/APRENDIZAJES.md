@@ -169,3 +169,21 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   transición, lo contrario del embudo.
 - **Coste de la veracidad automática:** NLI contra los 180 hechos por frase = 26 min de CPU en un guion largo;
   limitándolo a los hechos que pueden apoyar la frase (coincidencia ≥ 0,5), 144 s con las mismas decisiones.
+
+## Imagen (ronda 1 de la pieza visual)
+
+- **La luz plana de la muestra anterior la causaba el prompt, no el modelo:** el estilo fijo "soft overcast light" y la
+  igualación de color a la media del episodio. Con una fuente de luz explícita por plano y la gradación por fase
+  (conserva la luz de cada imagen y solo corrige los extremos) sale luz variada incluso con SDXL-Turbo.
+- **SDXL base + UNet SDXL-Lightning de 4 pasos a 1344x768** (OpenRAIL++): más nítido y "de cine" que Turbo a 1024x576
+  (33-48 s por imagen frente a 25,5). La versión de 8 pasos no compensa (82 s, casi igual). Los codificadores de texto
+  de Turbo y de SDXL base son idénticos (mismo sha256): no hace falta bajarlos dos veces.
+- **SDXL no sabe dibujar el hórreo ni el carro de bois de roda maciza**, ni siquiera describiéndolos: salen una aldea
+  inglesa y ruedas de radios. La biblia pide no ponerlos como sujeto.
+- **Lightning mete detalles modernos que Turbo no** (farolas, luces de ciudad, sofás, ventanales de cristal): la
+  puerta de Florence y CLIP no los caza todos.
+- **Puerta CLIP por pares** (teja naranja frente a lousa, ciprés frente a carballo, olivo, palmera, eucalipto),
+  calibrada con 72 imágenes: 0 falsos positivos, pero no ve tejas pequeñas y apagadas. La repetición se mide ahora
+  contra todo el episodio (coseno 0,90), con un tope por arquetipo.
+- **Referencia:** el cliente `mweb` de yt-dlp da storyboards de 320x180; las hojas del `.mhtml` llegan corruptas y
+  hay que bajarlas una a una con curl.
