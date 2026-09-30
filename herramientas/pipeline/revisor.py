@@ -36,7 +36,7 @@ CLIP_MODEL = os.environ.get('CLIP_MODEL', 'openai/clip-vit-large-patch14')
 MAN_DIST = 0.14
 MAN_DETALLE = 0.12   # sen corpos na imaxe, unha man máis ancha ca isto (fracción do ancho) é un primeiro plano
 CORPOS_MAX = 5
-VERSION = 7   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
+VERSION = 8   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
 
 # (etiqueta, expresión regular sobre a descrición en inglés e os obxectos de <OD>)
 LISTA = [
@@ -370,6 +370,10 @@ class Revisor:
             pr.append(f'lume vivo ao durmir ({quente:.1%} de altas luces cor de chama)')
         if self.vlm is not None:
             p2, d2 = self.anacronismos(png)
+            # Versión 8 (orquestador): o veto de lume grande veu do Gauntlet 2 (edificios ardendo). Neste episodio o lume
+            # é o tema (a queimada, as fogueiras de San Xoán): se o prompt pide lume, non se veta; o de durmir segue.
+            if prompt and re.search(r'\b(fire|flames?|bonfires?|blaze|queimada|burning)\b', prompt, re.I):
+                p2 = [x for x in p2 if x != 'lume grande no exterior']
             pr += p2; det.update(d2)
         if self.clip is not None:
             E, emb = self.clip.analizar(png)
