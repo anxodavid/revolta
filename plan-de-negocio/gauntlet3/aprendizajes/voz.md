@@ -76,7 +76,8 @@ grabaciones de Brais (11535, 01372, 04078); calma = 03720. Muestra: `../voz/most
 - **Whisper se salta frases enteras en audio largo con silencios** (33 frases seguidas con 1 s entre ellas, sin VAD y
   sin condicionar al texto anterior, como el QA): WER 0,10-0,12 frente a 0,03 frase a frase, con borrados de 6-12
   palabras seguidas que caen en sitios distintos en cada versión. Para comparar voces, WER **frase a frase**. Ojo con
-  el QA de `longo.py`, que mide sobre la mezcla entera: puede dar WER altos que no son de la voz.
+  el QA de `longo.py`, que mide sobre la mezcla entera: con la curva final, el pasaje de prueba da 0-0,054 frase a
+  frase y 0,18-0,28 entero (con las pausas del embudo). Probar `vad_filter=True` o transcribir por frases [S].
 - Una frase corta cuesta lo mismo que 30 s (la ventana fija de Whisper): ~6,5 s de CPU por frase en este contenedor.
 - El WER tiene un suelo que no es de la voz: homófonos en habla continua ("casa sen lareira" / "casas en lareira",
   "quen a atopa" / "quen atopa", "auga mansa" / "augamansa"). Con un pasaje de 120 palabras son ~0,04 de WER fijo;

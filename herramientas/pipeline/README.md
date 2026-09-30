@@ -103,8 +103,9 @@ Pieza VOZ (`plan-de-negocio/gauntlet3/voz/informe.md`; medidas automáticas, **n
   `REF_WAV_CALMO` = 03720 (la más lenta y menos activada de 40). Admiten listas `a.wav:b.wav`.
 - **Cotovía** por defecto: la compilada de Nós en modo `-p1` (ver "Instalación rápida"): da los fonemas del corpus con
   que se entrenó la voz (0,8 % de caracteres distintos frente al 7,8 % de la 0.5) sin "pra" ni "facelo lume".
-- **Aviso para el QA**: Whisper, sobre audio largo con las pausas del final del embudo y sin VAD, se salta frases
-  enteras; el WER de la mezcla puede salir alto sin que sea de la voz (detalle en el informe).
+- **Aviso para el QA**: el mismo pasaje da WER 0-0,054 frase a frase y 0,18-0,28 transcrito entero con las pausas
+  del embudo y sin VAD, como hace `qa.asr`; en el A/B de Cotovía la causa fue que Whisper se salta frases enteras. El
+  WER de la mezcla puede salir alto sin que sea de la voz (detalle en el informe de la pieza VOZ).
 
 ## La puerta de imágenes (`revisor.py`)
 

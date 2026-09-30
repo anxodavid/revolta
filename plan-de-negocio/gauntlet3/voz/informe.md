@@ -235,9 +235,13 @@ escuchado antes de subirla.**
 - **Pasaje corto** (7 frases, 111 palabras): cada error de ASR vale 0,009 de WER. Parte del WER no es de la voz
   (homófonos, números que Whisper escribe en cifras). Los parámetros son iguales dentro de cada punto; en el episodio
   cambian frase a frase y no se midió cómo suena el paso de una frase a otra.
-- **WER sobre el pasaje entero, como el QA de `longo.py`**: con las pausas del embudo Whisper se salta frases
-  enteras (WER de 0,18-0,28 en el pasaje frente a 0-0,054 frase a frase; ver aprendizajes). El QA del vídeo largo
-  mide la mezcla entera así: puede dar un WER alto que no es de la voz.
+- **WER sobre el pasaje entero, como el QA de `longo.py`** (un solo audio con las pausas del embudo, sin VAD): 0,18-0,28
+  en los 5 puntos de la curva final, frente a 0-0,054 frase a frase con las mismas grabaciones
+  (`datos/curva-ronda2.json`, campo `wer_pasaxe`). En el A/B de Cotovía la causa comprobada fue que Whisper se salta
+  frases enteras (borrados de 6-12 palabras seguidas); aquí no se guardaron las hipótesis del pasaje entero, así que la
+  causa es probable pero no está comprobada (una prueba con y sin VAD quedó sin correr por falta de turno de CPU). El
+  QA del vídeo largo mide así la mezcla entera: **puede dar un WER alto que no sea de la voz**; transcribir por frases
+  (con los tiempos de `tempos_frases.json`) o con `vad_filter=True` lo evitaría [S].
 - **No medido**: naturalidad o MOS (no se bajó ningún modelo más: disco y CPU justos), la escucha a lo largo de 30
   minutos (fatiga, monotonía), la voz dentro de la mezcla con el ambiente de la pieza SON, ni una referencia real de
   narración para dormir en gallego con la que comparar (no la hay). "Voz cascada" y "gritona" se miden solo con
