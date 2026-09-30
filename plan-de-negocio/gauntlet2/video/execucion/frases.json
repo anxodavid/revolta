@@ -1,0 +1,218 @@
+[
+ {
+  "i": 1,
+  "par": 0,
+  "texto": "Boas noites.",
+  "pal0": 0,
+  "escala": 1.05,
+  "wav": "001-3c14258c.wav"
+ },
+ {
+  "i": 2,
+  "par": 0,
+  "texto": "A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
+  "pal0": 2,
+  "escala": 1.05,
+  "wav": "002-02d68521.wav"
+ },
+ {
+  "i": 3,
+  "par": 1,
+  "texto": "Dicían que eran refuxios de malfeitores.",
+  "pal0": 16,
+  "escala": 1.05,
+  "wav": "003-607071d1.wav"
+ },
+ {
+  "i": 4,
+  "par": 1,
+  "texto": "As fortalezas derrubadas non se volveron levantar todas.",
+  "pal0": 22,
+  "escala": 1.05,
+  "wav": "004-ef11f785.wav"
+ },
+ {
+  "i": 5,
+  "par": 2,
+  "texto": "Isto é Serán, historia de Galicia para durmir.",
+  "pal0": 30,
+  "escala": 1.05,
+  "wav": "005-3357c0e4.wav"
+ },
+ {
+  "i": 6,
+  "par": 3,
+  "texto": "Acomódate, apaga a luz e respira amodo.",
+  "pal0": 38,
+  "escala": 1.05,
+  "wav": "006-c3844277.wav"
+ },
+ {
+  "i": 7,
+  "par": 3,
+  "texto": "Non tes que lembrar nada do que escoites: deixa que a historia pase coma a chuvia na xanela.",
+  "pal0": 45,
+  "escala": 1.05,
+  "wav": "007-27cc1312.wav"
+ },
+ {
+  "i": 8,
+  "par": 4,
+  "texto": "Desde a peste negra as rendas dos señores minguaban en toda Europa e a presión señorial sobre os vasalos aumentaba.",
+  "pal0": 63,
+  "escala": 1.05,
+  "wav": "008-743dfb48.wav"
+ },
+ {
+  "i": 9,
+  "par": 5,
+  "texto": "Arredor da metade do século quince, Galicia era unha sociedade de labregos, artesáns, mariñeiros e mercadores; moitos eran vasalos dun señor.",
+  "pal0": 83,
+  "escala": 1.05,
+  "wav": "009-9d39598a.wav"
+ },
+ {
+  "i": 10,
+  "par": 5,
+  "texto": "A xente de Galicia botou abaixo moitas fortalezas dos señores.",
+  "pal0": 104,
+  "escala": 1.05,
+  "wav": "010-1e0811ab.wav"
+ },
+ {
+  "i": 11,
+  "par": 6,
+  "texto": "Os vasalos pagaban tributos en diñeiro e en especie e debían servizos persoais: traballo nas fortalezas e servizo de armas.",
+  "pal0": 114,
+  "escala": 1.05,
+  "wav": "011-553e9232.wav"
+ },
+ {
+  "i": 12,
+  "par": 7,
+  "texto": "As familias labregas vivían ao limiar da pobreza.",
+  "pal0": 134,
+  "escala": 1.05,
+  "wav": "012-a1e1cf07.wav"
+ },
+ {
+  "i": 13,
+  "par": 8,
+  "texto": "O señor era tamén xuíz no seu señorío.",
+  "pal0": 142,
+  "escala": 1.05,
+  "wav": "013-db146ecb.wav"
+ },
+ {
+  "i": 14,
+  "par": 9,
+  "texto": "Desde había un século mandaba unha nobreza nova, máis violenta, e o reino enchérase de fortalezas.",
+  "pal0": 150,
+  "escala": 1.05,
+  "wav": "014-5d6d0060.wav"
+ },
+ {
+  "i": 15,
+  "par": 10,
+  "texto": "Había fortalezas das grandes casas nobres, como Lemos ou Andrade, de bispos e, sobre todo, do arcebispo de Compostela.",
+  "pal0": 166,
+  "escala": 1.069,
+  "wav": "015-f39ef8dc.wav"
+ },
+ {
+  "i": 16,
+  "par": 10,
+  "texto": "Botáronse abaixo moitas fortalezas por mandato dunha irmandade que, entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove, botou abaixo moitas fortalezas.",
+  "pal0": 185,
+  "escala": 1.091,
+  "wav": "016-90404aa7.wav"
+ },
+ {
+  "i": 17,
+  "par": 11,
+  "texto": "Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e marcharan cara a Compostela; foi vencida e castigada.",
+  "pal0": 213,
+  "escala": 1.124,
+  "wav": "017-bd9dff7b.wav"
+ },
+ {
+  "i": 18,
+  "par": 11,
+  "texto": "Despois houbo outras irmandades locais e comarcais, e algunha derrubou fortalezas.",
+  "pal0": 235,
+  "escala": 1.15,
+  "wav": "018-5b16e205.wav"
+ },
+ {
+  "i": 19,
+  "par": 12,
+  "texto": "Desde a Rocha Forte asegurábanse os camiños que ían cara a Pontevedra, Padrón, Muros, Noia e Fisterra, cara ao mar.",
+  "pal0": 246,
+  "escala": 1.163,
+  "wav": "019-8ba0857b.wav"
+ },
+ {
+  "i": 20,
+  "par": 13,
+  "texto": "A Rocha Forte era do arcebispo de Compostela.",
+  "pal0": 266,
+  "escala": 1.186,
+  "wav": "020-2c29173e.wav"
+ },
+ {
+  "i": 21,
+  "par": 14,
+  "texto": "Na irmandade xuntáronse labregos, artesáns, mariñeiros, burgueses, clérigos, cóengos e monxes, e parte da pequena nobreza, que achegou experiencia militar.",
+  "pal0": 274,
+  "escala": 1.196,
+  "wav": "021-af7f8a6c.wav"
+ },
+ {
+  "i": 22,
+  "par": 15,
+  "texto": "Decididos os veciños da cidade e os labregos da comarca, botaron abaixo a Rocha Forte.",
+  "pal0": 294,
+  "escala": 1.219,
+  "wav": "022-e62b6d34.wav"
+ },
+ {
+  "i": 23,
+  "par": 16,
+  "texto": "Os irmandiños derrubaron moitas das fortalezas do reino.",
+  "pal0": 309,
+  "escala": 1.237,
+  "wav": "023-acb205ac.wav"
+ },
+ {
+  "i": 24,
+  "par": 17,
+  "texto": "En mil catrocentos sesenta e nove houbo unha reacción armada dos señores, que regresaron.",
+  "pal0": 317,
+  "escala": 1.246,
+  "wav": "024-72e1993d.wav"
+ },
+ {
+  "i": 25,
+  "par": 18,
+  "texto": "Os señores regresaron coas súas tropas e a irmandade foi derrotada.",
+  "pal0": 331,
+  "escala": 1.25,
+  "wav": "025-f037957b.wav"
+ },
+ {
+  "i": 26,
+  "par": 19,
+  "texto": "Despois da derrota o castigo non foron tanto as execucións como os tributos e o traballo que os vasalos tiveron que dar durante anos para reconstruír as fortalezas derrubadas.",
+  "pal0": 342,
+  "escala": 1.25,
+  "wav": "026-ecb7c559.wav"
+ },
+ {
+  "i": 27,
+  "par": 20,
+  "texto": "Entre mil cincocentos vinte e seis e mil cincocentos vinte e sete, douscentas catro testemuñas vellas declararon ante escribáns no Preito Tabera-Fonseca, lembrando co que viran de mozos.",
+  "pal0": 371,
+  "escala": 1.25,
+  "wav": "027-04ccc729.wav"
+ }
+]

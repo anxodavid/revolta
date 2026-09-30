@@ -10,9 +10,11 @@ modelos son abiertos o de pesos abiertos y corren en CPU (4 núcleos, 15 GB).
     PY=$SCRATCH/tts/venv/bin/python
     $PY pipeline.py temas/irmandinos-apertura.yaml --llm openai --traballo DIR_VACÍO --saida ../../plan-de-negocio/gauntlet2/video
 
-Salida en `--saida`: `ejemplo.mp4` (escrito de forma atómica: primero `.ejemplo.tmp.mp4` y se renombra al acabar),
-`subtitulos.gl.srt`, `contactsheet.jpg` (4x3 fotogramas), `qa.json` y `qa.md` (veredicto PUBLICABLE / NON PUBLICABLE
-con sus puertas). Los intermedios (respuestas del LLM con sus prompts y metadatos, guion, WAV, PNG de todos los
+Salida en `--saida`: `qa.json`, `qa.md` (veredicto PUBLICABLE / NON PUBLICABLE con sus puertas) y
+`subtitulos.gl.srt`; **solo si el veredicto es PUBLICABLE**, también `ejemplo.mp4` y `contactsheet.jpg` (4x3
+fotogramas de 960x540), copiados de forma atómica (temporal + renombrado). Si el texto no pasa las puertas, el
+pipeline sale con código 4 sin generar vídeo; si falla una puerta tras el render, el MP4 queda en `--traballo` como
+`rexeitado.mp4`. Los intermedios (respuestas del LLM con sus prompts y metadatos, guion, WAV, PNG de todos los
 intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si ya está hecha.
 
 ## Historia honesta de la muestra
@@ -22,13 +24,27 @@ intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si
   desatendida** aunque el README y el qa.md de entonces lo decían. Su QA daba PUBLICABLE 9/9 sin mirar el contenido de
   las imágenes: el plano final tenía cuatro manos (un par sin cuerpo), una aldea con ventanas de vidrio y balcones y una
   multitud con picas y cruces.
-- **Ronda 2 (esta versión)**: `--llm openai` contra un LLM local (EuroLLM-9B) arrancado por el propio pipeline, en un
+- **Ronda 2 (archivada en `plan-de-negocio/gauntlet2/video/ronda2/`)**: `--llm openai` contra un LLM local (EuroLLM-9B) arrancado por el propio pipeline, en un
   directorio de trabajo vacío, y puerta automática de imágenes con regeneración. Ninguna respuesta del LLM ni ninguna
   imagen se tocó a mano. El mismo comando se relanzó 4 veces en el mismo directorio para corregir código (cortes de
   plano, reservas y lista del revisor, bloqueo de la montaje, esqueletos y hogueras que la lista no cubría). Las etapas
   ya hechas se leyeron de la caché de esa misma ejecución. Todo está detallado en la nota de `qa.md` y en
   `video/execucion/logs/`. **Veredicto automático: NON PUBLICABLE** (10/12 puertas): falla lengua (11 avisos de
-  LanguageTool) y H1 (1 falso positivo del tokenizador). El modo `manual` queda solo para depurar prompts.
+  LanguageTool) y H1 (1 falso positivo del tokenizador). El modo `manual` queda solo para depurar prompts. Aun así
+  se entregó ese MP4 como ejemplo, y su gancho decía "a irmandade venceu" (falso) e inventaba "fortaleiras".
+- **Ronda 3 (esta versión, 30-09-2026)**: lengua, H1 y una nueva puerta de **veracidad** son **bloqueantes** por bloque
+  y antes de la voz; el dossier incluye el **desenlace** (derrota de 1469, reconstrucción de las fortalezas); el
+  pipeline **no publica** un MP4 que no pase todas las puertas. Ejecución desatendida con EuroLLM-9B local en un
+  directorio vacío; se relanzó una vez el mismo comando en el mismo directorio porque la etapa de voz murió por
+  memoria (LLM + NLI + LanguageTool seguían cargados; ahora se paran antes de la voz). Antes hubo **siete lanzamientos
+  de desarrollo abortados** (unas 4 h de reloj no contabilizadas) en los que se vieron, y se corrigieron en el código,
+  los fallos que dejaban pasar las puertas: un gancho con "os señores non foron castigados con morte", un párrafo con
+  "os señores ... derrubaron as fortalezas dos irmandiños", frases de relleno ("a chuvia mollar a pedra"), repeticiones
+  entre gancho y relato, el LLM copiando el dossier entero en el resumen y dos OOM. **Veredicto automático:
+  PUBLICABLE 13/13.** Precio honesto: de 18 párrafos del relato el LLM no consiguió **ninguno** limpio en tres
+  intentos; 13 son "reserva mixta" (frases del LLM que pasan una a una + el hecho literal) y 5 el hecho literal del
+  dossier; el resumen se omitió y la invitación es texto fijo. El gancho sí es del LLM (pasó a la primera). El
+  guion resultante es verdadero pero seco y con algún giro torpe que LanguageTool no marca (ver Limitaciones).
 
 ## Etapas
 
@@ -163,19 +179,17 @@ Florence-2 no nombre.
   contenedor, así que no hay ruedas precompiladas), y el GGUF de EuroLLM (5,6 GB).
 - StyleTTS2 de Nós, Cotovía y ASR: ver `herramientas/voz/README.md` y las variables de `CFG` en `pipeline.py`.
 
-## Medidas de la muestra (29-09-2026, ronda 2)
+## Medidas de la muestra (30-09-2026, ronda 3)
 
-Vídeo de 3 min 24 s, 24 planos (9 en el primer minuto), 30,4 MB, -17,1 LUFS, WER de la mezcla 0,026, sincronía de
-subtítulos 100 %. Puerta de imágenes: 43 imágenes generadas para 24 planos; 18 aprobadas a la primera, 6 tras
-regenerar (una con el prompt genérico de reserva) y 0 sin aprobar. Tiempo acumulado: 91,7 min de reloj y **4,69 h de
-CPU de núcleo**, de las que 1,69 h son del LLM local (28 llamadas, 2-4 tokens/s de salida y 5-12 tokens/s de lectura
-de prompt). No se cuentan unos 30 min de trabajo interrumpido por los relanzamientos. Extrapolación lineal a 60 min:
-≈27 h de reloj y ≈83 h de CPU [S]. Con estos números, un episodio de 60 min no cabe en una noche de esta máquina: o
-se paraleliza (dos máquinas, o GPU), o se bajan los intentos de imagen y las llamadas al LLM.
+Vídeo de 3 min 11 s, 29 planos (11 en el primer minuto, ninguno de más de 12,5 s), 28,3 MB, -17,2 LUFS, WER de la
+mezcla 0,037, sincronía de subtítulos 99,7 %. Veracidad: 24 frases evaluadas, 0 con problemas. Puerta de imágenes: 63
+imágenes generadas para 29 planos; 18 aprobadas a la primera, 11 tras regenerar (motivos más frecuentes: tejados
+naranjas, multitudes, fuego), 0 sin aprobar. Tiempo acumulado de la ejecución buena (los dos lanzamientos): 91,3 min
+de reloj y **5,17 h de CPU de núcleo**, de las que 2,29 h son del LLM local (64 llamadas, casi todas reintentos por
+bloque). No se cuentan los siete lanzamientos de desarrollo abortados. Extrapolación lineal a 60 min: ≈28,6 h de reloj
+y ≈97 h de CPU [S]: un episodio largo sigue sin caber en una noche de esta máquina.
 
-Ver `plan-de-negocio/gauntlet2/video/qa.md` (tiempos por etapa con el CPU del servidor LLM incluido, llamadas al LLM
-con tokens y segundos, puerta de imágenes con los intentos rechazados) y `comparacion-llm.md` (guion del LLM local
-frente al de Claude de la ronda 1 con los mismos controles).
+Ronda 2 (archivada): 3 min 24 s, 30,4 MB, WER 0,026, 4,69 h de CPU, NON PUBLICABLE 10/12.
 
 ## Licencias a vigilar
 
@@ -183,13 +197,25 @@ frente al de Claude de la ronda 1 con los mismos controles).
   gratis por debajo de 1 M USD de ingresos anuales, con registro para uso comercial. No es OSI.
 - **EuroLLM-9B-Instruct-2512**: Apache-2.0 (https://huggingface.co/utter-project/EuroLLM-9B-Instruct-2512).
 - **Florence-2-large**: MIT. **MediaPipe** y sus modelos: Apache-2.0.
+- **mDeBERTa-v3-base-xnli-multilingual-nli-2mil7** (puerta de veracidad): MIT (https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7).
 - Voz Nós StyleTTS2 y Whisper galego: fichas de https://huggingface.co/proxectonos (crédito a Nós/USC, D4).
 - LanguageTool: LGPL-2.1. Lluvia: código propio.
 
 ## Limitaciones conocidas
 
-- El guion de un LLM local de 9B en CPU es claramente peor que el de un modelo grande (ver la comparación): más
-  avisos de LanguageTool, frases planas y riesgo de datos inventados que H1 no ve. Es el punto débil del canal
+- **Ronda 3: la verdad se consigue a costa del LLM.** Con las puertas bloqueantes, EuroLLM-9B no escribió ningún
+  párrafo del relato que pasara entero; el texto es sobre todo el dossier literal más frases sueltas del LLM. Queda
+  verdadero pero plano, sin la "chispa" que pide el promotor fuera del gancho. Un LLM mejor (o uno grande vía API,
+  que rompería el "todo local") es la palanca principal [S].
+- Errores de gallego que LanguageTool no ve y que siguen en la muestra: "lembrando co que viran" (por "lembrando o
+  que"), "vivían ao limiar" (por "no limiar"), "Decididos os veciños ..., botaron abaixo" (construcción torpe),
+  "Botáronse abaixo moitas fortalezas ... que ... botou abaixo moitas fortalezas" (redundante).
+- Imágenes que pasaron la puerta con defectos visibles en la hoja de contactos: tejados naranjas en 1:43 y 2:46 y una
+  pequeña multitud alrededor de un obispo en 1:43 (Florence-2 no los nombró). El LLM de escenas sigue añadiendo cosas
+  no narradas (flechas, huidas, torres ardiendo); la puerta veta las más graves, no todas.
+
+- El guion de un LLM local de 9B en CPU es claramente peor que el de un modelo grande (ver `video/ronda2/comparacion-llm.md`): más
+  avisos de LanguageTool, frases planas y riesgo de datos inventados (ahora los para la puerta de veracidad, en parte). Es el punto débil del canal
   desatendido y la razón para reportar errores y pedir un modelo instruccional mejor a Nós [S].
 - Las imágenes se generan a 1024x576 y se reescalan: en pantalla grande se ven algo blandas.
 - La niebla se repite cada ~6,4 min.

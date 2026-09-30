@@ -961,8 +961,10 @@ def informe(r, tema, guion):
     nfr = sum(len(v['frases']) for v in ver)
     L += ['', '## Veracidade (veracidade.py: NLI mDeBERTa-v3 multilingüe + coincidencia léxica + regras de desenlace)', '',
           f"{nfr} frases avaliadas; con problemas: {sum(1 for v in ver for x in v['frases'] if not x['ok'])}. "
-          'Modo gancho: todas as frases apoiadas nun feito (NLI >= 0,6 e coincidencia >= 0,5, ou coincidencia >= 0,8). '
-          'Modo relato: frases con nome, tempo longo ou desenlace apoiadas; o parágrafo conta o seu feito.', '',
+          'Modo gancho: todas as frases apoiadas nun feito (NLI >= 0,6 e coincidencia >= 0,6, ou coincidencia >= 0,8, ou '
+          'frase literal do dossier). Modo relato: as frases con persoas, nomes, tempo longo ou desenlace, apoiadas '
+          '(coincidencia >= 0,5 co NLI); sen frases de ambiente; o parágrafo conta o seu feito. En todos: desenlace coa '
+          'mesma forma ca no dossier e quen fixo que (clase do actor de cada verbo de acción) coma no dossier.', '',
           '| Par. | Modo | Frase | NLI | Coincid. | Feitos de apoio | Resultado |', '|---|---|---|---|---|---|---|']
     for v in ver:
         for x in v['frases']:

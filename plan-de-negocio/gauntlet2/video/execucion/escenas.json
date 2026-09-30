@@ -7,276 +7,340 @@
   "t0": 3.0,
   "texto": "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
   "b0": 0.0,
+  "b1": 10.271,
   "movemento": "zoom_in",
-  "b1": 10.361,
-  "prompt": "**A diverse group of peasants, artisans, and nobles gather to dismantle a fortress under stormy skies**"
+  "prompt": "Peaceful village with a few figures walking along a dirt path, carrying tools and looking toward distant stone towers."
  },
  {
   "frases": [
-   3
+   3,
+   4
   ],
-  "t0": 10.611,
-  "texto": "Os campesiños, mariñeiros e artesáns uníronse contra os señores das fortaleiras.",
-  "b0": 10.361,
+  "t0": 10.521,
+  "texto": "Dicían que eran refuxios de malfeitores. As fortalezas derrubadas non se volveron levantar todas.",
+  "b0": 10.271,
+  "b1": 17.677,
   "movemento": "pan_right",
-  "b1": 15.604,
-  "prompt": "**Laborers with wooden beams and stone hammers demolish the tower’s base in a rain-soaked courtyard**"
+  "prompt": "Abandoned fortress under stormy skies, weathered walls with ivy creeping up, no people visible."
  },
  {
   "frases": [
-   4,
    5
   ],
-  "t0": 15.854,
-  "texto": "A xente común botou abaixo torres con paus e pedras. Os nobres tiñan poder, pero a irmandade venceu.",
-  "b0": 15.604,
+  "t0": 17.927,
+  "texto": "Isto é Serán, historia de Galicia para durmir.",
+  "b0": 17.677,
+  "b1": 22.11,
   "movemento": "zoom_out",
-  "b1": 22.885,
-  "prompt": "**Multitudes toppling granite walls with ropes, sledgehammers, and pickaxes at dawn**"
+  "prompt": "Serán logo on screen with title text in Galician: \"Historia de Galicia para durmir\" (History of Galicia to sleep)."
  },
  {
   "frases": [
-   6,
+   6
+  ],
+  "t0": 22.36,
+  "texto": "Acomódate, apaga a luz e respira amodo.",
+  "b0": 22.11,
+  "b1": 25.662,
+  "movemento": "pan_left",
+  "prompt": "A dimly lit room with a person sitting cross-legged by a hearth, candle flickering, no windows visible."
+ },
+ {
+  "frases": [
    7
   ],
-  "t0": 23.135,
-  "texto": "A Rocha Forte caeu baixo as súas mans. Un exército de xente diversa derrubou castelos.",
-  "b0": 22.885,
-  "movemento": "pan_left",
-  "b1": 29.7,
-  "prompt": "**Armed villagers scale a crumbling keep while nobles flee on horseback through mist**"
+  "t0": 25.912,
+  "texto": "Non tes que lembrar nada do que escoites: deixa que a historia pase coma a chuvia na xanela.",
+  "b0": 25.662,
+  "b1": 31.305,
+  "movemento": "zoom_in",
+  "prompt": "Autumn forest path at dusk, three figures walking silently toward a distant hilltop ruin."
  },
  {
   "frases": [
-   8,
+   8
+  ],
+  "t0": 31.555,
+  "texto": "Desde a peste negra as rendas dos señores minguaban en toda Europa e a presión señorial sobre os vasalos aumentaba.",
+  "b0": 31.305,
+  "b1": 38.568,
+  "movemento": "pan_up",
+  "prompt": "Crowd of peasants in woolen cloaks and tunics gathering outside a stone keep, some holding torches."
+ },
+ {
+  "frases": [
    9
   ],
-  "t0": 29.95,
-  "texto": "As fortaleiras perderon fronte á unión popular. Isto é Serán, historia de Galicia para durmir.",
-  "b0": 29.7,
-  "movemento": "zoom_in",
-  "b1": 38.101,
-  "prompt": "**A fractured fortress looms over a village square where rebels hoist banners of unity**"
- },
- {
-  "frases": [
-   10
-  ],
-  "t0": 38.351,
-  "texto": "Esta noite viaxamos no tempo para descubrir unha historia esquecida de Galicia: a revolta dos irmandiños, un movemento sen precedentes que entre mil catrocentos sesenta e sete e mil catrocentos sesenta e nove botou abaixo moitas das fortalezas que dominaban o territorio.",
+  "t0": 38.818,
+  "texto": "Arredor da metade do século quince, Galicia era unha sociedade de labregos, artesáns, mariñeiros e mercadores; moitos eran vasalos dun señor.",
   "parte": "1/2",
-  "b0": 38.101,
-  "movemento": "pan_up",
-  "b1": 45.1125,
-  "prompt": "**Time-travelers stand before the ruins as dusk paints the sky in amber and slate gray**"
+  "b0": 38.568,
+  "b1": 42.8545,
+  "movemento": "zoom_in",
+  "prompt": "A lone figure standing before a weathered castle gate, arms raised as if swearing an oath."
  },
  {
   "frases": [
-   10
+   9
   ],
-  "t0": 45.1125,
-  "texto": "Esta noite viaxamos no tempo para descubrir unha historia esquecida de Galicia: a revolta dos irmandiños, un movemento sen precedentes que entre mil catrocentos sesenta e sete e mil catrocentos sesenta e nove botou abaixo moitas das fortalezas que dominaban o territorio.",
+  "t0": 42.8545,
+  "texto": "Arredor da metade do século quince, Galicia era unha sociedade de labregos, artesáns, mariñeiros e mercadores; moitos eran vasalos dun señor.",
   "parte": "2/2",
-  "b0": 45.1125,
-  "movemento": "zoom_in",
-  "b1": 52.334,
-  "prompt": "**Crowds surround a burning keep, torches casting jagged shadows on mossy stones at nightfall**"
- },
- {
-  "frases": [
-   11
-  ],
-  "t0": 52.584,
-  "texto": "Xuntáronse labregos, artesáns, mariñeiros, burgueses, clérigos e parte da pequena nobreza para derrubar os castelos dos señores, acusados de abusos e violencia.",
-  "parte": "1/2",
-  "b0": 52.334,
+  "b0": 42.8545,
+  "b1": 47.111,
   "movemento": "pan_right",
-  "b1": 57.0205,
-  "prompt": "**A council of rebels debates strategy by candlelight inside a half-ruined chapel’s nave**"
+  "prompt": "Muddy village square with a blacksmith hammering iron, smoke rising from his forge."
+ },
+ {
+  "frases": [
+   10
+  ],
+  "t0": 47.361,
+  "texto": "A xente de Galicia botou abaixo moitas fortalezas dos señores.",
+  "b0": 47.111,
+  "b1": 52.129,
+  "movemento": "zoom_out",
+  "prompt": "Peasants dragging stones toward a collapsed tower, shovels and baskets in hand."
  },
  {
   "frases": [
    11
   ],
-  "t0": 57.0205,
-  "texto": "Xuntáronse labregos, artesáns, mariñeiros, burgueses, clérigos e parte da pequena nobreza para derrubar os castelos dos señores, acusados de abusos e violencia.",
-  "parte": "2/2",
-  "b0": 57.0205,
-  "movemento": "zoom_out",
-  "b1": 62.167,
-  "prompt": "**Nobles in chainmail and velvet cloaks surrender keys to masons armed with sledgehammers**"
- },
- {
-  "frases": [
-   12
-  ],
-  "t0": 62.417,
-  "texto": "Estás a punto de embarcarche nunha viaxe tranquila pola historia de Galicia.",
-  "b0": 62.167,
+  "t0": 52.379,
+  "texto": "Os vasalos pagaban tributos en diñeiro e en especie e debían servizos persoais: traballo nas fortalezas e servizo de armas.",
+  "parte": "1/2",
+  "b0": 52.129,
+  "b1": 55.977999999999994,
   "movemento": "pan_left",
-  "b1": 67.025,
-  "prompt": "**Sunrise glints off rainwater pooling around the collapsed keep’s skeletal remains**"
+  "prompt": "A farmer leading oxen through a field of barley under an overcast sky, wooden cart loaded with grain."
  },
  {
   "frases": [
+   11
+  ],
+  "t0": 55.977999999999994,
+  "texto": "Os vasalos pagaban tributos en diñeiro e en especie e debían servizos persoais: traballo nas fortalezas e servizo de armas.",
+  "parte": "2/2",
+  "b0": 55.977999999999994,
+  "b1": 60.207,
+  "movemento": "zoom_in",
+  "prompt": "Three laborers carrying sacks up a hill to a half-ruined watchtower, one leaning on a spade."
+ },
+ {
+  "frases": [
+   12,
    13
   ],
-  "t0": 67.275,
-  "texto": "Acomódate, apaga as luces e deixa que o aire che acompañe mentres escoitas esta historia dos irmandiños.",
-  "b0": 67.025,
-  "movemento": "zoom_in",
-  "b1": 73.936,
-  "prompt": "**A lone figure sketches the fortress’s silhouette against a blood-orange horizon at dusk**"
- },
- {
-  "frases": [
-   14
-  ],
-  "t0": 74.186,
-  "texto": "Na primavera de mil catrocentos sesenta e sete, un grupo diverso de xente, labregos, artesáns, mariñeiros e algúns nobres, uníronse para derrubar os castelos que dominaban o país.",
-  "parte": "1/2",
-  "b0": 73.936,
+  "t0": 60.457,
+  "texto": "As familias labregas vivían ao limiar da pobreza. O señor era tamén xuíz no seu señorío.",
+  "b0": 60.207,
+  "b1": 68.298,
   "movemento": "pan_up",
-  "b1": 78.96000000000001,
-  "prompt": "**Boatmen unload timber from sloops in a fog-draped estuary where stone towers jut like teeth**"
+  "prompt": "An old woman weaving cloth by candlelight in a stone cottage, woven fabric draped over her shoulder."
  },
  {
   "frases": [
    14
   ],
-  "t0": 78.96000000000001,
-  "texto": "Na primavera de mil catrocentos sesenta e sete, un grupo diverso de xente, labregos, artesáns, mariñeiros e algúns nobres, uníronse para derrubar os castelos que dominaban o país.",
-  "parte": "2/2",
-  "b0": 78.96000000000001,
+  "t0": 68.548,
+  "texto": "Desde había un século mandaba unha nobreza nova, máis violenta, e o reino enchérase de fortalezas.",
+  "b0": 68.298,
+  "b1": 74.746,
   "movemento": "zoom_in",
-  "b1": 84.118,
-  "prompt": "**Fisherfolk haul nets while monks chant psalms beside a half-demolished watchtower’s base**"
+  "prompt": "A monk reading from a parchment scroll inside a vaulted church, stained glass casting colored light."
  },
  {
   "frases": [
    15
   ],
-  "t0": 84.368,
-  "texto": "Botaron abaixo moitas fortalezas, aproveitando a chuvia e o vento que mollan as pedras.",
-  "b0": 84.118,
+  "t0": 74.996,
+  "texto": "Había fortalezas das grandes casas nobres, como Lemos ou Andrade, de bispos e, sobre todo, do arcebispo de Compostela.",
+  "b0": 74.746,
+  "b1": 82.324,
   "movemento": "pan_right",
-  "b1": 90.078,
-  "prompt": "**A blacksmith forges weapons under the fortress’s shattered archway as villagers watch in silence**"
+  "prompt": "Two men arguing near a half-buried watchtower, one pointing at its crumbling wall."
  },
  {
   "frases": [
-   16,
+   16
+  ],
+  "t0": 82.574,
+  "texto": "Botáronse abaixo moitas fortalezas por mandato dunha irmandade que, entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove, botou abaixo moitas fortalezas.",
+  "parte": "1/2",
+  "b0": 82.324,
+  "b1": 87.44800000000001,
+  "movemento": "zoom_out",
+  "prompt": "A lord in chainmail riding a white horse past a fortified manor, banner of red and gold fluttering."
+ },
+ {
+  "frases": [
+   16
+  ],
+  "t0": 87.44800000000001,
+  "texto": "Botáronse abaixo moitas fortalezas por mandato dunha irmandade que, entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove, botou abaixo moitas fortalezas.",
+  "parte": "2/2",
+  "b0": 87.44800000000001,
+  "b1": 93.51,
+  "movemento": "pan_left",
+  "prompt": "Ivory tower under siege by peasants with torches, smoke filling the air but no fire visible."
+ },
+ {
+  "frases": [
    17
   ],
-  "t0": 90.328,
-  "texto": "A luz do sol rompe entre as ruínas, mentres o lume arde nos camiños abandonados. As pedras, molladas polo chuvia e o vento, caeron baixo as ferramentas dos irmandiños.",
-  "b0": 90.078,
-  "movemento": "zoom_out",
-  "b1": 102.188,
-  "prompt": "**Children chase crows through rubble where once stood a lord’s throne room and torture rack**"
+  "t0": 93.76,
+  "texto": "Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e marcharan cara a Compostela; foi vencida e castigada.",
+  "b0": 93.51,
+  "b1": 101.944,
+  "movemento": "zoom_in",
+  "prompt": "A group of villagers climbing a ladder to break into a lord’s keep, one holding an iron crowbar."
  },
  {
   "frases": [
    18
   ],
-  "t0": 102.438,
-  "texto": "A luz do sol filtraba entre os escombros, iluminando camiños esquecidos onde o lume ardeu en silencio.",
-  "b0": 102.188,
-  "movemento": "pan_left",
-  "b1": 109.778,
-  "prompt": "**Monks tend to wounded rebels by lantern-light inside a chapel strewn with broken siege gear**"
+  "t0": 102.194,
+  "texto": "Despois houbo outras irmandades locais e comarcais, e algunha derrubou fortalezas.",
+  "b0": 101.944,
+  "b1": 108.812,
+  "movemento": "pan_up",
+  "prompt": "A bishop in miter and cope standing before a crowd at a village crossroads, hand raised in blessing."
  },
  {
   "frases": [
-   19
-  ],
-  "t0": 110.028,
-  "texto": "Cando o ceo se fundía coas chairas, os homes labraban a terra con ferramentas de ferro e madeira baixo un sol que filtraba entre as herbas altas.",
-  "b0": 109.778,
-  "movemento": "zoom_in",
-  "b1": 119.5,
-  "prompt": "**A scribe records the rebellion in a candlelit scriptorium surrounded by torn parchment maps**"
- },
- {
-  "frases": [
+   19,
    20
   ],
-  "t0": 119.75,
-  "texto": "Algunhas casas tiñan tellados de lousa ou palla, e os teitos goteaban lentamente sobre as pedras dos chans, onde o lume ardeu en silencio durante séculos, deixando pegadas nas paredes como cicatrices da historia.",
-  "b0": 119.5,
-  "movemento": "pan_up",
-  "b1": 133.289,
-  "prompt": "**Weavers stitch banners of defiance beneath a fortress’s collapsed gatehouse at twilight**"
+  "t0": 109.062,
+  "texto": "Desde a Rocha Forte asegurábanse os camiños que ían cara a Pontevedra, Padrón, Muros, Noia e Fisterra, cara ao mar. A Rocha Forte era do arcebispo de Compostela.",
+  "b0": 108.812,
+  "b1": 115.477,
+  "parte": "1/2",
+  "movemento": "zoom_in",
+  "prompt": "Archery practice in a courtyard with targets nailed to oak trees, archers wearing leather jerkins."
+ },
+ {
+  "frases": [
+   19,
+   20
+  ],
+  "t0": 109.062,
+  "texto": "Desde a Rocha Forte asegurábanse os camiños que ían cara a Pontevedra, Padrón, Muros, Noia e Fisterra, cara ao mar. A Rocha Forte era do arcebispo de Compostela.",
+  "b0": 115.477,
+  "b1": 122.142,
+  "parte": "2/2",
+  "movemento": "pan_right",
+  "prompt": "A peasant family fleeing through a forest path as arrows whiz overhead, one child clutching a loaf of bread."
  },
  {
   "frases": [
    21
   ],
-  "t0": 133.539,
-  "texto": "O vento arrastraba o cheiro a terra mollada entre as pedras, mentres os homes camiñaban xuntos baixo un ceo que parecía esvarar sobre os tellados de palla.",
-  "b0": 133.289,
-  "movemento": "zoom_in",
-  "b1": 143.107,
-  "prompt": "**An old woman sells herbs to rebels outside a half-standing tower where vines now choke the stones**"
+  "t0": 122.392,
+  "texto": "Na irmandade xuntáronse labregos, artesáns, mariñeiros, burgueses, clérigos, cóengos e monxes, e parte da pequena nobreza, que achegou experiencia militar.",
+  "b0": 122.142,
+  "b1": 133.044,
+  "movemento": "zoom_out",
+  "prompt": "A lord’s steward counting coins in a candlelit stone chamber, ledger open on oak desk."
  },
  {
   "frases": [
    22,
    23
   ],
-  "t0": 143.357,
-  "texto": "As chaves da Rocha Forte caeron unha tras outra, e cada golpe soaba como se o tempo mesmo se desfacía en anacos. A auga goteaba das teituras rachadas, mesturándose coa area dos camiños, mentres as sombras alongábanse entre os muros derrubados.",
-  "b0": 143.107,
-  "movemento": "pan_right",
-  "b1": 161.978,
-  "prompt": "**A lord in silver armor watches from horseback as peasants hurl boulders into a keep’s moat**"
- },
- {
-  "frases": [
-   24
-  ],
-  "t0": 162.228,
-  "texto": "Os labregos, con aixadas e picos, os artesáns coas súas ferramentas de ferro, os mariñeiros cos seus remos convertidos en armas, os burgueses coa súa contabilidade de loitas, os clérigos coas súas mans sobre as campás das igrexas, e ata algúns da pequena nobreza que souberon guiar o lume dos fachós entre as pedras, xuntáronse nunha soa voz.",
+  "t0": 133.294,
+  "texto": "Decididos os veciños da cidade e os labregos da comarca, botaron abaixo a Rocha Forte. Os irmandiños derrubaron moitas das fortalezas do reino.",
+  "b0": 133.044,
+  "b1": 139.7475,
   "parte": "1/2",
-  "b0": 161.978,
-  "movemento": "zoom_out",
-  "b1": 171.30200000000002,
-  "prompt": "**Carpenters nail planks across broken windows of a fortress chapel while guards surrender their swords**"
- },
- {
-  "frases": [
-   24
-  ],
-  "t0": 171.30200000000002,
-  "texto": "Os labregos, con aixadas e picos, os artesáns coas súas ferramentas de ferro, os mariñeiros cos seus remos convertidos en armas, os burgueses coa súa contabilidade de loitas, os clérigos coas súas mans sobre as campás das igrexas, e ata algúns da pequena nobreza que souberon guiar o lume dos fachós entre as pedras, xuntáronse nunha soa voz.",
-  "parte": "2/2",
-  "b0": 171.30200000000002,
   "movemento": "pan_left",
-  "b1": 181.776,
-  "prompt": "**Burgesses tally spoils in ledgers by torchlight inside the keep’s vaulted treasury chamber**"
+  "prompt": "A scribe writing by firelight inside a tower cellar, wax seal and quill visible on table."
  },
  {
   "frases": [
-   25
+   22,
+   23
   ],
-  "t0": 182.026,
-  "texto": "O vento arrastraba a chuvia polos camiños empedrados, mentres o lume das antorchas iluminaba os rostros cansos de todos eles, unidos baixo un mesmo ceo roto polo ruído constante da caída dos tellados e as paredes que se esgadanaban coma se o mundo tentase esquecer o seu propio peso.",
-  "parte": "1/2",
-  "b0": 181.776,
-  "movemento": "zoom_in",
-  "b1": 189.9375,
-  "prompt": "**A bishop blesses the rubble where once stood a lord’s throne room, now trampled like common soil**"
- },
- {
-  "frases": [
-   25
-  ],
-  "t0": 189.9375,
-  "texto": "O vento arrastraba a chuvia polos camiños empedrados, mentres o lume das antorchas iluminaba os rostros cansos de todos eles, unidos baixo un mesmo ceo roto polo ruído constante da caída dos tellados e as paredes que se esgadanaban coma se o mundo tentase esquecer o seu propio peso.",
+  "t0": 133.294,
+  "texto": "Decididos os veciños da cidade e os labregos da comarca, botaron abaixo a Rocha Forte. Os irmandiños derrubaron moitas das fortalezas do reino.",
+  "b0": 139.7475,
+  "b1": 146.451,
   "parte": "2/2",
-  "b0": 189.9375,
+  "movemento": "zoom_in",
+  "prompt": "A blacksmith striking anvil with hammer while apprentices watch from shadows in the forge."
+ },
+ {
+  "frases": [
+   24,
+   25
+  ],
+  "t0": 146.701,
+  "texto": "En mil catrocentos sesenta e nove houbo unha reacción armada dos señores, que regresaron. Os señores regresaron coas súas tropas e a irmandade foi derrotada.",
+  "b0": 146.451,
+  "b1": 153.882,
+  "parte": "1/2",
   "movemento": "pan_up",
-  "b1": 203.84891666666667,
-  "prompt": "**Rebels march past a crumbling keep as dawn bleeds gold through gaps in its shattered walls**"
+  "prompt": "A lord’s men dragging chains toward a broken keep wall, iron links clinking against stone."
+ },
+ {
+  "frases": [
+   24,
+   25
+  ],
+  "t0": 146.701,
+  "texto": "En mil catrocentos sesenta e nove houbo unha reacción armada dos señores, que regresaron. Os señores regresaron coas súas tropas e a irmandade foi derrotada.",
+  "b0": 153.882,
+  "b1": 161.313,
+  "parte": "2/2",
+  "movemento": "zoom_in",
+  "prompt": "Armed knights riding past a burning watchtower at dawn, smoke curling into misty air."
+ },
+ {
+  "frases": [
+   26
+  ],
+  "t0": 161.563,
+  "texto": "Despois da derrota o castigo non foron tanto as execucións como os tributos e o traballo que os vasalos tiveron que dar durante anos para reconstruír as fortalezas derrubadas.",
+  "b0": 161.313,
+  "b1": 167.6145,
+  "parte": "1/2",
+  "movemento": "pan_right",
+  "prompt": "Peasants hauling stones to rebuild a fortress under the watchful eyes of armored guards."
+ },
+ {
+  "frases": [
+   26
+  ],
+  "t0": 161.563,
+  "texto": "Despois da derrota o castigo non foron tanto as execucións como os tributos e o traballo que os vasalos tiveron que dar durante anos para reconstruír as fortalezas derrubadas.",
+  "b0": 167.6145,
+  "b1": 173.916,
+  "parte": "2/2",
+  "movemento": "zoom_out",
+  "prompt": "A scribe in a candlelit scriptorium copying legal documents with quill and inkwell."
+ },
+ {
+  "frases": [
+   27
+  ],
+  "t0": 174.166,
+  "texto": "Entre mil cincocentos vinte e seis e mil cincocentos vinte e sete, douscentas catro testemuñas vellas declararon ante escribáns no Preito Tabera-Fonseca, lembrando co que viran de mozos.",
+  "b0": 173.916,
+  "b1": 182.46493750000002,
+  "parte": "1/2",
+  "movemento": "pan_left",
+  "prompt": "An old man pointing at a weathered tower while another listens, both seated on wooden benches outside."
+ },
+ {
+  "frases": [
+   27
+  ],
+  "t0": 174.166,
+  "texto": "Entre mil cincocentos vinte e seis e mil cincocentos vinte e sete, douscentas catro testemuñas vellas declararon ante escribáns no Preito Tabera-Fonseca, lembrando co que viran de mozos.",
+  "b0": 182.46493750000002,
+  "b1": 191.013875,
+  "parte": "2/2",
+  "movemento": "zoom_in",
+  "prompt": "Two figures walking through a misty valley toward a distant ruined keep, dawn light breaking over hills."
  }
 ]

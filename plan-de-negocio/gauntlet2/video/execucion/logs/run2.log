@@ -1,5 +1,8 @@
 == 1_guion
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
 == 2_corrixir
+== 2b_porta_texto
 == 3_voz
 Phoneme symbols:
 
@@ -138,54 +141,112 @@ Grapheme symbols:
   WeightNorm.apply(module, name, dim)
 /tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1011: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
   super().__init__("LSTM", *args, **kwargs)
+voz   1   1.4s Boas noites.
+voz   2   4.7s A voz que vas escoitar é sintética, e este texto preparouno 
+voz   3   2.5s Dicían que eran refuxios de malfeitores.
+voz   4   3.6s As fortalezas derrubadas non se volveron levantar todas.
+voz   5   3.0s Isto é Serán, historia de Galicia para durmir.
+voz   6   2.9s Acomódate, apaga a luz e respira amodo.
+voz   7   4.5s Non tes que lembrar nada do que escoites: deixa que a histor
+voz   8   6.1s Desde a peste negra as rendas dos señores minguaban en toda 
+voz   9   8.1s Arredor da metade do século quince, Galicia era unha socieda
+voz  10   3.9s A xente de Galicia botou abaixo moitas fortalezas dos señore
+voz  11   7.2s Os vasalos pagaban tributos en diñeiro e en especie e debían
+voz  12   3.4s As familias labregas vivían ao limiar da pobreza.
+voz  13   2.8s O señor era tamén xuíz no seu señorío.
+voz  14   5.3s Desde había un século mandaba unha nobreza nova, máis violen
+voz  15   6.7s Había fortalezas das grandes casas nobres, como Lemos ou And
+voz  16   9.7s Botáronse abaixo moitas fortalezas por mandato dunha irmanda
+voz  17   7.6s Unhas décadas antes, os vasalos dun gran señor das Mariñas f
+voz  18   5.1s Despois houbo outras irmandades locais e comarcais, e algunh
+voz  19   6.5s Desde a Rocha Forte asegurábanse os camiños que ían cara a P
+voz  20   3.1s A Rocha Forte era do arcebispo de Compostela.
+voz  21   8.9s Na irmandade xuntáronse labregos, artesáns, mariñeiros, burg
+voz  22   5.3s Decididos os veciños da cidade e os labregos da comarca, bot
+voz  23   3.8s Os irmandiños derrubaron moitas das fortalezas do reino.
+voz  24   5.4s En mil catrocentos sesenta e nove houbo unha reacción armada
+voz  25   4.5s Os señores regresaron coas súas tropas e a irmandade foi der
+voz  26  10.0s Despois da derrota o castigo non foron tanto as execucións c
+voz  27  10.8s Entre mil cincocentos vinte e seis e mil cincocentos vinte e
 == 4_escenas
-servidor LLM listo en 24.1 s
-LLM escenas: 327.3 s, {'prompt_tokens': 1984, 'completion_tokens': 690, 'total_tokens': 2674}
+servidor LLM listo en 20.1 s
+LLM escenas: 332.4 s, {'prompt_tokens': 2013, 'completion_tokens': 862, 'total_tokens': 2875}
 == 5_imaxes
-Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:01<00:08,  1.42s/it]Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:01,  2.44it/s]`torch_dtype` is deprecated! Use `dtype` instead!
-Loading pipeline components...:  71%|███████▏  | 5/7 [00:18<00:09,  4.54s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [04:17<01:07, 67.64s/it]Loading pipeline components...: 100%|██████████| 7/7 [05:16<00:00, 65.16s/it]Loading pipeline components...: 100%|██████████| 7/7 [05:16<00:00, 45.23s/it]
 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 WARNING: Logging before InitGoogle() is written to STDERR
-W0000 00:00:1790721735.613778   17750 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-W0000 00:00:1790721735.660107   17750 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-W0000 00:00:1790721735.833133   17755 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-W0000 00:00:1790721736.035172   17755 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790743064.208176    2277 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790743064.237883    2277 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790743064.338673    2283 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790743064.388997    2283 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+`torch_dtype` is deprecated! Use `dtype` instead!
 Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
-W0000 00:00:1790721768.949416   17750 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:00,  9.42it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:03<00:04,  1.17s/it]Loading pipeline components...:  57%|█████▋    | 4/7 [00:03<00:02,  1.09it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:04<00:01,  1.31it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:04<00:00,  1.31it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:13<00:00,  3.38s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:13<00:00,  1.99s/it]
+W0000 00:00:1790743104.433098    2278 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
 The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-imaxe   0 intento 0  27.4s + revisión 15.6s ok
-imaxe   1 intento 0  19.4s + revisión 13.7s ok
-imaxe   2 intento 0  23.3s + revisión 15.2s ['armas']
-imaxe   2 intento 1  19.9s + revisión 12.4s ok
-imaxe   3 intento 0  20.6s + revisión 15.5s ok
-imaxe   4 intento 0  16.0s + revisión 12.0s ok
-imaxe   5 intento 0  19.2s + revisión 13.5s ok
-imaxe   6 intento 0  18.5s + revisión 13.5s ok
-imaxe   7 intento 0  16.3s + revisión 12.3s ['xanelas de vidro']
-imaxe   7 intento 1  16.9s + revisión 14.8s ok
-imaxe   8 intento 0  21.3s + revisión 14.1s ok
-imaxe   9 intento 0  15.0s + revisión 11.5s ok
-imaxe  10 intento 0  17.6s + revisión 13.0s ok
-imaxe  11 intento 0  20.4s + revisión 14.8s ok
-imaxe  12 intento 0  16.4s + revisión 12.8s ok
-imaxe  13 intento 0  18.8s + revisión 18.2s ok
-imaxe  14 intento 0  23.3s + revisión 13.1s ok
-imaxe  15 intento 0  21.3s + revisión 15.8s ok
-imaxe  16 intento 0  16.3s + revisión 12.7s ['interior moderno', 'texto na imaxe']
-imaxe  16 intento 1  22.3s + revisión 16.1s ['obxectos modernos', 'texto na imaxe']
-imaxe  16 intento 2  19.5s + revisión 13.9s ['texto na imaxe']
-imaxe  16 intento 3  19.1s + revisión 13.8s ['xanelas de vidro', 'texto na imaxe']
-imaxe  16 intento 4  20.1s + revisión 13.7s ['texto na imaxe']
-imaxe  17 intento 0  13.6s + revisión 11.7s ok
-imaxe  18 intento 0  15.6s + revisión 13.4s ok
-imaxe  19 intento 0  18.7s + revisión 13.8s ok
-imaxe  20 intento 0  19.8s + revisión 15.3s ok
-imaxe  21 intento 0  16.9s + revisión 14.8s ['xanelas de vidro']
-imaxe  21 intento 1  22.0s + revisión 15.4s ['xanelas de vidro']
-imaxe  21 intento 2  18.8s + revisión 13.2s ['xanelas de vidro']
-imaxe  21 intento 3  14.2s + revisión 13.5s ['xanelas de vidro']
-imaxe  21 intento 4  19.4s + revisión 13.8s ['xanelas de vidro']
-imaxe  22 intento 0  19.0s + revisión 14.1s ok
-imaxe  23 intento 0  15.4s + revisión 12.1s ok
+imaxe   0 intento 0  16.1s + revisión 12.8s ['balcóns', 'tellados laranxas', 'obxectos modernos']
+imaxe   0 intento 1  15.1s + revisión 11.5s ['tellados laranxas', 'obxectos modernos']
+imaxe   0 intento 2  13.1s + revisión 11.9s ['tellados laranxas']
+imaxe   0 intento 3  15.3s + revisión 12.6s ['tellados laranxas']
+imaxe   0 intento 4  16.2s + revisión 13.1s ['tellados laranxas']
+imaxe   0 intento 5  14.4s + revisión 12.0s ok
+imaxe   1 intento 0  15.2s + revisión 10.3s ok
+imaxe   2 intento 0  14.0s + revisión 11.9s ok
+imaxe   3 intento 0  13.1s + revisión 11.5s ok
+imaxe   4 intento 0  15.3s + revisión 12.1s ok
+imaxe   5 intento 0  16.4s + revisión 14.1s ok
+imaxe   6 intento 0  14.9s + revisión 11.3s ok
+imaxe   7 intento 0  14.9s + revisión 11.4s ['tellados laranxas']
+imaxe   7 intento 1  12.3s + revisión 12.5s ['tellados laranxas']
+imaxe   7 intento 2  16.4s + revisión 13.5s ['tellados laranxas']
+imaxe   7 intento 3  16.4s + revisión 14.5s ['tellados laranxas']
+imaxe   7 intento 4  15.3s + revisión 12.5s ok
+imaxe   8 intento 0  17.4s + revisión 14.6s ok
+imaxe   9 intento 0  19.4s + revisión 15.1s ok
+imaxe  10 intento 0  19.9s + revisión 16.0s ok
+imaxe  11 intento 0  21.5s + revisión 15.1s ['interior moderno']
+imaxe  11 intento 1  24.3s + revisión 15.7s ok
+imaxe  12 intento 0  22.4s + revisión 18.1s ok
+imaxe  13 intento 0  25.2s + revisión 15.3s ok
+imaxe  14 intento 0  20.4s + revisión 17.0s ['tellados laranxas']
+imaxe  14 intento 1  23.7s + revisión 14.2s ok
+imaxe  15 intento 0  18.8s + revisión 16.1s ['lume grande no exterior']
+imaxe  15 intento 1  17.9s + revisión 12.7s ['obxectos modernos', 'multitude', 'lume grande no exterior']
+imaxe  15 intento 2  13.3s + revisión 12.9s ['multitude', 'lume grande no exterior']
+imaxe  15 intento 3  16.2s + revisión 13.8s ['violencia', 'multitude', 'lume grande no exterior']
+imaxe  15 intento 4  16.1s + revisión 13.0s ['violencia', 'multitude']
+imaxe  15 intento 5  14.0s + revisión 11.9s ok
+imaxe  16 intento 0  16.6s + revisión 12.6s ok
+imaxe  17 intento 0  13.1s + revisión 12.4s ['tellados laranxas']
+imaxe  17 intento 1  14.8s + revisión 12.8s ok
+imaxe  18 intento 0  16.6s + revisión 13.7s ok
+imaxe  19 intento 0  17.4s + revisión 14.7s ok
+imaxe  20 intento 0  19.2s + revisión 16.1s ['man sen corpo (1)', 'texto na imaxe']
+imaxe  20 intento 1  23.1s + revisión 14.6s ['man sen corpo (1)']
+imaxe  20 intento 2  20.9s + revisión 18.8s ok
+imaxe  21 intento 0  19.3s + revisión 14.8s ['texto na imaxe']
+imaxe  21 intento 1  20.4s + revisión 14.9s ['texto na imaxe']
+imaxe  21 intento 2  17.9s + revisión 15.4s ['texto na imaxe']
+imaxe  21 intento 3  22.0s + revisión 15.7s ['interior moderno', 'texto na imaxe']
+imaxe  21 intento 4  27.0s + revisión 18.7s ok
+imaxe  22 intento 0  25.0s + revisión 17.2s ok
+imaxe  23 intento 0  21.1s + revisión 14.5s ok
+imaxe  24 intento 0  20.1s + revisión 16.2s ['multitude']
+imaxe  24 intento 1  18.1s + revisión 14.1s ['multitude']
+imaxe  24 intento 2  24.9s + revisión 16.7s ['multitude', 'lume grande no exterior']
+imaxe  24 intento 3  24.9s + revisión 16.6s ['multitude']
+imaxe  24 intento 4  20.5s + revisión 15.4s ['multitude']
+imaxe  24 intento 5  19.2s + revisión 13.2s ok
+imaxe  25 intento 0  16.4s + revisión 14.2s ['armas']
+imaxe  25 intento 1  21.7s + revisión 17.3s ok
+imaxe  26 intento 0  20.6s + revisión 15.2s ['interior moderno', 'texto na imaxe']
+imaxe  26 intento 1  18.2s + revisión 13.9s ['interior moderno', 'texto na imaxe']
+imaxe  26 intento 2  18.2s + revisión 14.1s ['texto na imaxe']
+imaxe  26 intento 3  23.2s + revisión 15.1s ['texto na imaxe']
+imaxe  26 intento 4  23.8s + revisión 17.9s ['texto na imaxe']
+imaxe  26 intento 5  20.7s + revisión 14.5s ok
+imaxe  27 intento 0  22.9s + revisión 14.9s ok
+imaxe  28 intento 0  18.1s + revisión 13.6s ok
 == 6_son
 == 7_montaxe
+== 8_qa
+publicable: True {'llm_local_desatendido': True, 'duracion': True, 'wer_mestura': True, 'sincronia_av': True, 'sincronia_subtitulos': True, 'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True, 'imaxes_revisadas': True, 'sonoridade': True, 'peso': True, 'resolucion': True}

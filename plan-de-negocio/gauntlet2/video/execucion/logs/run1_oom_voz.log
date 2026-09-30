@@ -1,0 +1,210 @@
+== 1_guion
+servidor LLM listo en 26.2 s
+LLM bloque_seleccion_gancho: 87.0 s, {'prompt_tokens': 832, 'completion_tokens': 5, 'total_tokens': 837}
+LLM bloque_gancho: 18.3 s, {'prompt_tokens': 369, 'completion_tokens': 27, 'total_tokens': 396}
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+LLM bloque_resumo: 74.2 s, {'prompt_tokens': 935, 'completion_tokens': 91, 'total_tokens': 1026}
+LLM bloque_resumo: 84.8 s, {'prompt_tokens': 1094, 'completion_tokens': 155, 'total_tokens': 1249}
+LLM bloque_resumo: 91.0 s, {'prompt_tokens': 1104, 'completion_tokens': 164, 'total_tokens': 1268}
+LLM bloque_seleccion: 160.9 s, {'prompt_tokens': 893, 'completion_tokens': 80, 'total_tokens': 973}
+LLM bloque_parrafo: 30.7 s, {'prompt_tokens': 419, 'completion_tokens': 30, 'total_tokens': 449}
+LLM bloque_parrafo: 40.3 s, {'prompt_tokens': 552, 'completion_tokens': 63, 'total_tokens': 615}
+LLM bloque_parrafo: 22.9 s, {'prompt_tokens': 520, 'completion_tokens': 17, 'total_tokens': 537}
+LLM bloque_parrafo: 68.7 s, {'prompt_tokens': 460, 'completion_tokens': 15, 'total_tokens': 475}
+LLM bloque_parrafo: 36.3 s, {'prompt_tokens': 513, 'completion_tokens': 66, 'total_tokens': 579}
+LLM bloque_parrafo: 16.9 s, {'prompt_tokens': 488, 'completion_tokens': 30, 'total_tokens': 518}
+LLM bloque_parrafo: 25.5 s, {'prompt_tokens': 479, 'completion_tokens': 30, 'total_tokens': 509}
+LLM bloque_parrafo: 39.9 s, {'prompt_tokens': 507, 'completion_tokens': 30, 'total_tokens': 537}
+LLM bloque_parrafo: 25.9 s, {'prompt_tokens': 444, 'completion_tokens': 44, 'total_tokens': 488}
+LLM bloque_parrafo: 40.8 s, {'prompt_tokens': 472, 'completion_tokens': 33, 'total_tokens': 505}
+LLM bloque_parrafo: 41.2 s, {'prompt_tokens': 531, 'completion_tokens': 66, 'total_tokens': 597}
+LLM bloque_parrafo: 19.8 s, {'prompt_tokens': 424, 'completion_tokens': 11, 'total_tokens': 435}
+LLM bloque_parrafo: 27.7 s, {'prompt_tokens': 452, 'completion_tokens': 38, 'total_tokens': 490}
+LLM bloque_parrafo: 42.3 s, {'prompt_tokens': 593, 'completion_tokens': 69, 'total_tokens': 662}
+LLM bloque_parrafo: 30.1 s, {'prompt_tokens': 436, 'completion_tokens': 66, 'total_tokens': 502}
+LLM bloque_parrafo: 30.1 s, {'prompt_tokens': 552, 'completion_tokens': 37, 'total_tokens': 589}
+LLM bloque_parrafo: 35.0 s, {'prompt_tokens': 458, 'completion_tokens': 47, 'total_tokens': 505}
+LLM bloque_parrafo: 19.9 s, {'prompt_tokens': 511, 'completion_tokens': 33, 'total_tokens': 544}
+LLM bloque_parrafo: 29.2 s, {'prompt_tokens': 486, 'completion_tokens': 57, 'total_tokens': 543}
+LLM bloque_parrafo: 35.0 s, {'prompt_tokens': 537, 'completion_tokens': 61, 'total_tokens': 598}
+LLM bloque_parrafo: 44.4 s, {'prompt_tokens': 665, 'completion_tokens': 60, 'total_tokens': 725}
+LLM bloque_parrafo: 34.9 s, {'prompt_tokens': 664, 'completion_tokens': 61, 'total_tokens': 725}
+LLM bloque_parrafo: 43.2 s, {'prompt_tokens': 492, 'completion_tokens': 67, 'total_tokens': 559}
+LLM bloque_parrafo: 29.8 s, {'prompt_tokens': 520, 'completion_tokens': 67, 'total_tokens': 587}
+LLM bloque_parrafo: 74.0 s, {'prompt_tokens': 595, 'completion_tokens': 68, 'total_tokens': 663}
+LLM bloque_parrafo: 17.0 s, {'prompt_tokens': 446, 'completion_tokens': 29, 'total_tokens': 475}
+LLM bloque_parrafo: 20.8 s, {'prompt_tokens': 506, 'completion_tokens': 48, 'total_tokens': 554}
+LLM bloque_parrafo: 41.8 s, {'prompt_tokens': 616, 'completion_tokens': 60, 'total_tokens': 676}
+LLM bloque_parrafo: 19.1 s, {'prompt_tokens': 442, 'completion_tokens': 39, 'total_tokens': 481}
+LLM bloque_parrafo: 21.3 s, {'prompt_tokens': 520, 'completion_tokens': 52, 'total_tokens': 572}
+LLM bloque_parrafo: 31.2 s, {'prompt_tokens': 522, 'completion_tokens': 50, 'total_tokens': 572}
+LLM bloque_parrafo: 19.5 s, {'prompt_tokens': 457, 'completion_tokens': 41, 'total_tokens': 498}
+LLM bloque_parrafo: 37.8 s, {'prompt_tokens': 501, 'completion_tokens': 85, 'total_tokens': 586}
+LLM bloque_parrafo: 27.5 s, {'prompt_tokens': 485, 'completion_tokens': 46, 'total_tokens': 531}
+LLM bloque_parrafo: 43.4 s, {'prompt_tokens': 471, 'completion_tokens': 22, 'total_tokens': 493}
+LLM bloque_parrafo: 38.5 s, {'prompt_tokens': 499, 'completion_tokens': 20, 'total_tokens': 519}
+LLM bloque_parrafo: 28.9 s, {'prompt_tokens': 441, 'completion_tokens': 37, 'total_tokens': 478}
+LLM bloque_parrafo: 33.3 s, {'prompt_tokens': 532, 'completion_tokens': 40, 'total_tokens': 572}
+LLM bloque_parrafo: 22.4 s, {'prompt_tokens': 469, 'completion_tokens': 38, 'total_tokens': 507}
+LLM bloque_parrafo: 15.0 s, {'prompt_tokens': 437, 'completion_tokens': 22, 'total_tokens': 459}
+LLM bloque_parrafo: 18.4 s, {'prompt_tokens': 537, 'completion_tokens': 38, 'total_tokens': 575}
+LLM bloque_parrafo: 14.3 s, {'prompt_tokens': 447, 'completion_tokens': 17, 'total_tokens': 464}
+LLM bloque_parrafo: 34.2 s, {'prompt_tokens': 475, 'completion_tokens': 65, 'total_tokens': 540}
+LLM bloque_parrafo: 37.5 s, {'prompt_tokens': 764, 'completion_tokens': 64, 'total_tokens': 828}
+LLM bloque_parrafo: 35.7 s, {'prompt_tokens': 457, 'completion_tokens': 41, 'total_tokens': 498}
+LLM bloque_parrafo: 27.8 s, {'prompt_tokens': 485, 'completion_tokens': 78, 'total_tokens': 563}
+LLM bloque_parrafo: 30.4 s, {'prompt_tokens': 496, 'completion_tokens': 89, 'total_tokens': 585}
+LLM bloque_parrafo: 29.2 s, {'prompt_tokens': 592, 'completion_tokens': 41, 'total_tokens': 633}
+LLM bloque_parrafo: 39.3 s, {'prompt_tokens': 600, 'completion_tokens': 94, 'total_tokens': 694}
+LLM bloque_parrafo: 30.0 s, {'prompt_tokens': 490, 'completion_tokens': 78, 'total_tokens': 568}
+LLM bloque_parrafo: 28.8 s, {'prompt_tokens': 598, 'completion_tokens': 68, 'total_tokens': 666}
+LLM bloque_parrafo: 27.6 s, {'prompt_tokens': 588, 'completion_tokens': 70, 'total_tokens': 658}
+== 2_corrixir
+== 2b_porta_texto
+== 3_voz
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1011: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+Traceback (most recent call last):
+  File "/home/user/revolta/herramientas/pipeline/pipeline.py", line 1030, in <module>
+    main()
+  File "/home/user/revolta/herramientas/pipeline/pipeline.py", line 749, in main
+    subprocess.run([CFG['python_tts'], str(HERE / 'voz_st2.py'), str(fj), str(vdir)], env=env, check=True)
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/bin/python', '/home/user/revolta/herramientas/pipeline/voz_st2.py', '/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/pipeline_work/r3/frases.json', '/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/pipeline_work/r3/voz']' died with <Signals.SIGKILL: 9>.

@@ -1,0 +1,1475 @@
+{
+ "000-ece57aee": {
+  "ficheiro": "000-ece57aee-5.png",
+  "escollida": 5,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "000-ece57aee-0.png",
+    "seed": 1871306036,
+    "s": 16.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peaceful village with a few figures walking along a dirt path, carrying tools and looking toward distant stone towers, painterly realism, few figures",
+    "problemas": [
+     "balcóns",
+     "tellados laranxas",
+     "obxectos modernos"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a small town. The street is made of cobblestones and is lined with old-fashioned buildings on both sides. On the left side of the street, there is a green building with a red tiled roof and a small balcony. In the background, there are several smaller buildings with white walls and red roofs. On top of one of the buildings, there appears to be a church or cathedral with a blue dome and a clock tower. The sky is overcast and the overall mood of the painting is peaceful and serene.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.8
+   },
+   {
+    "intento": 1,
+    "ficheiro": "000-ece57aee-1.png",
+    "seed": 983407808,
+    "s": 15.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peaceful village with a few figures walking along a dirt path, carrying tools and looking toward distant stone towers, painterly realism, few figures",
+    "problemas": [
+     "tellados laranxas",
+     "obxectos modernos"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a small town. The street is made of cobblestones and is lined with old-fashioned buildings on both sides. The buildings are painted in a variety of colors, including blue, green, and yellow, and have tiled roofs. In the center of the street, there is a tall tower with a pointed roof and a clock tower on top. On the left side of the image, there are two men walking on the street with walking sticks in their hands. The men are wearing green robes and hats, and one of them is",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.5
+   },
+   {
+    "intento": 2,
+    "ficheiro": "000-ece57aee-2.png",
+    "seed": 1360056818,
+    "s": 13.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peaceful village with a few figures walking along a dirt path, carrying tools and looking toward distant stone towers, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a small village. The street is lined with old-fashioned houses with tiled roofs and stone walls. On the left side of the street, there is a stone wall with a small garden in front of it. In the center of the image, there are four people walking on the street with a dog. The people are dressed in traditional clothing and some are carrying bags. On one of the houses, there appears to be a church or cathedral. The sky is overcast and the overall mood of the painting is peaceful and serene.",
+    "obxectos": [
+     "building",
+     "house",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.9
+   },
+   {
+    "intento": 3,
+    "ficheiro": "000-ece57aee-3.png",
+    "seed": 2062490330,
+    "s": 15.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peaceful village with a few figures walking along a dirt path, carrying tools and looking toward distant stone towers, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a small town. The street is made of cobblestones and is lined with old-fashioned houses on both sides. The houses are painted in shades of blue and green, with tiled roofs and stone walls. In the background, there is a church with a tall tower and a bell tower. The sky is cloudy and the overall mood of the painting is peaceful and serene.\n\nIn the foreground, there are four men walking down the street, all wearing traditional clothing and hats. They appear to be walking in a line,",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.6
+   },
+   {
+    "intento": 4,
+    "ficheiro": "000-ece57aee-4.png",
+    "seed": 2110457110,
+    "s": 16.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peaceful village with a few figures walking along a dirt path, carrying tools and looking toward distant stone towers, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a small village. The street is lined with traditional French houses with tiled roofs and stone walls. On the left side of the street, there is a row of houses with white walls and a blue roof. In the center of the image, there are six people walking on the street. The people are dressed in traditional French clothing, with some wearing hats and carrying baskets. On one of the houses, there appears to be a church or cathedral. The sky is overcast and the overall mood of the painting is peaceful and serene.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.1
+   },
+   {
+    "intento": 5,
+    "ficheiro": "000-ece57aee-5.png",
+    "seed": 87644169,
+    "s": 14.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, two villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking down a cobblestone street in a medieval village. The street is lined with stone buildings on both sides, with a stone wall on the left side and a stone building on the right side. In the background, there is a tall tower with a pointed roof and a cross on top. The sky is overcast and the overall mood of the image is gloomy. The people in the image appear to be dressed in medieval clothing, with some wearing cloaks and others wearing cloaking.",
+    "obxectos": [
+     "building"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.0
+   }
+  ],
+  "version_revisor": 4
+ },
+ "001-ee080528": {
+  "ficheiro": "001-ee080528-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "001-ee080528-0.png",
+    "seed": 4038546787,
+    "s": 15.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Abandoned fortress under stormy skies, weathered walls with ivy creeping up, no people visible, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of an old castle ruins on a hill. The castle is made of stone and is covered in ivy and greenery. The walls of the castle are made of cobblestones and there are two arches on either side of the entrance. The entrance is made up of stone pillars and arches, and there is a stone pathway leading up to it. In the background, there are rolling hills and fields, and the sky is cloudy. The overall mood of the image is gloomy and abandoned.",
+    "obxectos": [
+     "castle"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 10.3
+   }
+  ],
+  "version_revisor": 4
+ },
+ "002-e4000632": {
+  "ficheiro": "002-e4000632-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "002-e4000632-0.png",
+    "seed": 1097068491,
+    "s": 14.0,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Serán logo on screen with title text in Galician: \"Historia de Galicia para durmir\" (History of Galicia to sleep), painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people gathered around a table in a garden. The table is set up on a stone patio with a stone wall on the left side and a stone archway on the right side. In the background, there is a beautiful landscape with a river and a village on a hill. The sky is blue and there are mountains in the distance.\n\nIn the center of the painting, there are several people dressed in traditional clothing, including monks, nuns, and other religious figures. Some of the people are standing and some are sitting, while others are",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.9
+   }
+  ],
+  "version_revisor": 4
+ },
+ "003-2fa70a1e": {
+  "ficheiro": "003-2fa70a1e-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "003-2fa70a1e-0.png",
+    "seed": 1724621249,
+    "s": 13.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A dimly lit room with a person sitting cross-legged by a hearth, candle flickering, no windows visible, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of an old man sitting in a room with a fireplace. The man is wearing a long robe and has a long beard and is sitting on the floor in front of the fireplace. He is looking down at a small fire that is burning brightly in the center of the room. The room has a stone floor and a large window on the left side of the image. The walls are painted in a light green color and there is a wooden shelf on the right side with various items on it. The fireplace is lit with a warm glow and there are a few pieces of",
+    "obxectos": [
+     "man"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 11.5
+   }
+  ],
+  "version_revisor": 4
+ },
+ "004-3073efb6": {
+  "ficheiro": "004-3073efb6-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "004-3073efb6-0.png",
+    "seed": 415364174,
+    "s": 15.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Autumn forest path at dusk, three figures walking silently toward a distant hilltop ruin, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a dirt road in a mountainous landscape. The road is surrounded by trees and shrubs on both sides, with a stone wall on the left side. The sky is cloudy and the overall mood of the painting is peaceful and serene. In the distance, there are rolling hills and valleys. Two people can be seen walking on the road, one wearing a hat and the other wearing a coat. The painting is done in a realistic style, with loose brushstrokes and vibrant colors. The overall mood is one of tranquility and serenity.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.1
+   }
+  ],
+  "version_revisor": 4
+ },
+ "005-d8176904": {
+  "ficheiro": "005-d8176904-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "005-d8176904-0.png",
+    "seed": 1541753054,
+    "s": 16.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Crowd of peasants in woolen cloaks and tunics gathering outside a stone keep, some holding torches, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people gathered around a fire pit in an old stone building. The people are dressed in medieval clothing, with some wearing green robes and hats, and others wearing brown robes. The fire pit is made of metal and is burning brightly, with flames visible. The building in the background is made up of stone and has arched windows and arches. The sky is blue and there are mountains in the distance. The scene appears to be taking place in a medieval town or village. The overall mood of the image is one of reverence and devotion.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.1
+   }
+  ],
+  "version_revisor": 4
+ },
+ "006-7c00387a": {
+  "ficheiro": "006-7c00387a-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "006-7c00387a-0.png",
+    "seed": 1445264454,
+    "s": 14.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lone figure standing before a weathered castle gate, arms raised as if swearing an oath, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a medieval castle gate. The gate is made of stone and has two arches, one on each side. The walls of the castle are made of cobblestones and there are two towers on either side of the gate. In the center of the image, there is a man standing with his arms outstretched, looking up at the sky. He is wearing a long robe and appears to be in a peaceful and contemplative pose. The sky is overcast and the overall mood of the painting is one of serenity and tranquility.",
+    "obxectos": [
+     "castle"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.3
+   }
+  ],
+  "version_revisor": 4
+ },
+ "007-2f3ad331": {
+  "ficheiro": "007-2f3ad331-4.png",
+  "escollida": 4,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "007-2f3ad331-0.png",
+    "seed": 3484882896,
+    "s": 14.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Muddy village square with a blacksmith hammering iron, smoke rising from his forge, painterly realism, few figures",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a small town. The street is lined with old-fashioned buildings with tiled roofs and windows. The buildings are painted in a variety of colors, including blue, green, and yellow. There are several people in the painting, some standing and some sitting around a fire pit. Some are wearing hats and aprons, while others are wearing casual clothing. The fire pit is made of wood and there are several pots and pans scattered around it. The sky is cloudy and the overall mood of the painting is peaceful and serene.",
+    "obxectos": [
+     "building",
+     "house",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.4
+   },
+   {
+    "intento": 1,
+    "ficheiro": "007-2f3ad331-1.png",
+    "seed": 3052871550,
+    "s": 12.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Muddy village square with a blacksmith hammering iron, smoke rising from his forge, painterly realism, few figures",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a street scene in a European town. The street is lined with old-fashioned buildings with colorful facades and tiled roofs. The buildings are painted in shades of green, yellow, and brown, and there are several people walking on the street. In the center of the image, there is a group of people gathered around a small fire pit, which appears to be made of stone and metal. Some of the people are working on the fire, while others are sitting on benches and some are standing around the fire pit. There are also several buckets and other",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.5
+   },
+   {
+    "intento": 2,
+    "ficheiro": "007-2f3ad331-2.png",
+    "seed": 3105840562,
+    "s": 16.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Muddy village square with a blacksmith hammering iron, smoke rising from his forge, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men working in an old town. The painting is done in a realistic style with loose brushstrokes and vibrant colors. The men are dressed in traditional clothing and are gathered around a large pottery wheel, which is being used to make pottery. The wheel is made of stone and is surrounded by various tools and materials.\n\nIn the background, there are several buildings with tiled roofs and windows, some of which appear to be old and dilapidated. There are also a few people walking around the town, some carrying baskets and",
+    "obxectos": [
+     "building",
+     "man",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 13.5
+   },
+   {
+    "intento": 3,
+    "ficheiro": "007-2f3ad331-3.png",
+    "seed": 1122307661,
+    "s": 16.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Muddy village square with a blacksmith hammering iron, smoke rising from his forge, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men working in a village. The men are dressed in traditional clothing and are gathered around a stone fireplace. They are working on a fire pit, which is made of bricks and mortar. Some of the men are holding pots and pans, while others are using tools such as hammers and saws to cut through the bricks. The village is made up of old stone buildings with tiled roofs and chimneys. The sky is cloudy and there is smoke rising from the fireplace. The overall mood of the painting is one of concentration and effort.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.5
+   },
+   {
+    "intento": 4,
+    "ficheiro": "007-2f3ad331-4.png",
+    "seed": 273920598,
+    "s": 15.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Muddy village square with a blacksmith hammering iron, smoke rising from his forge, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men working in an old town. The painting is done in a realistic style with loose brushstrokes and vibrant colors. The men are dressed in traditional clothing and hats, and some are holding tools such as hammers, saws, and a bucket. They are gathered around a small table with a fire burning on it. In the background, there are several buildings with thatched roofs and arched windows. The sky is blue and there are a few clouds in the sky. The ground is covered in cobblestones and there is a large",
+    "obxectos": [
+     "building",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.5
+   }
+  ],
+  "version_revisor": 4
+ },
+ "008-6378c89d": {
+  "ficheiro": "008-6378c89d-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "008-6378c89d-0.png",
+    "seed": 1467514779,
+    "s": 17.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peasants dragging stones toward a collapsed tower, shovels and baskets in hand, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people walking on a cobblestone street. The street is lined with old stone buildings and there is a stone tower in the background. The people are dressed in traditional clothing, with some wearing hats and others wearing long robes. Some of them are carrying baskets of fruit or vegetables, while others are walking with their backs to the camera. The sky is overcast and the overall mood of the painting is peaceful and serene. The painting appears to be done in a realistic style, with vibrant colors and intricate details.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.6
+   }
+  ],
+  "version_revisor": 4
+ },
+ "009-7a5e60bf": {
+  "ficheiro": "009-7a5e60bf-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "009-7a5e60bf-0.png",
+    "seed": 497679181,
+    "s": 19.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A farmer leading oxen through a field of barley under an overcast sky, wooden cart loaded with grain, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men walking on a dirt road in a rural area. The men are wearing traditional clothing and hats, and some are carrying a cart full of hay. The cart is pulled by two white oxen, and the oxen are pulling it along the road. The road is lined with tall green fields on both sides, and there are trees and hills in the background. The sky is cloudy and the overall mood of the painting is peaceful and serene.",
+    "obxectos": [
+     "cart",
+     "cattle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.1
+   }
+  ],
+  "version_revisor": 4
+ },
+ "010-8484e6a4": {
+  "ficheiro": "010-8484e6a4-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "010-8484e6a4-0.png",
+    "seed": 2949752081,
+    "s": 19.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Three laborers carrying sacks up a hill to a half-ruined watchtower, one leaning on a spade, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men standing in front of a stone castle. The castle appears to be old and weathered, with broken walls and ruins. The men are dressed in traditional clothing, with some wearing hats and carrying bags. They are standing on a rocky hillside, with a dirt path leading up to the entrance of the castle. In the background, there are hills and a cloudy sky. The overall mood of the painting is one of abandonment and neglect.",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 16.0
+   }
+  ],
+  "version_revisor": 4
+ },
+ "011-a15d3a6b": {
+  "ficheiro": "011-a15d3a6b-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "011-a15d3a6b-0.png",
+    "seed": 918412123,
+    "s": 21.5,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, An old woman weaving cloth by candlelight in a stone cottage, woven fabric draped over her shoulder, painterly realism, few figures",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of an elderly woman sitting at a table in a room with a stone wall and a window in the background. She is wearing a green jacket and a white headscarf, and appears to be working on a piece of fabric with a pair of scissors. On the table in front of her, there are various tools and materials scattered around, including a lamp, a pot, and a vase. The woman is focused on her work, and her hands are holding a needle and thread. The room is dimly lit, and the overall mood of the",
+    "obxectos": [
+     "human face",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 15.1
+   },
+   {
+    "intento": 1,
+    "ficheiro": "011-a15d3a6b-1.png",
+    "seed": 695213921,
+    "s": 24.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, An old woman weaving cloth by candlelight in a stone cottage, woven fabric draped over her shoulder, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of an elderly woman sitting at a table in a room with a fireplace. She is wearing a green robe and has white hair. The woman is holding a pair of knitting needles and appears to be working on a piece of fabric. The table is covered with a blue cloth and there is a lit candle on the left side of the table. The room has a stone wall and a window on the right side. The overall mood of the painting is peaceful and serene.",
+    "obxectos": [
+     "human face",
+     "person"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.584,
+       0.753
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.028
+     },
+     {
+      "pulso": [
+       0.35,
+       0.725
+      ],
+      "confianza": 0.96,
+      "dist_corpo": 0.025
+     }
+    ],
+    "corpos": 1,
+    "s_revision": 15.7
+   }
+  ],
+  "version_revisor": 4
+ },
+ "012-fe0c1247": {
+  "ficheiro": "012-fe0c1247-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "012-fe0c1247-0.png",
+    "seed": 2398276016,
+    "s": 22.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A monk reading from a parchment scroll inside a vaulted church, stained glass casting colored light, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a religious scene in a church. It shows three monks sitting on the floor of the church, reading a book together. The room is filled with high ceilings and arches, with large stained glass windows at the top. The walls are made of stone and there are several columns on either side of the room. The monks are wearing dark robes and are holding books in their hands. In the background, there is a monk sitting at a table with a book in front of him. The overall atmosphere of the image is peaceful and serene.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 18.1
+   }
+  ],
+  "version_revisor": 4
+ },
+ "013-e79f76b2": {
+  "ficheiro": "013-e79f76b2-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "013-e79f76b2-0.png",
+    "seed": 3376964967,
+    "s": 25.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Two men arguing near a half-buried watchtower, one pointing at its crumbling wall, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of four men standing in front of a stone castle. The castle appears to be old and weathered, with a large stone wall and a doorway in the center. The men are dressed in medieval clothing, with green robes and hats. They are gathered around the entrance of the castle, which is made of large stones and has a small window on the right side.\n\nOn the left side of the image, there is a man holding a staff and pointing towards the entrance. He is wearing a green robe and a hat, and is standing on",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.3
+   }
+  ],
+  "version_revisor": 4
+ },
+ "014-8f7b42f7": {
+  "ficheiro": "014-8f7b42f7-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "014-8f7b42f7-0.png",
+    "seed": 1558486753,
+    "s": 20.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lord in chainmail riding a white horse past a fortified manor, banner of and fluttering, painterly realism, few figures",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a medieval scene with a white horse and a knight on horseback. The knight is wearing a helmet and armor and is sitting on the back of the horse, which is white with a brown saddle and bridle. The horse is standing on a dirt road in front of a stone building with a red tiled roof. On the left side of the image, there is a man wearing a green coat and holding a sword, who appears to be leading the horse. In the background, there are several other buildings with stone walls and arches, and a group",
+    "obxectos": [
+     "building",
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 17.0
+   },
+   {
+    "intento": 1,
+    "ficheiro": "014-8f7b42f7-1.png",
+    "seed": 263105693,
+    "s": 23.7,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lord in chainmail riding a white horse past a fortified manor, banner of and fluttering, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of two men on horseback in front of a castle. The castle is made of stone and has multiple towers with turrets and a flag on top. The sky is blue and there are trees and bushes on either side of the castle. In the foreground, there is a dirt path leading up to the castle, and in the background, there are several people sitting on the grass and walking around. The men are dressed in medieval clothing, with helmets and armor. One of the men is riding a brown horse, while the other is riding white horse. The painting is",
+    "obxectos": [
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.2
+   }
+  ],
+  "version_revisor": 4
+ },
+ "015-6cb79d30": {
+  "ficheiro": "015-6cb79d30-5.png",
+  "escollida": 5,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "015-6cb79d30-0.png",
+    "seed": 235581169,
+    "s": 18.8,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Ivory tower under siege by peasants with torches, smoke filling the air but no fire visible, painterly realism, few figures",
+    "problemas": [
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a medieval scene with two towers in the background. The towers are made of stone and have intricate carvings on them. The sky is cloudy and there is a large plume of smoke rising from one of the towers. In the foreground, there are several people gathered around a large fire burning in the center of the image. The people are dressed in medieval clothing and some are holding swords and shields. The fire appears to be burning brightly and there are buildings and houses scattered around the area. The overall mood of the painting is one of chaos and destruction.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 16.1
+   },
+   {
+    "intento": 1,
+    "ficheiro": "015-6cb79d30-1.png",
+    "seed": 4116822475,
+    "s": 17.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Ivory tower under siege by peasants with torches, smoke filling the air but no fire visible, painterly realism, few figures",
+    "problemas": [
+     "obxectos modernos",
+     "multitude",
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a battle scene in a medieval town. It shows a group of soldiers on horseback, engaged in a fierce battle with a large fire burning in the background. The fire is burning on the right side of the image, with thick black smoke billowing up into the sky. In the center of the painting, there is a tall tower with a clock on top, which appears to be a castle or fort. The tower is surrounded by buildings and houses, and there are several people on the ground, some of whom are holding swords and shields. The sky is",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.7
+   },
+   {
+    "intento": 2,
+    "ficheiro": "015-6cb79d30-2.png",
+    "seed": 59548612,
+    "s": 13.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Ivory tower under siege by peasants with torches, smoke filling the air but no fire visible, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "multitude",
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people gathered around a fire in a medieval town. The town appears to be in ruins, with buildings and ruins scattered around the area. The sky is filled with smoke and flames, and the ground is covered in rubble and debris.\n\nIn the center of the image, there is a large group of men dressed in medieval clothing, some of whom are holding swords and shields. They are standing in front of a large fire, which is burning brightly. On the left side of the painting, there are several buildings with towers and turrets, and",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.9
+   },
+   {
+    "intento": 3,
+    "ficheiro": "015-6cb79d30-3.png",
+    "seed": 3597119527,
+    "s": 16.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Ivory tower under siege by peasants with torches, smoke filling the air but no fire visible, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "violencia",
+     "multitude",
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of medieval knights gathered around a burning castle. The castle is made of stone and has two towers with arches and a gate. The sky is cloudy and there is a large fire burning in the center of the castle. On the left side of the image, there are several knights holding spears and shields, while on the right side, there is another knight lying on the ground with his head down. The knights are wearing helmets and armor, and some are holding swords. The scene appears to be chaotic and tense, with some of the knights engaged in",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.8
+   },
+   {
+    "intento": 4,
+    "ficheiro": "015-6cb79d30-4.png",
+    "seed": 1626077831,
+    "s": 16.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Ivory tower under siege by peasants with torches, smoke filling the air but no fire visible, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "violencia",
+     "multitude"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of medieval knights gathered around a burning tower. The tower appears to be made of stone and has a pointed top. The knights are wearing helmets and armor, and some are holding swords and shields. The fire is burning brightly, with thick black smoke rising up into the sky. In the background, there are several buildings and hills, suggesting that the scene is taking place in a rural area. The sky is cloudy and the overall mood of the image is tense and somber.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.0
+   },
+   {
+    "intento": 5,
+    "ficheiro": "015-6cb79d30-5.png",
+    "seed": 1031866464,
+    "s": 14.0,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, two villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking on a cobblestone street in a medieval village. The street is lined with old stone buildings on both sides, with a stone wall on the left side and a stone building on the right side. The buildings have a sloping roof and chimneys, and there are trees and bushes scattered throughout the street. The sky is overcast and the overall mood of the image is gloomy and gloomy. The people in the image appear to be dressed in medieval clothing, with some wearing long robes and hats. They are walking in a line, and one person",
+    "obxectos": [
+     "building",
+     "house"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 11.9
+   }
+  ],
+  "version_revisor": 4
+ },
+ "016-a189f6b0": {
+  "ficheiro": "016-a189f6b0-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "016-a189f6b0-0.png",
+    "seed": 1181708286,
+    "s": 16.6,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A group of villagers climbing a ladder to break into a lord’s keep, one holding an iron crowbar, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people working on a building. The building appears to be old and dilapidated, with peeling paint and crumbling walls. There are several people on ladders and scaffolding around the building, some of them are climbing up the stairs while others are standing on the windows. The people are dressed in colorful clothing and some are wearing hats and carrying bags. The sky is blue and there are mountains in the background. The overall mood of the painting is one of urgency and determination.",
+    "obxectos": [
+     "building",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.6
+   }
+  ],
+  "version_revisor": 4
+ },
+ "017-5bd21f35": {
+  "ficheiro": "017-5bd21f35-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "017-5bd21f35-0.png",
+    "seed": 3177363559,
+    "s": 13.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A bishop in miter and cope standing before a crowd at a village crossroads, hand raised in blessing, painterly realism, few figures",
+    "problemas": [
+     "tellados laranxas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people gathered in a street. The street is lined with old buildings with red tiled roofs and white walls. The people are dressed in traditional religious clothing, with some wearing green robes and others wearing white robes. In the center of the image, there is a man wearing a black hat and a long robe, who appears to be a priest or a religious figure. He is standing in front of the group and is gesturing with his hands as he speaks. The other people in the group are listening attentively to the man in the hat.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.4
+   },
+   {
+    "intento": 1,
+    "ficheiro": "017-5bd21f35-1.png",
+    "seed": 3823467374,
+    "s": 14.8,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A bishop in miter and cope standing before a crowd at a village crossroads, hand raised in blessing, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people gathered on a cobblestone street in a small town. The street is lined with old buildings and there is a church in the background. The people are dressed in traditional clothing, with some wearing white robes and hats, while others are wearing black robes.\n\nIn the center of the image, there are two men, one wearing a green robe and the other wearing a black robe. The man in the green robe is holding a book and appears to be explaining something to the other man, who is standing in front of him. The",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 12.8
+   }
+  ],
+  "version_revisor": 4
+ },
+ "018-400843fc": {
+  "ficheiro": "018-400843fc-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "018-400843fc-0.png",
+    "seed": 178194841,
+    "s": 16.6,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Archery practice in a courtyard with targets nailed to oak trees, archers wearing leather jerkins, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men dressed in medieval clothing, engaged in a archery practice. The men are standing on a cobblestone street, with a tree and a building in the background. They are all holding bows and arrows and appear to be in the middle of a hunt. Some of the men are wearing helmets and carrying bags, while others are holding bows. The painting is done in a realistic style, with detailed facial features and clothing. The colors used in the painting are mostly earthy tones, with hints of green and brown. The overall mood of the",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 13.7
+   }
+  ],
+  "version_revisor": 4
+ },
+ "019-b119bd42": {
+  "ficheiro": "019-b119bd42-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "019-b119bd42-0.png",
+    "seed": 1753837487,
+    "s": 17.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A peasant family fleeing through a forest path as arrows whiz overhead, one child clutching a loaf of bread, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of people walking on a dirt path in a rural area. The path is lined with trees and bushes on both sides, and there are mountains in the background. The people are dressed in traditional clothing, with some wearing headscarves and others wearing long dresses. They are carrying baskets of fruit and vegetables, and some are carrying shovels. The sky is blue and the overall mood of the painting is peaceful and serene. The painting is done in a realistic style, with vibrant colors and intricate details.",
+    "obxectos": [
+     "human face",
+     "person",
+     "woman"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.7
+   }
+  ],
+  "version_revisor": 4
+ },
+ "020-80658e21": {
+  "ficheiro": "020-80658e21-2.png",
+  "escollida": 2,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "020-80658e21-0.png",
+    "seed": 806758124,
+    "s": 19.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lord’s steward counting coins in a candlelit stone chamber, ledger open on oak desk, painterly realism, few figures",
+    "problemas": [
+     "man sen corpo (1)",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of two old men sitting at a wooden table in a room with a window in the background. The men are wearing green robes and have white hair and beards. They are both looking down at a pile of coins on the table in front of them. The man on the left is holding a pen and appears to be writing or drawing on a piece of paper, while the other man is looking at the coins. There is a lit candle on the right side of the table and a small vase and other objects scattered around the table. The room is",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.332,
+       0.672
+      ],
+      "confianza": 0.88,
+      "dist_corpo": 0.403
+     }
+    ],
+    "corpos": 1,
+    "s_revision": 16.1
+   },
+   {
+    "intento": 1,
+    "ficheiro": "020-80658e21-1.png",
+    "seed": 2968400357,
+    "s": 23.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lord’s steward counting coins in a candlelit stone chamber, ledger open on oak desk, painterly realism, few figures",
+    "problemas": [
+     "man sen corpo (1)"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of two men sitting at a wooden table in a room with a window in the background. The men are wearing green robes and have long white beards. They are both looking at a pile of coins on the table in front of them. The man on the left is holding a pair of scissors and appears to be working on a piece of paper, while the man in the middle is looking at the coins with a focused expression. On the right side of the table, there is a small vase and a candle with a lit candle on a stand.",
+    "obxectos": [
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.208,
+       0.638
+      ],
+      "confianza": 0.89,
+      "dist_corpo": 0.365
+     },
+     {
+      "pulso": [
+       0.412,
+       0.538
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.015
+     }
+    ],
+    "corpos": 1,
+    "s_revision": 14.6
+   },
+   {
+    "intento": 2,
+    "ficheiro": "020-80658e21-2.png",
+    "seed": 506099640,
+    "s": 20.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lord’s steward counting coins in a candlelit stone chamber, ledger open on oak desk, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of four men sitting around a table in a room with a window in the background. The men are dressed in medieval clothing and appear to be engaged in a conversation. The table is covered with coins and there are several lit candles on it. The man on the left is holding a small candle and appears to be lighting it, while the man in the middle is looking at it intently. The other two men are sitting on either side of the table, also looking at the coins. All four men have long white hair and beards. The room is dimly",
+    "obxectos": [
+     "human face",
+     "man",
+     "table"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.526,
+       0.54
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.007
+     },
+     {
+      "pulso": [
+       0.641,
+       0.536
+      ],
+      "confianza": 0.9,
+      "dist_corpo": 0.014
+     }
+    ],
+    "corpos": 1,
+    "s_revision": 18.8
+   }
+  ],
+  "version_revisor": 4
+ },
+ "021-c7726aed": {
+  "ficheiro": "021-c7726aed-4.png",
+  "escollida": 4,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "021-c7726aed-0.png",
+    "seed": 141126751,
+    "s": 19.3,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe writing by firelight inside a tower cellar, wax seal and quill visible on table, painterly realism, few figures",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of four men sitting around a wooden table in a room with stone walls and arches. The room appears to be a tavern or a tavern, as there is a fireplace on the right side of the image. The men are dressed in medieval-style clothing and are engaged in a conversation. They are all holding pens and appear to be writing or drawing on a piece of paper. The table is covered with a white tablecloth and there are various objects on it, including a vase, a bowl, and a book. The walls are made of",
+    "obxectos": [
+     "human face",
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 14.8
+   },
+   {
+    "intento": 1,
+    "ficheiro": "021-c7726aed-1.png",
+    "seed": 3631629194,
+    "s": 20.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe writing by firelight inside a tower cellar, wax seal and quill visible on table, painterly realism, few figures",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of four men sitting around a table in a room with a high ceiling and arched windows. The room appears to be old and cozy, with a stone wall and a wooden floor. The men are dressed in medieval-style clothing and are engaged in a conversation. On the left side of the image, there is a man standing and holding a book, possibly a manuscript or a letter. He is wearing a long coat and a hat, and is looking down at the table with a serious expression on his face. Next to him, there are two",
+    "obxectos": [
+     "chair",
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.9
+   },
+   {
+    "intento": 2,
+    "ficheiro": "021-c7726aed-2.png",
+    "seed": 3149772431,
+    "s": 17.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe writing by firelight inside a tower cellar, wax seal and quill visible on table, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of six men sitting around a long table in a room with stone walls and arches. The table is covered with a green tablecloth and there are various objects on it, including a vase, a book, and a pen. The men are engaged in a writing activity, with some of them writing on papers and others sitting at the table. One man is standing at the head of the table, holding a book and a candle. Another man is sitting at a table with a pen and writing on a piece of paper. The room appears to",
+    "obxectos": [
+     "human face",
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.4
+   },
+   {
+    "intento": 3,
+    "ficheiro": "021-c7726aed-3.png",
+    "seed": 1022190816,
+    "s": 22.0,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe writing by firelight inside a tower cellar, wax seal and quill visible on table, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "interior moderno",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of six men sitting around a long wooden table in a stone-walled room with arched windows. The men are dressed in medieval-style clothing and appear to be engaged in a writing activity. They are all holding pens and writing on papers that are spread out on the table. One man is standing on the right side of the table, holding a book and writing, while the others are sitting on the left side. The room is decorated with various objects, including a vase with flowers, a lamp, and a basket of books. The",
+    "obxectos": [
+     "human face",
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 15.7
+   },
+   {
+    "intento": 4,
+    "ficheiro": "021-c7726aed-4.png",
+    "seed": 1105127849,
+    "s": 27.0,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe writing by firelight inside a tower cellar, wax seal and quill visible on table, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of five men sitting around a wooden table in a room with stone walls and arches. The room appears to be a workshop or a workshop with various tools and equipment scattered around. The men are dressed in medieval-style clothing and are engaged in a conversation.\n\nOn the left side of the image, there is a man standing in front of the table, holding a lit candle and looking at a piece of paper. He is wearing a long robe and has a beard. On the right side, there are two men sitting at the table with",
+    "obxectos": [
+     "chair",
+     "human face",
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 18.7
+   }
+  ],
+  "version_revisor": 4
+ },
+ "022-1802462c": {
+  "ficheiro": "022-1802462c-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "022-1802462c-0.png",
+    "seed": 2830752546,
+    "s": 25.0,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A blacksmith striking anvil with hammer while apprentices watch from shadows in the forge, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of five men working in an old-fashioned blacksmith shop. The shop is made of stone and has a wooden roof with a chimney. The men are wearing aprons and hats, and are gathered around a wooden workbench. They are working on various tools and materials, including a hammer, a saw, a hammerhead, and a pair of tongs. There are several pots and pans on the workbench, and some of the men are holding tools in their hands. The background shows a stone wall and a window, and there are",
+    "obxectos": [
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 17.2
+   }
+  ],
+  "version_revisor": 4
+ },
+ "023-6e3fad41": {
+  "ficheiro": "023-6e3fad41-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "023-6e3fad41-0.png",
+    "seed": 3917100337,
+    "s": 21.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A lord’s men dragging chains toward a broken keep wall, iron links clinking against stone, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men in medieval clothing, standing in front of a stone wall with arches. The men are dressed in armor and helmets, and some are holding chains. One man is holding a large chain, which appears to be a symbol of strength and power. The other men are standing around him, some of them are holding swords and shields, suggesting that they are engaged in a battle. The background shows a stone building with arched windows and a stone pathway leading up to it. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "human face",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 14.5
+   }
+  ],
+  "version_revisor": 4
+ },
+ "024-d1abfdab": {
+  "ficheiro": "024-d1abfdab-5.png",
+  "escollida": 5,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "024-d1abfdab-0.png",
+    "seed": 2005085894,
+    "s": 20.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Armed knights riding past a burning watchtower at dawn, smoke curling into misty air, painterly realism, few figures",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of knights on horseback in front of a castle. The knights are wearing full armor and helmets, and some are holding swords and shields. The castle is engulfed in flames and smoke, and there is a flag flying on top of the tower. The sky is cloudy and the ground is covered in rocks and debris. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 16.2
+   },
+   {
+    "intento": 1,
+    "ficheiro": "024-d1abfdab-1.png",
+    "seed": 1485942338,
+    "s": 18.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Armed knights riding past a burning watchtower at dawn, smoke curling into misty air, painterly realism, few figures",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of six knights on horseback in front of a castle. The knights are dressed in full armor and helmets, and are holding spears and shields. They are riding on a rocky terrain with a castle in the background. The sky is cloudy and there is a hint of smoke in the air. The castle appears to be old and weathered, with a tower and a flag flying in the foreground. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.1
+   },
+   {
+    "intento": 2,
+    "ficheiro": "024-d1abfdab-2.png",
+    "seed": 810139330,
+    "s": 24.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Armed knights riding past a burning watchtower at dawn, smoke curling into misty air, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "multitude",
+     "lume grande no exterior"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of knights on horseback in front of a castle. The castle is made of stone and has two towers with a large fire burning in the center. The sky is filled with smoke and the ground is covered in rocks and debris. The knights are wearing helmets and armor and are holding spears and shields. They are riding on brown horses and appear to be engaged in a battle. In the background, there is a large crowd of people watching the scene unfold. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 16.7
+   },
+   {
+    "intento": 3,
+    "ficheiro": "024-d1abfdab-3.png",
+    "seed": 1121103580,
+    "s": 24.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Armed knights riding past a burning watchtower at dawn, smoke curling into misty air, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of knights on horseback in front of a castle. The castle is in the background, with a large explosion of smoke and flames surrounding it. The sky is cloudy and the ground is covered in rocks and boulders. The knights are wearing helmets and armor, and some are holding swords and shields. The horses are galloping forward, and the castle appears to be in the midst of a battle. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 16.6
+   },
+   {
+    "intento": 4,
+    "ficheiro": "024-d1abfdab-4.png",
+    "seed": 1224832651,
+    "s": 20.5,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Armed knights riding past a burning watchtower at dawn, smoke curling into misty air, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of knights on horseback in a battle scene. The knights are dressed in full armor and helmets, and some are holding swords and shields. They are riding on brown horses, and the background shows a castle with a tower and a fire burning on the right side. The sky is filled with smoke and flames, and there are other knights in the distance. The ground is covered in rocks and debris, and it appears to be a rocky terrain. The overall mood of the image is tense and action-packed.",
+    "obxectos": [
+     "horse",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.4
+   },
+   {
+    "intento": 5,
+    "ficheiro": "024-d1abfdab-5.png",
+    "seed": 4249509592,
+    "s": 19.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, two villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": true,
+    "descricion": "The image is a painting of a group of people walking on a cobblestone street in a medieval village. The street is lined with old stone buildings with thatched roofs and stone walls. On the left side of the street, there is a stone building with a chimney and a small porch. In the background, there are mountains and a cloudy sky. The people in the painting are dressed in medieval clothing, with some wearing long robes and hats. They appear to be walking towards the buildings, possibly on their way to a destination. The overall mood of the painting is peaceful and se",
+    "obxectos": [
+     "building",
+     "castle"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.2
+   }
+  ],
+  "version_revisor": 4
+ },
+ "025-febddfee": {
+  "ficheiro": "025-febddfee-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "025-febddfee-0.png",
+    "seed": 2933965624,
+    "s": 16.4,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peasants hauling stones to rebuild a fortress under the watchful eyes of armored guards, painterly realism, few figures",
+    "problemas": [
+     "armas"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men dressed in medieval clothing and helmets, walking on a cobblestone street. The men are carrying rifles and appear to be engaged in a conversation. In the background, there are several medieval buildings with towers and turrets, as well as a castle-like structure. The sky is cloudy and the overall mood of the painting is somber. The painting is done in a realistic style, with vibrant colors and detailed brushstrokes.",
+    "obxectos": [
+     "castle",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.2
+   },
+   {
+    "intento": 1,
+    "ficheiro": "025-febddfee-1.png",
+    "seed": 4047202544,
+    "s": 21.7,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Peasants hauling stones to rebuild a fortress under the watchful eyes of armored guards, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of men dressed in medieval clothing walking on a cobblestone street. The street is lined with stone buildings and there is a castle in the background. The men are carrying baskets of food and appear to be engaged in conversation. The sky is blue and there are mountains in the distance. The painting is done in a realistic style with loose brushstrokes and vibrant colors. The overall mood of the image is lively and lively.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 17.3
+   }
+  ],
+  "version_revisor": 4
+ },
+ "026-05b2ede3": {
+  "ficheiro": "026-05b2ede3-5.png",
+  "escollida": 5,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "026-05b2ede3-0.png",
+    "seed": 186786233,
+    "s": 20.6,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe in a candlelit scriptorium copying legal documents with quill and inkwell, painterly realism, few figures",
+    "problemas": [
+     "interior moderno",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of an old man sitting at a desk and writing on a piece of paper. He is wearing a green robe and has a long white beard and is holding a pen in his right hand. The man appears to be deep in thought as he writes on the paper with a focused expression on his face. On the desk, there is a green vase, a book, and a small lamp with a candle on it. The background is a dark room with a window and a bookshelf. The overall mood of the painting is somber and contemplative.",
+    "obxectos": [
+     "book",
+     "candle",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 15.2
+   },
+   {
+    "intento": 1,
+    "ficheiro": "026-05b2ede3-1.png",
+    "seed": 3620222128,
+    "s": 18.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe in a candlelit scriptorium copying legal documents with quill and inkwell, painterly realism, few figures",
+    "problemas": [
+     "interior moderno",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of two old men sitting at a wooden table in a room with a bookshelf and a window in the background. The man on the left is wearing a green robe and has a long white beard and is holding a pen and writing on a piece of paper. He appears to be deep in thought, with a serious expression on his face. The other man is sitting next to him, also writing on the paper with a pen. On the table, there is a lamp, a book, and a few other items. The table is covered with a",
+    "obxectos": [
+     "book",
+     "man",
+     "table"
+    ],
+    "mans": [
+     {
+      "pulso": [
+       0.542,
+       0.573
+      ],
+      "confianza": 0.8,
+      "dist_corpo": 0.092
+     },
+     {
+      "pulso": [
+       0.421,
+       0.541
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.021
+     }
+    ],
+    "corpos": 2,
+    "s_revision": 13.9
+   },
+   {
+    "intento": 2,
+    "ficheiro": "026-05b2ede3-2.png",
+    "seed": 2542913976,
+    "s": 18.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe in a candlelit scriptorium copying legal documents with quill and inkwell, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of two men sitting at a wooden table in a room with a window in the background. The man on the left is an old man with a long white beard and is wearing a green robe. He is holding a pen and appears to be writing in a book, while the other man is sitting next to him. Both men are looking at the book and appear to be engaged in a conversation.\n\nOn the table in front of them, there is a large open book with pages spread out, and a small candle with a flame burning on the right side of",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 14.1
+   },
+   {
+    "intento": 3,
+    "ficheiro": "026-05b2ede3-3.png",
+    "seed": 3245083643,
+    "s": 23.2,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe in a candlelit scriptorium copying legal documents with quill and inkwell, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of two old men sitting at a desk, writing on a piece of paper with a pen. The man on the left is wearing a green robe and has a long white beard and is holding a pen in his right hand. He is looking down at the paper with an expression of concentration on his face. The other man is sitting next to him, also holding a pencil and appears to be writing on the paper. On the desk, there is a small candle with a flame burning brightly. In the background, there are bookshelves and a window with",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 15.1
+   },
+   {
+    "intento": 4,
+    "ficheiro": "026-05b2ede3-4.png",
+    "seed": 1603554860,
+    "s": 23.8,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, A scribe in a candlelit scriptorium copying legal documents with quill and inkwell, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "descricion": "The image is a painting of two men sitting at a wooden table in a room with a window in the background. The man on the left is an old man with a long beard and is wearing a green robe. He is holding a pen and appears to be writing on a piece of paper that is spread out in front of him. The other man is sitting next to him, also wearing a robe and is looking at the paper. On the table, there are several other papers and a candle with a stand. The room is dimly lit, with a few books and other items scattered",
+    "obxectos": [
+     "book",
+     "candle",
+     "man",
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 1,
+    "s_revision": 17.9
+   },
+   {
+    "intento": 5,
+    "ficheiro": "026-05b2ede3-5.png",
+    "seed": 2818307611,
+    "s": 20.7,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, two villagers in wool cloaks walking past a granite tower-house in a small hamlet, dark grey slate roofs, overcast morning light, wide shot, painterly realism, few figures, full-body figures seen from a few metres away, hands not in focus",
+    "problemas": [],
+    "reserva": true,
+    "descricion": "The image shows a group of people walking on a cobblestone street in a village. The street is lined with old stone buildings on both sides, with a stone wall on the left side and a row of houses on the right side. The houses are painted in a light green color and have a sloping roof. The sky is overcast and the overall mood of the image is gloomy and gloomy. The people in the image appear to be dressed in medieval-style clothing, with long robes and hats. They are walking in a line, with some carrying bags or baskets. The overall",
+    "obxectos": [
+     "house",
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 14.5
+   }
+  ],
+  "version_revisor": 4
+ },
+ "027-c7f0f5c3": {
+  "ficheiro": "027-c7f0f5c3-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "027-c7f0f5c3-0.png",
+    "seed": 3347517191,
+    "s": 22.9,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, An old man pointing at a weathered tower while another listens, both seated on wooden benches outside, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of three men sitting at a wooden table in front of a stone building. The building appears to be a medieval castle or fort, with a large stone archway in the center. The men are dressed in green robes and hats, and one of them is holding a book or a pen. The man on the left is sitting on a bench, while the man in the middle is sitting at the table, and the other two are standing on either side of him. The table is set up on a stone patio, and there is a small wooden bench next to it",
+    "obxectos": [
+     "person",
+     "table"
+    ],
+    "mans": [],
+    "corpos": 2,
+    "s_revision": 14.9
+   }
+  ],
+  "version_revisor": 4
+ },
+ "028-9408215b": {
+  "ficheiro": "028-9408215b-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "028-9408215b-0.png",
+    "seed": 829422249,
+    "s": 18.1,
+    "prompt": "muted oil painting, soft overcast light, grey-green and slate palette, fifteenth-century Galicia, Two figures walking through a misty valley toward a distant ruined keep, dawn light breaking over hills, painterly realism, few figures",
+    "problemas": [],
+    "reserva": false,
+    "descricion": "The image is a painting of a group of six people walking on a dirt path in a mountainous landscape. The path is surrounded by rocky cliffs and hills, with a castle perched on top of one of the cliffs. The sky is cloudy and the overall mood of the painting is peaceful and serene. The people in the painting are dressed in traditional clothing, with some wearing hats and carrying bags, and one person is holding a staff. The painting is done in a realistic style, with loose brushstrokes and vibrant colors. The overall mood is one of tranquility and serenity.",
+    "obxectos": [
+     "person"
+    ],
+    "mans": [],
+    "corpos": 0,
+    "s_revision": 13.6
+   }
+  ],
+  "version_revisor": 4
+ }
+}

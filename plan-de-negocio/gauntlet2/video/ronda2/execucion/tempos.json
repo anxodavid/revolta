@@ -1,0 +1,38 @@
+{
+ "1_guion": {
+  "parede_s": 1229.6,
+  "cpu_s": 3927.0,
+  "cpu_s_llm": 3926.5
+ },
+ "2_corrixir": {
+  "parede_s": 538.4,
+  "cpu_s": 1535.3,
+  "cpu_s_llm": 1081.9
+ },
+ "3_voz": {
+  "parede_s": 329.2,
+  "cpu_s": 313.7
+ },
+ "4_escenas": {
+  "parede_s": 351.5,
+  "cpu_s": 1068.2,
+  "cpu_s_llm": 1068.2
+ },
+ "5_imaxes": {
+  "parede_s": 2643.8,
+  "cpu_s": 8699.1
+ },
+ "6_son": {
+  "parede_s": 37.1,
+  "cpu_s": 37.0
+ },
+ "7_montaxe": {
+  "parede_s": 279.9,
+  "cpu_s": 1047.3
+ },
+ "8_qa": {
+  "parede_s": 94.4,
+  "cpu_s": 243.8,
+  "nota": "incl\u00fae a folla de contactos"
+ }
+}

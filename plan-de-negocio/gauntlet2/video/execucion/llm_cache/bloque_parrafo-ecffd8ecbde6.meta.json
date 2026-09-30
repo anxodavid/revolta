@@ -1,0 +1,24 @@
+{
+ "backend": "openai",
+ "modelo": "eurollm-9b-instruct-2512-q4km",
+ "formato": "chat",
+ "url": "http://127.0.0.1:8080/v1/chat/completions",
+ "segundos": 27.8,
+ "usage": {
+  "prompt_tokens": 485,
+  "completion_tokens": 78,
+  "total_tokens": 563
+ },
+ "fin": "stop",
+ "tokens_saida_por_s": 2.8,
+ "parametros": {
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "repeat_penalty": 1.1,
+  "max_tokens": 260,
+  "seed": 1
+ },
+ "ficheiro_modelo": "mradermacher/EuroLLM-9B-Instruct-2512-GGUF/EuroLLM-9B-Instruct-2512.Q4_K_M.gguf",
+ "sha256_modelo": "fe9b50d4ba67eb0131f1ceeaab2e56ea8fb6b2bbc37391d3219c791c3b140a28",
+ "cpu_s_servidor": 91.3
+}

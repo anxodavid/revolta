@@ -1,0 +1,191 @@
+== 1_guion
+== 2_corrixir
+== 3_voz
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:1011: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+== 4_escenas
+servidor LLM listo en 24.1 s
+LLM escenas: 327.3 s, {'prompt_tokens': 1984, 'completion_tokens': 690, 'total_tokens': 2674}
+== 5_imaxes
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  14%|█▍        | 1/7 [00:01<00:08,  1.42s/it]Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:01,  2.44it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+Loading pipeline components...:  71%|███████▏  | 5/7 [00:18<00:09,  4.54s/it]Loading pipeline components...:  86%|████████▌ | 6/7 [04:17<01:07, 67.64s/it]Loading pipeline components...: 100%|██████████| 7/7 [05:16<00:00, 65.16s/it]Loading pipeline components...: 100%|██████████| 7/7 [05:16<00:00, 45.23s/it]
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1790721735.613778   17750 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790721735.660107   17750 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790721735.833133   17755 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1790721736.035172   17755 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1790721768.949416   17750 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe   0 intento 0  27.4s + revisión 15.6s ok
+imaxe   1 intento 0  19.4s + revisión 13.7s ok
+imaxe   2 intento 0  23.3s + revisión 15.2s ['armas']
+imaxe   2 intento 1  19.9s + revisión 12.4s ok
+imaxe   3 intento 0  20.6s + revisión 15.5s ok
+imaxe   4 intento 0  16.0s + revisión 12.0s ok
+imaxe   5 intento 0  19.2s + revisión 13.5s ok
+imaxe   6 intento 0  18.5s + revisión 13.5s ok
+imaxe   7 intento 0  16.3s + revisión 12.3s ['xanelas de vidro']
+imaxe   7 intento 1  16.9s + revisión 14.8s ok
+imaxe   8 intento 0  21.3s + revisión 14.1s ok
+imaxe   9 intento 0  15.0s + revisión 11.5s ok
+imaxe  10 intento 0  17.6s + revisión 13.0s ok
+imaxe  11 intento 0  20.4s + revisión 14.8s ok
+imaxe  12 intento 0  16.4s + revisión 12.8s ok
+imaxe  13 intento 0  18.8s + revisión 18.2s ok
+imaxe  14 intento 0  23.3s + revisión 13.1s ok
+imaxe  15 intento 0  21.3s + revisión 15.8s ok
+imaxe  16 intento 0  16.3s + revisión 12.7s ['interior moderno', 'texto na imaxe']
+imaxe  16 intento 1  22.3s + revisión 16.1s ['obxectos modernos', 'texto na imaxe']
+imaxe  16 intento 2  19.5s + revisión 13.9s ['texto na imaxe']
+imaxe  16 intento 3  19.1s + revisión 13.8s ['xanelas de vidro', 'texto na imaxe']
+imaxe  16 intento 4  20.1s + revisión 13.7s ['texto na imaxe']
+imaxe  17 intento 0  13.6s + revisión 11.7s ok
+imaxe  18 intento 0  15.6s + revisión 13.4s ok
+imaxe  19 intento 0  18.7s + revisión 13.8s ok
+imaxe  20 intento 0  19.8s + revisión 15.3s ok
+imaxe  21 intento 0  16.9s + revisión 14.8s ['xanelas de vidro']
+imaxe  21 intento 1  22.0s + revisión 15.4s ['xanelas de vidro']
+imaxe  21 intento 2  18.8s + revisión 13.2s ['xanelas de vidro']
+imaxe  21 intento 3  14.2s + revisión 13.5s ['xanelas de vidro']
+imaxe  21 intento 4  19.4s + revisión 13.8s ['xanelas de vidro']
+imaxe  22 intento 0  19.0s + revisión 14.1s ok
+imaxe  23 intento 0  15.4s + revisión 12.1s ok
+== 6_son
+== 7_montaxe

@@ -1,0 +1,527 @@
+{
+ "lingua": [],
+ "h1_ancoraxe": {
+  "items": 17,
+  "non_ancorados": [],
+  "pct_ancorado": 100.0
+ },
+ "estilo": {
+  "palabras": 399,
+  "palabras_obxectivo": 500,
+  "desvio_palabras_pct": -20.2,
+  "cifras": [],
+  "signos_prohibidos": [],
+  "preguntas": 0,
+  "palabras_vetadas": [],
+  "aviso_literal": true,
+  "formula_literal": true,
+  "frases_fora_8_25": [
+   3,
+   6,
+   16,
+   26,
+   27
+  ],
+  "nomes_propios_distintos": [
+   "Andrade",
+   "Compostela",
+   "Europa",
+   "Fisterra",
+   "Fonseca",
+   "Forte",
+   "Galicia",
+   "Lemos",
+   "Mariñas",
+   "Muros",
+   "Noia",
+   "Padrón",
+   "Pontevedra",
+   "Preito",
+   "Rocha",
+   "Serán",
+   "Tabera"
+  ],
+  "max_nomes_novos_por_110_palabras": 7
+ },
+ "veracidade": [
+  {
+   "parrafo": 1,
+   "modo": "gancho",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Dicían que eran refuxios de malfeitores.",
+     "E": 0.996,
+     "cobertura": 1.0,
+     "apoio": [
+      8,
+      12
+     ],
+     "C_max": 0.961,
+     "contradi": 3,
+     "ok": true,
+     "ambiente": false,
+     "motivo": ""
+    },
+    {
+     "frase": "As fortalezas derrubadas non se volveron levantar todas.",
+     "E": 0.999,
+     "cobertura": 1.0,
+     "apoio": [
+      19,
+      18
+     ],
+     "C_max": 0.813,
+     "contradi": 10,
+     "ok": true,
+     "ambiente": false,
+     "motivo": ""
+    }
+   ]
+  },
+  {
+   "parrafo": 3,
+   "modo": "invitacion",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Acomódate, apaga a luz e respira amodo.",
+     "E": 0.981,
+     "cobertura": 0.0,
+     "apoio": [
+      17,
+      2
+     ],
+     "C_max": 0.93,
+     "contradi": 3,
+     "ok": true,
+     "ambiente": true,
+     "motivo": ""
+    },
+    {
+     "frase": "Non tes que lembrar nada do que escoites: deixa que a historia pase coma a chuvia na xanela.",
+     "E": 0.493,
+     "cobertura": 0.0,
+     "apoio": [
+      14
+     ],
+     "C_max": 0.995,
+     "contradi": 20,
+     "ok": true,
+     "ambiente": true,
+     "motivo": ""
+    }
+   ]
+  },
+  {
+   "parrafo": 4,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Desde a peste negra as rendas dos señores minguaban en toda Europa e a presión señorial sobre os vasalos aumentaba.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      1
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 5,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Arredor da metade do século quince, Galicia era unha sociedade de labregos, artesáns, mariñeiros e mercadores; moitos eran vasalos dun señor.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      2
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    },
+    {
+     "frase": "A xente de Galicia botou abaixo moitas fortalezas dos señores.",
+     "E": 0.901,
+     "cobertura": 0.5,
+     "apoio": [
+      18,
+      2
+     ],
+     "C_max": 0.026,
+     "contradi": 19,
+     "ok": true,
+     "ambiente": false,
+     "motivo": "",
+     "conta_o_feito": false
+    }
+   ]
+  },
+  {
+   "parrafo": 6,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Os vasalos pagaban tributos en diñeiro e en especie e debían servizos persoais: traballo nas fortalezas e servizo de armas.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      3
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 7,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "As familias labregas vivían ao limiar da pobreza.",
+     "E": 0.98,
+     "cobertura": 1.0,
+     "apoio": [
+      4,
+      14
+     ],
+     "C_max": 0.992,
+     "contradi": 7,
+     "ok": true,
+     "ambiente": false,
+     "motivo": "",
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 8,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "O señor era tamén xuíz no seu señorío.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      5
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 9,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Desde había un século mandaba unha nobreza nova, máis violenta, e o reino enchérase de fortalezas.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      6
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 10,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Había fortalezas das grandes casas nobres, como Lemos ou Andrade, de bispos e, sobre todo, do arcebispo de Compostela.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      7
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    },
+    {
+     "frase": "Botáronse abaixo moitas fortalezas por mandato dunha irmandade que, entre as primaveras de mil catrocentos sesenta e sete e mil catrocentos sesenta e nove, botou abaixo moitas fortalezas.",
+     "E": 0.977,
+     "cobertura": 0.55,
+     "apoio": [
+      12,
+      20
+     ],
+     "C_max": 0.01,
+     "contradi": 20,
+     "ok": true,
+     "ambiente": false,
+     "motivo": "",
+     "conta_o_feito": false
+    }
+   ]
+  },
+  {
+   "parrafo": 11,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Unhas décadas antes, os vasalos dun gran señor das Mariñas formaran unha irmandade e marcharan cara a Compostela; foi vencida e castigada.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      9
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    },
+    {
+     "frase": "Despois houbo outras irmandades locais e comarcais, e algunha derrubou fortalezas.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      9
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": false
+    }
+   ]
+  },
+  {
+   "parrafo": 12,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Desde a Rocha Forte asegurábanse os camiños que ían cara a Pontevedra, Padrón, Muros, Noia e Fisterra, cara ao mar.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      10
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 13,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "A Rocha Forte era do arcebispo de Compostela.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      11
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 14,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Na irmandade xuntáronse labregos, artesáns, mariñeiros, burgueses, clérigos, cóengos e monxes, e parte da pequena nobreza, que achegou experiencia militar.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      13
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 15,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Decididos os veciños da cidade e os labregos da comarca, botaron abaixo a Rocha Forte.",
+     "E": 0.984,
+     "cobertura": 0.89,
+     "apoio": [
+      14,
+      10
+     ],
+     "C_max": 0.969,
+     "contradi": 15,
+     "ok": true,
+     "ambiente": false,
+     "motivo": "",
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 16,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Os irmandiños derrubaron moitas das fortalezas do reino.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      15
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 17,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "En mil catrocentos sesenta e nove houbo unha reacción armada dos señores, que regresaron.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      16
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 18,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Os señores regresaron coas súas tropas e a irmandade foi derrotada.",
+     "E": 0.996,
+     "cobertura": 1.0,
+     "apoio": [
+      17,
+      16
+     ],
+     "C_max": 0.85,
+     "contradi": 5,
+     "ok": true,
+     "ambiente": false,
+     "motivo": "",
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 19,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Despois da derrota o castigo non foron tanto as execucións como os tributos e o traballo que os vasalos tiveron que dar durante anos para reconstruír as fortalezas derrubadas.",
+     "E": 1.0,
+     "cobertura": 1.0,
+     "apoio": [
+      18
+     ],
+     "C_max": 0.0,
+     "contradi": null,
+     "ok": true,
+     "motivo": "",
+     "literal": true,
+     "conta_o_feito": true
+    }
+   ]
+  },
+  {
+   "parrafo": 20,
+   "modo": "relato",
+   "problemas": [],
+   "frases": [
+    {
+     "frase": "Entre mil cincocentos vinte e seis e mil cincocentos vinte e sete, douscentas catro testemuñas vellas declararon ante escribáns no Preito Tabera-Fonseca, lembrando co que viran de mozos.",
+     "E": 0.969,
+     "cobertura": 1.0,
+     "apoio": [
+      20
+     ],
+     "C_max": 0.369,
+     "contradi": 17,
+     "ok": true,
+     "ambiente": false,
+     "motivo": "",
+     "conta_o_feito": true
+    }
+   ]
+  }
+ ],
+ "portas_texto": {
+  "lingua_lt": true,
+  "h1_ancoraxe": true,
+  "veracidade": true,
+  "estilo": true
+ }
+}
