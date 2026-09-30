@@ -15,11 +15,15 @@ Cada plano de la lista (`ESCENAS.json`) lleva un campo `son`:
 ```
 
 - Un tipo del catálogo, o dos unidos con `+` (la segunda capa suena 3 dB más baja). Nunca más de dos.
-- `"limpa"`: voz limpia, sin ambiente. **Escríbelo siempre que quieras voz limpia**: si el campo falta, el pipeline
-  deduce el sonido de las palabras del prompt (`SON_PALABRAS`) y puede poner uno (p. ej. "moonlight" → `noite`).
+- `"limpa"`: voz limpia, sin ambiente, garantizada (corta siempre el sonido). **Escríbelo siempre que quieras voz
+  limpia.**
+- Campo vacío o ausente: el pipeline deduce el sonido de las palabras del prompt (`SON_PALABRAS`) y puede poner uno
+  (p. ej. "moonlight" → `noite`). Si no encuentra ninguno, el plano es **neutro**: voz limpia, salvo que sea un inserto
+  de menos de 20 s entre dos planos con el mismo sonido; entonces el sonido del lugar sigue por debajo (la lluvia no
+  para porque la imagen muestre unas manos). Esto evita que el ambiente se apague y vuelva en cada plano.
 - El sonido tiene que estar **en la imagen**: lluvia solo si la imagen muestra lluvia (o una noche de lluvia tras la
   ventana), lareira solo si se ve fuego o brasas, gente solo si se ve un gentío. Si la imagen no tiene fuente de
-  sonido, `limpa`.
+  sonido: `limpa` si ahí debe oírse la voz sola; vacío si es un inserto breve dentro de una escena con sonido.
 
 | `son` | Cuándo (lo que muestra la imagen) | Nivel bajo la voz* | Eventos (escasos y suaves al dormir) |
 |---|---|---|---|
@@ -48,8 +52,8 @@ con viento).
    limpios.
 2. **Datos clave del gancho** (el verso del conxuro con su autor, nombres, cifras): limpios o con el ambiente del plano
    anterior apagándose, para que se entiendan.
-3. **Planos sin fuente de sonido**: legajos, manuscritos, retratos, manos, primeros planos de objetos, archivo a la luz
-   de la vela, interiores sin fuego.
+3. **Planos sin fuente de sonido que abren un tramo limpio**: legajos, manuscritos, retratos, archivo a la luz de la
+   vela, interiores sin fuego (un inserto de pocos segundos dentro de una escena con sonido puede ir vacío, ver §1).
 4. **Respiro**: no más de ~4 min seguidos con ambiente; tras ese tiempo, al menos un plano limpio. El pipeline avisa en
    la QA (`son.escena.avisos`) si hay más de 5 min seguidos.
 5. Objetivo orientativo: **30-45 % de los planos limpios** en el conjunto del episodio (el % de voz limpia sale en la
@@ -63,8 +67,13 @@ distintos y un tope del ambiente respecto a la voz). La lista tiene que poner la
 
 - Cambiar de tipo con el capítulo y con el lugar (aldea → fuente → costa → noche → lluvia), no repetir el mismo tipo
   en más de ~2 capítulos seguidos salvo en el cierre ("Chove na lousa").
-- Evitar el ping-pong (A-B-A-B en 20 s): mejor mantener un tipo 2-3 planos seguidos (los planos seguidos con el mismo
-  `son` se funden en un solo tramo continuo, sin cortes).
+- **Agrupar por escena**: un bloque de 3-6 planos seguidos con el mismo sonido (≈ 1 min) y 2 planos de respiro
+  limpio, mejor que alternar sonido y voz limpia en cada plano. Los planos seguidos con el mismo `son` se funden en un
+  solo tramo continuo, sin cortes.
+- **Ritmo de cambios** (cada entrada, salida o cambio de sonido cuenta uno): hasta ~20 cada 10 min en el gancho y la
+  transición, y **≤ 10 cada 10 min en la zona de dormir**. La QA avisa si se pasa (`son.escena.avisos`,
+  `cambios_max_en_10min`). En la simulación de 30 min, una lista que alterna en cada plano daba un cambio cada ~9 s
+  (65,7 cada 10 min): eso ya no es variedad, es un parpadeo (ver `informe.md`).
 - En la **zona de dormir** (desde la mitad del episodio) elegir los tipos más mansos: `choiva`, `lume`, `mar`,
   `fonte`, `noite`. `xente`, `campas` y `aldea` se pueden usar si la imagen lo pide (el código los baja 4-5 dB y los
   espacia), pero nunca como fondo largo.

@@ -53,7 +53,17 @@
     "monotonia_pct": 100.0,
     "desviacion_nivel_db": 4.45
    },
-   "ambiente_baixo_voz_db_mediana": 15.9
+   "ambiente_baixo_voz_db_mediana": 15.9,
+   "wer_gancho": 0.0297,
+   "wer_medio": 0.0,
+   "wer_durmir": 0.039,
+   "wer_total": 0.0221,
+   "erros_asr": 6,
+   "hipotese": {
+    "gancho": "Nas noites de choiva, cando a auga batía na lousa, nas casas de pedra falábase das meigas. Arredor da lareira, as avóas contaban que había mulleres que sabían curar e tamén facer mal. Pero as meigas de verdade non están só nos contos, están tamén nos papeis dos xuízos. Na feira, entre o gando e os cestos, os rumores corrían dunha boca a outra. Contan que na noite de San Xoán as mozas ían á fonte antes de que saíse o sol. as, auga e palabras moi antigas. E en Compostela, as campás da catedral marcaban as horas da cidade.",
+    "medio": "Nas aldeas, a vida seguía o seu curso, as vacas no prado, o leite na cociña e a horta ao pé da casa. Os nenos corrían pola eira e as galiñas buscaban o gran. Moitas das mulleres que chamaban meigas eran, en realidade, curandeiras e a xente ía a elas cando alguén enfermaba. Na costa de Cangas, o mar batía nas pedras coma o fixera sempre. Os mariñeiros saían ao mar e as mulleres agardaban na beira.  e polo monte, entre carballos e castiñeiros, o vento levaba as historias dunha parroquia a outra.",
+    "durmir": "Na noite de San Xoán, as fogueiras ardían lonxe nos campos e o ceo enchíase de estrelas. Cheiraba a fume e a herbas do monte. No mosteiro, os monxes gardaban silencio e soaba unha campá moi lonxe. As pedras do claustro gardaban a calor do día. ouco, a choiva volve caer amodo sobre a lousa. Chove na lousa amodo coma unha canción vella. Deixa que o corpo descanse, que a historia pode esperar ata mañá."
+   }
   },
   "B": {
    "dnsmos_total": {
@@ -107,7 +117,17 @@
     "monotonia_pct": 44.4,
     "desviacion_nivel_db": 5.38
    },
-   "ambiente_baixo_voz_db_mediana": 18.8
+   "ambiente_baixo_voz_db_mediana": 18.8,
+   "wer_gancho": 0.0396,
+   "wer_medio": 0.0108,
+   "wer_durmir": 0.1558,
+   "wer_total": 0.0627,
+   "erros_asr": 17,
+   "hipotese": {
+    "gancho": "Nas noites de choiva, cando a auga batía na lousa, nas casas de pedra falábase das meigas. Arredor da lareira, as avóas contaban que había mulleres que sabían curar e tamén facer mal. Pero as meigas de verdade non están só nos contos, están tamén nos papeis dos xuízos. Na feira, entre o gando e os cestos, os rumores corrían dunha boca á outra. Contan que na noite de san Xoán as mozas ían á fonte antes de que saíse o sol. as, auga e palabras moi antigas. E en Compostela, as campás da catedral marcaban as horas da cidade.",
+    "medio": "Nas aldeas, a vida seguía o seu curso, as vacas no prado, o leite na cociña e a horta ao pé da casa. Os nenos corrían pola eira e as galiñas buscaban ao gran. Moitas das mulleres que chamaban meigas eran, en realidade, curandeiras e a xente ía a elas cando alguén enfermaba. Na costa de Cangas, o mar batía nas pedras coma o fixera sempre. Os mariñeiros saían ao mar e as mulleres agardaban na beira.  e polo monte, entre carballos e castiñeiros, o vento levaba as historias dunha parroquia a outra.",
+    "durmir": "Na noite de San Xoán, as fogueiras ardían lonxe nos campos e o ceo enchíase de estrelas. Cheiraba a fume e a herbas do monte. No mosteiro, os monxes gardaban silencio e soaba unha campá moi lonxe. ouco, a choiva volve caer amodo sobre a lousa. Chove na lousa amodo coma unha canción vella. Deixa que o corpo descanse, que a historia pode esperar ata mañá."
+   }
   },
   "C": {
    "dnsmos_total": {
@@ -161,7 +181,17 @@
     "monotonia_pct": 10.1,
     "desviacion_nivel_db": 6.48
    },
-   "ambiente_baixo_voz_db_mediana": 22.2
+   "ambiente_baixo_voz_db_mediana": 22.2,
+   "wer_gancho": 0.0297,
+   "wer_medio": 0.0108,
+   "wer_durmir": 0.1948,
+   "wer_total": 0.0701,
+   "erros_asr": 19,
+   "hipotese": {
+    "gancho": "Nas noites de choiva, cando a auga batía na lousa, nas casas de pedra falábase das meigas. Arredor da lareira, as avóas contaban que había mulleres que sabían curar e tamén facer mal. Pero as meigas de verdade non están só nos contos, están tamén nos papeis dos xuízos. Na feira, entre o gando e os cestos, os rumores corrían dunha boca a outra. Contan que na noite de san Xoán as mozas ían á fonte antes de que saíse o sol. as, auga e palabras moi antigas. E en Compostela, as campás da catedral marcaban as horas da cidade.",
+    "medio": "Nas aldeas, a vida seguía o seu curso, as vacas no prado, o leite na cociña e a horta ao pé da casa. Os nenos corrían pola eira e as galiñas buscaban ao gran. Moitas das mulleres que chamaban meigas eran, en realidade, curandeiras e a xente ía a elas cando alguén enfermaba. Na costa de Cangas, o mar batía nas pedras coma o fixera sempre. Os mariñeiros saían ao mar e as mulleres agardaban na beira.  e polo monte, entre carballos e castiñeiros, o vento levaba as historias dunha parroquia a outra.",
+    "durmir": "Na noite de San Xoán, as fogueiras ardían lonxe nos campos e o ceo enchíase de estrelas. Cheiraba a fume e a herbas do monte. No mosteiro, os monxes gardaban silencio e soaba unha campá moi lonxe. As pedras do claustro gardaban a calor do día. ouco, a choiva volve caer amodo sobre a lousa. chove na lousa amodo coma unha canción vella."
+   }
   },
   "D": {
    "dnsmos_total": {
@@ -202,8 +232,46 @@
    "variedade": {
     "fiestras_con_ambiente": 0
    },
-   "ambiente_baixo_voz_db_mediana": null
+   "ambiente_baixo_voz_db_mediana": null,
+   "wer_gancho": 0.0297,
+   "wer_medio": 0.0108,
+   "wer_durmir": 0.4156,
+   "wer_total": 0.1328,
+   "erros_asr": 36,
+   "hipotese": {
+    "gancho": "Nas noites de choiva, cando a auga batía na lousa, nas casas de pedra falábase das meigas. Arredor da lareira, as avóas contaban que había mulleres que sabían curar e tamén facer mal. Pero as meigas de verdade non están só nos contos, están tamén nos papeis dos xuízos. Na feira, entre o gando e os cestos, os rumores corrían dunha boca a outra. Contan que na noite de san Xoán as mozas ían á fonte antes de que saíse o sol. as, auga e palabras moi antigas. E en Compostela, as campás da catedral marcaban as horas da cidade.",
+    "medio": "Nas aldeas, a vida seguía o seu curso, as vacas no prado, o leite na cociña e a horta ao pé da casa. Os nenos corrían pola eira e as galiñas buscaban ao gran. Moitas das mulleres que chamaban meigas eran, en realidade, curandeiras e a xente ía a elas cando alguén enfermaba. Na costa de Cangas, o mar batía nas pedras coma o fixera sempre. Os mariñeiros saían ao mar e as mulleres agardaban na beira.  e polo monte, entre carballos e castiñeiros, o vento levaba as historias dunha parroquia a outra.",
+    "durmir": "Na noite de San Xoán as fogueiras ardían lonxe nos campos e o ceo enchíase de estrelas. Cheiraba a fume e a herbas do monte. No mosteiro os monxes gardaban silencio e soaba unha campá moi lonxe. ouco, a choiva volve caer amodo sobre a lousa."
+   }
   }
  },
- "segundos_sinal": 181.0
+ "segundos_sinal": 181.0,
+ "xente_so_intelixibilidade": [
+  {
+   "semente": 1,
+   "palabras_transcritas": 8,
+   "texto": "as causas causas causas. os, ¿non?, ¿non?, ¿non?",
+   "no_speech_prob_media": 0.0,
+   "avg_logprob_media": -1.146
+  },
+  {
+   "semente": 2,
+   "palabras_transcritas": 0,
+   "texto": "",
+   "no_speech_prob_media": null,
+   "avg_logprob_media": null
+  },
+  {
+   "semente": 3,
+   "palabras_transcritas": 0,
+   "texto": "",
+   "no_speech_prob_media": null,
+   "avg_logprob_media": null
+  }
+ ],
+ "xente_banco_seco_referencia": {
+  "transcricion": "Este ano as castañas viñeron cedo e son ben grandes. Mira que caro está o millo, non hai quen o cómpre.",
+  "texto": "Este ano as castañas viñeron cedo e son ben grandes. Mira que caro está o millo, non hai quen o compre."
+ },
+ "segundos_asr": 364.5
 }

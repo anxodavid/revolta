@@ -3,10 +3,13 @@
     source herramientas/pipeline/entorno.sh
     PYTHONPATH=$SCRATCH/son/pylib OMP_NUM_THREADS=1 nice $PY plan-de-negocio/gauntlet3/son/scripts/medir.py sinal
     flock "$CPU_LOCK" $PY plan-de-negocio/gauntlet3/son/scripts/medir.py asr
+    flock "$CPU_LOCK" $PY plan-de-negocio/gauntlet3/son/scripts/medir.py frases
 
 Le $SCRATCH/son/opcions (opcions.py) e escribe plan-de-negocio/gauntlet3/son/medidas/fragmento.json:
-DNSMOS (total e por tramo do embude), WER do Whisper galego por tramo, % de voz limpa, picos da pista de ambiente
-na zona de durmir, variedade espectral e unha proba de intelixibilidade do murmullo de xente só (sen voz).
+DNSMOS (total e por tramo do embude), WER do Whisper galego por tramo e frase a frase, % de voz limpa, picos da
+pista de ambiente na zona de durmir, variedade espectral e unha proba de intelixibilidade do murmullo de xente só.
+O WER por tramo (texto longo) inclúe un defecto de Whisper: tras as pausas longas da zona de durmir sáltase frases
+enteiras, mesmo sen ambiente (D); o WER frase a frase non o ten.
 """
 import json, os, sys, time
 from pathlib import Path
@@ -80,6 +83,35 @@ def fase_asr(res, fr, sec):
     print('banco seco:', tx, flush=True)
 
 
+def fase_frases(res, fr, sec):
+    """WER frase a frase (cada frase cortada da mestura con 0,3 s de marxe): mide se o ambiente tapa palabras sen
+    o defecto de Whisper en textos longos con silencios (sáltase frases enteiras tras as pausas longas)."""
+    import jiwer, qa
+    asr = MS.ASR(nth=4)
+    tempos = {int(k): v for k, v in fr['tempos'].items()}
+    for op in 'ABCD':
+        mix, sr = sf.read(OP / f'{op}_mestura.wav', dtype='float32')
+        x16 = MS.a16k_mono(mix, sr)
+        r = res['opcions'].setdefault(op, {})
+        tot = {'sub': 0, 'del': 0, 'ins': 0, 'pal': 0}
+        por = {k: {'sub': 0, 'del': 0, 'ins': 0, 'pal': 0} for k in sec}
+        fallos = []
+        for f in fr['frases']:
+            a, b = tempos[f['i']]
+            hip, _ = asr.transcribir(x16[int(max(0, a - 0.3) * 16000):int((b + 0.3) * 16000)])
+            w = jiwer.process_words(qa.norm(f['texto']), qa.norm(hip))
+            for d in (tot, por[f['tramo']]):
+                d['sub'] += w.substitutions; d['del'] += w.deletions; d['ins'] += w.insertions
+                d['pal'] += len(qa.norm(f['texto']).split())
+            if w.wer > 0:
+                fallos.append({'i': f['i'], 'wer': round(w.wer, 3), 'hipotese': hip})
+        r['wer_frases_total'] = round((tot['sub'] + tot['del'] + tot['ins']) / tot['pal'], 4)
+        for k, d in por.items():
+            r[f'wer_frases_{k}'] = round((d['sub'] + d['del'] + d['ins']) / d['pal'], 4)
+        r['wer_frases_erros'] = tot; r['wer_frases_fallos'] = fallos
+        print(op, 'WER por frase', r['wer_frases_total'], {k: r[f'wer_frases_{k}'] for k in sec}, tot, flush=True)
+
+
 def main():
     fase = sys.argv[1] if len(sys.argv) > 1 else 'todo'
     SAIDA.mkdir(exist_ok=True)
@@ -94,6 +126,8 @@ def main():
         fase_sinal(res, fr, sec)
     if fase in ('asr', 'todo'):
         fase_asr(res, fr, sec)
+    if fase in ('frases', 'todo'):
+        fase_frases(res, fr, sec)
     res[f'segundos_{fase}'] = round(time.time() - t_ini, 1)
     tmp = SAIDA / '.fragmento.json.tmp'
     tmp.write_text(json.dumps(res, ensure_ascii=False, indent=1)); os.replace(tmp, f_)

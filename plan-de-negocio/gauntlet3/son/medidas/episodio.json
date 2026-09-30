@@ -1,8 +1,5 @@
 {
- "nota": "Simulación sen voz: ambiente só. Lista de planos inventada polo axente de son seguindo o arco.",
- "planos": 163,
- "planos_con_son_C": 105,
- "duracion_media_plano_s": 11.0,
+ "nota": "Simulación sen voz: ambiente só. Listas de planos inventadas polo axente de son seguindo o arco.",
  "inicio_zona_durmir_s": 899.0,
  "opcions": {
   "A": {
@@ -41,9 +38,11 @@
    },
    "segundos_calculo": 155.1
   },
-  "B": {
+  "B (alterna)": {
    "pct_tempo_con_ambiente": 30.6,
    "cambios_por_10min": 23.7,
+   "cambios_max_en_10min": 39,
+   "cambios_10min_zona_durmir_media": 15.1,
    "tramo_max_mesmo_son_min": 0.8,
    "tramo_max_sen_voz_limpa_min": 2.5,
    "tipos_distintos": 2,
@@ -75,552 +74,768 @@
     "p99_50ms_sobre_fondo_db": 10.0,
     "sustos_10db": 9
    },
-   "segundos_calculo": 172.5
+   "segundos_calculo": 156.9
   },
-  "C": {
-   "pct_tempo_con_ambiente": 73.3,
-   "cambios_por_10min": 65.7,
+  "C (alterna)": {
+   "pct_tempo_con_ambiente": 76.1,
+   "cambios_por_10min": 62.3,
+   "cambios_max_en_10min": 89,
+   "cambios_10min_zona_durmir_media": 46.4,
    "tramo_max_mesmo_son_min": 0.8,
-   "tramo_max_sen_voz_limpa_min": 2.5,
+   "tramo_max_sen_voz_limpa_min": 3.2,
    "tipos_distintos": 9,
    "variedade": {
-    "fiestras_con_ambiente": 296,
-    "variacion_espectral_db": 8.84,
-    "monotonia_pct": 8.1,
-    "desviacion_nivel_db": 11.3
+    "fiestras_con_ambiente": 303,
+    "variacion_espectral_db": 8.96,
+    "monotonia_pct": 8.5,
+    "desviacion_nivel_db": 11.83
    },
    "variedade_zona_durmir": {
-    "fiestras_con_ambiente": 154,
-    "variacion_espectral_db": 8.2,
-    "monotonia_pct": 10.1,
-    "desviacion_nivel_db": 12.0
+    "fiestras_con_ambiente": 159,
+    "variacion_espectral_db": 8.18,
+    "monotonia_pct": 10.4,
+    "desviacion_nivel_db": 11.9
    },
    "picos_zona_durmir": {
-    "segundos_con_ambiente": 700.8,
-    "mediana_lufs": -40.1,
-    "pico_400ms_sobre_fondo_db": 5.4,
-    "pico_50ms_sobre_fondo_db": 9.5,
+    "segundos_con_ambiente": 745.9,
+    "mediana_lufs": -39.6,
+    "pico_400ms_sobre_fondo_db": 6.0,
+    "pico_50ms_sobre_fondo_db": 8.8,
+    "p99_50ms_sobre_fondo_db": 5.2,
+    "sustos_10db": 0
+   },
+   "picos_gancho_2min": {
+    "segundos_con_ambiente": 74.1,
+    "mediana_lufs": -47.5,
+    "pico_400ms_sobre_fondo_db": 7.1,
+    "pico_50ms_sobre_fondo_db": 12.9,
+    "p99_50ms_sobre_fondo_db": 8.3,
+    "sustos_10db": 4
+   },
+   "segundos_calculo": 124.6
+  },
+  "B (guia1)": {
+   "pct_tempo_con_ambiente": 37.8,
+   "cambios_por_10min": 9.0,
+   "cambios_max_en_10min": 17,
+   "cambios_10min_zona_durmir_media": 6.0,
+   "tramo_max_mesmo_son_min": 2.5,
+   "tramo_max_sen_voz_limpa_min": 2.5,
+   "tipos_distintos": 2,
+   "variedade": {
+    "fiestras_con_ambiente": 144,
+    "variacion_espectral_db": 3.41,
+    "monotonia_pct": 16.3,
+    "desviacion_nivel_db": 4.79
+   },
+   "variedade_zona_durmir": {
+    "fiestras_con_ambiente": 73,
+    "variacion_espectral_db": 3.3,
+    "monotonia_pct": 11.6,
+    "desviacion_nivel_db": 5.65
+   },
+   "picos_zona_durmir": {
+    "segundos_con_ambiente": 351.6,
+    "mediana_lufs": -36.7,
+    "pico_400ms_sobre_fondo_db": 14.4,
+    "pico_50ms_sobre_fondo_db": 21.5,
+    "p99_50ms_sobre_fondo_db": 12.2,
+    "sustos_10db": 169
+   },
+   "picos_gancho_2min": {
+    "segundos_con_ambiente": 68.3,
+    "mediana_lufs": -46.0,
+    "pico_400ms_sobre_fondo_db": 12.3,
+    "pico_50ms_sobre_fondo_db": 18.5,
+    "p99_50ms_sobre_fondo_db": 12.3,
+    "sustos_10db": 22
+   },
+   "segundos_calculo": 153.1
+  },
+  "C (guia1)": {
+   "pct_tempo_con_ambiente": 78.2,
+   "cambios_por_10min": 17.3,
+   "cambios_max_en_10min": 28,
+   "cambios_10min_zona_durmir_media": 12.3,
+   "tramo_max_mesmo_son_min": 2.5,
+   "tramo_max_sen_voz_limpa_min": 3.0,
+   "tipos_distintos": 9,
+   "variedade": {
+    "fiestras_con_ambiente": 292,
+    "variacion_espectral_db": 6.8,
+    "monotonia_pct": 10.7,
+    "desviacion_nivel_db": 9.55
+   },
+   "variedade_zona_durmir": {
+    "fiestras_con_ambiente": 152,
+    "variacion_espectral_db": 6.16,
+    "monotonia_pct": 15.9,
+    "desviacion_nivel_db": 9.2
+   },
+   "picos_zona_durmir": {
+    "segundos_con_ambiente": 746.9,
+    "mediana_lufs": -37.5,
+    "pico_400ms_sobre_fondo_db": 4.8,
+    "pico_50ms_sobre_fondo_db": 8.8,
     "p99_50ms_sobre_fondo_db": 4.8,
     "sustos_10db": 0
    },
    "picos_gancho_2min": {
-    "segundos_con_ambiente": 69.7,
-    "mediana_lufs": -48.2,
+    "segundos_con_ambiente": 76.7,
+    "mediana_lufs": -46.5,
     "pico_400ms_sobre_fondo_db": 8.5,
-    "pico_50ms_sobre_fondo_db": 13.7,
-    "p99_50ms_sobre_fondo_db": 11.6,
-    "sustos_10db": 9
+    "pico_50ms_sobre_fondo_db": 14.5,
+    "p99_50ms_sobre_fondo_db": 8.7,
+    "sustos_10db": 4
    },
-   "segundos_calculo": 127.2
+   "segundos_calculo": 133.3
   }
  },
- "avisos_C": [],
- "tramos_C": [
-  [
-   0.0,
-   4.8,
-   "lume"
-  ],
-  [
-   4.8,
-   9.6,
-   "choiva"
-  ],
-  [
-   14.3,
-   19.1,
-   "lume"
-  ],
-  [
-   19.1,
-   23.6,
-   "choiva"
-  ],
-  [
-   28.6,
-   34.3,
-   "lume"
-  ],
-  [
-   34.3,
-   40.2,
-   "choiva"
-  ],
-  [
-   61.8,
-   68.3,
-   "lume"
-  ],
-  [
-   73.3,
-   79.5,
-   "campas"
-  ],
-  [
-   84.5,
-   89.6,
-   "lume"
-  ],
-  [
-   95.5,
-   100.3,
-   "lume"
-  ],
-  [
-   105.5,
-   112.3,
-   "campas"
-  ],
-  [
-   120.0,
-   126.3,
-   "aldea"
-  ],
-  [
-   132.5,
-   139.7,
-   "vento"
-  ],
-  [
-   139.7,
-   145.4,
-   "lume"
-  ],
-  [
-   151.7,
-   159.3,
-   "aldea"
-  ],
-  [
-   159.3,
-   166.7,
-   "fonte"
-  ],
-  [
-   173.3,
-   181.0,
-   "aldea"
-  ],
-  [
-   187.5,
-   193.8,
-   "vento"
-  ],
-  [
-   193.8,
-   201.3,
-   "lume"
-  ],
-  [
-   209.2,
-   215.7,
-   "aldea"
-  ],
-  [
-   215.7,
-   224.2,
-   "fonte"
-  ],
-  [
-   231.1,
-   239.2,
-   "aldea"
-  ],
-  [
-   246.8,
-   253.3,
-   "vento"
-  ],
-  [
-   253.3,
-   260.8,
-   "lume"
-  ],
-  [
-   267.6,
-   276.5,
-   "aldea"
-  ],
-  [
-   276.5,
-   285.0,
-   "fonte"
-  ],
-  [
-   293.2,
-   300.2,
-   "aldea"
-  ],
-  [
-   307.9,
-   315.5,
-   "vento"
-  ],
-  [
-   315.5,
-   322.4,
-   "lume"
-  ],
-  [
-   331.8,
-   338.8,
-   "aldea"
-  ],
-  [
-   338.8,
-   347.5,
-   "fonte"
-  ],
-  [
-   360.0,
-   369.6,
-   "campas"
-  ],
-  [
-   369.6,
-   378.6,
-   "choiva"
-  ],
-  [
-   388.3,
-   397.6,
-   "xente"
-  ],
-  [
-   405.3,
-   412.7,
-   "choiva"
-  ],
-  [
-   422.2,
-   431.3,
-   "campas"
-  ],
-  [
-   431.3,
-   439.9,
-   "choiva"
-  ],
-  [
-   449.4,
-   459.4,
-   "xente"
-  ],
-  [
-   467.2,
-   477.0,
-   "choiva"
-  ],
-  [
-   485.4,
-   494.7,
-   "campas"
-  ],
-  [
-   494.7,
-   504.9,
-   "choiva"
-  ],
-  [
-   516.1,
-   525.6,
-   "xente"
-  ],
-  [
-   535.4,
-   547.3,
-   "choiva"
-  ],
-  [
-   557.9,
-   567.3,
-   "campas"
-  ],
-  [
-   567.3,
-   579.7,
-   "choiva"
-  ],
-  [
-   591.4,
-   600.0,
-   "xente"
-  ],
-  [
-   600.0,
-   611.5,
-   "aldea"
-  ],
-  [
-   621.5,
-   631.9,
-   "fonte+noite"
-  ],
-  [
-   631.9,
-   641.8,
-   "lume"
-  ],
-  [
-   655.3,
-   667.0,
-   "aldea"
-  ],
-  [
-   667.0,
-   680.6,
-   "xente"
-  ],
-  [
-   692.3,
-   703.5,
-   "fonte"
-  ],
-  [
-   703.5,
-   713.7,
-   "aldea"
-  ],
-  [
-   726.8,
-   740.6,
-   "fonte+noite"
-  ],
-  [
-   740.6,
-   753.4,
-   "lume"
-  ],
-  [
-   767.1,
-   781.3,
-   "aldea"
-  ],
-  [
-   781.3,
-   794.6,
-   "xente"
-  ],
-  [
-   809.9,
-   823.4,
-   "fonte"
-  ],
-  [
-   823.4,
-   837.0,
-   "aldea"
-  ],
-  [
-   849.6,
-   864.9,
-   "fonte+noite"
-  ],
-  [
-   864.9,
-   880.5,
-   "lume"
-  ],
-  [
-   895.9,
-   910.4,
-   "aldea"
-  ],
-  [
-   910.4,
-   924.8,
-   "xente"
-  ],
-  [
-   940.6,
-   955.5,
-   "fonte"
-  ],
-  [
-   955.5,
-   960.0,
-   "aldea"
-  ],
-  [
-   960.0,
-   976.3,
-   "mar"
-  ],
-  [
-   993.3,
-   1005.1,
-   "mar"
-  ],
-  [
-   1005.1,
-   1019.8,
-   "vento"
-  ],
-  [
-   1033.9,
-   1048.8,
-   "mar"
-  ],
-  [
-   1063.6,
-   1076.5,
-   "mar"
-  ],
-  [
-   1076.5,
-   1092.0,
-   "vento"
-  ],
-  [
-   1107.3,
-   1123.1,
-   "mar"
-  ],
-  [
-   1140.0,
-   1153.7,
-   "lume+noite"
-  ],
-  [
-   1166.0,
-   1180.5,
-   "noite"
-  ],
-  [
-   1180.5,
-   1196.2,
-   "xente"
-  ],
-  [
-   1196.2,
-   1209.1,
-   "fonte+noite"
-  ],
-  [
-   1223.3,
-   1239.2,
-   "noite"
-  ],
-  [
-   1239.2,
-   1257.0,
-   "lume+noite"
-  ],
-  [
-   1273.4,
-   1289.5,
-   "noite"
-  ],
-  [
-   1289.5,
-   1306.4,
-   "xente"
-  ],
-  [
-   1306.4,
-   1319.4,
-   "fonte+noite"
-  ],
-  [
-   1332.8,
-   1348.8,
-   "noite"
-  ],
-  [
-   1348.8,
-   1363.9,
-   "lume+noite"
-  ],
-  [
-   1378.7,
-   1391.8,
-   "noite"
-  ],
-  [
-   1391.8,
-   1406.5,
-   "xente"
-  ],
-  [
-   1406.5,
-   1421.0,
-   "fonte+noite"
-  ],
-  [
-   1436.8,
-   1440.0,
-   "noite"
-  ],
-  [
-   1458.6,
-   1476.2,
-   "choiva"
-  ],
-  [
-   1476.2,
-   1490.8,
-   "campas"
-  ],
-  [
-   1509.8,
-   1527.6,
-   "vento"
-  ],
-  [
-   1527.6,
-   1540.8,
-   "choiva"
-  ],
-  [
-   1559.2,
-   1576.0,
-   "choiva"
-  ],
-  [
-   1576.0,
-   1592.0,
-   "campas"
-  ],
-  [
-   1606.0,
-   1620.3,
-   "vento"
-  ],
-  [
-   1620.3,
-   1639.3,
-   "choiva"
-  ],
-  [
-   1650.0,
-   1667.8,
-   "choiva"
-  ],
-  [
-   1667.8,
-   1684.6,
-   "lume"
-  ],
-  [
-   1684.6,
-   1729.0,
-   "choiva"
-  ],
-  [
-   1729.0,
-   1745.2,
-   "lume"
-  ],
-  [
-   1745.2,
-   1795.8,
-   "choiva"
-  ],
-  [
-   1795.8,
-   1800.0,
-   "lume"
+ "segundos_total": 454.9,
+ "lista_alterna": {
+  "planos": 163,
+  "planos_con_son": 105,
+  "duracion_media_plano_s": 11.0,
+  "avisos_C": [
+   "89 cambios de ambiente entre 0 e 10 min (máximo aconsellado 18): agrupar os planos co mesmo son (guia-son.md)"
+  ],
+  "tramos_C": [
+   [
+    0.0,
+    4.8,
+    "lume"
+   ],
+   [
+    4.8,
+    9.6,
+    "choiva"
+   ],
+   [
+    14.3,
+    19.1,
+    "lume"
+   ],
+   [
+    19.1,
+    23.6,
+    "choiva"
+   ],
+   [
+    28.6,
+    34.3,
+    "lume"
+   ],
+   [
+    34.3,
+    40.2,
+    "choiva"
+   ],
+   [
+    61.8,
+    68.3,
+    "lume"
+   ],
+   [
+    73.3,
+    79.5,
+    "campas"
+   ],
+   [
+    84.5,
+    100.3,
+    "lume"
+   ],
+   [
+    105.5,
+    112.3,
+    "campas"
+   ],
+   [
+    120.0,
+    126.3,
+    "aldea"
+   ],
+   [
+    132.5,
+    139.7,
+    "vento"
+   ],
+   [
+    139.7,
+    145.4,
+    "lume"
+   ],
+   [
+    151.7,
+    159.3,
+    "aldea"
+   ],
+   [
+    159.3,
+    166.7,
+    "fonte"
+   ],
+   [
+    173.3,
+    181.0,
+    "aldea"
+   ],
+   [
+    187.5,
+    193.8,
+    "vento"
+   ],
+   [
+    193.8,
+    201.3,
+    "lume"
+   ],
+   [
+    209.2,
+    215.7,
+    "aldea"
+   ],
+   [
+    215.7,
+    224.2,
+    "fonte"
+   ],
+   [
+    231.1,
+    239.2,
+    "aldea"
+   ],
+   [
+    246.8,
+    253.3,
+    "vento"
+   ],
+   [
+    253.3,
+    260.8,
+    "lume"
+   ],
+   [
+    267.6,
+    276.5,
+    "aldea"
+   ],
+   [
+    276.5,
+    285.0,
+    "fonte"
+   ],
+   [
+    293.2,
+    300.2,
+    "aldea"
+   ],
+   [
+    307.9,
+    315.5,
+    "vento"
+   ],
+   [
+    315.5,
+    322.4,
+    "lume"
+   ],
+   [
+    331.8,
+    338.8,
+    "aldea"
+   ],
+   [
+    338.8,
+    347.5,
+    "fonte"
+   ],
+   [
+    360.0,
+    369.6,
+    "campas"
+   ],
+   [
+    369.6,
+    378.6,
+    "choiva"
+   ],
+   [
+    388.3,
+    397.6,
+    "xente"
+   ],
+   [
+    405.3,
+    412.7,
+    "choiva"
+   ],
+   [
+    422.2,
+    431.3,
+    "campas"
+   ],
+   [
+    431.3,
+    439.9,
+    "choiva"
+   ],
+   [
+    449.4,
+    459.4,
+    "xente"
+   ],
+   [
+    467.2,
+    477.0,
+    "choiva"
+   ],
+   [
+    485.4,
+    494.7,
+    "campas"
+   ],
+   [
+    494.7,
+    504.9,
+    "choiva"
+   ],
+   [
+    516.1,
+    525.6,
+    "xente"
+   ],
+   [
+    535.4,
+    547.3,
+    "choiva"
+   ],
+   [
+    557.9,
+    567.3,
+    "campas"
+   ],
+   [
+    567.3,
+    579.7,
+    "choiva"
+   ],
+   [
+    591.4,
+    600.0,
+    "xente"
+   ],
+   [
+    600.0,
+    611.5,
+    "aldea"
+   ],
+   [
+    621.5,
+    631.9,
+    "fonte+noite"
+   ],
+   [
+    631.9,
+    641.8,
+    "lume"
+   ],
+   [
+    655.3,
+    667.0,
+    "aldea"
+   ],
+   [
+    667.0,
+    680.6,
+    "xente"
+   ],
+   [
+    692.3,
+    703.5,
+    "fonte"
+   ],
+   [
+    703.5,
+    713.7,
+    "aldea"
+   ],
+   [
+    726.8,
+    740.6,
+    "fonte+noite"
+   ],
+   [
+    740.6,
+    753.4,
+    "lume"
+   ],
+   [
+    767.1,
+    781.3,
+    "aldea"
+   ],
+   [
+    781.3,
+    794.6,
+    "xente"
+   ],
+   [
+    809.9,
+    823.4,
+    "fonte"
+   ],
+   [
+    823.4,
+    837.0,
+    "aldea"
+   ],
+   [
+    849.6,
+    864.9,
+    "fonte+noite"
+   ],
+   [
+    864.9,
+    880.5,
+    "lume"
+   ],
+   [
+    895.9,
+    910.4,
+    "aldea"
+   ],
+   [
+    910.4,
+    924.8,
+    "xente"
+   ],
+   [
+    940.6,
+    955.5,
+    "fonte"
+   ],
+   [
+    955.5,
+    960.0,
+    "aldea"
+   ],
+   [
+    960.0,
+    1005.1,
+    "mar"
+   ],
+   [
+    1005.1,
+    1019.8,
+    "vento"
+   ],
+   [
+    1033.9,
+    1076.5,
+    "mar"
+   ],
+   [
+    1076.5,
+    1092.0,
+    "vento"
+   ],
+   [
+    1107.3,
+    1123.1,
+    "mar"
+   ],
+   [
+    1140.0,
+    1153.7,
+    "lume+noite"
+   ],
+   [
+    1166.0,
+    1180.5,
+    "noite"
+   ],
+   [
+    1180.5,
+    1196.2,
+    "xente"
+   ],
+   [
+    1196.2,
+    1209.1,
+    "fonte+noite"
+   ],
+   [
+    1223.3,
+    1239.2,
+    "noite"
+   ],
+   [
+    1239.2,
+    1257.0,
+    "lume+noite"
+   ],
+   [
+    1273.4,
+    1289.5,
+    "noite"
+   ],
+   [
+    1289.5,
+    1306.4,
+    "xente"
+   ],
+   [
+    1306.4,
+    1319.4,
+    "fonte+noite"
+   ],
+   [
+    1332.8,
+    1348.8,
+    "noite"
+   ],
+   [
+    1348.8,
+    1363.9,
+    "lume+noite"
+   ],
+   [
+    1378.7,
+    1391.8,
+    "noite"
+   ],
+   [
+    1391.8,
+    1406.5,
+    "xente"
+   ],
+   [
+    1406.5,
+    1421.0,
+    "fonte+noite"
+   ],
+   [
+    1436.8,
+    1440.0,
+    "noite"
+   ],
+   [
+    1458.6,
+    1476.2,
+    "choiva"
+   ],
+   [
+    1476.2,
+    1490.8,
+    "campas"
+   ],
+   [
+    1509.8,
+    1527.6,
+    "vento"
+   ],
+   [
+    1527.6,
+    1576.0,
+    "choiva"
+   ],
+   [
+    1576.0,
+    1592.0,
+    "campas"
+   ],
+   [
+    1606.0,
+    1620.3,
+    "vento"
+   ],
+   [
+    1620.3,
+    1667.8,
+    "choiva"
+   ],
+   [
+    1667.8,
+    1684.6,
+    "lume"
+   ],
+   [
+    1684.6,
+    1729.0,
+    "choiva"
+   ],
+   [
+    1729.0,
+    1745.2,
+    "lume"
+   ],
+   [
+    1745.2,
+    1795.8,
+    "choiva"
+   ],
+   [
+    1795.8,
+    1800.0,
+    "lume"
+   ]
   ]
- ],
- "segundos_total": 454.9
+ },
+ "segundos_total_ultima_execucion": 568.1,
+ "lista_guia1": {
+  "planos": 163,
+  "planos_con_son": 121,
+  "duracion_media_plano_s": 11.0,
+  "avisos_C": [
+   "28 cambios de ambiente entre 0 e 10 min (máximo aconsellado 18): agrupar os planos co mesmo son (guia-son.md)"
+  ],
+  "tramos_C": [
+   [
+    0.0,
+    14.3,
+    "lume"
+   ],
+   [
+    14.3,
+    28.6,
+    "choiva"
+   ],
+   [
+    34.3,
+    40.2,
+    "lume"
+   ],
+   [
+    73.3,
+    100.3,
+    "lume"
+   ],
+   [
+    100.3,
+    112.3,
+    "campas"
+   ],
+   [
+    120.0,
+    151.7,
+    "aldea"
+   ],
+   [
+    166.7,
+    193.8,
+    "vento"
+   ],
+   [
+    209.2,
+    267.6,
+    "lume"
+   ],
+   [
+    285.0,
+    315.5,
+    "fonte"
+   ],
+   [
+    331.8,
+    360.0,
+    "aldea"
+   ],
+   [
+    360.0,
+    388.3,
+    "campas"
+   ],
+   [
+    388.3,
+    431.3,
+    "choiva"
+   ],
+   [
+    459.4,
+    485.4,
+    "xente"
+   ],
+   [
+    504.9,
+    567.3,
+    "choiva"
+   ],
+   [
+    591.4,
+    600.0,
+    "campas"
+   ],
+   [
+    600.0,
+    655.3,
+    "aldea"
+   ],
+   [
+    680.6,
+    740.6,
+    "fonte+noite"
+   ],
+   [
+    767.1,
+    849.6,
+    "lume"
+   ],
+   [
+    880.5,
+    955.5,
+    "fonte"
+   ],
+   [
+    955.5,
+    960.0,
+    "aldea"
+   ],
+   [
+    960.0,
+    1048.8,
+    "mar"
+   ],
+   [
+    1076.5,
+    1140.0,
+    "mar+vento"
+   ],
+   [
+    1140.0,
+    1223.3,
+    "lume+noite"
+   ],
+   [
+    1257.0,
+    1332.8,
+    "noite"
+   ],
+   [
+    1363.9,
+    1436.8,
+    "fonte+noite"
+   ],
+   [
+    1436.8,
+    1440.0,
+    "lume+noite"
+   ],
+   [
+    1490.8,
+    1592.0,
+    "choiva"
+   ],
+   [
+    1620.3,
+    1650.0,
+    "vento"
+   ],
+   [
+    1650.0,
+    1800.0,
+    "lume+choiva"
+   ]
+  ]
+ }
 }

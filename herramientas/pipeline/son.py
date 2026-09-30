@@ -43,8 +43,12 @@ cada vez máis escasos e suaves cara ao final (taxa ×(1-0,7·calma), -6 dB·cal
 leito (sonoridade K en 50 ms fronte á do leito en 3 s: 12 dB no gancho, 5 dB ao durmir; estalidos e chíos, 13 e 6);
 fundidos longos (3 s no gancho, 8 s ao durmir), cruzados e centrados no corte entre dous sons e, cara a un plano sen
 son, feitos en 3/4 dentro do plano con son (para non comer a voz limpa); tope do ambiente sobre a voz (sonoridade
-momentánea: 8 dB baixo a voz, 12 dB ao durmir); e voz limpa en todo plano sen son.
+momentánea: 8 dB baixo a voz, 12 dB ao durmir); e voz limpa en todo plano sen son. O contrario da monotonía tamén se
+vixía: `tramos_de_planos` xunta os planos seguidos co mesmo son e non corta o ambiente nun inserto neutro de menos
+de PONTE_S s (un plano 'limpa' corta sempre), e `ambiente_escena` avisa se hai máis de CAMBIOS_MAX_10MIN cambios en
+10 min (20 no gancho, 10 ao durmir).
 
+Guía para a lista de planos: plan-de-negocio/gauntlet3/son/guia-son.md. Medidas e decisión: .../son/informe.md.
 `mesturar` por defecto (ambiente='choiva') segue sendo o do Gauntlet 2 (pipeline.py).
 """
 import json, zlib
@@ -712,7 +716,7 @@ VARIACION = {
 }
 TRAMO_MAX = 150.0          # s: un tramo máis longo pártese en anacos (outra semente e outros parámetros) que se funden
 PONTE_S = 20.0             # s: un oco neutro máis curto ca isto entre dous planos co mesmo son non corta o ambiente
-CAMBIOS_MAX_10MIN = 12     # máis cambios de ambiente ca isto en 10 min: aviso na QA (a lista de planos pestanexa)
+CAMBIOS_MAX_10MIN = (20, 10)  # máis cambios de ambiente en 10 min ca isto (gancho, durmir): aviso na QA (a lista pestanexa)
 FUNDIDO = (3.0, 8.0)       # s: fundido no gancho e ao durmir (interpólase coa calma)
 TOPE_DB = (8.0, 12.0)      # dB: o ambiente nunca pasa da voz menos isto (sonoridade momentánea), gancho e durmir
 
@@ -814,11 +818,13 @@ def ambiente_escena(n, tramos, voz_lufs=-17.0, rel_db=None, calma=None, semente=
     info['cambios_por_10min'] = round(cambios / max(dur, 1) * 600, 1)
     if len(ch) > 600:
         v = np.convolve(ch, np.ones(600), 'valid')
+        cm10 = np.convolve(np.interp(np.arange(len(ch)), seg, cal_s), np.ones(600) / 600, 'valid')
+        lim = CAMBIOS_MAX_10MIN[0] + (CAMBIOS_MAX_10MIN[1] - CAMBIOS_MAX_10MIN[0]) * cm10
         info['cambios_max_en_10min'] = int(v.max())
-        if v.max() > CAMBIOS_MAX_10MIN:
-            k = int(v.argmax())
-            avisos.append(f'{int(v.max())} cambios de ambiente entre {k // 60} e {(k + 600) // 60} min (máis de '
-                          f'{CAMBIOS_MAX_10MIN}): agrupar os planos co mesmo son (guia-son.md)')
+        if (v > lim).any():
+            k = int(np.argmax(v - lim))
+            avisos.append(f'{int(v[k])} cambios de ambiente entre {k // 60} e {(k + 600) // 60} min (máximo aconsellado '
+                          f'{lim[k]:.0f}): agrupar os planos co mesmo son (guia-son.md)')
     # tramos longos sen voz limpa (aviso para quen escribe a lista de planos)
     run = 0
     for s, a in enumerate(act + [frozenset()]):
