@@ -6,7 +6,7 @@
 
 1. voz      voz_st2.py narra 2 frases en galego con el mismo env que pone pipeline.py (PATH con pathbin, PYTHONPATH con
             stubs, ST2_DIR, REF_WAV); factor de tiempo real (RTF = segundos de cálculo / segundos de audio).
-2. imaxe    SDXL-Turbo 1024x576, 4 pasos (como imaxes.py): dos imágenes (la 1.ª incluye el calentamiento) y
+2. imaxe    el modelo de imaxes.py (IMG_MODEL; por defecto SDXL-Lightning 4 pasos, 1344x768): dos imágenes (la 1.ª incluye el calentamiento) y
             `python revisor.py` sobre las dos (la 1.ª línea incluye cargar MediaPipe y Florence-2).
 3. qa       faster-whisper + Whisper galego (CTranslate2 int8) sobre el audio de la prueba 1 (WER); LanguageTool gl-ES
             (qa.lingua) sobre una frase con un error de concordancia; NLI (veracidade.Verificador.nli) con dos pares.
@@ -92,18 +92,17 @@ def proba_imaxe():
     import torch
     import imaxes
     torch.set_num_threads(int(os.environ.get('NTH', '4')))
-    prompt = imaxes.ESTILO.format(p='a granite hórreo beside a stone house with a slate roof, oak trees, Galicia')
+    prompt = imaxes.compor_prompt({'prompt': 'wide shot of a long narrow granite granary raised on stone pillars beside '
+                                             'a granite house with a dark grey slate roof, oak trees', 'fase': 'transicion'})
     with candado('imaxe') as m:
-        from diffusers import AutoPipelineForText2Image
         t = time.time()
-        pipe = AutoPipelineForText2Image.from_pretrained(imaxes.MODELO, torch_dtype=torch.bfloat16, variant='fp16')
-        pipe.set_progress_bar_config(disable=True)
+        pipe = imaxes.cargar_pipe()          # IMG_MODEL (por defecto SDXL-Lightning 4 pasos, 1344x768)
+        m['modelo'] = imaxes.modelo()['nome']
         m['carga_s'] = round(time.time() - t, 1)
         m['xeracion_s'] = []
         for k, (nome, semente) in enumerate((('imaxe.png', 1), ('imaxe2.png', 2))):
             t = time.time()
-            im = pipe(prompt=prompt, width=imaxes.W, height=imaxes.H, num_inference_steps=imaxes.PASOS,
-                      guidance_scale=0.0, generator=torch.Generator().manual_seed(semente)).images[0]
+            im = imaxes.xerar_unha(pipe, prompt, semente)
             m['xeracion_s'].append(round(time.time() - t, 1))
             im.save(OUT / nome)
         m['tamaño'] = list(im.size)

@@ -18,6 +18,7 @@
 #   brais        grabaciones humanas de Nos_Brais-GL: referencia de estilo (tts/kit/t1) y 40 variadas (tts/refs)
 #   revisor      tareas de MediaPipe (manos y pose) en revisor/
 #   sdxl florence nli clip whisper_hf   modelos de Hugging Face (solo los ficheros que se cargan)
+#                (sdxl = SDXL-Lightning 4 pasos + VAE de SDXL base + codificadores de texto; sdxl_turbo, opcional, aparte)
 #   ---
 #   stubs        módulos stub para importar el código de StyleTTS2 en CPU (bench/stubs)
 #   whisper      conversión del Whisper galego a CTranslate2 int8 (bench/wgl_ct2) y borrado del original
@@ -216,11 +217,17 @@ paso_revisor() {
 }
 
 # Modelos en la caché de HF: solo los ficheros que carga el código (sin fp32, onnx, flax, tf ni duplicados).
-paso_sdxl() {   # imaxes.py: from_pretrained('stabilityai/sdxl-turbo', variant='fp16', torch_dtype=bfloat16)
-  hf_baixar stabilityai/sdxl-turbo - model_index.json 'scheduler/*' 'tokenizer/*' 'tokenizer_2/*' LICENSE.md \
+paso_sdxl() {   # imaxes.py, modelo por defecto IMG_MODEL=lightning (Gauntlet 3): SDXL base + UNet SDXL-Lightning 4 pasos
+  # codificadores de texto: os do repo de Turbo (mesmo sha256 que os de SDXL base; ver imaxes.py)
+  hf_baixar stabilityai/sdxl-turbo - model_index.json 'tokenizer/*' 'tokenizer_2/*' LICENSE.md \
     text_encoder/config.json text_encoder/model.fp16.safetensors \
-    text_encoder_2/config.json text_encoder_2/model.fp16.safetensors \
-    unet/config.json unet/diffusion_pytorch_model.fp16.safetensors \
+    text_encoder_2/config.json text_encoder_2/model.fp16.safetensors
+  hf_baixar stabilityai/stable-diffusion-xl-base-1.0 - model_index.json 'scheduler/*' 'tokenizer/*' 'tokenizer_2/*' \
+    unet/config.json vae/config.json vae/diffusion_pytorch_model.fp16.safetensors LICENSE.md
+  hf_baixar ByteDance/SDXL-Lightning - sdxl_lightning_4step_unet.safetensors LICENSE.md
+}
+paso_sdxl_turbo() {   # opcional (IMG_MODEL=turbo, o modelo do Gauntlet 2): UNet e VAE de SDXL-Turbo (5,3 GB)
+  hf_baixar stabilityai/sdxl-turbo - 'scheduler/*' unet/config.json unet/diffusion_pytorch_model.fp16.safetensors \
     vae/config.json vae/diffusion_pytorch_model.fp16.safetensors
 }
 paso_florence() { hf_baixar florence-community/Florence-2-large -; }          # revisor.py (MIT)

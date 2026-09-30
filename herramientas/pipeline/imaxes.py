@@ -111,6 +111,8 @@ ESTILOS = {
 }
 ESTILO_DEFECTO = 'filme'
 ESTILO = ESTILOS[ESTILO_DEFECTO] + ', {p}'     # compatibilidade: ESTILO.format(p=...)
+# Matiz de estilo por fase (curto: van diante e contan nos 77 tokens). O resto da fase vai na luz e na gradación.
+ESTILO_FASE = {'gancho': ', dramatic chiaroscuro', 'transicion': '', 'calma': ', soft light', 'durmir': ', dim and quiet'}
 # Luz por defecto de cada fase (só se o prompt do plano non trae ningunha palabra de luz): vaise rotando.
 LUZ_FASE = {
     'gancho': ['lit only by firelight, deep black shadows', 'single candle flame in darkness, chiaroscuro',
@@ -122,26 +124,28 @@ LUZ_FASE = {
     'durmir': ['pale moonlight, deep blue night, soft and dim', 'faint glow of embers in darkness',
                'starry night sky, faint mist, very dim', 'a single dim candle, soft darkness'],
 }
-LUZ_RX = (r'\b(light|lit|lighting|glow\w*|sun\w*|moon\w*|candle\w*|fire\w*|lamp\w*|torch\w*|dusk|dawn|night\w*|'
-          r'overcast|storm\w*|shadow\w*|twilight|ember\w*|backlit|silhouett\w*|golden hour|blue hour|dark\w*|'
-          r'daylight|morning|evening|lightning|lantern\w*|hearth)\b')
+# palabras que indican a luz do plano ("dark" non: adoita ser a cor da roupa; "sun" só como luz, non "sunken")
+LUZ_RX = (r'\b(light|lit|lighting|glow\w*|sun(light|lit|set|rise|beams?|shine|ny|s)?|moon\w*|candle\w*|fire\w*|'
+          r'lamp\w*|torch\w*|dusk|dawn|night\w*|overcast|storm\w*|shadows?|twilight|embers?|backlit|silhouett\w*|'
+          r'golden hour|blue hour|daylight|morning|evening|lightning|lantern\w*|hearth)\b')
 TIPO_FRASE = {   # tipo de plano (gramática da biblia) -> fórmula de cámara se o prompt non a trae
     'detalle': 'extreme close-up detail shot of', 'primeiro_plano': 'close-up of', 'plano_medio': 'medium shot of',
     'xeral': 'wide establishing shot of', 'contraluz': 'backlit silhouette shot of', 'bodegon': 'still life of',
     'paisaxe': 'wide landscape of',
 }
 CAMARA_RX = r'\b(close-up|closeup|medium shot|wide shot|establishing|still life|detail|landscape|silhouette|overhead|portrait|long shot|full shot)\b'
-# Correccións ao reintentar, segundo o motivo do rexeitamento (van ao principio: pesan máis)
+# Correccións ao reintentar, segundo o motivo do rexeitamento. A de iconografía vai ao principio (pesa máis) desde
+# o 2.º intento; as colas, ao final desde o intento INTENTO_PRUDENTE, e só para o seu motivo (Gauntlet 2: a cola de
+# "figuras de corpo enteiro" engadíase sempre, tamén a paisaxes rexeitadas por tellados).
 CORRECCION = [
-    (r'tellados|encalados|mediterr|iconograf', 'dark grey slate roofs, bare granite stone walls, green Atlantic landscape, '),
-    (r'multitude|arquetipo', ''),
+    (r'tellad|encalad|mediterr|ciprés|oliveir|palmeir|paisaxe seca|eucalipt|rodas', 'dark slate roofs, granite walls, green hills, '),
 ]
-PRUDENTE = {   # colas que se engaden ao final desde o intento INTENTO_PRUDENTE, segundo o motivo
-    'man': ', hands hidden in the sleeves or out of frame',
-    'corpos': ', only one or two people',
-    'multitude': ', only one or two people, no crowd',
-    'xeral': ', full-body figures seen from a few metres away, hands not in focus',
-}
+PRUDENTE = [   # (motivo, cola)
+    (r'\bman\b|\bmans\b', ', hands hidden in the sleeves or out of frame'),
+    (r'multitude|corpos', ', only one or two people'),
+    (r'repetida|arquetipo', ', seen from a low angle'),
+    (r'texto', ', plain surfaces'),
+]
 # Planos de reserva por fase: sen persoas (sen mans nin caras), galegos e seguros. Rótanse para non repetir.
 RESERVA_FASE = {
     'gancho': ['still life of a candle burning on a rough oak table in a dark granite room, deep shadows',
@@ -159,7 +163,7 @@ SIM_MAX, CAP_MAX, VECIÑOS = 0.6, 0.5, 4        # porta de repetición antiga (g
 
 
 def compor_prompt(e, i=0, intento=0, problemas=(), m=None):
-    """Prompt final dun plano: estilo común + (corrección polo motivo do rexeitamento) + fórmula de cámara do
+    """Prompt final dun plano: estilo común e o seu matiz de fase + (corrección polo motivo do rexeitamento) + fórmula de cámara do
     `tipo` se o prompt non a trae + prompt do plano (sen tocar a luz nin a cor se vén co campo `fase`, é dicir,
     dun axente que segue a biblia) + luz do campo `luz` ou, se o prompt non ten luz, a luz por defecto da fase."""
     fase = e.get('fase')
@@ -178,13 +182,14 @@ def compor_prompt(e, i=0, intento=0, problemas=(), m=None):
     pre = ''
     txt_prob = ' '.join(problemas).lower()
     for rx, extra in CORRECCION:
-        if extra and re.search(rx, txt_prob) and intento >= 1:
+        if intento >= 1 and re.search(rx, txt_prob):
             pre += extra
-    estilo = ESTILOS[os.environ.get('IMG_ESTILO', ESTILO_DEFECTO)]
+    estilo = ESTILOS[os.environ.get('IMG_ESTILO', ESTILO_DEFECTO)] + ESTILO_FASE.get(fase or '', '')
     pr = f'{estilo}, {pre}{p}'
     if intento >= INTENTO_PRUDENTE:
-        claves = [k for k in PRUDENTE if k in txt_prob] or ['xeral']
-        pr += PRUDENTE[claves[0]]
+        for rx, cola in PRUDENTE:
+            if re.search(rx, txt_prob):
+                pr += cola; break
     return pr
 
 
@@ -197,9 +202,17 @@ def tokens(pipe, texto):
 
 
 # ------------------------------------------------------------------ xeración con porta
+def _teimudo(intentos):
+    """O problema é do prompt e non da semente: os dous últimos intentos (sen reserva) repiten un arquetipo ou
+    unha imaxe xa aceptada. Non paga a pena gastar máis intentos: pásase á reserva da fase."""
+    ult = [x for x in intentos if not x.get('reserva')][-2:]
+    return len(ult) == 2 and all(any(p.startswith(('arquetipo', 'repetida (CLIP')) for p in x['problemas']) for x in ult)
+
+
 def xerar(escenas, outdir, seed_base='sera', revisar=True):
     """escenas: [{'prompt', opcionais 'fase' (gancho|transicion|calma|durmir), 'u', 'luz', 'tipo', 'negativo'}].
     Devolve (rutas das imaxes escollidas, rexistro por plano). Garda todo en outdir/revision.json e retoma."""
+    import numpy as np
     import revisor as _rv
     outdir = Path(outdir); outdir.mkdir(parents=True, exist_ok=True)
     rexf = outdir / 'revision.json'
@@ -207,25 +220,18 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
     m = modelo()
     pipe = rev = clip = None
     paths, rexistro = [], []
-    aceptadas = []     # (vector de grises, raíces da descrición) para a porta de repetición antiga
-    emb_aceptadas, arquetipos = [], []   # CLIP: todas as imaxes aceptadas do episodio e o seu arquetipo
+    aceptadas = []                       # (vector de grises, raíces da descrición): porta de repetición antiga
+    emb_aceptadas, arquetipos = [], []   # CLIP: imaxes escollidas de todos os planos anteriores e o seu arquetipo
     n_total = len(escenas)
     reservas_usadas = {}
-
-    def clip_de():
-        nonlocal clip, rev
-        if rev is not None and rev.clip is not None:
-            return rev.clip
-        if clip is None:
-            clip = _rv.Clip()
-        return clip
-
     for i, e in enumerate(escenas):
         clave = f"{i:03d}-{hashlib.sha256((e['prompt'] + m['nome'] + str(e.get('fase'))).encode()).hexdigest()[:8]}"
         previo = feito.get(clave)
         vella = previo and previo.get('version_revisor') != _rv.VERSION and revisar
-        if previo and not vella and (outdir / previo['ficheiro']).exists() and \
-                (previo['ok'] or len(previo['intentos']) >= MAX_INTENTOS + RESERVAS):
+        embs = {}                        # ficheiro -> (embedding, arquetipo) dos intentos revisados agora
+        novo = not (previo and not vella and (outdir / previo['ficheiro']).exists() and
+                    (previo['ok'] or len(previo['intentos']) >= MAX_INTENTOS + RESERVAS))
+        if not novo:
             r = previo
         else:
             import torch
@@ -233,24 +239,27 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
             if rev is None and revisar:
                 rev = _rv.Revisor()
             intentos = list(previo['intentos']) if previo else []     # continúa onde quedou
-            contexto = {'negativo': e.get('negativo'), 'n_total': n_total, 'fase': e.get('fase')}
-            if intentos and rev is not None:     # se o revisor cambiou desde entón, volve revisar os intentos gardados
+            ctx = {'negativo': e.get('negativo')}
+            if intentos and rev is not None:     # o revisor cambiou desde entón: volve revisar os intentos gardados
                 for it in intentos:
-                    rv = rev.revisar(outdir / it['ficheiro'], **contexto)
-                    rep = rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos, rv.get('arquetipo'), n_total)
-                    novos = rv['problemas'] + rep
+                    rv = rev.revisar(outdir / it['ficheiro'], **ctx)
+                    embs[it['ficheiro']] = (rv['clip_emb'], rv.get('arquetipo'))
+                    novos = rv['problemas'] + rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos,
+                                                             rv.get('arquetipo'), n_total)
                     if novos != it['problemas']:
-                        it['problemas_revision_anterior'] = it['problemas']; it['problemas'] = novos
-                        it.update({k: v for k, v in rv.items() if k not in ('problemas', 'ok', 'clip_emb')})
+                        it['problemas_revision_anterior'] = it['problemas']
+                        it.update({k2: v for k2, v in rv.items() if k2 not in ('ok', 'clip_emb')})
+                        it['problemas'] = novos
                         print(f"imaxe {i:3d} intento {it['intento']} revisado de novo: {novos or 'ok'}", flush=True)
-            for k in range(len(intentos), MAX_INTENTOS + RESERVAS):
-                if any(not x['problemas'] for x in intentos):
-                    break
+            k = len(intentos)
+            while k < MAX_INTENTOS + RESERVAS and not any(not x['problemas'] for x in intentos):
+                if k < MAX_INTENTOS and _teimudo(intentos):
+                    k = MAX_INTENTOS
                 previos = [p for x in intentos for p in x['problemas']]
                 if k >= MAX_INTENTOS:     # reserva segura da fase, sen persoas; rótase para non repetir
                     fase = e.get('fase') or 'transicion'
                     j = reservas_usadas.get(fase, 0); reservas_usadas[fase] = j + 1
-                    base = dict(e, prompt=RESERVA_FASE[fase][j % len(RESERVA_FASE[fase])], tipo=None, luz=None)
+                    base = {'prompt': RESERVA_FASE[fase][j % len(RESERVA_FASE[fase])], 'fase': e.get('fase')}
                     pr = compor_prompt(base, i, 0, (), m)
                 else:
                     pr = compor_prompt(e, i, k, previos, m)
@@ -266,10 +275,11 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
                       'modelo': m['nome'], 'tokens': ntok, 'truncado': perdido, 'problemas': [],
                       'reserva': k >= MAX_INTENTOS}
                 if rev is not None:
-                    t = time.time(); rv = rev.revisar(f, **contexto)
-                    rep = rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos, rv.get('arquetipo'), n_total)
+                    t = time.time(); rv = rev.revisar(f, **ctx)
+                    embs[f.name] = (rv['clip_emb'], rv.get('arquetipo'))
                     it.update({k2: v for k2, v in rv.items() if k2 not in ('ok', 'clip_emb')})
-                    it['problemas'] = rv['problemas'] + rep
+                    it['problemas'] = rv['problemas'] + rev.repeticion(rv['clip_emb'], emb_aceptadas, arquetipos,
+                                                                       rv.get('arquetipo'), n_total)
                     it['s_revision'] = round(time.time() - t, 1)
                 rep = repetida(f, it.get('descricion', ''), aceptadas)
                 if rep:
@@ -277,8 +287,7 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
                 intentos.append(it)
                 print(f"imaxe {i:3d} intento {k} {it['s']:5.1f}s + revisión {it.get('s_revision', 0):4.1f}s "
                       f"{it['problemas'] or 'ok'}", flush=True)
-                if not it['problemas']:
-                    break
+                k += 1
             best = min(range(len(intentos)), key=lambda j: (len(intentos[j]['problemas']), j))
             r = {'ficheiro': intentos[best]['ficheiro'], 'escollida': best, 'ok': not intentos[best]['problemas'],
                  'intentos': intentos, 'version_revisor': _rv.VERSION, 'modelo': m['nome'], 'fase': e.get('fase')}
@@ -286,19 +295,23 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
             tmpj = rexf.with_suffix('.tmp'); tmpj.write_text(json.dumps(feito, ensure_ascii=False, indent=1))
             os.replace(tmpj, rexf)
         esc = r['intentos'][r['escollida']]
-        # as imaxes gardadas dunha versión anterior tamén pasan as portas de repetición
-        rep = repetida(outdir / r['ficheiro'], esc.get('descricion', ''), aceptadas)
+        fich = outdir / r['ficheiro']
+        if not novo:     # imaxe gardada: volve pasar as portas de repetición contra o episodio de agora
+            probs = [x for x in [repetida(fich, esc.get('descricion', ''), aceptadas)] if x]
         if revisar:
-            cl = clip_de()
-            emb = cl.imaxe(outdir / r['ficheiro'])
-            arq = cl.arquetipo(emb)
-            rep2 = [] if 'problemas' in esc and not esc['problemas'] and previo is None else \
-                _rv.repeticion(emb, emb_aceptadas, arquetipos, arq, n_total)
-            if (rep or rep2) and r['ok'] and previo is not None:
-                r = dict(r, ok=False); esc['problemas'] = ([rep] if rep else []) + rep2
+            if r['ficheiro'] in embs:
+                emb, arq = embs[r['ficheiro']]
+            else:
+                if clip is None:
+                    clip = rev.clip if rev is not None and rev.clip is not None else _rv.Clip()
+                emb = clip.imaxe(fich); arq = clip.arquetipo(emb)
+            if not novo:
+                probs += _rv.repeticion(emb, emb_aceptadas, arquetipos, arq, n_total)
             emb_aceptadas.append(emb); arquetipos.append(arq)
-        aceptadas.append(firma(outdir / r['ficheiro'], esc.get('descricion', '')))
-        paths.append(str(outdir / r['ficheiro'])); rexistro.append(r)
+        if not novo and probs and r['ok']:
+            r = dict(r, ok=False, problemas_episodio=probs)
+        aceptadas.append(firma(fich, esc.get('descricion', '')))
+        paths.append(str(fich)); rexistro.append(r)
     return paths, rexistro
 
 
@@ -330,14 +343,14 @@ def repetida(f, descricion, aceptadas):
 # ------------------------------------------------------------------ gradación por fase
 # Obxectivo de cada fase (biblia visual): rango de luminancia media (0-1, sRGB) e saturación. A luz de cada imaxe
 # consérvase: só se corrixen os extremos (unha imaxe fóra do rango lévase ata o bordo, non á media do episodio).
-LOOK = {
-    'gancho':     {'lum': (0.13, 0.45), 'sat': 1.00, 'croma_max': 0.16},
-    'transicion': {'lum': (0.25, 0.58), 'sat': 0.97, 'croma_max': 0.14},
-    'calma':      {'lum': (0.18, 0.48), 'sat': 0.92, 'croma_max': 0.13},
-    'durmir':     {'lum': (0.08, 0.30), 'sat': 0.80, 'croma_max': 0.10},
+LOOK = {   # toe: nivel de negro (0 = negros profundos do claroscuro; máis alto = negros levantados, baixo contraste)
+    'gancho':     {'lum': (0.13, 0.45), 'sat': 1.00, 'croma_max': 0.16, 'toe': 0.000},
+    'transicion': {'lum': (0.25, 0.58), 'sat': 0.97, 'croma_max': 0.14, 'toe': 0.008},
+    'calma':      {'lum': (0.18, 0.48), 'sat': 0.92, 'croma_max': 0.13, 'toe': 0.012},
+    'durmir':     {'lum': (0.08, 0.30), 'sat': 0.80, 'croma_max': 0.10, 'toe': 0.020},
 }
-FILME = {'toe': 0.012, 'ombro': 0.86, 'sombra': (-0.010, 0.002, 0.012), 'luz': (0.012, 0.004, -0.010)}
-SUAVIZADO = 3    # media móbil de ±3 planos nos parámetros: as fases cambian sen saltos
+FILME = {'ombro': 0.86, 'sombra': (-0.008, 0.002, 0.010), 'luz': (0.012, 0.004, -0.010)}
+SUAVIZADO = 60   # xanela triangular de ±60 palabras (~30 s de narración) nos parámetros: as fases cambian sen saltos
 
 
 def _parametros(escenas, n):
@@ -357,27 +370,34 @@ def _parametros(escenas, n):
             con, bri = c['contraste'], c['brillo']
         else:
             con, bri = 1.0, 1.0
-        crus.append([lk['lum'][0], lk['lum'][1], lk['sat'], lk['croma_max'], con, bri])
+        crus.append([lk['lum'][0], lk['lum'][1], lk['sat'], lk['croma_max'], con, bri, lk['toe']])
+    # suavizado: media ponderada cos planos veciños segundo a distancia en palabras (sen posición: ±1 plano)
+    pos = [(escenas[k].get('pal0') if escenas and k < len(escenas) else None) for k in range(n)]
     out = []
     for k in range(n):
-        viz = crus[max(0, k - SUAVIZADO): k + SUAVIZADO + 1]
-        out.append([sum(v[j] for v in viz) / len(viz) for j in range(6)])
+        if pos[k] is not None:
+            ws = [(max(0.0, 1 - abs(pos[j] - pos[k]) / SUAVIZADO) if pos[j] is not None else 0.0) for j in range(n)]
+        else:
+            ws = [1.0 if abs(j - k) <= 1 else 0.0 for j in range(n)]
+        tw = sum(ws)
+        out.append([sum(w * v[j] for w, v in zip(ws, crus)) / tw for j in range(7)])
     return out
 
 
 def graduar(paths, outdir, escenas=None, **_):
     """Gradación por fase (Gauntlet 3). Substitúe a igualación á media do episodio do Gauntlet 2, que aplanaba a
     luz. Por imaxe: (1) se a luminancia media sae do rango da fase, lévase cara ao bordo cunha gamma; (2) contraste
-    arredor da súa propia media e brillo da curva do embude (curva.py); (3) saturación da fase e tope de croma
-    (evita os verdes de videoxogo); (4) aspecto común de filme: negros non puros, ombreiro suave nas altas luces e
-    un virado lixeiro (sombras frías, luces cálidas) que dá unidade sen igualar as cores.
+    arredor da súa propia media e brillo da curva do embude (curva.py), ombreiro suave nas altas luces e nivel de
+    negro da fase (negros profundos no gancho, levantados ao durmir); (3) saturación da fase e tope de croma (evita
+    os verdes de videoxogo); (4) un virado común lixeiro (sombras frías, luces cálidas) que dá unidade sen igualar
+    as cores.
     Os parámetros suavízanse entre planos veciños, así que o paso dunha fase a outra é gradual."""
     import numpy as np
     from PIL import Image
     outdir = Path(outdir); outdir.mkdir(parents=True, exist_ok=True)
     par = _parametros(escenas, len(paths))
     out, rex = [], []
-    for p, (lo, hi, sat, croma_max, con, bri) in zip(paths, par):
+    for p, (lo, hi, sat, croma_max, con, bri, toe) in zip(paths, par):
         x = np.asarray(Image.open(p).convert('RGB'), np.float32) / 255
         L = x @ np.array([0.2126, 0.7152, 0.0722], np.float32)
         mu = float(L.mean())
@@ -397,7 +417,7 @@ def graduar(paths, outdir, escenas=None, **_):
         # ombreiro suave nas altas luces e negros non puros
         sh = FILME['ombro']
         L2 = np.where(L2 > sh, sh + (1 - sh) * np.tanh((L2 - sh) / (1 - sh)), L2)
-        L2 = FILME['toe'] + (1 - FILME['toe']) * np.clip(L2, 0, 1)
+        L2 = toe + (1 - toe) * np.clip(L2, 0, 1)
         ratio = (L2 + 1e-4) / (L + 1e-4)
         y = x * ratio[..., None]
         # (3) saturación da fase e tope de croma
@@ -407,13 +427,14 @@ def graduar(paths, outdir, escenas=None, **_):
         y = Ly + (y - Ly) * s
         # (4) virado común: sombras frías, luces cálidas (pouco)
         w = np.clip(Ly, 0, 1)
-        y = y + (1 - w) * np.array(FILME['sombra'], np.float32) + w * np.array(FILME['luz'], np.float32)
+        y = y + (1 - w) * (1 - w) * np.array(FILME['sombra'], np.float32) + w * np.array(FILME['luz'], np.float32)
         y = np.clip(y, 0, 1)
         q = outdir / Path(p).name
         tmp = q.with_suffix('.tmp.png')
         Image.fromarray((y * 255 + 0.5).astype(np.uint8)).save(tmp); os.replace(tmp, q)
         out.append(str(q))
         rex.append({'imaxe': Path(p).name, 'lum_orixe': round(mu, 3), 'gamma': round(g, 3), 'contraste': round(con, 3),
+                    'toe': round(toe, 4),
                     'brillo': round(bri, 3), 'saturacion': round(s, 3), 'croma_orixe': round(croma, 3),
                     'lum_final': round(float((y @ np.array([0.2126, 0.7152, 0.0722], np.float32)).mean()), 3)})
     (outdir / 'graduacion.json').write_text(json.dumps(rex, ensure_ascii=False, indent=1))

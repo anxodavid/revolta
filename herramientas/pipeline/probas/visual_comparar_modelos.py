@@ -30,12 +30,24 @@ PROMPTS = [
     ('durmir', 'brasas', 'glowing embers in a stone hearth, an iron pot and a wooden stool, a dark sleeping kitchen, '
      'faint red glow'),
 ]
+# Escenas deliberadamente alleas (calibración da porta de iconografía de revisor.py): o que o crítico viu.
+MALOS = [
+    ('malo', 'toscana', 'a Tuscan hill village with tall cypress trees and red-orange terracotta tile roofs, sunny'),
+    ('malo', 'andalucia', 'a white-washed Andalusian village with white houses and orange tile roofs on a dry hill'),
+    ('malo', 'oliveiras', 'an olive grove on dry red soil with a stone farmhouse, hot summer light'),
+    ('malo', 'palmeiras', 'a village square with palm trees and whitewashed houses, bright sun'),
+    ('malo', 'rodas', 'a wooden farm wagon with large spoked wheels pulled by horses on a dusty road'),
+    ('malo', 'eucaliptos', 'a dense eucalyptus plantation with tall straight pale trunks and peeling bark'),
+    # ¿sabe SDXL que é Galicia? (a biblia di que non se escriba: compróbase)
+    ('proba', 'galicia', 'a traditional village in Galicia, Spain, stone houses, rural landscape'),
+]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('modelo'); ap.add_argument('saida')
     ap.add_argument('--estilos', default='filme,pintura'); ap.add_argument('--n', type=int, default=len(PROMPTS))
+    ap.add_argument('--malos', action='store_true', help='engade as escenas alleas (só no primeiro estilo)')
     a = ap.parse_args()
     import torch
     torch.set_num_threads(int(os.environ.get('NTH', '4')))
@@ -44,18 +56,20 @@ def main():
     m = pipe._revolta
     res = {'modelo': m, 'carga_s': carga, 'imaxes': []}
     print(f'{a.modelo}: carga {carga} s', flush=True)
-    for estilo in a.estilos.split(','):
-        for k, (fase, nome, p) in enumerate(PROMPTS[:a.n]):
-            pr = f'{imaxes.ESTILOS[estilo]}, {p}'
-            seed = 1000 + k
-            t = time.time(); im = imaxes.xerar_unha(pipe, pr, seed, m); s = round(time.time() - t, 1)
-            f = out / f'{a.modelo}-{estilo}-{k}-{nome}.png'
-            im.save(f)
-            ntok, perdido = imaxes.tokens(pipe, pr)
-            res['imaxes'].append({'ficheiro': f.name, 'estilo': estilo, 'fase': fase, 'nome': nome, 'seed': seed,
-                                  's': s, 'tokens': ntok, 'truncado': perdido, 'prompt': pr})
-            print(f'{f.name}: {s} s ({ntok} tokens)', flush=True)
-            (out / f'{a.modelo}.json').write_text(json.dumps(res, ensure_ascii=False, indent=1))
+    tarefas = [(estilo, k, x) for estilo in a.estilos.split(',') for k, x in enumerate(PROMPTS[:a.n])]
+    if a.malos:
+        tarefas += [(a.estilos.split(',')[0], 100 + k, x) for k, x in enumerate(MALOS)]
+    for estilo, k, (fase, nome, p) in tarefas:
+        pr = f'{imaxes.ESTILOS[estilo]}, {p}'
+        seed = 1000 + k
+        t = time.time(); im = imaxes.xerar_unha(pipe, pr, seed, m); s = round(time.time() - t, 1)
+        f = out / f'{a.modelo}-{estilo}-{k}-{nome}.png'
+        im.save(f)
+        ntok, perdido = imaxes.tokens(pipe, pr)
+        res['imaxes'].append({'ficheiro': f.name, 'estilo': estilo, 'fase': fase, 'nome': nome, 'seed': seed,
+                              's': s, 'tokens': ntok, 'truncado': perdido, 'prompt': pr})
+        print(f'{f.name}: {s} s ({ntok} tokens)', flush=True)
+        (out / f'{a.modelo}.json').write_text(json.dumps(res, ensure_ascii=False, indent=1))
 
 
 if __name__ == '__main__':

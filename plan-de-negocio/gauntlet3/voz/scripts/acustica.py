@@ -25,7 +25,7 @@ def silabas(texto):
     n = 0
     for pal in re.findall(r"[a-záéíóúüñç]+", texto.lower()):
         for g in re.findall(f'[{VOG}]+', pal):
-            n += 1 + sum(1 for a, b in zip(g, g[1:]) if a in FORTES and b in FORTES)
+            n += 1 + sum(1 for a, b in zip(g, g[1:]) if (a in FORTES and b in FORTES) or a in 'íú' or b in 'íú')
     return n
 
 

@@ -8,7 +8,8 @@
 Frases: as 21 de test do corpus Nos_Brais-GL (non usadas no adestramento; teñen a transcrición fonética da Cotovía
 coa que se adestrou o modelo) e 12 propias con vogais abertas/pechadas, monosílabos e nomes propios (textos.py).
 Por frase e Cotovía: fonemas (e diferenza en caracteres coa transcrición do corpus, normalizada como
-probas/comparar_cotovia.py), voz con voz_st2.infer (REF_WAV, escala 1,1, dúas sementes) e WER co Whisper galego.
+probas/comparar_cotovia.py), voz con voz_st2.infer (REF_WAV, escala 1,1, dúas sementes) e WER co Whisper galego
+sobre as 33 frases seguidas (erros repartidos por frase co aliñamento).
 Todo automático; ninguén escoitou os audios.
 """
 import csv, json, os, re, sys, time
@@ -17,6 +18,7 @@ sys.path.insert(0, AQUI); sys.path.insert(0, '/home/user/revolta/herramientas/pi
 import numpy as np, soundfile as sf
 import textos
 
+SAIDA = os.path.abspath(sys.argv[1])
 S = os.environ['SCRATCH']; OUT = os.path.join(S, 'voz', 'cotovia'); os.makedirs(OUT, exist_ok=True)
 COT = {'0.5': os.environ['ST2_PATHBIN'], 'nova': os.environ['COTOVIA_NOVA_PATHBIN']}
 PATH0 = os.environ['PATH']
@@ -68,14 +70,37 @@ os.environ['PATH'] = PATH0
 V.M.clear()
 import gc; gc.collect()
 
-import modelos
+import modelos, jiwer
 asr = modelos.ASR()
+# WER: as 33 frases seguidas (1 s de silencio entre elas) por Cotovía e semente, como mide o QA (audio longo); os
+# erros repártense por frase co aliñamento de jiwer
+refw, refi = [], []
 for k, f in enumerate(frases):
+    ws = modelos.norm(f['texto']).split(); refw += ws; refi += [k] * len(ws)
     f['asr'] = {}
-    for c in COT:
-        for s in SEMENTES:
-            f['asr'][f'{c}_{s}'] = asr.wer(os.path.join(OUT, f'{c}_{s}_{k:02d}.wav'), f['texto'])
-    print(k, {x: v['wer'] for x, v in f['asr'].items()}, flush=True)
+for c in COT:
+    for s in SEMENTES:
+        x = np.concatenate([np.concatenate([sf.read(os.path.join(OUT, f'{c}_{s}_{k:02d}.wav'))[0], np.zeros(24000)])
+                            for k in range(len(frases))]).astype(np.float32)
+        pw = os.path.join(OUT, f'todas_{c}_{s}.wav'); sf.write(pw, x, 24000)
+        hip = asr.transcribir(pw)
+        al = jiwer.process_words(' '.join(refw), modelos.norm(hip))
+        err = [0] * len(frases)
+        for ch in al.alignments[0]:
+            if ch.type != 'equal':
+                ri = min(ch.ref_start_idx, len(refi) - 1)
+                err[refi[ri]] += max(ch.ref_end_idx - ch.ref_start_idx, ch.hyp_end_idx - ch.hyp_start_idx)
+        hw = modelos.norm(hip).split()
+        for k, f in enumerate(frases):
+            n = sum(1 for i in refi if i == k)
+            f['asr'][f'{c}_{s}'] = {'erros': err[k], 'palabras_ref': n, 'wer': round(err[k] / n, 4)}
+        # que oíu o ASR nas frases con erros (tramo da hipótese aliñado)
+        for ch in al.alignments[0]:
+            if ch.type != 'equal':
+                k = refi[min(ch.ref_start_idx, len(refi) - 1)]
+                frases[k]['asr'][f'{c}_{s}'].setdefault('diferenzas', []).append(
+                    [' '.join(refw[ch.ref_start_idx:ch.ref_end_idx]), ' '.join(hw[ch.hyp_start_idx:ch.hyp_end_idx])])
+        print(c, s, 'WER', round(al.wer, 4), flush=True)
 
 res = {}
 for c in COT:
@@ -92,5 +117,5 @@ for c in COT:
     res[c]['vogais_abertas_EO'] = sum(len(re.findall('[ÉÓ]', f['fonemas'][c])) for f in frases)
 res['vogais_abertas_EO_corpus_test'] = sum(len(re.findall('[ÉÓ]', f['corpus'])) for f in frases if f['corpus'])
 res['frases'] = len(frases); res['sementes'] = SEMENTES
-json.dump({'resumo': res, 'frases': frases}, open(sys.argv[1], 'w'), ensure_ascii=False, indent=1)
+json.dump({'resumo': res, 'frases': frases}, open(SAIDA, 'w'), ensure_ascii=False, indent=1)
 print(json.dumps(res, ensure_ascii=False, indent=1))

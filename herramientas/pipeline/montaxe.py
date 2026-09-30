@@ -24,6 +24,8 @@ SW, SH = 2400, 1350          # imaxe fonte reescalada (1,25x a saída) para o mo
 ZOOM = 1.12                   # percorrido máximo do zoom/paneo
 XF = 1.2                      # fundido encadeado entre escenas (s)
 NEBOA = 0.06                  # opacidade máxima da brétema
+GRAO = float(os.environ.get('MONTAXE_GRAO', '0'))   # gran de película (desviación, fracción de 255); 0 = sen gran
+GRAO_BANCO = 6                # texturas de gran que se van alternando (unha cada 2 fotogramas)
 
 _G = {}
 
@@ -41,10 +43,35 @@ def _fog(seed=3):
     return acc * grad
 
 
+def _grao():
+    """Banco de texturas de gran de película: ruído gaussiano a media resolución (gran de ~2 px, menos
+    "dixital" que o ruído por píxel), normalizado. Vai máis forte nos tons medios (ver _frame)."""
+    rng = np.random.default_rng(11)
+    banco = []
+    for _ in range(GRAO_BANCO):
+        g = Image.fromarray(rng.standard_normal((OH // 2, OW // 2)).astype(np.float32), 'F').resize((OW, OH), Image.BILINEAR)
+        g = np.asarray(g, np.float32)
+        banco.append((g / (g.std() + 1e-6)).astype(np.float16))
+    return banco
+
+
 def _vignette():
     y, x = np.mgrid[0:OH, 0:OW].astype(np.float32)
     r = np.sqrt(((x - OW / 2) / (OW / 2)) ** 2 + ((y - OH / 2) / (OH / 2)) ** 2)
     return np.clip(1 - 0.28 * np.clip(r - 0.55, 0, None) ** 1.6, 0, 1)
+
+
+def _a_16_9(im):
+    """Recorta ao centro ata 16:9 sen deformar (SDXL-Lightning xera 1344x768, 1,75:1; antes estirábase)."""
+    w, h = im.size
+    r = SW / SH
+    if abs(w / h - r) < 0.005:
+        return im
+    if w / h > r:
+        nw = round(h * r); x = (w - nw) // 2
+        return im.crop((x, 0, x + nw, h))
+    nh = round(w / r); y = (h - nh) // 2
+    return im.crop((0, y, w, y + nh))
 
 
 def _init(imgs, idxs=None, rotulos=()):
@@ -53,9 +80,10 @@ def _init(imgs, idxs=None, rotulos=()):
     for i, p in enumerate(imgs):
         if idxs is not None and i not in idxs:
             continue
-        im = Image.open(p).convert('RGB').resize((SW, SH), Image.LANCZOS)
+        im = _a_16_9(Image.open(p).convert('RGB')).resize((SW, SH), Image.LANCZOS)
         _G['src'][i] = im.filter(ImageFilter.UnsharpMask(radius=2, percent=40, threshold=2))
     _G['fog'] = _fog(); _G['vig'] = _vignette()[..., None]
+    _G['grao'] = _grao() if GRAO > 0 else None
     _G['rot'] = [(r, _rotulo(r)) for r in rotulos]
 
 
@@ -138,6 +166,10 @@ def _frame(t, esc, dur):
             op = min(1.0, (t - r['t0']) / fd, (r['t1'] - t) / fd) * r.get('opacidade', 1.0)
             a_ = capa[..., 3:4] / 255 * op
             out = out * (1 - a_) + capa[..., :3] * a_
+    if _G.get('grao') is not None:     # gran: máis forte nos tons medios, case nada nos negros e nas altas luces
+        g = _G['grao'][int(t * FPS / 2) % len(_G['grao'])]
+        lum = out.mean(-1, keepdims=True) / 255
+        out = out + g[..., None].astype(np.float32) * (GRAO * 255) * (4 * lum * (1 - lum))
     fade = min(1.0, t / 2.5, (dur - t) / 4.0)
     if fade < 1:
         out *= max(fade, 0)

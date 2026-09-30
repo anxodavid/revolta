@@ -1,0 +1,18 @@
+[
+ {"n": 1, "fase": "gancho", "tipo": "detalle", "prompt": "extreme close-up detail of an old hand stirring blue flames of burning spirits in a clay bowl with a wooden ladle, dark stone kitchen, blue glow on rough granite, deep black shadows", "negativo": "cauldron, pointed hat"},
+ {"n": 2, "fase": "gancho", "tipo": "xeral", "prompt": "wide shot of wet granite stone arcades of an old town street at night, rain, a hanging iron lantern glowing under the arches, puddles reflecting the light, deep shadows"},
+ {"n": 3, "fase": "gancho", "tipo": "primeiro_plano", "prompt": "close-up of an old midwife's face lit by the open hearth fire in a dark stone kitchen, dark wool headscarf, deep wrinkles, smoke, deep black shadows"},
+ {"n": 4, "fase": "gancho", "tipo": "bodegon", "prompt": "still life of a bundle of old folded papers tied with string and a red wax seal on a dark oak table, a single candle flame, deep black shadows, chiaroscuro"},
+ {"n": 5, "fase": "transicion", "tipo": "xeral", "prompt": "wide establishing shot of a hamlet of grey granite houses with dark grey slate roofs and a long narrow granite granary raised on stone pillars, green meadows, morning sunlight through mist", "negativo": "orange roof tiles"},
+ {"n": 6, "fase": "transicion", "tipo": "contraluz", "prompt": "backlit silhouette of a woman hanging bundles of dried herbs from the wooden beams of a dark stone kitchen, shafts of daylight through the open doorway, dust in the light"},
+ {"n": 7, "fase": "transicion", "tipo": "detalle", "prompt": "extreme close-up detail of the solid wooden disc wheel of an ox cart on a muddy lane between mossy stone walls, golden-brown oxen, bright overcast daylight", "negativo": "spoked wheels"},
+ {"n": 8, "fase": "transicion", "tipo": "plano_medio", "prompt": "medium shot of an old woman in a long dark wool skirt gathering wild herbs in an ancient oak grove, wicker basket on her arm, low winter sun, long shadows"},
+ {"n": 9, "fase": "calma", "tipo": "paisaxe", "prompt": "wide landscape of a calm Atlantic estuary at dawn, small wooden fishing boats resting on the water, dark granite rocks, green hills, soft pink morning light"},
+ {"n": 10, "fase": "calma", "tipo": "bodegon", "prompt": "still life of a small iron oil lamp, a loaf of rye bread and a clay jug on a rough oak table, warm light of the oil lamp, dark stone wall"},
+ {"n": 11, "fase": "calma", "tipo": "xeral", "prompt": "wide shot of an old granite village fountain with a stone basin in soft rain at dusk, wet cobblestones, a long narrow granite granary on stone pillars behind, grey-blue light"},
+ {"n": 12, "fase": "calma", "tipo": "plano_medio", "prompt": "medium shot of a grey cat sleeping on a wooden high-backed bench beside a low stone hearth, warm glow of the fire, dark granite walls, calm"},
+ {"n": 13, "fase": "durmir", "tipo": "paisaxe", "prompt": "wide landscape of small bonfires glowing far away on dark hills on a summer night, starry sky, faint mist, very dim, calm"},
+ {"n": 14, "fase": "durmir", "tipo": "bodegon", "prompt": "still life of a clay bowl of water with wild flowers and herbs on a mossy stone wall at night, pale moonlight, starry sky, very dim"},
+ {"n": 15, "fase": "durmir", "tipo": "plano_medio", "prompt": "medium shot of an old Benedictine monk in a black habit sitting by a small window of a stone cell, rain outside, a single dim candle, soft darkness"},
+ {"n": 16, "fase": "durmir", "tipo": "detalle", "prompt": "extreme close-up detail of glowing embers in a stone hearth, an iron pot in shadow, faint red glow, soft darkness"}
+]

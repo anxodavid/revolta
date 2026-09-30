@@ -23,4 +23,4 @@ for f in filas:
     out.append(r)
     print(f"{f['ficheiro']} {f['categoria']:12s} sil/s {r.get('sil_s')} F0 {r.get('f0_mediana_hz')} sd {r.get('f0_sd_st')} "
           f"rango {r.get('f0_rango_st')} din {r.get('dinamica_db')} ar {r['arousal']}", flush=True)
-json.dump(out, open(sys.argv[1], 'w'), ensure_ascii=False, indent=1)
+json.dump(out, open(os.path.abspath(sys.argv[1]), 'w'), ensure_ascii=False, indent=1)
