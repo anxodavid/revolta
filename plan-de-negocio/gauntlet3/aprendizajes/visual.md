@@ -185,3 +185,24 @@ Prompts de Claude según la biblia; todo lo demás automático (generación, pue
   reserva, 0 sin aprobar (`r1/porta.md`; la primera pasada, en `r1/porta_primeira_pasada_tope16.md`).
 - Entorno: en `ps`, el `flock` que TIENE el candado y los que esperan se ven igual; el que lo tiene es el padre del
   python que está corriendo (confundí uno con un duplicado del guion).
+
+## Ronda 2: calibración de la puerta versión 6 (`probas/visual_calibrar_r2.py`, imágenes de la hoja r1)
+
+Etiquetas del veredicto del crítico ciego (`veredictos/visual-r1.md`) y de lo que vio Claude en las imágenes.
+
+| Puerta nueva | Malas | Buenas (más alta) | Umbral | Nota |
+|---|---|---|---|---|
+| luz eléctrica (CLIP) | 0,018-0,032 (4 intentos del plano 2) | 0,018 con pertinencia 0,09 | 0,015 y pertinencia > 0,15 | 4/4 |
+| luces de ciudad (CLIP) | 0,019 (plano 13) | 0,005 | 0,012 | 1/1 |
+| salón moderno (CLIP) | 0,035-0,043 (plano 12) | −0,006 | 0,015 | 2/2 |
+| casas británicas (CLIP) | −0,005 (plano 5) … 0,031 (aldeas "inglesas" de la comparativa) | 0,056 con pertinencia 0,08 | 0,010 | 5/6 (el plano 5 no) |
+| patio mediterráneo (CLIP) | **−0,049** (plano 11) | 0,061 | desactivado | invertido: el patio puntúa como "fuente con pila" |
+| caldero de meiga (CLIP) | **−0,039** (plano 16) | 0,024 | desactivado | invertido; Florence lo llamó "potion" (regex nueva) |
+| `clave` (lo pedido se ve) | ausentes −0,027 … 0,081 | presentes −0,011 … 0,079 | 0,02 | caza 7 de 12 ausencias (maíz, cruceiro, monje, farol, yugo, hierbas colgando, lluvia), 1 falsa alarma; **solapan mucho**: "iron oil lamp" puntúa alto con una vela en vaso |
+| altas luces en durmir | 0,15-2,2 % (hoguera, caldero, vela) | 0,03-0,10 % (luna, niebla) | 0,12 % | una luna llena grande podría pasar del umbral [S] |
+| caminantes (2.º texto) | 0,204-0,262 (incluido el plano 5) | 0,200 | 0,202 | 7/7 |
+| persona junto al fuego (texto nuevo + el prompt tiene que nombrar fuego) | 0,228-0,276 | 0,262 (lareira sin persona) | 0,24 | el monje con vela ya no cuenta (su prompt no nombra fuego) |
+
+Conclusión: CLIP vale para lo evidente (farolas en fila, ciudad iluminada, salón con cojines) y falla con lo que se
+parece al sujeto pedido (un patio con fuente frente a una fuente de aldea; un caldero frente a una pota). El campo
+`clave` es débil: CLIP confunde objetos parecidos.

@@ -115,19 +115,21 @@ PAR_MARXE = {'tellados laranxas (CLIP)': 0.045, 'muros encalados (CLIP)': 0.060,
              'oliveiras (CLIP)': 0.040, 'palmeiras (CLIP)': 0.020,
              'rodas de raios (CLIP)': 9.0,    # DESACTIVADO: o par estaba invertido; as rodas quedan para Florence ("spoked")
              'paisaxe seca (CLIP)': 0.072, 'eucaliptos (CLIP)': 0.070,
-             # versión 6 (provisionais; calibrados despois coa folla r1)
-             'luz eléctrica (CLIP)': 0.030, 'luces de cidade (CLIP)': 0.030, 'salón moderno (CLIP)': 0.030,
-             'patio mediterráneo (CLIP)': 0.030, 'casas británicas (CLIP)': 0.030, 'caldeiro de meiga (CLIP)': 0.030}
+             # versión 6, calibrados con probas/visual_calibrar_r2.py sobre a folla r1 (1-6 malas por par: provisionais).
+             # Patio e caldeiro saen INVERTIDOS nas imaxes da r1 (o patio puntúa máis "fonte con pía"; o caldeiro, "pota
+             # sobre brasas"): desactivados; deses encárgase Florence ("potted plants", "potion"...).
+             'luz eléctrica (CLIP)': 0.015, 'luces de cidade (CLIP)': 0.012, 'salón moderno (CLIP)': 0.015,
+             'patio mediterráneo (CLIP)': 9.0, 'casas británicas (CLIP)': 0.010, 'caldeiro de meiga (CLIP)': 9.0}
 PAR_PERTINENCIA = 0.15       # (0,20 deixaba fóra a maioría das malas: as similitudes de CLIP-L andan en 0,08-0,30)
 # Conceptos do campo `negativo`: sim("a photo with X") − sim("a photo") no mesmo recorte. Na calibración, as boas
 # chegan a 0,037 e as malas claras a 0,047-0,12 (o valor absoluto non separaba: boas ata 0,19, malas desde 0,09).
 NEGATIVO_MARXE = 0.040
 # Versión 6: campo `clave` (o que TEN que verse): sim("a photo with X") − sim("a photo") no mellor recorte, por riba
 # de CLAVE_MARXE. Calibrado coas imaxes da folla r1 (ver aprendizajes/visual.md).
-CLAVE_MARXE = 0.030
+CLAVE_MARXE = 0.020   # r1: colle 7 dos 12 elementos que faltaban, cunha falsa alarma (unha vela, -0,011)
 # Versión 6: na fase de durmir, nada de lume vivo: fracción de píxeles con luminancia > 0,85 (as brasas quedan
 # por debaixo; as chamas amarelas, por riba). Na r1: o caldeiro con chamas do plano 16 daba 0,97 %.
-ALTAS_LUCES_DURMIR = 0.005
+ALTAS_LUCES_DURMIR = 0.0012   # r1: fogueira 0,36 %, caldeiro 2,2 %, vela 0,15-1,4 %; lúa e néboa 0,03-0,10 %
 # Repetición: coseno dos embeddings medios. Na calibración, prompts distintos ata 0,879 (p99 0,866); o mesmo prompt
 # noutro modelo ou estilo, mediana 0,864 (p10 0,80). 0,90: só as imaxes case iguais en contido e composición.
 SIM_CLIP = 0.90
@@ -137,12 +139,12 @@ SIM_CLIP = 0.90
 # persoa (mesmo arquetipo visual); o do retrato non ten datos [S].
 ARQUETIPOS = [   # (etiqueta, textos, fracción máxima, sim mínima); a sim é a máxima entre os textos
     ('camiñantes de costas', ['people in long cloaks seen from behind walking away along a path',
-                              'a lone person seen from behind walking away along a path or street'], 0.03, 0.220),
+                              'a lone person seen from behind walking away along a path or street'], 0.03, 0.202),
     ('castelo no outeiro', ['a distant castle on a hill in a wide landscape'], 0.03, 0.225),
     ('grupo de pé', ['a group of several people standing together in a row'], 0.04, 0.195),
     ('rúa da aldea', ['a street of a stone village with a few people'], 0.05, 0.240),
     # versión 6: texto máis estreito, e só conta se o prompt nomea lume (unha vela non é unha lareira: visual-r1 §4.5)
-    ('persoa á lareira', ['a person sitting beside an open hearth fire'], 0.06, 0.205),
+    ('persoa á lareira', ['a person sitting beside an open hearth fire'], 0.06, 0.240),
     ('bosque con néboa', ['a misty forest with no people'], 0.06, 0.210),
     ('mans en primeiro plano', ['a close-up of hands doing a task'], 0.06, 0.180),
     ('retrato', ['a close-up portrait of a face'], 0.08, 0.220),
