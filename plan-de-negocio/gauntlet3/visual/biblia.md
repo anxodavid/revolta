@@ -1,4 +1,4 @@
-# Biblia visual de "Cousas de Galiza para durmir" (Gauntlet 3, ronda 1)
+# Biblia visual de "Cousas de Galiza para durmir" (Gauntlet 3, ronda 2)
 
 Autor: agente director de arte e ingeniero de imagen (Claude), 30-09-2026. Documento de trabajo en castellano; los
 prompts van en **inglés** (SDXL y CLIP se entrenaron en inglés). Nadie la ha revisado; se apoya en lo que dijo el
@@ -11,11 +11,14 @@ en las pruebas de esta ronda (`aprendizajes/visual.md`).
 
 ```json
 {"n": 12, "prompt": "medium shot of ...", "tipo": "plano_medio", "luz": "lit only by firelight, deep black shadows",
- "negativo": "orange roof tiles", "movemento": "zoom_in", "son": "lume"}
+ "clave": "wooden yoke", "negativo": "orange roof tiles", "movemento": "zoom_in", "son": "lume"}
 ```
 
 Solo `n` y `prompt` son obligatorios. `tipo` (sección 3) se recomienda siempre. `luz` es opcional: si falta y el
-prompt no trae ninguna palabra de luz, el código pone la luz por defecto de la fase. `negativo` (1-3 conceptos
+prompt no trae ninguna palabra de luz, el código pone la luz por defecto de la fase. `clave` (ronda 2; 1-3 conceptos) es lo que el plano **tiene que mostrar**: la puerta
+de CLIP rechaza la imagen si no lo ve (en la r1, 12 de 16 planos no mostraban lo pedido: el yugo, el sello, el
+candil...). Es un control débil (CLIP confunde objetos parecidos), así que el concepto debe ser concreto y visible
+(`wooden yoke`, `red wax seal`, `stone cross`), no una acción. `negativo` (1-3 conceptos
 separados por comas) no se usa para generar (SDXL-Lightning va sin CFG y no admite prompt negativo), sino para
 **revisar**: la puerta de CLIP rechaza la imagen si se parece a esos conceptos. `movemento` es el Ken Burns
 (`zoom_in`, `zoom_out`, `pan_left`, `pan_right`, `pan_up`).
@@ -37,6 +40,22 @@ plano sin personas) si un prompt falla cinco veces o repite arquetipo; la gradac
 Comprobar la lista antes de generar (segundos, sin modelos pesados):
 
     $PY herramientas/pipeline/probas/visual_validar_escenas.py ESCENAS.json --planos TRABALLO/planos.json
+
+## 0. Ronda 2: lo que decidió el crítico ciego (`veredictos/visual-r1.md`)
+
+La hoja r1 **perdió 55/45** frente a la referencia: tenía mejor luz y arco hacia el sueño, pero "crea ambiente y no
+cuenta la historia": casi nadie hacía lo que narra el guion, las figuras estaban solas y pasivas, había llama en 7 de
+16 planos y dos luces eléctricas a la vista (farolas, ciudad). Reglas nuevas (detalle en las secciones 2, 3, 4 y 8):
+
+1. **La premisa del episodio en pantalla**: gente de los siglos XVI-XVII haciendo lo que cuenta el guion: curar con
+   hierbas, asistir un parto (sin nada explícito), ordeñar, declarar ante un escribano, una sala de audiencia con
+   velas, un cura leyendo un edicto a la puerta de la iglesia, vecinas en la fuente.
+2. **Personas en relación**: en gancho y transición, al menos **1 de cada 4 planos con dos personas que se
+   relacionan**, resuelto en *over-the-shoulder* (una cara grande enfocada, la otra de espaldas en primer término):
+   respeta el tope de caras de la sección 5.
+3. **Durmir sin llama viva**: solo brasas, luna y niebla (la puerta rechaza > 0,12 % de altas luces en durmir); la
+   calma, más oscura que la transición y sin amaneceres rosas.
+4. Leer las **trampas de prompt** de la sección 8 antes de escribir.
 
 ## 1. Estilo común
 
@@ -68,8 +87,8 @@ saltos al cambiar de fase). **No iguala a la media del episodio** (eso aplanó l
 |---|---|---|---|
 | **gancho** (0-2) | lume de la lareira, vela, antorcha o facho, noche, tormenta con relámpago, contraluz duro | claroscuro: ámbar contra negro profundo, o azul frío de tormenta; contraste alto | `lit only by firelight, deep black shadows` · `a single candle flame in darkness, chiaroscuro` · `night, flickering torchlight` · `storm clouds, cold flash of lightning, rain` · `harsh backlight from a doorway, silhouette` |
 | **transición** (2-8) | día variado: sol de mañana entre la niebla, sol bajo de invierno, cielo cubierto luminoso, rayos por una puerta o ventana, amanecer | verdes de prado, gris del granito, cielos con claros; contraste natural | `morning sunlight through mist` · `low winter sun, long shadows` · `bright overcast daylight, soft shadows` · `shafts of daylight through a doorway` · `dawn light over the hills` |
-| **calma** (8-18) | atardecer, lluvia mansa al anochecer, candil en interior, hora azul | cálidos suaves o azul-gris de lluvia; contraste medio-bajo | `warm sunset light, golden hour` · `soft rain, grey-blue dusk` · `warm light of an oil lamp` · `blue hour twilight, first stars` |
-| **durmir** (18-final) | luna, brasas, una vela casi consumida, noche estrellada, niebla nocturna | oscuro, poco saturado, contraste bajo; nada de destellos | `pale moonlight, deep blue night, soft and dim` · `faint glow of embers in darkness` · `starry night sky, faint mist, very dim` · `a single dim candle, soft darkness` |
+| **calma** (8-18) | atardecer, lluvia mansa al anochecer, candil en interior, hora azul; **nunca amanecer** (es de la transición) | cálidos suaves o azul-gris de lluvia; contraste medio-bajo; más oscura que la transición (luminancia ≤ 0,33) | `warm sunset light, golden hour` · `soft rain, grey-blue dusk` · `warm light of an oil lamp` · `blue hour twilight, first stars` |
+| **durmir** (18-final) | luna, brasas, noche estrellada, niebla nocturna; **nada de llama viva** (ni velas, ni hogueras, ni fuego en la lareira) | oscuro (luminancia media ≤ 0,18 tras la gradación), poco saturado, contraste bajo; nada de destellos | `pale moonlight, deep blue night, soft and dim` · `faint glow of dying embers in darkness` · `starry night sky, faint mist, very dim` · `mist in the moonlight, soft darkness` |
 
 Reglas:
 - **Gancho**: ≥ 60 % de los planos de noche, lume, vela, antorcha o tormenta. Es donde se juega el "¿me quedo?":
@@ -216,12 +235,13 @@ Ejemplos (uno por fase y tipo; en la hoja de prueba `visual/r1/` hay 16):
 | gancho | `primeiro_plano` | `close-up of an old woman's face lit from below by the open hearth fire, deep wrinkles, dark wool headscarf, smoke, deep black shadows` |
 | gancho | `detalle` | `extreme close-up detail of a hand holding a tallow candle in a dark stone corridor, the flame lighting rough granite, darkness around` |
 | gancho | `contraluz` | `backlit silhouette of a man in a wool cloak standing in the doorway of a granite house, storm outside, cold flash of lightning, rain` |
+| gancho | `plano_medio` (dos personas) | `over-the-shoulder shot from behind a kneeling village woman in a dark wool shawl, facing a stern court scribe in a black doublet holding a quill at a table, a single tallow candle, deep black shadows` |
 | transición | `xeral` | `wide establishing shot of a hamlet of grey granite houses with dark grey slate roofs, a stone threshing floor with maize drying, morning sunlight through mist` |
 | transición | `plano_medio` | `medium shot of a woman in a long dark wool skirt carrying a basket of chestnuts along a sunken lane between mossy stone walls, low winter sun, long shadows` |
 | calma | `paisaxe` | `wide landscape of the rugged Atlantic coast at sunset, dark granite rocks, waves breaking, a small stone chapel on the headland, warm low sun` |
 | calma | `bodegon` | `still life of a small iron oil lamp, a loaf of rye bread and a clay jug on a rough oak table, warm light of the oil lamp, dark stone wall` |
 | durmir | `paisaxe` | `wide landscape of an ancient oak grove at night, thick mossy trunks, mist drifting between the trees, pale moonlight, very dim` |
-| durmir | `detalle` | `extreme close-up detail of glowing embers in a stone hearth, an iron pot in shadow, faint red glow, soft darkness` |
+| durmir | `detalle` | `extreme close-up detail of dying embers and grey ash on a granite hearth stone, the black iron leg of a pot at the edge of the frame, faint red glow, soft darkness` |
 
 ## 7. Lo que la puerta revisa (versión 5 de `revisor.py`)
 
@@ -239,3 +259,31 @@ Ejemplos (uno por fase y tipo; en la hoja de prueba `visual/r1/` hay 16):
 Si un prompt falla por el prompt y no por la semilla (repite arquetipo o imagen dos veces seguidas), el código pasa
 directamente a la reserva de la fase: mejor escribir bien el prompt que gastar cinco intentos. Cada intento cuesta
 ~50 s de generación y ~20 s de revisión en esta máquina.
+
+## 8. Trampas de prompt descubiertas en la hoja r1 (veredicto `visual-r1.md`)
+
+| Si escribes... | SDXL-Lightning pinta... | Escribe en su lugar |
+|---|---|---|
+| luces "far away" de noche, `bonfires far away` | las luces de una ciudad en el valle | `one small bonfire on a distant hilltop` y un primer término oscuro; `negativo: city lights, town` |
+| `old town at night`, `arcades`, `puddles reflecting the light` | farolas de fundición en fila | `a narrow granite lane at night, a woman holding a horn lantern, the only light`; `negativo: street lamps` |
+| `document`, `letter`, `open book` | papeles con pseudotexto | el detalle del sello: `a brass seal pressed into red wax on folded parchment`; o `a closed leather-bound book` |
+| `iron oil lamp` | una vela en un vaso de cristal | describir el candil: `a small iron oil lamp shaped like a shallow dish with a spout and a hanging hook, one small flame at the spout` |
+| `iron pot` junto al fuego | un caldero con una poción | la pota en el borde del encuadre o fuera: `the black iron leg of a pot at the edge of the frame` |
+| capucha (`hood`, `hooded`) | una monja o una bruja | `dark wool headscarf and brown wool shawl` |
+| `fountain with a stone basin` | una pila mediterránea en un patio porticado | `a granite wall fountain with a stone spout and a long stone trough` |
+| `oxen` | cuernos largos, manada, cuernos que atraviesan la cabeza | `the heads of two golden-brown oxen with short horns under a carved wooden yoke`, encuadre de las cabezas |
+| casas con chimeneas | casitas británicas con ventanas de guillotina | `low granite houses with small shuttered openings and slate roofs`; `negativo: chimneys, sash windows` |
+| `dozing`, `backlit` | ojos abiertos y luz frontal | no pedir estados sutiles; el contraluz, con una puerta o ventana pequeña **visible** detrás |
+| `cat` junto al fuego | un gato dentro de la chimenea, gatos duplicados | sin gato, o `a grey cat curled on the stone floor` lejos del fuego |
+| la corrección "green hills" en un interior | un ventanal panorámico a las colinas | (lo corrige el código desde la ronda 2: en interior añade muros gruesos y ventanuco) |
+| la queimada en una cocina de época | una escena del XVII con un rito de 1967 | **el conxuro es de 1967**: plano de detalle sin época, `a wooden ladle lifting burning spirits above a wide clay bowl, translucent blue flames, darkness around`; `negativo: molten metal, ice` |
+
+**Lista negativa ampliada** (además de la sección 4): farolas y apliques, luces de ciudad, velas rojas o de colores,
+velas de té, velas en vaso, pan de molde en rebanadas, teteras y cafeteras metálicas, bancos tapizados y cojines,
+chimeneas con repisa, ventanales con vistas, macetas y tiestos, patios porticados con farolillos, casitas británicas,
+reses en manada.
+
+**Plantilla de dos personas** (gancho y transición):
+`over-the-shoulder shot from behind [persona A de espaldas, ropa], facing [persona B: cara, ropa, gesto], [lugar],
+[luz]`. Ejemplo: `over-the-shoulder shot from behind a kneeling village woman in a dark wool shawl, facing a stern
+court scribe in a black doublet holding a quill at a table, a single tallow candle, deep black shadows`.

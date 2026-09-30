@@ -124,8 +124,8 @@ LUZ_FASE = {
                    'low winter sun, long shadows', 'shafts of daylight through a doorway'],
     'calma': ['warm sunset light, golden hour', 'soft rain, grey-blue dusk', 'warm light of an oil lamp',
               'blue hour twilight, first stars'],
-    'durmir': ['pale moonlight, deep blue night, soft and dim', 'faint glow of embers in darkness',
-               'starry night sky, faint mist, very dim', 'a single dim candle, soft darkness'],
+    'durmir': ['pale moonlight, deep blue night, soft and dim', 'faint glow of dying embers in darkness',
+               'starry night sky, faint mist, very dim', 'mist in the moonlight, soft darkness'],   # r2: sen chama viva
 }
 # palabras que indican a luz do plano ("dark" non: adoita ser a cor da roupa; "sun" só como luz, non "sunken")
 LUZ_RX = (r'\b(light|lit|lighting|glow\w*|sun(light|lit|set|rise|beams?|shine|ny|s)?|moon\w*|candle\w*|fire\w*|'
