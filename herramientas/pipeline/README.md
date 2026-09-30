@@ -53,7 +53,21 @@ intentos, revisión de imágenes) quedan en `--traballo`; cada etapa se salta si
    interiores modernos (dormitorios, lámparas, cortinas), texto o letras (también "writing"), cruces portadas, armas de
    fuego, sangre, edificios ardiendo, esqueletos, calaveras o cadáveres y hogueras grandes en el exterior. Las
    vidrieras góticas ("stained glass") no cuentan como ventanas modernas. `VERSION` sube cuando cambia la lista, y
-   `imaxes.py` vuelve a revisar las imágenes guardadas con una versión anterior.
+   `imaxes.py` vuelve a revisar las imágenes guardadas con una versión anterior. Versión 4 (ronda 3): **multitudes**
+   (crowd, army, soldiers, knights, procession...), porque el crítico visual vio "multitudes clónicas y recargadas".
+3. **Repetición** (`imaxes.repetida`, ronda 3): la imagen no puede parecerse de más a ninguna de las 4 anteriores del
+   episodio (correlación de la imagen en grises desenfocada a 48x27 > 0,6, o Jaccard de las palabras de la descripción
+   de Florence-2 > 0,5). En las 24 imágenes de la ronda 2 el p95 de la correlación era 0,50 y el máximo 0,67.
+
+**Coherencia visual (ronda 3).** El crítico visual vio una "toma repetida" (era un plano de 18,9 s que caía en dos
+fotogramas de la hoja) y una paleta que saltaba de pictórica a saturada y a sepia. Cambios: (a) ningún plano dura más
+de 12,5 s (`PLANO_MAX`: los largos se parten en varios planos con imágenes distintas); (b) un único estilo al principio
+del prompt ("muted oil painting, soft overcast light, grey-green and slate palette...") y el código quita las palabras
+de color del LLM (golden, amber, blood-orange, sepia...); (c) `imaxes.graduar` iguala el color de todas las imágenes
+del episodio (transferencia de media y desviación por canal en YCbCr hacia la media del episodio, saturación 0,85);
+(d) el prompt de escenas pide como mucho tres o cuatro figuras, nada de multitudes ni ejércitos, y **solo lo que se
+narra** (en la ronda 2 inventaba rendiciones, heridos, tronos y tesoros); (e) la hoja de contactos tiene fotogramas de
+960x540 (3840x1620) para ver los artefactos finos.
 
 **Calibración con las 15 imágenes de la ronda 1** (`probas/revisor_ronda1.jsonl`, versión 3): marca 9 de 15, entre ellas la del cierre con cuatro
 manos ("man sen corpo"), la aldea de 1:15 (tejados), la multitud con cruces, el dormitorio moderno, el reloj de la torre
@@ -94,16 +108,40 @@ pesos dos veces en RAM (mmap + reempaquetado), que provocó un OOM al compartir 
 | Sincronía subtítulos-voz | Marcas de tiempo por palabra del ASR contra el SRT (±0,5 s) | ≥ 95 % |
 | Sincronía A/V | Duración decodificada de vídeo y audio | ≤ 0,1 s |
 | Duración | Duración del vídeo | 180-300 s en esta muestra |
-| Lengua | LanguageTool gl-ES; los nombres del dossier no cuentan como error ortográfico | ≤ 2 avisos [S] |
-| H1-léxico (`ancoraxe.py`) | Nombres propios y cantidades que no están en el dossier ni en la ficha del tema | 0 sin anclar |
+| **Lengua (bloqueante)** | LanguageTool gl-ES con hunspell gallego; los nombres del dossier no cuentan como error ortográfico; lista cerrada y documentada de falsos positivos de estilo (`qa.FALSOS_POSITIVOS_LT`: "ceo" = firmamento, "Esta noite + verbo"), **nunca de hunspell** | 0 avisos |
+| **H1-léxico (bloqueante)** (`ancoraxe.py`) | Nombres propios y cantidades que no están en el dossier ni en la ficha del tema | 0 sin anclar |
+| **Veracidad (bloqueante)** (`veracidade.py`) | Por frase: NLI multilingüe (mDeBERTa-v3, MIT) + coincidencia léxica con los hechos del dossier + reglas deterministas de desenlace, nombres y tiempo largo. Gancho: todas las frases apoyadas | 0 frases sin apoyo |
 | Estilo | Sin cifras, signos que la voz no lee, preguntas ni palabras vetadas; aviso y fórmula literales | todo cumplido |
 | **Imágenes** | `revisor.py` sobre la imagen escogida de cada plano | todas aprobadas |
 | Sonoridad | `ebur128` sobre el MP4 | -18 a -16 LUFS (A2 del plan) |
 | Peso y formato | MB, resolución | ≤ 50 MB, 1920x1080 |
 
-Lo que **no** controla: la verdad de lo que el texto dice sin nombres ni cifras (una causa inventada, un sujeto
-cambiado: sería H2, un juez LLM, sin implementar), la naturalidad del gallego más allá de LanguageTool, caras
-deformes o ropas anacrónicas que Florence-2 no nombre.
+**Puertas bloqueantes (ronda 3).** Lengua, H1, veracidad y estilo se comprueban **en cada bloque del guion** y otra
+vez sobre el guion completo **antes de la voz**. Un bloque que no pasa en tres intentos del LLM (cada reintento lleva
+los problemas concretos: "la palabra «fortaleiras» no existe", "esta frase no se puede afirmar con el dossier") **no se
+usa**: el gancho y los párrafos pasan a ser el **texto literal de los hechos del dossier**, la invitación un texto fijo
+del canal y el resumen se omite. Si aun así el guion completo no pasa, el pipeline sale con código 4 **sin generar
+vídeo**. Si falla cualquier puerta después del render (WER, sonoridad...), el MP4 se queda en el directorio de trabajo
+como `rexeitado.mp4` y **no se copia a la salida** (y se borra de la salida un `ejemplo.mp4` viejo): el pipeline solo
+publica un vídeo con todas las puertas en verde.
+
+**La puerta de veracidad (`veracidade.py`)**, por frase del guion (premisa = un hecho o un par de hechos del dossier):
+- apoyada = NLI de implicación ≥ 0,6 **y** coincidencia léxica ≥ 0,5 (0,6 en el gancho) con esa misma premisa, o coincidencia ≥ 0,8, o la
+  frase está literalmente en un hecho;
+- **desenlace** (vencer, gañar, triunfo, vitoria, derrota, perder, render...): la **misma forma** de la palabra tiene que
+  estar en un hecho ("derrotou" no se ancla en "foi derrotada") y el NLI de ese hecho ≥ 0,7 con contradicción < 0,5.
+  "A irmandade venceu" (ronda 2) no pasa nunca: el dossier dice "a irmandade foi derrotada";
+- gancho: todas las frases apoyadas; relato: las frases con nombre propio, tiempo largo (séculos, nunca...) o desenlace
+  apoyadas, y el párrafo tiene que contar su hecho. Las frases de ambiente sin nombres ni desenlace pasan.
+- Calibración en `probas/veracidade_calibracion.md`: rechaza las 6 frases falsas o inventadas del gancho de la ronda 2,
+  "As chaves da Rocha Forte caeron", "o lume ardeu durante séculos" y "a irmandade derrotou os señores"; acepta los 23
+  hechos del dossier. El NLI solo **no sirve** en gallego (dice "implicación 0,92" a "a irmandade venceu" y
+  "contradicción 0,87" a una frase de lluvia): por eso decide junto con la coincidencia léxica y las reglas.
+
+Lo que **no** controla: una frase falsa construida solo con palabras del dossier puede pasar (la coincidencia léxica
+no entiende quién hace qué fuera de los desenlaces); una causa inventada en una frase de ambiente ("aproveitando a
+chuvia") tampoco se ve; la naturalidad del gallego más allá de LanguageTool; caras deformes o ropas anacrónicas que
+Florence-2 no nombre.
 
 ## Instalación (CPU)
 

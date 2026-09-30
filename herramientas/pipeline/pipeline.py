@@ -229,6 +229,7 @@ def sen_repeticions(t, previo):
 
 
 VER = {}
+MAX_TOKENS_BLOQUE = {'bloque_gancho': 200, 'bloque_resumo': 180, 'bloque_invitacion': 150, 'bloque_parrafo': 260}
 INVITACION_FIXA = ('Acomódate, apaga a luz e respira amodo. Non tes que lembrar nada do que escoites: '
                    'deixa que a historia pase coma a chuvia na xanela.')
 
@@ -283,29 +284,60 @@ def problemas_bloque(t, tema, min_frases=2, previo='', modo=None, feito=None, de
     return p
 
 
-def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, reserva=None, **vars):
+def salvar(textos, tm, previo, modo, feito, feitos_bloque, antes=False):
+    """Reserva mixta: das versións do LLM quédanse só as frases que pasan TODAS as portas unha a unha (a versión con
+    máis frases boas); os feitos do bloque que esas frases non contan engádense co seu texto literal do dossier.
+    O resultado vólvese comprobar enteiro; se non pasa, devolve None (e vai a reserva literal)."""
+    import veracidade
+    mellor = []
+    for t in textos:
+        boas = []
+        for f in partir(t):
+            if not problemas_bloque(f['texto'], tm, min_frases=1, previo='\n\n'.join([previo] + boas), modo=modo):
+                boas.append(f['texto'])
+        if len(boas) > len(mellor):
+            mellor = boas
+    faltan = [x for x in (feitos_bloque or []) if not any(veracidade.cobertura(b, x) >= 0.5 for b in mellor)]
+    if not mellor:
+        return None
+    t = ' '.join((faltan + mellor) if antes else (mellor + faltan))
+    return None if problemas_bloque(t, tm, min_frases=1, previo=previo, modo=modo, feito=feito) else t
+
+
+def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, reserva=None, feitos_bloque=None,
+           **vars):
     """Unha chamada ao LLM para un bloque, con validación e ata dous reintentos cos problemas atopados.
-    Se despois dos reintentos o bloque aínda ten problemas (lingua, H1, veracidade...), NON se usa: vai a
-    `reserva` (o texto literal dos feitos do dossier, un texto fixo do canal, ou nada)."""
-    mellor, hist = None, []
+    Se despois dos reintentos o bloque aínda ten problemas (lingua, H1, veracidade...), o texto do LLM NON se usa
+    tal cal: primeiro a reserva mixta (`salvar`: só as frases do LLM que pasan, máis os feitos literais que falten)
+    e, se tampouco pasa, `reserva` (o texto literal dos feitos do dossier, un texto fixo do canal, ou nada)."""
+    mellor, hist, textos = None, [], []
     extra = ''
     for k in range(3):
         v = dict(vars)
         if extra:   # o reintento leva os problemas ao final do prompt (cambia o hash: nova chamada)
             clave = 'feito_txt' if 'feito_txt' in v else ('feitos' if 'feitos' in v else ('tema' if 'tema' in v else list(v)[0]))
             v[clave] = v[clave] + extra
-        t, meta = llm.complete(nome, backend, **v)
+        # tope de tokens por bloque (ronda 3): sen el, o LLM copiaba o dossier enteiro no resumo (600 tokens, 6 min)
+        t, meta = llm.complete(nome, backend, max_tokens=MAX_TOKENS_BLOQUE.get(nome), **v)
         info['llm'][f'{nome}_{len([x for x in info["llm"] if x.startswith(nome)]) + 1}'] = meta
         cpu_llm(etapa, meta)
-        t = sen_repeticions(normalizar(' '.join(limpar_saida_llm(t).split())), previo)
+        t = [x for x in limpar_saida_llm(t).split('\n\n') if x.strip()] or ['']
+        t = t[0] if nome == 'bloque_resumo' else max(t, key=lambda x: len(x.split()))   # un só parágrafo
+        t = sen_repeticions(normalizar(' '.join(t.split())), previo)
+        t = re.sub(r'([.!?…])[^.!?…]*$', r'\1', t) if re.search(r'[.!?…]', t) else t    # sen frase cortada ao final
         pr = problemas_bloque(t, tm, previo=previo, modo=modo, feito=feito)
-        hist.append(pr)
+        hist.append(pr); textos.append(t)
         if mellor is None or len(pr) < len(mellor[0]):
             mellor = (pr, t)
         if not pr:
             break
         extra = '\n\n(ATENCIÓN: a versión anterior tiña estes problemas, evítaos: ' + ' '.join(pr) + ')'
     r = {'bloque': nome, 'intentos': len(hist), 'problemas_por_intento': hist, 'texto_llm': mellor[1]}
+    if mellor[0] and modo and feitos_bloque:
+        t = salvar(textos, tm, previo, modo, feito, feitos_bloque, antes=True)
+        if t:
+            r['reserva'] = 'mixta (frases do LLM que pasan + feitos literais)'
+            return t, r
     if mellor[0]:
         t = reserva if reserva is not None else ''
         r['reserva'] = 'omitido' if not t else 'literal'
@@ -338,7 +370,8 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
     ig = ig[:3] or [0, 1]
     info['seleccion_gancho'] = {'resposta_llm': sg, 'usados': [i + 1 for i in ig]}
     gancho, r = bloque('bloque_gancho', tema, backend, info, etapa, modo='gancho',
-                       reserva=' '.join(literal(fs[i]) for i in ig), tema=tema['tema'],
+                       reserva=' '.join(literal(fs[i]) for i in ig), feitos_bloque=[literal(fs[i]) for i in ig],
+                       tema=tema['tema'],
                        feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
     resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, modo='relato', reserva='',
                        tema=tema['tema'], fragmento=tema['fragmento'], dossier=dossier); rex.append(r)
@@ -365,7 +398,7 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
         ton = TONS[min(k, len(TONS) - 1)]
         ult = ' '.join(f['texto'] for f in partir(anterior)[-2:])
         p, r = bloque('bloque_parrafo', tema, backend, info, etapa, previo='\n\n'.join([gancho, resumo, invit] + pars),
-                      modo='relato', feito=literal(fs[i]), reserva=literal(fs[i]),
+                      modo='relato', feito=literal(fs[i]), reserva=literal(fs[i]), feitos_bloque=[literal(fs[i])],
                       tema=tema['tema'], feito_txt=fs[i], anterior=ult, ton=ton)
         r['feito'] = i + 1; rex.append(r)
         pars.append(p); anterior = p

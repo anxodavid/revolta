@@ -34,7 +34,7 @@ import re
 import unicodedata
 
 MODELO = 'MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7'
-E_MIN, COB_NLI, COB_MIN = 0.6, 0.5, 0.8
+E_MIN, COB_NLI, COB_NLI_GANCHO, COB_MIN = 0.6, 0.5, 0.6, 0.8
 
 # léxico de desenlace (raíces sen acentos). Se a frase ten unha destas raíces, o dossier ten que tela.
 DESENLACE = ['venc', 'venceu', 'gañ', 'gana', 'triunf', 'vitori', 'vitorio', 'derrot', 'fracas', 'rendi', 'rendeu',
@@ -119,8 +119,10 @@ class Verificador:
             med.append({'apoio': [i + 1 for i in ap], 'E': e, 'cob': cobertura(f, txt)})
         # apoiada: implicación do NLI E coincidencia léxica mínima co mesmo feito, ou coincidencia léxica alta
         # (o NLI só non abonda: cun par de feitos como premisa di "implicación" a case todo, ver calibración)
-        ok_ap = [m for m in med if (m['E'] >= E_MIN and m['cob'] >= COB_NLI) or m['cob'] >= COB_MIN]
-        mellor = max(ok_ap or med, key=lambda m: (m['E'] >= E_MIN and m['cob'] >= COB_NLI, m['cob'] >= COB_MIN, m['E'] + m['cob']))
+        # no gancho (o que máis se escoita e se comparte) a coincidencia mínima co NLI é máis alta: 0,6
+        cn = COB_NLI_GANCHO if modo == 'gancho' else COB_NLI
+        ok_ap = [m for m in med if (m['E'] >= E_MIN and m['cob'] >= cn) or m['cob'] >= COB_MIN]
+        mellor = max(ok_ap or med, key=lambda m: (m['E'] >= E_MIN and m['cob'] >= cn, m['cob'] >= COB_MIN, m['E'] + m['cob']))
         apoiada = bool(ok_ap)
         cmax, ic = max(((s['C'], i) for i, s in sc), key=lambda x: x[0])
         r = {'frase': f, 'E': mellor['E'], 'cobertura': mellor['cob'], 'apoio': mellor['apoio'], 'C_max': cmax,
