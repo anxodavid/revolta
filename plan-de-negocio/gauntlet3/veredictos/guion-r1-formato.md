@@ -143,4 +143,132 @@ Hay que adelantar también la invitación de la l. 79 ("non tes que lembrar nada
 escena (≈ 10:00, donde empieza la fase de calma). Así el permiso para dormirse llega dentro de la ventana de §2
 (minutos 8-10) y no en el 12.
 
-*(Mejoras 4 y siguientes: en el bloque siguiente de este fichero.)*
+### 4. El cierre "Chove na lousa": sin datos y el doble de largo (l. 125-131)
+
+- **Problema.** Los últimos 2:30 traen:
+  - un desmentido, "non aparece no Quixote de Cervantes" (l. 125, 23:30);
+  - una nota institucional sobre la exposición, "en dous mil vinte, polo Día Internacional da Muller", con "seis
+    procesos" (l. 127, 24:14);
+  - una recapitulación con "o gato que ninguén deu collido": la meiga-gato de noche, a 45 s del final;
+  - un solo párrafo de calma (l. 129), que además empieza y acaba con una definición.
+
+  En un vídeo para dormir, los últimos 2-3 min tienen que ser lo más previsible: nada nuevo, solo imágenes que vuelven.
+  Ninguna referencia sirve de modelo: RO acaba con su última historia y música, y HD pide la suscripción. Aquí se puede
+  ganar a las dos.
+- **Propuesta.**
+  - Llevar "non aparece no Quixote" al final del cap. III (≈ 9:00, todavía despiertos) o quitarlo. "habelas, hainas" se
+    queda como frase familiar y cálida.
+  - Quitar la exposición (l. 127) y sacar el gato de la recapitulación. Quedan "a parteira, as sete fontes e a lista da
+    fonte".
+  - Fundir aquí la preparación sensorial de la queimada (mejora 1).
+  - Alargar la lluvia hasta ~200-250 palabras con imágenes que ya se han oído (chuvia, lousa, orballo, brasas, escano,
+    pote, gando na corte, hórreo, sete fontes, candea). Principio de ejemplo, con frases de 8-25 palabras y sin
+    definiciones:
+
+    > Agora chove sobre as lousas do tellado da casa. É unha chuvia miúda e mansa, coma o orballo. Na lareira quedan as
+    > brasas, quentes e calmas, e o escano xa está baleiro. Na mesa, a queimada xa non arde, porque se esgotou case todo
+    > o alcohol. Na corte, o gando dorme, e no hórreo repousa o millo. Lonxe, as sete fontes seguen correndo na
+    > escuridade. A casa descansa baixo a chuvia, e xa non tes que lembrar nada. E agora, amodo, xa se pode apagar a
+    > candea.
+    >
+    > Boas noites.
+
+### 5. Duración: ≈ 500 palabras netas más, sobre todo al final (el guion está en el suelo)
+
+- **Cifras.** Son 25,9 min con el modelo B (voz medida): 0,9 min por encima del mínimo y 4 min por debajo del objetivo.
+  Las mejoras 2, 3, 4 y 6 quitan ~200 palabras de cifras y definiciones, casi todas en la zona lenta (≈ −1,5 min).
+  Hay que apuntar a **≈ 4.000 palabras** (≈ 30 min con B). El modelo A diría ~40 min, así que hay que confirmarlo con un
+  render real de voz antes de cerrar la ronda 2. El rango de 3.300-3.900 palabras de §2 se calculó a 131 palabras/min;
+  la curva medida va de 182 a 113 (media ≈ 135) y conviene recalcularlo con ella. Lo decide el orquestador.
+- **Dónde añadir.**
+  - **Marta de Quián (Lalín, 1611)** en el cap. I, antes del minuto 10 (F139-F143; las notas, §7.1, ya ven sitio con
+    B). Es el picante que pidió el promotor y no tiene violencia. Queda fuera la "cabeza de muerto".
+
+    > En mil seiscentos once, na parroquia de Palio, en Lalín, a Real Audiencia procesou a Marta de Quián, que tiña fama
+    > de meiga feiticeira. Unha veciña queixábase de que o leite das súas vacas se lle derramaba. Marta díxolle que
+    > faría unha menciña para que as meigas non llo derramasen nin llo levasen. Outra testemuña declarou que Marta lle
+    > dixera que, por catro ou cinco reais, faría que unha moza deixase de mirar para un home. Para iso pedía terra da
+    > pegada que el deixaba ao pisar, e cabelos da moza, dos que quedaban no peite.
+
+  - **El cierre largo** (mejora 4): +150-200 palabras a ~115 palabras/min, ≈ 1,5 min.
+  - **San Xoán en orden estricto "desde a tarde ata o amencer"**, como promete la l. 79. Ahora va y viene: la l. 85
+    vuelve a la víspera, la l. 93 salta del amanecer a la moura de noche y la l. 95 vuelve al amanecer y acaba en A
+    Lanzada. Orden propuesto:
+    - tarde: la leña y las hierbas que se cogen la víspera;
+    - noche: cacharelas, sardiñas, saltos, el ganado ahumado, las hierbas al orballo y la moura de la fonte;
+    - amanecer: flor da auga, lavarse la cara, el sol que baila y los ramos en las puertas.
+
+    Si el dossier da para más, se añaden una o dos costumbres suaves. El orden previsible también ayuda a dormir.
+  - Si el render sigue por debajo de 28 min, se completa con la cola de lluvia (§8.6, la decide el promotor) o con más
+    pausa en la curva, nunca con relleno.
+
+### 6. Feijoo sin calendario (l. 99-111, 16:48-20:54)
+
+- **Problema.** Hay 9 años y 3 fechas con día y mes en 508 palabras, dentro de la zona de dormir: unas 3 fechas por
+  minuto. Es el capítulo con más números de todo el guion, donde las referencias ponen 0,2-0,5 años por cada 100
+  palabras. La guía de estilo del canal en el Gauntlet 2 (prompt del guion, commit 6bacfd9) pedía "como moito unha data
+  absoluta por minuto, sempre redondeada". Las ideas sí sirven, porque son suaves, algo graciosas y cierran bien el
+  tema: las fábulas que van de la aldea a los libros y vuelven, el labrador romano, la vieja que quería la fama por la
+  limosna, las brujas más rápidas que las águilas que no alcanzan un burro y el vuelo soñado. Lo que sobra es el
+  calendario.
+- **Qué quitar o cambiar.**
+  - l. 99: fuera "O oito de outubro de dous mil vinte e seis fai trescentos cincuenta anos que naceu". En dos semanas
+    deja viejo un vídeo que debe durar años (notas, §7.9). El aniversario va en la descripción y en el post de
+    comunidad. La fecha de nacimiento se queda en "en mil seiscentos setenta e seis".
+  - l. 101: fuera "desde mil setecentos nove", "oito volumes publicados entre..." y "O terceiro tomo, de mil setecentos
+    vinte e nove, dedicoullo ao abade e ao convento de Samos", que no aporta nada al relato.
+  - l. 103: "No segundo tomo, de mil setecentos vinte e oito, hai un discurso..." pasa a ser:
+
+    > Nun discurso sobre a maxia, Feijoo escribiu que había feiticeiros, pero non tantos como cría o vulgo.
+
+  - l. 105: dice "Feijoo contou cinco causas" y luego da tres. O se dan las cinco, o se dice "Feijoo buscou as causas de
+    que houbese tantas fábulas de bruxería".
+  - l. 111: la frase "Xa no primeiro tomo, en mil setecentos vinte e seis, defendera..." pasa a "Defendeu tamén que as
+    mulleres tiñan a mesma capacidade de entendemento ca os homes". La muerte, sin fecha:
+
+    > Foi sempre de saúde delicada, con catarros frecuentes, e aínda así chegou a vello e morreu en Oviedo.
+
+- **Opcional.**
+  - l. 109: "a Hueste, que nalgúns lugares din que é de bruxas" trae de vuelta la procesión nocturna a la zona de dormir,
+    aunque sea para desmentirla, y "Hueste" es una palabra castellana que la voz puede leer mal. Mejor quitarla.
+  - l. 111: "o galego e o portugués eran unha mesma lingua" es verdad, pero en Galiza es un tema de polémica. Si se busca
+    calma, basta con "e non un dialecto do castelán".
+
+### 7. El cap. II y las transiciones habladas (l. 33-45 y la primera frase de cada capítulo)
+
+- **l. 33 (3:48).** Abre con jerga ("delito de foro mixto") justo cuando terminan las primeras historias. Hay que abrir
+  con el lugar concreto, y poner una sola vez, en la l. 35, las cantidades que salen del gancho:
+
+  > En Santiago, onde se levantou o Hotel Compostela, estivo a última sede da Inquisición, a Casa Grande de Calo,
+  > derrubada en mil novecentos trece. Pero a Inquisición non era a única que xulgaba as meigas: tamén as podían xulgar
+  > a xustiza civil e a da Igrexa.
+
+  Sobra también la fecha de 1574 de esta línea, que ya da el gancho.
+- **l. 43 (Benita Montero).** Conviene invertir el orden: la baraja encontrada prepara el golpe y la baraja al cuello
+  lo remata.
+
+  > Aínda en mil oitocentos vinte e seis, en Santiago de Compostela, a Real Audiencia condenou a adiviña Benita Montero.
+  > Na súa casa atoparan unha baralla vella, un rosario e un escapulario cunha figa de acibeche. A pena foi saír do
+  > cárcere emplumada e montada nunha besta, un día de mercado, coa baralla colgada do pescozo.
+
+- **Transiciones.** Los títulos `##` no se narran, así que quien escucha con los ojos cerrados solo tiene la primera
+  frase de cada capítulo. RO resuelve esto diciendo el título en voz alta.
+  - Aperturas que funcionan: l. 49 ("E por fin, a lista de Campo Lameiro"), l. 59 ("deixamos atrás os tribunais e as
+    testemuñas") y l. 79.
+  - Aperturas que no funcionan: l. 63 (una etimología; con la mejora 2 pasa al gancho), l. 99 (una fecha de nacimiento)
+    y l. 115 (una receta).
+  - Propuesta: que la primera frase sea una señal hablada y tranquila.
+    - Para Feijoo:
+
+      > Deixamos a noite de san Xoán, e imos agora cun frade que escribiu contra as fábulas de bruxería.
+
+    - Para el capítulo nuevo de la mejora 1:
+
+      > E agora, o conxuro do barco: como unhas palabras escritas en Vigo en mil novecentos sesenta e sete chegaron a
+      > parecer tan antigas.
+
+    - Para el cap. IV basta con abrir con la escena de la cocina de la mejora 3. Los tipos de meigas, la "meiga
+      feiticeira" y las frases en galego de los procesos (l. 65) encajan mejor al final del cap. III, que habla de los
+      papeles.
+
+*(Mejoras 8 y siguientes, qué conservar y señales para el crítico B: en el bloque siguiente de este fichero.)*
