@@ -200,9 +200,9 @@ lenta y menos activada de las 40). Viven en `REFS_DIR`, que `instalar.sh brais` 
 - **Monótonas en cada paso**: arousal, F0 sd, F0 rango, síl/s y pal/min (también la F0 media, el nivel y el jitter).
   Para situarlo: el arousal del gancho está en el cuartil alto de las 40 grabaciones de Brais (mediana 0,58) y el del
   final en el de sus grabaciones más calmas (0,42-0,44).
-- **WER ≤ 0,054 en todos los puntos.** De los 9 errores, 7 son del ASR y no de la voz: Whisper escribe "mil
-  seiscentos dezasete" como "16 17" (cuenta como 3-4 errores). El único error de pronunciación visible es "Non o é"
-  → "No Noé" en el punto 280.
+- **WER ≤ 0,054 en todos los puntos.** De los 9 errores, 6 son del ASR y no de la voz: Whisper escribe "mil
+  seiscentos dezasete" como "16 17" (3 errores cada vez, en los puntos 280 y 1800). Los otros 3 son el único fallo de
+  pronunciación visible: "Non o é" → "No Noé" en el punto 280 (en los demás puntos se entiende bien).
 - Sin saturación (pico máximo 0,65, 0 muestras ≥ 0,99) ni duraciones raras (frases de 3,5-9,5 s, crecen con la
   escala). La voz del final sale más limpia que la del gancho (HNR +2,8 dB, jitter −0,8).
 - La **valencia** también baja (0,45 → 0,39): el modelo lee la voz lenta y grave como algo más "apagada". No era un
