@@ -31,4 +31,5 @@ Respuestas a las decisiones D1-D6 del §0.2 de `plan-de-negocio.md`, tomadas tra
 
 Contexto y reglas del Gauntlet 3: `plan-de-negocio/gauntlet3/contexto.md`.
 | D13 | Ambiente sonoro (tras oír la muestra, 30-09-2026) | **Nada de ruido constante.** La lluvia solo cuando la escena tiene lluvia; el crepitar solo cuando hay fuego; **tramos de voz limpia**. "En cualquier caso, que el Gauntlet mida la mejor opción." |
+| D14 | Ambiente sonoro (tras la muestra A/B, 30-09-2026) | De los tres fondos, **el mejor es el tercero (lluvia nueva + lareira)**, pero **no debe volverse monótono ni cansino**: adaptarlo a la escena. **Si la escena es de un gentío, murmullo de voces ininteligibles.** Que el Gauntlet mida la mejor opción (D13). |
 

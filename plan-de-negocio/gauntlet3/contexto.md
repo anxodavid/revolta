@@ -134,3 +134,9 @@ el veredicto pasa a PIERDE):
    caldero, escoba, autos de fe, capirotes, llamas sobre personas, partos explícitos.
 6. **Propuesta abierta para el promotor (no decidida):** una cola de 30-60 min de lluvia sobre lousa con imágenes ya
    generadas y fundidos lentos, porque los competidores para dormir duran 1-2 h.
+- **D14 (30-09-2026, tras la muestra A/B de fondos):** "De los sonidos de fondo el tercero es el mejor, pero me preocupa
+  que se haga excesivamente monótono y cansino, creo que hay que adaptarlo a la escena, de hecho si la escena es de un
+  gentío hay que meter un fondo de ruido de voces ininteligibles." → Pieza SON: catálogo de ambientes por escena
+  (lluvia, lareira, mar, viento, gentío con murmullo ininteligible, noche, fuente o regato, aldea, campanas...), con
+  variación interna y eventos suaves cada vez más escasos hacia el final; voz limpia en los planos sin ambiente.
+
