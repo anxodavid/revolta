@@ -151,3 +151,30 @@ Conclusión: **el modelo no tiene el concepto** del hórreo ni de la rueda maciz
 biblia pide no ponerlos como sujeto (mostrar el entorno, el yugo de los bueyes, el carro de lejos). Para tenerlos de
 verdad haría falta un LoRA entrenado con fotos con licencia o fotos propias [S]; queda como problema abierto.
 Tiempo: 31-38 s por imagen (sin nadie más usando la CPU fuera del candado; en la comparativa de la mañana, 47 s).
+
+## Hoja de prueba r1 (16 planos, `plan-de-negocio/gauntlet3/visual/r1/`)
+
+Prompts de Claude según la biblia; todo lo demás automático (generación, puerta, regeneración, gradación, hoja).
+24,4 min de reloj con el candado (tras ~1 h de cola: el candado estuvo ocupado por el guion, la voz y el sonido).
+
+- **Tiempos**: 33,2 s por imagen de mediana (Lightning 4 pasos, 1344x768) + 17,8 s de revisión (MediaPipe +
+  Florence-2 + CLIP). 28 imágenes para 16 planos (1,75 por plano). Extrapolación a ~150 planos: ~260 imágenes x 51 s
+  ≈ **3,7 h de reloj** con la máquina para nosotros [S].
+- **Rechazos por motivo** (de 12 rechazos): arquetipo repetido 5, objetos modernos 3 (la linterna de los soportales
+  como farola), mano sin cuerpo 2, interior moderno 2, tejados naranjas 1, paisaje seco (CLIP) 1. 10 planos a la
+  primera, 6 tras regenerar, 0 sin aprobar; 2 terminaron en la **reserva de la fase**.
+- **Fallo de escala en los topes de arquetipos**: el tope se calcula con el número de planos de la lista
+  (`ceil(0,06 x 16) = 1` "persona junto al fuego"), así que en una hoja de 16 el plano 3 (partera junto a la
+  lareira) agotó el tope y los planos 12 (anciana dormitando junto al fuego) y 15 (monje con vela) acabaron en la
+  reserva (río con puente; carballeira). En el episodio (~150 planos) el tope sería 9. Para muestras hay que pasar el
+  número de planos del episodio (`imaxes.xerar(..., n_total=150)`).
+- **Fallo corregido durante la hoja**: la regla "man sen corpo" del Gauntlet 2 rechazaba todo primer plano de manos
+  (no hay cuerpo que detectar). Ahora, sin cuerpos en la imagen, una mano de más de 0,12 del ancho es un detalle;
+  siguen fallando las manos pequeñas sueltas y más de dos manos sin cuerpo.
+- **`negativo` demasiado cerca del sujeto**: con `negativo: cauldron` en la queimada, CLIP rechazaba el cuenco con
+  llamas (es "casi un caldero"). Regla para la biblia: el negativo nombra lo que NO debe parecerse al sujeto, no una
+  variante del propio sujeto.
+- **Lo que se le escapó a la puerta** (visto por Claude en la hoja; no es un juicio estético): farolas de hierro en la
+  calle de los soportales (plano 2, a la cuarta; Florence la describió sin "street lamp") y **luces de una ciudad**
+  en el valle de la noche de San Xoán (plano 13). Candidatas para la lista de Florence y para un par de CLIP
+  ("city lights at night" / "dark countryside at night") en la próxima ronda.
