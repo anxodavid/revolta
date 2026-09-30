@@ -139,4 +139,7 @@ el veredicto pasa a PIERDE):
   gentío hay que meter un fondo de ruido de voces ininteligibles." → Pieza SON: catálogo de ambientes por escena
   (lluvia, lareira, mar, viento, gentío con murmullo ininteligible, noche, fuente o regato, aldea, campanas...), con
   variación interna y eventos suaves cada vez más escasos hacia el final; voz limpia en los planos sin ambiente.
+- **D15 y D16 (30-09-2026), para después de este vídeo:** imágenes de referencia o semilla para lo que SDXL no conoce
+  (carro de bois, hórreo) y animación de las imágenes para que las personas se muevan. No entran en la producción en
+  curso; ver `docs/HANDOFF.md`.
 
