@@ -1,7 +1,13 @@
 # Pieza VOZ (Gauntlet 3): voz en embudo, del gancho al tono de dormir
 
-Constructor: agente de voz (Claude), 30-09-2026. **Estado: en curso** (Cotovía hecho; referencias, controles y curva
-pendientes).
+Constructor: agente de voz (Claude), 30-09-2026. **Estado: terminado** (Cotovía, referencias, controles, curva
+calibrada, muestra de escucha). Aprendizajes: [`../aprendizajes/voz.md`](../aprendizajes/voz.md).
+
+**Resumen.** La voz del vídeo largo baja ahora del gancho al tono de dormir en los cinco nodos de la curva de forma
+monótona en todas las medidas pedidas: arousal 0,643 → 0,432, desviación de la F0 4,76 → 2,60 semitonos, velocidad
+7,56 → 5,19 sílabas/s (182 → 113 palabras/min con las pausas), con WER frase a frase ≤ 0,054 en todos los puntos.
+Cambios: Cotovía de Nós en modo `-p1` por defecto, dos referencias de estilo (viva y calma) interpoladas por frase, y
+control de F0, energía, `beta` y `embedding_scale` por frase en `voz_st2.py`, con los valores en `curva.py`.
 
 **Qué es automático y qué hizo Claude.** Las voces las genera Nos_StyleTTS2-Brais-GL (Proxecto Nós/USC) en local;
 las medidas son automáticas (Praat vía parselmouth, Whisper galego de Nós, modelo de emoción de audEERING). Las
@@ -145,7 +151,62 @@ Lectura:
 
 ## 4. Curva calibrada y medidas por punto
 
-(pendiente)
+**Método.** Pasaje fijo de 7 frases (111 palabras) del tema elegido, "As meigas de verdade" (el conxuro de 1967, la
+parteira de Vilalba según una testigo, la meiga como curandeira, la noche de San Xoán, "Chove na lousa"; escritas por
+Claude a partir de `tema/investigacion.md`, `scripts/textos.py`). Se renderiza igual en los 5 nodos de la curva
+(`curva.en(pal, 3600)` con pal = 0, 280, 950, 1800 y 3600: gancho, fin del gancho, fin de la transición, mitad y final
+de un guion de 3.600 palabras), con las pausas y la ganancia que pone `longo.py` (`scripts/puntos.py`). Por punto:
+palabras/min con pausas (como el QA de `longo.py`), sílabas/s de la fala, F0 (media, desviación y rango p5-p95 en
+semitonos), energía (LUFS del pasaje con la ganancia, dinámica), arousal/valencia (audEERING, solo evaluación
+interna), WER frase a frase (Whisper galego de Nós) y controles de voz cascada y saturación (HNR, jitter, % de F0
+< 75 Hz, pico). Seis candidatas en dos rondas (`datos/candidatas/`, `datos/curva-ronda1.json` y `curva-ronda2.json`,
+tabla con `scripts/analizar_curva.py`).
+
+**Rondas.** En la 1.ª (sin WER) las cuatro candidatas bajaban de forma monótona; la de `curva.py` tal como estaba
+(valores provisionales del orquestador) solo estrechaba la F0 3,6 st y las demás 6,7-7,3 st. La 2.ª (con WER) comparó
+dos parejas de referencias con los mismos valores: **E** (viva = media de 04078, 01372 y 00856; calma = media de 08964
+y 03720) y **F** (viva = media de 11535, 01372 y 04078; calma = 03720). Las dos cumplen; se elige **F**: más arousal en
+el gancho (0,643 frente a 0,631), menos al final (0,432 frente a 0,436), final más lento (113 frente a 118 pal/min) y
+más limpio (HNR 13,9 frente a 12,8 dB). E tiene el final más suave de timbre (alpha ratio −9,2 frente a −8,1 dB). Las
+frases de F no tienen finales ascendentes (pendiente de F0 en los últimos 400 ms: todas negativas, de −15/−35 st/s en
+el gancho a −4/−11 st/s al final), así que la pregunta de 11535 no pasa su entonación a las afirmativas.
+
+**Valores finales (`herramientas/pipeline/curva.py`)**. Nuevos: `beta` y `embedding_scale` (añadidos a `curva.VOZ`,
+así que `longo.py` los pasa a la voz). **Aviso: cambia también `escala`** (antes 1,00-1,05-1,14-1,22-1,28; el gancho
+algo más ágil y el final algo más lento). Pausas y `ganancia_db`, sin cambios.
+
+| Punto (palabra, fase) | escala | estilo | f0_rango | f0_media | enerxia | beta | emb. | pausa (s) | ganancia (dB) |
+|---|---|---|---|---|---|---|---|---|---|
+| 0 (gancho) | 0.97 | 0.0 | 1.2 | 1.02 | 1.0 | 0.8 | 1.4 | 0.45 | +0.8 |
+| 280 (fin del gancho) | 1.03 | 0.2 | 1.1 | 1.005 | 1.0 | 0.75 | 1.2 | 0.55 | +0.5 |
+| 950 (fin de la transición) | 1.14 | 0.6 | 0.95 | 0.985 | 0.98 | 0.6 | 1.0 | 0.85 | +0.0 |
+| 1800 (mitad) | 1.24 | 0.9 | 0.82 | 0.965 | 0.96 | 0.45 | 1.0 | 1.15 | -0.8 |
+| 3600 (final) | 1.3 | 1.0 | 0.76 | 0.955 | 0.95 | 0.4 | 1.0 | 1.4 | -1.5 |
+
+Referencias (`entorno.sh`): `REF_WAV` = `brais-norm-11535.wav:brais-norm-01372.wav:brais-norm-04078.wav` (vector
+medio), `REF_WAV_CALMO` = `brais-norm-03720.wav` ("O amansamento dunha fera, do vento, do mar…", la grabación más
+lenta y menos activada de las 40). Viven en `REFS_DIR`, que `instalar.sh brais` vuelve a bajar.
+
+**Medidas por punto (curva final, candidata F; automáticas):**
+
+| Punto | pal/min (con pausas) | síl/s | F0 media (Hz) | F0 sd (st) | F0 p5-p95 (st) | LUFS pasaje | arousal | WER frase a frase | HNR (dB) | jitter (%) | F0 < 75 Hz |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 182 | 7.56 | 155 | 4.76 | 16.0 | -22.7 | **0.643** | 0.000 (0) | 11.1 | 3.16 | 0.6 % |
+| 280 | 174 | 7.37 | 151 | 4.44 | 15.2 | -23.1 | **0.611** | 0.054 (6) | 11.3 | 2.94 | 0.6 % |
+| 950 | 154 | 6.95 | 146 | 3.66 | 12.4 | -24.2 | **0.568** | 0.000 (0) | 11.9 | 2.81 | 0.0 % |
+| 1800 | 138 | 6.51 | 140 | 2.88 | 9.6 | -25.5 | **0.525** | 0.027 (3) | 12.5 | 2.75 | 0.0 % |
+| 3600 | 113 | 5.19 | 135 | 2.60 | 8.3 | -26.6 | **0.432** | 0.000 (0) | 13.9 | 2.36 | 0.0 % |
+
+- **Monótonas en cada paso**: arousal, F0 sd, F0 rango, síl/s y pal/min (también la F0 media, el nivel y el jitter).
+  Para situarlo: el arousal del gancho está en el cuartil alto de las 40 grabaciones de Brais (mediana 0,58) y el del
+  final en el de sus grabaciones más calmas (0,42-0,44).
+- **WER ≤ 0,054 en todos los puntos.** De los 9 errores, 7 son del ASR y no de la voz: Whisper escribe "mil
+  seiscentos dezasete" como "16 17" (cuenta como 3-4 errores). El único error de pronunciación visible es "Non o é"
+  → "No Noé" en el punto 280.
+- Sin saturación (pico máximo 0,65, 0 muestras ≥ 0,99) ni duraciones raras (frases de 3,5-9,5 s, crecen con la
+  escala). La voz del final sale más limpia que la del gancho (HNR +2,8 dB, jitter −0,8).
+- La **valencia** también baja (0,45 → 0,39): el modelo lee la voz lenta y grave como algo más "apagada". No era un
+  objetivo; conviene que el promotor diga si el final suena triste en vez de sereno.
 
 ## 5. Muestra de escucha
 
