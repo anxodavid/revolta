@@ -178,3 +178,10 @@ Prompts de Claude según la biblia; todo lo demás automático (generación, pue
   calle de los soportales (plano 2, a la cuarta; Florence la describió sin "street lamp") y **luces de una ciudad**
   en el valle de la noche de San Xoán (plano 13). Candidatas para la lista de Florence y para un par de CLIP
   ("city lights at night" / "dark countryside at night") en la próxima ronda.
+- **Segunda pasada con los topes a escala de episodio** (`--planos-episodio 150`; solo se regeneraron los planos 12 y
+  15, el resto salió de la caché): el 12 (anciana junto al fuego) pasa a la primera; el 15 (monje con vela) vuelve a
+  la reserva, ahora por la **separación mínima** (mismo arquetipo que el 12 tres planos antes: CLIP cuenta la vela como
+  "persona junto al fuego"). Resultado final: 25 imágenes para 16 planos, 11 a la primera, 5 tras regenerar, 1 en la
+  reserva, 0 sin aprobar (`r1/porta.md`; la primera pasada, en `r1/porta_primeira_pasada_tope16.md`).
+- Entorno: en `ps`, el `flock` que TIENE el candado y los que esperan se ven igual; el que lo tiene es el padre del
+  python que está corriendo (confundí uno con un duplicado del guion).
