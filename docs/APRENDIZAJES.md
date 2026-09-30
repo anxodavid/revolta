@@ -154,3 +154,18 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   dormir** y monotonía del 11 % (A: 93 %). El murmullo de gentío con 6-12 voces de nuestra propia voz TTS es
   ininteligible para Whisper. **La lista de planos decide el ritmo del sonido:** alternar sonido en cada plano da un
   parpadeo (62 cambios cada 10 min); la QA avisa por encima de 30 cambios cada 10 min en el gancho y de 10 al dormir.
+
+## Guion (ronda 1)
+
+- **Duración:** con la curva de voz medida (182 → 119 palabras/min con pausas), 3.500 palabras dan ≈ 26 min; para
+  30 min harían falta ≈ 4.100. El comprobador rápido (0,43 s/palabra) sobrestimaba: recalibrar a ≈ 0,33 s/palabra.
+- **Escribir para que la veracidad automática vea el apoyo:** en el gancho toda frase necesita coincidencia léxica alta
+  con un hecho; las frases del narrador ("contarémolo...") fallan siempre; una mayúscula a media frase ("san Xoán",
+  "Idade Media") o un "nunca" enfático vuelven exigida una frase de ambiente.
+- **Galiza frente a Galicia:** H1 acepta las dos, pero la coincidencia léxica las ve como raíces distintas.
+- **Si una frase fusionada dispara un aviso de LanguageTool, lo más limpio es volver a la redacción del hecho del
+  dossier**, que ya pasó LT.
+- **Medir la longitud de frase por fase:** en el primer borrador las frases de dormir eran más cortas que las de la
+  transición, lo contrario del embudo.
+- **Coste de la veracidad automática:** NLI contra los 180 hechos por frase = 26 min de CPU en un guion largo;
+  limitándolo a los hechos que pueden apoyar la frase (coincidencia ≥ 0,5), 144 s con las mismas decisiones.
