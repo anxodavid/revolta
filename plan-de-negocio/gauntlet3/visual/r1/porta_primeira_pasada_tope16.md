@@ -1,6 +1,6 @@
 # Puerta de revisión de la hoja de prueba (automático)
 
-Modelo `lightning` (1344x768, 4 pasos), estilo `filme`, revisor versión 5. Generación + revisión: 4.7 min de reloj; gradación 10 s.
+Modelo `lightning` (1344x768, 4 pasos), estilo `filme`, revisor versión 5. Generación + revisión: 24.4 min de reloj; gradación 10 s.
 
 | Plano | Fase | Tipo | Intentos | Problemas de los intentos rechazados | Escogida | s generación | s revisión |
 |---|---|---|---|---|---|---|---|
@@ -15,12 +15,12 @@ Modelo `lightning` (1344x768, 4 pasos), estilo `filme`, revisor versión 5. Gene
 | 9 | calma | paisaxe | 1 | - | 0 (ok) | 33.0 | 17.1 |
 | 10 | calma | bodegon | 1 | - | 0 (ok) | 33.2 | 16.9 |
 | 11 | calma | plano_medio | 1 | - | 0 (ok) | 36.5 | 19.2 |
-| 12 | calma | contraluz | 1 | - | 0 (ok) | 44.6 | 20.1 |
+| 12 | calma | contraluz | 4 | 0: arquetipo repetido: persoa á lareira (1 xa, tope 1); 1: interior moderno, arquetipo repetido: persoa á lareira (1 xa, tope 1); 5: tellados laranxas | 3 (ok, reserva) | 31.5, 34.9, 30.5, 32.6 | 17.8, 18.7, 18.2, 19.8 |
 | 13 | durmir | paisaxe | 1 | - | 0 (ok) | 34.5 | 26.1 |
 | 14 | durmir | bodegon | 1 | - | 0 (ok) | 35.9 | 16.3 |
-| 15 | durmir | plano_medio | 3 | 0: arquetipo seguido: persoa á lareira (xa no plano 11); 1: arquetipo seguido: persoa á lareira (xa no plano 11) | 2 (ok, reserva) | 37.4, 36.6, 37.1 | 18.8, 18.6, 17.9 |
+| 15 | durmir | plano_medio | 3 | 0: arquetipo repetido: persoa á lareira (1 xa, tope 1); 1: arquetipo repetido: persoa á lareira (1 xa, tope 1) | 2 (ok, reserva) | 31.7, 37.2, 33.9 | 17.7, 17.7, 17.2 |
 | 16 | durmir | detalle | 1 | - | 0 (ok) | 36.9 | 18.7 |
 
-Imágenes generadas: 25 para 16 planos; aprobadas a la primera: 11; tras regenerar: 5; sin aprobar: 0.
-Segundos por imagen (generación): mediana 33.3, media 33.9; revisión: mediana 17.9, media 18.4.
-Rechazos por motivo: {"man sen corpo": 2, "obxectos modernos": 3, "interior moderno": 1, "paisaxe seca": 1, "arquetipo repetido": 1, "arquetipo seguido": 2}.
+Imágenes generadas: 28 para 16 planos; aprobadas a la primera: 10; tras regenerar: 6; sin aprobar: 0.
+Segundos por imagen (generación): mediana 33.2, media 33.0; revisión: mediana 17.8, media 18.3.
+Rechazos por motivo: {"man sen corpo": 2, "obxectos modernos": 3, "interior moderno": 2, "paisaxe seca": 1, "arquetipo repetido": 5, "tellados laranxas": 1}.

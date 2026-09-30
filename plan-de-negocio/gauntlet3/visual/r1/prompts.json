@@ -943,9 +943,7 @@
     "tokens": 55,
     "truncado": "",
     "seed": 2329693940,
-    "problemas": [
-     "arquetipo repetido: persoa á lareira (1 xa, tope 1)"
-    ],
+    "problemas": [],
     "descricion_florence": "The image shows an elderly woman sitting on a bench in front of a fireplace. She is wearing a beige robe and has a serious expression on her face. The fireplace is made of stone and has two lit candles on either side. There is a bowl of firewood next to the fireplace and a gray cat lying on the floor next to it. The room is dimly lit with natural light coming in from the window on the left side of the image. The overall mood of the room is cozy and peaceful.",
     "arquetipo": {
      "etiqueta": "persoa á lareira",
@@ -985,149 +983,9 @@
       0.066
      ]
     }
-   },
-   {
-    "intento": 1,
-    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, backlit shot of an old woman dozing on a wooden high-backed bench beside a low stone hearth, a grey cat asleep at her feet, warm glow of the fire, dark granite walls",
-    "tokens": 55,
-    "truncado": "",
-    "seed": 1463849395,
-    "problemas": [
-     "interior moderno",
-     "arquetipo repetido: persoa á lareira (1 xa, tope 1)"
-    ],
-    "descricion_florence": "The image shows an elderly woman sitting in front of a fireplace. She is wearing a long robe and has white hair. The fireplace is made of wood and has a mantel with a fire burning inside. There is a window on the right side of the image with white curtains. On the floor next to the fireplace, there is a gray cat sitting on a rug. The woman is looking out the window with a contemplative expression on her face. The image is taken in a dimly lit room with a wooden floor and a rug on the floor.",
-    "arquetipo": {
-     "etiqueta": "persoa á lareira",
-     "sim": 0.229
-    },
-    "iconografia_clip": {
-     "tellados laranxas (CLIP)": [
-      -0.026,
-      0.108
-     ],
-     "muros encalados (CLIP)": [
-      0.008,
-      0.089
-     ],
-     "ciprés (CLIP)": [
-      -0.024,
-      0.098
-     ],
-     "oliveiras (CLIP)": [
-      -0.013,
-      0.093
-     ],
-     "palmeiras (CLIP)": [
-      -0.004,
-      0.11
-     ],
-     "rodas de raios (CLIP)": [
-      0.016,
-      0.09
-     ],
-     "paisaxe seca (CLIP)": [
-      0.025,
-      0.077
-     ],
-     "eucaliptos (CLIP)": [
-      -0.002,
-      0.051
-     ]
-    }
-   },
-   {
-    "intento": 5,
-    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, rain falling on dark grey slate roofs of granite houses at dusk, soft blue light",
-    "tokens": 31,
-    "truncado": "",
-    "seed": 419184596,
-    "problemas": [
-     "tellados laranxas"
-    ],
-    "descricion_florence": "The image shows a row of terraced houses on a cobblestone street at night. The houses are made of stone and have black tiled roofs with chimneys. The street is lined with benches and potted plants on either side, and the windows are lit up with warm yellow lights. The sky is dark and cloudy, and there is a puddle of water on the ground in front of the houses. The overall mood of the image is peaceful and serene.",
-    "arquetipo": null,
-    "iconografia_clip": {
-     "tellados laranxas (CLIP)": [
-      -0.072,
-      0.224
-     ],
-     "muros encalados (CLIP)": [
-      -0.052,
-      0.207
-     ],
-     "ciprés (CLIP)": [
-      -0.008,
-      0.103
-     ],
-     "oliveiras (CLIP)": [
-      -0.072,
-      0.107
-     ],
-     "palmeiras (CLIP)": [
-      -0.026,
-      0.121
-     ],
-     "rodas de raios (CLIP)": [
-      0.037,
-      0.077
-     ],
-     "paisaxe seca (CLIP)": [
-      -0.03,
-      0.119
-     ],
-     "eucaliptos (CLIP)": [
-      -0.026,
-      0.026
-     ]
-    }
-   },
-   {
-    "intento": 6,
-    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, a quiet river with an old stone bridge among oak trees, warm evening light",
-    "tokens": 30,
-    "truncado": "",
-    "seed": 2575576335,
-    "problemas": [],
-    "descricion_florence": "The image is a beautiful landscape photograph of a stone bridge over a river. The bridge is arched and has three arches, each with a small arch on top. The arches are made of stone and are supported by large trees on both sides. The trees are covered in green leaves, indicating that it is autumn. The river below the bridge is calm and still, reflecting the trees and the sky above. The sky is a warm orange color, and the sun is shining through the trees, creating a golden glow. The overall mood of the image is peaceful and serene.",
-    "arquetipo": null,
-    "iconografia_clip": {
-     "tellados laranxas (CLIP)": [
-      -0.008,
-      0.086
-     ],
-     "muros encalados (CLIP)": [
-      -0.0,
-      0.083
-     ],
-     "ciprés (CLIP)": [
-      -0.011,
-      0.174
-     ],
-     "oliveiras (CLIP)": [
-      -0.099,
-      0.192
-     ],
-     "palmeiras (CLIP)": [
-      -0.073,
-      0.204
-     ],
-     "rodas de raios (CLIP)": [
-      0.004,
-      0.117
-     ],
-     "paisaxe seca (CLIP)": [
-      -0.027,
-      0.155
-     ],
-     "eucaliptos (CLIP)": [
-      -0.07,
-      0.14
-     ]
-    }
    }
   ],
-  "escollida": 3,
+  "escollida": 0,
   "ok": true
  },
  {
@@ -1251,7 +1109,7 @@
     "truncado": "",
     "seed": 2240376041,
     "problemas": [
-     "arquetipo repetido: persoa á lareira (1 xa, tope 1)"
+     "arquetipo seguido: persoa á lareira (xa no plano 11)"
     ],
     "descricion_florence": "The image shows an elderly man sitting on a stone bench in an old stone room with a large arched window on the left side. He is wearing a black robe and appears to be deep in thought. On the right side of the image, there are three lit candles placed on the bench, one on each side. The room is dimly lit, casting a soft glow on the man and the candles. The walls are made of stone and there is a small lantern on the floor next to the window. The overall atmosphere of the room is somber and contemplative.",
     "arquetipo": {
@@ -1300,7 +1158,7 @@
     "truncado": "",
     "seed": 2477746011,
     "problemas": [
-     "arquetipo repetido: persoa á lareira (1 xa, tope 1)"
+     "arquetipo seguido: persoa á lareira (xa no plano 11)"
     ],
     "descricion_florence": "The image shows a monk sitting on a window sill, holding a lit candle in his hands. He is wearing a black robe and appears to be deep in thought. On the left side of the image, there are two lanterns, one with a candle inside and the other with a lit flame. The background is a stone wall with a window on the right side. The image is taken from a low angle, with the focus on the monk and the lanterns. The lighting is dim, creating a moody atmosphere.",
     "arquetipo": {
