@@ -41,6 +41,7 @@ Rejillas en `plan-de-negocio/gauntlet3/visual/comparativa/`.
 |---|---|---|---|---|
 | (a) SDXL-Turbo, 4 pasos (Gauntlet 2) | 1024x576 | 13,7 s | **25,5** (22,2-28,3), 16 imágenes | Stability AI Community License |
 | (b) SDXL base + UNet Lightning 4 pasos | 1344x768 | 18,0 s | **47,6** (44,0-75,5), 16 imágenes (23 con las de calibración: 47,1) | OpenRAIL++-M |
+| (c) SDXL base + UNet Lightning 8 pasos, estilo `filme` | 1344x768 | 23,8 s | **82,2** (72,3-122,7), 8 imágenes (los máximos con otro agente usando CPU fuera del candado) | OpenRAIL++-M |
 
 Lo que vio Claude en las imágenes (juicio de Claude, no de una persona):
 - **El prompt pesa más que el modelo en la luz**: con los prompts nuevos (fuente de luz explícita, fase) Turbo ya da
@@ -54,6 +55,10 @@ Lo que vio Claude en las imágenes (juicio de Claude, no de una persona):
   otra forma de pedirlos (experimento de iconografía, abajo) y la puerta de CLIP.
 - Lightning mete **detalles modernos** que Turbo no: ventanas de cristal con cuarterones, una estufa de hierro en
   vez de lareira, una farola junto al cruceiro. Florence-2 (ventanas, farolas) y la lista de la puerta deben pararlos.
+- **Lightning 8 pasos frente a 4**: con la misma semilla salen las mismas composiciones con algo más de detalle fino
+  (musgo, llama), y los mismos fallos (ruedas de radios, aldea inglesa, estufa). No compensa 1,7 veces el tiempo:
+  **se elige Lightning 4 pasos** (`IMG_MODEL=lightning`, por defecto). Se borraron la UNet de 8 pasos y la UNet y el
+  VAE de Turbo (10,4 GB); `instalar.sh sdxl_turbo` los vuelve a bajar si hiciera falta.
 - "a traditional village in Galicia, Spain, stone houses" dio una aldea de piedra con tejado gris verosímil
   (1 imagen): **la palabra "Galicia, Spain" no confunde a SDXL** como supuse; se corrige la biblia (se desaconsejaba).
 

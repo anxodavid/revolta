@@ -253,7 +253,10 @@ def choiva2(dur, seed=11, calma=0.0, gotas=260.0, medianas=7.0, pingas=0.35, ref
     sos_fina = signal.butter(2, [2000, 7000], 'bandpass', fs=SR, output='sos')
     sos_final = signal.butter(2, 7500, 'lowpass', fs=SR, output='sos')
     t = np.arange(int(0.03 * SR)) / SR
-    ker_fina = (rng.standard_normal(len(t[:int(0.003 * SR)])) * np.exp(-t[:int(0.003 * SR)] / 0.0006)).astype(np.float32)
+    # seis núcleos distintos para o chuvisco: cun só núcleo todas as gotas teñen o mesmo espectro e aparecen bandas
+    # fixas (efecto de peite) por riba de 5 kHz
+    kers_fina = [(rng.standard_normal(int(0.003 * SR)) * np.exp(-t[:int(0.003 * SR)] / 0.0006)).astype(np.float32)
+                 for _ in range(6)]
     kers_med = [(np.sin(2 * np.pi * f0 * t[:int(0.02 * SR)]) * np.exp(-t[:int(0.02 * SR)] / tau)).astype(np.float32)
                 for f0, tau in ((900, 0.006), (1400, 0.005), (2100, 0.004), (3000, 0.003))]
     fase = 2 * np.pi * np.cumsum(np.linspace(1200, 2300, len(t))) / SR          # pinga: ton que sobe (burbulla)
@@ -265,7 +268,8 @@ def choiva2(dur, seed=11, calma=0.0, gotas=260.0, medianas=7.0, pingas=0.35, ref
         raf = 0.7 * raf_comun + 0.3 * _rafaga(n, rng, periodo=7.0, profundidade=prof)
         leito = signal.sosfilt(sos_leito, _rosa(n, rng)).astype(np.float32)
         leito /= _rms(leito)
-        fina = signal.sosfilt(sos_fina, signal.fftconvolve(_impulsos(n, gotas, rng, 3.0, raf), ker_fina)[:n]).astype(np.float32)
+        fina = signal.sosfilt(sos_fina, sum(signal.oaconvolve(_impulsos(n, gotas / 6, rng, 3.0, raf), k_)[:n]
+                                            for k_ in kers_fina)).astype(np.float32)
         fina *= 0.6 / _rms(fina)
         med = sum(signal.fftconvolve(_impulsos(n, medianas, rng, 2.2, raf), k_)[:n] for k_ in kers_med).astype(np.float32)
         med *= 0.45 / _rms(med)
@@ -658,7 +662,7 @@ def _toque(f, rng, dur=7.0):
         x += a * np.exp(-6.91 * tt / (t60 * k)) * (np.sin(2 * np.pi * fr * tt + rng.uniform(0, 6.3))
                                                     + 0.6 * np.sin(2 * np.pi * (fr + d) * tt + rng.uniform(0, 6.3)))
     M = int(0.01 * SR)
-    x[:M] += signal.sosfilt(signal.butter(2, [1500, 5000], 'bandpass', fs=SR, output='sos'), rng.standard_normal(M)) * 0.3
+    x[:M] += signal.sosfilt(signal.butter(2, [1500, 5000], 'bandpass', fs=SR, output='sos'), rng.standard_normal(M)) * 0.1
     return (x * np.minimum(1, tt / 0.003)).astype(np.float32)
 
 
@@ -702,11 +706,13 @@ VARIACION = {
     'vento': {'refachos': (0.5, 0.85), 'follas': (0.3, 0.8)},
     'fonte': {'caudal': (0.7, 1.4), 'chorro': (0.3, 0.9)},
     'xente': {'voces': (6, 12), 'corte': (900.0, 1500.0)},
-    'noite': {'grilos': (3, 8), 'curuxa': (0.25, 0.5)},
+    'noite': {'grilos': (2, 6), 'curuxa': (0.25, 0.5)},
     'aldea': {'paxaros': (0.6, 1.4), 'chocallo': (0.8, 2.0)},
     'campas': {'prima': (190.0, 420.0)},
 }
 TRAMO_MAX = 150.0          # s: un tramo máis longo pártese en anacos (outra semente e outros parámetros) que se funden
+PONTE_S = 20.0             # s: un oco neutro máis curto ca isto entre dous planos co mesmo son non corta o ambiente
+CAMBIOS_MAX_10MIN = 12     # máis cambios de ambiente ca isto en 10 min: aviso na QA (a lista de planos pestanexa)
 FUNDIDO = (3.0, 8.0)       # s: fundido no gancho e ao durmir (interpólase coa calma)
 TOPE_DB = (8.0, 12.0)      # dB: o ambiente nunca pasa da voz menos isto (sonoridade momentánea), gancho e durmir
 
@@ -714,6 +720,26 @@ TOPE_DB = (8.0, 12.0)      # dB: o ambiente nunca pasa da voz menos isto (sonori
 def capas(tipo):
     """'lume+noite' -> ['lume', 'noite']; None ou '' -> []."""
     return [c.strip() for c in str(tipo or '').split('+') if c.strip()]
+
+
+def tramos_de_planos(planos, ponte_s=PONTE_S):
+    """Planos [(b0, b1, son)] -> tramos [(t0, t1, tipo)]. son: tipo ('lume', 'lume+noite'...), None (plano neutro: sen
+    fonte de son na imaxe) ou 'limpa' (voz limpa pedida pola lista). Xunta os planos seguidos co mesmo son e enche os
+    ocos neutros de menos de `ponte_s` s entre dous planos co mesmo son (a choiva do lugar segue durante un inserto;
+    se non, pararía e volvería en cada plano). Un plano 'limpa' corta sempre."""
+    tr, corte = [], True
+    for b0, b1, tipo in planos:
+        if tipo == 'limpa':
+            corte = True
+            continue
+        if not tipo:
+            continue
+        if tr and tr[-1][2] == tipo and (b0 - tr[-1][1] < 0.5 or (not corte and b0 - tr[-1][1] < ponte_s)):
+            tr[-1] = (tr[-1][0], b1, tipo)
+        else:
+            tr.append((b0, b1, tipo))
+        corte = False
+    return tr
 
 
 def ambiente_escena(n, tramos, voz_lufs=-17.0, rel_db=None, calma=None, semente=0):
@@ -782,9 +808,17 @@ def ambiente_escena(n, tramos, voz_lufs=-17.0, rel_db=None, calma=None, semente=
         cs = frozenset(c for c in capas(tipo) if c in AMBIENTES)
         for s in range(int(t0), min(len(act), int(np.ceil(t1)))):
             act[s] = act[s] | cs
-    cambios = sum(1 for a, b in zip(act, act[1:]) if a != b)
+    ch = np.array([a != b for a, b in zip(act, act[1:])], float)
+    cambios = int(ch.sum())
     info['cambios'] = cambios
     info['cambios_por_10min'] = round(cambios / max(dur, 1) * 600, 1)
+    if len(ch) > 600:
+        v = np.convolve(ch, np.ones(600), 'valid')
+        info['cambios_max_en_10min'] = int(v.max())
+        if v.max() > CAMBIOS_MAX_10MIN:
+            k = int(v.argmax())
+            avisos.append(f'{int(v.max())} cambios de ambiente entre {k // 60} e {(k + 600) // 60} min (máis de '
+                          f'{CAMBIOS_MAX_10MIN}): agrupar os planos co mesmo son (guia-son.md)')
     # tramos longos sen voz limpa (aviso para quen escribe a lista de planos)
     run = 0
     for s, a in enumerate(act + [frozenset()]):

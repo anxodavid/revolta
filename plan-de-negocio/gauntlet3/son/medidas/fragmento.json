@@ -1,0 +1,209 @@
+{
+ "nota": "Medidas automáticas (DNSMOS, Whisper gl, sinal). Ningunha persoa escoitou as opcións.",
+ "opcions": {
+  "A": {
+   "dnsmos_total": {
+    "SIG": 3.569,
+    "BAK": 2.768,
+    "OVRL": 2.648,
+    "P808": 3.268,
+    "fiestras": 126
+   },
+   "dnsmos_gancho": {
+    "SIG": 3.571,
+    "BAK": 3.106,
+    "OVRL": 2.858,
+    "P808": 3.739,
+    "fiestras": 30
+   },
+   "dnsmos_medio": {
+    "SIG": 3.591,
+    "BAK": 2.88,
+    "OVRL": 2.72,
+    "P808": 3.229,
+    "fiestras": 30
+   },
+   "dnsmos_durmir": {
+    "SIG": 3.559,
+    "BAK": 2.438,
+    "OVRL": 2.448,
+    "P808": 2.955,
+    "fiestras": 40
+   },
+   "pct_voz_limpa": 0.0,
+   "picos_durmir": {
+    "segundos_con_ambiente": 55.0,
+    "mediana_lufs": -32.9,
+    "pico_400ms_sobre_fondo_db": 3.3,
+    "pico_50ms_sobre_fondo_db": 9.7,
+    "p99_50ms_sobre_fondo_db": 4.9,
+    "sustos_10db": 0
+   },
+   "picos_gancho": {
+    "segundos_con_ambiente": 39.4,
+    "mediana_lufs": -43.5,
+    "pico_400ms_sobre_fondo_db": 6.1,
+    "pico_50ms_sobre_fondo_db": 11.4,
+    "p99_50ms_sobre_fondo_db": 5.4,
+    "sustos_10db": 3
+   },
+   "variedade": {
+    "fiestras_con_ambiente": 26,
+    "variacion_espectral_db": 0.51,
+    "monotonia_pct": 100.0,
+    "desviacion_nivel_db": 4.45
+   },
+   "ambiente_baixo_voz_db_mediana": 15.9
+  },
+  "B": {
+   "dnsmos_total": {
+    "SIG": 3.592,
+    "BAK": 3.746,
+    "OVRL": 3.159,
+    "P808": 3.786,
+    "fiestras": 126
+   },
+   "dnsmos_gancho": {
+    "SIG": 3.59,
+    "BAK": 3.881,
+    "OVRL": 3.231,
+    "P808": 3.97,
+    "fiestras": 30
+   },
+   "dnsmos_medio": {
+    "SIG": 3.6,
+    "BAK": 4.148,
+    "OVRL": 3.364,
+    "P808": 3.927,
+    "fiestras": 30
+   },
+   "dnsmos_durmir": {
+    "SIG": 3.583,
+    "BAK": 3.235,
+    "OVRL": 2.888,
+    "P808": 3.496,
+    "fiestras": 40
+   },
+   "pct_voz_limpa": 64.8,
+   "picos_durmir": {
+    "segundos_con_ambiente": 35.7,
+    "mediana_lufs": -35.6,
+    "pico_400ms_sobre_fondo_db": 7.9,
+    "pico_50ms_sobre_fondo_db": 14.3,
+    "p99_50ms_sobre_fondo_db": 11.0,
+    "sustos_10db": 11
+   },
+   "picos_gancho": {
+    "segundos_con_ambiente": 15.3,
+    "mediana_lufs": -46.4,
+    "pico_400ms_sobre_fondo_db": 8.2,
+    "pico_50ms_sobre_fondo_db": 12.3,
+    "p99_50ms_sobre_fondo_db": 11.2,
+    "sustos_10db": 5
+   },
+   "variedade": {
+    "fiestras_con_ambiente": 12,
+    "variacion_espectral_db": 2.54,
+    "monotonia_pct": 44.4,
+    "desviacion_nivel_db": 5.38
+   },
+   "ambiente_baixo_voz_db_mediana": 18.8
+  },
+  "C": {
+   "dnsmos_total": {
+    "SIG": 3.57,
+    "BAK": 3.51,
+    "OVRL": 3.017,
+    "P808": 3.678,
+    "fiestras": 126
+   },
+   "dnsmos_gancho": {
+    "SIG": 3.547,
+    "BAK": 3.746,
+    "OVRL": 3.129,
+    "P808": 3.922,
+    "fiestras": 30
+   },
+   "dnsmos_medio": {
+    "SIG": 3.611,
+    "BAK": 3.854,
+    "OVRL": 3.221,
+    "P808": 3.851,
+    "fiestras": 30
+   },
+   "dnsmos_durmir": {
+    "SIG": 3.549,
+    "BAK": 3.011,
+    "OVRL": 2.736,
+    "P808": 3.378,
+    "fiestras": 40
+   },
+   "pct_voz_limpa": 17.8,
+   "picos_durmir": {
+    "segundos_con_ambiente": 45.5,
+    "mediana_lufs": -37.7,
+    "pico_400ms_sobre_fondo_db": 3.8,
+    "pico_50ms_sobre_fondo_db": 6.9,
+    "p99_50ms_sobre_fondo_db": 5.0,
+    "sustos_10db": 0
+   },
+   "picos_gancho": {
+    "segundos_con_ambiente": 31.6,
+    "mediana_lufs": -48.6,
+    "pico_400ms_sobre_fondo_db": 8.2,
+    "pico_50ms_sobre_fondo_db": 12.6,
+    "p99_50ms_sobre_fondo_db": 9.2,
+    "sustos_10db": 3
+   },
+   "variedade": {
+    "fiestras_con_ambiente": 23,
+    "variacion_espectral_db": 5.67,
+    "monotonia_pct": 10.1,
+    "desviacion_nivel_db": 6.48
+   },
+   "ambiente_baixo_voz_db_mediana": 22.2
+  },
+  "D": {
+   "dnsmos_total": {
+    "SIG": 3.615,
+    "BAK": 4.138,
+    "OVRL": 3.373,
+    "P808": 3.975,
+    "fiestras": 126
+   },
+   "dnsmos_gancho": {
+    "SIG": 3.622,
+    "BAK": 4.105,
+    "OVRL": 3.364,
+    "P808": 4.019,
+    "fiestras": 30
+   },
+   "dnsmos_medio": {
+    "SIG": 3.6,
+    "BAK": 4.151,
+    "OVRL": 3.366,
+    "P808": 3.93,
+    "fiestras": 30
+   },
+   "dnsmos_durmir": {
+    "SIG": 3.614,
+    "BAK": 4.141,
+    "OVRL": 3.371,
+    "P808": 3.974,
+    "fiestras": 40
+   },
+   "pct_voz_limpa": 100.0,
+   "picos_durmir": {
+    "segundos_con_ambiente": 0.0
+   },
+   "picos_gancho": {
+    "segundos_con_ambiente": 0.0
+   },
+   "variedade": {
+    "fiestras_con_ambiente": 0
+   },
+   "ambiente_baixo_voz_db_mediana": null
+  }
+ },
+ "segundos_sinal": 181.0
+}

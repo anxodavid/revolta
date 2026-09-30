@@ -181,13 +181,16 @@ def son_do_prompt(prompt):
 
 
 def son_do_plano(p):
-    """Son dun plano: o campo `son` da lista de planos ('limpa' = voz limpa) ou, se falta, o do seu prompt. Só capas
-    do catálogo de son.py (como moito dúas); devolve 'tipo', 'tipo+tipo' ou None (voz limpa)."""
+    """Son dun plano: o campo `son` da lista de planos ou, se falta, o do seu prompt. Só capas do catálogo de son.py
+    (como moito dúas). Devolve 'tipo' ou 'tipo+tipo'; 'limpa' se a lista pide voz limpa (corta sempre o ambiente); ou
+    None se o plano é neutro (sen fonte de son: voz limpa, agás un inserto curto entre dous planos co mesmo son)."""
     import son
     s_ = p.get('son')
+    if s_ is not None and str(s_).strip().lower() in LIMPA:
+        return 'limpa'
     if s_ is None or not str(s_).strip():
         s_ = son_do_prompt(p.get('prompt', ''))
-    if not s_ or str(s_).strip().lower() in LIMPA:
+    if not s_:
         return None
     return '+'.join([c for c in son.capas(str(s_).lower()) if c in son.AMBIENTES][:2]) or None
 
@@ -365,16 +368,9 @@ def main():
             p0 = next((pal for t0_, pal in reversed(ini) if t0_ <= seg), 0)
             rel_db.append(round(curva.en(p0, tot)['ambiente_db'], 2))
             calma.append(round(min(1.0, max(0.0, (p0 - xs[1]) / max(1, xs[3] - xs[1]))), 3))
-        escena_tramos, son_planos = [], []
-        for p in pl:
-            tipo = son_do_plano(p)
-            son_planos.append({'n': p['n'], 'son': tipo, 'orixe': 'lista' if p.get('son') else 'prompt'})
-            if not tipo:
-                continue
-            if escena_tramos and escena_tramos[-1][2] == tipo and p['b0'] - escena_tramos[-1][1] < 0.5:
-                escena_tramos[-1] = (escena_tramos[-1][0], p['b1'], tipo)
-            else:
-                escena_tramos.append((p['b0'], p['b1'], tipo))
+        son_planos = [{'n': p['n'], 'b0': p['b0'], 'b1': p['b1'], 'son': son_do_plano(p),
+                       'orixe': 'lista' if p.get('son') else 'prompt'} for p in pl]
+        escena_tramos = son.tramos_de_planos([(x['b0'], x['b1'], x['son']) for x in son_planos])
         modo = tema.get('ambiente', 'escena')
         info_son = son.mesturar(voz, dur, OFFSET, str(W / 'mestura.wav'), str(W / 'voz_linea.wav'),
                                 ambiente=modo, rel_db=rel_db, escena_tramos=escena_tramos, calma=calma,
