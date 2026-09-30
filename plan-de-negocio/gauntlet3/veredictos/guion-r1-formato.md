@@ -35,4 +35,112 @@ primeros 60 s y un hilo coherente.
 años o definiciones de diccionario, con unas tres o cuatro veces la densidad de atribuciones de las referencias. Eso
 enfría el gancho a partir del segundo 53 y hace que la zona de dormir sea enciclopédica en vez de envolvente.
 
-*(Mejoras por orden de impacto: en el bloque siguiente de este fichero.)*
+## Medidas (Claude, con scripts; aproximadas)
+
+Son recuentos con expresiones regulares sobre el guion y sobre los subtítulos automáticos (`es-orig`) de las
+referencias. Como "atribuciones" cuentan en galego *segundo, di que, contou, escribiu, recolleu, advirte...* y en
+castellano *según, las crónicas, los registros, escribió, decían, se cuenta...*. Los "años" son años absolutos (en el
+guion van en letra).
+
+| Tramo | Palabras/min | Atribuciones por 100 palabras | Años por 100 palabras |
+|---|---|---|---|
+| Guion, gancho (0:00-1:42) | 182 (voz medida) | 1,8 | 1,4, y dos cantidades más (92 y 48) |
+| Guion, 1:42-10:00 | 174-158 | 1,4 (2,1 en el cap. III) | 0,6 |
+| Guion, zona de dormir (palabras 1.751-3.503) | 145-119 | 0,8 | 0,7 (1,8 en el cap. VI: 9 años y 3 fechas con día y mes) |
+| HD: 0-2 min / 2-10 / 20-30 | 140 / 133 / 140 | 0,0 / 0,5 / 0,3 | 1,1 / 0,4 / 0,5 |
+| RO: 0-2 min / 2-10 / 60-75 / 105-121 | 126 / 144 / 143 / 144 | 0,4 / 0,5 / 0,4 / 0,4 | 0,4 / 0,0 / 0,2 / 0,2 |
+
+Otros recuentos del guion: "segundo" aparece 15 veces, "Pousa" 9, "testemuña" 7 y "Arquivo" 5. Los capítulos no se
+narran (`longo.py`: "non se narra: vai nun rótulo"), mientras que RO dice en voz alta el título de cada historia.
+
+## Mejoras, por orden de impacto
+
+### 1. Pagar la promesa del título con el oyente despierto (l. 115-121 pasan al minuto 4-5)
+
+- **Problema.** El título vende "por que o conxuro da queimada é de 1967". El gancho da el *qué* a los 10 s, pero el
+  *porqué* llega en las l. 117-121, entre el 21:43 y el 23:30, en la fase más lenta de la voz. Es el barco, los amigos,
+  los otros cinco o seis conxuros, las copias vendidas sin el nombre del autor, la "tradición inventada", los años
+  cincuenta fuera de Galiza y el origen que no es celta. Quien entró por la queimada se va en el minuto 1-2. Quien se
+  queda dormido recibe un desmentido ("iso é imposible") y siete nombres nuevos (Castroviejo, Alonso del Real, Xavier
+  Castro, González Reboredo, Tito Freire, Eligio y Cunqueiro). Es la duda 3 de las notas, y va contra el espíritu de
+  §8.4: los nombres, antes del minuto 10.
+- **Propuesta.**
+  - Pasar las l. 117-121 (sin la preparación) a un capítulo nuevo, "O conxuro do barco", justo después de "Sete fontes e
+    un gato" (≈ 3:50-5:20). Las historias con nombre siguen acabando antes del minuto 10 y el cierre del bucle pasa a
+    ≈ 7:40.
+  - En la zona de dormir dejar solo la preparación sensorial de la l. 115 (augardente, lapas, "reméxese amodo", luces
+    apagadas), sin nombres ni fechas, fundida con el cierre. La llama azul que se apaga "ata que se esgota case todo o
+    alcohol" es la mejor última imagen posible: funde a sueño y cierra el círculo con el primer segundo del vídeo.
+  - En la l. 1, usar la redacción del propio dossier (F246, "tradición milenaria") para afilar el contraste, y añadir
+    una señal para que el espectador sepa que la historia llega pronto:
+
+    > Mouchos, curuxas, sapos e bruxas. Case todo galego oíu este conxuro nunha queimada, e parece levarnos moitos
+    > séculos atrás, a unha tradición milenaria. Pero ten autor coñecido, e é de mil novecentos sesenta e sete.
+    > Escribiuno Mariano Marcos Abalo, en Vigo, nun vello barco amarrado no porto. E como chegou a parecer tan antigo,
+    > tamén o contaremos.
+
+### 2. Gancho de 0:41 a 1:42: una cifra y un nombre por idea, y dentro el mejor dato del guion (l. 9-15)
+
+- **l. 11 (0:53-1:14).** Mete dos cantidades, dos años y dos atribuciones en 21 s a 182 palabras/min, y las cantidades se
+  repiten en la l. 35 (4:14). Hay que llevar las cantidades al cap. II y dejar en el gancho solo el contraste:
+
+  > Segundo o mesmo Arquivo, entre mil cincocentos setenta e catro e mil setecentos, a Inquisición de Santiago só levou
+  > unha muller á fogueira por bruxería. Para o investigador Diego Valor Bravo, coas meigas a temida Inquisición foi
+  > branda, e os xuíces da xustiza ordinaria foron moito máis duros.
+
+  Esto corrige además un matiz para el crítico B. En r1, "Coas meigas, a temida Inquisición foi branda" va sin
+  atribuir justo después de "segundo o mesmo Arquivo", así que se oye como si lo dijera el Arquivo. El dossier se lo
+  atribuye a Valor Bravo (F039).
+- **l. 13.** Hay que traer aquí la etimología, que ahora está en la l. 63 (8:30), enterrada entre definiciones. Es el
+  mejor dato para un título "As meigas de verdade":
+
+  > Na Galiza de hai catrocentos anos, a meiga non era a bruxa dos contos. A propia palabra vén, segundo a etimoloxía
+  > máis común, do latín médica. Era a que curaba, a que axudaba nos partos, a que sabía de herbas. O historiador
+  > Rodrigo Pousa di que eran figuras apreciadas e necesarias para o pobo.
+
+- **l. 15 (el bucle).** Ahora promete "por que a fixeron", y esa respuesta es floja: "porque eran moitas" (l. 51). El
+  remate fuerte es el de la l. 53, "A mesma fonte, a mesma noite, e dúas maneiras de mirala", así que el bucle tiene
+  que apuntar ahí:
+
+  > E hai unha lista. Unha noite de san Xoán, en Campo Lameiro, uns veciños foron espreitar a fonte e apuntaron nunha
+  > lista as mulleres que viron alí. Que foran facer aquelas mulleres á fonte, e por que os veciños viron outra cousa,
+  > contarémolo antes de que chegue o sono.
+
+- **Después de la fórmula (l. 7).** Falta una frase de hoja de ruta, como la de RO ("Hoy conocerás estas y más
+  leyendas..."), que guíe al oyente. Es un recurso clásico del contenido para dormir:
+
+  > Esta noite imos coñecer as meigas de verdade: as dos papeis dos xuízos, as das fontes e as da lareira.
+
+### 3. Zona de dormir: de ficha a escena (l. 63, 73-75, 79, 87, 91 y 129)
+
+Los temas de la zona de dormir son los buenos: lume, herbas, orballo, fontes y lareira. Lo que falla es el registro, por
+dos motivos:
+
+- **Definiciones de palabras que el público galego ya conoce.**
+  - "Orballo chámase á humidade do aire que, co frío da noite, se condensa en pingas pequenas" (l. 87).
+  - "O lousado é o tellado dunha casa cuberto de lousas, e a lousa é unha pedra gris ou negra..." (l. 129).
+  - "a candea, esa vela de cera cunha torcida por dentro que servía para alumar": es la última frase del vídeo (l. 129).
+  - "o hórreo, onde se garda o millo" (l. 75).
+  - "A noite de san Xoán é a noite entre os días vinte e tres e vinte e catro de xuño" (l. 79).
+  - "Meigas fóra é, aínda hoxe, unha expresión de sobra coñecida en Galiza" (l. 91).
+  - Tres entradas de diccionario seguidas en la l. 63: meiga, menciñeira y parteira.
+
+  Para este público suena a manual para extranjeros, y para dormir una definición es una pequeña tarea mental, no una
+  imagen. Sospecho que algunas están para llegar al mínimo de 8 palabras por frase de la puerta de estilo ("Xa se pode
+  apagar a candea" tiene 6). Si es así, la frase se alarga con una imagen, no con una definición.
+- **Descripción de cartel de museo.** Las l. 73-75 son una lista de "X era Y, que servía para Z".
+
+**Propuesta.** Quitar las definiciones y dejar la imagen. Convertir las l. 73-75 en un paseo lento con los mismos hechos
+del dossier. HD usa "Imagina" 8 veces, pero la puerta de estilo del canal veta "imaxina", así que el paseo se hace con
+"entremos":
+
+> Entremos agora nunha cociña de aldea, á noitiña. A cociña era a estancia máis importante e acolledora da casa: alí
+> recibían as visitas, comían e facían faladoiros. Na lareira arde o lume, sobre a pedra do lar. A carón do lume está o
+> escano de castiñeiro, onde a xente sentaba a quentarse ou a matar o tempo. O pote colga da gramalleira, e nas lacenas
+> da parede gárdanse os alimentos. Fóra, o hórreo descansa sobre os seus pés, e o aire corre polas súas aberturas.
+
+Hay que adelantar también la invitación de la l. 79 ("non tes que lembrar nada do que escoites") al principio de esta
+escena (≈ 10:00, donde empieza la fase de calma). Así el permiso para dormirse llega dentro de la ventana de §2
+(minutos 8-10) y no en el 12.
+
+*(Mejoras 4 y siguientes: en el bloque siguiente de este fichero.)*
