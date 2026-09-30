@@ -86,6 +86,26 @@ Cambios (detalle y medidas en `plan-de-negocio/gauntlet3/aprendizajes/visual.md`
   palmeras, eucaliptal, paisaje seco) con 0 falsos positivos en 72 imágenes, pero no los tejados naranjas pequeños y
   apagados (eso queda para Florence-2); el par de ruedas de radios está desactivado porque salía invertido.
 
+## Voz en el Gauntlet 3 (embudo, referencias y Cotovía)
+
+Pieza VOZ (`plan-de-negocio/gauntlet3/voz/informe.md`; medidas automáticas, **nadie ha escuchado la voz**):
+
+- **Embudo por frase.** `longo.py` escribe en el JSON de cada frase los valores de `curva.py` en su posición del guion
+  (`escala` y `curva.VOZ`: `estilo`, `f0_rango`, `f0_media`, `enerxia`, `beta`, `embedding_scale`) y `voz_st2.py` los
+  aplica: `estilo` interpola el vector de estilo entre `REF_WAV` (viva) y `REF_WAV_CALMO` (calma); `f0_media`
+  multiplica la F0 y `f0_rango` escala el log F0 alrededor de su media en la frase (solo tramos sonoros, sin bajar
+  nada de 80 Hz: evita la voz cascada); `enerxia` multiplica la N del descodificador; `beta`/`embedding_scale` son los
+  de StyleTTS2. Sin esos campos (vídeo corto, `pipeline.py`) la voz es la de antes. Cada frase lleva su semilla
+  (SEED + texto): el mismo texto suena igual aunque se retome el render.
+- **Medido en 5 puntos** (palabra 0, 280, 950, 1.800 y 3.600 de un guion de 3.600): arousal 0,643 → 0,432, F0 sd 4,76 →
+  2,60 st, 7,56 → 5,19 síl/s (182 → 113 pal/min con pausas), bajando en cada paso; WER frase a frase ≤ 0,054.
+- **Referencias** (`entorno.sh`): `REF_WAV` = vector medio de tres grabaciones de Brais (11535, 01372, 04078),
+  `REF_WAV_CALMO` = 03720 (la más lenta y menos activada de 40). Admiten listas `a.wav:b.wav`.
+- **Cotovía** por defecto: la compilada de Nós en modo `-p1` (ver "Instalación rápida"): da los fonemas del corpus con
+  que se entrenó la voz (0,8 % de caracteres distintos frente al 7,8 % de la 0.5) sin "pra" ni "facelo lume".
+- **Aviso para el QA**: Whisper, sobre audio largo con las pausas del final del embudo y sin VAD, se salta frases
+  enteras; el WER de la mezcla puede salir alto sin que sea de la voz (detalle en el informe).
+
 ## La puerta de imágenes (`revisor.py`)
 
 1. **Manos y cuerpos** (MediaPipe `hand_landmarker` + `pose_landmarker_full`): una mano cuya muñeca está a más de 0,14
@@ -236,7 +256,7 @@ Python 3.11 del sistema, Java ≥ 17):
 | Whisper galego de Nós en CTranslate2 int8 | `bench/wgl_ct2` | 788 MB | 1 min 42 s (*) + 22 s |
 | LanguageTool 6.8 (con hunspell gl) | `languagetool/` | 400 MB | 11 s |
 | Cotovía 0.5 (`.deb` extraído) y su envoltorio | `cotovia/`, `bench/pathbin` | 16 MB | 3 s |
-| Cotovía compilada de Nós (opcional, ver abajo) | `cotovia_nova/`, `bench/pathbin_nova` | 121 MB | 2 min 0 s |
+| Cotovía compilada de Nós (**la de por defecto de la voz**, modo `-p1`) | `cotovia_nova/`, `bench/pathbin_nova` | 121 MB | 2 min 0 s |
 | Stubs para importar StyleTTS2 (`monotonic_align`, `speechmos`) | `bench/stubs` | — | 8 s |
 | MediaPipe (manos y pose) | `revisor/` | 17 MB | 2 s |
 | Nos_Brais-GL: referencia de estilo (`REF_WAV`) y 40 grabaciones variadas con su texto (`refs.tsv`) | `tts/kit/t1`, `tts/refs` | 11 MB | 1 min 26 s (*) |
@@ -257,10 +277,12 @@ términos de uso que prohíben difundirlas: se quedan en el scratchpad y no se s
 
 **Dos hallazgos del entorno para las piezas de voz e imagen** (medidos, no aplicados; detalle en el fichero de
 aprendizajes):
-- **Cotovía**: la 0.5 del `.deb`, que usa el pipeline, no marca las vocales abiertas (*po^rta* por *pÓrta*) y
+- **Cotovía** (aplicado por la pieza VOZ): la 0.5 del `.deb` no marca las vocales abiertas (*po^rta* por *pÓrta*) y
   acentúa los monosílabos átonos; en 122 frases del corpus difiere un 7,8 % en caracteres de los fonemas con los que se
-  entrenó el modelo. La Cotovía que trae el repo del modelo (`instalar.sh cotovia_nova`) difiere un 0,9 %. Para
-  probarla en la voz: `ST2_PATHBIN=$COTOVIA_NOVA_PATHBIN` (medida: `probas/comparar_cotovia.py`).
+  entrenó el modelo. La Cotovía que trae el repo del modelo (`instalar.sh cotovia_nova`) difiere un 0,9 % y, en modo
+  `-p1` (sin "pra" ni segunda forma del artículo, que el corpus no tiene), un 0,8 %. **Ahora es la de por defecto**
+  (`entorno.sh`; si no está compilada, la 0.5); WER igual (0,028 frente a 0,032 de la 0.5). Medida:
+  `probas/comparar_cotovia.py` y `plan-de-negocio/gauntlet3/voz/informe.md`.
 - **SDXL-Turbo**: el VAE se lleva ~11 s de cada imagen; con `pipe.vae.to(memory_format=torch.channels_last)` baja a
   ~6 s con la misma salida (imagen de ~28 s a ~20-22 s).
 
