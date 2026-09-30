@@ -146,7 +146,13 @@ class Verificador:
                 if feito_propio is not None:
                     r['conta_o_feito'] = conta(feito_propio, f)
                 return r
-        sc = [(i, self.nli(p, f)) for i, p in enumerate(self.feitos)]
+        # Gauntlet 3 (guion longo): o NLI só se calcula cos feitos que poden apoiar a frase. A regra de apoio esixe
+        # coincidencia léxica >= COB_NLI co mesmo feito (ou >= COB_MIN), así que un feito con menos coincidencia nunca a
+        # apoia só; os feitos de desenlace compróbanse sempre. Antes: NLI contra os 180 feitos por frase (26 min de CPU
+        # para 3.500 palabras); agora unha ducia de chamadas. Os pares seguen saíndo dos 4 feitos máis prometedores.
+        ds_f = set(desenlaces(f))
+        cand = {i for i, p in enumerate(self.feitos) if cobertura(f, p) >= COB_NLI or (ds_f and ds_f & set(desenlaces(p)))}
+        sc = [(i, self.nli(p, f) if i in cand else {'E': 0.0, 'N': 1.0, 'C': 0.0}) for i, p in enumerate(self.feitos)]
         # premisas: cada feito e pares cos 4 feitos máis prometedores (moitas frases xuntan dous feitos)
         top = sorted(range(len(self.feitos)), key=lambda i: -(sc[i][1]['E'] + cobertura(f, self.feitos[i])))[:4]
         prem = [(i,) for i in range(len(self.feitos))] + [(a, b) for k, a in enumerate(top) for b in top[k + 1:]]
