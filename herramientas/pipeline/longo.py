@@ -14,9 +14,11 @@ montaxe e QA. Cambia o que é propio dun episodio longo:
 - A lista de planos tamén vén de fóra: se falta --escenas, o pipeline escribe <traballo>/planos.json (o texto que
   se escoita en cada plano, a súa duración, capítulo e fase) e sae co código 3; un axente escribe un prompt por
   plano nun JSON [{"n": 1, "prompt": "..."}, ...] e vólvese lanzar o mesmo comando.
-- Son (decisión D13 do promotor): nada de ambiente continuo. Cada plano pode levar `son` (choiva, lume, mar, vento)
-  na lista de planos (se falta, dedúcese das palabras do prompt); o resto é voz limpa. `ambiente` na ficha do tema:
-  'escena' (por defecto), 'choiva2' (choiva continua, para comparar) ou 'ningun'.
+- Son (decisións D13 e D14 do promotor): nada de ambiente continuo. Cada plano pode levar `son` na lista de planos:
+  un tipo do catálogo de son.py (choiva, lume, mar, vento, fonte, xente, noite, aldea, campas), dous unidos con '+'
+  ('lume+noite') ou 'limpa' (voz limpa); se falta, dedúcese das palabras do prompt (SON_PALABRAS). Regra e niveis en
+  plan-de-negocio/gauntlet3/son/guia-son.md. `ambiente` na ficha do tema: 'escena' (por defecto), 'choiva2' (choiva
+  continua, para comparar) ou 'ningun'.
 - Portas de texto: lingua (LanguageTool + hunspell), H1 (nomes e cantidades no dossier) e estilo son bloqueantes;
   a veracidade (veracidade.py) márcase por frase e cada frase marcada ten que ter unha xustificación escrita no
   ficheiro de excepcións (`--excepcions`, YAML [{frase, xustificacion}]); se queda algunha sen xustificar, non hai vídeo.
@@ -142,19 +144,52 @@ def planos(frases, tempos, dur, inicio_cap, tot):
     return fin
 
 
-SON_PALABRAS = [('lume', r'\b(fire|firelight|hearth|embers|flames?|bonfires?|burning logs)\b'),
-                ('choiva', r'\b(rain|raining|rainy|drizzle|downpour|raindrops)\b'),
-                ('mar', r'\b(sea|waves?|shore|surf|seashore|ocean|breakers)\b'),
-                ('vento', r'\b(wind|windy|storm|gale|gusts?)\b')]
+# Son dun plano a partir das palabras (en inglés) do seu prompt, se a lista de planos non trae `son`. A orde é a
+# prioridade: gaña o primeiro tipo que apareza. Os tipos de exterior (aldea, vento) non se poñen nun interior; a
+# noite engádese como segunda capa a lume, fonte ou mar se o plano é de noite e de exterior.
+SON_PALABRAS = [
+    ('lume', r'\b(fire|firelight|fireplace|hearth|embers|flames?|bonfires?|campfire|burning logs?|queimada)\b'),
+    ('choiva', r'\b(rain|raining|rainy|rainfall|drizzle|downpour|raindrops)\b'),
+    ('mar', r'\b(sea|seas|waves?|shore|surf|seashore|ocean|breakers|coast|coastal|beach|harbou?r|estuary)\b'),
+    ('fonte', r'\b(fountains?|streams?|brook|creek|rivulet|river|running water|spring water|water springs?|watermill|'
+              r'mill race|washing place|waterfall)\b'),
+    ('xente', r'\b(crowds?|crowded|market|marketplace|village fair|cattle fair|country fair|fairground|gathering|gathered|'
+              r'people talking|procession|festival|feast|tavern|throng|dancers|dancing)\b'),
+    ('campas', r'\b(church|churches|bells?|belfry|bell tower|cathedral|monaster(y|ies)|cloisters?|abbey|chapel|convent)\b'),
+    ('noite', r'\b(night|nighttime|nightfall|moon|moonlight|moonlit|stars|starry|starlit|midnight)\b'),
+    ('aldea', r'\b(village|hamlet|cows?|cattle|oxen|meadows?|pastures?|farm|farmyard|fields?|granary|orchard|'
+              r'countryside|sheep|goats?|hens|chickens)\b'),
+    ('vento', r'\b(wind|windy|storm|stormy|gale|gusts?|breeze|forest|woods|woodland|oak trees|chestnut trees|hillside|'
+              r'moor|mountains?)\b'),
+]
+INTERIOR = r'\b(interior|inside|indoors?|kitchen|room|table|bed|close-up|portrait|hands|document|manuscript|book|desk)\b'
+LIMPA = ('limpa', 'ningun', 'ningún', 'nada', 'non', '-')
 
 
 def son_do_prompt(prompt):
-    """Ambiente dun plano a partir do seu prompt (se a lista de planos non trae `son`): o primeiro que apareza
-    en SON_PALABRAS; se non hai ningún, voz limpa."""
-    for tipo, rx in SON_PALABRAS:
-        if re.search(rx, prompt, re.I):
-            return tipo
-    return None
+    """Son dun plano a partir do seu prompt (se a lista de planos non trae `son`): o primeiro tipo de SON_PALABRAS
+    que apareza (en interiores, sen aldea nin vento), con 'noite' de segunda capa se é lume, fonte ou mar de noite
+    en exterior. Se non hai ningún, None (voz limpa)."""
+    interior = bool(re.search(INTERIOR, prompt, re.I))
+    atopados = [t for t, rx in SON_PALABRAS if re.search(rx, prompt, re.I) and not (interior and t in ('aldea', 'vento'))]
+    if not atopados:
+        return None
+    tipo = atopados[0]
+    if tipo in ('lume', 'fonte', 'mar') and 'noite' in atopados and not interior:
+        tipo += '+noite'
+    return tipo
+
+
+def son_do_plano(p):
+    """Son dun plano: o campo `son` da lista de planos ('limpa' = voz limpa) ou, se falta, o do seu prompt. Só capas
+    do catálogo de son.py (como moito dúas); devolve 'tipo', 'tipo+tipo' ou None (voz limpa)."""
+    import son
+    s_ = p.get('son')
+    if s_ is None or not str(s_).strip():
+        s_ = son_do_prompt(p.get('prompt', ''))
+    if not s_ or str(s_).strip().lower() in LIMPA:
+        return None
+    return '+'.join([c for c in son.capas(str(s_).lower()) if c in son.AMBIENTES][:2]) or None
 
 
 def ler_escenas(path, pl):
@@ -318,19 +353,23 @@ def main():
         imgs = imaxes.graduar(imgs, W / 'imaxes_graduadas', **kw)
     save_t()
 
-    # 5 son (decisión D13 do promotor): ambiente só onde a escena o ten (campo `son` de cada plano ou, se falta,
-    # palabras do prompt), voz limpa no resto; o nivel segue a curva (case nada no gancho)
+    # 5 son (decisións D13 e D14 do promotor): o son de cada escena (campo `son` de cada plano ou, se falta, palabras
+    # do prompt) co catálogo de son.py, variado e con eventos cada vez máis escasos; voz limpa no resto. O nivel segue
+    # a curva (case nada no gancho) e a calma (0 ata o fin do gancho, 1 desde a metade: zona de durmir)
     with P.Etapa('6_son'):
         import son
         ini = sorted((tempos[f['i']][0], f['pal0']) for f in frases)
-        rel_db = []
+        xs = curva.nos(tot)
+        rel_db, calma = [], []
         for seg in range(int(dur) + 1):
             p0 = next((pal for t0_, pal in reversed(ini) if t0_ <= seg), 0)
             rel_db.append(round(curva.en(p0, tot)['ambiente_db'], 2))
-        escena_tramos = []
+            calma.append(round(min(1.0, max(0.0, (p0 - xs[1]) / max(1, xs[3] - xs[1]))), 3))
+        escena_tramos, son_planos = [], []
         for p in pl:
-            tipo = p.get('son') or son_do_prompt(p['prompt'])
-            if tipo not in son.AMBIENTES:
+            tipo = son_do_plano(p)
+            son_planos.append({'n': p['n'], 'son': tipo, 'orixe': 'lista' if p.get('son') else 'prompt'})
+            if not tipo:
                 continue
             if escena_tramos and escena_tramos[-1][2] == tipo and p['b0'] - escena_tramos[-1][1] < 0.5:
                 escena_tramos[-1] = (escena_tramos[-1][0], p['b1'], tipo)
@@ -338,8 +377,10 @@ def main():
                 escena_tramos.append((p['b0'], p['b1'], tipo))
         modo = tema.get('ambiente', 'escena')
         info_son = son.mesturar(voz, dur, OFFSET, str(W / 'mestura.wav'), str(W / 'voz_linea.wav'),
-                                ambiente=modo, rel_db=rel_db, escena_tramos=escena_tramos)
+                                ambiente=modo, rel_db=rel_db, escena_tramos=escena_tramos, calma=calma,
+                                semente=tema['id'])
         info_son['tramos'] = escena_tramos
+        info_son['son_por_plano'] = son_planos
     save_t()
 
     # 6 montaxe (escritura atómica)

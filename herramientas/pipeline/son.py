@@ -40,9 +40,10 @@ Un plano pode levar dúas capas ('lume+noite'): a segunda vai 3 dB máis baixa.
 CONTRA A MONOTONÍA (D14): semente e parámetros distintos en cada tramo (VARIACION); os tramos longos pártense en
 anacos de ata TRAMO_MAX s que se funden entre si; intensidade que respira (±2,5 dB en 25-70 s); eventos ao chou,
 cada vez máis escasos e suaves cara ao final (taxa ×(1-0,7·calma), -6 dB·calma) e co seu pico limitado respecto do
-leito (RMS en 50 ms fronte a RMS en 1 s: 12 dB no gancho, 5 dB ao durmir); fundidos longos (3 s no gancho, 8 s ao
-durmir) centrados no corte de plano; tope do ambiente sobre a voz (sonoridade momentánea: 8 dB baixo a voz, 12 dB ao
-durmir); e voz limpa en todo plano sen son.
+leito (sonoridade K en 50 ms fronte á do leito en 3 s: 12 dB no gancho, 5 dB ao durmir; estalidos e chíos, 13 e 6);
+fundidos longos (3 s no gancho, 8 s ao durmir), cruzados e centrados no corte entre dous sons e, cara a un plano sen
+son, feitos en 3/4 dentro do plano con son (para non comer a voz limpa); tope do ambiente sobre a voz (sonoridade
+momentánea: 8 dB baixo a voz, 12 dB ao durmir); e voz limpa en todo plano sen son.
 
 `mesturar` por defecto (ambiente='choiva') segue sendo o do Gauntlet 2 (pipeline.py).
 """
@@ -735,12 +736,19 @@ def ambiente_escena(n, tramos, voz_lufs=-17.0, rel_db=None, calma=None, semente=
             continue
         na = max(1, int(np.ceil((t1 - t0) / TRAMO_MAX - 1e-9)))
         cortes = np.linspace(t0, t1, na + 1)
+        # cara a outro son: fundido cruzado centrado no corte; cara a voz limpa: o fundido faise case todo dentro do
+        # plano con son (3/4) para non comer o plano limpo
+        antes = any(abs(b_ - t0) < 0.5 and capas(ti_) for a_, b_, ti_ in tramos if (a_, b_, ti_) != (t0, t1, tipo))
+        despois = any(abs(a_ - t1) < 0.5 and capas(ti_) for a_, b_, ti_ in tramos if (a_, b_, ti_) != (t0, t1, tipo))
         for j in range(na):
             a0, a1 = cortes[j], cortes[j + 1]
             cm = float(np.interp((a0 + a1) / 2, seg, cal_s))
             f = FUNDIDO[0] + (FUNDIDO[1] - FUNDIDO[0]) * cm
             fi, fo = (f if j == 0 else 8.0), (f if j == na - 1 else 8.0)
-            s0, s1 = max(0.0, a0 - fi / 2), min(dur, a1 + fo / 2)
+            fi = min(fi, 0.8 * (a1 - a0)); fo = min(fo, 0.8 * (a1 - a0))
+            ki = 0.5 if (j > 0 or antes) else 0.25          # fracción do fundido que cae fóra do tramo
+            ko = 0.5 if (j < na - 1 or despois) else 0.25
+            s0, s1 = max(0.0, a0 - ki * fi), min(dur, a1 + ko * fo)
             i0, i1 = int(s0 * SR), int(s1 * SR); m = i1 - i0
             if m < SR // 2:
                 continue
@@ -762,7 +770,7 @@ def ambiente_escena(n, tramos, voz_lufs=-17.0, rel_db=None, calma=None, semente=
             x *= _db(np.interp(np.arange(i0, i1) / SR, seg, rel_s)).astype(np.float32)[:, None]   # curva do embude
             x = _tope(x, voz_lufs - (TOPE_DB[0] + (TOPE_DB[1] - TOPE_DB[0]) * cm))
             e = np.ones(m, np.float32)                                  # fundidos de potencia constante
-            ni, no = min(m // 2, int((a0 + fi / 2 - s0) * SR)), min(m // 2, int((s1 - (a1 - fo / 2)) * SR))
+            ni, no = min(m // 2, int((a0 + (1 - ki) * fi - s0) * SR)), min(m // 2, int((s1 - (a1 - (1 - ko) * fo)) * SR))
             if ni > 0:
                 e[:ni] = np.sin(np.linspace(0, np.pi / 2, ni))
             if no > 0:
@@ -790,9 +798,9 @@ def ambiente_escena(n, tramos, voz_lufs=-17.0, rel_db=None, calma=None, semente=
     return r, info
 
 
-def pct_voz_limpa(vt, amb, umbral_voz_db=-35.0, umbral_amb_db=-45.0):
-    """% do tempo con voz (tramas de 50 ms a menos de 35 dB do máximo da voz) sen ambiente audible (o ambiente por
-    debaixo de 45 dB baixo o RMS medio da voz)."""
+def pct_voz_limpa(vt, amb, umbral_voz_db=-35.0, umbral_amb_db=-40.0):
+    """% do tempo con voz (tramas de 50 ms a menos de 35 dB do máximo da voz) sen ambiente (o ambiente, se o hai, máis
+    de 40 dB por debaixo do RMS medio da voz: inaudible mesmo nas pausas)."""
     fr = int(0.05 * SR); m = min(len(vt), len(amb)) // fr
     if m == 0:
         return 100.0

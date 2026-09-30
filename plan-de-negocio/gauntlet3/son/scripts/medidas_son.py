@@ -5,8 +5,8 @@
   fiestras de 9,01 s cada 1 s, a 16 kHz mono. Mide ruído como defecto: calquera ambiente baixa BAK por deseño.
 - WER co Whisper galego de Nós (faster-whisper, WHISPER_DIR), coas mesmas opcións que qa.asr.
 - Picos na zona de durmir sobre a pista de ambiente soa: sonoridade K (BS.1770) en 50 ms e en 400 ms fronte á
-  mediana local de 400 ms (±3 s): canto sobresae un evento do seu propio fondo; e "sustos": arrinques onde a
-  sonoridade en 50 ms sobe máis de 10 dB sobre o fondo local.
+  mediana local de 400 ms (±3 s): canto sobresae un evento do seu propio fondo; e "sustos": arrinques rápidos (+6 dB
+  en 200 ms) que quedan máis de 10 dB por riba do fondo local. Os fundidos desde o silencio non contan.
 - Variedade do fondo: espectro en bandas de terzo de oitava (100 Hz-8 kHz) en fiestras de 5 s con ambiente;
   variación espectral = distancia RMS (dB) media de cada fiestra ao espectro medio; monotonía = % de pares de
   fiestras separadas máis de 60 s cuxo espectro difire menos de 3 dB RMS (soan igual).
@@ -41,21 +41,28 @@ def perfil(x):
 
 
 def picos(amb, t0=0.0, t1=None, suelo_lufs=-70.0):
-    """Picos dos eventos da pista de ambiente (48 kHz) entre t0 e t1 s, onde hai ambiente.
-    Devolve: mediana (LUFS), pico en 400 ms e en 50 ms sobre a mediana local (dB) e sustos (>10 dB en 50 ms)."""
+    """Picos dos eventos da pista de ambiente (48 kHz) entre t0 e t1 s, só onde hai ambiente arredor (±3 s: os
+    fundidos desde o silencio non contan). Fondo = mediana local da sonoridade en 400 ms (±3 s). Devolve a mediana
+    (LUFS), o pico en 400 ms e en 50 ms sobre o fondo (dB) e os sustos: arrinques rápidos (+6 dB en 200 ms) que
+    quedan máis de 10 dB por riba do fondo."""
     l50, l400 = perfil(amb)
     a, b = int(t0 * 100), int((t1 if t1 is not None else len(l400) / 100) * 100)
     l50, l400 = l50[a:b], l400[a:b]
     con = l400 > suelo_lufs
     if con.sum() < 100:
-        return {'segundos_con_ambiente': round(con.sum() / 100, 1)}
-    fondo = median_filter(l400, 601, mode='nearest')          # mediana local (±3 s)
-    d50, d400 = (l50 - fondo)[con], (l400 - fondo)[con]
-    arr = np.flatnonzero(np.diff((l50 - fondo > 10).astype(int)) == 1)
-    return {'segundos_con_ambiente': round(con.sum() / 100, 1), 'mediana_lufs': round(float(np.median(l400[con])), 1),
-            'pico_400ms_sobre_fondo_db': round(float(d400.max()), 1), 'pico_50ms_sobre_fondo_db': round(float(d50.max()), 1),
-            'p99_50ms_sobre_fondo_db': round(float(np.percentile(d50, 99)), 1), 'sustos_10db': int(len(arr))}
-
+        return {'segundos_con_ambiente': round(float(con.sum()) / 100, 1)}
+    val = con & (uniform_filter1d(con.astype(float), 601, mode='nearest') > 0.95)
+    fondo = median_filter(np.maximum(l400, np.median(l400[con]) - 25), 601, mode='nearest')
+    d50, d400 = l50 - fondo, l400 - fondo
+    subida = l50 - np.concatenate([np.full(20, l50[0]), l50[:-20]])
+    susto = val & (d50 > 10) & (subida > 6)
+    arr = np.flatnonzero(np.diff(susto.astype(int)) == 1)
+    if not val.any():
+        return {'segundos_con_ambiente': round(float(con.sum()) / 100, 1)}
+    return {'segundos_con_ambiente': round(float(con.sum()) / 100, 1), 'mediana_lufs': round(float(np.median(l400[con])), 1),
+            'pico_400ms_sobre_fondo_db': round(float(d400[val].max()), 1),
+            'pico_50ms_sobre_fondo_db': round(float(d50[val].max()), 1),
+            'p99_50ms_sobre_fondo_db': round(float(np.percentile(d50[val], 99)), 1), 'sustos_10db': int(len(arr) + susto[0])}
 
 
 def _bandas(sr):
