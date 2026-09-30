@@ -1,0 +1,31 @@
+# Plantilla de ficha de tema para longo.py (vídeo longo, Gauntlet 3). Copiar como temas/<id>.yaml.
+# Lo público (títulos, descrición, créditos, dossier) en galego normativo (RAG).
+id: exemplo-longo
+titulo: "Título interno do episodio"
+titulo_youtube: "Título para YouTube | Cousas de Galiza para durmir"
+titulo_rotulo: "Título curto para o rótulo inicial"
+tema: "Unha frase co tema do episodio (entra no texto contra o que se ancoran nomes e cantidades, H1)"
+palabras: 3600                 # extensión obxectivo do guion (só informativa na porta de estilo)
+duracion_s: [1500, 2100]       # porta de duración do vídeo final (s)
+aviso: "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático."
+capitulo_inicial: "Comezo"     # nome do primeiro capítulo de YouTube (0:00), antes do primeiro "## "
+# ref_wav_calma: /ruta/a/referencia_calma.wav   # opcional (peza VOZ): referencia de estilo para o ton de durmir
+autoria:
+  guion: "Claude (Anthropic), con axentes no Gauntlet 3: un axente constructor escribe e críticos independentes revisan. Non é unha execución desatendida nin un LLM por API. Ningunha persoa o revisou."
+  escenas: "Claude (Anthropic), un axente escribe un prompt por plano."
+  automatico: "voz (Nós StyleTTS2), imaxes e a súa porta de revisión, son, montaxe e controis automáticos"
+descricion: |
+  Resumo do episodio para a descrición de YouTube (2-4 frases, sen promesas falsas).
+creditos:
+  - "Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto Nós (Universidade de Santiago de Compostela), licenza Apache-2.0."
+  - "Texto preparado por un proceso automático con intelixencia artificial (Claude, de Anthropic) a partir das fontes citadas. Ningunha persoa o revisou."
+  - "Imaxes xeradas con intelixencia artificial e revisadas por unha porta automática. Choiva sintetizada por código."
+# Dossier: un feito por liña, en galego, coas etiquetas das fontes entre corchetes (as etiquetas non se len).
+# Todo nome propio e toda cantidade que diga o guion ten que estar aquí (porta H1). O lendario, marcado como lenda
+# no propio feito ("Conta a lenda que...", "Dise que...").
+dossier: |
+  - [FONTE-1] Primeiro feito, en orde cronolóxica ou temática.
+  - [FONTE-1, FONTE-2] Segundo feito.
+fontes:
+  FONTE-1: https://exemplo.gal/fonte-1
+  FONTE-2: https://exemplo.gal/fonte-2
