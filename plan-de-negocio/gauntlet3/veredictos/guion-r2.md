@@ -92,3 +92,75 @@ una línea de escena.
 | 9 | "ata a emenda de quen o escribía" | **No aplicado** (leve) | l. 23 sigue con «No papel quedou escrita ata a corrección» y se entiende. Opcional |
 | 10 | Línea de comunidad | No aplicado; **correcto** | Necesita el visto bueno del promotor |
 | Señales para B | l. 11 sin atribuir; "Case todo galego oíu" | **Resuelto** | l. 13 (Valor Bravo) y l. 1 («algunha vez») |
+
+## 2. Errores nuevos (pasajes nuevos o reescritos)
+
+### 2.1 Hechos: 0 errores y 6 imprecisiones leves
+
+Cotejé cada frase con su hecho de `feitos.yaml` y, cuando había duda, con la fuente en caché. **Ninguna frase dice algo
+falso ni contrario al dossier.** No aparece ninguna de las 18 afirmaciones de "Non dicir". Se cumple el §8 del contexto:
+- 8.1: el contraste de la Inquisición se dice una vez y sin año (l. 13).
+- 8.3: el conxuro y Dorotea van de 0:00 a 0:32, el aviso a las 0:32, el reclamo a las 0:38, la Inquisición a la 1:01, la
+  curandeira a la 1:18 y el bucle a la 1:28. Cibreira sale a las 7:24, con empatía.
+- 8.4: los casos con nombre acaban a las 9:51, y María Soliña va solo como nombre y poema.
+- Derechos: un solo verso del conxuro y ningún verso de Celso Emilio.
+
+Las 6 imprecisiones:
+
+| # | Frase (l., min) | Problema | Fuente | Corrección |
+|---|---|---|---|---|
+| P1 | «Así arde, pouco a pouco, ata que se esgota case todo o alcohol. Un deles ergue cun cazo o líquido en chamas…» (l. 163, 26:31) | **Orden imposible**: primero se apaga el alcohol y después alguien levanta el líquido en llamas y dice el conxuro. En el ritual, el conxuro se dice mientras arde, hacia el final | F030 y F031 («o conxuro recítase cara ao final»), F269 | C16 (se invierte el orden) |
+| P2 | «Na véspera de san Xoán apáñanse as herbas… Había quen as apañaba no campo para vendelas ao día seguinte…» (l. 113, 16:14) | Por el orden de las frases se entiende que las recogían en la víspera y las vendían el día 24, cuando ya no sirven. La fuente dice que las recogían el 22 y las vendían el 23 | Galipedia, «Herbas de san Xoán», que cita a Eladio Rodríguez: «se recogen en el campo, generalmente la antevíspera… o sea el día 22, para venderlas al siguiente día» | C8 |
+| P3 | «E cando Ana González saía polas portas do curral, volveu mirar para a veciña, e nese momento a arracada da veciña rompeu en tres anacos.» (l. 29, 2:59) | Resto de H5: la rotura va en una frase aparte, sin «contou». La causa sí está atribuida | PDF del Arquivo, p. 9 ([12 vuelto], testimonio de Ana de Robles); F063 | C1 (casi literal de F063) |
+| P4 | «Tamén poñían cardos ou espadanas: as flores protexían polo seu recendo, os cardos polas espiñas…» (l. 137, 21:33) | Creencia contada como hecho: el narrador afirma que las flores protegían de las meigas. El §2 del contexto pide contar lo legendario como leyenda | F258 («Para protexer as casas das bruxas poñíanse…») | C11 («crían que…») |
+| P5 | «porque o alambique chegou na Idade Media» (l. 43, 5:22) | Falta adónde: el alambique es antiguo, lo que llegó en la Edad Media fue su uso en Galicia | Galipedia, «Queimada» (Alonso del Real: «a destilación do augardente en Galicia non pode ser anterior á introdución do alambique… a partir do século XII ou XIII»); F020 | C4 |
+| P6 | «naceu en poucos anos un ritual que parece de sempre» (l. 47, 6:15) | Desde los años cincuenta (González Reboredo), pasando por 1955 (Tito Freire), hasta 1967 (el conxuro) van unos veinte años, no "pocos" | F024, F026, F002 | C5 («en poucas décadas») |
+
+**Comprobado y correcto** (lo más delicado de lo nuevo):
+
+| Frase (l.) | Comprobación |
+|---|---|
+| l. 11, «E alí hai máis» | "Alí" es el Arquivo. El proceso de Xinzo lo abrió la justicia del conde de Monterrei (F057), pero el Arquivo lo guarda y lo expuso (F271) |
+| l. 13, «En máis dun século de procesos» | De 1574 a 1700 van 126 años (F034) |
+| l. 27, el gato | La fuente dice que el gato «se llegara a la cama» (PDF, p. 9). El guion lo omite, bien para §8.4. «contaba» está bien atribuido |
+| l. 41, la empresa | *Atlántico*: «empezó a circular anónimo por toda Galicia, razón por la cual se asimiló un origen popular» |
+| l. 55, los trinta procesos | PDF, p. 11: «uns 30 procesos xudiciais contra mulleres levados a cabo pola xustiza real, aínda sen estudar». p. 14: «Todas as reas son mulleres» |
+| l. 69, la lista | PDF, p. 7 ([29 recto]): «allí las abían visto y reconosçido y las abían escripto en una memoria por ser mucho número dellas». Los «dos demonios» del [30 recto] quedan fuera, bien |
+| l. 105, «O millo non agroma ata o comezo do verán» | Casi literal de Galipedia, «Hórreo», donde se contrapone al trigo y al centeno. Es un dato de divulgación y lo doy por bueno |
+| l. 131, «no Riós» | Correcto: el nombre oficial es **O Riós desde 2026** (Galipedia, ficha del concello: «Nome oficial O Riós dende 2026; Riós ata 2026») |
+| l. 141-143, Feijoo | Galipedia: «pouco antes de facer os 14 anos ingresou na Orde de San Bieito, polo que tivo que renunciar aos seus dereitos como morgado. Ordenouse como sacerdote no mosteiro de San Xulián de Samos». «renunciou á herdanza para facerse frade» es una paráfrasis fiel |
+| l. 153, «o galego non era un dialecto do castelán» | Es parte de F231, sin la polémica galego-portugués (lo pidió el crítico A) |
+| l. 161, «uns poucos grans de café» | F029. Es un guiño a la «herexía» de Castroviejo (l. 47) |
+
+### 2.2 Lengua: ningún error grave, 4 medios y 9 leves
+
+El galego de r2 sigue siendo normativo y natural. En todo lo nuevo:
+- los pronombres átonos van bien colocados («que o afastan», «Préndeselle lume», «déixao caer», «mirábano bailar», «para
+  que a protexesen», «Aos meniños poñíanlles», «Así o escribiu»);
+- las contracciones son correctas («cara á cheminea», «ca as aguias», «ao carón»);
+- las dos palabras dudosas que busqué en el diccionario de la RAG existen: *comisar*, «Quitar [algo] a alguén en nome do
+  Estado», y *agromar*, «botar gromos»;
+- hay giros orales muy buenos: «quedabas preso no asento», «ninguén o deu collido», «non daban alcanzado», «chegou a
+  vello», «por se acaso».
+
+No hay barbarismos. Los problemas son de **referencia** (a quién apunta un sujeto implícito o un "esa") y de **costura**
+entre dos hechos del dossier puestos seguidos, justo lo que las puertas automáticas no ven.
+
+| # | Frase (l., min) | Problema | Corrección | Grav. |
+|---|---|---|---|---|
+| N1 | «…as patas do escano podían apoiarse nela, e así quedaban sentados máis preto do lume.» (l. 89, 12:05) | Anacoluto: el sujeto de «quedaban sentados» es, por gramática, «as patas» (femenino). El oyente tiene que reconstruir «a xente» | C7 | M |
+| N2 | «Foi sempre de saúde delicada, con catarros frecuentes…» (l. 157, 25:47) | Sujeto implícito tras un párrafo cuyo sujeto es «o Arquivo do Reino» (l. 155). Si se quita ese párrafo (C13), quedaría Sarmiento. Feijoo no se nombra desde la l. 145 | C14 | M |
+| N3 | «Á mañá lavábase a cara con esa auga verde e recendente…» (l. 133, 20:43) | «esa» apunta al último agua nombrada, la flor da auga de la fuente (l. 129-131), que no es verde. El agua de las hierbas (el cacho) está en la l. 123, cuatro párrafos antes | C10 | M |
+| N4 | «Hoxe é un símbolo do sufrimento do pobo…» (l. 63, 8:30) | Tras «un poema no libro Longa noite de pedra, publicado…», el sujeto implícito se puede oír como el poema o el libro | C6 (F110 literal) | M |
+| N5 | «…a xente comía sardiñas, cachelos e broa de millo. Comían sardiñas á brasa, bebían viño…» (l. 117, 17:28) | "Sardiñas" dos veces seguidas, y "arredor do lume" / "arredor da fogueira": costura de F172 con F257 | C9 | L |
+| N6 | «Así arde, pouco a pouco… déixao caer pouco a pouco no pote» (l. 163) | "Pouco a pouco" en dos frases seguidas (va con P1) | C16 | L |
+| N7 | «volveu mirar para a veciña, e nese momento a arracada da veciña…» (l. 29) | "Veciña" dos veces en la misma frase (va con P3) | C1 | L |
+| N8 | «Segundo contou el mesmo… El mesmo contaba…» (l. 39, 4:35) | "El mesmo" dos veces en un párrafo | C2 | L |
+| N9 | «Por que moita xente o cría anónimo ten unha resposta sinxela.» (l. 41, 5:04) | Una interrogativa indirecta como sujeto pesa al oído. Además, "moita xente… anónimo" sale dos veces en dos frases (y una tercera en la l. 9). La nueva frase cierra de forma explícita el bucle abierto en la l. 9 | C3 | L |
+| N10 | «Deixamos atrás as fogueiras, e imos agora cun frade…» (l. 141, 22:07) | «Ir con» de presentador («vamos con…», calco del castellano). En galego, «ir con alguén» es acompañarlo | C12 | L |
+| N11 | «Volvamos á cociña do principio…» (l. 161, 26:10) | El vídeo no empezó en la cocina, sino en un barco y en Vilalba. La cocina es del minuto 11 | C15 | L |
+| N12 | «O sabugueiro, pola súa banda, dá flores pequenas e brancas.» (l. 115) | Conector de registro escrito en plena zona de dormir | **Sin cambio**: quitarlo deja una frase de 7 palabras, por debajo del mínimo de 8 de la puerta de estilo | L |
+| N13 | «Segundo el, a caza de bruxas…» (l. 77) | Tras «…lle comeran a viña ao outro», «el» puede oírse un instante como el vecino. El cambio de párrafo casi lo resuelve | **Sin cambio**: «Segundo Pousa» sería el séptimo Pousa | L |
+
+Opcional, fuera de la lista: en la l. 35, «segundo Rodrigo Pousa, historiador,» esquiva el falso positivo de
+LanguageTool, pero «segundo o historiador Rodrigo Pousa» dentro de la frase también pasa (dossier §3) y suena más natural.
