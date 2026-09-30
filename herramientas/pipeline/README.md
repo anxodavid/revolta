@@ -133,10 +133,18 @@ publica un vídeo con todas las puertas en verde.
   "A irmandade venceu" (ronda 2) no pasa nunca: el dossier dice "a irmandade foi derrotada";
 - gancho: todas las frases apoyadas; relato: las frases con nombre propio, tiempo largo (séculos, nunca...) o desenlace
   apoyadas, y el párrafo tiene que contar su hecho. Las frases de ambiente sin nombres ni desenlace pasan.
-- Calibración en `probas/veracidade_calibracion.md`: rechaza las 6 frases falsas o inventadas del gancho de la ronda 2,
-  "As chaves da Rocha Forte caeron", "o lume ardeu durante séculos" y "a irmandade derrotou os señores"; acepta los 23
-  hechos del dossier. El NLI solo **no sirve** en gallego (dice "implicación 0,92" a "a irmandade venceu" y
-  "contradicción 0,87" a una frase de lluvia): por eso decide junto con la coincidencia léxica y las reglas.
+- **Quién hizo qué**: para los verbos de acción (derrubar, reconstruír, vencer, regresar, castigar...), el actor que
+  los precede en la frase tiene que ser de la misma clase (pueblo / señores) que en algún hecho con ese verbo. "Os
+  señores ... derrubaron as fortalezas dos irmandiños" pasaba el NLI (0,92) y la coincidencia léxica (0,67): la
+  escribió el LLM en una prueba de esta ronda y esta regla la para.
+- Relato **sin frases de ambiente**: las frases sin personas, nombres, tiempo ni desenlace ("a chuvia caía mansa") ya
+  no se aceptan en el relato; eran el relleno sin sentido de la ronda 2 ("o lume ardeu en silencio").
+- Calibración en `probas/veracidade_calibracion.md` (script `probas/veracidade_calibracion.py`): rechaza las frases
+  falsas o inventadas del gancho de la ronda 2 ("a irmandade venceu", "fortaleiras perderon", "paus e pedras", "un
+  exército"), "As chaves da Rocha Forte caeron", "o lume ardeu durante séculos", "a irmandade derrotou os señores",
+  "os señores reconstruíron as fortalezas" y "os señores non foron castigados con morte"; acepta los 21 hechos del
+  dossier y sus paráfrasis cercanas. El NLI solo **no sirve** en gallego (da "implicación 0,92" a "a irmandade venceu"
+  y "contradicción 0,87" a una frase de lluvia): por eso decide junto con la coincidencia léxica y las reglas.
 
 Lo que **no** controla: una frase falsa construida solo con palabras del dossier puede pasar (la coincidencia léxica
 no entiende quién hace qué fuera de los desenlaces); una causa inventada en una frase de ambiente ("aproveitando a

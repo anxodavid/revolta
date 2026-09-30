@@ -19,7 +19,11 @@ H=["Os nobres tiñan poder, pero a irmandade venceu.",
 "A irmandade gañou a guerra e os señores nunca volveron.",
 "Para a xente, as torres eran refuxios de malfeitores.",
 "Un exército de xente diversa derrubou castelos.",
-"A chuvia caía mansa sobre as pedras dos camiños."]
+"A chuvia caía mansa sobre as pedras dos camiños.",
+"Os señores regresaron co seu exército e derrubaron as fortalezas dos irmandiños.",
+"Os señores reconstruíron as fortalezas.",
+"Os vasalos tiveron que traballar anos para reconstruír as fortalezas derrubadas.",
+"Os señores non foron castigados con morte, pero os campesiños tiveron que pagar moito diñeiro."]
 for h in H[:0]+H:
     for modo in ('gancho','relato'):
         r=v.frase(h,modo)
