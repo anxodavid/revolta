@@ -221,7 +221,7 @@ fiable que documente esa atribución; solo se afirma lo comprobado: que no está
 
 Hechas por el agente guionista (Claude) a partir del veredicto del crítico B
 (`veredictos/guion-r1-lingua-veracidade.md`) y del encargo del orquestador. Todas las citas pasan
-`xerar.py comprobar`: 270 hechos y 385 citas, 0 problemas.
+`xerar.py comprobar`: 271 hechos y 388 citas, 0 problemas.
 
 - **Corregidos**:
   - F089-F090: la confesión de María Cibreira fue **después del tormento**, y el oficio es "de bruxa e feiticeira".
@@ -234,6 +234,9 @@ Hechas por el agente guionista (Claude) a partir del veredicto del crítico B
   - F213: "dedicouno".
 - **Reactivados en la ficha**, porque los usa el guion r2: F018, F025, F032, F070, F086, F116, F145, F151, F152, F159,
   F171, F175, F177, F180, F184, F185, F193, F198, F218, F220, F233 y F242.
+- **Reactivado también F204** (las hierbas que se vendían en los mercados).
+- **Nuevo F271**: el Arquivo expuso el discurso de Feijoo sobre las transformaciones mágicas en la página del
+  proceso de Xinzo de Limia (p. 9 del PDF).
 - **Nuevos, F247-F270**, sacados de las mismas fuentes en caché (Galipedia "Lareira", "Hórreo", "Noite de san Xoán",
   "Herbas de san Xoán" y "Queimada"), para que la zona de dormir sea escena y no definición:
   - la cocina (horno, cambota, capoeira, escano con mesa de levante, potes grandes y pequeños, tratos de compravenda);
@@ -591,7 +594,7 @@ Cada hecho con su tipo, su evidencia (cita literal de la fuente, enlazada) y la 
 | F201 | L | Moita xente cría que o sol baila ao amencer do día de san Xoán, e subía aos montes para velo. | [GL-SANXOAN](https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n): «Resulta común a crenza de que o sol baila ó amencer, disque de ledicia pola festa do santo. Así, adóitase subir a un monte para velo bailar» |  |
 | F202 | L | Outra copla di: «Madrugada de san Xoán, madrugada máis garrida, que baila o sol cando nace e ri cando morre o día». | [GL-SANXOAN](https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n): «Madrugada de san Xoán, madrugada máis garrida, que baila o sol cando nace e ri cando morre o día» |  |
 | F203 | H | Gustav Henningsen rexistrou nos anos sesenta o ritual das nove ondas da Lanzada e o lavado da cara coas herbas de san Xoán. | [GCIENCIA-26](https://www.gciencia.com/retro/a-persecucion-das-bruxas-na-galicia-de-hai-400-anos-eran-apreciadas-e-necesarias-para-o-pobo/): «como o ritual das nove ondas da Lanzada e o lavado de cara coas herbas do San Xoán» |  |
-| F204 (fóra da ficha) | H | Eladio Rodríguez contaba que as herbas se apañaban no campo o día vinte e dous de xuño para vendelas ao día seguinte nos mercados das vilas e cidades. | [GL-HERBAS](https://gl.wikipedia.org/wiki/Herbas_de_san_Xo%C3%A1n): «que se recogen en el campo, generalmente la antevíspera de la noche de San Juan, o sea el día 22, para venderlas al siguiente día en los mercados de las ciudades y villas de Galicia» |  |
+| F204 | H | Eladio Rodríguez contaba que as herbas se apañaban no campo o día vinte e dous de xuño para vendelas ao día seguinte nos mercados das vilas e cidades. | [GL-HERBAS](https://gl.wikipedia.org/wiki/Herbas_de_san_Xo%C3%A1n): «que se recogen en el campo, generalmente la antevíspera de la noche de San Juan, o sea el día 22, para venderlas al siguiente día en los mercados de las ciudades y villas de Galicia» |  |
 | F257 | L | Arredor da fogueira comían sardiñas á brasa e bebían viño, cantando e bailando. | [GL-SANXOAN](https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n): «comen sardiñas á brasa e beben viño, cantando e bailando ó redor da fogueira» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 | F258 | L | Para protexer as casas das bruxas poñíanse nas portas ramos de flores, cardos ou espadanas: as flores polo seu recendo, os cardos polas súas espiñas e as espadanas polas súas follas, que semellan espadas. | [GL-SANXOAN](https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n): «colócanse ramos de flores, cardos ou espadanas nas portas e ventás»<br>[GL-SANXOAN](https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n): «As primeiras, polo seu recendo, combaten o Mal; os segundos fano coas súas espiñas e as terceiras coas súas follas, imitantes dunha espada.» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
 | F259 | L | A flor da auga é a tona, a capa máis superficial da auga, na que se reflicte o sol ao amencer. | [GL-SANXOAN](https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n): «Chámase flor da auga á tona, a capa máis superficial, na que se reflicte o sol ó amencer» | Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir. |
@@ -640,6 +643,7 @@ Cada hecho con su tipo, su evidencia (cita literal de la fuente, enlazada) y la 
 | F234 | H | Morreu en Oviedo o día vinte e seis de setembro de mil setecentos sesenta e catro. | [GL-FEIJOO](https://gl.wikipedia.org/wiki/Benito_Xer%C3%B3nimo_Feijoo): «finado en Oviedo o 26 de setembro de 1764» |  |
 | F235 | A | No claustro grande do mosteiro de Samos hai unha estatua de Feijoo, obra de Asorey. | [GL-FEIJOO](https://gl.wikipedia.org/wiki/Benito_Xer%C3%B3nimo_Feijoo): «Unha estatua de Feijoo, 1947, obra de Asorey, preside o claustro grande de Samos.» |  |
 | F236 (fóra da ficha) | H | O Arquivo do Reino de Galicia garda unha edición de mil setecentos cincuenta e nove do Teatro crítico co discurso sobre as transformacións máxicas. | [ARG](https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf): «Discurso sobre as transformacións e migracións máxicas no Teatro crítico universal de Benito Feijoo Biblioteca auxiliar Data: 1759» |  |
+| F271 | H | Na súa exposición de dous mil vinte, o Arquivo do Reino de Galicia mostrou o discurso de Feijoo sobre as transformacións máxicas na mesma páxina que o proceso de Ana González, en Xinzo de Limia. | [ARG](https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf): «Discurso sobre as transformacións e migracións máxicas no Teatro crítico universal de Benito Feijoo»<br>[ARG](https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf): «Ana González meiga e feiticeira»<br>[ARG](https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf): «conmemora o Día da Muller de 2020» | Engadido polo guionista na rolda 2: as dúas citas están na p. 9 do PDF (===== PAXINA 9 ===== no texto extraído), a do proceso de Ana González. |
 
 ### C7. Peche (26:30-30:00): habelas, hainas; chove na lousa
 

@@ -1548,7 +1548,6 @@ feitos:
   evidencias:
   - {fonte: GCIENCIA-26, cita: "como o ritual das nove ondas da Lanzada e o lavado de cara coas herbas do San Xoán"}
 - id: F204
-  ficha: false
   cap: C5
   tipo: H
   feito: "Eladio Rodríguez contaba que as herbas se apañaban no campo o día vinte e dous de xuño para vendelas ao día seguinte nos mercados das vilas e cidades."
@@ -1845,6 +1844,15 @@ feitos:
   feito: "O Arquivo do Reino de Galicia garda unha edición de mil setecentos cincuenta e nove do Teatro crítico co discurso sobre as transformacións máxicas."
   evidencias:
   - {fonte: ARG, cita: "Discurso sobre as transformacións e migracións máxicas no Teatro crítico universal de Benito Feijoo Biblioteca auxiliar Data: 1759"}
+- id: F271
+  cap: C6
+  tipo: H
+  feito: "Na súa exposición de dous mil vinte, o Arquivo do Reino de Galicia mostrou o discurso de Feijoo sobre as transformacións máxicas na mesma páxina que o proceso de Ana González, en Xinzo de Limia."
+  nota: "Engadido polo guionista na rolda 2: as dúas citas están na p. 9 do PDF (===== PAXINA 9 ===== no texto extraído), a do proceso de Ana González."
+  evidencias:
+  - {fonte: ARG, cita: "Discurso sobre as transformacións e migracións máxicas no Teatro crítico universal de Benito Feijoo"}
+  - {fonte: ARG, cita: "Ana González meiga e feiticeira"}
+  - {fonte: ARG, cita: "conmemora o Día da Muller de 2020"}
 # ------------------------------------------------------------------ C7 peche
 - id: F237
   cap: C7
