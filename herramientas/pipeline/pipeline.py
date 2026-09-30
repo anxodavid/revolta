@@ -96,6 +96,8 @@ def limpar_saida_llm(t):
     t = re.sub(r'^\s*(#+ .*|\*\*[^*]+\*\*|Título:.*|Texto( narrado)?:)\s*\n', '', t)
     t = re.sub(r'\n\s*(Nota|Notas|---)\b.*$', '', t, flags=re.S)
     t = re.sub(r'[*_#]+', '', t)
+    # etiquetas ao principio dun parágrafo ("Parágrafo completo:", "Gancho:", "1.")
+    t = re.sub(r'(?m)^\s*(\d+[.)]\s+|(Parágrafo|Paragrafo|Gancho|Resumo|Texto|Frases?|Versión)[^:\n]{0,25}:\s*)', '', t)
     return re.sub(r'\n{3,}', '\n\n', t).strip()
 
 
@@ -229,6 +231,7 @@ def sen_repeticions(t, previo):
 
 
 VER = {}
+PAL_PARRAFO = 32
 MAX_TOKENS_BLOQUE = {'bloque_gancho': 200, 'bloque_resumo': 180, 'bloque_invitacion': 150, 'bloque_parrafo': 260}
 INVITACION_FIXA = ('Acomódate, apaga a luz e respira amodo. Non tes que lembrar nada do que escoites: '
                    'deixa que a historia pase coma a chuvia na xanela.')
@@ -293,14 +296,19 @@ def salvar(textos, tm, previo, modo, feito, feitos_bloque, antes=False):
     for t in textos:
         boas = []
         for f in partir(t):
-            if not problemas_bloque(f['texto'], tm, min_frases=1, previo='\n\n'.join([previo] + boas), modo=modo):
-                boas.append(f['texto'])
+            det = {}
+            if not problemas_bloque(f['texto'], tm, min_frases=1, previo='\n\n'.join([previo] + boas), modo=modo,
+                                    detalle=det) and not any(x.get('ambiente') for x in det.get('veracidade', [])):
+                boas.append(f['texto'])      # na reserva mixta só entran frases apoiadas, ningunha de ambiente
         if len(boas) > len(mellor):
             mellor = boas
-    faltan = [x for x in (feitos_bloque or []) if not any(veracidade.cobertura(b, x) >= 0.5 for b in mellor)]
+    faltan = [x for x in (feitos_bloque or []) if veracidade.conta(x, ' '.join(mellor)) is False]
     if not mellor:
         return None
+    if faltan:   # as frases do LLM que só repiten palabras do feito literal engadido sobran
+        mellor = [b for b in mellor if veracidade.cobertura(b, ' '.join(faltan)) < 0.8]
     t = ' '.join((faltan + mellor) if antes else (mellor + faltan))
+    t = sen_repeticions(t, previo)
     return None if problemas_bloque(t, tm, min_frases=1, previo=previo, modo=modo, feito=feito) else t
 
 
@@ -340,6 +348,9 @@ def bloque(nome, tm, backend, info, etapa, previo='', modo=None, feito=None, res
             return t, r
     if mellor[0]:
         t = reserva if reserva is not None else ''
+        if t:      # a reserva literal tampouco pode repetir o xa dito (p. ex. un feito que xa contou o gancho)
+            vellas = [v['texto'] for v in partir(previo)] if previo else []
+            t = ' '.join(f['texto'] for f in partir(t) if not any(_parecida(f['texto'], v) > 0.6 for v in vellas))
         r['reserva'] = 'omitido' if not t else 'literal'
         if t:
             det = {}
@@ -375,8 +386,10 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
                        feitos='\n'.join(f'- {fs[i]}' for i in ig)); rex.append(r)
     resumo, r = bloque('bloque_resumo', tema, backend, info, etapa, previo=gancho, modo='relato', reserva='',
                        tema=tema['tema'], fragmento=tema['fragmento'], dossier=dossier); rex.append(r)
-    invit, r = bloque('bloque_invitacion', tema, backend, info, etapa, previo=gancho + '\n\n' + resumo, modo='invitacion',
-                      reserva=INVITACION_FIXA, tema=tema['tema']); rex.append(r)
+    # a invitación a durmir é texto fixo do canal, coma o aviso e a fórmula (ronda 3: o LLM escribía "acougue a luz
+    # e deixe", en tratamento de vostede, e frases baleiras que ningunha porta podía comprobar)
+    invit = INVITACION_FIXA; rex.append({'bloque': 'invitacion', 'intentos': 0, 'problemas_por_intento': [[]],
+                                          'texto_fixo': True})
     fixo = len(tema['aviso'].split()) + len(FORMULA.split())
     resto = tema['palabras'] - fixo - sum(len(x.split()) for x in (gancho, resumo, invit))
     nmax = max(3, min(len(fs), round(resto / 50))); nmin = max(2, nmax - 2)
@@ -390,22 +403,19 @@ def guion_por_bloques(tema, backend, info, etapa='1_guion'):
     seleccion_llm = list(ids)
     if len(ids) < nmin:            # reserva determinista: os últimos feitos do dossier, na orde da ficha
         ids = list(range(max(0, len(fs) - nmax), len(fs)))
-    ids = sorted(ids[:nmax])      # a ficha ten os feitos en orde cronolóxica: o relato respéctaa (ronda 3)
+    ids = [i for i in ids if i not in ig][:nmax]       # os feitos do gancho non se repiten no relato (ronda 3)
+    engadidos = []
+    # extensión (ronda 3): cada parágrafo validado ou literal ten de media ~PAL_PARRAFO palabras; se a selección non
+    # chega á extensión obxectivo, engádense outros feitos do dossier que non están no gancho
+    while len(ids) * PAL_PARRAFO < resto and len(ids) + len(ig) < len(fs):
+        j = next(j for j in range(len(fs)) if j not in ids and j not in ig)
+        ids.append(j); engadidos.append(j + 1)
+    ids = sorted(ids)      # a ficha ten os feitos en orde cronolóxica: o relato respéctaa (ronda 3)
     info['seleccion_feitos'] = {'resposta_llm': sel, 'escollidos_llm': [i + 1 for i in seleccion_llm],
-                                'usados': [i + 1 for i in ids], 'reserva': ids != seleccion_llm[:nmax]}
+                                'usados': [i + 1 for i in ids], 'reserva': len(seleccion_llm) < nmin,
+                                'engadidos_pola_extension': engadidos}
     pars, anterior = [], resumo
-    k = -1
-    while True:
-        k += 1
-        if k >= len(ids):
-            # os bloques que van á reserva literal son máis curtos: se falta texto, engádense os feitos seguintes
-            # do dossier (en orde) ata achegarse á extensión obxectivo
-            feitas = len(' '.join([tema['aviso'], gancho, resumo, invit] + pars).split()) + len(FORMULA.split())
-            resto_ids = [j for j in range(len(fs)) if j not in ids and j not in ig and j > max(ids)]
-            if feitas >= 0.9 * tema['palabras'] or not resto_ids:
-                break
-            ids.append(resto_ids[0]); info['seleccion_feitos'].setdefault('engadidos_pola_extension', []).append(resto_ids[0] + 1)
-        i = ids[k]
+    for k, i in enumerate(ids):
         ton = TONS[min(k, len(TONS) - 1)]
         ult = ' '.join(f['texto'] for f in partir(anterior)[-2:])
         p, r = bloque('bloque_parrafo', tema, backend, info, etapa, previo='\n\n'.join([gancho, resumo, invit] + pars),

@@ -69,6 +69,12 @@ def cobertura(frase, premisa):
     return round(len(r & raices(premisa)) / len(r), 2) if r else 1.0
 
 
+def conta(feito, texto):
+    """O texto conta o feito? Proporción das raíces DO FEITO que aparecen no texto (non ao revés: unha frase baleira
+    como "as testemuñas lembraban" ten todas as súas palabras no feito, pero non o conta)."""
+    return cobertura(feito, texto) >= 0.45
+
+
 def desenlaces(t):
     s = _sen_acentos(t)
     return sorted({d for d in DESENLACE if re.search(r'\b' + re.escape(d), s)})
@@ -110,7 +116,7 @@ class Verificador:
                 r = {'frase': f, 'E': 1.0, 'cobertura': 1.0, 'apoio': [i + 1], 'C_max': 0.0, 'contradi': None,
                      'ok': True, 'motivo': '', 'literal': True}
                 if feito_propio is not None:
-                    r['conta_o_feito'] = nf in _norm(feito_propio) or cobertura(f, feito_propio) >= 0.6
+                    r['conta_o_feito'] = conta(feito_propio, f)
                 return r
         sc = [(i, self.nli(p, f)) for i, p in enumerate(self.feitos)]
         # premisas: cada feito e pares cos 4 feitos máis prometedores (moitas frases xuntan dous feitos)
@@ -161,7 +167,7 @@ class Verificador:
         r['ambiente'] = not esixida and not apoiada
         r['motivo'] = '; '.join(motivos)
         if feito_propio is not None:
-            r['conta_o_feito'] = self.nli(feito_propio, f)['E'] >= 0.5 or cobertura(f, feito_propio) >= 0.6
+            r['conta_o_feito'] = conta(feito_propio, f)
         return r
 
     def texto(self, t, modo='gancho', feito_propio=None):
