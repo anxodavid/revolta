@@ -17,3 +17,16 @@ Respuestas a las decisiones D1-D6 del §0.2 de `plan-de-negocio.md`, tomadas tra
 - Nuevo listón del producto: canales faceless de historia hechos con IA (tipo *Historia Desconocida*), en galego y en formato para dormir.
 - Riesgos que suben: política de YouTube de contenido inauténtico/masivo (canal 100 % automático), errores de lengua e historia sin filtro humano y reacción de la comunidad galega. En anónimo, el riesgo reputacional personal baja.
 - Voz del piloto: la mejor en el kit A/B y en el control ASR (hoy, StyleTTS2 Brais de Nós: WER 0,26).
+
+# Decisiones del promotor (30-09-2026, segunda sesión)
+
+| # | Decisión | Respuesta |
+|---|---|---|
+| D7 | Siguiente muestra | **Vídeo largo** siguiendo la estela de la muestra más madura (ronda 3 del Gauntlet 2). El operador fija ≈ 30 min, como la referencia. |
+| D8 | Guion sin LLM por API "de momento" | **Lo escribe Claude con agentes y un proceso de Gauntlet.** No es desatendido: se declara en la QA. Los controles automáticos se mantienen como red de seguridad. |
+| D9 | Imagen | Mejorar la parte visual a partir de los problemas que vio el juez (luz plana y monótona, composiciones repetidas, iconografía no gallega, imágenes blandas). |
+| D10 | Tono de la voz | **Más gancho y más atractivo los primeros minutos**, y bajada gradual hacia el tono de dormir. |
+| D11 | Reclamo | **"Cousas de Galiza para durmir"**. Temas posibles: meigas, queimadas, capítulos de la historia, muiñeira o lo que el Gauntlet vea con más gancho y audiencia. |
+| D12 | Método | Trabajar con agentes, guardando el trabajo parcial en git cada poco y documentando los aprendizajes cada poco. |
+
+Contexto y reglas del Gauntlet 3: `plan-de-negocio/gauntlet3/contexto.md`.
