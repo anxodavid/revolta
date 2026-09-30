@@ -36,7 +36,7 @@ CLIP_MODEL = os.environ.get('CLIP_MODEL', 'openai/clip-vit-large-patch14')
 MAN_DIST = 0.14
 MAN_DETALLE = 0.12   # sen corpos na imaxe, unha man máis ancha ca isto (fracción do ancho) é un primeiro plano
 CORPOS_MAX = 5
-VERSION = 5   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
+VERSION = 6   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
 
 # (etiqueta, expresión regular sobre a descrición en inglés e os obxectos de <OD>)
 LISTA = [
@@ -45,11 +45,16 @@ LISTA = [
     ('balcóns', r'\bbalcon(y|ies)\b'),
     ('tellados laranxas', r'\b(red|orange|terracotta|clay)[- ]?(tiled? )?roofs?\b|\broof tiles\b|\btiled roofs?\b'),
     ('vehículos modernos', r'\b(car|cars|truck|bus|bicycle|motorcycle|train|airplane|traffic light)\b'),
-    ('obxectos modernos', r'\b(street ?lamps?|lamp ?posts?|power lines?|telephone|umbrella|glasses|sunglasses|'
+    ('obxectos modernos', r'\b(street ?lamps?|lamp ?posts?|streetlights?|street lights?|lanterns? hanging|hanging lanterns?|'
+                          r'city lights?|town lights?|tea ?lights?|glass jar|jar candle|sliced bread|slices? of bread|'
+                          r'kettle|teapot|coffee pot|feather boa|power lines?|telephone|umbrella|glasses|sunglasses|'
                           r'asphalt|electric|light bulbs?|plastic|laptop|cell phone|clock|tv|television)\b'),
     # versión 5: "lamp" só con adxectivos modernos (o candil, "oil lamp", é a luz da fase calma)
-    ('interior moderno', r'\b(bedroom|nightstand|bedside|(table|floor|desk|bedside|electric) lamps?|lampshades?|curtains?|sofa|couch|picture frames?|pillows)\b'),
-    ('texto na imaxe', r'\b(text|letters?|words?|writing|written|sign that reads|watermark|logo|caption|signature)\b'),
+    ('interior moderno', r'\b(bedroom|nightstand|bedside|(table|floor|desk|bedside|electric) lamps?|lampshades?|curtains?|sofa|couch|'
+                         r'picture frames?|pillows|cushions?|upholstered|armchairs?|window seat|mantel(piece)?|potted plants?|'
+                         r'flower ?pots?|vase of flowers|large window|view from the window)\b'),
+    ('texto na imaxe', r'\b(text|letters?|words?|writing|written|sign that reads|watermark|logo|caption|signature|'
+                       r'open book|book open|pages of|document|newspaper)\b'),
     ('cruces portadas', r'\b(carrying|holding|with) (large |wooden )?(crosses|a cross|crucifix(es)?)\b'),
     ('armas', r'\b(guns?|rifles?|muskets?|pistols?|cannons?|swords? drawn)\b'),
     ('violencia', r'\b(blood|bloody|corpses?|dead bod(y|ies)|burning (building|house|castle|village|keep|tower|fortress)s?|flames engulf)'),
@@ -58,8 +63,14 @@ LISTA = [
     # versión 5: sen "procession" (unha Santa Compaña de 3-4 figuras é lexítima); os corpos cóntaos MediaPipe (CORPOS_MAX)
     ('multitude', r'\b(crowds?|large group|big group|army|armies|soldiers|knights|many people|multitude|throng)\b'),
     # versión 5: unha fogueira pequena e afastada (San Xoán) xa non falla; si as grandes e o que arde
-    ('lume grande no exterior', r'\b(large|big|huge|raging|massive) (fire|bonfire|blaze)s?\b|\bon fire\b|\bengulfed\b',
-     r'\b(fireplace|hearth|stove|oven|pot|cauldron|kitchen)\b'),     # 3.º: excepción (o lume da lareira é interior)
+    ('lume grande no exterior', r'\b(large|big|huge|raging|massive) (fire|bonfire|blaze)s?\b|\bon fire\b|\bengulfed\b|'
+                                r'\bcampfire\b|\bburning brightly\b',
+     r'\b(fireplace|hearth|stove|oven|kitchen)\b'),     # 3.º: excepción (o lume da lareira é interior; o caldeiro xa non)
+    # versión 6 (veredicto visual-r1): clichés de meiga e animais en grupo
+    ('clichés de meiga', r'\b(potion|witch(es|craft)?|broom(stick)?s?|pointed hat|spell ?books?|casting a spell|crystal ball|'
+                         r'cauldron with (a )?(glowing|bubbling|red|green)|(glowing|bubbling) (liquid|potion))\b'),
+    ('animais en grupo', r'\b(three|four|five|six|several|many|a herd of|a group of) (cows|oxen|cattle|bulls|sheep|goats|horses|'
+                         r'cats|dogs)\b'),
     # versión 5 (Gauntlet 3): iconografía non galega que o crítico viu (ciprés toscanos, rodas de raios, fachadas
     # mediterráneas). "olive" só con árbores (Florence di "olive green"), "palm" só con árbores (a palma da man).
     ('iconografía mediterránea', r'\b(cypress(es)?|olive (trees?|groves?|orchards?)|palm trees?|eucalyptus|'
@@ -81,6 +92,18 @@ PARES = [
      'a green rainy Atlantic landscape with moss'),
     ('eucaliptos (CLIP)', 'a eucalyptus plantation with tall straight pale peeling trunks',
      'an old oak forest with thick gnarled mossy trunks'),
+    # versión 6 (veredicto visual-r1 §4.2): luz eléctrica e interiores e casas alleas que Florence non nomeou
+    ('luz eléctrica (CLIP)', 'a street at night lit by rows of electric street lamps',
+     'a dark lane at night lit only by a hand-held lantern'),
+    ('luces de cidade (CLIP)', 'city lights glowing in a valley at night', 'dark hills at night with no lights'),
+    ('salón moderno (CLIP)', 'a cozy living room with cushions and a fireplace with a mantelpiece',
+     'a smoke-blackened peasant kitchen with an open stone hearth at floor level'),
+    ('patio mediterráneo (CLIP)', 'an arcaded courtyard with potted plants and hanging lanterns',
+     'a granite village fountain with a stone trough'),
+    ('casas británicas (CLIP)', 'English stone cottages with gable chimneys and sash windows',
+     'low granite houses with small openings and slate roofs'),
+    ('caldeiro de meiga (CLIP)', "a witch's cauldron with a glowing potion",
+     'an iron cooking pot over embers in a peasant hearth'),
 ]
 # Umbrais por par, calibrados o 30-09-2026 con probas/visual_calibrar_clip.py (72 imaxes etiquetadas por Claude:
 # 33 fotogramas das rondas 1-3 do Gauntlet 2, 32 da comparativa de modelos e 7 escenas alleas feitas adrede):
@@ -91,11 +114,20 @@ PARES = [
 PAR_MARXE = {'tellados laranxas (CLIP)': 0.045, 'muros encalados (CLIP)': 0.060, 'ciprés (CLIP)': 0.060,
              'oliveiras (CLIP)': 0.040, 'palmeiras (CLIP)': 0.020,
              'rodas de raios (CLIP)': 9.0,    # DESACTIVADO: o par estaba invertido; as rodas quedan para Florence ("spoked")
-             'paisaxe seca (CLIP)': 0.072, 'eucaliptos (CLIP)': 0.070}
+             'paisaxe seca (CLIP)': 0.072, 'eucaliptos (CLIP)': 0.070,
+             # versión 6 (provisionais; calibrados despois coa folla r1)
+             'luz eléctrica (CLIP)': 0.030, 'luces de cidade (CLIP)': 0.030, 'salón moderno (CLIP)': 0.030,
+             'patio mediterráneo (CLIP)': 0.030, 'casas británicas (CLIP)': 0.030, 'caldeiro de meiga (CLIP)': 0.030}
 PAR_PERTINENCIA = 0.15       # (0,20 deixaba fóra a maioría das malas: as similitudes de CLIP-L andan en 0,08-0,30)
 # Conceptos do campo `negativo`: sim("a photo with X") − sim("a photo") no mesmo recorte. Na calibración, as boas
 # chegan a 0,037 e as malas claras a 0,047-0,12 (o valor absoluto non separaba: boas ata 0,19, malas desde 0,09).
 NEGATIVO_MARXE = 0.040
+# Versión 6: campo `clave` (o que TEN que verse): sim("a photo with X") − sim("a photo") no mellor recorte, por riba
+# de CLAVE_MARXE. Calibrado coas imaxes da folla r1 (ver aprendizajes/visual.md).
+CLAVE_MARXE = 0.030
+# Versión 6: na fase de durmir, nada de lume vivo: fracción de píxeles con luminancia > 0,85 (as brasas quedan
+# por debaixo; as chamas amarelas, por riba). Na r1: o caldeiro con chamas do plano 16 daba 0,97 %.
+ALTAS_LUCES_DURMIR = 0.005
 # Repetición: coseno dos embeddings medios. Na calibración, prompts distintos ata 0,879 (p99 0,866); o mesmo prompt
 # noutro modelo ou estilo, mediana 0,864 (p10 0,80). 0,90: só as imaxes case iguais en contido e composición.
 SIM_CLIP = 0.90
@@ -103,16 +135,19 @@ SIM_CLIP = 0.90
 # máx(1, ceil(fracción x planos)). Umbrais da calibración (as similitudes texto-imaxe de CLIP son baixas, 0,15-0,26):
 # camiñantes de costas 6/6 con 0 falsos (a máis alta sen eles, 0,217); lareira 0,205 colle tamén as lareiras sen
 # persoa (mesmo arquetipo visual); o do retrato non ten datos [S].
-ARQUETIPOS = [
-    ('camiñantes de costas', 'people in long cloaks seen from behind walking away along a path', 0.03, 0.220),
-    ('castelo no outeiro', 'a distant castle on a hill in a wide landscape', 0.03, 0.225),
-    ('grupo de pé', 'a group of several people standing together in a row', 0.04, 0.195),
-    ('rúa da aldea', 'a street of a stone village with a few people', 0.05, 0.240),
-    ('persoa á lareira', 'a person sitting by a fire in a dark room', 0.06, 0.205),
-    ('bosque con néboa', 'a misty forest with no people', 0.06, 0.210),
-    ('mans en primeiro plano', 'a close-up of hands doing a task', 0.06, 0.180),
-    ('retrato', 'a close-up portrait of a face', 0.08, 0.220),
+ARQUETIPOS = [   # (etiqueta, textos, fracción máxima, sim mínima); a sim é a máxima entre os textos
+    ('camiñantes de costas', ['people in long cloaks seen from behind walking away along a path',
+                              'a lone person seen from behind walking away along a path or street'], 0.03, 0.220),
+    ('castelo no outeiro', ['a distant castle on a hill in a wide landscape'], 0.03, 0.225),
+    ('grupo de pé', ['a group of several people standing together in a row'], 0.04, 0.195),
+    ('rúa da aldea', ['a street of a stone village with a few people'], 0.05, 0.240),
+    # versión 6: texto máis estreito, e só conta se o prompt nomea lume (unha vela non é unha lareira: visual-r1 §4.5)
+    ('persoa á lareira', ['a person sitting beside an open hearth fire'], 0.06, 0.205),
+    ('bosque con néboa', ['a misty forest with no people'], 0.06, 0.210),
+    ('mans en primeiro plano', ['a close-up of hands doing a task'], 0.06, 0.180),
+    ('retrato', ['a close-up portrait of a face'], 0.08, 0.220),
 ]
+ARQ_CONDICION = {'persoa á lareira': r'\b(fire|hearth|fireplace|embers?|flames?|firelight)\b'}
 ARQ_ESPAZO = 5               # dous planos do mesmo arquetipo, polo menos a 5 planos de distancia
 
 
@@ -176,15 +211,30 @@ class Clip:
                 problemas.append(f'negativo do plano: {x} (CLIP)')
         return problemas, det
 
-    def arquetipo(self, emb):
-        """Arquetipo de composición: o que máis supera o seu umbral (ou None se ningún o pasa)."""
-        T = self.textos([t for _, t, _, _ in ARQUETIPOS])
-        s = T @ emb
-        sobre = [(float(s[k]) - ARQUETIPOS[k][3], k) for k in range(len(ARQUETIPOS)) if s[k] >= ARQUETIPOS[k][3]]
-        if not sobre:
+    def clave(self, E, clave=None):
+        """O que o plano TEN que mostrar (campo `clave`, 1-3 conceptos): falla se ningún recorte o amosa."""
+        problemas, det = [], {}
+        base = E @ self.textos(['a photo'])[0]
+        for x in _lista_negativo(clave):
+            s = float((E @ self.textos([f'a photo with {x}'])[0] - base).max())
+            det[f'clave: {x}'] = round(s, 3)
+            if s < CLAVE_MARXE:
+                problemas.append(f'falta: {x} (CLIP)')
+        return problemas, det
+
+    def arquetipo(self, emb, prompt=None):
+        """Arquetipo de composición: o que máis supera o seu umbral (ou None se ningún o pasa). Os arquetipos con
+        condición (ARQ_CONDICION) só contan se o prompt a cumpre."""
+        mellor = None
+        for et, textos, _, umbral in ARQUETIPOS:
+            if et in ARQ_CONDICION and prompt is not None and not re.search(ARQ_CONDICION[et], prompt, re.I):
+                continue
+            sim = float((self.textos(textos) @ emb).max())
+            if sim >= umbral and (mellor is None or sim - umbral > mellor[0]):
+                mellor = (sim - umbral, et, sim)
+        if mellor is None:
             return None
-        _, k = max(sobre)
-        return {'etiqueta': ARQUETIPOS[k][0], 'sim': round(float(s[k]), 3)}
+        return {'etiqueta': mellor[1], 'sim': round(mellor[2], 3)}
 
 
 def _lista_negativo(negativo):
@@ -193,6 +243,14 @@ def _lista_negativo(negativo):
     if isinstance(negativo, str):
         negativo = re.split(r'[,;]', negativo)
     return [x.strip() for x in negativo if x and x.strip()][:6]
+
+
+def altas_luces(png, umbral=0.85):
+    """Fracción de píxeles con luminancia (sRGB, 0-1) por riba de `umbral`: chamas vivas, ceos brillantes."""
+    import numpy as np
+    from PIL import Image
+    x = np.asarray(Image.open(png).convert('RGB').resize((448, 256)), np.float32) / 255
+    return float(((x @ np.array([0.2126, 0.7152, 0.0722], np.float32)) > umbral).mean())
 
 
 def repeticion(emb, aceptadas, arquetipos, arq, n_total=None):
@@ -204,7 +262,7 @@ def repeticion(emb, aceptadas, arquetipos, arq, n_total=None):
         sims = np.stack(aceptadas) @ emb
         j = int(sims.argmax())
         if sims[j] > SIM_CLIP:
-            pr.append(f'repetida (CLIP {sims[j]:.2f} co plano {j})')
+            pr.append(f'repetida (CLIP {sims[j]:.2f} co plano {j + 1})')
     if arq:
         et = arq['etiqueta']
         prev = [k for k, a in enumerate(arquetipos) if a and a['etiqueta'] == et]
@@ -213,7 +271,7 @@ def repeticion(emb, aceptadas, arquetipos, arq, n_total=None):
         if len(prev) >= tope:
             pr.append(f'arquetipo repetido: {et} ({len(prev)} xa, tope {tope})')
         elif prev and len(arquetipos) - prev[-1] < ARQ_ESPAZO:
-            pr.append(f'arquetipo seguido: {et} (xa no plano {prev[-1]})')
+            pr.append(f'arquetipo seguido: {et} (xa no plano {prev[-1] + 1})')
     return pr
 
 
@@ -284,18 +342,23 @@ class Revisor:
         problemas = [et for et, rx, *exc in LISTA if re.search(rx, texto) and not (exc and re.search(exc[0], texto))]
         return problemas, {'descricion': cap, 'obxectos': obx}
 
-    def revisar(self, png, negativo=None, **_):
-        """{'ok', 'problemas', 'mans', 'corpos', 'descricion', 'obxectos', 'iconografia', 'arquetipo', 'clip_emb'}.
-        A repetición non se mira aquí (depende do episodio): ver `repeticion`."""
+    def revisar(self, png, negativo=None, clave=None, fase=None, prompt=None, **_):
+        """{'ok', 'problemas', 'mans', 'corpos', 'descricion', 'obxectos', 'iconografia', 'arquetipo', 'clip_emb',
+        'altas_luces'}. A repetición non se mira aquí (depende do episodio): ver `repeticion`."""
         pr, det = self.mans(png)
+        luces = altas_luces(png)
+        det['altas_luces'] = round(luces, 4)
+        if fase == 'durmir' and luces > ALTAS_LUCES_DURMIR:
+            pr.append(f'lume vivo ao durmir ({luces:.1%} de altas luces)')
         if self.vlm is not None:
             p2, d2 = self.anacronismos(png)
             pr += p2; det.update(d2)
         if self.clip is not None:
             E, emb = self.clip.analizar(png)
             p3, d3 = self.clip.iconografia(E, negativo)
-            pr += [x for x in p3 if x not in pr]
-            det.update({'iconografia': d3, 'arquetipo': self.clip.arquetipo(emb), 'clip_emb': emb})
+            p4, d4 = self.clip.clave(E, clave)
+            pr += [x for x in p3 + p4 if x not in pr]
+            det.update({'iconografia': {**d3, **d4}, 'arquetipo': self.clip.arquetipo(emb, prompt), 'clip_emb': emb})
         return {'ok': not pr, 'problemas': pr, **det}
 
     def repeticion(self, emb, aceptadas, arquetipos, arq, n_total=None):

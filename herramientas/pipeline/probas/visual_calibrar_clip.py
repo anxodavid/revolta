@@ -37,7 +37,6 @@ def main():
     et = json.loads(Path(a.etiquetas).read_text())
     cl = revisor.Clip()
     T = cl.textos([t for _, x, y in revisor.PARES for t in (x, y)])
-    TA = cl.textos([a[1] for a in revisor.ARQUETIPOS])
     rows = []
     for x in et:
         E, emb = cl.analizar(x['f'])
@@ -45,9 +44,8 @@ def main():
         for k, (lab, _, _) in enumerate(revisor.PARES):
             sb, sg = E @ T[2 * k], E @ T[2 * k + 1]
             pares[lab] = (float((sb - sg).max()), float(max(sb.max(), sg.max())))
-        sa = TA @ emb
-        rows.append({**x, 'pares': pares, 'emb': emb, 'arq_sims': {revisor.ARQUETIPOS[j][0]: round(float(sa[j]), 3)
-                                                                   for j in range(len(sa))}})
+        rows.append({**x, 'pares': pares, 'emb': emb,
+                     'arq_sims': {a[0]: round(float((cl.textos(a[1]) @ emb).max()), 3) for a in revisor.ARQUETIPOS}})
     out = {'pares': {}, 'repeticion': {}, 'arquetipos': {}}
     print('== Iconografía: marxe (sim malo - sim bo) e pertinencia')
     for lab, _, _ in revisor.PARES:
