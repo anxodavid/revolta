@@ -1,8 +1,10 @@
 """Textos fixos das probas da peza VOZ (Gauntlet 3). Escritos por Claude (axente de voz) para medir; non son guion.
 
-PASAXE: 7 frases sobre a lenda da Santa Compaña (o tema aínda non estaba elixido cando se fixeron as medidas; a
-investigación da peza TEMA apunta a Santa Compaña / meigas para outubro). O legendario vai como lenda ("contan",
-"din"). Rendérase igual en cada punto da curva: as diferenzas entre puntos son só da voz.
+PASAXE: 7 frases sobre a lenda da Santa Compaña, escritas antes de que a peza TEMA elixise tema: úsanse no barrido
+das 40 referencias e nas medidas do efecto de cada control. O legendario vai como lenda ("contan", "din").
+PASAXE_MEIGAS: 7 frases do tema elixido ("As meigas de verdade", tema/investigacion.md: o conxuro de 1967, a parteira
+de Vilalba segundo unha testemuña, a meiga como curandeira) para as medidas da curva nos 5 puntos e a mostra. Cada
+pasaxe rendérase igual en cada punto da curva: as diferenzas entre puntos son só da voz.
 
 COTOVIA_PROPIAS: frases con vogais abertas e pechadas (porta, terra, home, pedra, óso), monosílabos (que, de, o, si,
 non, á) e nomes propios galegos, para o A/B de Cotovía. Complétanse con frases de test do corpus Nos_Brais-GL (que
@@ -17,6 +19,17 @@ PASAXE = [
     'Os nenos escoitaban co corpo quedo e os ollos pechados, ata que o sono os levaba amodo.',
     'E así, noite tras noite, a memoria da terra pasaba dunha voz a outra, coma unha auga mansa.',
 ]
+
+PASAXE_MEIGAS = [
+    'Seguramente oíches o conxuro da queimada e pensas que é moi antigo.',
+    'Non o é: escribiuno en Vigo, en mil novecentos sesenta e sete, Mariano Marcos Abalo.',
+    'En Vilalba, en mil seiscentos dezasete, unha testemuña declarou que unha parteira dicía poder pasarlle a un home as dores do parto.',
+    'Abondaba con calzarlle ao home os zapatos dela e dicir unhas palabras.',
+    'A meiga dos papeis non era a bruxa dos contos, senón a curandeira, a parteira, a muller que sabía de herbas.',
+    'Contan que na noite de San Xoán as mozas ían á fonte antes de que saíse o sol.',
+    'Chove na lousa, amodo, e a historia pode esperar ata mañá.',
+]
+PARRAFO = {'PASAXE': 3, 'PASAXE_MEIGAS': 4}      # índice da frase que abre o segundo parágrafo (pausa_parrafo)
 
 COTOVIA_PROPIAS = [
     'A porta da torre estaba aberta, e o home entrou sen facer ruído.',

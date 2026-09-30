@@ -20,20 +20,21 @@ import curva, textos
 
 SR = 24000
 VOZ_KW = ('escala', 'estilo', 'f0_media', 'f0_rango', 'enerxia', 'alpha', 'beta', 'embedding_scale', 'pasos')
-PARTE1 = [textos.PASAXE[0], textos.PASAXE[1], textos.PASAXE[5]]
-# (palabra da curva, frase, novo parágrafo antes)
+PARTE1 = [textos.PASAXE_MEIGAS[0], textos.PASAXE_MEIGAS[2], textos.PASAXE_MEIGAS[4]]
+# (palabra da curva, frase, novo parágrafo antes). Tema elixido: "As meigas de verdade" (tema/investigacion.md).
 EMBUDE = [
-    (0, 'Hai unha procesión que ninguén quere atopar, e aínda así, moita xente di que a viu.', False),
-    (60, 'Pasa de noite, en silencio, e din que quen a atopa pode acabar camiñando con ela.', False),
-    (130, 'Isto é Cousas de Galiza para durmir.', False),
-    (280, 'Esta noite imos camiñar amodo por unha das lendas máis vellas do país: a Santa Compaña.', True),
-    (500, 'Contan os vellos que, nas noites de néboa, unha procesión de ánimas percorre os camiños das aldeas.', False),
-    (750, 'Diante vai sempre un vivo cunha cruz na man, e non pode soltala ata que atopa outra persoa que a leve.', False),
-    (950, 'Non había casa sen lareira, nin lareira sen historias.', True),
-    (1400, 'Mentres fóra chovía sobre os tellados de lousa, as avoas falaban das meigas e dos mortos.', False),
-    (1800, 'Os nenos escoitaban co corpo quedo e os ollos pechados, ata que o sono os levaba amodo.', True),
-    (2700, 'E así, noite tras noite, a memoria da terra pasaba dunha voz a outra, coma unha auga mansa.', False),
-    (3600, 'A chuvia segue a caer, lenta, sobre os tellados.', False),
+    (0, 'Seguramente oíches o conxuro da queimada e pensas que é moi antigo.', False),
+    (40, 'Non o é: escribiuno en Vigo, en mil novecentos sesenta e sete, Mariano Marcos Abalo.', False),
+    (90, 'E en Vilalba, en mil seiscentos dezasete, unha testemuña declarou que unha parteira dicía poder pasarlle a un '
+         'home as dores do parto.', False),
+    (150, 'Isto é Cousas de Galiza para durmir.', True),
+    (280, 'Esta noite imos buscar as meigas de verdade, as que deixaron o seu nome nos papeis.', True),
+    (500, 'A meiga dos papeis non era a bruxa dos contos, senón a curandeira, a parteira, a muller que sabía de herbas.', False),
+    (950, 'Nas casas de pedra, arredor da lareira, as avoas falaban das herbas, do leite e do mal de ollo.', True),
+    (1400, 'Contan que na noite de San Xoán as mozas ían á fonte antes de que saíse o sol.', False),
+    (1800, 'Levaban herbas, auga e palabras moi antigas.', True),
+    (2700, 'Fóra, a choiva caía amodo sobre os tellados de lousa.', False),
+    (3600, 'Chove na lousa, amodo, e a historia pode esperar ata mañá.', False),
 ]
 
 

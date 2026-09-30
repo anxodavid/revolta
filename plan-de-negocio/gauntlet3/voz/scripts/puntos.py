@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""A pasaxe fixa (textos.PASAXE) en 5 puntos da curva do embude, con medidas por punto (peza VOZ, Gauntlet 3).
+"""A pasaxe fixa (textos.PASAXE_MEIGAS, do tema elixido) en 5 puntos da curva do embude, con medidas por punto (peza VOZ, Gauntlet 3).
 
     source herramientas/pipeline/entorno.sh
     PATH=$COTOVIA_NOVA_PATHBIN:$PATH PYTHONPATH=$ST2_STUBS:$SCRATCH/voz/pylib flock "$CPU_LOCK" \
@@ -8,7 +8,8 @@
 Puntos: curva.en(pal, 3600) con pal = 0, 280, 950, 1800 e 3600 (gancho, fin do gancho, fin da transición, metade,
 final). A curva é a de herramientas/pipeline/curva.py, ou esa mesma con os valores que traia --curva
 ({clave: [5 valores]}, tamén claves novas como beta ou embedding_scale). As frases van xuntas coas pausas de
-longo.py (pausa_frase + axuste pola lonxitude da seguinte; pausa_parrafo entre as frases 3 e 4) e coa ganancia_db.
+longo.py (pausa_frase + axuste pola lonxitude da seguinte; pausa_parrafo antes da frase textos.PARRAFO) e coa
+ganancia_db.
 REF_WAV (viva) e REF_WAV_CALMO (calma) veñen do contorno.
 
 Medidas por punto: palabras/min (pausas incluídas, como o QA de longo.py), sílabas/s da fala, F0 (media en Hz,
@@ -26,7 +27,6 @@ import curva
 
 PUNTOS = (0, 280, 950, 1800, 3600)
 TOTAL = 3600
-PARRAFO = 3                  # a frase 3 (índice) empeza parágrafo novo
 VOZ_KW = ('escala', 'estilo', 'f0_media', 'f0_rango', 'enerxia', 'alpha', 'beta', 'embedding_scale', 'pasos')
 SR = 24000
 
@@ -47,7 +47,7 @@ def en(pal, cv):
         curva.CURVA = vello
 
 
-def render(V, cv, pal, d):
+def render(V, cv, pal, d, frases, parrafo):
     """Frases no punto pal: WAV por frase e pasaxe montada coas pausas e a ganancia. Devolve (c, kw, tempos, wavs)."""
     import hashlib
     c = en(pal, cv)
@@ -56,16 +56,16 @@ def render(V, cv, pal, d):
                                        os.environ.get('PATH', '').split(':')[0]]).encode()).hexdigest()[:8]
     os.makedirs(d, exist_ok=True)
     partes, tempos, wavs, t = [], [], [], 0.0
-    for k, tx in enumerate(textos.PASAXE):
+    for k, tx in enumerate(frases):
         p = os.path.join(d, f'{k}-{chave}.wav'); wavs.append(p)
         if not os.path.exists(p):
             w, _ = V.infer(tx, **kw)
             sf.write(p, w, SR)
         w = sf.read(p)[0] * 10 ** (c['ganancia_db'] / 20)
         tempos.append((t, t + len(w) / SR)); partes.append(w); t += len(w) / SR
-        if k + 1 < len(textos.PASAXE):
-            nw = len(textos.PASAXE[k + 1].split())
-            g = c['pausa_frase'] + min(0.3, max(-0.15, 0.02 * (nw - 14))) + (c['pausa_parrafo'] if k + 1 == PARRAFO else 0)
+        if k + 1 < len(frases):
+            nw = len(frases[k + 1].split())
+            g = c['pausa_frase'] + min(0.3, max(-0.15, 0.02 * (nw - 14))) + (c['pausa_parrafo'] if k + 1 == parrafo else 0)
             partes.append(np.zeros(int(g * SR))); t += g
     sf.write(os.path.join(d, 'pasaxe.wav'), np.concatenate(partes).astype(np.float32), SR)
     return c, kw, tempos, wavs
@@ -75,15 +75,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('saida'); ap.add_argument('--curva', default=None); ap.add_argument('--etiqueta', default='puntos')
     ap.add_argument('--sen-medir', action='store_true')
+    ap.add_argument('--pasaxe', default='PASAXE_MEIGAS', choices=('PASAXE_MEIGAS', 'PASAXE'))
     ap.add_argument('--wer-pasaxe', action='store_true', help='WER tamén sobre a pasaxe enteira, como o QA')
     a = ap.parse_args(); a.saida = os.path.abspath(a.saida)
     cv = curva_candidata(a.curva)
+    frases, parrafo = getattr(textos, a.pasaxe), textos.PARRAFO[a.pasaxe]
     base = os.path.join(os.environ['SCRATCH'], 'voz', a.etiqueta)
     import voz_st2 as V
     V.cargar()
     t0 = time.time(); info = {}
     for pal in PUNTOS:
-        c, kw, tempos, wavs = render(V, cv, pal, os.path.join(base, f'p{pal:04d}'))
+        c, kw, tempos, wavs = render(V, cv, pal, os.path.join(base, f'p{pal:04d}'), frases, parrafo)
         info[pal] = (c, kw, tempos, wavs)
         print('tts', pal, kw, round(time.time() - t0), flush=True)
     V.M.clear()
@@ -97,19 +99,19 @@ def main():
         c, kw, tempos, wavs = info[pal]
         d = os.path.join(base, f'p{pal:04d}')
         fr = []
-        for p, tx in zip(wavs, textos.PASAXE):
+        for p, tx in zip(wavs, frases):
             m = A.medir(p, tx); m.update(em.medir(p)); fr.append(m)
         pas = os.path.join(d, 'pasaxe.wav')
         # WER frase a frase (Whisper nun audio longo ás veces salta tramos enteiros: ver informe) e, con --wer-pasaxe,
         # tamén sobre a pasaxe enteira coas pausas, como o QA
-        ws = [asr.wer(p, tx) for p, tx in zip(wavs, textos.PASAXE)]
+        ws = [asr.wer(p, tx) for p, tx in zip(wavs, frases)]
         wr = {'wer': round(sum(x['erros'] for x in ws) / sum(x['palabras_ref'] for x in ws), 4),
               'erros': sum(x['erros'] for x in ws), 'hipotese': ' | '.join(x['hipotese'] for x in ws)}
         if a.wer_pasaxe:
-            wp = asr.wer(pas, ' '.join(textos.PASAXE))
+            wp = asr.wer(pas, ' '.join(frases))
             wr['wer_pasaxe'] = wp['wer']
         w = sf.read(pas)[0]
-        pal_tot = sum(A.palabras(t) for t in textos.PASAXE)
+        pal_tot = sum(A.palabras(t) for t in frases)
         media = lambda x: round(float(np.mean([f[x] for f in fr if f.get(x) is not None])), 3)
         # F0 da pasaxe enteira (todas as tramas sonoras xuntas): media, desviación e rango en semitons
         r = {'pal': pal, 'fase': c['fase'], 'parametros': kw,
@@ -126,7 +128,7 @@ def main():
         res.append(r)
         print(pal, {k: r[k] for k in ('palabras_min', 'sil_s', 'f0_media_hz', 'f0_sd_st', 'f0_rango_st', 'lufs_pasaxe',
                                       'arousal', 'wer', 'hnr_db')}, flush=True)
-    json.dump({'curva': {k: cv[k] for k in cv}, 'ref_wav': os.environ.get('REF_WAV'),
+    json.dump({'pasaxe': a.pasaxe, 'curva': {k: cv[k] for k in cv}, 'ref_wav': os.environ.get('REF_WAV'),
                'ref_wav_calmo': os.environ.get('REF_WAV_CALMO'), 'resultados': res},
               open(a.saida, 'w'), ensure_ascii=False, indent=1)
 
