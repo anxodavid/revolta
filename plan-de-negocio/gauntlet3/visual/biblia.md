@@ -20,13 +20,14 @@ separados por comas) no se usa para generar (SDXL-Lightning va sin CFG y no admi
 **revisar**: la puerta de CLIP rechaza la imagen si se parece a esos conceptos. `movemento` es el Ken Burns
 (`zoom_in`, `zoom_out`, `pan_left`, `pan_right`, `pan_up`).
 
-`son` (decisiones D13 y D14 del promotor, `contexto.md` §7): el ambiente sonoro va **por escena**. Valores:
-`choiva`, `lume`, `mar`, `vento`, `xente` (murmullo de voces ininteligibles), `noite`, `fonte`, `aldea`, `campas`, o
-ninguno (voz limpia). Si falta, `longo.py` lo deduce de las palabras del prompt (rain, fire/hearth/embers, sea/waves,
-wind/storm). Regla: poner lluvia o fuego **solo cuando la imagen los muestre de verdad** y dejar tramos sin ambiente
-(voz limpia), sobre todo en el gancho. El catálogo y sus reglas son de la pieza SON:
-`plan-de-negocio/gauntlet3/son/guia-son.md`. Imagen y sonido se escriben juntos: si el plano es un gentío, la imagen
-sigue siendo de 3-4 figuras lejos o un detalle (sección 5) y el gentío lo pone el sonido (`son: xente`).
+`son` (decisiones D13 y D14 del promotor, `contexto.md` §7): el ambiente sonoro va **por escena**. Las reglas son de
+la pieza SON y mandan: **`plan-de-negocio/gauntlet3/son/guia-son.md`**. Resumen: un tipo del catálogo (`choiva`,
+`lume`, `mar`, `vento`, `fonte`, `xente`, `noite`, `aldea`, `campas`) o dos unidos con `+` (p. ej. `lume+noite`, la
+segunda capa más baja), o **`limpa`** (voz limpia). Escribir `limpa` siempre que se quiera voz limpia: si el campo
+falta, `longo.py` deduce el sonido de las palabras del prompt y puede poner uno. El sonido tiene que **estar en la
+imagen** (lluvia solo si se ve llover, lareira solo si se ve fuego); 30-45 % de planos limpios; aviso, reclamo y
+datos clave del gancho, limpios. Imagen y sonido se escriben juntos: para un gentío, la imagen sigue siendo de 3-4
+figuras lejos o un detalle (sección 5) y el gentío lo pone el sonido (`son: xente`).
 
 **Qué hace el código y no hay que repetir en el prompt:** el estilo común (sección 1) va delante de cada prompt; la
 luz por defecto de la fase si el prompt no trae luz; al reintentar, las correcciones según el motivo del rechazo
@@ -52,8 +53,9 @@ exteriores fríos de nieve o piedra.
 
 Palabras que **no** se escriben (dan el "aspecto IA" genérico o confunden al modelo): `masterpiece, 8k, 4k, HDR,
 trending on artstation, hyperdetailed, ultra realistic, epic, vibrant, neon, fantasy, magical glow, unreal engine`;
-tampoco `Galicia` ni `Galician` (SDXL no conoce Galicia: la iconografía se **describe**, sección 4); ni negaciones
-(`no people`, `without roofs`): CLIP no entiende la negación y tiende a pintar lo negado.
+ni negaciones (`no people`, `without roofs`): CLIP no entiende la negación y tiende a pintar lo negado. `Galicia,
+Spain` se puede usar (en la prueba dio una aldea de piedra verosímil y no la Galitzia centroeuropea), pero no basta:
+lo que identifica el lugar se **describe** (sección 4).
 
 ## 2. Guion de luz y color por fase
 
@@ -211,10 +213,14 @@ Ejemplos (uno por fase y tipo; en la hoja de prueba `visual/r1/` hay 16):
 1. Manos sin cuerpo, más de dos manos por cuerpo y más de 5 cuerpos (MediaPipe).
 2. Descripción de Florence-2 contra la lista de anacronismos y vetos (ventanas de cristal, tejados naranjas,
    multitudes, texto, fuego grande en exterior...) y, desde esta versión, iconografía mediterránea (cipreses, olivos,
-   palmeras, eucaliptos, encalado, estuco, ruedas de radios).
+   palmeras, eucaliptos, encalado, estuco, ruedas de radios). El candil (`oil lamp`) y la hoguera pequeña y lejana
+   ya no cuentan como fallo; el fuego de la lareira tampoco.
 3. CLIP: pares "malo/bueno" (teja naranja/lousa, encalado/granito, ciprés/carballo, olivo/prado, palmera/carballo,
-   rueda de radios/rueda maciza, paisaje seco/atlántico) en tres recortes de la imagen; los conceptos de `negativo`;
-   repetición contra **todas** las imágenes aceptadas del episodio; topes de arquetipos.
+   rueda de radios/rueda maciza, paisaje seco/atlántico, eucalipto/carballeira) en tres recortes de la imagen; los
+   conceptos de `negativo`; repetición contra **todas** las imágenes aceptadas del episodio; topes de arquetipos.
+   Calibrado con 72 imágenes (`aprendizajes/visual.md`): caza los casos claros (una aldea toscana, un olivar) pero no
+   los sutiles (un tejado naranja pequeño y apagado): **el prompt sigue siendo la primera defensa**.
 
 Si un prompt falla por el prompt y no por la semilla (repite arquetipo o imagen dos veces seguidas), el código pasa
-directamente a la reserva de la fase: mejor escribir bien el prompt que gastar cinco intentos.
+directamente a la reserva de la fase: mejor escribir bien el prompt que gastar cinco intentos. Cada intento cuesta
+~50 s de generación y ~20 s de revisión en esta máquina.

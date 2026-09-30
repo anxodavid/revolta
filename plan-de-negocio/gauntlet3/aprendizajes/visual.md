@@ -86,3 +86,41 @@ Lo que vio Claude en las imágenes (juicio de Claude, no de una persona):
   6 texturas alternadas cada 2 fotogramas, más fuerte en tonos medios. Al 3 % se ve "sucio" en el cielo; al 1,5 % es
   sutil. **No se activa por defecto** hasta medir su coste en bitrate (x264 CRF 22 con tope de 1,4 Mb/s: el grano es
   lo primero que el codificador se come y lo que más bits gasta) [S].
+
+## Calibración de las puertas de CLIP (`probas/visual_calibrar_clip.py`, 30-09-2026)
+
+72 imágenes etiquetadas por Claude mirándolas: 33 fotogramas de las rondas 1-3 del Gauntlet 2 (recortados de sus
+hojas de contactos, con los defectos que vio el crítico), 32 de la comparativa de modelos y 7 escenas foráneas hechas
+adrede (Toscana, Andalucía, olivar, plaza con palmeras, carro de caballos con radios, eucaliptal y "Galicia, Spain").
+Resultados completos en `$SCRATCH/visual/calib/calibracion.json` (no se sube: rutas del scratchpad).
+
+**Pares malo/bueno** (margen = sim(malo) − sim(bueno) en el peor de 3 recortes; pertinencia = máx de las dos sims):
+
+| Par | Malas: margen | Buenas: margen más alto | Umbral elegido (0 falsos positivos) | Qué caza |
+|---|---|---|---|---|
+| teja naranja / lousa | −0,036 … 0,082 | 0,041 (manos, sin tejados; pertinencia 0,09) | 0,045 y pertinencia > 0,15 | Toscana y Andalucía; **no** los tejados naranjas apagados de la ronda 3 (margen negativo) |
+| encalado / granito | −0,036 … 0,085 | 0,049 (manos) | 0,060 | palmeras y Andalucía; no las fachadas de la ronda 3 |
+| ciprés / carballo | −0,015 … 0,072 | 0,045 (costa) | 0,060 | Toscana; no los cipreses pequeños de fondo |
+| olivo / prado | 0,076 | 0,007 | 0,040 | olivar |
+| palmera / carballo | 0,028 | 0,006 | 0,020 | palmeras (margen estrecho) |
+| paisaje seco / atlántico | 0,075 … 0,141 | 0,067 ("Galicia, Spain") | 0,072 | 3 de 4 escenas secas |
+| eucalipto / carballeira | 0,105 | 0,049 | 0,070 | eucaliptal |
+| **rueda de radios / maciza** | **−0,067 … −0,006** | 0,065 | — | **nada: el par está invertido** |
+
+- Lo más útil que salió: **CLIP ve los casos claros pero no los sutiles**. En los fotogramas de la ronda 3 (lavado
+  verde, óleo apagado) los tejados naranjas puntúan más "lousa" que "teja"; ahí solo sirve Florence-2 ("red roofs").
+  Con las imágenes nuevas (color natural) los casos foráneos salen claros.
+- **El par de las ruedas estaba mal planteado**: "an ox cart with solid wooden disc wheels" se parece a cualquier carro
+  de bueyes, así que los carros con radios puntúan como "macizos". Hay que comparar dos textos que solo difieran en la
+  rueda (se prueba con los carros del experimento de iconografía).
+- La pertinencia de 0,20 que había puesto a ojo dejaba fuera casi todas las malas (las similitudes texto-imagen de
+  CLIP ViT-L/14 andan en 0,08-0,30): se baja a 0,15.
+- **`negativo`**: el valor absoluto de sim("a photo with X") no separa (buenas hasta 0,19; malas desde 0,09). Relativo
+  a "a photo" en el mismo recorte, las buenas llegan a 0,037 y las malas claras a 0,047-0,12: umbral 0,04.
+- **Repetición**: prompts distintos llegan a 0,879 de coseno (dos escenas nocturnas), el mismo prompt en otro modelo
+  o estilo tiene mediana 0,864 (p10 0,80). Umbral 0,90: solo casi-duplicados. Las repeticiones "de tipo de plano" las
+  para la puerta de arquetipos, no esta.
+- **Arquetipos**: las similitudes son bajas (0,15-0,26) y cada texto necesita su umbral. "Caminantes de espaldas":
+  6/6 de los etiquetados con 0,220 y ningún falso (la más alta sin caminantes, 0,217). "Persona junto al fuego" a
+  0,205 también cuenta las lareiras sin persona (mismo arquetipo visual, lo que interesa para el tope). Sin datos
+  para "retrato" [S].

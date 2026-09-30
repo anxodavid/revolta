@@ -37,7 +37,7 @@ def main():
     et = json.loads(Path(a.etiquetas).read_text())
     cl = revisor.Clip()
     T = cl.textos([t for _, x, y in revisor.PARES for t in (x, y)])
-    TA = cl.textos([t for _, t, _ in revisor.ARQUETIPOS])
+    TA = cl.textos([a[1] for a in revisor.ARQUETIPOS])
     rows = []
     for x in et:
         E, emb = cl.analizar(x['f'])
@@ -105,17 +105,19 @@ def main():
                          'distinto_max': distinto[-5:], 'mesmo_min': mesmo[:5]}
     # arquetipos
     print('\n== Arquetipos (sim co texto)')
-    for lab, _, _ in revisor.ARQUETIPOS:
+    for lab, *_ in revisor.ARQUETIPOS:
         si = sorted((r['arq_sims'][lab], Path(r['f']).name) for r in rows if r.get('arq') == lab)
         no = sorted((r['arq_sims'][lab], Path(r['f']).name) for r in rows if r.get('arq') != lab)[::-1]
         u = mellor_umbral([v for v, _ in no], [v for v, _ in si]) if si else None
         print(f'{lab}: si {si}\n   non (as 5 máis altas) {no[:5]}\n   umbral óptimo {u}')
         out['arquetipos'][lab] = {'si': si, 'non_top': no[:8], 'umbral': u}
     # arquetipo asignado a cada imaxe co umbral actual
-    print('\n== Arquetipo asignado (ARQ_SIM actual =', revisor.ARQ_SIM, ')')
+    print('\n== Arquetipo asignado (umbrais actuais de revisor.ARQUETIPOS)')
+    um = {a[0]: a[3] for a in revisor.ARQUETIPOS}
     for r in rows:
-        best = max(r['arq_sims'].items(), key=lambda kv: kv[1])
-        asig = best[0] if best[1] >= revisor.ARQ_SIM else None
+        sobre = [(v - um[k], k, v) for k, v in r['arq_sims'].items() if v >= um[k]]
+        best = (max(sobre)[1], max(sobre)[2]) if sobre else (None, max(r['arq_sims'].values()))
+        asig = best[0]
         if asig or r.get('arq'):
             print(f"{Path(r['f']).name}: etiqueta {r.get('arq')} | asignado {asig} ({best[1]})")
     if a.saida:

@@ -81,26 +81,36 @@ PARES = [
     ('eucaliptos (CLIP)', 'a eucalyptus plantation with tall straight pale peeling trunks',
      'an old oak forest with thick gnarled mossy trunks'),
 ]
-# Umbrais por par (calibrados en probas/visual_calibrar_clip.py: imaxes boas e malas da ronda 3 do Gauntlet 2 e das
-# probas do Gauntlet 3): marxe = sim(malo) - sim(bo) no peor recorte; pertinencia = máx(sim(malo), sim(bo)).
-PAR_MARXE = {'tellados laranxas (CLIP)': 0.020, 'muros encalados (CLIP)': 0.030, 'ciprés (CLIP)': 0.025,
-             'oliveiras (CLIP)': 0.030, 'palmeiras (CLIP)': 0.030, 'rodas de raios (CLIP)': 0.020,
-             'paisaxe seca (CLIP)': 0.030, 'eucaliptos (CLIP)': 0.030}
-PAR_PERTINENCIA = 0.20
-NEGATIVO_SIM = 0.26          # conceptos do campo `negativo`: sim("a photo with X") por riba disto = presente
-SIM_CLIP = 0.92              # repetición: similitude coseno co embedding dalgunha imaxe aceptada do episodio
-# Arquetipos de composición: (etiqueta, texto, fracción máxima do episodio). Tope = máx(1, ceil(fracción x planos)).
+# Umbrais por par, calibrados o 30-09-2026 con probas/visual_calibrar_clip.py (72 imaxes etiquetadas por Claude:
+# 33 fotogramas das rondas 1-3 do Gauntlet 2, 32 da comparativa de modelos e 7 escenas alleas feitas adrede):
+# marxe = sim(malo) - sim(bo) no peor recorte; pertinencia = máx(sim(malo), sim(bo)). Con estes valores, 0 falsos
+# positivos no conxunto; collen os casos claros (Toscana, Andalucía, oliveiras, palmeiras, eucaliptos, paisaxe seca)
+# pero NON os tellados laranxas e os ciprés apagados polo lavado verde da ronda 3 (neses, CLIP puntúa máis "lousa"):
+# eses quedan para Florence-2. Poucas imaxes malas por par (1-8): son provisionais.
+PAR_MARXE = {'tellados laranxas (CLIP)': 0.045, 'muros encalados (CLIP)': 0.060, 'ciprés (CLIP)': 0.060,
+             'oliveiras (CLIP)': 0.040, 'palmeiras (CLIP)': 0.020, 'rodas de raios (CLIP)': 0.030,
+             'paisaxe seca (CLIP)': 0.072, 'eucaliptos (CLIP)': 0.070}
+PAR_PERTINENCIA = 0.15       # (0,20 deixaba fóra a maioría das malas: as similitudes de CLIP-L andan en 0,08-0,30)
+# Conceptos do campo `negativo`: sim("a photo with X") − sim("a photo") no mesmo recorte. Na calibración, as boas
+# chegan a 0,037 e as malas claras a 0,047-0,12 (o valor absoluto non separaba: boas ata 0,19, malas desde 0,09).
+NEGATIVO_MARXE = 0.040
+# Repetición: coseno dos embeddings medios. Na calibración, prompts distintos ata 0,879 (p99 0,866); o mesmo prompt
+# noutro modelo ou estilo, mediana 0,864 (p10 0,80). 0,90: só as imaxes case iguais en contido e composición.
+SIM_CLIP = 0.90
+# Arquetipos de composición: (etiqueta, texto, fracción máxima do episodio, sim mínima co texto). Tope =
+# máx(1, ceil(fracción x planos)). Umbrais da calibración (as similitudes texto-imaxe de CLIP son baixas, 0,15-0,26):
+# camiñantes de costas 6/6 con 0 falsos (a máis alta sen eles, 0,217); lareira 0,205 colle tamén as lareiras sen
+# persoa (mesmo arquetipo visual); o do retrato non ten datos [S].
 ARQUETIPOS = [
-    ('camiñantes de costas', 'people in long cloaks seen from behind walking away along a path', 0.03),
-    ('castelo no outeiro', 'a distant castle on a hill in a wide landscape', 0.03),
-    ('grupo de pé', 'a group of several people standing together in a row', 0.04),
-    ('rúa da aldea', 'a street of a stone village with a few people', 0.05),
-    ('persoa á lareira', 'a person sitting by a fire in a dark room', 0.06),
-    ('bosque con néboa', 'a misty forest with no people', 0.06),
-    ('mans en primeiro plano', 'a close-up of hands doing a task', 0.06),
-    ('retrato', 'a close-up portrait of a face', 0.08),
+    ('camiñantes de costas', 'people in long cloaks seen from behind walking away along a path', 0.03, 0.220),
+    ('castelo no outeiro', 'a distant castle on a hill in a wide landscape', 0.03, 0.225),
+    ('grupo de pé', 'a group of several people standing together in a row', 0.04, 0.195),
+    ('rúa da aldea', 'a street of a stone village with a few people', 0.05, 0.240),
+    ('persoa á lareira', 'a person sitting by a fire in a dark room', 0.06, 0.205),
+    ('bosque con néboa', 'a misty forest with no people', 0.06, 0.210),
+    ('mans en primeiro plano', 'a close-up of hands doing a task', 0.06, 0.180),
+    ('retrato', 'a close-up portrait of a face', 0.08, 0.220),
 ]
-ARQ_SIM = 0.24               # sim mínima co texto do arquetipo para contalo
 ARQ_ESPAZO = 5               # dous planos do mesmo arquetipo, polo menos a 5 planos de distancia
 
 
@@ -156,20 +166,22 @@ class Clip:
             det[et] = [round(marxe, 3), round(pert, 3)]
             if marxe > PAR_MARXE[et] and pert > PAR_PERTINENCIA:
                 problemas.append(et)
+        base = E @ self.textos(['a photo'])[0]
         for x in _lista_negativo(negativo):
-            s = float((E @ self.textos([f'a photo with {x}'])[0]).max())
+            s = float((E @ self.textos([f'a photo with {x}'])[0] - base).max())
             det[f'negativo: {x}'] = round(s, 3)
-            if s > NEGATIVO_SIM:
+            if s > NEGATIVO_MARXE:
                 problemas.append(f'negativo do plano: {x} (CLIP)')
         return problemas, det
 
     def arquetipo(self, emb):
-        """Arquetipo de composición máis parecido (ou None se ningún pasa de ARQ_SIM)."""
-        T = self.textos([t for _, t, _ in ARQUETIPOS])
+        """Arquetipo de composición: o que máis supera o seu umbral (ou None se ningún o pasa)."""
+        T = self.textos([t for _, t, _, _ in ARQUETIPOS])
         s = T @ emb
-        k = int(s.argmax())
-        if s[k] < ARQ_SIM:
+        sobre = [(float(s[k]) - ARQUETIPOS[k][3], k) for k in range(len(ARQUETIPOS)) if s[k] >= ARQUETIPOS[k][3]]
+        if not sobre:
             return None
+        _, k = max(sobre)
         return {'etiqueta': ARQUETIPOS[k][0], 'sim': round(float(s[k]), 3)}
 
 
@@ -194,7 +206,7 @@ def repeticion(emb, aceptadas, arquetipos, arq, n_total=None):
     if arq:
         et = arq['etiqueta']
         prev = [k for k, a in enumerate(arquetipos) if a and a['etiqueta'] == et]
-        frac = {e: f for e, _, f in ARQUETIPOS}[et]
+        frac = {e: f for e, _, f, _ in ARQUETIPOS}[et]
         tope = max(1, math.ceil(frac * (n_total or len(arquetipos) + 1)))
         if len(prev) >= tope:
             pr.append(f'arquetipo repetido: {et} ({len(prev)} xa, tope {tope})')

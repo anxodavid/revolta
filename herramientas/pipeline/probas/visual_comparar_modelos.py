@@ -3,8 +3,9 @@
     flock "$CPU_LOCK" $PY probas/visual_comparar_modelos.py MODELO SAIDA [--estilos filme,pintura] [--n 8]
 
 MODELO: turbo | lightning | lightning8 (imaxes.MODELOS). Garda PNG e un JSON cos segundos por imaxe.
-Os prompts son escenas galegas xenéricas das catro fases (biblia visual), sen a palabra "Galicia" (SDXL confúndea
-coa Galitzia de Polonia e Ucraína [S]): a iconografía descríbese (granito, lousa, hórreo como "granary on pillars").
+Os prompts son escenas galegas xenéricas das catro fases (biblia visual), sen a palabra "Galicia": a iconografía
+descríbese (granito, lousa, hórreo como "granary on pillars"). Con --malos engade escenas alleas (calibración de
+revisor.py) e unha proba co nome "Galicia, Spain" (resultado: aldea de pedra verosímil). Con --prompts, outra lista.
 """
 import argparse, json, os, sys, time
 from pathlib import Path

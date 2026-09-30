@@ -14,7 +14,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import imaxes
 
 VETADAS = [   # (motivo, expresión regular): biblia, sección 4 (lista negativa) e 6 (palabras que dan "aspecto IA")
-    ('Galicia confunde a SDXL (Galitzia)', r'\bgalicia\w*|\bgalician\b'),
     ('aspecto IA xenérico', r'\b(masterpiece|8k|4k|hdr|trending|artstation|hyper-?detailed|ultra-?realistic|epic|'
                             r'vibrant|neon|fantasy|magical glow|octane|unreal engine)\b'),
     ('iconografía non galega', r'\b(cypress\w*|olive trees?|olive groves?|palm trees?|eucalyptus|whitewash\w*|stucco|'
@@ -25,7 +24,7 @@ VETADAS = [   # (motivo, expresión regular): biblia, sección 4 (lista negativa
     ('texto (a porta rexeita)', r'\b(writing|written|letters?|inscription|sign|book pages|open book|map)\b'),
     ('negación (CLIP non a entende)', r'\b(no|without|not)\b'),
 ]
-SONS = {'choiva', 'lume', 'mar', 'vento', 'xente', 'noite', 'fonte', 'aldea', 'campas', '', None}   # D13-D14
+SONS = {'choiva', 'lume', 'mar', 'vento', 'xente', 'noite', 'fonte', 'aldea', 'campas'}   # D13-D14 (guia-son.md)
 ARQ_PALABRAS = [   # arquetipos repetidos que o crítico viu, por palabras
     ('camiñantes de costas', r'(seen from behind|from behind|walking away)'),
     ('castelo no outeiro', r'castle on (a|the) hill|distant castle|fortress on a hill'),
@@ -63,7 +62,8 @@ def main():
                 arq_pos[et].append(x.get('n', i + 1))
         if x.get('tipo') and x.get('tipo') == tipos_prev and x.get('tipo') != 'paisaxe':
             msgs.append(f"tipo repetido co plano anterior: {x['tipo']}")
-        if x.get('son') and x['son'] not in SONS:
+        son = str(x.get('son') or '')
+        if son and son != 'limpa' and (not set(son.split('+')) <= SONS or len(son.split('+')) > 2):
             msgs.append(f"son descoñecido: {x['son']} (guía: plan-de-negocio/gauntlet3/son/guia-son.md)")
         if x.get('tipo') and x['tipo'] not in imaxes.TIPO_FRASE:
             msgs.append(f"tipo descoñecido: {x['tipo']} (válidos: {', '.join(imaxes.TIPO_FRASE)})")
