@@ -41,8 +41,8 @@ audios** (Claude no puede oír): lo único "visto" fueron espectrogramas, que Cl
 7. **El WER de un texto largo con pausas largas mide un defecto de Whisper**: en la zona de dormir se salta frases
    enteras tras los silencios (con voz sola, D, borró 31 de 77 palabras: WER 0,42; con lluvia continua, 2). Las
    palabras que sí reconoce son las mismas con cualquier ambiente. Hay que medir **frase a frase** (cada frase cortada
-   con margen): así, 0,018 sin ambiente y 0,022-0,026 con él (el ambiente solo se lleva 1-2 palabras átonas de 271). Aviso para `qa.asr` del pipeline, que transcribe el episodio entero con `vad_filter=False`: puede
-   suspender la puerta de WER en la zona de dormir sin que la voz tenga la culpa [S].
+   con margen): así, 0,018 sin ambiente y 0,022-0,026 con él (el ambiente solo se lleva 1-2 palabras átonas de 271).
+   La QA del vídeo largo ya lo hace (`qa.asr_por_frases`, a0cecf5; la pieza VOZ vio lo mismo).
 8. **La lista de planos decide el ritmo de cambios, no el código**: con una lista que alterna sonido y voz limpia en
    cada plano, el catálogo cambia cada ~9 s (62 cambios cada 10 min): un parpadeo. Soluciones: la guía pide bloques
    por escena y respiros limpios; `son.tramos_de_planos` no corta el ambiente en un inserto neutro de menos de 20 s

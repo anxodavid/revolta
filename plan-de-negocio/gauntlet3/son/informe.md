@@ -81,9 +81,8 @@ Los sustos de B son los chasquidos de la lareira de 7541a9e, que no estaban limi
    y da **0,018-0,026 en las cuatro opciones**, muy por debajo de la puerta del pipeline (0,06): los errores son casi
    los mismos con y sin ambiente (variantes ortográficas de Whisper: "á outra", "ó pé", "alousa"). El ambiente solo
    añade 1-2 palabras átonas perdidas en 271: un "e" bajo la lareira o la lluvia (A, B y C) y "ao pé" → "OPE" bajo
-   los pájaros de la aldea (C). Aviso para la QA del pipeline:
-   `qa.asr` transcribe el episodio entero y puede suspender la puerta de WER (0,06) en la zona de dormir por este
-   defecto y no por la voz; convendría medirlo por frases o con `vad_filter` [S].
+   los pájaros de la aldea (C). La QA de `longo.py` ya mide así el vídeo largo (`qa.asr_por_frases`, commit
+   a0cecf5), porque la pieza VOZ encontró el mismo defecto.
 3. **El murmullo de gentío no se entiende**: Whisper no transcribe nada en 2 de 3 semillas de 40 s de `xente` solo (a
    −20 LUFS, más fuerte que en el vídeo) y en la tercera alucina 8 palabras sin sentido ("as causas causas causas...
    ¿non?") con confianza baja (logprob medio −1,15). Las mismas frases del banco en seco las transcribe perfectas.
