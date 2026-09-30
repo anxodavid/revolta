@@ -210,8 +210,54 @@ lenta y menos activada de las 40). Viven en `REFS_DIR`, que `instalar.sh brais` 
 
 ## 5. Muestra de escucha
 
-(pendiente)
+[`mostra-embude.m4a`](mostra-embude.m4a) (1 min 56 s, 1,1 MB, AAC mono 24 kHz; decodifica entera con ffmpeg). Voz seca,
+sin lluvia ni ambiente, para oír solo la voz; pico normalizado a −3 dBFS (en el vídeo, la mezcla va a −17 LUFS).
+Hecha con la curva final y las referencias de `entorno.sh` (`scripts/mostra.py`; tiempos y textos en
+[`mostra-embude.json`](mostra-embude.json)):
+
+| Tramo | Qué se oye |
+|---|---|
+| 0:00-0:20 | 3 frases del pasaje en **tono de gancho** (palabra 0 de la curva) |
+| 0:21-0:51 | **las mismas 3 frases en tono de dormir** (palabra 3600) |
+| 0:51-1:56 | **el embudo entero** en 11 frases, cada una en su punto de un episodio de 3.600 palabras (0, 40, 90, 150, 280, 500, 950, 1.400, 1.800, 2.700 y 3.600), con sus pausas y su nivel, incluida la fórmula "Isto é Cousas de Galiza para durmir" |
+
+El tramo del embudo comprime unos 30 minutos en uno: los saltos de una frase a otra son mucho mayores que en el
+episodio, donde el cambio es gradual. Las frases son de Claude sobre el tema elegido, no del guion. **Nadie la ha
+escuchado antes de subirla.**
 
 ## 6. Límites y qué no se pudo medir
 
-(pendiente)
+- **Nadie ha escuchado la voz.** Todas las cifras son medidas automáticas y aproximadas de lo que se oye; la
+  decisión final (¿el gancho engancha?, ¿el final relaja o entristece?) es de un oído humano: la muestra está para eso.
+- **El arousal es de un modelo entrenado en inglés** (MSP-Podcast) y con licencia CC-BY-NC-SA-4.0: solo para esta
+  evaluación interna, nunca en el producto. En gallego mide sobre todo lo acústico (ritmo, tono, esfuerzo); sirve para
+  comparar versiones de la misma voz y el mismo texto, no como valor absoluto.
+- **Pasaje corto** (7 frases, 111 palabras): cada error de ASR vale 0,009 de WER. Parte del WER no es de la voz
+  (homófonos, números que Whisper escribe en cifras). Los parámetros son iguales dentro de cada punto; en el episodio
+  cambian frase a frase y no se midió cómo suena el paso de una frase a otra.
+- **WER sobre el pasaje entero, como el QA de `longo.py`**: con las pausas del embudo Whisper se salta frases
+  enteras (WER de 0,18-0,28 en el pasaje frente a 0-0,054 frase a frase; ver aprendizajes). El QA del vídeo largo
+  mide la mezcla entera así: puede dar un WER alto que no es de la voz.
+- **No medido**: naturalidad o MOS (no se bajó ningún modelo más: disco y CPU justos), la escucha a lo largo de 30
+  minutos (fatiga, monotonía), la voz dentro de la mezcla con el ambiente de la pieza SON, ni una referencia real de
+  narración para dormir en gallego con la que comparar (no la hay). "Voz cascada" y "gritona" se miden solo con
+  indicadores (F0 < 75 Hz, HNR, jitter; F0 mediana y alpha ratio).
+- **Cotovía en modo `-p1`** no produce la segunda forma del artículo (*facelo lume*), que es un rasgo real del gallego
+  hablado, porque el modelo no la vio al entrenar; si el promotor la prefiere, basta quitar `-p1` del envoltorio y
+  volver a medir.
+- `enerxia` casi no aporta (sobre todo volumen); se deja en 1,00-0,95 y el nivel lo lleva `ganancia_db`.
+- La pieza SON usa `voz_st2.infer` con los campos de la curva que conocía (`voz_fragmento.py`): no pasa `beta` ni
+  `embedding_scale`, así que su fragmento no suena exactamente como la curva final.
+
+## 7. Reproducir
+
+    source herramientas/pipeline/entorno.sh      # REF_WAV, REF_WAV_CALMO y ST2_PATHBIN (Cotovía -p1) ya por defecto
+    export PATH=$ST2_PATHBIN:$PATH PYTHONPATH=$ST2_STUBS:$SCRATCH/voz/pylib   # parselmouth: pip install --target
+    V=plan-de-negocio/gauntlet3/voz
+    flock "$CPU_LOCK" $PY $V/scripts/puntos.py $V/datos/curva-final.json --wer-pasaxe   # curva de curva.py, 5 puntos
+    flock "$CPU_LOCK" $PY $V/scripts/mostra.py $V/mostra-embude.m4a
+    $PY $V/scripts/analizar_curva.py $V/datos/curva-ronda2.json --md
+
+Tiempos de CPU (4 núcleos, con el candado): barrido de 40 referencias ~20 min; una candidata en 5 puntos ~1 min de
+voz + ~4 min de WER frase a frase; la muestra ~1 min. La mayor parte del reloj se fue esperando el candado de CPU
+(hasta 30-40 min por turno con los agentes visual, de sonido y de guion).
