@@ -206,3 +206,18 @@ Etiquetas del veredicto del crítico ciego (`veredictos/visual-r1.md`) y de lo q
 Conclusión: CLIP vale para lo evidente (farolas en fila, ciudad iluminada, salón con cojines) y falla con lo que se
 parece al sujeto pedido (un patio con fuente frente a una fuente de aldea; un caldero frente a una pota). El campo
 `clave` es débil: CLIP confunde objetos parecidos.
+
+## Hoja r2 (en curso): lo que ya se vio
+
+- **`negativo` parecido al sujeto = todos los intentos rechazados**: `molten metal` en la queimada (7 de 7) y `herd` en
+  la vaca ordeñada (7 de 7), como `cauldron` en la r1. Las propuestas del crítico para esos planos eran razonables en
+  palabras, pero CLIP no separa conceptos vecinos. Regla nueva en la biblia (sección 8).
+- **`clave: maize`** no se reconoció en ninguno de 4 intentos (la era con mazorcas): la `clave` solo sirve con objetos
+  grandes y reconocibles. Quitada del plano 8 antes de relanzar.
+- **Fallo corregido**: las reservas de la fase se revisaban con la `clave` del plano ("falta: blue flames" en la
+  reserva de una anciana con vela). Ahora la reserva se revisa sin `clave`.
+- **Intento guiado** (4.º y 5.º, CFG 1,5 con prompt negativo según el motivo): ~50 s por imagen (1,7x). Rescató el
+  plano del escribano tras dos rechazos por "texto na imaxe".
+- **La hoja murió por memoria** (~21:15 UTC): usaba 11,8 GB (SDXL-Lightning ~7 + Florence-2 ~3 + CLIP ~1,7) y otro
+  proceso corría a la vez fuera del candado; el cgroup la mató. Se relanzó con el mismo comando: los planos ya
+  cerrados salen de `revision.json` y solo se regenera el que estaba a medias.
