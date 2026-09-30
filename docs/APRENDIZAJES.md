@@ -187,3 +187,16 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   contra todo el episodio (coseno 0,90), con un tope por arquetipo.
 - **Referencia:** el cliente `mweb` de yt-dlp da storyboards de 320x180; las hojas del `.mhtml` llegan corruptas y
   hay que bajarlas una a una con curl.
+
+## Entorno: memoria compartida (30-09-2026, noche)
+
+- **Todos los procesos que lanzan las herramientas comparten un cgroup de memoria (~15 GB).** Una puerta de texto
+  (NLI + LanguageTool, ~2 GB) lanzada **sin el candado de CPU** mientras se generaban imágenes (11,8 GB) hizo que el
+  OOM killer matase las dos. Lección: todo lo que carga modelos va con `flock "$CPU_LOCK"`, aunque sea "rápido"; el
+  candado protege también la memoria. Tras un OOM, matar los servidores Java de LanguageTool huérfanos.
+- **Las tareas en segundo plano de la herramienta Bash se cortan a los 30 min** (esperando el candado también
+  cuentan). Para trabajos largos, lanzar un script desacoplado (`setsid nohup ... &`) que escriba un log, y vigilarlo
+  con Monitor.
+- **`pkill -f PATRÓN` puede matar la propia shell** si el patrón aparece en la orden que se está ejecutando: usar PID.
+- La ronda 2 del guion ganó (ajustado) con 16 sustituciones exactas del crítico; la carencia que queda (tramo de
+  6:27-11:36 con muchas atribuciones y cantidades) va a la plantilla del siguiente episodio.
