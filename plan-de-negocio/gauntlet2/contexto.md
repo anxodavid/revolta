@@ -94,3 +94,13 @@ El promotor sospecha que el nicho (gente que consume en galego contenido de hist
 - Riesgo a tratar: que el galego acabe siendo una pista marginal. La identidad del canal sigue siendo galega
   (título/miniatura/pista por defecto a decidir con datos) y eso encaja con la tesis pro lingua.
 - Si es barato y viable, el pipeline puede añadir al vídeo de ejemplo al menos una pista extra (portugués) como prueba.
+
+## Decisión del promotor tras la ronda 2 del vídeo (30-09-2026) — PRIORITARIO
+- **Hallazgo:** con un LLM open source pequeño en CPU (EuroLLM-9B), el guion desatendido **inventa historia**
+  ("a irmandade venceu") **y palabras** ("fortaleiras"). Voz, imágenes, sonido y montaje sí dan el pego.
+- **Decisión:** el **guion lo escribe un LLM potente por API** (coste de céntimos por episodio); voz (Nós StyleTTS2),
+  imágenes, montaje y controles siguen siendo open source y locales. Se mantienen los controles automáticos
+  (veracidad contra el dossier, LanguageTool, ASR) como red de seguridad.
+- **El vídeo se cierra en la ronda 3**: después se integra el plan v2 y pasa al tribunal. El plan v2 debe recoger este
+  hallazgo (por qué el LLM local no basta hoy en galego, coste por episodio con API, y qué aportaría a Nós/la comunidad
+  un modelo open source mejor en galego).
