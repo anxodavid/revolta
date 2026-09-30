@@ -53,19 +53,18 @@ Dos bancos de prueba:
 
 | Medida | A | B (guía) | C (guía) | C (guia1) | C (alterna) |
 |---|---|---|---|---|---|
-| % del tiempo con ambiente | 100 | PEND. | PEND. | 78,2 | 76,1 |
+| % del tiempo con ambiente | 100 | 38,5 | 71,6 | 78,2 | 76,1 |
 | Tipos de sonido distintos | 1 | 2 | 9 | 9 | 9 |
-| Cambios de ambiente cada 10 min (media) | 0 | PEND. | PEND. | 17,3 | 62,3 |
-| Cambios en los 10 min más movidos / media en la zona de dormir | 0 / 0 | PEND. | PEND. | 28 / 12,3 | 89 / 46,4 |
-| Tramo más largo con el mismo sonido (min) | 30 | PEND. | PEND. | 2,5 | 0,8 |
-| Variación espectral (dB) | 1,2 | PEND. | PEND. | 6,8 | 9,0 |
-| Monotonía (%) | 93 | PEND. | PEND. | 10,7 | 8,5 |
-| Zona de dormir (15 min): pico de eventos en 50 ms (dB) | 13,8 | PEND. | PEND. | 8,8 | 8,8 |
-| Zona de dormir (15 min): "sustos" | 30 | PEND. | PEND. | 0 | 0 |
+| Cambios de ambiente cada 10 min (media) | 0 | 7,7 | 15,0 | 17,3 | 62,3 |
+| Cambios en los 10 min más movidos / media en la zona de dormir | 0 / 0 | 13 / 6,1 | 27 / 9,5 | 28 / 12,3 | 89 / 46,4 |
+| Tramo más largo con el mismo sonido (min) | 30 | 2,5 | 2,5 | 2,5 | 0,8 |
+| Variación espectral (dB) | 1,2 | 3,3 | 7,7 | 6,8 | 9,0 |
+| Monotonía en 30 min / en la zona de dormir (%) | 93 / 86 | 18 / 15 | 11 / 23 | 11 / 16 | 9 / 10 |
+| Zona de dormir (15 min): pico de eventos en 50 ms (dB) | 13,8 | 22,1 | 8,5 | 8,8 | 8,8 |
+| Zona de dormir (15 min): "sustos" | 30 | 201 | 0 | 0 | 0 |
 
-B con las otras listas: con guia1, 37,8 % de tiempo con ambiente, 9 cambios cada 10 min, monotonía 16 % y **169
-sustos** en la zona de dormir; con alterna, 72 sustos. Son los chasquidos de la lareira de 7541a9e, que no estaban
-limitados (la lista guia1 cierra con 10 planos de lareira y lluvia).
+Los sustos de B son los chasquidos de la lareira de 7541a9e, que no estaban limitados (las listas "guía" cierran con
+9-10 planos de lareira y lluvia; con la lista alterna, 72 sustos). Los de A, los goteos del alero de 7541a9e.
 
 ## 4. Qué dicen las medidas
 
@@ -86,24 +85,27 @@ limitados (la lista guia1 cierra con 10 planos de lareira y lluvia).
    −20 LUFS, más fuerte que en el vídeo) y en la tercera alucina 8 palabras sin sentido ("as causas causas causas...
    ¿non?") con confianza baja (logprob medio −1,15). Las mismas frases del banco en seco las transcribe perfectas.
 4. **Monotonía: A es monótona por construcción** (93 % de pares de ventanas que suenan igual en 30 min, un solo
-   sonido 30 min seguidos); **C la resuelve** (8-11 %, 9 sonidos, nunca más de 2,5 min el mismo); B queda en medio
-   (2 sonidos).
+   sonido 30 min seguidos); **C la resuelve** (9-11 %, 9 sonidos, nunca más de 2,5 min el mismo); B queda en medio
+   (2 sonidos, 18 %). En la zona de dormir C sube a 23 % con la lista corregida, porque el cierre ("Chove na lousa")
+   mantiene lluvia y lareira 2,5 min: es lo que se busca al final.
 5. **Lo contrario de la monotonía también se mide**: con una lista que alterna sonido y voz limpia en cada plano, C
    cambia de ambiente cada ~9 s de media (62 cambios cada 10 min, 46 en la zona de dormir): eso es un parpadeo, no
    variedad [S]. Lo decide la lista de planos, no el código; por eso la guía pide bloques por escena y respiros
    limpios, `son.tramos_de_planos` no corta el sonido en un inserto neutro de menos de 20 s entre dos planos con el
-   mismo sonido, y la QA avisa con más de 20 cambios en 10 min en el gancho o más de 10 en la zona de dormir. Hasta
-   mi primer intento de lista "según la guía" (guia1) se pasó: 78 % del tiempo con sonido y 12,3 cambios cada
-   10 min al dormir; la QA lo habría avisado.
+   mismo sonido, y la QA avisa con más de 30 cambios en 10 min en el gancho o más de 10 en la zona de dormir (umbrales
+   fijados por Claude a la vista de estas simulaciones [S]). Hasta mi primer intento de lista "según la guía" (guia1)
+   se pasó: 78 % del tiempo con sonido y 12,3 cambios cada 10 min al dormir; la QA lo avisa. La lista corregida
+   (31 % de planos limpios, bloques de 3-7 planos y respiros de 3-4) queda en 9,5 al dormir.
 6. **Nada sobresalta al dormir en C**: 0 sustos en 15 min de zona de dormir y picos de 7-9 dB sobre el fondo, frente
-   a 30 sustos de A (goteos del alero de 7541a9e) y 72-169 de B (chasquidos de la lareira de 7541a9e).
+   a 30 sustos de A (goteos del alero de 7541a9e) y 72-201 de B (chasquidos de la lareira de 7541a9e).
 
 ## 5. Decisión
 
 **Recomendación: C**, que es lo que hace ya `longo.py` por defecto (`ambiente: escena`), con la lista de planos
 escrita según [`guia-son.md`](guia-son.md). Es la única opción que cumple a la vez D13 y D14: sonido de cada escena
 (9 tipos), voz limpia donde la imagen no tiene sonido, sin fondo constante, sin monotonía (8-11 % frente al 93 % de
-A), murmullo ininteligible en los gentíos, y 0 sustos en la zona de dormir. Lo paga con un fondo presente más tiempo
+A), murmullo ininteligible en los gentíos, 0 sustos en la zona de dormir y, con una lista según la guía, un ritmo
+de cambios que no parpadea (9,5 cada 10 min al dormir). Lo paga con un fondo presente más tiempo
 que B (DNSMOS OVRL 3,02 frente a 3,16), sin perder palabras.
 
 Condiciones y cosas abiertas:
@@ -115,8 +117,9 @@ Condiciones y cosas abiertas:
    debajo del de la zona de dormir; con los niveles del catálogo, el gentío del gancho suena a −34 dB bajo la voz (solo
    en las pausas). Si el promotor lo quiere más presente en el gancho, subir el primer nodo de la curva (p. ej. −8 → −5),
    no los niveles del catálogo.
-3. **% de voz limpia**: lo decide la lista. Objetivo de la guía: 30-45 % de planos limpios y ≤ 10 cambios cada 10 min
-   al dormir; la QA de `longo.py` da `pct_voz_limpa`, `cambios_por_10min`, `cambios_max_en_10min` y avisos.
+3. **% de voz limpia**: lo decide la lista. Objetivo de la guía: 30-45 % de planos limpios (con el 31 % de la lista
+   corregida, el 28 % del tiempo queda sin ambiente) y ≤ 10 cambios cada 10 min al dormir; la QA de `longo.py` da
+   `pct_voz_limpa`, `cambios_por_10min`, `cambios_max_en_10min` y avisos.
 4. Si se quisiera el carácter de B (solo lluvia y lareira), hacerlo con el código nuevo (lista con solo `choiva` y
    `lume`), no con el de 7541a9e: los sustos de B vienen de su lareira sin limitar.
 

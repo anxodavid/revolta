@@ -38,6 +38,29 @@ audios** (Claude no puede oír): lo único "visto" fueron espectrogramas, que Cl
 6. **Artefacto de la métrica**: un fundido desde el silencio contaba como pico. Solución: solo cuentan arranques
    rápidos y ventanas con ambiente alrededor.
 
+7. **El WER de un texto largo con pausas largas mide un defecto de Whisper**: en la zona de dormir se salta frases
+   enteras tras los silencios (con voz sola, D, borró 31 de 77 palabras: WER 0,42; con lluvia continua, 2). Las
+   palabras que sí reconoce son las mismas con cualquier ambiente. Hay que medir **frase a frase** (cada frase cortada
+   con margen). Aviso para `qa.asr` del pipeline, que transcribe el episodio entero con `vad_filter=False`: puede
+   suspender la puerta de WER en la zona de dormir sin que la voz tenga la culpa [S].
+8. **La lista de planos decide el ritmo de cambios, no el código**: con una lista que alterna sonido y voz limpia en
+   cada plano, el catálogo cambia cada ~9 s (62 cambios cada 10 min): un parpadeo. Soluciones: la guía pide bloques
+   por escena y respiros limpios; `son.tramos_de_planos` no corta el ambiente en un inserto neutro de menos de 20 s
+   entre dos planos con el mismo sonido (`"limpa"` sí corta); y la QA avisa con más de 20 cambios en 10 min en el
+   gancho o 10 al dormir. **Mi primer intento de lista "según la guía" también se pasó** (78 % del tiempo con sonido,
+   12,3 cambios cada 10 min al dormir): el aviso de la QA hace falta aunque la lista la escriba alguien que conoce la
+   guía.
+9. **Los generadores de antes sobresaltan al dormir**: en 15 min de zona de dormir simulada, la lluvia de 7541a9e da
+   30 "sustos" (goteos del alero normalizados por RMS) y su lareira 72-169 (chasquidos sin limitar); el catálogo
+   nuevo, 0.
+
+## Qué dijeron las medidas (resumen; tabla completa en `son/informe.md`)
+
+- DNSMOS SIG (la voz) no cambia con ningún ambiente (3,57-3,62); BAK/OVRL bajan con cualquier fondo por diseño.
+- El murmullo de `xente` es ininteligible para Whisper (nada en 2 de 3 semillas; 8 palabras alucinadas con baja
+  confianza en la tercera), que transcribe perfectas las mismas frases en seco.
+- Monotonía en 30 min: lluvia continua 93 %, catálogo por escena 8-11 %.
+
 ## Entorno
 
 - **Voces VITS de Nós (Celtia, Sabela, Icía) no instaladas**: el disco tenía 4,2 GB libres, cada checkpoint ronda
@@ -47,8 +70,12 @@ audios** (Claude no puede oír): lo único "visto" fueron espectrogramas, que Cl
 - **DNSMOS**: la rueda `speechmos` 0.0.1.1 (Microsoft, MIT) trae los ONNX de DNSMOS P.835 y P.808. Se instala con
   `pip install --no-deps --target $SCRATCH/son/pylib`; **ojo**: `ST2_STUBS` trae un `speechmos` falso (stub para
   importar StyleTTS2), así que al medir no hay que poner `ST2_STUBS` en `PYTHONPATH`.
-- **La cola del candado de CPU fue larga** (5-6 trabajos de voz, visual y dossier esperando): las pruebas ligeras de un
-  hilo (generar ambientes, montar opciones) se hicieron fuera del candado con `nice` y `OMP_NUM_THREADS=1`; lo pesado
-  (TTS, DNSMOS, Whisper) con el candado.
+- **La cola del candado de CPU fue larga** (5-7 trabajos de voz, visual y dossier esperando; `flock` no respeta el
+  orden de llegada): las pruebas ligeras de un hilo (generar ambientes, montar opciones, DNSMOS con un hilo: 3 min
+  para 4 × 134 s) se hicieron fuera del candado con `nice` y `OMP_NUM_THREADS=1`; lo pesado (TTS, Whisper) con el
+  candado. Partir las medidas en fases (`medir.py sinal | asr | frases`) permitió avanzar sin esperar por lo ligero.
+- **Corte de la sesión (límite de uso) y reinicio del contenedor**: murieron los trabajos en cola, pero el scratchpad
+  (venv, modelos, WAV) sobrevivió y las medidas ya escritas en el repo (JSON con escritura atómica) no se perdieron;
+  el orquestador subió lo pendiente. Guardar cada fase en el repo en cuanto termina.
 - La voz del fragmento se generó con **Cotovía 0.5**: el agente de voz cambió `entorno.sh` a la Cotovía "nova" pocos
   minutos después. Para comparar opciones de sonido da igual (la voz es la misma en las cuatro).

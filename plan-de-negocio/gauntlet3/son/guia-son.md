@@ -70,10 +70,11 @@ distintos y un tope del ambiente respecto a la voz). La lista tiene que poner la
 - **Agrupar por escena**: un bloque de 3-6 planos seguidos con el mismo sonido (≈ 1 min) y 2 planos de respiro
   limpio, mejor que alternar sonido y voz limpia en cada plano. Los planos seguidos con el mismo `son` se funden en un
   solo tramo continuo, sin cortes.
-- **Ritmo de cambios** (cada entrada, salida o cambio de sonido cuenta uno): hasta ~20 cada 10 min en el gancho y la
-  transición, y **≤ 10 cada 10 min en la zona de dormir**. La QA avisa si se pasa (`son.escena.avisos`,
-  `cambios_max_en_10min`). En la simulación de 30 min, una lista que alterna en cada plano daba un cambio cada ~9 s
-  (65,7 cada 10 min): eso ya no es variedad, es un parpadeo (ver `informe.md`).
+- **Ritmo de cambios** (cada entrada, salida o cambio de sonido cuenta uno): hasta ~30 cada 10 min en el gancho y la
+  transición (planos de 5-10 s) y **≤ 10 cada 10 min en la zona de dormir**. La QA avisa si se pasa
+  (`son.escena.avisos`, `cambios_max_en_10min`). En la simulación de 30 min, una lista según esta guía dio 27 cambios
+  en los 10 primeros minutos y 9,5 cada 10 min al dormir; una lista que alterna en cada plano dio 89 y 46 (un cambio
+  cada ~9 s: eso ya no es variedad, es un parpadeo; ver `informe.md`).
 - En la **zona de dormir** (desde la mitad del episodio) elegir los tipos más mansos: `choiva`, `lume`, `mar`,
   `fonte`, `noite`. `xente`, `campas` y `aldea` se pueden usar si la imagen lo pide (el código los baja 4-5 dB y los
   espacia), pero nunca como fondo largo.

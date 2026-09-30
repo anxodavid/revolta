@@ -46,7 +46,7 @@ son, feitos en 3/4 dentro do plano con son (para non comer a voz limpa); tope do
 momentánea: 8 dB baixo a voz, 12 dB ao durmir); e voz limpa en todo plano sen son. O contrario da monotonía tamén se
 vixía: `tramos_de_planos` xunta os planos seguidos co mesmo son e non corta o ambiente nun inserto neutro de menos
 de PONTE_S s (un plano 'limpa' corta sempre), e `ambiente_escena` avisa se hai máis de CAMBIOS_MAX_10MIN cambios en
-10 min (20 no gancho, 10 ao durmir).
+10 min (30 no gancho, 10 ao durmir).
 
 Guía para a lista de planos: plan-de-negocio/gauntlet3/son/guia-son.md. Medidas e decisión: .../son/informe.md.
 `mesturar` por defecto (ambiente='choiva') segue sendo o do Gauntlet 2 (pipeline.py).
@@ -716,7 +716,9 @@ VARIACION = {
 }
 TRAMO_MAX = 150.0          # s: un tramo máis longo pártese en anacos (outra semente e outros parámetros) que se funden
 PONTE_S = 20.0             # s: un oco neutro máis curto ca isto entre dous planos co mesmo son non corta o ambiente
-CAMBIOS_MAX_10MIN = (20, 10)  # máis cambios de ambiente en 10 min ca isto (gancho, durmir): aviso na QA (a lista pestanexa)
+CAMBIOS_MAX_10MIN = (30, 10)  # máis cambios de ambiente en 10 min ca isto (gancho, durmir): aviso na QA (a lista pestanexa).
+                              # Unha lista razoable (bloques de 3-6 planos e respiros) dá ~27 nos 10 primeiros min e ~9 ao
+                              # durmir; unha que alterna en cada plano, 89 e 46 (gauntlet3/son/informe.md)
 FUNDIDO = (3.0, 8.0)       # s: fundido no gancho e ao durmir (interpólase coa calma)
 TOPE_DB = (8.0, 12.0)      # dB: o ambiente nunca pasa da voz menos isto (sonoridade momentánea), gancho e durmir
 
