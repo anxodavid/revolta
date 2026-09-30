@@ -106,7 +106,7 @@ def desenlaces(t):
     return sorted({d for d in DESENLACE if re.search(r'\b' + re.escape(d), s)})
 
 
-FIXOS = {'Serán', 'Galicia'}
+FIXOS = {'Serán', 'Galicia', 'Galiza', 'Cousas'}
 
 
 def ten_nome(frase):
@@ -134,8 +134,10 @@ class Verificador:
             self._cache[k] = {'E': round(p[0], 3), 'N': round(p[1], 3), 'C': round(p[2], 3)}
         return self._cache[k]
 
-    def frase(self, f, modo='gancho', feito_propio=None):
-        """Avalía unha frase. Devolve dict con 'ok', 'motivo' e as medidas."""
+    def frase(self, f, modo='gancho', feito_propio=None, actores=True):
+        """Avalía unha frase. Devolve dict con 'ok', 'motivo' e as medidas. Con actores=False (vídeo longo, despois
+        do gancho) unha frase que só fala de persoas en xeral ("as mulleres fiaban á lareira") non se esixe; si as que
+        teñen nomes, tempo longo ou desenlaces."""
         nf = _norm(f)
         for i, p in enumerate(self.feitos):      # coincidencia literal cun feito (p. ex. a reserva literal): pasa
             if nf and nf in _norm(p):
@@ -168,7 +170,7 @@ class Verificador:
         tempo = re.search(TEMPO_LONGO, _sen_acentos(f).replace('seculo', 'século'))
         # relato: unha frase que fala de persoas (actores) afirma algo delas e ten que estar apoiada; só as frases
         # sen nomes, sen actores, sen tempo longo e sen desenlace (chuvia, pedra, camiños) poden ser de ambiente
-        actor = bool(ACTORES.search(_sen_acentos(f)))
+        actor = actores and bool(ACTORES.search(_sen_acentos(f)))
         esixida = modo == 'gancho' or ten_nome(f) or tempo or ds or actor
         if ds:
             dossier_ds = set(desenlaces(' '.join(self.feitos)))

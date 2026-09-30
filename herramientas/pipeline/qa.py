@@ -64,9 +64,12 @@ def lingua(texto, dossier=''):
     return res
 
 
-def estilo(texto, frases, aviso, palabras_obx):
+FORMULA_SERAN = 'Isto é Serán, historia de Galicia para durmir.'
+
+
+def estilo(texto, frases, aviso, palabras_obx, formula=FORMULA_SERAN):
     words = texto.split()
-    fixas = lambda f: f['texto'] in aviso or f['texto'].startswith('Isto é Serán')
+    fixas = lambda f: f['texto'] in aviso or f['texto'] == formula or f['texto'].startswith('Isto é Serán')
     long_ = [f['i'] for f in frases if not fixas(f) and not (8 <= len(f['texto'].split()) <= 25)]
     nomes = []
     for f in frases:
@@ -99,7 +102,7 @@ def estilo(texto, frases, aviso, palabras_obx):
         'preguntas': texto.count('?'),
         'palabras_vetadas': [w for w in ('imaxina', 'subscríbete', 'gústame', 'suscríbete') if w in texto.lower()],
         'aviso_literal': aviso in texto,
-        'formula_literal': 'Isto é Serán, historia de Galicia para durmir.' in texto,
+        'formula_literal': formula in texto,
         'frases_fora_8_25': long_,
         'nomes_propios_distintos': sorted(set(nomes)),
         'max_nomes_novos_por_110_palabras': maxv,
@@ -107,7 +110,8 @@ def estilo(texto, frases, aviso, palabras_obx):
 
 
 # ---------------------------------------------------------------- ASR
-def asr(mix, voz, frases, tempos, whisper_dir, nth=4):
+def asr(mix, voz, frases, tempos, whisper_dir, nth=4, pistas=('mestura', 'voz')):
+    """WER e sincronía. Nun vídeo longo abonda con pistas=('mestura',): a pasada sobre a voz soa dobra o tempo."""
     import jiwer
     from faster_whisper import WhisperModel
     m = WhisperModel(whisper_dir, device='cpu', compute_type='int8', cpu_threads=nth)
@@ -116,7 +120,7 @@ def asr(mix, voz, frases, tempos, whisper_dir, nth=4):
         ws = norm(f['texto']).split()
         ref_words += ws; ref_sent += [f['i']] * len(ws)
     out = {}
-    for nome, wav in (('mestura', mix), ('voz', voz)):
+    for nome, wav in [(n, w) for n, w in (('mestura', mix), ('voz', voz)) if n in pistas]:
         segs, info = m.transcribe(wav, language='gl', beam_size=5, word_timestamps=(nome == 'mestura'),
                                   vad_filter=False, condition_on_previous_text=False)
         segs = list(segs)
