@@ -393,8 +393,7 @@ def main():
     with P.Etapa('8_qa'):
         res = {'umbrais': UMBRAIS, 'autoria': tema.get('autoria'), 'son': info_son, 'porta_texto': pt,
                'palabras': tot, 'capitulos': caps_t, 'rotulos': rot, 'nota_execucion': os.environ.get('QA_NOTA')}
-        res['asr'] = qa.asr(str(W / 'mestura.wav'), str(W / 'voz_linea.wav'), frases, tempos, P.CFG['whisper_dir'],
-                            pistas=('mestura',))
+        res['asr'] = qa.asr_por_frases(str(W / 'mestura.wav'), frases, tempos, P.CFG['whisper_dir'])
         res['ficheiro'] = qa.ficheiro(mp4, dur)
         res['ficheiro']['kbps'] = round(Path(mp4).stat().st_size * 8 / 1000 / res['ficheiro']['dur_video_s'])
         res['imaxes'] = qa.imaxes(imgs)
@@ -463,7 +462,7 @@ def informe(r, tema):
           f"- Duración: {hms(f['dur_video_s'])} ({f['dur_video_s']} s), {f['resolucion']} a {f['fps']} fps, {f['mb']} MB, {f['kbps']} kb/s.",
           f"- Palabras do guion: {r['palabras']}. Ritmo por fase (palabras/min, pausas incluídas): {r['ritmo_palabras_min_por_fase']}.",
           f"- Planos por fase: {r['planos_por_fase']}; duración media por fase (s): {r['duracion_media_plano_por_fase_s']}.",
-          f"- ASR (Whisper galego de Nós) sobre a mestura: WER {a['wer']}; sincronía de subtítulos {a['sincronia']['pct_dentro_da_sua_frase']} %.",
+          f"- ASR (Whisper galego de Nós) sobre a mestura, frase a frase no seu treito: WER {a['wer']}; frases que soan no seu treito {a['sincronia']['pct_dentro_da_sua_frase']} %.",
           f"- Sonoridade: {f['lufs_integrado']} LUFS, LRA {f['lra_lu']} LU, pico real {f['pico_real_dbtp']} dBTP; desfase A/V {f['desfase_av_s']} s.",
           f"- Ambiente sonoro (D13): modo {r['son'].get('ambiente')}; "
           + (', '.join(f"{k} {v['segundos']} s" for k, v in (r['son'].get('escena') or {}).items() if isinstance(v, dict))

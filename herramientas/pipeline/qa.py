@@ -167,6 +167,40 @@ def asr(mix, voz, frases, tempos, whisper_dir, nth=4, pistas=('mestura', 'voz'))
     return out
 
 
+def asr_por_frases(mix, frases, tempos, whisper_dir, nth=4, marxe=(0.25, 0.35)):
+    """Vídeo longo (Gauntlet 3): cada frase transcríbese no seu propio treito da mestura (t0 - 0,25 s, t1 + 0,35 s).
+    Motivo: sobre un audio longo con pausas, Whisper sáltase frases enteiras (a peza VOZ mediu WER 0,18-0,28 co
+    pasaxe enteiro fronte a <= 0,054 frase a frase). WER = erros sumados / palabras de referencia; sincronía = % de
+    frases cuxo treito contén a súa frase (WER da frase <= 0,5): mide o mesmo que a sincronía por palabras do vídeo curto
+    (que cada frase soa onde di o subtítulo). Devolve as mesmas claves ca `asr` para 'mestura'."""
+    import jiwer, soundfile as sf
+    from scipy.signal import resample_poly
+    from faster_whisper import WhisperModel
+    m = WhisperModel(whisper_dir, device='cpu', compute_type='int8', cpu_threads=nth)
+    x, sr = sf.read(mix, dtype='float32')
+    x = x.mean(1) if x.ndim > 1 else x
+    x16 = resample_poly(x, 16000, sr).astype(np.float32)
+    err_tot, pal_tot, dentro, por, hip = 0, 0, 0, {}, []
+    for f in frases:
+        t0, t1 = tempos[f['i']]
+        a = x16[int(max(0.0, t0 - marxe[0]) * 16000): int((t1 + marxe[1]) * 16000)]
+        segs, _ = m.transcribe(a, language='gl', beam_size=5, vad_filter=False, condition_on_previous_text=False,
+                               without_timestamps=True)
+        h = norm(' '.join(s_.text for s_ in segs)); r_ = norm(f['texto'])
+        if not r_:
+            continue
+        o = jiwer.process_words(r_, h if h else '-')
+        e = o.substitutions + o.deletions + o.insertions
+        n = len(r_.split())
+        err_tot += e; pal_tot += n; por[f['i']] = round(e / n, 2); hip.append(h)
+        dentro += e / n <= 0.5
+    return {'mestura': {'wer': round(err_tot / max(pal_tot, 1), 3), 'palabras_ref': pal_tot, 'metodo': 'frase a frase',
+                        'wer_por_frase': por, 'frases_wer_mais_0_5': [i for i, v in por.items() if v > 0.5],
+                        'hipotese': ' '.join(hip),
+                        'sincronia': {'pct_dentro_da_sua_frase': round(100 * dentro / max(len(por), 1), 1),
+                                      'frases_medidas': len(por), 'metodo': 'frases cuxo treito contén a súa frase'}}}
+
+
 # ---------------------------------------------------------------- ficheiro final
 def _decode_dur(mp4, stream):
     p = subprocess.run([FFMPEG, '-hide_banner', '-i', str(mp4), '-map', f'0:{stream}', '-f', 'null', '-'],
