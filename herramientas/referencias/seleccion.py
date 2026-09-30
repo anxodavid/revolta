@@ -5,8 +5,8 @@ from curar import pick, lic_ok, score
 EXCL = re.compile(r"lotería|LNAP|Dark Dancers|BANDA DE GAITAS|Haahla|Castro de Vigo|Lareira Mós|Targ niew|\.djvu|\.pdf|\.webm|Cantigas\.(PNG)|Machado|Jornal|mulheres|sertanejo", re.I)
 MANUAL12 = ["Afonso II o Casto, de Oviedo (Tumbo A), r.jpg","Afonso III o Magno (Tumbo A), r.jpg","Bispo Teodomiro.jpg","Adeffonsus rex legionensium et gallecie.jpg",
  "Fernando II de Galicia e Leon no tombo A.jpg","Fernando III como rei de Castela e Toledo e de Galiza e Leon no Tombo A.jpg",
- "Cantigas 1.jpg","Caballeria Cantiga 106.jpg","CSM 185 (187).jpg","Cantigas de Santa Maria. Codice de El Escorial. Cantiga 123 miniaturas.jpg","Cantiga 330 Cantigas de santa maria.jpg","Miniatura representant l’exèrcit almohade.jpg"]
-CAP12 = {"Pambre":2,"Monterrei":2,"Sobroso":2,"Ribadavia":1,"Oseira":2,"capitals":3,"corbels":5}
+ "Caballeria Cantiga 106.jpg","Cantigas de Santa Maria. Codice de El Escorial. Cantiga 123 miniaturas.jpg","Miniatura representant l’exèrcit almohade.jpg"]
+CAP12 = {"Pambre":2,"Monterrei":2,"Sobroso":1,"Ribadavia":1,"Oseira":1,"capitals":2,"corbels":4}
 Met_KEEP = re.compile(r"1[3-7]\d\d|1[4-7]th|late 15th|16th|17th", re.I)
 
 def norm(r, conc, tipo="foto", notas=""):
