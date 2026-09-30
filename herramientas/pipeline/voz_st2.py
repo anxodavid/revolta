@@ -12,7 +12,8 @@ Campos opcionais por frase (a curva do embude, curva.py; se faltan, a voz é a d
                    estilo das dúas (se REF_WAV_CALMO non está definida, non fai nada)
   f0_media         multiplica a F0 (altura media da voz)
   f0_rango         escala a desviación do log F0 arredor da súa media na frase (amplitude da entoación)
-  enerxia          multiplica a enerxía N que recibe o descodificador (N é un logaritmo: súmase log(enerxia))
+  enerxia          multiplica a enerxía N (log da norma do espectro mel) que recibe o descodificador. Efecto
+                   medido: sobre todo volume (0,8 -> -1,8 dB) e algo menos de HNR; non suaviza o timbre
   alpha, beta      mestura do estilo predito co da referencia (0,3 e 0,7): canto máis baixos, máis manda a referencia
   embedding_scale  guía do texto na difusión do estilo (1; máis alto = máis expresivo)
   pasos            pasos da difusión do estilo (5)
@@ -136,7 +137,7 @@ def infer(texto, escala=None, estilo=0.0, f0_media=1.0, f0_rango=1.0, enerxia=1.
         F0, N = model.predictor.F0Ntrain(en, s); asr = t_en @ aln.unsqueeze(0)
         F0 = axustar_f0(F0, p['f0_media'], p['f0_rango'])
         if p['enerxia'] != 1.0:
-            N = N + math.log(p['enerxia'])
+            N = N * p['enerxia']
         out = model.decoder(asr, F0, N, r.squeeze().unsqueeze(0))
     return out.squeeze().numpy()[..., :-50], ps
 
