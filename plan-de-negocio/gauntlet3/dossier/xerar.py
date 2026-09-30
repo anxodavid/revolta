@@ -88,7 +88,7 @@ titulo: "As meigas de verdade"
 titulo_youtube: "As meigas de verdade (e por que o conxuro da queimada é de 1967) | Cousas de Galiza para durmir"
 titulo_rotulo: "As meigas de verdade"
 tema: "As meigas de verdade: o que contan os procesos por bruxería da Real Audiencia de Galicia e as cifras da Inquisición de Santiago, e despois as crenzas e os costumes, contados como lenda, desde o conxuro da queimada de mil novecentos sesenta e sete ata a noite de san Xoán e o frade Feijoo"
-palabras: 3500
+palabras: 4000
 duracion_s: [1500, 2100]
 aviso: "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático."
 capitulo_inicial: "Un conxuro de 1967"
@@ -98,7 +98,7 @@ autoria:
   escenas: "Claude (Anthropic), un axente escribe un prompt por plano."
   automatico: "voz (Nós StyleTTS2), imaxes e a súa porta de revisión, son, montaxe e controis automáticos"
 descricion: |
-  Quen eran de verdade as meigas galegas? Neste episodio para durmir abrimos os procesos por bruxería que garda o Arquivo do Reino de Galicia: unha parteira de Vilalba, un gato que ninguén deu collido en Xinzo de Limia, unhas veciñas que foron á fonte a noite de san Xoán en Campo Lameiro. Tamén as cifras da Inquisición de Santiago, que coas meigas foi máis branda ca a xustiza ordinaria. Despois, amodo, as herbas, o mal de ollo, a noite de san Xoán e o frade Feijoo, que dubidaba das historias de bruxas. E unha sorpresa ao comezo: o conxuro da queimada escribiuse en Vigo en 1967.
+  Quen eran de verdade as meigas galegas? Neste episodio para durmir contamos o que din os procesos por bruxería que o Arquivo do Reino de Galicia mostrou en 2020: unha parteira de Vilalba, un gato que ninguén deu collido en Xinzo de Limia, unhas veciñas que foron á fonte a noite de san Xoán en Campo Lameiro. Tamén como naceu o conxuro da queimada, escrito en Vigo en 1967, e as cifras da Inquisición de Santiago, que coas meigas foi máis branda ca a xustiza ordinaria. Despois, amodo, a lareira e o mal de ollo, a noite de san Xoán e o frade Feijoo, que dubidaba das historias de bruxas.
   Eu non creo nas meigas, mais habelas, hainas: as lendas cóntanse como lendas, e os datos levan fonte.
   As imaxes están xeradas con intelixencia artificial e representan lugares reais: son contido sintético.
 creditos:

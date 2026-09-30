@@ -46,6 +46,7 @@ fontes:
   CIBERDUVIDAS: {url: "https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-frase-eu-nao-acredito-em-bruxas-mas/16796", texto: fontes/CIBERDUVIDAS.txt, desc: "Ciberdúvidas da Língua Portuguesa: 'A frase Eu não acredito em bruxas, mas...'"}
   QUIXOTE: {url: "https://www.gutenberg.org/cache/epub/2000/pg2000.txt", texto: ../tema/quijote.txt, desc: "Don Quijote, texto completo (Project Gutenberg): proba negativa con grep"}
   RAG: {url: "https://academia.gal/dicionario", texto: "rag/{palabra}.txt", desc: "Dicionario da Real Academia Galega (entrada indicada en cada feito)"}
+  RAG-PDP-MEIGA: {url: "https://portaldaspalabras.gal/lexico/palabra-do-dia/meiga/", texto: fontes/PDP-MEIGA.txt, desc: "Real Academia Galega e Fundación Barrié, Portal das Palabras, palabra do día 'meiga' (4-4-2014): etimoloxía"}
 
 feitos:
 # ------------------------------------------------------------------ C0 arranque en frío
@@ -185,7 +186,6 @@ feitos:
   - {fonte: ATLANTICO, cita: "acaba de fallecer en Vigo a los 85 años"}
   - {fonte: ATLANTICO, cita: "empleado jubilado del Banco Pastor"}
 - id: F018
-  ficha: false
   cap: CQ
   tipo: H
   feito: "El mesmo contaba que houbo outros cinco ou seis conxuros daquela época, pero que ningún tivo a saída do seu."
@@ -236,7 +236,6 @@ feitos:
   - {fonte: GL-QUEIMADA, cita: "que el sitúa ao redor dos anos cincuenta do século XX"}
   - {fonte: GL-QUEIMADA, cita: "galegos residentes no exterior comezaron a tomar esta bebida nas festas ou despois das comidas"}
 - id: F025
-  ficha: false
   cap: CQ
   tipo: H
   feito: "Nesas xuntanzas naceu o costume de acompañar a queimada con conxuros escritos para a ocasión."
@@ -280,7 +279,6 @@ feitos:
   - {fonte: GL-QUEIMADA, cita: "os comensais reúnense arredor do pote no que se elabora, preferibelmente coas luces apagadas"}
   - {fonte: GL-QUEIMADA, cita: "É cara ó final deste proceso cando se recita o esconxuro."}
 - id: F032
-  ficha: false
   cap: CQ
   tipo: A
   feito: "A queimada sérvese quente, con todos os seus ingredientes."
@@ -292,6 +290,29 @@ feitos:
   feito: "Segundo a tradición, o ritual da queimada serve para afastar os malos espíritos e as meigas."
   evidencias:
   - {fonte: GL-QUEIMADA, cita: "O ritual da preparación está dirixido a afastar os malos espíritos e as meigas"}
+- id: F268
+  cap: CQ
+  tipo: A
+  feito: "Tras a cea, na escuridade da noite, os comensais reúnense arredor do pote, mellor coas luces apagadas, para animar os corazóns e estreitar os lazos de amizade."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-QUEIMADA, cita: "Tras a cea, na escuridade da noite"}
+  - {fonte: GL-QUEIMADA, cita: "os comensais reúnense arredor do pote no que se elabora, preferibelmente coas luces apagadas, para animar os corazóns e estreitar os lazos de amizade"}
+- id: F269
+  cap: CQ
+  tipo: A
+  feito: "Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote mentres pronuncia o conxuro."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-QUEIMADA, cita: "erguendo cun cazo o líquido en chamas e deixándoo caer pouco a pouco no recipiente mentres pronuncia o conxuro"}
+- id: F270
+  cap: CQ
+  tipo: A
+  feito: "No pote de barro bótanse a augardente e o azucre."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-QUEIMADA, cita: "bótanse a augardente e o azucre"}
+  - {fonte: GL-QUEIMADA, cita: "Nun pote de barro cocido"}
 # ------------------------------------------------------------------ C0B os papeis que falan
 - id: F034
   cap: C0B
@@ -364,7 +385,8 @@ feitos:
 - id: F044
   cap: C0B
   tipo: H
-  feito: "Rodrigo Pousa di que a febre das bruxas chegou a Galicia, aínda que sen a histeria doutras partes de Europa."
+  feito: "A febre das bruxas chegou a Galicia, pero, segundo Rodrigo Pousa, sen a histeria doutras partes de Europa."
+  nota: "Corrixido na rolda 2 do guion (crítico B de lingua e veracidade), H8: 'chegou a Galicia' é da xornalista; de Pousa (e Jiménez Esquinas) é a comparación coa histeria doutras partes."
   evidencias:
   - {fonte: GCIENCIA-26, cita: "Pese a que non cabe dúbida de que a febre das bruxas chegou a Galicia"}
   - {fonte: GCIENCIA-26, cita: "a histeria colectiva documentada noutras partes de Europa, como Alemaña, ou incluso no famoso xuízo de Salem, dista do acontecido en Galicia"}
@@ -486,8 +508,10 @@ feitos:
 - id: F061
   cap: C1
   tipo: H
-  feito: "Un día, unha veciña estaba á porta debandando, e chegou Ana González a dicirlle que o home dela, Rodrigo Colmenero, andaba chamándoa meiga."
+  feito: "Unha veciña contou que un día estaba á porta debandando e chegou Ana González a dicirlle que o home dela, Rodrigo Colmenero, andaba chamándoa meiga."
+  nota: "Corrixido na rolda 2 do guion (crítico B de lingua e veracidade), H5: é o testemuño da propia veciña (Ana de Robles): contalo atribuído."
   evidencias:
+  - {fonte: ARG, cita: "Testemuño de Ana de Robles"}
   - {fonte: ARG, cita: "estando un día la testigo a su puerta debanando llegó la dicha Ana González"}
   - {fonte: ARG, cita: "dixo a la testigo que su marido Rodrigo Colmenero la andava llamando meiga"}
   - {fonte: "RAG:debandar", cita: "Desenrolar [o fío dunha madeixa] para formar un nobelo."}
@@ -501,7 +525,7 @@ feitos:
 - id: F063
   cap: C1
   tipo: H
-  feito: "Cando Ana González saía polas portas do curral, volveu mirar para a veciña, e nese momento a arracada da veciña rompeu en tres anacos."
+  feito: "E contou que, cando Ana González saía polas portas do curral, volveu mirar para ela, e nese momento a súa arracada rompeu en tres anacos."
   evidencias:
   - {fonte: ARG, cita: "al tiempo que ella se salía por las puertas del corral volvió a mirar para la testigo y ansí como la volvió a mirar le quebrantó el sarçillo en tres pedaços"}
   - {fonte: "RAG:arracada", cita: "Pendente en forma de aro con adornos que colgan"}
@@ -547,7 +571,6 @@ feitos:
   evidencias:
   - {fonte: ARG, cita: "bebedizos e ungüentos causaban danos aos animais (morte de vacas, leite estragado"}
 - id: F070
-  ficha: false
   cap: C1
   tipo: L
   feito: "Na mentalidade popular había varios tipos de meigas, entre eles as feiticeiras e as adiviñas."
@@ -637,8 +660,10 @@ feitos:
 - id: F083
   cap: C2
   tipo: H
-  feito: "O Arquivo do Reino de Galicia garda uns trinta procesos por bruxería da xustiza real, que aínda están sen estudar."
+  feito: "O Arquivo do Reino de Galicia garda uns trinta procesos por bruxería da xustiza real, que en dous mil vinte aínda estaban sen estudar."
+  nota: "Corrixido na rolda 2 do guion (crítico B de lingua e veracidade), H4: o dato é do catálogo de 2020; desde entón Rodrigo Pousa estuda os preitos civís (GCiencia 2026). Dicilo en pasado."
   evidencias:
+  - {fonte: ARG, cita: "conmemora o Día da Muller de 2020"}
   - {fonte: ARG, cita: "conserva uns 30 procesos xudiciais contra mulleres levados a cabo pola xustiza real, aínda sen estudar"}
 - id: F084
   ficha: false
@@ -654,7 +679,6 @@ feitos:
   evidencias:
   - {fonte: ARG, cita: "Todas as reas son mulleres."}
 - id: F086
-  ficha: false
   cap: C2
   tipo: H
   feito: "Os procesos non distinguían entre bruxa e feiticeira: nos papeis aparece a expresión meiga feiticeira."
@@ -678,13 +702,15 @@ feitos:
 - id: F089
   cap: C2
   tipo: H
-  feito: "María Cibreira declarou que exercía o oficio desde había uns doce anos e que llo ensinara a súa nai, Guiomar Douteiro."
+  feito: "Despois de ser torturada, María Cibreira confesou que había uns doce anos que exercía o oficio de bruxa e feiticeira, e que llo ensinara a súa nai, Guiomar Douteiro."
+  nota: "Corrixido na rolda 2 do guion (crítico B de lingua e veracidade), H1: é confesión despois do tormento (rótulo 'Confesión de María Cibreira despois de ser torturada' na p. 4 do PDF, comprobado polo crítico B renderizando a páxina). Contala sempre como confesión, nunca como declaración libre; o oficio é 'de tal bruxa y echizera'."
   evidencias:
+  - {fonte: ARG, cita: "Confesión de María Cibreira despois de ser torturada"}
   - {fonte: ARG, cita: "que habrá doce años, poco más o menos, que usaba y ejercía el dicho oficio de tal bruxa y echizera y se lo abía enseñado Guiomar Douteiro, su madre"}
 - id: F090
   cap: C2
   tipo: H
-  feito: "Á casa da súa nai acudía moita xente, e ela facíalles curas e menciñas."
+  feito: "Na mesma confesión contou que á casa da súa nai acudía moita xente, e que ela lles facía curas e menciñas."
   evidencias:
   - {fonte: ARG, cita: "a su casa de ella acudían muchas personas y ella les hacía muchas curas y medezinas"}
 - id: F091
@@ -856,9 +882,10 @@ feitos:
 - id: F114
   cap: C3
   tipo: H
-  feito: "A etimoloxía máis común fai vir a palabra meiga do latín medica."
+  feito: "Segundo a Real Academia Galega, a palabra meiga vén do latín magicus, máxico."
+  nota: "Corrixido na rolda 2 do guion (crítico B de lingua e veracidade), H2: Galipedia di 'do latín medica' e atribúeo ao CCG, pero o texto do CCG non trae etimoloxía e a RAG dá magicus (tamén Priberam e Wiktionary). Non dicir que meiga vén de médica."
   evidencias:
-  - {fonte: GL-MEIGA, cita: "A máis común deriva o termo actual do latín medica."}
+  - {fonte: RAG-PDP-MEIGA, cita: "Chegounos a través do latín magicus, -a, -um 'máxico', que o tomara do grego."}
 - id: F115
   cap: C3
   tipo: H
@@ -866,7 +893,6 @@ feitos:
   evidencias:
   - {fonte: CCG-MEIGAS, cita: "as curandeiras ou meigas, sobre todo se están solteiras ou viúvas -o que, nun contexto aldeán as sinala como diferentes-, serán as vítimas máis frecuentes das delacións"}
 - id: F116
-  ficha: false
   cap: C3
   tipo: H
   feito: "Nunha aldea, ser solteira ou viúva xa sinalaba unha muller como diferente."
@@ -1059,7 +1085,6 @@ feitos:
   evidencias:
   - {fonte: GL-MALDEOLLO, cita: "o suposto efecto negativo que sobre a saúde das persoas ou dos animais pode producir a mirada de determinadas persoas"}
 - id: F145
-  ficha: false
   cap: C4
   tipo: L
   feito: "Críase que se podía botar por envexa, ou mesmo sen querer."
@@ -1098,14 +1123,12 @@ feitos:
   - {fonte: GL-MALDEOLLO, cita: "As castañas bravas, do castiñeiro de Indias ou castiñeiro das bruxas, utilízanse como amuleto protector do mal de ollo."}
   - {fonte: GL-MALDEOLLO, cita: "como pode se-los dentes de allo ou os dentes de porco ou de xabaril, son un remedio común contra unha mala mirada"}
 - id: F151
-  ficha: false
   cap: C4
   tipo: L
   feito: "Aos meniños poñíanlles un destes amuletos entre a roupa ou colgado do pescozo."
   evidencias:
   - {fonte: GL-MALDEOLLO, cita: "para protexer os meniños adoitaba colocarse un amuleto destes entre a roupa ou pendurado ó pescozo"}
 - id: F152
-  ficha: false
   cap: C4
   tipo: L
   feito: "Había quen levaba unha bolsiña cun dente de allo e cousas bendicidas, como auga bendita, unha cruz ou un escapulario."
@@ -1154,7 +1177,6 @@ feitos:
   evidencias:
   - {fonte: GL-LAREIRA, cita: "usábanse tanto para cociñar como para quentar a casa"}
 - id: F159
-  ficha: false
   cap: C4
   tipo: A
   feito: "O lume facíase sobre unha pedra, a pedra do lar."
@@ -1214,6 +1236,79 @@ feitos:
   feito: "A malva é moi empregada polos menciñeiros."
   evidencias:
   - {fonte: "RAG:malva", cita: "A malva é moi empregada polos menciñeiros."}
+- id: F247
+  cap: C4
+  tipo: A
+  feito: "Case sempre había un forno dentro da lareira."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "Case que con regularidade sitúase un forno no seu interior."}
+- id: F248
+  cap: C4
+  tipo: A
+  feito: "Por riba do lume, a cambota guía o fume cara á cheminea."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "a cambota guía o fume cara ao canudo da cheminea"}
+- id: F249
+  cap: C4
+  tipo: A
+  feito: "No oco baixo o asento do escano podía estar a capoeira, onde cebaban os capóns."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "O oco baixo o asento pode ser o lugar adicado a cebar os capóns, denominándose capoeira."}
+- id: F250
+  cap: C4
+  tipo: A
+  feito: "Nalgunhas casas o escano tiña unha mesa de levante, e había que sentar antes de baixala, porque despois quedabas preso no asento."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "É o escano con mesa de levante."}
+  - {fonte: GL-LAREIRA, cita: "cómpre sentar antes de baixar a mesa, porque unha vez despregada o comensal queda preso no asento"}
+- id: F251
+  cap: C4
+  tipo: A
+  feito: "Nas zonas gandeiras, os potes grandes eran para a comida dos animais, e os pequenos para a familia."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "En áreas gandeiras acadan dimensións importantes, por seren neles onde se preparaba o alimento dos animais."}
+  - {fonte: GL-LAREIRA, cita: "Para a familia reservábanse os potes pequenos."}
+- id: F252
+  cap: C4
+  tipo: A
+  feito: "Na cociña tamén se pechaban tratos de compravenda, e desde ela pasábase doadamente aos cortellos dos animais."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-LAREIRA, cita: "formalizábanse contratos de compravenda e intercambios"}
+  - {fonte: GL-LAREIRA, cita: "Nas aldeas adoitaba estar facilmente comunicada con outras dependencias, en especial cos cortellos dos animais."}
+- id: F253
+  cap: C4
+  tipo: A
+  feito: "Nos tornarratos do hórreo adoitaban deixar secar as cabazas."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HORREO, cita: "froito que frecuentemente se deixaba secar nos tornarratos"}
+- id: F254
+  cap: C4
+  tipo: A
+  feito: "O tellado do hórreo podía ser de tella, de lousa ou de colmo de centeo."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HORREO, cita: "cuberta de tella cerámica, lousa de xisto ou colmo de centeo"}
+- id: F255
+  cap: C4
+  tipo: A
+  feito: "Había tamén cabazos, pequenos celeiros de pólas ou vimbios tecidos, cubertos cun cono de xesta ou de colmo."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HORREO, cita: "pequenos celeiros lixeiros chamados cabazos, formados por un corpo de pólas ou vimbios tecidos, cuberto por un pequeno cono de xesta ou colmo"}
+- id: F256
+  cap: C4
+  tipo: A
+  feito: "O millo non agroma ata o comezo do verán, e madurece case no outono."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HORREO, cita: "o millo non agroma ata o comezo do verán e madurece case no outono"}
 # ------------------------------------------------------------------ C5 a noite de san Xoán
 - id: F168
   cap: C5
@@ -1236,7 +1331,6 @@ feitos:
   - {fonte: GL-SANXOAN, cita: "as fogueiras que se prenden na tarde-noite do día 23, tamén chamadas cacharelas"}
   - {fonte: "RAG:cacharela", cita: "Xuntaron leña para a cacharela de san Xoán."}
 - id: F171
-  ficha: false
   cap: C5
   tipo: L
   feito: "Nos días de antes, os mozos e os veciños ían amoreando leña nun lugar aberto."
@@ -1261,7 +1355,6 @@ feitos:
   evidencias:
   - {fonte: GL-SANXOAN, cita: "Salto por riba do lume de san Xoán, para que non me morda cadela nin can"}
 - id: F175
-  ficha: false
   cap: C5
   tipo: L
   feito: "Saltábase sempre un número impar de veces, polo menos tres."
@@ -1274,7 +1367,6 @@ feitos:
   evidencias:
   - {fonte: GL-SANXOAN, cita: "Tamén existía o costume de afuma-lo gando na noite de san Xoán, para protexelo do meigallo."}
 - id: F177
-  ficha: false
   cap: C5
   tipo: L
   feito: "Nalgúns lugares queimaban leña verde, que dá moito fume, para espantar as meigas."
@@ -1293,7 +1385,6 @@ feitos:
   evidencias:
   - {fonte: GL-HERBAS, cita: "Si que se adoita dar a cifra de sete herbas diferentes"}
 - id: F180
-  ficha: false
   cap: C5
   tipo: L
   feito: "Xesús Taboada Chivite recolleu unha longa lista de herbas de san Xoán, que cambia moito dun lugar a outro de Galicia."
@@ -1311,7 +1402,7 @@ feitos:
 - id: F182
   cap: C5
   tipo: A
-  feito: "O fiúncho ten flores amarelas e un cheiro agradable e doce, e abunda moito en Galicia."
+  feito: "O fiúncho ten flores amarelas, un cheiro agradable e un gusto doce, e abunda moito en Galicia."
   evidencias:
   - {fonte: "RAG:fiúncho", cita: "flores amarelas en umbela, de cheiro agradable e gusto doce, moi abundante en Galicia"}
 - id: F183
@@ -1321,14 +1412,12 @@ feitos:
   evidencias:
   - {fonte: "RAG:romeu", cita: "Arbusto aromático da familia das labiadas, de follas pequenas e lineais, tomentosas polo envés, e flores azuis ou abrancazadas"}
 - id: F184
-  ficha: false
   cap: C5
   tipo: A
   feito: "O sabugueiro dá flores pequenas e brancas."
   evidencias:
   - {fonte: "RAG:sabugueiro", cita: "flores pequenas e brancas en corimbo"}
 - id: F185
-  ficha: false
   cap: C5
   tipo: A
   feito: "O codeso é un arbusto de flores amarelas; con el facíanse vasoiras."
@@ -1381,7 +1470,6 @@ feitos:
   evidencias:
   - {fonte: GL-HERBAS, cita: "Á mañá seguinte lavámonos con esa auga verde e recendente"}
 - id: F193
-  ficha: false
   cap: C5
   tipo: L
   feito: "Nalgunhas zonas lavábanse mirando ao oriente, para recibir as primeiras raiolas do sol."
@@ -1414,7 +1502,6 @@ feitos:
   - {fonte: ARG, cita: "Meigas fóra!"}
   - {fonte: ARG, cita: "Expresións de sobra coñecidas"}
 - id: F198
-  ficha: false
   cap: C5
   tipo: L
   feito: "Tamén se cría que o orballo desa noite protexía o gando, e sacábano das cortes para que andase pola herba mollada."
@@ -1439,7 +1526,7 @@ feitos:
   ficha: false
   cap: C5
   tipo: L
-  feito: "Unha copla antiga di: «Se arraiar, se arraiará, tódalas meigas levará»."
+  feito: "Unha copla di: «Se arraiar, se arraiará, tódalas meigas levará»."
   evidencias:
   - {fonte: GL-SANXOAN, cita: "Se arraiar, se arraiará tódalas meigas levará"}
 - id: F201
@@ -1467,6 +1554,86 @@ feitos:
   feito: "Eladio Rodríguez contaba que as herbas se apañaban no campo o día vinte e dous de xuño para vendelas ao día seguinte nos mercados das vilas e cidades."
   evidencias:
   - {fonte: GL-HERBAS, cita: "que se recogen en el campo, generalmente la antevíspera de la noche de San Juan, o sea el día 22, para venderlas al siguiente día en los mercados de las ciudades y villas de Galicia"}
+- id: F257
+  cap: C5
+  tipo: L
+  feito: "Arredor da fogueira comían sardiñas á brasa e bebían viño, cantando e bailando."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "comen sardiñas á brasa e beben viño, cantando e bailando ó redor da fogueira"}
+- id: F258
+  cap: C5
+  tipo: L
+  feito: "Para protexer as casas das bruxas poñíanse nas portas ramos de flores, cardos ou espadanas: as flores polo seu recendo, os cardos polas súas espiñas e as espadanas polas súas follas, que semellan espadas."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "colócanse ramos de flores, cardos ou espadanas nas portas e ventás"}
+  - {fonte: GL-SANXOAN, cita: "As primeiras, polo seu recendo, combaten o Mal; os segundos fano coas súas espiñas e as terceiras coas súas follas, imitantes dunha espada."}
+- id: F259
+  cap: C5
+  tipo: L
+  feito: "A flor da auga é a tona, a capa máis superficial da auga, na que se reflicte o sol ao amencer."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "Chámase flor da auga á tona, a capa máis superficial, na que se reflicte o sol ó amencer"}
+- id: F260
+  cap: C5
+  tipo: L
+  feito: "Nalgúns lugares ían á fonte cunha póla de bieiteiro, e o primeiro que chegaba podía coller con ela a flor da auga."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "hai que coller unha póla de bieiteiro para ir con ela a unha fonte máxica ó amencer do día de san Xoán: o primeiro que chegue pode coller con esa póla a flor da auga"}
+- id: F261
+  cap: C5
+  tipo: L
+  feito: "Nas Vendas da Barreira, no Riós, crese que a moza que recolla a flor da auga casará dentro do ano."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "Nas Vendas da Barreira ( O Riós ) crese que a moza que recolla a flor da auga casará dentro do ano."}
+- id: F262
+  cap: C5
+  tipo: L
+  feito: "Tamén se cría que un paxaro traía no peteiro, ao amencer de san Xoán, unha pinga de auga e de orballo, e que a deitaba nunha flor."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HERBAS, cita: "a pinga de auga e de orballo que na amañecida de san Xoán trae un paxaro no peteiro e deita nunha flor"}
+- id: F263
+  cap: C5
+  tipo: L
+  feito: "Uns versos din: «Día de san Xoán, alegre meniña, vaite lavar, pillarás auga do paxaro antes de que o sol raiar»."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "Día de san Xoán, alegre meniña, vaite lavar, pillarás auga do paxaro antes de que o sol raiar"}
+- id: F264
+  cap: C5
+  tipo: L
+  feito: "Contan as lendas galegas que o fento bota flor a noite de san Xoán, xusto á medianoite."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HERBAS, cita: "Fento macho, é un fento velenoso."}
+  - {fonte: GL-HERBAS, cita: "As lendas galegas e británicas din que pola noite de san Xoán bota flor; xustamente a medianoite."}
+- id: F265
+  cap: C5
+  tipo: L
+  feito: "Críase que, se as mozas metían certas herbas debaixo do traveseiro a noite de san Xoán, podían ver en soños o home co que ían casar."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HERBAS, cita: "Na noite de san Xoán, se as mozas meten certas herbas debaixo do traveseiro poden ver en soños ao home co que van casar."}
+- id: F266
+  cap: C5
+  tipo: L
+  feito: "Críase que o sol baila ao amencer de san Xoán de ledicia pola festa do santo, e nalgúns sitios mirábano bailar a través dos buratos dun cribo."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "Resulta común a crenza de que o sol baila ó amencer, disque de ledicia pola festa do santo."}
+  - {fonte: GL-SANXOAN, cita: "en algures a través dos buratos dun cribo"}
+- id: F267
+  cap: C5
+  tipo: L
+  feito: "Crese que o romeu é a herba que protexe e purifica os fogares galegos."
+  nota: "Engadido polo guionista na rolda 2 (cita comprobada con xerar.py) para a zona de durmir."
+  evidencias:
+  - {fonte: GL-HERBAS, cita: "Crese que o romeu realmente é a herba que protexe e purifica os fogares galegos por excelencia."}
 # ------------------------------------------------------------------ C6 Feijoo
 - id: F205
   cap: C6
@@ -1525,7 +1692,7 @@ feitos:
 - id: F213
   cap: C6
   tipo: H
-  feito: "O terceiro tomo do Teatro crítico, de mil setecentos vinte e nove, dedicoullo ao abade e ao convento de Samos."
+  feito: "O terceiro tomo do Teatro crítico, de mil setecentos vinte e nove, dedicouno ao abade e ao convento de Samos."
   evidencias:
   - {fonte: FEIJOO-INDICE, cita: "Dedicatoria que hizo el Autor al M. R. P. Abad, y Santo Convento de San Julián de Samos"}
   - {fonte: FEIJOO-INDICE, cita: "Tomo tercero [ 1729 ]"}
@@ -1559,7 +1726,6 @@ feitos:
   evidencias:
   - {fonte: FEIJOO-MAXIA, cita: "De este modo la fábula que nació en el rincón de una Aldea viene a ocupar todo el ámbito del Mundo."}
 - id: F218
-  ficha: false
   cap: C6
   tipo: H
   feito: "Por iso pedía ler con moita desconfianza os libros de bruxería."
@@ -1572,7 +1738,6 @@ feitos:
   evidencias:
   - {fonte: FEIJOO-MAXIA, cita: "Las causas de que haya tantas fábulas en orden a magia, o hechicería, pueden reducirse a cinco."}
 - id: F220
-  ficha: false
   cap: C6
   tipo: H
   feito: "A primeira era o gusto da xente por contar e escribir cousas prodixiosas."
@@ -1656,7 +1821,6 @@ feitos:
   - {fonte: CCG-MEIGAS, cita: "No século XVIII, Martín Sarmiento reivindicaría o saber das curandeiras, as meigas, como o de auténticos médicos e botánicos."}
   - {fonte: GL-FEIJOO, cita: "frei Martín Sarmiento"}
 - id: F233
-  ficha: false
   cap: C6
   tipo: A
   feito: "Feijoo foi sempre de saúde delicada, con catarros frecuentes."
@@ -1719,7 +1883,6 @@ feitos:
   evidencias:
   - {fonte: ARG, cita: "conmemora o Día da Muller de 2020 dando a coñecer un pequeno conxunto de procesos xudiciais por bruxería perante a Real Audiencia de Galicia"}
 - id: F242
-  ficha: false
   cap: C7
   tipo: A
   feito: "A lousa é unha pedra gris ou negra que se parte doadamente en láminas."
