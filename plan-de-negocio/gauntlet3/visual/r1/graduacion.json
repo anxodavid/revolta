@@ -1,0 +1,178 @@
+[
+ {
+  "imaxe": "000-c72c8803-1.png",
+  "lum_orixe": 0.253,
+  "gamma": 1.0,
+  "contraste": 1.076,
+  "toe": 0.0,
+  "brillo": 1.0,
+  "saturacion": 1.0,
+  "croma_orixe": 0.066,
+  "lum_final": 0.254
+ },
+ {
+  "imaxe": "001-79e06ef0-3.png",
+  "lum_orixe": 0.233,
+  "gamma": 1.0,
+  "contraste": 1.069,
+  "toe": 0.0,
+  "brillo": 1.0,
+  "saturacion": 1.0,
+  "croma_orixe": 0.035,
+  "lum_final": 0.233
+ },
+ {
+  "imaxe": "002-aad86f0a-0.png",
+  "lum_orixe": 0.218,
+  "gamma": 1.0,
+  "contraste": 1.061,
+  "toe": 0.0,
+  "brillo": 1.0,
+  "saturacion": 1.0,
+  "croma_orixe": 0.035,
+  "lum_final": 0.218
+ },
+ {
+  "imaxe": "003-01b2573f-0.png",
+  "lum_orixe": 0.201,
+  "gamma": 1.0,
+  "contraste": 1.054,
+  "toe": 0.0,
+  "brillo": 1.0,
+  "saturacion": 1.0,
+  "croma_orixe": 0.032,
+  "lum_final": 0.202
+ },
+ {
+  "imaxe": "004-639fc982-0.png",
+  "lum_orixe": 0.372,
+  "gamma": 1.0,
+  "contraste": 1.044,
+  "toe": 0.008,
+  "brillo": 0.996,
+  "saturacion": 0.97,
+  "croma_orixe": 0.03,
+  "lum_final": 0.378
+ },
+ {
+  "imaxe": "005-a32aa205-1.png",
+  "lum_orixe": 0.218,
+  "gamma": 0.911,
+  "contraste": 1.031,
+  "toe": 0.008,
+  "brillo": 0.989,
+  "saturacion": 0.97,
+  "croma_orixe": 0.032,
+  "lum_final": 0.249
+ },
+ {
+  "imaxe": "006-3c95cdf0-0.png",
+  "lum_orixe": 0.334,
+  "gamma": 1.0,
+  "contraste": 1.019,
+  "toe": 0.008,
+  "brillo": 0.981,
+  "saturacion": 0.97,
+  "croma_orixe": 0.05,
+  "lum_final": 0.339
+ },
+ {
+  "imaxe": "007-42a6336c-2.png",
+  "lum_orixe": 0.364,
+  "gamma": 1.0,
+  "contraste": 1.006,
+  "toe": 0.008,
+  "brillo": 0.974,
+  "saturacion": 0.97,
+  "croma_orixe": 0.045,
+  "lum_final": 0.367
+ },
+ {
+  "imaxe": "008-a4b18ee9-0.png",
+  "lum_orixe": 0.499,
+  "gamma": 1.055,
+  "contraste": 0.992,
+  "toe": 0.012,
+  "brillo": 0.964,
+  "saturacion": 0.92,
+  "croma_orixe": 0.042,
+  "lum_final": 0.484
+ },
+ {
+  "imaxe": "009-99a3fc38-0.png",
+  "lum_orixe": 0.265,
+  "gamma": 1.0,
+  "contraste": 0.977,
+  "toe": 0.012,
+  "brillo": 0.951,
+  "saturacion": 0.92,
+  "croma_orixe": 0.046,
+  "lum_final": 0.27
+ },
+ {
+  "imaxe": "010-f5dcdd95-0.png",
+  "lum_orixe": 0.293,
+  "gamma": 1.0,
+  "contraste": 0.962,
+  "toe": 0.012,
+  "brillo": 0.939,
+  "saturacion": 0.92,
+  "croma_orixe": 0.018,
+  "lum_final": 0.295
+ },
+ {
+  "imaxe": "011-9bb98628-6.png",
+  "lum_orixe": 0.284,
+  "gamma": 1.0,
+  "contraste": 0.947,
+  "toe": 0.012,
+  "brillo": 0.926,
+  "saturacion": 0.92,
+  "croma_orixe": 0.056,
+  "lum_final": 0.284
+ },
+ {
+  "imaxe": "012-8c5359e6-0.png",
+  "lum_orixe": 0.217,
+  "gamma": 1.0,
+  "contraste": 0.935,
+  "toe": 0.02,
+  "brillo": 0.915,
+  "saturacion": 0.8,
+  "croma_orixe": 0.04,
+  "lum_final": 0.226
+ },
+ {
+  "imaxe": "013-6136832f-0.png",
+  "lum_orixe": 0.201,
+  "gamma": 1.0,
+  "contraste": 0.925,
+  "toe": 0.02,
+  "brillo": 0.905,
+  "saturacion": 0.8,
+  "croma_orixe": 0.043,
+  "lum_final": 0.209
+ },
+ {
+  "imaxe": "014-abc2335a-5.png",
+  "lum_orixe": 0.27,
+  "gamma": 1.0,
+  "contraste": 0.915,
+  "toe": 0.02,
+  "brillo": 0.895,
+  "saturacion": 0.8,
+  "croma_orixe": 0.011,
+  "lum_final": 0.273
+ },
+ {
+  "imaxe": "015-b3b9dcd5-0.png",
+  "lum_orixe": 0.226,
+  "gamma": 1.0,
+  "contraste": 0.905,
+  "toe": 0.02,
+  "brillo": 0.885,
+  "saturacion": 0.645,
+  "croma_orixe": 0.074,
+  "lum_final": 0.231
+ }
+]
