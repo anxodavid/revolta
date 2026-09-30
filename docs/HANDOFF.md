@@ -3,6 +3,21 @@
 Estado a 30-09-2026. Resume la primera sesión de trabajo (29 y 30 de septiembre de 2026) para poder retomarla en otra.
 Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 
+## 0. Gauntlet 3 en curso (30-09-2026, tarde): vídeo largo "Cousas de Galiza para durmir"
+
+**Si la sesión se corta, retomar desde aquí.** Encargo y decisiones (D7-D12) en
+[`plan-de-negocio/gauntlet3/contexto.md`](../plan-de-negocio/gauntlet3/contexto.md) y en `decisiones.md`.
+
+| Pieza | Estado | Dónde |
+|---|---|---|
+| Entorno | Hecho: `instalar.sh` en una orden (≈6 min) | `herramientas/pipeline/instalar.sh`, `entorno.sh` |
+| Tema | Elegido: **"As meigas de verdade"** (crítico en curso) | `gauntlet3/tema/investigacion.md`, `veredictos/tema-r1.md` |
+| Dossier | En curso | `herramientas/pipeline/temas/meigas-de-verdade.yaml`, `gauntlet3/dossier/` |
+| Guion | Pendiente (Gauntlet: constructor + 2 críticos, hasta 3 rondas) | `gauntlet3/guion/` |
+| Voz (embudo) | En curso | `voz_st2.py`, `curva.py`, `gauntlet3/voz/` |
+| Visual | En curso (SDXL-Lightning, biblia visual, puertas CLIP) | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
+| Vídeo | Pendiente: `longo.py` (guion y planos escritos por agentes; curva de embudo; capítulos) | `herramientas/pipeline/longo.py` |
+
 ## 1. Qué es el proyecto
 
 Un canal de YouTube de vídeos hechos con IA sobre **historia y cultura de Galicia**, pensados para **quedarse dormido**

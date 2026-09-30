@@ -82,3 +82,21 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
 - `Nos_Brais-GL` es un dataset con términos de uso que prohíben difundir las grabaciones: las referencias de estilo se
   quedan en el scratchpad, nunca en el repo.
 - Clonar repos públicos de GitHub funcionó en esta sesión (falló en la anterior).
+
+## Tema (elección con datos)
+
+- **Elegido: "As meigas de verdade"** (brujería real en Galicia según los procesos de la Inquisición de Santiago y de
+  la Real Audiencia, y las lendas contadas como lendas), con arranque en frío en el conxuro de la queimada (escrito en
+  Vigo en 1967). Es el tema con más ganchos verdaderos y documentados; "brujas" es un término enorme en YouTube España
+  (≈ 34 veces "Santa Compaña") que sube × 2,0 en octubre; en galego no hay nada para dormir. Segundo: Camiño de
+  Santiago (el mejor dato "para dormir" de un tema gallego, 182.379 vistas). Detalle en `gauntlet3/tema/investigacion.md`.
+- **La Santa Compaña** tiene más demanda y más pico en octubre (× 2,3-3,2), pero su público es de terror: sus versiones
+  para dormir se quedan en 5-6 K vistas.
+- **Medir YouTube sin clave:** `yt-dlp --flat-playlist -j` con el cliente `android_vr` (1,5 s por consulta, sin
+  bloqueos); para metadatos completos, `mweb` con `--ignore-no-formats-error` y 3 s entre peticiones. Google Trends
+  con `pytrends` a través del proxy (sin `retries`/`backoff_factor`), mejor con `gprop="youtube"`.
+- **Limpiar los resultados es lo que más cuesta:** música (Mägo de Oz, Luar na Lubre) y homónimos inflan las cifras
+  del folclore gallego (la "Santa Compaña" parecía tener 20 M de vistas).
+- **Fuente de oro para meigas:** el PDF de la exposición "Meigas, feitizos das menciñeiras" del Arquivo do Reino de
+  Galicia (2020), con transcripciones de procesos reales. Las fuentes discrepan en fechas (la única hoguera: 1627 o
+  1579): se dice sin el año.
