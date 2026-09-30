@@ -11,7 +11,7 @@ en las pruebas de esta ronda (`aprendizajes/visual.md`).
 
 ```json
 {"n": 12, "prompt": "medium shot of ...", "tipo": "plano_medio", "luz": "lit only by firelight, deep black shadows",
- "negativo": "orange roof tiles", "movemento": "zoom_in"}
+ "negativo": "orange roof tiles", "movemento": "zoom_in", "son": "lume"}
 ```
 
 Solo `n` y `prompt` son obligatorios. `tipo` (sección 3) se recomienda siempre. `luz` es opcional: si falta y el
@@ -19,6 +19,14 @@ prompt no trae ninguna palabra de luz, el código pone la luz por defecto de la 
 separados por comas) no se usa para generar (SDXL-Lightning va sin CFG y no admite prompt negativo), sino para
 **revisar**: la puerta de CLIP rechaza la imagen si se parece a esos conceptos. `movemento` es el Ken Burns
 (`zoom_in`, `zoom_out`, `pan_left`, `pan_right`, `pan_up`).
+
+`son` (decisiones D13 y D14 del promotor, `contexto.md` §7): el ambiente sonoro va **por escena**. Valores:
+`choiva`, `lume`, `mar`, `vento`, `xente` (murmullo de voces ininteligibles), `noite`, `fonte`, `aldea`, `campas`, o
+ninguno (voz limpia). Si falta, `longo.py` lo deduce de las palabras del prompt (rain, fire/hearth/embers, sea/waves,
+wind/storm). Regla: poner lluvia o fuego **solo cuando la imagen los muestre de verdad** y dejar tramos sin ambiente
+(voz limpia), sobre todo en el gancho. El catálogo y sus reglas son de la pieza SON:
+`plan-de-negocio/gauntlet3/son/guia-son.md`. Imagen y sonido se escriben juntos: si el plano es un gentío, la imagen
+sigue siendo de 3-4 figuras lejos o un detalle (sección 5) y el gentío lo pone el sonido (`son: xente`).
 
 **Qué hace el código y no hay que repetir en el prompt:** el estilo común (sección 1) va delante de cada prompt; la
 luz por defecto de la fase si el prompt no trae luz; al reintentar, las correcciones según el motivo del rechazo
@@ -150,7 +158,11 @@ lousa) **al principio** del trozo de lugar, porque el modelo pesa más lo primer
 - castillos de cuento, catedrales góticas francesas, armaduras completas de caballero en escenas rurales;
 - clichés "celtas": kilt, tartán, gaita escocesa (tres roncos; la gallega tiene uno), druidas de túnica blanca,
   trisqueles luminosos, nudos celtas;
-- meigas de Halloween: sombrero puntiagudo, escoba voladora, piel verde, caldero burbujeante verde;
+- meigas de Halloween y estereotipos (vetos del crítico del tema, `contexto.md` §8): sombrero puntiagudo, escoba,
+  caldero, piel verde, **nariz ganchuda, verrugas**; tampoco autos de fe, capirotes, llamas sobre personas ni partos
+  explícitos. La meiga del episodio es curandeira o partera: una mujer mayor corriente, digna, con su ropa de lana;
+  poner `negativo: "witch, hooked nose, warts"` en sus primeros planos;
+- en **durmir**, nada de intrusiones nocturnas (gatos en la cama, demonios en el camino), calaveras ni torturas;
 - multitudes, ejércitos, procesiones largas (ver sección 5); texto, letreros, libros abiertos legibles, mapas.
 
 ## 5. Caras, manos y multitudes

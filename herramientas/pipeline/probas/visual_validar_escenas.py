@@ -19,11 +19,13 @@ VETADAS = [   # (motivo, expresión regular): biblia, sección 4 (lista negativa
                             r'vibrant|neon|fantasy|magical glow|octane|unreal engine)\b'),
     ('iconografía non galega', r'\b(cypress\w*|olive trees?|olive groves?|palm trees?|eucalyptus|whitewash\w*|stucco|'
                                r'terracotta roofs?|orange roofs?|red roofs?|spoked|tuscan|mediterranean|kilt|tartan|'
-                               r'druid\w*|pointed hat|broomstick|cauldron bubbling)\b'),
+                               r'druid\w*|pointed hat|broom\w*|cauldron\w*|witch\w*|hooked nose|warts?|'
+                               r'hood(ed)? penitents?|capirotes?|auto-?da-?f[eé]|burning at the stake)\b'),
     ('multitude (a porta rexeita)', r'\b(crowds?|army|armies|soldiers|knights|throng|multitude|many people|villagers gathered)\b'),
     ('texto (a porta rexeita)', r'\b(writing|written|letters?|inscription|sign|book pages|open book|map)\b'),
     ('negación (CLIP non a entende)', r'\b(no|without|not)\b'),
 ]
+SONS = {'choiva', 'lume', 'mar', 'vento', 'xente', 'noite', 'fonte', 'aldea', 'campas', '', None}   # D13-D14
 ARQ_PALABRAS = [   # arquetipos repetidos que o crítico viu, por palabras
     ('camiñantes de costas', r'(seen from behind|from behind|walking away)'),
     ('castelo no outeiro', r'castle on (a|the) hill|distant castle|fortress on a hill'),
@@ -61,11 +63,13 @@ def main():
                 arq_pos[et].append(x.get('n', i + 1))
         if x.get('tipo') and x.get('tipo') == tipos_prev and x.get('tipo') != 'paisaxe':
             msgs.append(f"tipo repetido co plano anterior: {x['tipo']}")
+        if x.get('son') and x['son'] not in SONS:
+            msgs.append(f"son descoñecido: {x['son']} (guía: plan-de-negocio/gauntlet3/son/guia-son.md)")
         if x.get('tipo') and x['tipo'] not in imaxes.TIPO_FRASE:
             msgs.append(f"tipo descoñecido: {x['tipo']} (válidos: {', '.join(imaxes.TIPO_FRASE)})")
         tipos_prev = x.get('tipo')
-        luz = re.findall(imaxes.LUZ_RX, x['prompt'] + ' ' + str(x.get('luz') or ''), re.I)
-        luz_fase[e['fase']][luz[0].lower() if luz else '(por defecto)'] += 1
+        luz = [m_.group(0).lower() for m_ in re.finditer(imaxes.LUZ_RX, x['prompt'] + ' ' + str(x.get('luz') or ''), re.I)]
+        luz_fase[e['fase']][luz[0] if luz else '(por defecto)'] += 1
         for m_ in msgs:
             avisos[m_.split(':')[0]] += 1
             print(f"plano {x.get('n', i + 1)}: {m_}")

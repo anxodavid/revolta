@@ -48,6 +48,7 @@ def main():
     ap.add_argument('modelo'); ap.add_argument('saida')
     ap.add_argument('--estilos', default='filme,pintura'); ap.add_argument('--n', type=int, default=len(PROMPTS))
     ap.add_argument('--malos', action='store_true', help='engade as escenas alleas (só no primeiro estilo)')
+    ap.add_argument('--prompts', default=None, help='JSON [[fase, nome, prompt], ...] en vez dos PROMPTS de aquí')
     a = ap.parse_args()
     import torch
     torch.set_num_threads(int(os.environ.get('NTH', '4')))
@@ -56,7 +57,8 @@ def main():
     m = pipe._revolta
     res = {'modelo': m, 'carga_s': carga, 'imaxes': []}
     print(f'{a.modelo}: carga {carga} s', flush=True)
-    tarefas = [(estilo, k, x) for estilo in a.estilos.split(',') for k, x in enumerate(PROMPTS[:a.n])]
+    prompts = [tuple(x) for x in json.loads(Path(a.prompts).read_text())] if a.prompts else PROMPTS
+    tarefas = [(estilo, k, x) for estilo in a.estilos.split(',') for k, x in enumerate(prompts[:a.n])]
     if a.malos:
         tarefas += [(a.estilos.split(',')[0], 100 + k, x) for k, x in enumerate(MALOS)]
     for estilo, k, (fase, nome, p) in tarefas:

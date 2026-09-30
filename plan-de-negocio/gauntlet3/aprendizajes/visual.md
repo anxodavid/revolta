@@ -28,3 +28,31 @@ imágenes**, no de una persona. La hoja de prueba no la juzga este agente: la ju
   5,14 GB en **121 s** a través del proxy. Cada UNet completa pesa lo mismo (1, 2, 4 y 8 pasos); las LoRA
   (394 MB) necesitarían además la UNet de SDXL base (5,14 GB) y dan algo menos de calidad según la ficha.
 - Disco: 15 GB libres al empezar; 9,2 GB tras bajar la UNet de 4 pasos (los otros agentes también escriben).
+
+## Comparativa de modelos (30-09-2026, `herramientas/pipeline/probas/visual_comparar_modelos.py`)
+
+Mismos 8 prompts (escenas gallegas de las 4 fases: lareira de noche, cruceiro con luna y tormenta, aldea con hórreo,
+carro de bois, costa al atardecer, manos hilando junto a un candil, carballeira con luna, brasas) y mismas semillas,
+en dos estilos: `filme` = "cinematic film still, period drama, photorealistic" y `pintura` = "realistic oil painting,
+dramatic chiaroscuro". CPU de 4 núcleos, bf16, VAE en `channels_last`, cada modelo con el candado de CPU.
+Rejillas en `plan-de-negocio/gauntlet3/visual/comparativa/`.
+
+| Modelo | Resolución | Carga | s/imagen (mediana; mín-máx) | Licencia |
+|---|---|---|---|---|
+| (a) SDXL-Turbo, 4 pasos (Gauntlet 2) | 1024x576 | 13,7 s | **25,5** (22,2-28,3), 16 imágenes | Stability AI Community License |
+| (b) SDXL base + UNet Lightning 4 pasos | 1344x768 | 18,0 s | **47,6** (44,0-75,5), 16 imágenes (23 con las de calibración: 47,1) | OpenRAIL++-M |
+
+Lo que vio Claude en las imágenes (juicio de Claude, no de una persona):
+- **El prompt pesa más que el modelo en la luz**: con los prompts nuevos (fuente de luz explícita, fase) Turbo ya da
+  lumbre, luna, contraluz y atardecer; el gris plano de la ronda 3 venía del estilo fijo "soft overcast light".
+- **Lightning 1344x768 es claramente más nítido y más "de cine"**: planos más abiertos y compuestos, manos más
+  creíbles, texturas (musgo, piedra, lana) reales; Turbo a 1024x576 es más blando y más "ilustración".
+- Estilo: `pintura` en Lightning sale saturado y brillante, el "óleo genérico de IA" que el crítico rechazó; `filme`
+  es lo más parecido a la referencia. **Se elige `filme`.**
+- **Ninguno de los dos entiende "granary raised on stone pillars" ni "solid wooden disc wheels"**: sale una aldea
+  inglesa (Cotswolds) sin hórreo y carros con **ruedas de radios** (en los dos modelos y los dos estilos). Hace falta
+  otra forma de pedirlos (experimento de iconografía, abajo) y la puerta de CLIP.
+- Lightning mete **detalles modernos** que Turbo no: ventanas de cristal con cuarterones, una estufa de hierro en
+  vez de lareira, una farola junto al cruceiro. Florence-2 (ventanas, farolas) y la lista de la puerta deben pararlos.
+- "a traditional village in Galicia, Spain, stone houses" dio una aldea de piedra con tejado gris verosímil
+  (1 imagen): **la palabra "Galicia, Spain" no confunde a SDXL** como supuse; se corrige la biblia (se desaconsejaba).
