@@ -34,6 +34,7 @@ MODELOS = Path(os.environ.get('REVISOR_DIR', '/tmp/claude-0/-home-user-revolta/2
 FLORENCE = os.environ.get('REVISOR_VLM', 'florence-community/Florence-2-large')
 CLIP_MODEL = os.environ.get('CLIP_MODEL', 'openai/clip-vit-large-patch14')
 MAN_DIST = 0.14
+MAN_DETALLE = 0.12   # sen corpos na imaxe, unha man máis ancha ca isto (fracción do ancho) é un primeiro plano
 CORPOS_MAX = 5
 VERSION = 5   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
 
@@ -255,9 +256,16 @@ class Revisor:
             w = (lm[0].x * asp, lm[0].y)
             d = min((((w[0] - q[0]) ** 2 + (w[1] - q[1]) ** 2) ** 0.5 for q in pulsos), default=9.0)
             mans.append({'pulso': [round(lm[0].x, 3), round(lm[0].y, 3)], 'confianza': round(hd[0].score, 2),
-                         'dist_corpo': round(d, 3)})
+                         'dist_corpo': round(d, 3), 'tamaño': round(max(q.x for q in lm) - min(q.x for q in lm), 3)})
         problemas = []
-        orfas = [m for m in mans if m['dist_corpo'] > MAN_DIST]
+        # Gauntlet 3: nun primeiro plano de mans non hai corpo que detectar; unha man grande sen ningún corpo na imaxe
+        # é un detalle (a biblia pídeos), non unha man solta. Sen corpos, só falla unha man pequena ou máis de dúas.
+        if p.pose_landmarks:
+            orfas = [m for m in mans if m['dist_corpo'] > MAN_DIST]
+        else:
+            orfas = [m for m in mans if m['tamaño'] < MAN_DETALLE]
+            if len(mans) > 2:
+                problemas.append(f'{len(mans)} mans sen corpo')
         if orfas:
             problemas.append(f'man sen corpo ({len(orfas)})')
         if p.pose_landmarks and len(mans) > 2 * len(p.pose_landmarks):
