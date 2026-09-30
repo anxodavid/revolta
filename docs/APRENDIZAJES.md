@@ -200,3 +200,12 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
 - **`pkill -f PATRÓN` puede matar la propia shell** si el patrón aparece en la orden que se está ejecutando: usar PID.
 - La ronda 2 del guion ganó (ajustado) con 16 sustituciones exactas del crítico; la carencia que queda (tramo de
   6:27-11:36 con muchas atribuciones y cantidades) va a la plantilla del siguiente episodio.
+- **`multiprocessing.Pool` se cuelga para siempre si el OOM mata a su trabajador** (el 30-09-2026 a las 23:09: 30 min
+  perdidos sin ninguna línea en el log). Con `concurrent.futures.ProcessPoolExecutor` sale `BrokenProcessPool` y el
+  lanzador (`herramientas/pipeline/lanzar-longo.sh`) reintenta; lo hecho queda en la caché de cada etapa.
+- **Memoria de la etapa de imágenes: ~12 GB** (SDXL-Lightning, Florence-2 fp32, CLIP-L y MediaPipe en un proceso). El
+  servidor Java de LanguageTool (0,55 GB) y el NLI que quedaban vivos del paso de texto, más un intento guiado con CFG
+  (lote doble en la UNet), bastaron para pasar el límite. Solución: cerrar LanguageTool a la fuerza antes de las imágenes
+  y sin intentos guiados en producción (`IMG_CFG_REINTENTO=0`).
+- **Un reinicio del contenedor mata también los procesos desacoplados** (`setsid nohup`): el scratchpad sobrevivió,
+  pero hay que relanzar. Tras el reinicio, la primera carga de los modelos desde el disco en frío tarda 10-20 min.
