@@ -1,0 +1,65 @@
+# Aprendizajes de la sesión del 29-30 de septiembre de 2026
+
+## Producto y mercado
+
+- **El nicho en galego es diminuto.** Solo el 3,59 % de los mayores de 16 consume audiovisual sobre todo en galego
+  (IGE, EEF 2023). En radio es el 15 %: el galego se escucha más de lo que se ve. Mercado atendible estimado: 2.000-20.000
+  oyentes. No hay competencia directa, pero eso puede ser un hueco o un desierto.
+- **El tema funciona, pero en castellano:** "Galicia para dormir" (sobre todo lendas) tiene vídeos de 5-108 K vistas. Por
+  eso conviene **toda Galicia** y no solo historia, y explorar **pistas de audio** pt/es/en en el mismo vídeo.
+- **El estilo "fábrica de engagement" y el contenido para dormir chocan.** Solución acordada: ganchos solo al principio
+  (título, miniatura, primeros 60-120 s) y bajada gradual al tono de dormir.
+- **La calidad humana cuesta dinero real:** corrector y historiador ≈ 305 € por episodio. Por eso el promotor eligió el
+  canal desatendido. Con él, la calidad depende de controles automáticos y de un buen LLM.
+- **Transparencia:** el aviso hablado debe ser veraz. En un guion heredado del plan v1 quedó "revisouno un corrector
+  profesional", falso tras la decisión D5; el promotor lo detectó. Revisar todo texto público cuando cambie una decisión.
+
+## Tecnología
+
+- **Voz en galego:** los modelos abiertos del **Proxecto Nós** (Hugging Face `proxectonos`) funcionan en CPU. El mejor
+  hoy es **Nos_StyleTTS2-Brais-GL** (WER 0,26 frente a 0,38-0,50 de las VITS en el control ASR del kit). Los modelos
+  son Apache-2.0, pero los corpus de voz tienen condiciones de uso restringidas: pedir permiso a Nós/USC antes de
+  publicar.
+- **Guion:** un LLM local pequeño (EuroLLM-9B en CPU) **inventa historia y palabras** en galego ("a irmandade venceu",
+  "fortaleiras"). Con filtros bloqueantes de veracidad no consigue escribir párrafos limpios y el guion queda como el
+  dossier recitado. **Hace falta un LLM potente** (por API).
+- **Controles automáticos útiles:** ASR con el Whisper galego de Nós (WER), LanguageTool gl + hunspell, veracidad por NLI
+  contra un dossier de fuentes, ffmpeg `ebur128` para sonoridad, sincronía de subtítulos. **No detectan** giros torpes
+  ni si una imagen "parece Galicia".
+- **Imágenes:** SDXL-Turbo en CPU da un resultado evocativo, pero cuela iconografía mediterránea. La revisión con
+  Florence-2 solo ve lo que su descripción nombra. Hace falta una lista positiva de iconografía galega.
+- **Coste de cómputo:** 3 min de vídeo ≈ 5 h de CPU de núcleo en este entorno; 60 min ≈ 28,6 h de reloj. Para producir
+  en serie hace falta GPU o episodios más cortos.
+- **Cotovía** normaliza mal algunas cifras ("mil catrocentas sesenta e sete"): escribir los números en letra en el guion.
+
+## Proceso y método (Gauntlet Loop)
+
+- **Gauntlet Loop** (técnica de Matt Shumer): el agente parte el objetivo en piezas; cada pieza tiene un constructor y un
+  crítico independiente con contexto limpio, que compara a ciegas con una referencia real y exigente; si pierde, el
+  crítico señala la mayor carencia y la pieza vuelve al constructor; el bucle termina cuando gana o cuando el humano para.
+- **Los críticos son muy útiles para cazar errores reales** (fechas, citas falsas, incoherencias entre secciones,
+  palabras inventadas, imágenes no gallegas). Casi ninguna pieza "gana" del todo: el tope de rondas es la parada real.
+- **El juez humano es insustituible** para la voz y para decir si algo engancha. El feedback del promotor tras ver el
+  vídeo cambió el rumbo (ritmo, ganchos, temas).
+- **Decir siempre qué hizo un humano o Claude a mano y qué fue automático.** El primer vídeo que vio el promotor tenía el
+  guion escrito por Claude: no era desatendido. No se aclaró a tiempo.
+- Las decisiones del promotor se comunican a un workflow en marcha **escribiéndolas en el fichero de contexto** que los
+  agentes leen al empezar cada ronda. No hace falta pararlo.
+
+## Entorno y herramientas (Claude Code en la nube)
+
+- **Los contenedores se reinician** sin aviso y la sesión tiene **límite de uso**: se perdió trabajo varias veces. De ahí la
+  regla de `CLAUDE.md`: commit y push de cada ronda, con sus veredictos.
+- **No subir binarios a medio escribir:** un MP4 subido durante un render quedó corrupto en GitHub. Validar con ffmpeg y
+  escribir renders de forma atómica.
+- **Reanudar un workflow tras editar el script no es fiable:** al relanzarlo con `resumeFromRunId` volvió a ejecutar la
+  ronda 1 (no reutilizó la caché). Para seguir, es más seguro lanzar un workflow nuevo que haga solo lo que falta,
+  leyendo el estado del repo.
+- Con 4 CPU, un workflow solo corre **2 agentes a la vez**: los Gauntlet llevan horas.
+- **GitHub sirve con caché** las URL `raw/<rama>/...`: para compartir un fichero recién subido, usar `raw/<commit>/...`.
+- **Adjuntar ficheros al chat** tiene un límite de 30 MB.
+- La página de Gemini compartida no carga sin JS; se pudo leer llamando a su RPC `batchexecute` (`rpcids=ujx1Bf`).
+- Chromium de Playwright necesitó importar el certificado del proxy en `~/.pki/nssdb` (con `certutil`).
+- Versiones que funcionan: `coqui-tts[codec]` con `transformers>=4.56,<5`; `torch` CPU; ffmpeg completo vía
+  `imageio-ffmpeg` (el del sistema no tiene codificadores). Hugging Face y PyPI son accesibles; GitHub (clonar repos
+  ajenos) no.
