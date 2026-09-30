@@ -39,7 +39,10 @@ de Galicia para quedarse dormido, **100 % en galego**. Es un hobby con opción d
 - El scratchpad y los entornos (venvs, modelos de ~1-6 GB) **no sobreviven** entre sesiones: hay que reconstruirlos con
   las instrucciones de `herramientas/pipeline/README.md` y `herramientas/voz/README.md`.
 - Solo CPU (4 núcleos, 15 GB). Un workflow corre 2 agentes a la vez. Un vídeo de 3 min ≈ 5 h de CPU de núcleo.
-- Hugging Face y PyPI son accesibles; clonar repos de GitHub ajenos no. ffmpeg completo vía `imageio-ffmpeg`.
+- Hugging Face y PyPI son accesibles. Clonar repos públicos de GitHub falló el 29-09-2026 pero funcionó el 30-09-2026
+  (`git ls-remote`/`git clone` por el proxy de git): depende de la sesión. ffmpeg completo vía `imageio-ffmpeg`.
+- **Entorno en una orden:** `bash herramientas/pipeline/instalar.sh` (≈6 min, ≈15,7 GB en el scratchpad) y
+  `source herramientas/pipeline/entorno.sh`; `instalar.sh verificar` prueba cada etapa.
 - `coqui-tts[codec]` necesita `transformers>=4.56,<5`. Cotovía 0.5 (`.deb` de SourceForge) para las voces de fonemas.
 - El guion del pipeline debe usar un **LLM potente por API** (decisión del promotor); no hay clave de API en el entorno.
 - Para compartir un fichero recién subido, usar la URL `raw/<commit>/...` de GitHub (la de la rama va con caché).

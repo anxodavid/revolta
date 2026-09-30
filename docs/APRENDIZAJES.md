@@ -63,3 +63,22 @@
 - Versiones que funcionan: `coqui-tts[codec]` con `transformers>=4.56,<5`; `torch` CPU; ffmpeg completo vía
   `imageio-ffmpeg` (el del sistema no tiene codificadores). Hugging Face y PyPI son accesibles; GitHub (clonar repos
   ajenos) no.
+
+# Sesión del 30-09-2026 (tarde): Gauntlet 3, vídeo largo "Cousas de Galiza para durmir"
+
+Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negocio/gauntlet3/aprendizajes/`.
+
+## Entorno
+
+- **Reconstrucción en una orden:** `herramientas/pipeline/instalar.sh` (idempotente, descargas en paralelo) monta voz,
+  imágenes, puerta de revisión, QA y LanguageTool en ≈6 min y ≈15,7 GB. Versiones fijadas en `requisitos-entorno.txt`.
+  Bajar solo los ficheros que se cargan ahorra mucho: el repo de SDXL-Turbo pesa 55,5 GB y se usan 6,95.
+- **Cotovía 0.5 (el `.deb` de 2012) no da los fonemas con los que se entrenó la voz de Nós:** no marca las vocales
+  abiertas (*pÓrta*, *tÉrra*) y acentúa los monosílabos átonos. Difiere en el 7,8 % de los caracteres frente al
+  corpus; la Cotovía del repo de Nós, compilada, en el 0,9 %. Las muestras anteriores se hicieron con la 0.5.
+- **VAE de SDXL con `channels_last`:** de 11,3 a 5,9 s por imagen en CPU, con la misma salida.
+- SDXL-Turbo no conoce "hórreo" ni obedece "slate roof": sale un pueblo mediterráneo con tejas naranjas. Hay que
+  describir el objeto ("raised granite granary on stone pillars") y poner granito y lousa al principio del prompt.
+- `Nos_Brais-GL` es un dataset con términos de uso que prohíben difundir las grabaciones: las referencias de estilo se
+  quedan en el scratchpad, nunca en el repo.
+- Clonar repos públicos de GitHub funcionó en esta sesión (falló en la anterior).
