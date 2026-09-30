@@ -1,0 +1,1507 @@
+{
+ "resumo": {
+  "0.5": {
+   "wer_test": 0.1434,
+   "erros_test": 70,
+   "wer_propia": 0.0174,
+   "erros_propia": 5,
+   "wer_todas": 0.0966,
+   "erros_todas": 75,
+   "caracteres_distintos_corpus_pct": 8.3,
+   "frases_identicas_corpus": 0,
+   "vogais_abertas_EO": 2
+  },
+  "nova": {
+   "wer_test": 0.1066,
+   "erros_test": 52,
+   "wer_propia": 0.1354,
+   "erros_propia": 39,
+   "wer_todas": 0.1173,
+   "erros_todas": 91,
+   "caracteres_distintos_corpus_pct": 0.82,
+   "frases_identicas_corpus": 15,
+   "vogais_abertas_EO": 54
+  },
+  "vogais_abertas_EO_corpus_test": 28,
+  "frases": 33,
+  "sementes": [
+   11,
+   22
+  ]
+ },
+ "frases": [
+  {
+   "texto": "¿Como van executar todas estas funcións que lles están a pedir?",
+   "corpus": "kómo BáN eSekutár tóDas éstas fuNTjóNs ke Zes estáN a peDír?",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "¿ kómo BáN eSekutár tóDas éstas fuNTjóNs ké Zés estáN á peDír?",
+    "nova": "¿ kómo BáN eSekutár tóDas éstas fuNTjóNs ke Zes estáN a peDír?"
+   },
+   "dif_corpus": {
+    "0.5": 3,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 1,
+     "palabras_ref": 11,
+     "wer": 0.0909,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 1,
+     "palabras_ref": 11,
+     "wer": 0.0909,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 11,
+     "wer": 0.0909,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 11,
+     "wer": 0.0909,
+     "diferenzas": [
+      [
+       "",
+       "á"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "A defensa institucional faina ese goberno e quen goberne, ¿non?",
+   "corpus": "a DefÉNsa iNstituTjonál fájna ése GoBÉrno e keN goBÉrne, nóN?",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "á DeféNsa iNstituTjonál fájna ése GoBérno é kéN goBérne, ¿ nóN?",
+    "nova": "a DefÉNsa iNstituTjonál fájna ése GoBÉrno e keN goBÉrne, ¿ nóN?"
+   },
+   "dif_corpus": {
+    "0.5": 6,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "Hai xiros da linguaxe con sentido figurado que non deben interpretarse en sentido literal.",
+   "corpus": "áj Síros Da liNgwáSe koN sentíDo fiGuráDo ke nón dÉBeN interpretárse eN sentíDo literál.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "áj Síros Dá liNgwáSe kóN sentíDo fiGuráDo ké nón déBeN interpretárse éN sentíDo literál.",
+    "nova": "áj Síros Da liNgwáSe koN sentíDo fiGuráDo ke nón dÉBeN interpretárse eN sentíDo literál."
+   },
+   "dif_corpus": {
+    "0.5": 5,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "A sentenza completa publicarase nos próximos días.",
+   "corpus": "a sentéNTa kompléta puBlikaráse nos prÓksimos Días.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "á sentéNTa kompléta puBlikaráse nós próksimos Días.",
+    "nova": "a sentéNTa kompléta puBlikaráse nos prÓksimos Días."
+   },
+   "dif_corpus": {
+    "0.5": 3,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "As temperaturas descenden lixeiramente, pero seguirán elevadas pola tarde.",
+   "corpus": "as temperatúras DesTÉndeN liSejraménte, pero seGiráN eleBáDas pola tárDe.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "ás temperatúras DesTéndeN liSejraménte, péro seGiráN eleBáDas póla tárDe.",
+    "nova": "as temperatúras DesTÉndeN liSejraménte, pero seGiráN eleBáDas pola tárDe."
+   },
+   "dif_corpus": {
+    "0.5": 4,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Era un dos máis interesantes proxectos nados na Internet galaica.",
+   "corpus": "Éra ún dos májs interesántes proSÉktos náDos na internét Galájka.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "éra ún dós májs interesántes proSéktos náDos ná internét Galájka.",
+    "nova": "Éra ún dos májs interesántes proSÉktos náDos na internét Galájka."
+   },
+   "dif_corpus": {
+    "0.5": 4,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "",
+       "e"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "",
+       "e"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "Falamos xa do tempo: hai avisos no litoral e nalgunhas zonas do interior por vento.",
+   "corpus": "falámos Sá Do témpo: áj aBísos no litorál e nalGúNas Tónas Do interjór por Bénto.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "falámos Sá Dó témpo: áj aBísos nó litorál é nalGúNas Tónas Dó interjór pór Bénto.",
+    "nova": "falámos Sá Do témpo: áj aBísos no litorál e nalGúNas Tónas Do interjór por Bénto."
+   },
+   "dif_corpus": {
+    "0.5": 5,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 1,
+     "palabras_ref": 15,
+     "wer": 0.0667,
+     "diferenzas": [
+      [
+       "por",
+       "pór"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "É difícil, ¿non?",
+   "corpus": "É DifíTil, nóN?",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "é DifíTil, ¿ nóN?",
+    "nova": "É DifíTil, ¿ nóN?"
+   },
+   "dif_corpus": {
+    "0.5": 1,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 1,
+     "palabras_ref": 3,
+     "wer": 0.3333,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 1,
+     "palabras_ref": 3,
+     "wer": 0.3333,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 3,
+     "wer": 0.3333,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 3,
+     "wer": 0.3333,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "A escaseza de vacinas en Europa podería complicar a administración da segunda dose.",
+   "corpus": "a eskaséTa De BaTínas eN eurÓpa poDería komplikár a aDministraTjón da seGúnda DÓse.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "á eskaséTa Dé BaTínas éN európa poDería komplikár á aDministraTjón dá seGúnda Dóse.",
+    "nova": "a eskaséTa De BaTínas eN eurÓpa poDería komplikár a aDministraTjón da seGúnda DÓse."
+   },
+   "dif_corpus": {
+    "0.5": 7,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "As medidas afectan en Galicia a máis dun cento de barcos e dous milleiros de mariñeiros.",
+   "corpus": "as meDíDas afÉktaN eN galíTja a májs DuN TÉnto De Bárkos e Dóws miZéjros De mariJéjros.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "ás meDíDas aféktaN éN galíTja á májs DúN Ténto Dé Bárkos é Dóws miZéjros Dé mariJéjros.",
+    "nova": "as meDíDas afÉktaN eN galíTja a májs DúN TÉnto De Bárkos e Dóws miZéjros De mariJéjros."
+   },
+   "dif_corpus": {
+    "0.5": 9,
+    "nova": 1
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 16,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 16,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 16,
+     "wer": 0.0625,
+     "diferenzas": [
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 16,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "O carballo da Retorta ten unha folla revirada que lla revirou o aire unha noite de xeada.",
+   "corpus": "o karBáZo Da rretÓrta tÉN uNa fóZa rreBiráDa ke Za rreBirów o ájre uNa nÓjte De SeáDa.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "ó karBáZo Dá Retórta téN úNa fóZa ReBiráDa ké Zá ReBirów ó ájre úNa nójte Dé SeáDa.",
+    "nova": "o karBáZo Da RetÓrta tÉN uNa fóZa ReBiráDa ke Za ReBirów o ájre uNa nÓjte De SeáDa."
+   },
+   "dif_corpus": {
+    "0.5": 11,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 20,
+     "palabras_ref": 17,
+     "wer": 1.1765,
+     "diferenzas": [
+      [
+       "o",
+       "os"
+      ],
+      [
+       "carballo da retorta ten unha folla revirada que lla revirou o aire unha noite",
+       ""
+      ],
+      [
+       "xeada ordenámolos en parágrafos de",
+       ""
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 20,
+     "palabras_ref": 17,
+     "wer": 1.1765,
+     "diferenzas": [
+      [
+       "o",
+       "os"
+      ],
+      [
+       "carballo da retorta ten unha folla revirada que lla revirou o aire unha noite",
+       ""
+      ],
+      [
+       "xeada ordenámolos en parágrafos de",
+       ""
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 17,
+     "wer": 0.0588,
+     "diferenzas": [
+      [
+       "lla",
+       "lle"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 17,
+     "wer": 0.0588,
+     "diferenzas": [
+      [
+       "lla",
+       "lle"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "¿Ordenámolos en parágrafos de catro liñas ou de seis?",
+   "corpus": "orDenámolos em paráGrafos De kátro líJas ow De séjs?",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "¿ orDenámolos ém paráGrafos Dé kátro líJas ów Dé séjs?",
+    "nova": "¿ orDenámolos em paráGrafos De kátro líJas ow De séjs?"
+   },
+   "dif_corpus": {
+    "0.5": 4,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 6,
+     "palabras_ref": 9,
+     "wer": 0.6667,
+     "diferenzas": [
+      [
+       "ordenámolos",
+       "as"
+      ],
+      [
+       "en parágrafos de catro liñas",
+       ""
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 6,
+     "palabras_ref": 9,
+     "wer": 0.6667,
+     "diferenzas": [
+      [
+       "ordenámolos en parágrafos de catro liñas",
+       ""
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "É licenciada en Ciencias Económicas e desenvolveu a meirande parte da súa carreira profesional na Administración Pública.",
+   "corpus": "É liTeNTjáDa eN TjÉNTjas ekonÓmikas e DesembolBéw a mejránde párte Da súa karréjra profesjonál na aDministraTjóm púBlika.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "é liTeNTjáDa éN TjéNTjas ekonómikas é DesembolBéw á mejránde párte Dá súa kaRéjra profesjonál ná aDministraTjóm púBlika.",
+    "nova": "É liTeNTjáDa eN TjÉNTjas ekonÓmikas e DesembolBéw a mejránde párte Da súa kaRéjra profesjonál na aDministraTjóm púBlika."
+   },
+   "dif_corpus": {
+    "0.5": 8,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 17,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 17,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 17,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 17,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Os enxeñeiros cualificaron a obra de moi complexa debido á orografía das zonas polas que discorre a vía.",
+   "corpus": "os eNSeJéjros kwalifikároN a ÓBra De mój kompléSa DeBíDo a oroGrafía Das Tónas polas ke DiskÓrre a Bía.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "ós eNSeJéjros kwalifikároN á óBra Dé mój kompléSa DeBíDo á oroGrafía Dás Tónas pólas ké DiskóRe á Bía.",
+    "nova": "os eNSeJéjros kwalifikároN a ÓBra De mój kompléksa DeBíDo a oroGrafía Das Tónas polas ke DiskÓRe a Bía."
+   },
+   "dif_corpus": {
+    "0.5": 10,
+    "nova": 2
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 3,
+     "palabras_ref": 18,
+     "wer": 0.1667,
+     "diferenzas": [
+      [
+       "orografía",
+       "oroografía"
+      ],
+      [
+       "polas",
+       "pólas"
+      ],
+      [
+       "",
+       "a"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 3,
+     "palabras_ref": 18,
+     "wer": 0.1667,
+     "diferenzas": [
+      [
+       "polas",
+       "pólas"
+      ],
+      [
+       "a",
+       "había"
+      ],
+      [
+       "vía",
+       ""
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 3,
+     "palabras_ref": 18,
+     "wer": 0.1667,
+     "diferenzas": [
+      [
+       "orografía",
+       "orogría"
+      ],
+      [
+       "a",
+       "había"
+      ],
+      [
+       "vía",
+       ""
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 2,
+     "palabras_ref": 18,
+     "wer": 0.1111,
+     "diferenzas": [
+      [
+       "a",
+       "había"
+      ],
+      [
+       "vía",
+       ""
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "Ti xa sabes o que debes facer.",
+   "corpus": "tí Sá sáBes o ke DÉBes faTér.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "tí Sá sáBes ó ké DéBes faTér.",
+    "nova": "tí Sá sáBelo ke DÉBes faTér."
+   },
+   "dif_corpus": {
+    "0.5": 3,
+    "nova": 2
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 7,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Terás algo que contar...",
+   "corpus": "terás álGo ke kontár...",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "terás álGo ké kontár..",
+    "nova": "terás álGo ke kontár..."
+   },
+   "dif_corpus": {
+    "0.5": 2,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 4,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 4,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 4,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 4,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "-¡A curuxa!, -berrou o vello.",
+   "corpus": "-a kurúSa!,- berrów o BÉZo.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "¡ á kurúSa!, BeRów ó BéZo.",
+    "nova": "¡ a kurúSa!, BeRów o BÉZo."
+   },
+   "dif_corpus": {
+    "0.5": 6,
+    "nova": 3
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 7,
+     "palabras_ref": 5,
+     "wer": 1.4,
+     "diferenzas": [
+      [
+       "a",
+       "ación"
+      ],
+      [
+       "curuxa berrou o vello a erupción",
+       ""
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 6,
+     "palabras_ref": 5,
+     "wer": 1.2,
+     "diferenzas": [
+      [
+       "curuxa",
+       "produción"
+      ],
+      [
+       "berrou o vello a erupción",
+       ""
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 5,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 5,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "A erupción provoca a emanación de gases á atmosfera.",
+   "corpus": "a erupTjóm proBóka a emanaTjón de Gáses a atmosfÉra.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "á erupTjóm proBóka á emanaTjón dé Gáses á atmosféra.",
+    "nova": "a erupTjóm proBóka a emanaTjón de Gáses a atmosfÉra."
+   },
+   "dif_corpus": {
+    "0.5": 5,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 7,
+     "palabras_ref": 9,
+     "wer": 0.7778,
+     "diferenzas": [
+      [
+       "erupción provoca a emanación de gases á",
+       ""
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 9,
+     "palabras_ref": 9,
+     "wer": 1.0,
+     "diferenzas": [
+      [
+       "a erupción provoca a emanación de gases á atmosfera",
+       ""
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "As autoestradas da Xunta (Vigo-Baiona e A Coruña-Carballo) estarán rematadas no ano mil novecentos noventa e sete.",
+   "corpus": "as awtoestráDas Da Súnta, bíGo Bajóna e a korúJa karBáZo, estaráN rrematáDas no áno míl noBeTéntos noBénta e séte.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "ás awtoestráDas Dá Súnta ( BíGo Bajóna é á korúJa karBáZo) estaráN RematáDas nó áno míl noBeTéntos noBénta é séte.",
+    "nova": "as awtoestráDas Da Súnta BíGo Bajóna e a korúJa karBáZo) estaráN RematáDas no áno míl noBeTéntos noBénta e séte."
+   },
+   "dif_corpus": {
+    "0.5": 10,
+    "nova": 3
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 1,
+     "palabras_ref": 19,
+     "wer": 0.0526,
+     "diferenzas": [
+      [
+       "as",
+       "a"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 1,
+     "palabras_ref": 19,
+     "wer": 0.0526,
+     "diferenzas": [
+      [
+       "as",
+       "a"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 19,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 19,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Investigadores estadounidenses identifican o xene responsable da propagación das células canceríxenas.",
+   "corpus": "imbestiGaDÓres estaDowniDéNses iDentifíkaN o Séne rrespoNsáBle Da propaGaTjón das TÉlulas kaNTeríSenas.",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "imbestiGaDóres estaDowniDéNses iDentifíkaN ó Séne RespoNsáBle Dá propaGaTjón dás Télulas kaNTeríSenas.",
+    "nova": "imbestiGaDÓres estaDowniDÉNses iDentifíkaN o Séne RespoNsáBle Da propaGaTjón das TÉlulas kaNTeríSenas."
+   },
+   "dif_corpus": {
+    "0.5": 5,
+    "nova": 1
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "¡Ai!, e xogando ó trompo tamén había xente que o collía á uña, ¿non sabes?; e velo coller á uña...",
+   "corpus": "áj!, e SoGándo O trómpo tamÉN aBía Sénte ke o koZía a úJa, nóN sáBes?; e BÉlo koZér a úJa...",
+   "orixe": "test",
+   "fonemas": {
+    "0.5": "¡ áj!, é SoGándo Ó trómpo taméN aBía Sénte ké ó koZía á úJa, ¿ nóN sáBes?; é Bélo koZér á úJa..",
+    "nova": "¡ áj!, e SoGándo O trómpo tamÉN aBía Sénte ke o koZía a úJa, ¿ nóN sáBes?; e BÉlo koZér a úJa..."
+   },
+   "dif_corpus": {
+    "0.5": 10,
+    "nova": 0
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 1,
+     "palabras_ref": 20,
+     "wer": 0.05,
+     "diferenzas": [
+      [
+       "ó",
+       "ao"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 1,
+     "palabras_ref": 20,
+     "wer": 0.05,
+     "diferenzas": [
+      [
+       "ó",
+       "ao"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 4,
+     "palabras_ref": 20,
+     "wer": 0.2,
+     "diferenzas": [
+      [
+       "ó",
+       "ao"
+      ],
+      [
+       "o",
+       ""
+      ],
+      [
+       "á",
+       "a"
+      ],
+      [
+       "á",
+       "a"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 4,
+     "palabras_ref": 20,
+     "wer": 0.2,
+     "diferenzas": [
+      [
+       "ai",
+       "lai"
+      ],
+      [
+       "ó",
+       "ao"
+      ],
+      [
+       "á",
+       "a"
+      ],
+      [
+       "á",
+       "a"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "A porta da torre estaba aberta, e o home entrou sen facer ruído.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "á pórta Dá tóRe estáBa aBérta, é ó óme entrów séN faTér RuíDo.",
+    "nova": "a pÓrta Da tóRe estáBa aBÉrta, e o Óme entrów seN faTér RuíDo."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 13,
+     "wer": 0.0769,
+     "diferenzas": [
+      [
+       "home",
+       "ame"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 13,
+     "wer": 0.0769,
+     "diferenzas": [
+      [
+       "home",
+       "ame"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "O óso quedou no chan, preto da pedra do forno vello.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "ó Óso keDów nó tSám, préto Dá péDra Dó fórno BéZo.",
+    "nova": "o Óso keDów no tSám, prÉto Da pÉDra Do fórno BÉZo."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 6,
+     "palabras_ref": 11,
+     "wer": 0.5455,
+     "diferenzas": [
+      [
+       "o óso quedou no chan preto",
+       ""
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 8,
+     "palabras_ref": 11,
+     "wer": 0.7273,
+     "diferenzas": [
+      [
+       "o óso quedou no chan preto da pedra",
+       ""
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "Rosalía de Castro naceu en Santiago de Compostela e morreu en Padrón.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "Rosalía Dé kástro naTéw éN santjáGo Dé kompostéla é moRéw ém paDróN.",
+    "nova": "Rosalía De kástro naTéw eN santjáGo De kompostÉla e moRéw em paDróN."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Pardo de Cela foi degolado en Mondoñedo, diante da catedral.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "párDo Dé Téla fój DeGoláDo éN mondoJéDo, Djánte Dá kateDrál.",
+    "nova": "párDo De TÉla fój DeGoláDo eN mondoJéDo, Djánte Da kateDrál."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Xelmírez mandou erguer torres e murallas arredor da cidade.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "SelmíreT mandów erGér tóRes é muráZas aReDór Dá TiDáDe.",
+    "nova": "SelmíreT mandów erGér tóRes e muráZas aReDór Da TiDáDe."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 9,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "O mar de Fisterra é bravo no inverno, e as ondas baten nas rochas.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "ó már Dé fistéRa é BráBo nó imbérno, é ás óndas BáteN nás RótSas.",
+    "nova": "o már De fistÉRa É BráBo no imbÉrno, e as óndas BáteN nas RÓtSas."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Nesta terra de néboa, cada pedra garda unha historia vella.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "nésta téRa Dé néBoa, káDa péDra GárDa úNa istórja BéZa.",
+    "nova": "nésta tÉRa De nÉBoa, káDa pÉDra GárDa uNa istÓrja BÉZa."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 1,
+     "palabras_ref": 10,
+     "wer": 0.1,
+     "diferenzas": [
+      [
+       "néboa",
+       "névoa"
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 10,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Dixo que si, que o faría, pero non o fixo nunca.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "díSo ké sí, ké ó faría, péro nóN ó fíSo núNka.",
+    "nova": "díSo ke sí, ke o faría, pero nóN o fíSo núNka."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 11,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 10,
+     "palabras_ref": 11,
+     "wer": 0.9091,
+     "diferenzas": [
+      [
+       "dixo",
+       "ou"
+      ],
+      [
+       "que si que o faría pero non o fixo",
+       ""
+      ]
+     ]
+    },
+    "nova_22": {
+     "erros": 11,
+     "palabras_ref": 11,
+     "wer": 1.0,
+     "diferenzas": [
+      [
+       "dixo que si que o faría pero non o fixo nunca",
+       ""
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "Ela veu á feira de Ourense co seu irmán e coa súa nai.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "éla Béw á féjra Dé owréNse kó séw irmáN é kóa súa náj.",
+    "nova": "éla BÉw a féjra De owrÉNse ko séw irmáN e koa súa náj."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 1,
+     "palabras_ref": 13,
+     "wer": 0.0769,
+     "diferenzas": [
+      [
+       "",
+       "e"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 13,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 1,
+     "palabras_ref": 13,
+     "wer": 0.0769,
+     "diferenzas": [
+      [
+       "á",
+       "a"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "texto": "Onte á noite choveu moito sobre os tellados de lousa de Lugo.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "ónte á nójte tSoBéw mójto sóBre ós teZáDos Dé lówsa Dé lúGo.",
+    "nova": "Ónte a nÓjte tSoBéw mÓjto soBre os teZáDos De lówsa De lúGo."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 12,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "Din que a Santa Compaña pasa de noite polos camiños de Lalín e do Carballiño.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "díN ké á sánta kompáJa pása Dé nójte pólos kamíJos Dé lalíN é Dó karBaZíJo.",
+    "nova": "díN ke a sánta kompáJa pása De nÓjte polos kamíJos De lalíN e Do karBaZíJo."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    },
+    "0.5_22": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 15,
+     "wer": 0.0
+    }
+   }
+  },
+  {
+   "texto": "O corvo pousou na pena, e a moza botou a correr cara á ponte.",
+   "corpus": null,
+   "orixe": "propia",
+   "fonemas": {
+    "0.5": "ó kórBo powsów ná péna, é á móTa Botów á koRér kára á pónte.",
+    "nova": "o kÓrBo powsów na péna, e a móTa Botów a koRér kára a pónte."
+   },
+   "asr": {
+    "0.5_11": {
+     "erros": 2,
+     "palabras_ref": 14,
+     "wer": 0.1429,
+     "diferenzas": [
+      [
+       "pousou na",
+       "pousouna a"
+      ]
+     ]
+    },
+    "0.5_22": {
+     "erros": 2,
+     "palabras_ref": 14,
+     "wer": 0.1429,
+     "diferenzas": [
+      [
+       "pousou na",
+       "pousouna a"
+      ]
+     ]
+    },
+    "nova_11": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    },
+    "nova_22": {
+     "erros": 0,
+     "palabras_ref": 14,
+     "wer": 0.0
+    }
+   }
+  }
+ ]
+}
