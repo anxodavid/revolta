@@ -31,6 +31,9 @@ CURVA = {
     'f0_media':      [1.00, 1.00, 0.99, 0.975, 0.965],  # altura media
     'enerxia':       [1.00, 1.00, 0.97, 0.94, 0.92],
     'ganancia_db':   [0.8, 0.5, 0.0, -0.8, -1.5],       # nivel relativo da voz na mestura
+    # son (orquestador): nivel do ambiente (choiva2) respecto do de base (17 dB baixo a voz): case nada no gancho,
+    # máis presente ao durmir (o promotor oíu a choiva da mostra como "ruído branco": ver son.py)
+    'ambiente_db':   [-8.0, -6.0, -3.0, 0.0, 1.5],
     # imaxe (peza VISUAL): intensidade da luz e do contraste da gradación
     'contraste':     [1.08, 1.05, 1.00, 0.94, 0.90],
     'brillo':        [1.00, 1.00, 0.97, 0.92, 0.88],

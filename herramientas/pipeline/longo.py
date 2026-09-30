@@ -300,10 +300,23 @@ def main():
         imgs = imaxes.graduar(imgs, W / 'imaxes_graduadas', **kw)
     save_t()
 
-    # 5 son
+    # 5 son: choiva nova co nivel da curva (case nada no gancho) e lume nos planos de lareira
     with P.Etapa('6_son'):
         import son
-        info_son = son.mesturar(voz, dur, OFFSET, str(W / 'mestura.wav'), str(W / 'voz_linea.wav'))
+        ini = sorted((tempos[f['i']][0], f['pal0']) for f in frases)
+        rel_db = []
+        for seg in range(int(dur) + 1):
+            p0 = next((pal for t0_, pal in reversed(ini) if t0_ <= seg), 0)
+            rel_db.append(round(curva.en(p0, tot)['ambiente_db'], 2))
+        lume_tramos = []
+        for p in pl:
+            if re.search(r'\b(fire|firelight|hearth|embers|flames?|bonfire)\b', p['prompt'], re.I):
+                if lume_tramos and p['b0'] - lume_tramos[-1][1] < 0.5:
+                    lume_tramos[-1] = (lume_tramos[-1][0], p['b1'])
+                else:
+                    lume_tramos.append((p['b0'], p['b1']))
+        info_son = son.mesturar(voz, dur, OFFSET, str(W / 'mestura.wav'), str(W / 'voz_linea.wav'),
+                                ambiente='choiva2', rel_db=rel_db, lume_tramos=lume_tramos)
     save_t()
 
     # 6 montaxe (escritura atómica)
