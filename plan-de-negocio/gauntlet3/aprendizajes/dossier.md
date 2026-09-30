@@ -24,7 +24,20 @@ episodio. Resultado: `plan-de-negocio/gauntlet3/dossier/` (`feitos.yaml`, `xerar
   por la palabra y contiene "substantivo"/"verbo"/"adxectivo" (script `rag.py` en el scratchpad).
 - **Separadores de capítulo dentro del dossier**: una línea `- [== C1. … ==]` la descarta `feitos()` del pipeline (sin la
   etiqueta queda vacía) y deja el dossier ordenado por el arco para el guionista.
-- **Recortar a 180** marcando `ficha: false` en vez de borrar: los 64 hechos fuera siguen verificados y documentados.
+- **Recortar a 180** marcando `ficha: false` en vez de borrar: los 66 hechos fuera siguen verificados y documentados.
+- **Prueba de humo sin modelo** (`probas/proba_lexica.py`, segundos): H1 + coincidencia léxica de `veracidade.py` con
+  frases candidatas. Con coincidencia ≥ 0,8 la regla de apoyo pasa sin NLI, así que ya decide casi todo sin esperar al
+  candado de CPU. Resultado (30 frases): 13/14 del gancho y 9/10 del relato con apoyo; 3 de 6 falsas paradas (H1 y
+  desenlace). Hallazgos:
+  - **H1 junta nombres separados por una coma** ("Xinzo de Limia, María Feijoa" → un solo nombre que no está en el
+    dossier). Avisarlo al guionista.
+  - **La veracidad no para falsedades hechas con palabras del dossier**: "María Soliña morreu queimada na fogueira de
+    Cangas", "En Galicia só se queimou unha meiga" y "Feijoo naceu en Samos" pasan (coincidencia 0,83-1,0). La lista
+    "Non dicir" tiene que ir en el encargo del guion y en la revisión del crítico.
+  - Dejar **fuera de la ficha los años y nombres en conflicto** funciona: H1 impide que el guion diga 1579, 1627 o
+    "María Rodríguez".
+  - Las frases que se dirigen al oyente ("seguramente oíches…") no tienen apoyo: añadir un hecho con esas palabras
+    (F246) o justificarlas en `--excepcions`.
 
 ## Fuentes que sirvieron
 

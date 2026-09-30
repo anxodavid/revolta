@@ -72,6 +72,14 @@ feitos:
   evidencias:
   - {fonte: ATLANTICO, cita: "quizá el pueblo cree nacido en la noche de los tiempos. Pero no: tenía autor reconocido"}
   - {fonte: CORREO, cita: "Lo escribió en 1967 a bordo de un barco decomisado"}
+- id: F246
+  cap: C0
+  tipo: H
+  feito: "Case todo galego, e moitos visitantes, oíron algunha vez o conxuro nunha queimada, e todo nel parece levarnos moitos séculos atrás, a unha tradición milenaria."
+  nota: "Para a frase do gancho que se dirixe a quen escoita (seguramente oíches este conxuro...)."
+  evidencias:
+  - {fonte: GCIENCIA-21, cita: "que case todo galego e visitante no país puido presenciar nalgún momento da súa vida, parecen tomarnos do brazo e levarnos a moitos séculos atrás"}
+  - {fonte: GCIENCIA-21, cita: "Todo parece formar parte dunha tradición milenaria"}
 - id: F004
   cap: C0
   tipo: H
@@ -302,7 +310,7 @@ feitos:
 - id: F036
   cap: C0B
   tipo: H
-  feito: "O historiador Diego Valor Bravo tamén di que, en tres séculos, a Inquisición en Galicia só condenou a morte unha meiga."
+  feito: "O investigador Diego Valor Bravo tamén di que, en tres séculos, a Inquisición en Galicia só condenou a morte unha meiga."
   evidencias:
   - {fonte: ESPANOL, cita: "a lo largo sus tres siglos de vida, la Inquisición en Galicia solo condenó a muerte a una de las famosas y legendarias meigas"}
 - id: F037
@@ -328,7 +336,7 @@ feitos:
 - id: F040
   cap: C0B
   tipo: H
-  feito: "Segundo o historiador Diego Valor Bravo, a xustiza ordinaria foi moito máis dura coas meigas ca a Inquisición: perseguiu e matou moitas."
+  feito: "Segundo o investigador Diego Valor Bravo, os xuíces da xustiza ordinaria foron moito máis duros coas meigas ca a Inquisición: perseguiron e mataron moitas."
   nota: "A violencia dise unha vez e sen detalle."
   evidencias:
   - {fonte: ESPANOL, cita: "La jurisdicción ordinaria persiguió y mató a muchas brujas"}
@@ -458,13 +466,13 @@ feitos:
 - id: F058
   cap: C1
   tipo: H
-  feito: "Unha veciña, María Feijoa, contou que unha noite estivo esperta, agardando para ver quen lle facía mal."
+  feito: "Segundo unha testemuña, unha veciña, María Feijoa, velou esperta unha noite para ver quen lle facía mal."
   evidencias:
   - {fonte: ARG, cita: "una noche estando despierto la dicha Maria Feijoa aguardando como dicho tiene quien le azía mal"}
 - id: F059
   cap: C1
   tipo: H
-  feito: "Dixo que viu a Ana González en figura de gato, que andaba saltando dun lado para outro."
+  feito: "E viu a Ana González en figura de gato, que andaba saltando dun lado para outro."
   nota: "Contalo con humor e sen a cama: o gato que ninguén dá collido. Só antes do minuto dez."
   evidencias:
   - {fonte: ARG, cita: "la dicha Ana González en figura de gato o otra sabandija semejante"}
@@ -472,15 +480,17 @@ feitos:
 - id: F060
   cap: C1
   tipo: H
-  feito: "Segundo ela, o gato non o puideron coller, e escapou por un burato da porta."
+  feito: "O gato non o puideron coller: ninguén o deu collido, e escapou por un burato da porta."
   evidencias:
   - {fonte: ARG, cita: "y no la pudieran asir y se escapuliera por un agujero de la puerta"}
 - id: F061
   cap: C1
   tipo: H
-  feito: "Ana González foi queixarse a unha veciña de que o home desta, Rodrigo Colmenero, andaba chamándoa meiga."
+  feito: "Un día, unha veciña estaba á porta debandando, e chegou Ana González a dicirlle que o home dela, Rodrigo Colmenero, andaba chamándoa meiga."
   evidencias:
+  - {fonte: ARG, cita: "estando un día la testigo a su puerta debanando llegó la dicha Ana González"}
   - {fonte: ARG, cita: "dixo a la testigo que su marido Rodrigo Colmenero la andava llamando meiga"}
+  - {fonte: "RAG:debandar", cita: "Desenrolar [o fío dunha madeixa] para formar un nobelo."}
 - id: F062
   ficha: false
   cap: C1
@@ -897,7 +907,7 @@ feitos:
 - id: F122
   cap: C3
   tipo: H
-  feito: "O historiador Diego Valor Bravo di que a meiga non era algo estraño, senón alguén que tiña sentido na sociedade do seu tempo."
+  feito: "O investigador Diego Valor Bravo di que a meiga non era algo estraño, senón alguén que tiña sentido na sociedade do seu tempo."
   evidencias:
   - {fonte: ESPANOL, cita: "La meiga no era un producto extraño, era alguien que tenía sentido en la sociedad del momento"}
 - id: F123
@@ -924,7 +934,7 @@ feitos:
   ficha: false
   cap: C3
   tipo: H
-  feito: "O historiador Bernardo Barreiro recolleu corenta procesos da Inquisición, a maioría de mulleres, case sempre curandeiras, a miúdo denunciadas por cobizas entre veciños."
+  feito: "Bernardo Barreiro recolleu corenta procesos da Inquisición, a maioría de mulleres, case sempre curandeiras, a miúdo denunciadas por cobizas entre veciños."
   evidencias:
   - {fonte: CCG-MEIGAS, cita: "Bernardo Barreiro, en Brujos y astrólogos de la Inquisición de Galicia , recolle corenta procesos inquisitoriais, os máis deles de mulleres, case sempre curandeiras ou mesmo alleas a estas prácticas que foron denunciadas por simples cobizas entre a veciñanza"}
 - id: F127
@@ -1063,7 +1073,7 @@ feitos:
 - id: F147
   cap: C4
   tipo: H
-  feito: "Segundo o antropólogo Xosé Ramón Mariño Ferro, a crenza no mal de ollo servía para explicar desgrazas que non tiñan explicación."
+  feito: "Segundo Xosé Ramón Mariño Ferro, a crenza no mal de ollo servía para explicar desgrazas que non tiñan explicación."
   evidencias:
   - {fonte: GL-MALDEOLLO, cita: "serve para explicar feitos casuais para os que non se ten unha explicación lóxica"}
 - id: F148
@@ -1197,6 +1207,7 @@ feitos:
   evidencias:
   - {fonte: GL-HORREO, cita: "como o da reitoral de Santa Comba de Carnota, construído en 1768"}
 - id: F167
+  ficha: false
   cap: C4
   tipo: L
   feito: "A malva é moi empregada polos menciñeiros."
@@ -1284,7 +1295,7 @@ feitos:
   ficha: false
   cap: C5
   tipo: L
-  feito: "O etnógrafo Xesús Taboada Chivite recolleu unha longa lista de herbas de san Xoán, que cambia moito dun lugar a outro de Galicia."
+  feito: "Xesús Taboada Chivite recolleu unha longa lista de herbas de san Xoán, que cambia moito dun lugar a outro de Galicia."
   evidencias:
   - {fonte: GL-HERBAS, cita: "Taboada Chivite recolle unha longa relación"}
   - {fonte: GL-HERBAS, cita: "se comproba unha gran variabilidade ao longo de Galiza"}
@@ -1416,6 +1427,13 @@ feitos:
   evidencias:
   - {fonte: GL-SANXOAN, cita: "No caso dunha fonte, este poder teno a primeira auga que deita no amencer"}
   - {fonte: GL-SANXOAN, cita: "transmite as súas propiedades de saúde e beleza"}
+- id: F245
+  cap: C5
+  tipo: L
+  feito: "Contan que na fonte da Moza, na Veiga, a noite de san Xoán aparece unha moura a peitear os seus cabelos, e que esa mesma lenda se conta en moitos lugares de Galicia."
+  nota: "Lenda serena (unha moura na fonte, non unha intrusión na casa). Contala como lenda."
+  evidencias:
+  - {fonte: GL-SANXOAN, cita: "Así, na fonte da Moza, na Veiga (Ourense), aparécese esta noite unha moura a peitea-los seus cabelos; esta mesma lenda está presente en moitos outros lugares de Galicia"}
 - id: F200
   ficha: false
   cap: C5
@@ -1445,7 +1463,7 @@ feitos:
   ficha: false
   cap: C5
   tipo: H
-  feito: "O lexicógrafo Eladio Rodríguez contaba que as herbas se apañaban no campo o día vinte e dous de xuño para vendelas ao día seguinte nos mercados das vilas e cidades."
+  feito: "Eladio Rodríguez contaba que as herbas se apañaban no campo o día vinte e dous de xuño para vendelas ao día seguinte nos mercados das vilas e cidades."
   evidencias:
   - {fonte: GL-HERBAS, cita: "que se recogen en el campo, generalmente la antevíspera de la noche de San Juan, o sea el día 22, para venderlas al siguiente día en los mercados de las ciudades y villas de Galicia"}
 # ------------------------------------------------------------------ C6 Feijoo
@@ -1700,6 +1718,7 @@ feitos:
   evidencias:
   - {fonte: ARG, cita: "conmemora o Día da Muller de 2020 dando a coñecer un pequeno conxunto de procesos xudiciais por bruxería perante a Real Audiencia de Galicia"}
 - id: F242
+  ficha: false
   cap: C7
   tipo: A
   feito: "A lousa é unha pedra gris ou negra que se parte doadamente en láminas."
