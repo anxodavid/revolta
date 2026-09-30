@@ -39,6 +39,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('planos'); ap.add_argument('traballo'); ap.add_argument('saida')
     ap.add_argument('--palabras', type=int, default=3400)
+    ap.add_argument('--planos-episodio', type=int, default=150,
+                    help='planos do episodio para os topes de arquetipos (a folla é unha mostra del)')
     a = ap.parse_args()
     W, S = Path(a.traballo), Path(a.saida)
     W.mkdir(parents=True, exist_ok=True); S.mkdir(parents=True, exist_ok=True)
@@ -52,7 +54,7 @@ def main():
             p['pal0'] = round(a0 + (j + 0.5) * (a1 - a0) / len(grupo))
             p['u'] = round(p['pal0'] / a.palabras, 4)
     t0 = time.time()
-    paths, rex = imaxes.xerar(pl, W / 'imaxes', seed_base='visual-r1')
+    paths, rex = imaxes.xerar(pl, W / 'imaxes', seed_base='visual-r1', n_total=a.planos_episodio)
     t_xer = time.time() - t0
     t0 = time.time()
     grad = imaxes.graduar(paths, W / 'imaxes_graduadas', escenas=pl)

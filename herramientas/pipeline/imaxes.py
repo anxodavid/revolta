@@ -209,8 +209,9 @@ def _teimudo(intentos):
     return len(ult) == 2 and all(any(p.startswith(('arquetipo', 'repetida (CLIP')) for p in x['problemas']) for x in ult)
 
 
-def xerar(escenas, outdir, seed_base='sera', revisar=True):
+def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
     """escenas: [{'prompt', opcionais 'fase' (gancho|transicion|calma|durmir), 'u', 'luz', 'tipo', 'negativo'}].
+    n_total: planos do episodio para os topes de arquetipos (por defecto, len(escenas); nunha mostra, o do episodio).
     Devolve (rutas das imaxes escollidas, rexistro por plano). Garda todo en outdir/revision.json e retoma."""
     import numpy as np
     import revisor as _rv
@@ -222,7 +223,7 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True):
     paths, rexistro = [], []
     aceptadas = []                       # (vector de grises, raíces da descrición): porta de repetición antiga
     emb_aceptadas, arquetipos = [], []   # CLIP: imaxes escollidas de todos os planos anteriores e o seu arquetipo
-    n_total = len(escenas)
+    n_total = n_total or len(escenas)
     reservas_usadas = {}
     for i, e in enumerate(escenas):
         clave = f"{i:03d}-{hashlib.sha256((e['prompt'] + m['nome'] + str(e.get('fase'))).encode()).hexdigest()[:8]}"
