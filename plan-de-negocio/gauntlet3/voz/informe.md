@@ -49,7 +49,7 @@ WER.
 
 **Medida de las 40 grabaciones humanas** de Brais (`REFS_DIR`, corpus Nos_Brais-GL: 21 de test y 19 de train; no se
 suben al repo) con `scripts/referencias.py` (`datos/referencias-humanas.json`): velocidad en sílabas/s (contador
-ortográfico de sílabas del gallego sobre la duración de la fala), F0 con Praat (mediana en Hz; desviación y rango
+ortográfico de sílabas del gallego sobre la duración del habla), F0 con Praat (mediana en Hz; desviación y rango
 p5-p95 en semitonos), dinámica de energía (p95-p10 del RMS por tramos de 25 ms) y arousal (audEERING).
 
 | Medida (40 grabaciones) | mínimo | mediana | máximo |
@@ -156,7 +156,7 @@ parteira de Vilalba según una testigo, la meiga como curandeira, la noche de Sa
 Claude a partir de `tema/investigacion.md`, `scripts/textos.py`). Se renderiza igual en los 5 nodos de la curva
 (`curva.en(pal, 3600)` con pal = 0, 280, 950, 1800 y 3600: gancho, fin del gancho, fin de la transición, mitad y final
 de un guion de 3.600 palabras), con las pausas y la ganancia que pone `longo.py` (`scripts/puntos.py`). Por punto:
-palabras/min con pausas (como el QA de `longo.py`), sílabas/s de la fala, F0 (media, desviación y rango p5-p95 en
+palabras/min con pausas (como el QA de `longo.py`), sílabas/s del habla, F0 (media, desviación y rango p5-p95 en
 semitonos), energía (LUFS del pasaje con la ganancia, dinámica), arousal/valencia (audEERING, solo evaluación
 interna), WER frase a frase (Whisper galego de Nós) y controles de voz cascada y saturación (HNR, jitter, % de F0
 < 75 Hz, pico). Seis candidatas en dos rondas (`datos/candidatas/`, `datos/curva-ronda1.json` y `curva-ronda2.json`,
