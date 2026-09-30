@@ -167,7 +167,67 @@ no entiende quién hace qué fuera de los desenlaces); una causa inventada en un
 chuvia") tampoco se ve; la naturalidad del gallego más allá de LanguageTool; caras deformes o ropas anacrónicas que
 Florence-2 no nombre.
 
+## Instalación rápida (una orden)
+
+El scratchpad, el venv y los modelos no sobreviven entre sesiones. Para reconstruirlo todo (Ubuntu 24.04 como root,
+Python 3.11 del sistema, Java ≥ 17):
+
+    bash herramientas/pipeline/instalar.sh             # todo: ≈ 6 min en limpio, ≈ 15,7 GB (medido el 30-09-2026)
+    source herramientas/pipeline/entorno.sh            # SCRATCH, HF_HOME, PY, ST2_DIR, REF_WAV, WHISPER_DIR, REVISOR_DIR...
+    bash herramientas/pipeline/instalar.sh verificar   # prueba mínima de cada etapa (probas/proba_entorno.py, ≈ 5 min)
+
+- `SCRATCH` es configurable (`SCRATCH=/ruta bash .../instalar.sh`); si no se da, `entorno.sh` toma el scratchpad de
+  Claude Code más reciente. Todas las demás rutas cuelgan de él.
+- **Idempotente**: cada paso deja una marca en `$SCRATCH/.instalado/` y se salta si ya está (una segunda ejecución
+  tarda 1 s); `FORZAR=1 bash .../instalar.sh PASO` rehace un paso. Las descargas van en paralelo, con un registro por
+  paso en `$SCRATCH/logs/`. La conversión del Whisper y la compilación de Cotovía usan el candado `$CPU_LOCK`.
+- Versiones exactas en `requisitos-entorno.txt` (torch 2.10.0+cpu, diffusers 0.35.2, transformers 4.57.6, mediapipe
+  1.0.1, faster-whisper 1.2.1, ctranslate2 4.8.2, language_tool_python 3.4.0 con LanguageTool 6.8).
+- Solo se bajan los ficheros que se cargan (SDXL-Turbo fp16 y no el repo de 55 GB; Whisper sin `optimizer.pt`; CLIP
+  solo en safetensors) y los checkpoints de StyleTTS2 se guardan sin el estado del optimizador (de 3,2 a 1,1 GB).
+- **No** instala el LLM local (ver "El LLM local"): en el Gauntlet 3 el guion lo escribe Claude.
+- Problemas encontrados, stubs y detalles: `plan-de-negocio/gauntlet3/aprendizajes/entorno.md`.
+
+| Pieza | Dónde (`$SCRATCH/...`) | Tamaño | Tiempo en limpio |
+|---|---|---|---|
+| venv único: torch CPU + ~80 paquetes | `tts/venv` | 2,4 GB | 2 min 19 s (*) |
+| SDXL-Turbo fp16 | `hf/` | 6,95 GB | 2 min 39 s (*) |
+| Florence-2-large / CLIP ViT-L/14 / NLI mDeBERTa | `hf/` | 1,56 / 1,71 / 0,56 GB | 2 min 40 s / 56 s / 17 s (*) |
+| Nos_StyleTTS2-Brais-GL (sin 1.ª etapa ni optimizador) | `bench/st2` | 1,1 GB | 1 min 43 s (*) + 31 s |
+| Whisper galego de Nós en CTranslate2 int8 | `bench/wgl_ct2` | 788 MB | 1 min 42 s (*) + 22 s |
+| LanguageTool 6.8 (con hunspell gl) | `languagetool/` | 400 MB | 11 s |
+| Cotovía 0.5 (`.deb` extraído) y su envoltorio | `cotovia/`, `bench/pathbin` | 16 MB | 3 s |
+| Cotovía compilada de Nós (opcional, ver abajo) | `cotovia_nova/`, `bench/pathbin_nova` | 121 MB | 2 min 0 s |
+| Stubs para importar StyleTTS2 (`monotonic_align`, `speechmos`) | `bench/stubs` | — | 8 s |
+| MediaPipe (manos y pose) | `revisor/` | 17 MB | 2 s |
+| Nos_Brais-GL: referencia de estilo (`REF_WAV`) y 40 grabaciones variadas con su texto (`refs.tsv`) | `tts/kit/t1`, `tts/refs` | 11 MB | 1 min 26 s (*) |
+
+(*) en paralelo: el grupo de descargas duró lo que la más lenta, ~2 min 41 s. Las grabaciones de Nos_Brais-GL tienen
+términos de uso que prohíben difundirlas: se quedan en el scratchpad y no se suben ni se publican.
+
+**Prueba mínima** (`instalar.sh verificar`, 30-09-2026, 4 núcleos, cada prueba con el candado de CPU):
+
+| Etapa | Resultado |
+|---|---|
+| Voz (`voz_st2.py`, 2 frases, el mismo env que pone `pipeline.py`) | carga del modelo + 1.ª frase 31,7 s; **RTF 0,39** después |
+| Imagen SDXL-Turbo 1024x576, 4 pasos, bf16 | carga 14-15 s; **25-26 s por imagen** (Gauntlet 2: mediana 18,1 s) |
+| `python revisor.py` | carga + 1.ª imagen 29,7 s; **18,9 s por imagen** después |
+| ASR (faster-whisper + Whisper gl) sobre la voz | carga 4 s; **WER 0,0** |
+| LanguageTool gl-ES / NLI | detecta "Os rapaces foi"; contradicción 0,998 en un par negado |
+| Montaje (`son.mesturar` + `montaxe.render`, 2 planos de 4 s) | 22,7 s; MP4 1920x1080 con AAC y `mov_text` que decodifica entero sin errores |
+
+**Dos hallazgos del entorno para las piezas de voz e imagen** (medidos, no aplicados; detalle en el fichero de
+aprendizajes):
+- **Cotovía**: la 0.5 del `.deb`, que usa el pipeline, no marca las vocales abiertas (*po^rta* por *pÓrta*) y
+  acentúa los monosílabos átonos; en 122 frases del corpus difiere un 7,8 % en caracteres de los fonemas con los que se
+  entrenó el modelo. La Cotovía que trae el repo del modelo (`instalar.sh cotovia_nova`) difiere un 0,9 %. Para
+  probarla en la voz: `ST2_PATHBIN=$COTOVIA_NOVA_PATHBIN` (medida: `probas/comparar_cotovia.py`).
+- **SDXL-Turbo**: el VAE se lleva ~11 s de cada imagen; con `pipe.vae.to(memory_format=torch.channels_last)` baja a
+  ~6 s con la misma salida (imagen de ~28 s a ~20-22 s).
+
 ## Instalación (CPU)
+
+`instalar.sh` hace todo lo de esta sección salvo el LLM local.
 
 - Python 3.11 con `torch` (CPU), `diffusers==0.35.2`, `huggingface-hub<1.0`, `transformers<5` (4.57, que ya trae
   `Florence2ForConditionalGeneration`), `accelerate`, `faster-whisper`, `jiwer`, `language_tool_python` (Java ≥ 17),

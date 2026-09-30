@@ -28,6 +28,9 @@ export PY="$PY_TTS"
 export ST2_DIR="$SCRATCH/bench/st2"
 export ST2_PATHBIN="$SCRATCH/bench/pathbin"
 export ST2_STUBS="$SCRATCH/bench/stubs"
+# Cotovía compilada desde Nos_StyleTTS2 (instalar.sh cotovia_nova): da los fonemas del entrenamiento (vocales abiertas).
+# No es la de por defecto; para probarla en la voz: export ST2_PATHBIN="$COTOVIA_NOVA_PATHBIN"
+export COTOVIA_NOVA_PATHBIN="$SCRATCH/bench/pathbin_nova"
 # Referencia de estilo (grabación humana del corpus Nos_Brais-GL, test) y banco de referencias variadas.
 export REF_WAV="$SCRATCH/tts/kit/t1/brais_1_human.wav"
 export REFS_DIR="$SCRATCH/tts/refs"

@@ -6,7 +6,8 @@
 
 1. voz      voz_st2.py narra 2 frases en galego con el mismo env que pone pipeline.py (PATH con pathbin, PYTHONPATH con
             stubs, ST2_DIR, REF_WAV); factor de tiempo real (RTF = segundos de cálculo / segundos de audio).
-2. imaxe    SDXL-Turbo 1024x576, 4 pasos (como imaxes.py) y `python revisor.py` sobre la imagen.
+2. imaxe    SDXL-Turbo 1024x576, 4 pasos (como imaxes.py): dos imágenes (la 1.ª incluye el calentamiento) y
+            `python revisor.py` sobre las dos (la 1.ª línea incluye cargar MediaPipe y Florence-2).
 3. qa       faster-whisper + Whisper galego (CTranslate2 int8) sobre el audio de la prueba 1 (WER); LanguageTool gl-ES
             (qa.lingua) sobre una frase con un error de concordancia; NLI (veracidade.Verificador.nli) con dos pares.
 4. montaxe  son.mesturar (voz + lluvia) y montaxe.render de 2 planos de 4 s; el MP4 se valida decodificándolo entero.
@@ -98,22 +99,31 @@ def proba_imaxe():
         pipe = AutoPipelineForText2Image.from_pretrained(imaxes.MODELO, torch_dtype=torch.bfloat16, variant='fp16')
         pipe.set_progress_bar_config(disable=True)
         m['carga_s'] = round(time.time() - t, 1)
-        t = time.time()
-        im = pipe(prompt=prompt, width=imaxes.W, height=imaxes.H, num_inference_steps=imaxes.PASOS, guidance_scale=0.0,
-                  generator=torch.Generator().manual_seed(1)).images[0]
-        m['xeracion_s'] = round(time.time() - t, 1)
-        im.save(OUT / 'imaxe.png')
+        m['xeracion_s'] = []
+        for k, (nome, semente) in enumerate((('imaxe.png', 1), ('imaxe2.png', 2))):
+            t = time.time()
+            im = pipe(prompt=prompt, width=imaxes.W, height=imaxes.H, num_inference_steps=imaxes.PASOS,
+                      guidance_scale=0.0, generator=torch.Generator().manual_seed(semente)).images[0]
+            m['xeracion_s'].append(round(time.time() - t, 1))
+            im.save(OUT / nome)
         m['tamaño'] = list(im.size)
         del pipe
+    marcas, linas = [], []
     with candado('revisor') as r:
-        p = subprocess.run([sys.executable, str(HERE / 'revisor.py'), str(OUT / 'imaxe.png')], capture_output=True,
-                           text=True)
-    if p.returncode:
-        print(p.stdout[-2000:], p.stderr[-3000:]); raise SystemExit('revisor.py fallou')
-    rv = json.loads(p.stdout.strip().splitlines()[-1])
-    m['revisor'] = {'parede_s': r['parede_s'], 'cpu_s': r['cpu_s'], 'ok': rv['ok'], 'problemas': rv['problemas'],
-                    'descricion': rv.get('descricion', '')[:300], 'mans': len(rv.get('mans', [])),
-                    'corpos': rv.get('corpos')}
+        t0 = time.time()
+        p = subprocess.Popen([sys.executable, str(HERE / 'revisor.py'), str(OUT / 'imaxe.png'), str(OUT / 'imaxe2.png')],
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        for linea in p.stdout:
+            if linea.startswith('{'):
+                marcas.append(round(time.time() - t0, 1)); linas.append(json.loads(linea))
+        err = p.stderr.read(); p.wait()
+    if p.returncode or len(linas) < 2:
+        print(err[-3000:]); raise SystemExit('revisor.py fallou')
+    m['revisor'] = {'parede_s': r['parede_s'], 'cpu_s': r['cpu_s'], 'carga_mais_imaxe1_s': marcas[0],
+                    'imaxe2_s': round(marcas[1] - marcas[0], 1),
+                    'resultados': [{'ok': rv['ok'], 'problemas': rv['problemas'], 'mans': len(rv.get('mans', [])),
+                                    'corpos': rv.get('corpos'), 'descricion': rv.get('descricion', '')[:240]}
+                                   for rv in linas]}
     return m
 
 

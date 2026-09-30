@@ -22,6 +22,7 @@
 #   stubs        módulos stub para importar el código de StyleTTS2 en CPU (bench/stubs)
 #   whisper      conversión del Whisper galego a CTranslate2 int8 (bench/wgl_ct2) y borrado del original
 #   languagetool LanguageTool (descarga de language_tool_python en $LTP_PATH) y prueba gl-ES
+#   cotovia_nova (opcional; si falla, solo avisa) compila la Cotovía de Nos_StyleTTS2 en bench/pathbin_nova
 #   limpieza     borra temporales y la caché de pip; resumen de tamaños
 #
 # Requisitos: Ubuntu 24.04 con Python 3.11 (/usr/bin/python3.11), acceso a PyPI, download.pytorch.org,
@@ -230,6 +231,7 @@ paso_clip() {     # puerta de iconografía del agente visual (MIT): solo el safe
   hf_baixar openai/clip-vit-large-patch14 - '*.json' '*.txt' model.safetensors
 }
 paso_whisper_hf() {   # original de Nós a un temporal (sin optimizer.pt de 6,5 GB ni estado de entrenamiento)
+  if [ -z "${FORZAR:-}" ] && [ -s "$WHISPER_DIR/model.bin" ]; then echo "ya convertido en $WHISPER_DIR"; return 0; fi
   hf_baixar proxectonos/whisper-large-v3-turbo-gl-v1.0 "$SCRATCH/tmp/whisper-hf" \
     config.json generation_config.json model.safetensors preprocessor_config.json tokenizer.json \
     tokenizer_config.json special_tokens_map.json added_tokens.json vocab.json merges.txt normalizer.json
@@ -237,8 +239,9 @@ paso_whisper_hf() {   # original de Nós a un temporal (sin optimizer.pt de 6,5 
 
 paso_stubs() {
   # El código de Nos_StyleTTS2 importa al cargarse (utils.py, inference.py) dos paquetes que solo usa para entrenar o
-  # evaluar. En vez de instalarlos (monotonic_align no está en PyPI; speechmos arrastra onnxruntime y modelos DNSMOS),
-  # se ponen módulos vacíos en bench/stubs (PYTHONPATH del subproceso de voz). Si algo los llamase, fallaría con claridad.
+  # evaluar. En vez de instalarlos (el monotonic_align de StyleTTS2 se instala desde GitHub y compila Cython; el
+  # "monotonic-align" de PyPI es otro paquete con otra API; speechmos arrastra onnxruntime y modelos DNSMOS), se ponen
+  # módulos vacíos en bench/stubs (PYTHONPATH del subproceso de voz). Si algo los llamase, fallaría con claridad.
   local s="$ST2_STUBS"
   mkdir -p "$s/monotonic_align" "$s/speechmos"
   cat > "$s/monotonic_align/__init__.py" <<'EOF'
@@ -271,6 +274,8 @@ EOF
 def run(*a, **k):
     raise NotImplementedError('speechmos.dnsmos es un stub: ver instalar.sh')
 EOF
+  # st2_sleep.py (kit de voz, herramientas/voz) espera estar en bench/ junto a st2/: enlace, como en el Gauntlet 2
+  ln -sf "$HERE/../voz/st2_sleep.py" "$SCRATCH/bench/st2_sleep.py"
   # prueba: el código de StyleTTS2 se importa con los stubs (sin cargar pesos)
   (cd "$ST2_DIR" && PATH="$ST2_PATHBIN:$PATH" PYTHONPATH="$ST2_STUBS" "$PY" -c \
     "import sys; sys.path.insert(0, '.'); import models, utils, inference, text_utils_gal; from Utils.ASR.AuxiliaryASR.phonemize import run_cotovia_with_phrase, clean_output; print('StyleTTS2 importa:', clean_output(run_cotovia_with_phrase('Boa noite.')))")
@@ -283,7 +288,7 @@ paso_whisper() {
   flock "$CPU_LOCK" "$SCRATCH/tts/venv/bin/ct2-transformers-converter" --model "$orixe" --output_dir "$WHISPER_DIR.tmp" \
     --quantization int8 --copy_files tokenizer.json preprocessor_config.json
   rm -rf "$WHISPER_DIR"; mv "$WHISPER_DIR.tmp" "$WHISPER_DIR"
-  rm -rf "$orixe"; rm -f "$MARCAS/whisper_hf.ok"     # el original (3,2 GB) ya no hace falta
+  rm -rf "$orixe"     # el original (3,2 GB) ya no hace falta
 }
 
 paso_languagetool() {
@@ -299,6 +304,36 @@ t.close()
 EOF
 }
 
+paso_cotovia_nova() {
+  # OPCIONAL. Compila la Cotovía que trae Nos_StyleTTS2 (Utils/cotovia, la de proxectonos/cotovia) y usa sus datos de
+  # lengua. A diferencia del .deb 0.5 de SourceForge, marca las vocales abiertas (pÓrta, tÉrra) y deja átonos los
+  # monosílabos (a, de, que), como las transcripciones con las que se entrenó el modelo. Medido con
+  # probas/comparar_cotovia.py en 122 frases del corpus: 0,9 % de caracteres distintos (Cotovía 0.5: 7,8 %).
+  # NO es la de por defecto (la voz de la ronda 3 se midió con la 0.5); para usarla: ST2_PATHBIN=$COTOVIA_NOVA_PATHBIN.
+  # cmake baja string_theory de GitHub y PCRE 8.45 de SourceForge y los compila; se compila solo el ejecutable cotovia.
+  local faltan=() p b="$SCRATCH/cotovia_nova/build" saida
+  for p in build-essential cmake bison flex libfl-dev libasound2-dev libexpat1-dev; do
+    dpkg -s "$p" >/dev/null 2>&1 || faltan+=("$p")
+  done
+  if [ ${#faltan[@]} -gt 0 ]; then
+    $SUDO apt-get update -qq
+    DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y -qq --no-install-recommends "${faltan[@]}"
+  fi
+  mkdir -p "$b"
+  (cd "$b" && flock "$CPU_LOCK" cmake -DCMAKE_BUILD_TYPE=Release "$ST2_DIR/Utils/cotovia/src" > "$LOGS/cotovia_nova_cmake.log" 2>&1 \
+     && flock "$CPU_LOCK" make -j"$(nproc)" cotovia > "$LOGS/cotovia_nova_make.log" 2>&1) \
+    || { tail -20 "$LOGS"/cotovia_nova_*.log; return 1; }
+  mkdir -p "$COTOVIA_NOVA_PATHBIN"
+  cat > "$COTOVIA_NOVA_PATHBIN/cotovia" <<EOF
+#!/bin/sh
+# Cotovía compilada desde Nos_StyleTTS2/Utils/cotovia (generado por instalar.sh cotovia_nova), con sus datos de lengua.
+exec "$b/cotovia/cotovia" -D "$ST2_DIR/Utils/cotovia/data" "\$@"
+EOF
+  chmod +x "$COTOVIA_NOVA_PATHBIN/cotovia"
+  saida="$(echo "A porta da terra." | "$COTOVIA_NOVA_PATHBIN/cotovia" -n -S -A0 2>/dev/null | iconv -f latin1 -t utf-8)"
+  [[ "$saida" == *'pO^rta'* ]] || { echo "La Cotovía compilada no marca la vocal abierta: $saida"; return 1; }
+}
+
 paso_limpieza() {
   rm -rf "$SCRATCH/tmp"/* "$SCRATCH/insp"
   "$PY" -m pip cache purge >/dev/null 2>&1 || true
@@ -311,8 +346,8 @@ paso_verificar() {
 
 resumen() {
   log "Tamaños en $SCRATCH:"
-  du -sh "$SCRATCH/tts/venv" "$HF_HOME" "$ST2_DIR" "$WHISPER_DIR" "$SCRATCH/cotovia" "$LTP_PATH" "$REVISOR_DIR" \
-    "$REFS_DIR" 2>/dev/null || true
+  du -sh "$SCRATCH/tts/venv" "$HF_HOME" "$ST2_DIR" "$WHISPER_DIR" "$SCRATCH/cotovia" "$SCRATCH/cotovia_nova" "$LTP_PATH" \
+    "$REVISOR_DIR" "$REFS_DIR" 2>/dev/null || true
   du -sh "$SCRATCH" 2>/dev/null || true
   df -h "$SCRATCH" | tail -1
 }
@@ -348,6 +383,9 @@ if [ $# -gt 0 ]; then
 else
   for p in sistema cotovia venv_base; do correr "$p"; done
   en_paralelo paquetes st2 brais revisor sdxl florence nli clip whisper_hf
-  for p in stubs whisper languagetool limpieza; do correr "$p"; done
+  for p in stubs whisper languagetool; do correr "$p"; done
+  # opcional: en otro proceso para que un fallo no pare la instalación (la voz por defecto usa Cotovía 0.5)
+  bash "$HERE/instalar.sh" cotovia_nova || log "aviso: cotovia_nova falló (opcional; ver $LOGS/cotovia_nova_*.log)"
+  correr limpieza
 fi
 log "instalar.sh: terminado en $(((SECONDS - T0) / 60)) min $(((SECONDS - T0) % 60)) s"
