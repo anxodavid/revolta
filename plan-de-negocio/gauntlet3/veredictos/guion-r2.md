@@ -164,3 +164,79 @@ entre dos hechos del dossier puestos seguidos, justo lo que las puertas automát
 
 Opcional, fuera de la lista: en la l. 35, «segundo Rodrigo Pousa, historiador,» esquiva el falso positivo de
 LanguageTool, pero «segundo o historiador Rodrigo Pousa» dentro de la frase también pasa (dossier §3) y suena más natural.
+
+## 3. Retención y sueño
+
+- **Gancho, de 0:00 a 1:50: engancha.**
+  - De 0:00 a 0:32 da dos datos verdaderos y sorprendentes: el conxuro es de 1967, con autor y barco, y está Dorotea con
+    el «poldro bravo». El aviso llega a las 0:32, dentro de los 40 s.
+  - De 0:41 a 1:50 va una idea por frase, con solo dos años absolutos en todo el gancho.
+  - El mejor añadido de r2 es el avance de la l. 11: «unha veciña que velou esperta unha noite. E un gato que ninguén deu
+    collido». Siguen la Inquisición en una sola frase, la curandera, la lista y la hoja de ruta.
+  - Punto flojo: la l. 9, justo después de la fórmula, abre la pregunta pequeña (por qué se creyó anónimo) con una frase
+    abstracta. C3 hace al menos que el pago de la l. 41 se oiga como tal.
+- **Hasta el minuto 10: se sostiene, con un bache.**
+  - De 1:50 a 4:35, tres casos con picante y sin violencia: Vilalba, Xinzo y Lalín.
+  - De 4:35 a 6:27 se paga la promesa del título con el oyente despierto: es el gran arreglo de r2.
+  - Cibreira, Benita Montero y Soliña van de 7:24 a 8:53, y el bucle se cierra de 9:13 a 9:51 con «dúas maneiras de
+    mirala».
+  - El bache está de 6:27 a 7:24 (la mayor carencia), con 2,0 atribuciones por cada 100 palabras en todo el tramo.
+- **Zona de dormir, de 11:36 a 30:00: sirve.**
+  - Abre con el permiso para dormir y el paseo de «Entremos». Siguen la lareira, el mal de ollo como costumbre y el hórreo.
+  - San Xoán va en orden estricto: tarde, noche y amanecer. Feijoo es amable y con humor, sin calendario.
+  - El cierre «Chove na lousa», de 26:10 a 30:00, es lo mejor del guion. La queimada se apaga, y quedan ≈ 270 palabras de
+    imágenes ya oídas (lousa, brasas, escano, pote, gramalleira, lacenas, forno, gando, hórreo, cabazas, herbas, sete
+    fontes, orballo), «xa non tes que lembrar nada» y la candea.
+  - Quedan bolsas de ficha:
+    - tres autoridades en un minuto de mal de ollo, de 13:37 a 14:26 (Mariño Ferro, Risco y Henningsen);
+    - el ciclo del maíz (15:16);
+    - la fecha de san Xoán (15:51);
+    - las fichas botánicas (16:49);
+    - la tona (19:51);
+    - la exposición del Arquivo con el gato de Xinzo (25:28), que C13 quita.
+  - "Amodo" sale 10 veces. Como marca de sueño, vale.
+- **Duración.** Con la lista aplicada quedan 3.952 palabras (31 menos). Son 27-30 min con la curva de r1, dentro de
+  25-35. Hay que confirmarlo con el render de la pieza VOZ.
+
+## 4. Lista cerrada de correcciones mínimas (aplicar antes de producir)
+
+Son **16 sustituciones exactas**. Cada «actual» aparece **una sola vez** en `guion-r2.txt` (lo comprobó un script). La
+lista no añade nombres propios, cantidades ni hechos: solo usa palabras y nombres que ya están en el guion o en el
+dossier. Las frases nuevas con nombre propio (C1, C4, C6 y C14) son copia casi literal de F063, F020, F110 y F233,
+así que H1 y la veracidad deberían seguir en verde. Todas las frases que resultan tienen entre 8 y 25 palabras. **Al
+aplicarla, hay que volver a pasar la puerta de texto completa** (LanguageTool, H1, veracidad y estilo).
+
+| C | l. | Motivo | Texto actual → texto nuevo |
+|---|---|---|---|
+| C1 | 29 | P3, N7 | `E cando Ana González saía polas portas do curral, volveu mirar para a veciña, e nese momento a arracada da veciña rompeu en tres anacos.` → `E contou que, cando Ana González saía polas portas do curral, volveu mirar para ela, e que nese momento a arracada rompeu en tres anacos.` |
+| C2 | 39 | N8 | `El mesmo contaba que houbo outros cinco ou seis conxuros daquela época` → `E contaba que houbo outros cinco ou seis conxuros daquela época` |
+| C3 | 41 | N9, bucle de la l. 9 | `Por que moita xente o cría anónimo ten unha resposta sinxela.` → `O motivo do que falabamos ao principio é sinxelo.` |
+| C4 | 43 | P5 | `porque o alambique chegou na Idade Media.` → `porque o alambique chegou a Galiza na Idade Media.` |
+| C5 | 47 | P6 | `naceu en poucos anos un ritual que parece de sempre.` → `naceu en poucas décadas un ritual que parece de sempre.` |
+| C6 | 63 | N4 | `Hoxe é un símbolo do sufrimento do pobo, e sobre todo das mulleres.` → `Hoxe, María Soliña é un símbolo do sufrimento do pobo, e sobre todo das mulleres.` |
+| C7 | 89 | N1 | `e así quedaban sentados máis preto do lume.` → `e así a xente quedaba sentada máis preto do lume.` |
+| C8 | 113 | P2 | `Había quen as apañaba no campo para vendelas ao día seguinte nos mercados das vilas e das cidades.` → `Había quen as apañaba no campo un día antes, para vendelas na véspera nos mercados das vilas e das cidades.` |
+| C9 | 117 | N5 | `e arredor do lume a xente comía sardiñas, cachelos e broa de millo. Comían sardiñas á brasa, bebían viño, e cantaban e bailaban arredor da fogueira.` → `e a xente comía sardiñas á brasa, cachelos e broa de millo. Bebían viño, e cantaban e bailaban arredor do lume.` |
+| C10 | 133 | N3 | `Á mañá lavábase a cara con esa auga verde e recendente,` → `Á mañá lavábase a cara coa auga das herbas, verde e recendente,` |
+| C11 | 137 | P4 | `Tamén poñían cardos ou espadanas: as flores protexían polo seu recendo,` → `Tamén poñían cardos ou espadanas: crían que as flores protexían polo seu recendo,` |
+| C12 | 141 | N10 | `Deixamos atrás as fogueiras, e imos agora cun frade que escribiu contra as fábulas de bruxería.` → `Deixamos atrás as fogueiras, e agora imos coñecer un frade que escribiu contra as fábulas de bruxería.` |
+| C13 | 155 | Crítico A r1, punto 4; §8.4 | **Borrar el párrafo entero** (y la línea en blanco que lo sigue): `Na súa exposición sobre as meigas, o Arquivo do Reino mostrou o discurso de Feijoo sobre as transformacións máxicas. Púxoo na mesma páxina que o proceso de Xinzo de Limia, o do gato que ninguén deu collido.` → *(nada)*. Es una nota de museo y trae de vuelta la meiga-gato nocturna a las 25:28. El crítico A pidió sacar las dos cosas del final, y se movieron en vez de quitarse |
+| C14 | 157 | N2 (necesaria tras C13) | `Foi sempre de saúde delicada, con catarros frecuentes, e aínda así chegou a vello.` → `Feijoo foi sempre de saúde delicada, con catarros frecuentes, e aínda así chegou a vello.` |
+| C15 | 161 | N11 | `Volvamos á cociña do principio, que xa está en penumbra.` → `Volvamos á cociña da lareira, que xa está en penumbra.` |
+| C16 | 163 | P1, N6 | `Así arde, pouco a pouco, ata que se esgota case todo o alcohol. Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro.` → `Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro. E así arde un bo anaco, ata que se esgota case todo o alcohol.` |
+
+**No entran en la lista** (no bloquean y no conviene tocarlos ahora):
+- l. 9: una promesa más fuerte en el gancho tendría que tener apoyo en la puerta de veracidad del primer minuto.
+- l. 111: la fecha de san Xoán; si se quita, la frase siguiente se queda sin sujeto o necesita un hecho nuevo.
+- N12 y N13.
+- La densidad de atribuciones de los minutos 6 a 11, que es trabajo para la plantilla del próximo episodio.
+
+## 5. Cómo se comprobó (Claude, 30-09-2026)
+
+| Qué | Cómo |
+|---|---|
+| Seguimiento de r1 | Lectura de los dos veredictos punto por punto y búsqueda de cada frase en `guion-r2.txt` (`grep` y lectura) |
+| Hechos | Cotejo frase a frase con `dossier/feitos.yaml` (volcado de los 273 hechos) y con las fuentes en caché de `scratchpad/dossier/fontes/`: PDF del Arquivo (p. 7, 9, 11 y 14), *Atlántico*, Galipedia («Queimada», «Hórreo», «Herbas de san Xoán», «Noite de san Xoán», «Benito Xerónimo Feijoo»). En línea: página de Galipedia de O Riós (nombre oficial desde 2026; la API de Wikimedia devolvió un límite de peticiones y se leyó la página) |
+| Léxico | Diccionario de la RAG en línea (`academia.gal/dicionario/-/termo/busca/<palabra>`): *comisar* y *agromar* |
+| Minutos y densidades | Script de Python en `scratchpad/critico-guion-r2/`: curva de ritmo de voz del crítico A de r1 (182 → 119 palabras/min) interpolada por palabra y escalada a 30 min [S], y recuento por regex de atribuciones y años absolutos por cada 100 palabras en r1 y r2 (mismos criterios en los dos) |
+| Lista cerrada | `subs.py` en el scratchpad: comprueba que cada «actual» aparece una vez, la aplica a una copia (`guion-r2-corrixido.txt`, fuera del repo), cuenta palabras (3.983 → 3.952) y mide la longitud de cada frase resultante (8-25) |
