@@ -38,9 +38,13 @@ if [ -x "$COTOVIA_NOVA_PATHBIN/cotovia" ]; then
 else
   export ST2_PATHBIN="$COTOVIA_05_PATHBIN"
 fi
-# Referencia de estilo (grabación humana del corpus Nos_Brais-GL, test) y banco de referencias variadas.
-export REF_WAV="$SCRATCH/tts/kit/t1/brais_1_human.wav"
+# Referencias de estilo (grabaciones humanas del corpus Nos_Brais-GL; no se publican) y banco de 40 referencias.
+# Embudo del vídeo largo (plan-de-negocio/gauntlet3/voz/informe.md): REF_WAV = voz viva del gancho (vector medio de 3
+# grabaciones), REF_WAV_CALMO = voz calma del final; voz_st2.py interpola entre las dos según el campo "estilo".
+# Varias grabaciones van separadas por ':'. La de antes (Gauntlet 2): $SCRATCH/tts/kit/t1/brais_1_human.wav (07156).
 export REFS_DIR="$SCRATCH/tts/refs"
+export REF_WAV="$REFS_DIR/brais-norm-11535.wav:$REFS_DIR/brais-norm-01372.wav:$REFS_DIR/brais-norm-04078.wav"
+export REF_WAV_CALMO="$REFS_DIR/brais-norm-03720.wav"
 
 # QA: Whisper galego de Nós convertido a CTranslate2 int8 (faster-whisper).
 export WHISPER_DIR="$SCRATCH/bench/wgl_ct2"

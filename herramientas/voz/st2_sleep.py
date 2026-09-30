@@ -23,7 +23,7 @@ for k in model:
 _=[model[k].eval() for k in model]
 sampler=DiffusionSampler(model.diffusion.diffusion, sampler=ADPM2Sampler(), sigma_schedule=KarrasSchedule(sigma_min=0.0001, sigma_max=3.0, rho=9.0), clamp=False)
 import inference as INF
-ref_s=INF.compute_style(os.environ.get('REF_WAV','brais_ref_humana.wav'), model, 'cpu')
+ref_s=INF.compute_style(os.environ.get('REF_WAV','brais_ref_humana.wav').split(':')[0], model, 'cpu')  # REF_WAV pode ser unha lista 'a.wav:b.wav'
 tc=TextCleanerGal()
 def infer(text, s_prev, alpha, beta, t, steps, scale):
     ps=clean_output(run_cotovia_with_phrase(text.strip()))
