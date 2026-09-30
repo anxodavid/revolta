@@ -5,22 +5,36 @@ Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 
 ## 0. Gauntlet 3 en curso (30-09-2026, tarde): vídeo largo "Cousas de Galiza para durmir"
 
-**Si la sesión se corta, retomar desde aquí.** Encargo y decisiones (D7-D12) en
+**Si la sesión se corta, retomar desde aquí.** Encargo y decisiones (D7-D14) en
 [`plan-de-negocio/gauntlet3/contexto.md`](../plan-de-negocio/gauntlet3/contexto.md) y en `decisiones.md`.
 
 | Pieza | Estado | Dónde |
 |---|---|---|
-| Entorno | Hecho: `instalar.sh` en una orden (≈6 min) | `herramientas/pipeline/instalar.sh`, `entorno.sh` |
-| Tema | Hecho: **"As meigas de verdade"**, GANA condicionado (ajustes en `contexto.md` §8) | `gauntlet3/tema/investigacion.md`, `veredictos/tema-r1.md` |
+| Entorno | Hecho: `instalar.sh` en una orden (≈6 min, ≈16 GB) | `herramientas/pipeline/instalar.sh`, `entorno.sh` |
+| Tema | Hecho: **"As meigas de verdade"**, GANA condicionado (ajustes en `contexto.md` §8) | `gauntlet3/tema/`, `veredictos/tema-r1.md` |
 | Dossier | Hecho: 244 hechos con cita comprobada; ficha de 180 | `herramientas/pipeline/temas/meigas-de-verdade.yaml`, `gauntlet3/dossier/` |
-| Guion | Ronda 1 en curso (constructor); luego 2 críticos, hasta 3 rondas | `gauntlet3/guion/` |
-| Voz (embudo) | En curso: Cotovía de Nós por defecto; faltan curva e informe | `voz_st2.py`, `curva.py`, `gauntlet3/voz/` |
-| Visual | En curso: SDXL-Lightning 4 pasos 1344x768, estilo filme, gradación por fase, puerta CLIP; falta hoja r1 y crítico | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
-| Son | Muestras A/B/C/D enviadas al promotor (D13, D14); faltan medidas | `son.py`, `gauntlet3/son/` |
-| Vídeo | Pendiente: `longo.py` (guion y planos escritos por agentes; curva de embudo; capítulos; ambiente por escena) | `herramientas/pipeline/longo.py` |
+| Guion | **r1 hecho** (3.503 palabras ≈ 26 min, puertas en verde); críticos A y B de la r1 en curso | `gauntlet3/guion/`, `veredictos/guion-r1-*.md` |
+| Voz (embudo) | Hecho: Cotovía de Nós `-p1`, referencias viva/calma, curva calibrada (arousal 0,64 → 0,43) | `voz_st2.py`, `curva.py`, `gauntlet3/voz/` |
+| Son | Hecho: ambiente por escena, opción C (D13, D14) | `son.py`, `gauntlet3/son/` |
+| Visual | Hoja de prueba r1 en curso; después, crítico ciego | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
+| Vídeo | Pendiente | `herramientas/pipeline/longo.py` |
 
-**Corte del 30-09-2026 a las 16:30 UTC** (límite de uso con 5 agentes a la vez): se perdió solo el contexto de los
-agentes; el trabajo estaba en git o en disco. Se retomaron con `SendMessage` a su id (conservan su contexto).
+**Próximos pasos (en orden):**
+1. Leer los veredictos r1 del guion (`veredictos/guion-r1-formato.md` y `guion-r1-lingua-veracidade.md`) y lanzar la
+   **ronda 2 del guionista** con esas correcciones. Si hace falta llegar a ~30 min, alargar hasta ~4.000 palabras por
+   la parte de dormir. Después, otra ronda de críticos si quedan errores.
+2. **Visual:** hoja r1 (`gauntlet3/visual/r1/`) → crítico visual ciego contra el storyboard de la referencia (el
+   agente visual lo baja con yt-dlp `mweb`) → ajustar.
+3. **Producción** (con el candado de CPU):
+   `source herramientas/pipeline/entorno.sh; cd herramientas/pipeline; flock "$CPU_LOCK" $PY longo.py temas/meigas-de-verdade.yaml --guion ../../plan-de-negocio/gauntlet3/guion/guion-rN.txt --traballo $SCRATCH/longo --saida ../../plan-de-negocio/gauntlet3/video --escenas ../../plan-de-negocio/gauntlet3/video/escenas.json`.
+   La primera vez sale con código 3 tras la voz y deja `$SCRATCH/longo/planos.json`; un agente escribe
+   `escenas.json` (un prompt y un `son` por plano) según `gauntlet3/visual/biblia.md` y `gauntlet3/son/guia-son.md`, y se
+   relanza. Las imágenes tardan ≈ 4 h (unos 130 planos a ≈ 48 s + revisión). Guardar en git las imágenes elegidas
+   (JPEG) y la voz (Opus) para no recalcular si se pierde el contenedor.
+4. QA (`qa.md`), vídeo en partes < 50 MB para el repo, tribunal final y documentación.
+
+**Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
+cada agente; lo que estaba en git o en disco no se perdió.
 
 ## 1. Qué es el proyecto
 
