@@ -227,6 +227,28 @@ no entiende quién hace qué fuera de los desenlaces); una causa inventada en un
 chuvia") tampoco se ve; la naturalidad del gallego más allá de LanguageTool; caras deformes o ropas anacrónicas que
 Florence-2 no nombre.
 
+## Episodio largo de principio a fin (Gauntlet 3)
+
+Orden de trabajo con la que salió "As meigas de verdade" (31:22) el 01-10-2026, en CPU sin GPU (≈16,5 h de CPU de
+núcleo; con reintentos y reinicios, un día de reloj). Las lecciones de cada paso están en `docs/APRENDIZAJES.md`.
+
+1. **Producción desacoplada:** `setsid nohup herramientas/pipeline/lanzar-longo.sh ETIQUETA &` (copia del lanzador que
+   vive en `$SCRATCH/longo/lanzar.sh`: `longo.py` con el candado de CPU, 12 reintentos, `MALLOC_ARENA_MAX=2`, sin
+   imágenes de reserva y umbral de lume al dormir en 1,5 %). Las etapas hechas se saltan al relanzar (caché de texto,
+   voz e imágenes). **Mientras corre, mantener un Monitor armado** (`vixiar.sh` sobre el log): con la sesión ociosa el
+   contenedor se reinicia y mata el render.
+2. **Avance mientras se generan imágenes:** `longo.py ... --traballo OTRO_DIR --saida OTRO_DIR --ata-plano N` (copiar
+   `porta_texto.json` e `imaxes/` y enlazar `voz/` desde el trabajo principal): monta los planos 0..N con la misma voz,
+   sonido y luz que tendrá el episodio.
+3. **Entrega:** `VIDEO=$SCRATCH/longo/w/video.mp4 bash herramientas/pipeline/entregar.sh plan-de-negocio/.../video`:
+   valida el máster, lo parte sin recodificar (solo vídeo y audio; anacos < 50 MB que se reúnen sin pérdida), hace la
+   copia 720p en HLS fMP4 (`init.mp4`, `fNNN.mp4`, `lista.txt`) y una muestra del gancho de 3,5 min.
+4. **Página privada para verlo:** `paxina_episodio.py SAIDA TEMA.yaml HLS PAXINA --video MÁSTER` y publicar
+   `index.html` con `poster.jpg`, `contactsheet.jpg` y `hls/*` como ficheros (≤ 64 MB por publicación: varias a la
+   misma URL; las páginas no sirven `.ts` ni `.m3u8`).
+5. **Tribunal:** `probas/tribunal_follas.py` (hoja a ciegas frente a la referencia y 40 fotogramas con minuto y plano)
+   y un agente con `plan-de-negocio/gauntlet3/tribunal/encargo.md`.
+
 ## Instalación rápida (una orden)
 
 El scratchpad, el venv y los modelos no sobreviven entre sesiones. Para reconstruirlo todo (Ubuntu 24.04 como root,

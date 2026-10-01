@@ -3,7 +3,7 @@
 Estado a 30-09-2026. Resume la primera sesión de trabajo (29 y 30 de septiembre de 2026) para poder retomarla en otra.
 Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 
-## 0. Gauntlet 3 en curso (30-09-2026, tarde): vídeo largo "Cousas de Galiza para durmir"
+## 0. Gauntlet 3 (30-09 a 01-10-2026): vídeo largo "Cousas de Galiza para durmir"
 
 **Si la sesión se corta, retomar desde aquí.** Encargo y decisiones (D7-D14) en
 [`plan-de-negocio/gauntlet3/contexto.md`](../plan-de-negocio/gauntlet3/contexto.md) y en `decisiones.md`.
@@ -19,33 +19,22 @@ Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 | Visual | Hoja de prueba r1 en curso; después, crítico ciego | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
 | Vídeo | Pendiente | `herramientas/pipeline/longo.py` |
 
-**Estado de la producción (30-09-2026, 22:03 UTC):** guion final `gauntlet3/guion/guion-r3.txt` (3.952 palabras,
-puertas en verde, crítico r2 GANA ajustado); voz sintetizada (31,4 min); 162 planos (`gauntlet3/video/planos.json`);
-lista de planos `gauntlet3/video/escenas.json` (validador sin avisos); puerta de imágenes v7. **Render completo en
-marcha**, desacoplado: `$SCRATCH/longo/lanzar.sh produccion1` (log en `$SCRATCH/longo/produccion1.log`, trabajo en
-`$SCRATCH/longo/w`, límite `IMG_MAX_INTENTOS=4`). Si se corta: `cp gauntlet3/guion/guion-r3.txt $SCRATCH/longo/guion-producion.txt`
-y relanzar `setsid nohup $SCRATCH/longo/lanzar.sh produccionN &` (las etapas hechas se saltan; las imágenes aprobadas
-quedan en `$SCRATCH/longo/w/imaxes/revision.json`). El script `lanzar.sh` hace
-`flock "$CPU_LOCK" $PY longo.py temas/meigas-de-verdade.yaml --guion $SCRATCH/longo/guion-producion.txt --traballo $SCRATCH/longo/w --saida ../../plan-de-negocio/gauntlet3/video --escenas ../../plan-de-negocio/gauntlet3/video/escenas.json`
-desde `herramientas/pipeline` tras `source entorno.sh`. Si el contenedor se perdió: `instalar.sh` y regenerar (voz ≈ 11 min).
-
-**Cambio de máquina (01-10-2026, 00:45 UTC):** tras un reinicio el contenedor quedó en una CPU sin bf16 nativo
-(sin AVX512_BF16 ni AMX): en bf16 emulado cada imagen tardaba 370 s. Producción relanzada (`produccion5`) con cálculo
-en fp32 capa a capa, 1024x576 (`IMG_MODEL=lightning1024`) y Florence-2-base en la puerta (memoria: pico 13,3 GB);
-~100 s por intento, ~6 h para los 162 planos. En una máquina con AMX, `IMG_MODEL=lightning` (1344x768) va a ~30 s.
-
-**Después del render** (todo preparado y probado; ver la línea `saida` del log y `gauntlet3/video/qa.md`):
-1. `bash herramientas/pipeline/entregar.sh plan-de-negocio/gauntlet3/video`: valida el MP4, lo parte sin recodificar en
-   `video/mestre/parteNN.mp4` (< 50 MB, se reúnen con `ffmpeg -f concat -safe 0 -i partes.txt -c copy video.mp4`),
-   copia 720p en HLS (`$SCRATCH/entrega/hls`) y muestra del gancho (`$SCRATCH/entrega/mostra-gancho.mp4`, < 30 MB).
-   Al repo van los anacos, no `video.mp4` (> 50 MB).
-2. `$PY herramientas/pipeline/paxina_episodio.py plan-de-negocio/gauntlet3/video herramientas/pipeline/temas/meigas-de-verdade.yaml $SCRATCH/entrega/hls $SCRATCH/entrega/paxina`
-   y publicar `index.html` como página privada (Artifact) con `poster.jpg`, `contactsheet.jpg` y `hls/*` como ficheros
-   (≤ 64 MB por publicación: varias publicaciones a la misma URL).
-3. Tribunal: `$PY herramientas/pipeline/probas/tribunal_follas.py plan-de-negocio/gauntlet3/video $SCRATCH/visual/ref/ref_16_320.jpg plan-de-negocio/gauntlet3/tribunal $SCRATCH/tribunal/cego`
-   y un agente con el encargo `plan-de-negocio/gauntlet3/tribunal/encargo.md`. La hoja visual r2 no pasó por
-   crítico: se juzga aquí, con el vídeo.
-4. Documentación (este handoff, aprendizajes, README del pipeline).
+**Estado (01-10-2026, 18:10 UTC): episodio terminado.** "As meigas de verdade", 31:22, 1080p, 162 planos. QA
+automático (`gauntlet3/video/qa.md`): 12/13 puertas; falla `imaxes_revisadas` (127/162 planos aprobados por la puerta;
+el resto se quedó con su mejor intento). −17,1 LUFS, WER 0,031, subtítulos 100 % en su sitio, ritmo 157 → 114
+palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
+- **Verlo:** página privada https://claude.ai/artifact/6hXeH9wqWbHCWqwVW5K5EX (copia 720p en HLS fMP4, capítulos,
+  faja del embudo, QA, descripción para YouTube). Avance de 4:50 en `gauntlet3/video/avance/`.
+- **Máster 1080p (333 MB):** NO está en git (pendiente de que el promotor decida dónde archivarlo: 333 MB en el
+  historial pesan en cada clon). Está en `$SCRATCH/longo/w/video.mp4` y partido sin recodificar en
+  `$SCRATCH/entrega/mestre-partes/` (10 anacos, se reúnen con `ffmpeg -f concat -safe 0 -i partes.txt -c copy`).
+  **El scratchpad se pierde al acabar la sesión.**
+- **Tribunal final:** agente con `gauntlet3/tribunal/encargo.md`; veredicto en `veredictos/tribunal-final.md`.
+- **Cómo se produjo:** `herramientas/pipeline/lanzar-longo.sh` (reintentos, memoria, puerta ajustada por variables de
+  entorno: `IMG_RESERVAS=0`, `REVISOR_LUME_DURMIR=0.015`), `longo.py --ata-plano N` para avances, `entregar.sh`
+  (validar, partir, 720p HLS fMP4) y `paxina_episodio.py` (página). Detalles y tropiezos en `docs/APRENDIZAJES.md`
+  (memoria del cgroup 13,36 GiB, reinicios por sesión ociosa, puerta demasiado estricta, sonoridad, tipos de las
+  páginas).
 
 **Ideas del promotor para después de este vídeo (D15, D16):**
 - **Imágenes de referencia o semilla** para lo que SDXL no conoce (carro de bois, hórreo, pazo, palloza, traje
