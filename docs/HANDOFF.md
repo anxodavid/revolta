@@ -72,9 +72,28 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
 **Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
 cada agente; lo que estaba en git o en disco no se perdió.
 
-**Estudio de monetización (01-10-2026):** [`plan-de-negocio/estudio-monetizacion.md`](../plan-de-negocio/estudio-monetizacion.md).
-Los anuncios no son el modelo del año 1; las vías posibles son premios (Youtubeiras+, hasta el 15-11-2026), audio
-largo (Spotify desde el 20-10-2026, iVoox), CRTVG, Xacobeo 2027 y B2B local. La decisión clave es el anonimato (M1).
+## Sesión do 01-10-2026 (tarde): estudo de monetización e cambio a galego
+
+**Desde agora todo vai en galego (D17).** Os documentos anteriores quedan en castelán como histórico.
+
+- **Estudo de monetización:** [`plan-de-negocio/estudo-monetizacion.md`](../plan-de-negocio/estudo-monetizacion.md),
+  coas referencias contrastadas na web (§9). Conclusións:
+  - os anuncios non son o modelo do ano 1;
+  - as vías son premios, audio longo, CRTVG, Xacobeo 2027 e B2B local;
+  - a decisión clave é o anonimato (M1).
+- **Datas próximas:**
+  - Xacobeo TU300A: do 1 ao 31-10-2026; esixe RETA ou asociación, así que en anónimo non se chega;
+  - Spotify Partner Program en España: desde o 20-10-2026;
+  - Youtubeiras+: inscrición ata o 15-11-2026, con ≥ 3 publicacións;
+  - YPP con 8.000 h: desde o 1-02-2027.
+- **Decisións pendentes do promotor:** M1-M6 (estudo §6). A ronda de arranxos do episodio das meigas (§0 de abaixo)
+  segue pendente e é o primeiro paso da fase 0 do estudo.
+- **Rama sen integrar:** as referencias gráficas (226 candidatas, CSV e `descargar.sh`) están só en
+  `origin/ccr-17437293-x0i276` (`docs/referencias-graficas/`, `herramientas/referencias/`). Fusionala ou copiala
+  antes de probar as sementes (D15).
+- **Nada volátil nesta sesión:** non se lanzou ningún render nin modelo; o scratchpad desta sesión está baleiro.
+  O máster 1080p das meigas (333 MB) quedou no scratchpad da sesión anterior e **non está en git**: hai que rehacelo
+  na ronda de arranxos (as imaxes están en `gauntlet3/video/imaxes/`) ou decidir onde se arquiva (M6).
 
 ## 1. Qué es el proyecto
 
