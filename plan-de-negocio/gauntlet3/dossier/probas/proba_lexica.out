@@ -1,0 +1,30 @@
+[G] LITERAL        cob=1.00 apoio=(178, 37) h1=[] :: Mouchos, curuxas, sapos e bruxas.
+[G] FALLA(cob)     cob=0.57 apoio=(3, 4) h1=[] :: Seguramente oíches este conxuro nunha queimada, e pensas que vén da noite dos tempos.
+[G] PASA(cob>=0.8) cob=0.90 apoio=(5, 3) h1=[] :: Pero ten autor e ten data: escribiuno Mariano Marcos Abalo, en Vigo, en mil novecentos sesenta e sete.
+[G] PASA(cob>=0.8) cob=1.00 apoio=(5, 6) h1=[] :: Escribiuno a bordo dun vello barco comisado, no porto de Vigo, onde facía queimadas cos amigos.
+[G] PASA(cob>=0.8) cob=0.94 apoio=(9, 7) h1=[] :: En Vilalba, en mil seiscentos dezasete, unha testemuña declarou que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.
+[G] PASA(cob>=0.8) cob=1.00 apoio=(10, 48) h1=[] :: Abondaba con calzarlle ao home os zapatos da muller que ía parir, e dicir unhas palabras.
+[G] PASA(cob>=0.8) cob=0.83 apoio=(11, 27) h1=[] :: E o home, dixo, saltaría coma un poldro bravo.
+[G] LITERAL        cob=1.00 apoio=(25, 179) h1=[] :: Segundo o Arquivo do Reino de Galicia, entre mil cincocentos setenta e catro e mil setecentos a Inquisición de Santiago procesou por bruxería noventa e dúas mulleres e corenta e oito homes.
+[G] PASA(cob>=0.8) cob=1.00 apoio=(26, 123) h1=[] :: E só levou unha á fogueira.
+[G] LITERAL        cob=1.00 apoio=(30, 31) h1=[] :: Coas meigas, a temida Inquisición foi branda.
+[G] PASA(cob>=0.8) cob=1.00 apoio=(31, 88) h1=[] :: Os xuíces ordinarios, segundo o investigador Diego Valor Bravo, foron moito máis duros.
+[G] LITERAL        cob=1.00 apoio=(37, 178) h1=[] :: Na Galicia de hai catrocentos anos, a meiga non era a bruxa dos contos.
+[G] LITERAL        cob=1.00 apoio=(37, 69) h1=[] :: Era a que curaba, a que axudaba nos partos e a que sabía de herbas.
+[G] LITERAL        cob=1.00 apoio=(38, 98) h1=[] :: En Campo Lameiro, uns veciños fixeron unha lista coas mulleres que foran á fonte a noite de san Xoán.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(68, 67) h1=[] :: María Cibreira confesou, despois de ser torturada, que as noites de san Xoán as meigas ían ás xuntanzas nas areas de Sevilla.
+[R] FALLA(H1)      cob=1.00 apoio=(45, 44) h1=['Xinzo de Limia María Feijoa'] :: Unha veciña de Xinzo de Limia, María Feijoa, velou toda a noite para ver quen lle facía mal.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(47, 46) h1=[] :: Viu un gato que saltaba dun lado a outro e que ninguén deu collido, e escapou por un burato da porta.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(76, 34) h1=[] :: María Soliña non morreu na fogueira.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(78, 15) h1=[] :: O poeta Celso Emilio Ferreiro dedicoulle un poema en Longa noite de pedra, en mil novecentos sesenta e dous.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(135, 40) h1=[] :: Para facer o cacho, collían auga de sete fontes, como nas palabras de María do Barro.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(149, 154) h1=[] :: Feijoo naceu en Casdemiro o oito de outubro de mil seiscentos setenta e seis.
+[R] PASA(cob>=0.8) cob=0.86 apoio=(157, 15) h1=[] :: Feijoo escribiu que había feiticeiros, pero moitos menos dos que cría o vulgo.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(164, 167) h1=[] :: Feijoo riu dunha historia de bruxas que voaban máis rápido ca as aguias e non daban alcanzado un burro.
+[R] PASA(cob>=0.8) cob=1.00 apoio=(116, 115) h1=[] :: Na lareira, a carón do lume, estaba o escano de castiñeiro, onde a xente sentaba a quentarse.
+[F] FALLA(H1)      cob=0.75 apoio=(56, 5) h1=['María Rodríguez', 'mil cincocentos setenta e nove'] :: A Inquisición de Santiago queimou a María Rodríguez en mil cincocentos setenta e nove.
+[F] FALLA(H1)      cob=0.88 apoio=(14, 15) h1=['mil novecentos setenta e catro'] :: Mariano Marcos Abalo escribiu o conxuro en mil novecentos setenta e catro.
+[F] PASA(cob>=0.8) cob=1.00 apoio=(149, 174) h1=[] :: Feijoo naceu en Samos en mil seiscentos setenta e seis.
+[F] PASA(cob>=0.8) cob=0.83 apoio=(76, 79) h1=[] :: María Soliña morreu queimada na fogueira de Cangas.
+[F] NLI?           cob=0.75 apoio=(26, 30) h1=[] :: A Inquisición de Santiago venceu as meigas.
+[F] PASA(cob>=0.8) cob=1.00 apoio=(24, 36) h1=[] :: En Galicia só se queimou unha meiga.

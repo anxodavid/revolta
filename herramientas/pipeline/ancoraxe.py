@@ -13,7 +13,7 @@ import re
 import unicodedata
 
 # nomes que o canal usa sempre e non veñen do dossier
-FIXOS = {'Serán', 'Boas', 'Isto', 'Galicia'}
+FIXOS = {'Serán', 'Boas', 'Isto', 'Galicia', 'Galiza', 'Cousas de Galiza'}
 NUMERAIS = {
     'un', 'unha', 'dous', 'dúas', 'tres', 'catro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'once', 'doce',
     'trece', 'catorce', 'quince', 'dezaseis', 'dezasete', 'dezaoito', 'dezanove', 'vinte', 'trinta', 'corenta',

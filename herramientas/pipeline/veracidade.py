@@ -106,7 +106,7 @@ def desenlaces(t):
     return sorted({d for d in DESENLACE if re.search(r'\b' + re.escape(d), s)})
 
 
-FIXOS = {'Serán', 'Galicia'}
+FIXOS = {'Serán', 'Galicia', 'Galiza', 'Cousas'}
 
 
 def ten_nome(frase):
@@ -134,8 +134,10 @@ class Verificador:
             self._cache[k] = {'E': round(p[0], 3), 'N': round(p[1], 3), 'C': round(p[2], 3)}
         return self._cache[k]
 
-    def frase(self, f, modo='gancho', feito_propio=None):
-        """Avalía unha frase. Devolve dict con 'ok', 'motivo' e as medidas."""
+    def frase(self, f, modo='gancho', feito_propio=None, actores=True):
+        """Avalía unha frase. Devolve dict con 'ok', 'motivo' e as medidas. Con actores=False (vídeo longo, despois
+        do gancho) unha frase que só fala de persoas en xeral ("as mulleres fiaban á lareira") non se esixe; si as que
+        teñen nomes, tempo longo ou desenlaces."""
         nf = _norm(f)
         for i, p in enumerate(self.feitos):      # coincidencia literal cun feito (p. ex. a reserva literal): pasa
             if nf and nf in _norm(p):
@@ -144,7 +146,13 @@ class Verificador:
                 if feito_propio is not None:
                     r['conta_o_feito'] = conta(feito_propio, f)
                 return r
-        sc = [(i, self.nli(p, f)) for i, p in enumerate(self.feitos)]
+        # Gauntlet 3 (guion longo): o NLI só se calcula cos feitos que poden apoiar a frase. A regra de apoio esixe
+        # coincidencia léxica >= COB_NLI co mesmo feito (ou >= COB_MIN), así que un feito con menos coincidencia nunca a
+        # apoia só; os feitos de desenlace compróbanse sempre. Antes: NLI contra os 180 feitos por frase (26 min de CPU
+        # para 3.500 palabras); agora unha ducia de chamadas. Os pares seguen saíndo dos 4 feitos máis prometedores.
+        ds_f = set(desenlaces(f))
+        cand = {i for i, p in enumerate(self.feitos) if cobertura(f, p) >= COB_NLI or (ds_f and ds_f & set(desenlaces(p)))}
+        sc = [(i, self.nli(p, f) if i in cand else {'E': 0.0, 'N': 1.0, 'C': 0.0}) for i, p in enumerate(self.feitos)]
         # premisas: cada feito e pares cos 4 feitos máis prometedores (moitas frases xuntan dous feitos)
         top = sorted(range(len(self.feitos)), key=lambda i: -(sc[i][1]['E'] + cobertura(f, self.feitos[i])))[:4]
         prem = [(i,) for i in range(len(self.feitos))] + [(a, b) for k, a in enumerate(top) for b in top[k + 1:]]
@@ -168,7 +176,7 @@ class Verificador:
         tempo = re.search(TEMPO_LONGO, _sen_acentos(f).replace('seculo', 'século'))
         # relato: unha frase que fala de persoas (actores) afirma algo delas e ten que estar apoiada; só as frases
         # sen nomes, sen actores, sen tempo longo e sen desenlace (chuvia, pedra, camiños) poden ser de ambiente
-        actor = bool(ACTORES.search(_sen_acentos(f)))
+        actor = actores and bool(ACTORES.search(_sen_acentos(f)))
         esixida = modo == 'gancho' or ten_nome(f) or tempo or ds or actor
         if ds:
             dossier_ds = set(desenlaces(' '.join(self.feitos)))

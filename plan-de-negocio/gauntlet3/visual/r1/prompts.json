@@ -1,0 +1,1308 @@
+[
+ {
+  "n": 1,
+  "fase": "gancho",
+  "tipo": "detalle",
+  "prompt_axente": "extreme close-up detail of an old hand stirring blue flames of burning spirits in a clay bowl with a wooden ladle, dark stone kitchen, blue glow on rough granite, deep black shadows",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, extreme close-up detail of an old hand stirring blue flames of burning spirits in a clay bowl with a wooden ladle, dark stone kitchen, blue glow on rough granite, deep black shadows",
+    "tokens": 56,
+    "truncado": "",
+    "seed": 3844347431,
+    "problemas": [
+     "man sen corpo (1)"
+    ],
+    "descricion_florence": "The image shows a close-up of a blacksmith's hand holding a wooden spoon over a large metal pot filled with molten metal. The pot is on fire, with the molten metal being heated by the spoon. The metal is a dark blue color and appears to be a type of molten metal, possibly blacksmithing. The background is blurred, but it seems to be an industrial setting with other tools and equipment visible. The overall mood of the image is dark and intense.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.002,
+      0.074
+     ],
+     "muros encalados (CLIP)": [
+      0.021,
+      0.053
+     ],
+     "ciprés (CLIP)": [
+      -0.058,
+      0.066
+     ],
+     "oliveiras (CLIP)": [
+      0.042,
+      0.068
+     ],
+     "palmeiras (CLIP)": [
+      -0.009,
+      0.082
+     ],
+     "rodas de raios (CLIP)": [
+      0.026,
+      0.094
+     ],
+     "paisaxe seca (CLIP)": [
+      0.018,
+      0.019
+     ],
+     "eucaliptos (CLIP)": [
+      -0.005,
+      -0.011
+     ],
+     "negativo: pointed hat": -0.025
+    }
+   },
+   {
+    "intento": 1,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, extreme close-up detail of an old hand stirring blue flames of burning spirits in a clay bowl with a wooden ladle, dark stone kitchen, blue glow on rough granite, deep black shadows",
+    "tokens": 56,
+    "truncado": "",
+    "seed": 551202072,
+    "problemas": [],
+    "descricion_florence": "The image shows a hand holding a mortar and pestle over a fire pit. The mortar is made of clay and is placed in the center of the fire pit, which is filled with small rocks and pebbles. The fire is burning brightly, with orange and yellow flames visible in the background. The hand is positioned in a way that suggests the person is using the mortar to grind the rocks into the fire. The image is taken from a low angle, with the focus on the hand and the mortar. The overall mood of the image is warm and cozy, with a sense of warmth",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.012,
+      0.08
+     ],
+     "muros encalados (CLIP)": [
+      0.054,
+      0.102
+     ],
+     "ciprés (CLIP)": [
+      -0.048,
+      0.102
+     ],
+     "oliveiras (CLIP)": [
+      0.036,
+      0.08
+     ],
+     "palmeiras (CLIP)": [
+      0.003,
+      0.117
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.125
+     ],
+     "paisaxe seca (CLIP)": [
+      0.023,
+      0.054
+     ],
+     "eucaliptos (CLIP)": [
+      -0.016,
+      0.055
+     ],
+     "negativo: pointed hat": -0.002
+    }
+   }
+  ],
+  "escollida": 1,
+  "ok": true
+ },
+ {
+  "n": 2,
+  "fase": "gancho",
+  "tipo": "xeral",
+  "prompt_axente": "wide shot of a woman in a dark wool cloak carrying a lantern under wet granite stone arcades of an old town at night, rain, puddles reflecting the light, deep shadows",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of a woman in a dark wool cloak carrying a lantern under wet granite stone arcades of an old town at night, rain, puddles reflecting the light, deep shadows",
+    "tokens": 54,
+    "truncado": "",
+    "seed": 1615866725,
+    "problemas": [
+     "obxectos modernos"
+    ],
+    "descricion_florence": "The image shows a person walking down a long, arched corridor with columns on either side. The person is wearing a long coat and carrying a bag, and their face is partially obscured by the hood. The corridor is lit by street lamps hanging from the ceiling, creating a warm glow. The floor is wet, and the overall mood of the image is somber and contemplative. The image is taken at night, with the light from the street lamps casting a soft glow on the person and the corridor.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.05,
+      0.116
+     ],
+     "muros encalados (CLIP)": [
+      -0.012,
+      0.095
+     ],
+     "ciprés (CLIP)": [
+      0.025,
+      0.116
+     ],
+     "oliveiras (CLIP)": [
+      -0.027,
+      0.079
+     ],
+     "palmeiras (CLIP)": [
+      -0.013,
+      0.134
+     ],
+     "rodas de raios (CLIP)": [
+      0.052,
+      0.121
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.023,
+      0.076
+     ],
+     "eucaliptos (CLIP)": [
+      -0.021,
+      0.066
+     ]
+    }
+   },
+   {
+    "intento": 1,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of a woman in a dark wool cloak carrying a lantern under wet granite stone arcades of an old town at night, rain, puddles reflecting the light, deep shadows",
+    "tokens": 54,
+    "truncado": "",
+    "seed": 3856734489,
+    "problemas": [
+     "obxectos modernos"
+    ],
+    "descricion_florence": "The image shows a person walking down a cobblestone street at night. The person is wearing a long black cloak and is walking towards the right side of the image. The street is lined with arches and pillars on both sides, and there are street lamps hanging from the ceiling. The buildings on either side are lit up, creating a warm glow. In the background, there is a clock tower with a clock on top, and the sky is dark and cloudy. The image conveys a sense of mystery and solitude.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.033,
+      0.115
+     ],
+     "muros encalados (CLIP)": [
+      0.005,
+      0.089
+     ],
+     "ciprés (CLIP)": [
+      0.019,
+      0.11
+     ],
+     "oliveiras (CLIP)": [
+      -0.046,
+      0.071
+     ],
+     "palmeiras (CLIP)": [
+      -0.01,
+      0.109
+     ],
+     "rodas de raios (CLIP)": [
+      0.046,
+      0.098
+     ],
+     "paisaxe seca (CLIP)": [
+      0.02,
+      0.053
+     ],
+     "eucaliptos (CLIP)": [
+      -0.012,
+      0.024
+     ]
+    }
+   },
+   {
+    "intento": 2,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of a woman in a dark wool cloak carrying a lantern under wet granite stone arcades of an old town at night, rain, puddles reflecting the light, deep shadows",
+    "tokens": 54,
+    "truncado": "",
+    "seed": 2078847416,
+    "problemas": [
+     "obxectos modernos"
+    ],
+    "descricion_florence": "The image shows a person walking down a street at night. The person is wearing a long coat and carrying a briefcase. The street is lined with arches and street lamps on either side. The sky is dark and the ground is wet, suggesting that it has recently rained. The overall mood of the image is somber and contemplative.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.054,
+      0.11
+     ],
+     "muros encalados (CLIP)": [
+      -0.016,
+      0.089
+     ],
+     "ciprés (CLIP)": [
+      0.006,
+      0.108
+     ],
+     "oliveiras (CLIP)": [
+      -0.021,
+      0.074
+     ],
+     "palmeiras (CLIP)": [
+      -0.01,
+      0.12
+     ],
+     "rodas de raios (CLIP)": [
+      0.05,
+      0.089
+     ],
+     "paisaxe seca (CLIP)": [
+      0.012,
+      0.07
+     ],
+     "eucaliptos (CLIP)": [
+      -0.014,
+      0.034
+     ]
+    }
+   },
+   {
+    "intento": 3,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of a woman in a dark wool cloak carrying a lantern under wet granite stone arcades of an old town at night, rain, puddles reflecting the light, deep shadows",
+    "tokens": 54,
+    "truncado": "",
+    "seed": 2752123357,
+    "problemas": [],
+    "descricion_florence": "The image shows two people walking on a wet street at night. The street is lined with old-fashioned buildings on both sides, each with arches and lanterns hanging from the ceiling. The buildings are lit up, creating a warm glow that illuminates the street. The sky is dark and the ground is wet, indicating that it has recently rained. The people are walking side by side, with one person in the foreground and the other in the background. They are both wearing long coats, suggesting that the photo was taken in the evening. The overall mood of the image is",
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.254
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.039,
+      0.118
+     ],
+     "muros encalados (CLIP)": [
+      -0.012,
+      0.084
+     ],
+     "ciprés (CLIP)": [
+      0.035,
+      0.112
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.07
+     ],
+     "palmeiras (CLIP)": [
+      -0.006,
+      0.115
+     ],
+     "rodas de raios (CLIP)": [
+      0.052,
+      0.112
+     ],
+     "paisaxe seca (CLIP)": [
+      0.005,
+      0.048
+     ],
+     "eucaliptos (CLIP)": [
+      -0.01,
+      0.053
+     ]
+    }
+   }
+  ],
+  "escollida": 3,
+  "ok": true
+ },
+ {
+  "n": 3,
+  "fase": "gancho",
+  "tipo": "primeiro_plano",
+  "prompt_axente": "close-up of a kind old midwife's calm face lit by the open hearth fire in a dark stone kitchen, dark wool headscarf, deep wrinkles, smoke, deep black shadows",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of a kind old midwife's calm face lit by the open hearth fire in a dark stone kitchen, dark wool headscarf, deep wrinkles, smoke, deep black shadows",
+    "tokens": 55,
+    "truncado": "",
+    "seed": 1811125823,
+    "problemas": [],
+    "descricion_florence": "The image shows an elderly woman sitting in front of a fireplace. She is wearing a brown robe and a turban on her head, and her hair is tied up in a bun. She appears to be deep in thought, with a serious expression on her face. The fireplace is lit with warm orange and yellow flames, and there is smoke rising from the flames. The background is dark, and the overall mood of the image is somber and contemplative.",
+    "arquetipo": {
+     "etiqueta": "persoa á lareira",
+     "sim": 0.228
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.013,
+      0.114
+     ],
+     "muros encalados (CLIP)": [
+      -0.007,
+      0.106
+     ],
+     "ciprés (CLIP)": [
+      -0.045,
+      0.151
+     ],
+     "oliveiras (CLIP)": [
+      -0.031,
+      0.114
+     ],
+     "palmeiras (CLIP)": [
+      -0.04,
+      0.154
+     ],
+     "rodas de raios (CLIP)": [
+      0.023,
+      0.114
+     ],
+     "paisaxe seca (CLIP)": [
+      0.021,
+      0.091
+     ],
+     "eucaliptos (CLIP)": [
+      -0.047,
+      0.12
+     ],
+     "negativo: witch": 0.031,
+     "negativo: hooked nose": 0.015,
+     "negativo: warts": 0.015
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 4,
+  "fase": "gancho",
+  "tipo": "plano_medio",
+  "prompt_axente": "medium shot of a court clerk in a black doublet pressing a seal into red wax on a folded document, dark stone room, a single candle flame, deep black shadows, chiaroscuro",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, medium shot of a court clerk in a black doublet pressing a seal into red wax on a folded document, dark stone room, a single candle flame, deep black shadows, chiaroscuro",
+    "tokens": 57,
+    "truncado": "",
+    "seed": 3046385968,
+    "problemas": [],
+    "descricion_florence": "The image shows a young man sitting at a wooden table with a book open in front of him. He is wearing a red and black vest and a white shirt with a black collar. He has dark hair and is looking down at the pages of the book with a serious expression on his face. On the table, there are several red candles on candle holders and a red feather boa scattered around. The background is dark and there are two large windows on either side of the table. The overall mood of the image is somber and contemplative.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.012,
+      0.075
+     ],
+     "muros encalados (CLIP)": [
+      0.009,
+      0.084
+     ],
+     "ciprés (CLIP)": [
+      -0.037,
+      0.106
+     ],
+     "oliveiras (CLIP)": [
+      -0.032,
+      0.067
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.114
+     ],
+     "rodas de raios (CLIP)": [
+      0.053,
+      0.086
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.002,
+      0.047
+     ],
+     "eucaliptos (CLIP)": [
+      -0.047,
+      0.022
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 5,
+  "fase": "transicion",
+  "tipo": "xeral",
+  "prompt_axente": "wide establishing shot of a hamlet of grey granite houses with dark grey slate roofs, a woman crossing the stone threshing floor with a basket of maize, morning sunlight through mist",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, wide establishing shot of a hamlet of grey granite houses with dark grey slate roofs, a woman crossing the stone threshing floor with a basket of maize, morning sunlight through mist",
+    "tokens": 46,
+    "truncado": "",
+    "seed": 4292075526,
+    "problemas": [],
+    "descricion_florence": "The image shows a woman walking on a dirt path in a rural area. She is wearing a long dress and carrying a basket in her hand. The path is surrounded by tall grass and there are several stone cottages on either side. The sky is foggy and the overall mood of the image is peaceful and serene. The woman appears to be walking towards the houses on the left side of the path, which are made of stone and have a sloping roof. The houses are surrounded by trees and shrubs, and there is a person walking in the background. The image is",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.057,
+      0.129
+     ],
+     "muros encalados (CLIP)": [
+      -0.048,
+      0.158
+     ],
+     "ciprés (CLIP)": [
+      -0.028,
+      0.124
+     ],
+     "oliveiras (CLIP)": [
+      -0.111,
+      0.167
+     ],
+     "palmeiras (CLIP)": [
+      -0.06,
+      0.154
+     ],
+     "rodas de raios (CLIP)": [
+      0.044,
+      0.137
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.013,
+      0.137
+     ],
+     "eucaliptos (CLIP)": [
+      -0.019,
+      0.07
+     ],
+     "negativo: orange roof tiles": -0.042
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 6,
+  "fase": "transicion",
+  "tipo": "contraluz",
+  "prompt_axente": "backlit silhouette of a woman hanging bundles of dried herbs from the wooden beams of a dark stone kitchen, shafts of daylight through the open doorway, dust in the light",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, backlit silhouette of a woman hanging bundles of dried herbs from the wooden beams of a dark stone kitchen, shafts of daylight through the open doorway, dust in the light",
+    "tokens": 46,
+    "truncado": "",
+    "seed": 648294722,
+    "problemas": [
+     "interior moderno",
+     "paisaxe seca (CLIP)"
+    ],
+    "descricion_florence": "The image shows a woman standing in an empty room with large windows on both sides of the room. She is wearing a long dress and a hat, and is facing away from the camera. The room has a high ceiling with wooden beams and a large window on the right side. The windows are covered with curtains, and there are several hanging baskets and vases on the windowsill. The floor is made of light-colored wood, and the room is lit by natural light coming in from the large window. The woman is holding a bunch of dried flowers in her hands, and it appears",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.02,
+      0.116
+     ],
+     "muros encalados (CLIP)": [
+      0.046,
+      0.146
+     ],
+     "ciprés (CLIP)": [
+      0.006,
+      0.129
+     ],
+     "oliveiras (CLIP)": [
+      0.024,
+      0.156
+     ],
+     "palmeiras (CLIP)": [
+      -0.025,
+      0.146
+     ],
+     "rodas de raios (CLIP)": [
+      0.033,
+      0.105
+     ],
+     "paisaxe seca (CLIP)": [
+      0.078,
+      0.152
+     ],
+     "eucaliptos (CLIP)": [
+      0.06,
+      0.087
+     ]
+    }
+   },
+   {
+    "intento": 1,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dark slate roofs, granite walls, green hills, backlit silhouette of a woman hanging bundles of dried herbs from the wooden beams of a dark stone kitchen, shafts of daylight through the open doorway, dust in the light",
+    "tokens": 56,
+    "truncado": "",
+    "seed": 801928633,
+    "problemas": [],
+    "descricion_florence": "The image shows a woman standing in a room with a large window that offers a beautiful view of the countryside. The room is made of stone and has a wooden ceiling with exposed beams. The woman is wearing a long green dress and is standing in front of a wooden table with a vase of flowers on it. She is looking out at the view from the window, which is filled with greenery and potted plants. The view outside the window is of a valley with trees and hills in the distance. The overall atmosphere of the room is peaceful and serene.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.014,
+      0.109
+     ],
+     "muros encalados (CLIP)": [
+      0.033,
+      0.142
+     ],
+     "ciprés (CLIP)": [
+      -0.026,
+      0.141
+     ],
+     "oliveiras (CLIP)": [
+      -0.075,
+      0.174
+     ],
+     "palmeiras (CLIP)": [
+      -0.049,
+      0.162
+     ],
+     "rodas de raios (CLIP)": [
+      0.017,
+      0.097
+     ],
+     "paisaxe seca (CLIP)": [
+      0.057,
+      0.164
+     ],
+     "eucaliptos (CLIP)": [
+      0.031,
+      0.073
+     ]
+    }
+   }
+  ],
+  "escollida": 1,
+  "ok": true
+ },
+ {
+  "n": 7,
+  "fase": "transicion",
+  "tipo": "primeiro_plano",
+  "prompt_axente": "close-up of two golden-brown oxen under a carved wooden yoke on a muddy lane between mossy stone walls, a farmer's hand on the yoke, bright overcast daylight",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, close-up of two golden-brown oxen under a carved wooden yoke on a muddy lane between mossy stone walls, a farmer's hand on the yoke, bright overcast daylight",
+    "tokens": 48,
+    "truncado": "",
+    "seed": 4149735817,
+    "problemas": [],
+    "descricion_florence": "The image shows three cows walking on a muddy path in a field. The cows are brown and white in color and have long, curved horns. They are walking side by side, with the largest cow in the front and the two smaller ones following closely behind. The path is surrounded by grass and shrubs, and there is a wooden fence on the right side of the image. The background is blurred, but it appears to be a foggy, misty landscape. The sky is overcast and the overall mood of the scene is peaceful and serene.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.04,
+      0.084
+     ],
+     "muros encalados (CLIP)": [
+      -0.026,
+      0.102
+     ],
+     "ciprés (CLIP)": [
+      -0.004,
+      0.102
+     ],
+     "oliveiras (CLIP)": [
+      -0.081,
+      0.137
+     ],
+     "palmeiras (CLIP)": [
+      -0.049,
+      0.128
+     ],
+     "rodas de raios (CLIP)": [
+      -0.063,
+      0.156
+     ],
+     "paisaxe seca (CLIP)": [
+      0.009,
+      0.115
+     ],
+     "eucaliptos (CLIP)": [
+      -0.031,
+      0.09
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 8,
+  "fase": "transicion",
+  "tipo": "plano_medio",
+  "prompt_axente": "medium shot of an old woman in a dark wool headscarf smelling a bunch of wild herbs she has just gathered in an oak grove, low winter sun, long shadows",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, medium shot of an old woman in a dark wool headscarf smelling a bunch of wild herbs she has just gathered in an oak grove, low winter sun, long shadows",
+    "tokens": 45,
+    "truncado": "",
+    "seed": 3358694378,
+    "problemas": [
+     "arquetipo repetido: camiñantes de costas (1 xa, tope 1)"
+    ],
+    "descricion_florence": "The image shows two elderly women walking in a forest. They are both wearing long black robes and headscarves, and appear to be walking side by side. The trees in the background are tall and bare, and the ground is covered in tall grass. The sun is shining through the trees, creating a warm glow that illuminates the scene. The women are looking down at each other, and their faces are not visible in the image. The overall mood of the image is peaceful and contemplative.",
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.246
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.013,
+      0.092
+     ],
+     "muros encalados (CLIP)": [
+      -0.027,
+      0.085
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.18
+     ],
+     "oliveiras (CLIP)": [
+      -0.049,
+      0.171
+     ],
+     "palmeiras (CLIP)": [
+      -0.062,
+      0.195
+     ],
+     "rodas de raios (CLIP)": [
+      0.038,
+      0.118
+     ],
+     "paisaxe seca (CLIP)": [
+      0.035,
+      0.137
+     ],
+     "eucaliptos (CLIP)": [
+      -0.068,
+      0.172
+     ]
+    }
+   },
+   {
+    "intento": 1,
+    "prompt_final": "cinematic film still, period drama, photorealistic, medium shot of an old woman in a dark wool headscarf smelling a bunch of wild herbs she has just gathered in an oak grove, low winter sun, long shadows",
+    "tokens": 45,
+    "truncado": "",
+    "seed": 1136610037,
+    "problemas": [
+     "man sen corpo (1)"
+    ],
+    "descricion_florence": "The image shows two elderly women standing in a wooded area, facing each other and holding a basket of green plants. They are both wearing black jackets and headscarves, and the woman on the left is holding a bunch of green leaves in her hands. The background is blurred, but it appears to be a forest with trees and fallen leaves. The women are looking at each other with a peaceful expression on their faces. The sunlight is shining through the trees, creating a warm glow on the scene. The overall mood of the image is somber and contemplative.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.035,
+      0.098
+     ],
+     "muros encalados (CLIP)": [
+      -0.017,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.011,
+      0.152
+     ],
+     "oliveiras (CLIP)": [
+      -0.047,
+      0.171
+     ],
+     "palmeiras (CLIP)": [
+      -0.072,
+      0.171
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.125
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.022,
+      0.131
+     ],
+     "eucaliptos (CLIP)": [
+      -0.055,
+      0.136
+     ]
+    }
+   },
+   {
+    "intento": 2,
+    "prompt_final": "cinematic film still, period drama, photorealistic, medium shot of an old woman in a dark wool headscarf smelling a bunch of wild herbs she has just gathered in an oak grove, low winter sun, long shadows, hands hidden in the sleeves or out of frame",
+    "tokens": 55,
+    "truncado": "",
+    "seed": 1006956295,
+    "problemas": [],
+    "descricion_florence": "The image shows an elderly woman with white hair, wearing a black hooded cloak, kneeling in a field of tall grass. She is looking down at the ground with her hands clasped together in front of her, as if she is deep in thought. The background is blurred, but it appears to be a wooded area with trees and greenery. The woman's face is not visible in the image, but her eyes are closed and her expression is peaceful and contemplative. The overall mood of the image is somber and contemplate.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.002,
+      0.052
+     ],
+     "muros encalados (CLIP)": [
+      -0.007,
+      0.082
+     ],
+     "ciprés (CLIP)": [
+      0.019,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      -0.02,
+      0.156
+     ],
+     "palmeiras (CLIP)": [
+      -0.036,
+      0.138
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.102
+     ],
+     "paisaxe seca (CLIP)": [
+      0.048,
+      0.141
+     ],
+     "eucaliptos (CLIP)": [
+      0.009,
+      0.067
+     ]
+    }
+   }
+  ],
+  "escollida": 2,
+  "ok": true
+ },
+ {
+  "n": 9,
+  "fase": "calma",
+  "tipo": "paisaxe",
+  "prompt_axente": "wide landscape of a calm Atlantic estuary at dawn, a fisherman pushing a small wooden boat into the water, dark granite rocks, green hills, soft pink morning light",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, wide landscape of a calm Atlantic estuary at dawn, a fisherman pushing a small wooden boat into the water, dark granite rocks, green hills, soft pink morning light",
+    "tokens": 47,
+    "truncado": "",
+    "seed": 1869663529,
+    "problemas": [],
+    "descricion_florence": "The image shows two men in small boats on a calm body of water. The boats are facing each other and appear to be anchored. The water is calm and there are rocks and boulders scattered along the shore. In the background, there are mountains and a clear sky. The image is taken from a low angle, giving a bird's eye view of the scene. The men are silhouetted against the sky, and the overall mood of the image is peaceful and serene.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.045,
+      0.104
+     ],
+     "muros encalados (CLIP)": [
+      -0.042,
+      0.146
+     ],
+     "ciprés (CLIP)": [
+      -0.001,
+      0.102
+     ],
+     "oliveiras (CLIP)": [
+      -0.057,
+      0.108
+     ],
+     "palmeiras (CLIP)": [
+      -0.034,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      0.045,
+      0.109
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.023,
+      0.126
+     ],
+     "eucaliptos (CLIP)": [
+      0.004,
+      0.028
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 10,
+  "fase": "calma",
+  "tipo": "bodegon",
+  "prompt_axente": "still life of a small iron oil lamp, a loaf of rye bread and a clay jug on a rough oak table, warm light of the oil lamp, dark stone wall",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, still life of a small iron oil lamp, a loaf of rye bread and a clay jug on a rough oak table, warm light of the oil lamp, dark stone wall",
+    "tokens": 49,
+    "truncado": "",
+    "seed": 2854434340,
+    "problemas": [],
+    "descricion_florence": "The image shows a wooden table with a few items on it. On the left side of the table, there is a small glass jar with a lit candle inside. Next to the jar, there are two small bowls with a mortar and pestle in them. In the center of the image, there appears to be a small bowl with a slice of bread on the right side. The background is a plain beige wall. The overall mood of the scene is rustic and cozy.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.002,
+      0.099
+     ],
+     "muros encalados (CLIP)": [
+      0.048,
+      0.121
+     ],
+     "ciprés (CLIP)": [
+      -0.043,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      -0.013,
+      0.112
+     ],
+     "palmeiras (CLIP)": [
+      -0.031,
+      0.122
+     ],
+     "rodas de raios (CLIP)": [
+      0.014,
+      0.122
+     ],
+     "paisaxe seca (CLIP)": [
+      0.064,
+      0.123
+     ],
+     "eucaliptos (CLIP)": [
+      -0.008,
+      0.065
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 11,
+  "fase": "calma",
+  "tipo": "plano_medio",
+  "prompt_axente": "medium shot of two women filling clay jugs at an old granite village fountain with a stone basin, soft rain at dusk, wet cobblestones, grey-blue light",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, medium shot of two women filling clay jugs at an old granite village fountain with a stone basin, soft rain at dusk, wet cobblestones, grey-blue light",
+    "tokens": 48,
+    "truncado": "",
+    "seed": 4181104034,
+    "problemas": [],
+    "descricion_florence": "The image shows three young women standing around a stone fountain in a courtyard. They are all wearing long blue dresses and are holding clay pots in their hands. The fountain is in the center of the image and is surrounded by a cobblestone pavement. In the background, there are several buildings with arches and pillars, and there are potted plants scattered around the courtyard. The sky is foggy and the sun is shining through the trees, creating a warm glow. The women appear to be engaged in a conversation, with one of them holding a clay pot and the other two",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.0,
+      0.097
+     ],
+     "muros encalados (CLIP)": [
+      -0.005,
+      0.108
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.119
+     ],
+     "oliveiras (CLIP)": [
+      -0.07,
+      0.138
+     ],
+     "palmeiras (CLIP)": [
+      -0.046,
+      0.15
+     ],
+     "rodas de raios (CLIP)": [
+      0.029,
+      0.122
+     ],
+     "paisaxe seca (CLIP)": [
+      0.012,
+      0.087
+     ],
+     "eucaliptos (CLIP)": [
+      -0.045,
+      0.044
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 12,
+  "fase": "calma",
+  "tipo": "contraluz",
+  "prompt_axente": "backlit shot of an old woman dozing on a wooden high-backed bench beside a low stone hearth, a grey cat asleep at her feet, warm glow of the fire, dark granite walls",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, soft light, backlit shot of an old woman dozing on a wooden high-backed bench beside a low stone hearth, a grey cat asleep at her feet, warm glow of the fire, dark granite walls",
+    "tokens": 55,
+    "truncado": "",
+    "seed": 2329693940,
+    "problemas": [],
+    "descricion_florence": "The image shows an elderly woman sitting on a bench in front of a fireplace. She is wearing a beige robe and has a serious expression on her face. The fireplace is made of stone and has two lit candles on either side. There is a bowl of firewood next to the fireplace and a gray cat lying on the floor next to it. The room is dimly lit with natural light coming in from the window on the left side of the image. The overall mood of the room is cozy and peaceful.",
+    "arquetipo": {
+     "etiqueta": "persoa á lareira",
+     "sim": 0.239
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.03,
+      0.122
+     ],
+     "muros encalados (CLIP)": [
+      0.013,
+      0.138
+     ],
+     "ciprés (CLIP)": [
+      -0.036,
+      0.126
+     ],
+     "oliveiras (CLIP)": [
+      -0.004,
+      0.113
+     ],
+     "palmeiras (CLIP)": [
+      -0.03,
+      0.125
+     ],
+     "rodas de raios (CLIP)": [
+      0.027,
+      0.077
+     ],
+     "paisaxe seca (CLIP)": [
+      0.037,
+      0.098
+     ],
+     "eucaliptos (CLIP)": [
+      -0.028,
+      0.066
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 13,
+  "fase": "durmir",
+  "tipo": "paisaxe",
+  "prompt_axente": "wide landscape of small bonfires glowing far away on dark hills on a summer night, starry sky, faint mist, very dim, calm",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dim and quiet, wide landscape of small bonfires glowing far away on dark hills on a summer night, starry sky, faint mist, very dim, calm",
+    "tokens": 43,
+    "truncado": "",
+    "seed": 2975386711,
+    "problemas": [],
+    "descricion_florence": "The image shows a beautiful landscape of a mountain range at sunset. The sky is filled with orange and pink hues, with the sun setting in the distance. The mountains are silhouetted against the sky, and the horizon is visible in the background. In the foreground, there is a campfire burning brightly in the center of the image. The fire is made up of wooden sticks and is burning brightly, creating a warm glow. The grass on the ground is dry and brown, and there are a few small rocks scattered around the campfire. The overall mood of the photo is peaceful",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.004,
+      0.101
+     ],
+     "muros encalados (CLIP)": [
+      -0.01,
+      0.091
+     ],
+     "ciprés (CLIP)": [
+      -0.019,
+      0.113
+     ],
+     "oliveiras (CLIP)": [
+      -0.043,
+      0.139
+     ],
+     "palmeiras (CLIP)": [
+      0.004,
+      0.158
+     ],
+     "rodas de raios (CLIP)": [
+      0.004,
+      0.131
+     ],
+     "paisaxe seca (CLIP)": [
+      0.02,
+      0.15
+     ],
+     "eucaliptos (CLIP)": [
+      0.014,
+      0.092
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 14,
+  "fase": "durmir",
+  "tipo": "bodegon",
+  "prompt_axente": "still life of a clay bowl of water with wild flowers and herbs on a mossy stone wall at night, pale moonlight, starry sky, very dim",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dim and quiet, still life of a clay bowl of water with wild flowers and herbs on a mossy stone wall at night, pale moonlight, starry sky, very dim",
+    "tokens": 46,
+    "truncado": "",
+    "seed": 679698423,
+    "problemas": [],
+    "descricion_florence": "The image shows a large, round, terracotta bowl filled with small pink and red flowers. The bowl is placed on a rocky surface, with a large rock on the left side. In the background, there is a beautiful landscape of green grass and mountains, with the moon visible in the sky. The overall mood of the image is peaceful and serene.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.007,
+      0.068
+     ],
+     "muros encalados (CLIP)": [
+      -0.006,
+      0.094
+     ],
+     "ciprés (CLIP)": [
+      -0.047,
+      0.133
+     ],
+     "oliveiras (CLIP)": [
+      -0.057,
+      0.174
+     ],
+     "palmeiras (CLIP)": [
+      -0.03,
+      0.159
+     ],
+     "rodas de raios (CLIP)": [
+      -0.002,
+      0.119
+     ],
+     "paisaxe seca (CLIP)": [
+      0.003,
+      0.149
+     ],
+     "eucaliptos (CLIP)": [
+      -0.052,
+      0.084
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ },
+ {
+  "n": 15,
+  "fase": "durmir",
+  "tipo": "plano_medio",
+  "prompt_axente": "medium shot of an old Benedictine monk in a black habit sitting by a small window of a stone cell, rain outside, a single dim candle, soft darkness",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dim and quiet, medium shot of an old Benedictine monk in a black habit sitting by a small window of a stone cell, rain outside, a single dim candle, soft darkness",
+    "tokens": 48,
+    "truncado": "",
+    "seed": 2240376041,
+    "problemas": [
+     "arquetipo seguido: persoa á lareira (xa no plano 11)"
+    ],
+    "descricion_florence": "The image shows an elderly man sitting on a stone bench in an old stone room with a large arched window on the left side. He is wearing a black robe and appears to be deep in thought. On the right side of the image, there are three lit candles placed on the bench, one on each side. The room is dimly lit, casting a soft glow on the man and the candles. The walls are made of stone and there is a small lantern on the floor next to the window. The overall atmosphere of the room is somber and contemplative.",
+    "arquetipo": {
+     "etiqueta": "persoa á lareira",
+     "sim": 0.226
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.007,
+      0.088
+     ],
+     "muros encalados (CLIP)": [
+      0.011,
+      0.09
+     ],
+     "ciprés (CLIP)": [
+      0.018,
+      0.11
+     ],
+     "oliveiras (CLIP)": [
+      -0.014,
+      0.099
+     ],
+     "palmeiras (CLIP)": [
+      -0.015,
+      0.131
+     ],
+     "rodas de raios (CLIP)": [
+      0.033,
+      0.127
+     ],
+     "paisaxe seca (CLIP)": [
+      0.043,
+      0.129
+     ],
+     "eucaliptos (CLIP)": [
+      -0.036,
+      0.09
+     ]
+    }
+   },
+   {
+    "intento": 1,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dim and quiet, medium shot of an old Benedictine monk in a black habit sitting by a small window of a stone cell, rain outside, a single dim candle, soft darkness",
+    "tokens": 48,
+    "truncado": "",
+    "seed": 2477746011,
+    "problemas": [
+     "arquetipo seguido: persoa á lareira (xa no plano 11)"
+    ],
+    "descricion_florence": "The image shows a monk sitting on a window sill, holding a lit candle in his hands. He is wearing a black robe and appears to be deep in thought. On the left side of the image, there are two lanterns, one with a candle inside and the other with a lit flame. The background is a stone wall with a window on the right side. The image is taken from a low angle, with the focus on the monk and the lanterns. The lighting is dim, creating a moody atmosphere.",
+    "arquetipo": {
+     "etiqueta": "persoa á lareira",
+     "sim": 0.208
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.041,
+      0.125
+     ],
+     "muros encalados (CLIP)": [
+      0.002,
+      0.125
+     ],
+     "ciprés (CLIP)": [
+      0.028,
+      0.097
+     ],
+     "oliveiras (CLIP)": [
+      -0.034,
+      0.095
+     ],
+     "palmeiras (CLIP)": [
+      -0.034,
+      0.135
+     ],
+     "rodas de raios (CLIP)": [
+      0.019,
+      0.101
+     ],
+     "paisaxe seca (CLIP)": [
+      0.013,
+      0.071
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.065
+     ]
+    }
+   },
+   {
+    "intento": 5,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dim and quiet, an ancient oak forest at night, mist between mossy trunks, pale moonlight, very dim",
+    "tokens": 34,
+    "truncado": "",
+    "seed": 3811017845,
+    "problemas": [],
+    "descricion_florence": "The image is a dark and eerie scene of a foggy forest. The trees are tall and slender, with their branches reaching up towards the sky. The ground is covered in moss and rocks, and the trees are shrouded in a thick fog. The overall mood of the image is eerie and mysterious. The image is taken from a low angle, creating a sense of depth and perspective. The lighting is soft and muted, giving the scene a dreamy and ethereal quality.",
+    "arquetipo": {
+     "etiqueta": "bosque con néboa",
+     "sim": 0.238
+    },
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      -0.065,
+      0.105
+     ],
+     "muros encalados (CLIP)": [
+      -0.048,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.008,
+      0.193
+     ],
+     "oliveiras (CLIP)": [
+      -0.067,
+      0.185
+     ],
+     "palmeiras (CLIP)": [
+      -0.095,
+      0.224
+     ],
+     "rodas de raios (CLIP)": [
+      0.046,
+      0.105
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.08,
+      0.165
+     ],
+     "eucaliptos (CLIP)": [
+      -0.08,
+      0.23
+     ]
+    }
+   }
+  ],
+  "escollida": 2,
+  "ok": true
+ },
+ {
+  "n": 16,
+  "fase": "durmir",
+  "tipo": "detalle",
+  "prompt_axente": "extreme close-up detail of glowing embers in a stone hearth, an iron pot in shadow, faint red glow, soft darkness",
+  "intentos": [
+   {
+    "intento": 0,
+    "prompt_final": "cinematic film still, period drama, photorealistic, dim and quiet, extreme close-up detail of glowing embers in a stone hearth, an iron pot in shadow, faint red glow, soft darkness",
+    "tokens": 43,
+    "truncado": "",
+    "seed": 2081330965,
+    "problemas": [],
+    "descricion_florence": "The image shows a black cauldron with a handle on top, sitting on a wooden surface in front of a fireplace. The cauldron is filled with a red liquid, which appears to be a potion or a potion. The fireplace is lit with orange and yellow flames, creating a warm and cozy atmosphere. The background is dark, making the cauldron stand out even more. The overall mood of the image is dark and mysterious.",
+    "arquetipo": null,
+    "iconografia_clip": {
+     "tellados laranxas (CLIP)": [
+      0.011,
+      0.095
+     ],
+     "muros encalados (CLIP)": [
+      0.005,
+      0.075
+     ],
+     "ciprés (CLIP)": [
+      -0.084,
+      0.115
+     ],
+     "oliveiras (CLIP)": [
+      -0.033,
+      0.094
+     ],
+     "palmeiras (CLIP)": [
+      -0.038,
+      0.113
+     ],
+     "rodas de raios (CLIP)": [
+      -0.002,
+      0.133
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.023,
+      0.067
+     ],
+     "eucaliptos (CLIP)": [
+      -0.045,
+      0.066
+     ]
+    }
+   }
+  ],
+  "escollida": 0,
+  "ok": true
+ }
+]

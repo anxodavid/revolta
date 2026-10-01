@@ -3,6 +3,75 @@
 Estado a 30-09-2026. Resume la primera sesión de trabajo (29 y 30 de septiembre de 2026) para poder retomarla en otra.
 Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 
+## 0. Gauntlet 3 (30-09 a 01-10-2026): vídeo largo "Cousas de Galiza para durmir"
+
+**Si la sesión se corta, retomar desde aquí.** Encargo y decisiones (D7-D14) en
+[`plan-de-negocio/gauntlet3/contexto.md`](../plan-de-negocio/gauntlet3/contexto.md) y en `decisiones.md`.
+
+| Pieza | Estado | Dónde |
+|---|---|---|
+| Entorno | Hecho: `instalar.sh` en una orden (≈6 min, ≈16 GB) | `herramientas/pipeline/instalar.sh`, `entorno.sh` |
+| Tema | Hecho: **"As meigas de verdade"**, GANA condicionado (ajustes en `contexto.md` §8) | `gauntlet3/tema/`, `veredictos/tema-r1.md` |
+| Dossier | Hecho: 244 hechos con cita comprobada; ficha de 180 | `herramientas/pipeline/temas/meigas-de-verdade.yaml`, `gauntlet3/dossier/` |
+| Guion | **r1 hecho** (3.503 palabras ≈ 26 min, puertas en verde); críticos A y B de la r1 en curso | `gauntlet3/guion/`, `veredictos/guion-r1-*.md` |
+| Voz (embudo) | Hecho: Cotovía de Nós `-p1`, referencias viva/calma, curva calibrada (arousal 0,64 → 0,43) | `voz_st2.py`, `curva.py`, `gauntlet3/voz/` |
+| Son | Hecho: ambiente por escena, opción C (D13, D14) | `son.py`, `gauntlet3/son/` |
+| Visual | Hoja de prueba r1 en curso; después, crítico ciego | `imaxes.py`, `revisor.py`, `gauntlet3/visual/` |
+| Vídeo | Pendiente | `herramientas/pipeline/longo.py` |
+
+**Estado (01-10-2026, 18:10 UTC): episodio terminado.** "As meigas de verdade", 31:22, 1080p, 162 planos. QA
+automático (`gauntlet3/video/qa.md`): 12/13 puertas; falla `imaxes_revisadas` (127/162 planos aprobados por la puerta;
+el resto se quedó con su mejor intento). −17,1 LUFS, WER 0,031, subtítulos 100 % en su sitio, ritmo 157 → 114
+palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
+- **Verlo:** página https://claude.ai/artifact/6hXeH9wqWbHCWqwVW5K5EX (en galego normativo por petición del promotor;
+  copia 720p en HLS fMP4, capítulos, faja del embudo, QA, descripción para YouTube). Avance de 4:50 en
+  `gauntlet3/video/avance/`.
+- **Imágenes elegidas** (162, JPEG) y la caché de la puerta en `gauntlet3/video/imaxes/` (su LEEME explica cómo rehacer
+  solo los planos que pide el tribunal sin volver a generar el resto).
+- **Máster 1080p (333 MB):** NO está en git (pendiente de que el promotor decida dónde archivarlo: 333 MB en el
+  historial pesan en cada clon). Está en `$SCRATCH/longo/w/video.mp4` y partido sin recodificar en
+  `$SCRATCH/entrega/mestre-partes/` (10 anacos, se reúnen con `ffmpeg -f concat -safe 0 -i partes.txt -c copy`).
+  **El scratchpad se pierde al acabar la sesión:** si el promotor no elige dónde archivarlo, el máster se rehace en la
+  ronda de arreglos (las imágenes ya están en el repo; voz ≈ 16 min, montaje ≈ 70 min, QA ≈ 30 min).
+- **Tribunal final (agente Claude, 01-10-2026; nadie ha visto ni oído el episodio entero):** `veredictos/tribunal-final.md`.
+  **No publicable tal cual; sí con arreglos.** Gancho 4/5. Imagen: la comparación "a ciegas" no fue ciega de verdad
+  (la referencia ya estaba descrita en `visual-r1.md`); empate 21-21 y elige la referencia ≈55/45 porque allí la gente
+  hace más cosas; la carencia de la ronda 1 queda corregida a medias (sigue la luz eléctrica). Sonido: gana por
+  medidas, sin escucha. Arreglos: (1) sustituir los planos 84 (bombilla y radiador, aprobado por la puerta), 133
+  (farolas tras el rótulo VII), 161 (casa colonial) y 56 (maleta de ruedas); (2) en el mismo remontaje, los planos 5,
+  31, 61, 67, 91, 145 y 153; (3) pico real ≤ −1 dBTP (mide −0,1: limitar antes de codificar); (4) `descricion.txt`:
+  decir que 35/162 imágenes no pasaron la puerta (o arreglarlas), ambientes reales y primer capítulo «00:00»; (5) para
+  una persona en YouTube Studio: etiqueta de contenido sintético, subir el SRT, miniatura y correo a Nós/USC (D4).
+- **Ronda de arreglos en una sesión nueva** (≈ 3,5 h de máquina, casi todo desatendido):
+  1. `bash herramientas/pipeline/instalar.sh` y `source herramientas/pipeline/entorno.sh`.
+  2. Restaurar la caché de imágenes según `gauntlet3/video/imaxes/LEEME.md` (162 JPEG → PNG + `revision.json` en
+     `$SCRATCH/longo/w/imaxes/`) y copiar `gauntlet3/guion/guion-r3.txt` a `$SCRATCH/longo/guion-producion.txt`.
+  3. Reescribir en `gauntlet3/video/escenas.json` el prompt de los planos 84, 133, 161, 56, 5, 31, 61, 67, 91, 145 y
+     153 (solo esos se regeneran). Evitar lo que cayó: farolas, bombillas y apliques, casas inglesas, maleta.
+  4. Pico real ≤ −1 dBTP: bajar el tope de `son.limitar` (0,89 de muestra dio −0,1 dBTP tras AAC; probar 0,80 y
+     medir). Descripción: frase de las imágenes con el dato real (35/162 sin pasar la puerta, o 0 si se arreglan),
+     lista real de ambientes y primer capítulo «00:00» (`temas/meigas-de-verdade.yaml` y `longo.descricion`).
+  5. `setsid nohup herramientas/pipeline/lanzar-longo.sh produccion1 &` con un Monitor armado todo el rato; después
+     `entregar.sh` y `paxina_episodio.py`, y republicar la página en la misma URL (desde otra conversación: leerla con
+     `action: read` y publicar con `url`).
+- **Cómo se produjo:** `herramientas/pipeline/lanzar-longo.sh` (reintentos, memoria, puerta ajustada por variables de
+  entorno: `IMG_RESERVAS=0`, `REVISOR_LUME_DURMIR=0.015`), `longo.py --ata-plano N` para avances, `entregar.sh`
+  (validar, partir, 720p HLS fMP4) y `paxina_episodio.py` (página). Detalles y tropiezos en `docs/APRENDIZAJES.md`
+  (memoria del cgroup 13,36 GiB, reinicios por sesión ociosa, puerta demasiado estricta, sonoridad, tipos de las
+  páginas).
+
+**Ideas del promotor para después de este vídeo (D15, D16):**
+- **Imágenes de referencia o semilla** para lo que SDXL no conoce (carro de bois, hórreo, pazo, palloza, traje
+  tradicional, armaduras, herramientas): biblioteca de referencias con licencia libre o fotos propias, usadas con
+  img2img, ControlNet (bordes o profundidad) o IP-Adapter, y la puerta CLIP con el campo `clave` para comprobar que el
+  objeto aparece. Búsqueda de la biblioteca: el promotor lanzará un agente barato con el prompt que le pasó Claude.
+- **Animación:** en CPU, paralaje 2,5D con un mapa de profundidad (Depth-Anything-V2-Small, Apache-2.0) y
+  microanimaciones (lume, vela, lluvia, niebla, agua); personas en movimiento con *image-to-video* en GPU alquilada
+  (candidato: Wan 2.2 TI2V-5B, Apache-2.0 [S, verificar]), solo en el gancho, con una puerta de revisión de vídeo.
+
+**Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
+cada agente; lo que estaba en git o en disco no se perdió.
+
 ## 1. Qué es el proyecto
 
 Un canal de YouTube de vídeos hechos con IA sobre **historia y cultura de Galicia**, pensados para **quedarse dormido**

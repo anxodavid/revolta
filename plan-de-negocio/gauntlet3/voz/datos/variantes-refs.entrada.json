@@ -1,0 +1,73 @@
+[
+ {
+  "nome": "viva 04078",
+  "ref": "brais-norm-04078.wav",
+  "escala": 1.0,
+  "wer": true
+ },
+ {
+  "nome": "viva 01372",
+  "ref": "brais-norm-01372.wav",
+  "escala": 1.0,
+  "wer": true
+ },
+ {
+  "nome": "viva 00856",
+  "ref": "brais-norm-00856.wav",
+  "escala": 1.0,
+  "wer": true
+ },
+ {
+  "nome": "viva 11535",
+  "ref": "brais-norm-11535.wav",
+  "escala": 1.0,
+  "wer": true
+ },
+ {
+  "nome": "viva 07496",
+  "ref": "brais-norm-07496.wav",
+  "escala": 1.0,
+  "wer": true
+ },
+ {
+  "nome": "viva 04078:01372:00856",
+  "ref": "brais-norm-04078.wav:brais-norm-01372.wav:brais-norm-00856.wav",
+  "escala": 1.0,
+  "wer": true
+ },
+ {
+  "nome": "calma 08964 beta0.3 esc1.25",
+  "ref": "brais-norm-08964.wav",
+  "escala": 1.25,
+  "beta": 0.3,
+  "wer": true
+ },
+ {
+  "nome": "calma 03720 beta0.3 esc1.25",
+  "ref": "brais-norm-03720.wav",
+  "escala": 1.25,
+  "beta": 0.3,
+  "wer": true
+ },
+ {
+  "nome": "calma 15278 beta0.3 esc1.25",
+  "ref": "brais-norm-15278.wav",
+  "escala": 1.25,
+  "beta": 0.3,
+  "wer": true
+ },
+ {
+  "nome": "calma 08334 beta0.3 esc1.25",
+  "ref": "brais-norm-08334.wav",
+  "escala": 1.25,
+  "beta": 0.3,
+  "wer": true
+ },
+ {
+  "nome": "calma 08964:03720:15278 beta0.3 esc1.25",
+  "ref": "brais-norm-08964.wav:brais-norm-03720.wav:brais-norm-15278.wav",
+  "escala": 1.25,
+  "beta": 0.3,
+  "wer": true
+ }
+]

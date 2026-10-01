@@ -1,0 +1,252 @@
+<title>__TITULO__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+<style>
+/* Concepto: unha sala de visionado de noite. O vídeo é a xanela acesa; debaixo, a faixa do embude (do gancho
+   ao durmir) e os capítulos; máis abaixo, o caderno de produción en voz baixa. Escuro primeiro. */
+:root {
+  --noite: #10151b;      /* fondo: lousa de noite */
+  --lousa: #19212a;      /* superficies */
+  --liña: #2b3540;       /* bordos */
+  --papel: #e7e9e2;      /* texto */
+  --granito: #9da69d;    /* texto secundario, gris granito cara ao musgo */
+  --chama: #8ea6ff;      /* acento: a chama azul da queimada */
+  --candea: #d4a15e;     /* só o gancho, na faixa do embude */
+  --ben: #84b98f; --mal: #e38274;
+  --f-titulo: "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --f-texto: "Literata", "Iowan Old Style", Georgia, serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+  --noite: #eef0ea; --lousa: #f8f9f5; --liña: #d3d8cf; --papel: #1a222a; --granito: #56605a;
+  --chama: #2f4fc4; --candea: #a5661b; --ben: #2e7a43; --mal: #b3402f; color-scheme: light; } }
+:root[data-theme="light"] {
+  --noite: #eef0ea; --lousa: #f8f9f5; --liña: #d3d8cf; --papel: #1a222a; --granito: #56605a;
+  --chama: #2f4fc4; --candea: #a5661b; --ben: #2e7a43; --mal: #b3402f; color-scheme: light; }
+
+body { background: var(--noite); color: var(--papel); font: 400 1rem/1.6 var(--f-texto); }
+.marco { max-width: 70rem; margin: 0 auto; padding-inline: 1rem; padding-block: 1.5rem 4rem; display: grid; gap: 2rem; }
+.cabeceira { display: grid; gap: .35rem; }
+.serie { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--granito); }
+h1 { font: 400 clamp(2.1rem, 5.5vw, 3.6rem)/1.05 var(--f-titulo); margin: 0; text-wrap: balance; }
+.meta { color: var(--granito); font-size: .92rem; font-variant-numeric: tabular-nums; }
+h2 { font: 400 1.55rem/1.2 var(--f-titulo); margin: 0 0 .75rem; text-wrap: balance; }
+h3 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--granito); margin: 0 0 .5rem; font-weight: 600; }
+a { color: var(--chama); }
+:focus-visible { outline: 2px solid var(--chama); outline-offset: 2px; }
+
+.xanela { display: grid; gap: .9rem; }
+video { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; display: block; border-radius: 4px; }
+.aviso-video { color: var(--mal); font-size: .9rem; }
+
+/* faixa do embude: o episodio enteiro no eixe do tempo */
+.embude { position: relative; height: 2.6rem; border-radius: 3px; overflow: hidden; cursor: pointer; display: flex; }
+.embude .fase { height: 100%; position: relative; }
+.embude .fase span { position: absolute; left: .5rem; bottom: .3rem; font-size: .72rem; letter-spacing: .08em;
+  text-transform: uppercase; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.6); white-space: nowrap; }
+.embude .marca { position: absolute; top: 0; width: 1px; height: 38%; background: rgba(255,255,255,.75); pointer-events: none; }
+.embude .cabeza { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; box-shadow: 0 0 6px #fff; pointer-events: none; }
+.lenda { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; font-size: .85rem; color: var(--granito); font-variant-numeric: tabular-nums; }
+.lenda b { color: var(--papel); font-weight: 600; }
+
+.dobre { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem 2.5rem; }
+@media (max-width: 760px) { .dobre { grid-template-columns: minmax(0, 1fr); } }
+
+ol.capitulos { list-style: none; margin: 0; padding: 0; display: grid; }
+.capitulos button { all: unset; box-sizing: border-box; width: 100%; display: grid; grid-template-columns: 3.6rem 1.8rem minmax(0, 1fr);
+  gap: .5rem; padding: .45rem .5rem; border-radius: 3px; cursor: pointer; align-items: baseline; }
+.capitulos button:hover { background: var(--lousa); }
+.capitulos button:focus-visible { outline: 2px solid var(--chama); }
+.capitulos .t { font-variant-numeric: tabular-nums; color: var(--granito); font-size: .9rem; }
+.capitulos .n { color: var(--granito); font-size: .85rem; }
+.capitulos li.activo button { background: var(--lousa); box-shadow: inset 2px 0 0 var(--chama); }
+.capitulos li.activo .titulo-cap { color: var(--chama); }
+.continuar { justify-self: start; font: inherit; font-size: .9rem; color: var(--chama); background: none; border: 1px solid var(--liña);
+  border-radius: 999px; padding: .25rem .9rem; cursor: pointer; }
+
+.caderno { display: grid; gap: 1.6rem; }
+.caderno p { margin: 0; max-width: 65ch; }
+ul.quen { margin: 0; padding-left: 1.1rem; display: grid; gap: .35rem; max-width: 65ch; }
+.portas { display: flex; flex-wrap: wrap; gap: .4rem; }
+.porta { font-size: .82rem; padding: .15rem .6rem; border-radius: 999px; border: 1px solid var(--liña); font-variant-numeric: tabular-nums; }
+.porta.si::before { content: "✓ "; color: var(--ben); }
+.porta.non { border-color: var(--mal); }
+.porta.non::before { content: "✗ "; color: var(--mal); }
+.veredicto { font-weight: 600; }
+.veredicto.si { color: var(--ben); } .veredicto.non { color: var(--mal); }
+dl.medidas { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .3rem 1rem; margin: 0; font-size: .92rem; }
+dl.medidas dt { color: var(--granito); }
+dl.medidas dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+.descricion { position: relative; }
+.descricion pre { white-space: pre-wrap; word-break: break-word; margin: 0; padding: 1rem; background: var(--lousa); border: 1px solid var(--liña);
+  border-radius: 4px; font: .86rem/1.55 var(--f-texto); max-height: 26rem; overflow: auto; }
+.copiar { font: inherit; font-size: .85rem; color: var(--papel); background: var(--lousa); border: 1px solid var(--liña); border-radius: 3px;
+  padding: .2rem .7rem; cursor: pointer; }
+.fila { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; margin-bottom: .6rem; }
+.fila h2 { margin: 0; }
+figure { margin: 0; display: grid; gap: .5rem; }
+figure img { width: 100%; border-radius: 4px; display: block; }
+figcaption { font-size: .85rem; color: var(--granito); }
+footer { color: var(--granito); font-size: .85rem; border-top: 1px solid var(--liña); padding-top: 1rem; display: grid; gap: .3rem; }
+footer p { margin: 0; max-width: 75ch; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+
+<div class="marco">
+  <header class="cabeceira">
+    <div class="serie" id="serie"></div>
+    <h1 id="titulo"></h1>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <section class="xanela" aria-label="Vídeo">
+    <video id="v" controls playsinline preload="metadata" poster="poster.jpg"></video>
+    <p class="aviso-video" id="aviso" hidden></p>
+    <div class="embude" id="embude" role="slider" tabindex="0" aria-label="Posición no episodio e fases do embude"></div>
+    <div class="lenda" id="lenda"></div>
+  </section>
+
+  <div class="dobre">
+    <section aria-labelledby="h-cap">
+      <div class="fila"><h2 id="h-cap">Capítulos</h2><button class="continuar" id="continuar" hidden></button></div>
+      <ol class="capitulos" id="capitulos"></ol>
+    </section>
+    <section class="caderno" aria-labelledby="h-prod">
+      <h2 id="h-prod">Como se fixo</h2>
+      <div><h3>Quen fixo que</h3><ul class="quen" id="quen"></ul></div>
+      <div><h3>Portas automáticas</h3><p id="veredicto"></p><div class="portas" id="portas"></div></div>
+      <div><h3>Medidas</h3><dl class="medidas" id="medidas"></dl></div>
+    </section>
+  </div>
+
+  <section class="descricion" aria-labelledby="h-desc">
+    <div class="fila"><h2 id="h-desc">Descrición para YouTube</h2><button class="copiar" id="copiar">Copiar o texto</button></div>
+    <pre id="descricion"></pre>
+  </section>
+
+  <figure id="folla">
+    <h2>Folla de contactos</h2>
+    <img src="contactsheet.jpg" alt="24 fotogramas do episodio, en orde" loading="lazy">
+    <figcaption>24 fotogramas repartidos por todo o episodio, en orde de lectura.</figcaption>
+  </figure>
+
+  <footer id="pe"></footer>
+</div>
+
+<script type="application/json" id="datos">__DATOS__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.20/hls.min.js"></script>
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById('datos').textContent);
+  document.documentElement.lang = 'gl';
+  var $ = function (id) { return document.getElementById(id); };
+  var el = function (tag, props, kids) {
+    var e = document.createElement(tag);
+    Object.keys(props || {}).forEach(function (k) { if (k === 'text') e.textContent = props[k]; else e.setAttribute(k, props[k]); });
+    (kids || []).forEach(function (k) { e.appendChild(k); });
+    return e;
+  };
+  var hms = function (s) {
+    s = Math.max(0, Math.round(s)); var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+    return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(x).padStart(2, '0');
+  };
+  var dur = D.duracion_s, v = $('v');
+
+  $('serie').textContent = D.serie + ' · ' + D.etiqueta;
+  $('titulo').textContent = D.titulo;
+  $('meta').textContent = hms(dur) + ' · ' + D.meta;
+
+  // reprodutor: hls.js (MSE, ou ManagedMediaSource en iOS 17.1+). As páxinas só serven .mp4 e .txt: os segmentos son
+  // fMP4 e a lista vai en lista.txt, que hls.js le igual pero o HLS nativo non; os subtítulos van dentro da páxina
+  var fonte = 'hls/lista.txt';
+  if (D.vtt) {
+    var tr = document.createElement('track');
+    tr.kind = 'subtitles'; tr.srclang = 'gl'; tr.label = 'Galego';
+    tr.src = URL.createObjectURL(new Blob([D.vtt], { type: 'text/vtt' }));
+    v.appendChild(tr);
+  }
+  if (window.Hls && window.Hls.isSupported()) {
+    var hls = new window.Hls({ maxBufferLength: 60 });
+    hls.loadSource(fonte); hls.attachMedia(v);
+    hls.on(window.Hls.Events.ERROR, function (_, d) {
+      if (d.fatal) { $('aviso').hidden = false; $('aviso').textContent = 'Non se puido cargar o vídeo (' + d.details + '). Recarga a páxina.'; }
+    });
+  } else {
+    $('aviso').hidden = false;
+    $('aviso').textContent = 'Este navegador non pode reproducir o vídeo aquí. Proba con Chrome, Firefox, Edge ou Safari 17 ou posterior.';
+  }
+
+  // faixa do embude
+  var cores = { gancho: 'var(--candea)', transicion: 'color-mix(in oklab, var(--candea) 45%, #34507a)',
+                calma: '#2c4166', durmir: '#151f33' };
+  var nomes = { gancho: 'gancho', transicion: 'transición', calma: 'calma', durmir: 'durmir' };
+  var emb = $('embude');
+  D.fases.forEach(function (f) {
+    var d = el('div', { class: 'fase', style: 'width:' + ((f.t1 - f.t0) / dur * 100) + '%;background:' + cores[f.fase] });
+    d.appendChild(el('span', { text: nomes[f.fase] || f.fase }));
+    emb.appendChild(d);
+  });
+  D.capitulos.forEach(function (c) { if (c.t > 0) emb.appendChild(el('div', { class: 'marca', style: 'left:' + (c.t / dur * 100) + '%' })); });
+  var cabeza = el('div', { class: 'cabeza', style: 'left:0' }); emb.appendChild(cabeza);
+  var ir = function (t, tocar) { v.currentTime = Math.max(0, Math.min(dur - 1, t)); if (tocar) { var p = v.play(); if (p) p.catch(function () {}); } };
+  emb.addEventListener('click', function (e) { var r = emb.getBoundingClientRect(); ir((e.clientX - r.left) / r.width * dur, true); });
+  emb.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { ir(v.currentTime + 30); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { ir(v.currentTime - 30); e.preventDefault(); }
+  });
+  var lenda = $('lenda');
+  D.fases.forEach(function (f) {
+    var r = D.ritmo[f.fase];
+    var s = el('span'); s.appendChild(el('b', { text: nomes[f.fase] })); s.appendChild(document.createTextNode(' ' + hms(f.t0) + '–' + hms(f.t1) + (r ? ' · ' + Math.round(r) + ' palabras/min' : '')));
+    lenda.appendChild(s);
+  });
+
+  // capítulos
+  var ol = $('capitulos'), lis = [];
+  D.capitulos.forEach(function (c) {
+    var b = el('button', { type: 'button' }, [el('span', { class: 't', text: hms(c.t) }), el('span', { class: 'n', text: c.n }),
+      el('span', { class: 'titulo-cap', text: c.titulo })]);
+    b.addEventListener('click', function () { ir(c.t, true); });
+    var li = el('li', {}, [b]); ol.appendChild(li); lis.push(li);
+  });
+
+  // posición gardada neste navegador (só comodidade de quen mira)
+  var CLAVE = 'pos-' + D.id, gardada = 0;
+  try { gardada = parseFloat(localStorage.getItem(CLAVE) || '0') || 0; } catch (e) {}
+  if (gardada > 20 && gardada < dur - 30) {
+    var bc = $('continuar'); bc.hidden = false; bc.textContent = 'Continuar en ' + hms(gardada);
+    bc.addEventListener('click', function () { ir(gardada, true); bc.hidden = true; });
+  }
+  var ultimo = 0;
+  v.addEventListener('timeupdate', function () {
+    var t = v.currentTime;
+    cabeza.style.left = (t / dur * 100) + '%';
+    emb.setAttribute('aria-valuenow', Math.round(t));
+    var k = 0; D.capitulos.forEach(function (c, i) { if (c.t <= t + 0.5) k = i; });
+    lis.forEach(function (li, i) { li.classList.toggle('activo', i === k); });
+    if (Math.abs(t - ultimo) > 5) { ultimo = t; try { localStorage.setItem(CLAVE, String(t)); } catch (e) {} }
+  });
+  emb.setAttribute('aria-valuemin', 0); emb.setAttribute('aria-valuemax', Math.round(dur));
+
+  // caderno
+  D.quen.forEach(function (q) { var li = el('li'); li.appendChild(el('b', { text: q[0] + ': ' })); li.appendChild(document.createTextNode(q[1])); $('quen').appendChild(li); });
+  var np = Object.keys(D.portas).length, ns = Object.keys(D.portas).filter(function (k) { return D.portas[k]; }).length;
+  $('veredicto').appendChild(el('span', { class: 'veredicto ' + (D.publicable ? 'si' : 'non'),
+    text: (D.publicable ? 'Pasa todas' : 'Non pasa todas') + ' (' + ns + '/' + np + ')' }));
+  $('veredicto').appendChild(document.createTextNode(' Son controis automáticos: ninguén viu aínda o vídeo enteiro.'));
+  Object.keys(D.portas).forEach(function (k) {
+    $('portas').appendChild(el('span', { class: 'porta ' + (D.portas[k] ? 'si' : 'non'), text: D.nomes_portas[k] || k, title: k }));
+  });
+  D.medidas.forEach(function (m) { $('medidas').appendChild(el('dt', { text: m[0] })); $('medidas').appendChild(el('dd', { text: m[1] })); });
+
+  $('descricion').textContent = D.descricion;
+  $('copiar').addEventListener('click', function () {
+    var b = this, ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar o texto'; }, 1800); };
+    var sel = function () { var r = document.createRange(); r.selectNodeContents($('descricion')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Seleccionado: cópiao con Ctrl+C'; };
+    try { navigator.clipboard.writeText(D.descricion).then(ok, sel); } catch (e) { sel(); }
+  });
+  D.pe.forEach(function (p) { $('pe').appendChild(el('p', { text: p })); });
+})();
+</script>

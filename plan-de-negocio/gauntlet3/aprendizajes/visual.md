@@ -1,0 +1,237 @@
+# Aprendizajes: pieza VISUAL (Gauntlet 3)
+
+Agente director de arte e ingeniero de imagen (Claude), 30-09-2026. Todo lo que sigue lo hizo Claude (agente) con
+scripts; las medidas son automáticas; **las valoraciones de imágenes ("se ve", "sale") son de Claude mirando las
+imágenes**, no de una persona. La hoja de prueba no la juzga este agente: la juzga un crítico ciego.
+
+## Referencia (storyboard de *Historia Desconocida*)
+
+- yt-dlp 2026.08.19: con el cliente `android_vr` YouTube pedía "Sign in to confirm you're not a bot" (HTTP 429 en la
+  página); `tv_simply` e `ios` igual. **`mweb` sí da los storyboards y además uno de 320x180** (`sb0`, antes solo
+  teníamos 160x90 con `android_vr`); `web_embedded` da 160x90.
+- El `.mhtml` que escribe yt-dlp llegó con **la mayoría de las hojas corruptas** (JPEG que PIL abre pero con basura
+  de colores; dos que no abren). Bajando cada hoja con `curl` desde su `Content-Location` salieron todas bien: 25
+  hojas de 3x3 → **220 miniaturas de 320x180** (una cada ~9,9 s). Están en el scratchpad
+  (`$SCRATCH/visual/ref/`), no en el repo (imágenes de terceros).
+- Lo que se ve a 320x180: fotorrealismo de drama de época; interiores dorados con velas y lámparas, contraluces en
+  ventanas, sótanos con antorcha, cocina con fuego, exteriores fríos (niebla, nieve) y jardines soleados; cada plano
+  con una acción concreta (fregar, cocinar, escribir, vestir); mucho plano medio y detalle de manos con objetos.
+
+## Modelos: qué se reutiliza y qué se baja
+
+- API de HF (30-09-2026, `HfApi.model_info(files_metadata=True)`): `text_encoder/model.fp16.safetensors` y
+  `text_encoder_2/model.fp16.safetensors` tienen **el mismo sha256 en SDXL-Turbo y en SDXL base 1.0**
+  (`660c6f5b…` y `ec310df2…`): se cargan del repo de Turbo y no se bajan 1,6 GB más. Los `vocab.json` y
+  `merges.txt` también son iguales; los `config.json` solo difieren en la versión de transformers/diffusers.
+- El **VAE fp16 es distinto** (`02ee4bd1…` en Turbo, `bcb60880…` en base): se baja el de base (167 MB, 4 s).
+- ByteDance/SDXL-Lightning (licencia `openrail++`, la de SDXL base): `sdxl_lightning_4step_unet.safetensors`
+  5,14 GB en **121 s** a través del proxy. Cada UNet completa pesa lo mismo (1, 2, 4 y 8 pasos); las LoRA
+  (394 MB) necesitarían además la UNet de SDXL base (5,14 GB) y dan algo menos de calidad según la ficha.
+- Disco: 15 GB libres al empezar; 9,2 GB tras bajar la UNet de 4 pasos (los otros agentes también escriben).
+
+## Comparativa de modelos (30-09-2026, `herramientas/pipeline/probas/visual_comparar_modelos.py`)
+
+Mismos 8 prompts (escenas gallegas de las 4 fases: lareira de noche, cruceiro con luna y tormenta, aldea con hórreo,
+carro de bois, costa al atardecer, manos hilando junto a un candil, carballeira con luna, brasas) y mismas semillas,
+en dos estilos: `filme` = "cinematic film still, period drama, photorealistic" y `pintura` = "realistic oil painting,
+dramatic chiaroscuro". CPU de 4 núcleos, bf16, VAE en `channels_last`, cada modelo con el candado de CPU.
+Rejillas en `plan-de-negocio/gauntlet3/visual/comparativa/`.
+
+| Modelo | Resolución | Carga | s/imagen (mediana; mín-máx) | Licencia |
+|---|---|---|---|---|
+| (a) SDXL-Turbo, 4 pasos (Gauntlet 2) | 1024x576 | 13,7 s | **25,5** (22,2-28,3), 16 imágenes | Stability AI Community License |
+| (b) SDXL base + UNet Lightning 4 pasos | 1344x768 | 18,0 s | **47,6** (44,0-75,5), 16 imágenes (23 con las de calibración: 47,1) | OpenRAIL++-M |
+| (c) SDXL base + UNet Lightning 8 pasos, estilo `filme` | 1344x768 | 23,8 s | **82,2** (72,3-122,7), 8 imágenes (los máximos con otro agente usando CPU fuera del candado) | OpenRAIL++-M |
+
+Lo que vio Claude en las imágenes (juicio de Claude, no de una persona):
+- **El prompt pesa más que el modelo en la luz**: con los prompts nuevos (fuente de luz explícita, fase) Turbo ya da
+  lumbre, luna, contraluz y atardecer; el gris plano de la ronda 3 venía del estilo fijo "soft overcast light".
+- **Lightning 1344x768 es claramente más nítido y más "de cine"**: planos más abiertos y compuestos, manos más
+  creíbles, texturas (musgo, piedra, lana) reales; Turbo a 1024x576 es más blando y más "ilustración".
+- Estilo: `pintura` en Lightning sale saturado y brillante, el "óleo genérico de IA" que el crítico rechazó; `filme`
+  es lo más parecido a la referencia. **Se elige `filme`.**
+- **Ninguno de los dos entiende "granary raised on stone pillars" ni "solid wooden disc wheels"**: sale una aldea
+  inglesa (Cotswolds) sin hórreo y carros con **ruedas de radios** (en los dos modelos y los dos estilos). Hace falta
+  otra forma de pedirlos (experimento de iconografía, abajo) y la puerta de CLIP.
+- Lightning mete **detalles modernos** que Turbo no: ventanas de cristal con cuarterones, una estufa de hierro en
+  vez de lareira, una farola junto al cruceiro. Florence-2 (ventanas, farolas) y la lista de la puerta deben pararlos.
+- **Lightning 8 pasos frente a 4**: con la misma semilla salen las mismas composiciones con algo más de detalle fino
+  (musgo, llama), y los mismos fallos (ruedas de radios, aldea inglesa, estufa). No compensa 1,7 veces el tiempo:
+  **se elige Lightning 4 pasos** (`IMG_MODEL=lightning`, por defecto). Se borraron la UNet de 8 pasos y la UNet y el
+  VAE de Turbo (10,4 GB); `instalar.sh sdxl_turbo` los vuelve a bajar si hiciera falta.
+- "a traditional village in Galicia, Spain, stone houses" dio una aldea de piedra con tejado gris verosímil
+  (1 imagen): **la palabra "Galicia, Spain" no confunde a SDXL** como supuse; se corrige la biblia (se desaconsejaba).
+
+## Gradación por fase (`imaxes.graduar`, sustituye la igualación a la media del episodio)
+
+- La igualación de la ronda 3 (transferencia de media y desviación en YCbCr hacia la media del episodio, saturación
+  0,85) es justo lo que aplanaba la luz: llevaba el plano de lumbre y el de mediodía al mismo gris. Ahora cada imagen
+  conserva su luz y solo se corrigen los extremos: si la luminancia media se sale del rango de su fase, una gamma la
+  lleva al borde (no a la media); contraste alrededor de su propia media y brillo de `curva.py`; nivel de negro por
+  fase; saturación por fase con tope de croma; virado común muy ligero.
+- Prueba con 6 fotogramas de la ronda 3 (antes/después mirado por Claude): el plano de durmir (luminancia 0,415) baja
+  a 0,31 con gamma 1,37, contraste 0,92 y saturación 0,80; el del gancho sube el contraste a 1,07. **Primer intento
+  con negros levantados (toe 0,012) en todas las fases: lavaba el "negro profundo" del gancho**; ahora el nivel de
+  negro es por fase (0 en el gancho, 0,02 al durmir).
+- **Suavizado**: con una media móvil de ±3 planos, en una hoja de 16 planos (4 por fase) se mezclaban fases enteras;
+  ahora la ventana va en palabras del guion (±60, ~30 s de narración): solo mezcla cerca de los cambios de fase.
+
+## Rótulos y grano (`montaxe.py`)
+
+- Fotograma de prueba (`probas/visual_rotulo_proba.py`) con el título sobre una carballeira nocturna y sobre una costa
+  al atardecer: sobre lo oscuro se lee bien; sobre espuma y cielo claros el título perdía contraste. Se añade una
+  **banda oscura muy difusa** detrás del bloque de texto (opacidad 0,30, desenfoque 45 px): se lee en los dos casos sin
+  que se vea una caja (juicio de Claude mirando los fotogramas).
+- **Grano de película** opcional (`MONTAXE_GRAO`, 0 por defecto): ruido gaussiano a media resolución (grano de ~2 px),
+  6 texturas alternadas cada 2 fotogramas, más fuerte en tonos medios. Al 3 % se ve "sucio" en el cielo; al 1,5 % es
+  sutil. **No se activa por defecto** hasta medir su coste en bitrate (x264 CRF 22 con tope de 1,4 Mb/s: el grano es
+  lo primero que el codificador se come y lo que más bits gasta) [S].
+
+## Calibración de las puertas de CLIP (`probas/visual_calibrar_clip.py`, 30-09-2026)
+
+72 imágenes etiquetadas por Claude mirándolas: 33 fotogramas de las rondas 1-3 del Gauntlet 2 (recortados de sus
+hojas de contactos, con los defectos que vio el crítico), 32 de la comparativa de modelos y 7 escenas foráneas hechas
+adrede (Toscana, Andalucía, olivar, plaza con palmeras, carro de caballos con radios, eucaliptal y "Galicia, Spain").
+Resultados completos en `$SCRATCH/visual/calib/calibracion.json` (no se sube: rutas del scratchpad).
+
+**Pares malo/bueno** (margen = sim(malo) − sim(bueno) en el peor de 3 recortes; pertinencia = máx de las dos sims):
+
+| Par | Malas: margen | Buenas: margen más alto | Umbral elegido (0 falsos positivos) | Qué caza |
+|---|---|---|---|---|
+| teja naranja / lousa | −0,036 … 0,082 | 0,041 (manos, sin tejados; pertinencia 0,09) | 0,045 y pertinencia > 0,15 | Toscana y Andalucía; **no** los tejados naranjas apagados de la ronda 3 (margen negativo) |
+| encalado / granito | −0,036 … 0,085 | 0,049 (manos) | 0,060 | palmeras y Andalucía; no las fachadas de la ronda 3 |
+| ciprés / carballo | −0,015 … 0,072 | 0,045 (costa) | 0,060 | Toscana; no los cipreses pequeños de fondo |
+| olivo / prado | 0,076 | 0,007 | 0,040 | olivar |
+| palmera / carballo | 0,028 | 0,006 | 0,020 | palmeras (margen estrecho) |
+| paisaje seco / atlántico | 0,075 … 0,141 | 0,067 ("Galicia, Spain") | 0,072 | 3 de 4 escenas secas |
+| eucalipto / carballeira | 0,105 | 0,049 | 0,070 | eucaliptal |
+| **rueda de radios / maciza** | **−0,067 … −0,006** | 0,065 | — | **nada: el par está invertido** |
+
+- Lo más útil que salió: **CLIP ve los casos claros pero no los sutiles**. En los fotogramas de la ronda 3 (lavado
+  verde, óleo apagado) los tejados naranjas puntúan más "lousa" que "teja"; ahí solo sirve Florence-2 ("red roofs").
+  Con las imágenes nuevas (color natural) los casos foráneos salen claros.
+- **El par de las ruedas estaba mal planteado**: "an ox cart with solid wooden disc wheels" se parece a cualquier carro
+  de bueyes, así que los carros con radios puntúan como "macizos". Hay que comparar dos textos que solo difieran en la
+  rueda (se prueba con los carros del experimento de iconografía).
+- La pertinencia de 0,20 que había puesto a ojo dejaba fuera casi todas las malas (las similitudes texto-imagen de
+  CLIP ViT-L/14 andan en 0,08-0,30): se baja a 0,15.
+- **`negativo`**: el valor absoluto de sim("a photo with X") no separa (buenas hasta 0,19; malas desde 0,09). Relativo
+  a "a photo" en el mismo recorte, las buenas llegan a 0,037 y las malas claras a 0,047-0,12: umbral 0,04.
+- **Repetición**: prompts distintos llegan a 0,879 de coseno (dos escenas nocturnas), el mismo prompt en otro modelo
+  o estilo tiene mediana 0,864 (p10 0,80). Umbral 0,90: solo casi-duplicados. Las repeticiones "de tipo de plano" las
+  para la puerta de arquetipos, no esta.
+- **Arquetipos**: las similitudes son bajas (0,15-0,26) y cada texto necesita su umbral. "Caminantes de espaldas":
+  6/6 de los etiquetados con 0,220 y ningún falso (la más alta sin caminantes, 0,217). "Persona junto al fuego" a
+  0,205 también cuenta las lareiras sin persona (mismo arquetipo visual, lo que interesa para el tope). Sin datos
+  para "retrato" [S].
+
+## Entorno: disco frío tras reiniciar el contenedor
+
+- Tras el reinicio del contenedor (corte por límite de uso, 30-09-2026 ~14:10-16:55 UTC) el scratchpad sobrevivió,
+  pero **la primera carga de SDXL-Lightning tardó ~10 min** en vez de 18 s: `vmstat` daba 6-13 MB/s de lectura y
+  `/proc/pressure/io` un 64 % de espera (la caché de páginas estaba vacía y el disco del scratchpad es lento en frío).
+  Florence-2 y CLIP (3,3 GB) pagan lo mismo la primera vez. Conviene lanzar el primer trabajo de imagen tras un
+  reinicio sabiendo que los primeros minutos son de disco, no de CPU (con el candado cogido).
+- La carga de la UNet con `safe_open` tensor a tensor tiene un RSS de ~9 GB durante la carga (páginas del fichero
+  mapeado más las copias en bf16), no ~5 GB como decía el comentario: las páginas del fichero se pueden liberar, pero
+  cuentan mientras se lee.
+
+## Experimento de iconografía (8 prompts, Lightning 4 pasos, `comparativa/iconografia_lightning4.jpg`)
+
+Juicio de Claude mirando las imágenes:
+
+| Qué se pidió | Resultado |
+|---|---|
+| hórreo, 3 variantes: "traditional Galician horreo, a long narrow granite granary raised on stone pillars"; "a horreo in Galicia, Spain, a stone granary on stilts with a small cross"; descripción pieza a pieza (pies de granito con remate de seta, lamas, cruz en el piñón) | **Ninguna**: cabaña de piedra con teito, casa con tejado de hierba, casa de dos plantas con porche |
+| carro de bois con ruedas macizas, 3 variantes (incluido "close-up of the solid round wooden wheel ... made of three joined oak planks") | **Las tres con ruedas de radios** (como los 5 carros de la comparativa) |
+| cruceiro: "a Galician cruceiro, a tall granite stone cross with a carved crucifix on a stepped stone base" | Sí (con una aldea de fondo de casas blancas y tejado rojo pequeño: la puerta tiene que mirarla) |
+| palloza: "a round stone house with a conical thatched straw roof in the misty mountains of Os Ancares" | Sí (más "casa redonda celta" que palloza de planta oval, pero verosímil) |
+
+Conclusión: **el modelo no tiene el concepto** del hórreo ni de la rueda maciza; describirlo mejor no basta. La
+biblia pide no ponerlos como sujeto (mostrar el entorno, el yugo de los bueyes, el carro de lejos). Para tenerlos de
+verdad haría falta un LoRA entrenado con fotos con licencia o fotos propias [S]; queda como problema abierto.
+Tiempo: 31-38 s por imagen (sin nadie más usando la CPU fuera del candado; en la comparativa de la mañana, 47 s).
+
+## Hoja de prueba r1 (16 planos, `plan-de-negocio/gauntlet3/visual/r1/`)
+
+Prompts de Claude según la biblia; todo lo demás automático (generación, puerta, regeneración, gradación, hoja).
+24,4 min de reloj con el candado (tras ~1 h de cola: el candado estuvo ocupado por el guion, la voz y el sonido).
+
+- **Tiempos**: 33,2 s por imagen de mediana (Lightning 4 pasos, 1344x768) + 17,8 s de revisión (MediaPipe +
+  Florence-2 + CLIP). 28 imágenes para 16 planos (1,75 por plano). Extrapolación a ~150 planos: ~260 imágenes x 51 s
+  ≈ **3,7 h de reloj** con la máquina para nosotros [S].
+- **Rechazos por motivo** (de 12 rechazos): arquetipo repetido 5, objetos modernos 3 (la linterna de los soportales
+  como farola), mano sin cuerpo 2, interior moderno 2, tejados naranjas 1, paisaje seco (CLIP) 1. 10 planos a la
+  primera, 6 tras regenerar, 0 sin aprobar; 2 terminaron en la **reserva de la fase**.
+- **Fallo de escala en los topes de arquetipos**: el tope se calcula con el número de planos de la lista
+  (`ceil(0,06 x 16) = 1` "persona junto al fuego"), así que en una hoja de 16 el plano 3 (partera junto a la
+  lareira) agotó el tope y los planos 12 (anciana dormitando junto al fuego) y 15 (monje con vela) acabaron en la
+  reserva (río con puente; carballeira). En el episodio (~150 planos) el tope sería 9. Para muestras hay que pasar el
+  número de planos del episodio (`imaxes.xerar(..., n_total=150)`).
+- **Fallo corregido durante la hoja**: la regla "man sen corpo" del Gauntlet 2 rechazaba todo primer plano de manos
+  (no hay cuerpo que detectar). Ahora, sin cuerpos en la imagen, una mano de más de 0,12 del ancho es un detalle;
+  siguen fallando las manos pequeñas sueltas y más de dos manos sin cuerpo.
+- **`negativo` demasiado cerca del sujeto**: con `negativo: cauldron` en la queimada, CLIP rechazaba el cuenco con
+  llamas (es "casi un caldero"). Regla para la biblia: el negativo nombra lo que NO debe parecerse al sujeto, no una
+  variante del propio sujeto.
+- **Lo que se le escapó a la puerta** (visto por Claude en la hoja; no es un juicio estético): farolas de hierro en la
+  calle de los soportales (plano 2, a la cuarta; Florence la describió sin "street lamp") y **luces de una ciudad**
+  en el valle de la noche de San Xoán (plano 13). Candidatas para la lista de Florence y para un par de CLIP
+  ("city lights at night" / "dark countryside at night") en la próxima ronda.
+- **Segunda pasada con los topes a escala de episodio** (`--planos-episodio 150`; solo se regeneraron los planos 12 y
+  15, el resto salió de la caché): el 12 (anciana junto al fuego) pasa a la primera; el 15 (monje con vela) vuelve a
+  la reserva, ahora por la **separación mínima** (mismo arquetipo que el 12 tres planos antes: CLIP cuenta la vela como
+  "persona junto al fuego"). Resultado final: 25 imágenes para 16 planos, 11 a la primera, 5 tras regenerar, 1 en la
+  reserva, 0 sin aprobar (`r1/porta.md`; la primera pasada, en `r1/porta_primeira_pasada_tope16.md`).
+- Entorno: en `ps`, el `flock` que TIENE el candado y los que esperan se ven igual; el que lo tiene es el padre del
+  python que está corriendo (confundí uno con un duplicado del guion).
+
+## Ronda 2: calibración de la puerta versión 6 (`probas/visual_calibrar_r2.py`, imágenes de la hoja r1)
+
+Etiquetas del veredicto del crítico ciego (`veredictos/visual-r1.md`) y de lo que vio Claude en las imágenes.
+
+| Puerta nueva | Malas | Buenas (más alta) | Umbral | Nota |
+|---|---|---|---|---|
+| luz eléctrica (CLIP) | 0,018-0,032 (4 intentos del plano 2) | 0,018 con pertinencia 0,09 | 0,015 y pertinencia > 0,15 | 4/4 |
+| luces de ciudad (CLIP) | 0,019 (plano 13) | 0,005 | 0,012 | 1/1 |
+| salón moderno (CLIP) | 0,035-0,043 (plano 12) | −0,006 | 0,015 | 2/2 |
+| casas británicas (CLIP) | −0,005 (plano 5) … 0,031 (aldeas "inglesas" de la comparativa) | 0,056 con pertinencia 0,08 | 0,010 | 5/6 (el plano 5 no) |
+| patio mediterráneo (CLIP) | **−0,049** (plano 11) | 0,061 | desactivado | invertido: el patio puntúa como "fuente con pila" |
+| caldero de meiga (CLIP) | **−0,039** (plano 16) | 0,024 | desactivado | invertido; Florence lo llamó "potion" (regex nueva) |
+| `clave` (lo pedido se ve) | ausentes −0,027 … 0,081 | presentes −0,011 … 0,079 | 0,02 | caza 7 de 12 ausencias (maíz, cruceiro, monje, farol, yugo, hierbas colgando, lluvia), 1 falsa alarma; **solapan mucho**: "iron oil lamp" puntúa alto con una vela en vaso |
+| altas luces en durmir | 0,15-2,2 % (hoguera, caldero, vela) | 0,03-0,10 % (luna, niebla) | 0,12 % | una luna llena grande podría pasar del umbral [S] |
+| caminantes (2.º texto) | 0,204-0,262 (incluido el plano 5) | 0,200 | 0,202 | 7/7 |
+| persona junto al fuego (texto nuevo + el prompt tiene que nombrar fuego) | 0,228-0,276 | 0,262 (lareira sin persona) | 0,24 | el monje con vela ya no cuenta (su prompt no nombra fuego) |
+
+Conclusión: CLIP vale para lo evidente (farolas en fila, ciudad iluminada, salón con cojines) y falla con lo que se
+parece al sujeto pedido (un patio con fuente frente a una fuente de aldea; un caldero frente a una pota). El campo
+`clave` es débil: CLIP confunde objetos parecidos.
+
+## Hoja r2 (en curso): lo que ya se vio
+
+- **`negativo` parecido al sujeto = todos los intentos rechazados**: `molten metal` en la queimada (7 de 7) y `herd` en
+  la vaca ordeñada (7 de 7), como `cauldron` en la r1. Las propuestas del crítico para esos planos eran razonables en
+  palabras, pero CLIP no separa conceptos vecinos. Regla nueva en la biblia (sección 8).
+- **`clave: maize`** no se reconoció en ninguno de 4 intentos (la era con mazorcas): la `clave` solo sirve con objetos
+  grandes y reconocibles. Quitada del plano 8 antes de relanzar.
+- **Fallo corregido**: las reservas de la fase se revisaban con la `clave` del plano ("falta: blue flames" en la
+  reserva de una anciana con vela). Ahora la reserva se revisa sin `clave`.
+- **Intento guiado** (4.º y 5.º, CFG 1,5 con prompt negativo según el motivo): ~50 s por imagen (1,7x). Rescató el
+  plano del escribano tras dos rechazos por "texto na imaxe".
+- **La hoja murió por memoria** (~21:15 UTC): usaba 11,8 GB (SDXL-Lightning ~7 + Florence-2 ~3 + CLIP ~1,7) y otro
+  proceso corría a la vez fuera del candado; el cgroup la mató. Se relanzó con el mismo comando: los planos ya
+  cerrados salen de `revision.json` y solo se regenera el que estaba a medias.
+
+## Hoja r2: resultado (`plan-de-negocio/gauntlet3/visual/r2/`)
+
+- 68 imágenes para 16 planos (4,3 por plano; en la r1, 1,6): **2 aprobadas a la primera, 9 tras regenerar, 5 sin
+  aprobar** (queimada, ordeño, anciana en la lareira, cuenco de agua, brasas: queda la imagen con menos problemas,
+  marcada FALLA en `porta.md`). 28,9 s por imagen + 16,1 s de revisión (mediana); los intentos guiados, ~50 s.
+- **La puerta v6 es demasiado estricta tal como está**. Rechazos: `negativo` 21 (casi todos por conceptos pegados al
+  sujeto: "molten metal", "herd", "fireplace mantel", "cauldron"), altas luces en durmir 15 (el umbral de 0,12 % lo
+  superan la luna reflejada en el agua y el brillo de las brasas: hay que subirlo a ~0,5 % o medirlo solo en tonos
+  cálidos) [S], "interior moderno" 12, objetos modernos 9, `clave` 8.
+- Lo que funcionó: el intento guiado rescató 3 planos (escribano, candil, monje); las luces eléctricas y la ciudad ya
+  no pasan; la durmir sale oscura; la reserva ya no es un paisaje vacío fuera de durmir.
+- Para la r3: negativos solo "distintos del sujeto"; altas luces en durmir más tolerantes; revisar la regla de manos
+  (5 "man sen corpo" en planos de dos personas).

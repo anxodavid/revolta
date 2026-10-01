@@ -1,0 +1,211 @@
+# Google Trends (pytrends 4.9, sin cuenta), consultado el 30-09-2026. Pieza TEMA del Gauntlet 3.
+# Fuente: https://trends.google.com (índices relativos 0-100 por consulta; NO son volúmenes absolutos).
+# geo ES = España, ES-GA = Galicia; 'web' = búsqueda de Google; 'youtube' = búsqueda en YouTube (gprop=youtube).
+# Reescalado: cada lote lleva 'Santa Compaña' como ancla; vol.rel = media del término x (media del ancla en el lote 1 / media del ancla en su lote).
+# oct/media = media de las semanas (o meses) de octubre / media de toda la serie; > 1 = más búsquedas en octubre.
+# %sem=0: con muchas semanas a cero (> 50 %) el índice estacional es ruido; usar la parte B (mensual).
+
+## A. Serie semanal de 5 años (today 5-y), 4 lotes x 4 destinos
+
+=== ES / web (5 años, semanal; Santa Compaña = ancla) ===
+término                  vol.rel(5a) vol.rel(12m) oct/media nov/media mes pico  %sem=0
+Camino de Santiago             265.5        240.6      0.80      0.54      ago      0%
+queimada                        18.6         15.1      1.11      0.79      jun      0%
+meigas                          11.2          9.7      1.09      0.91      ago      0%
+muiñeira                         6.9          6.1      0.86      0.81      may      3%
+Santa Compaña                    5.7          4.0      2.61      1.03      oct     18%
+magosto                          5.7          5.8      5.00      5.52      nov     74%
+María Pita                       4.6          8.2      0.45      0.39      ago     39%
+Romasanta                        1.4          1.7      1.13      1.04      ene     65%
+San Andrés de Teixido            1.3          1.6      0.58      0.21      ago     73%
+conjuro queimada                 1.2          0.4      2.09      0.40      jun     77%
+Samaín                           1.0          0.9     10.84      0.50      oct     92%
+San Xoán                         0.4          0.4      0.00      0.47      jun     94%
+batalla de Rande                 0.3          0.2      4.54      0.00      jun     94%
+mouras                           0.2          0.2      3.40      0.00      ago     96%
+brujas gallegas                  0.1          0.1      2.00      0.00      jun     98%
+María Soliña                     0.0          0.0      0.00      0.00      ene     98%
+leyendas gallegas                0.0          0.0      0.00      0.00      abr    100%
+
+=== ES / youtube (5 años, semanal; Santa Compaña = ancla) ===
+término                  vol.rel(5a) vol.rel(12m) oct/media nov/media mes pico  %sem=0
+Camino de Santiago             135.5        150.9      0.72      0.75      may      1%
+muiñeira                        47.2         48.0      0.93      0.82      may      9%
+queimada                         4.3          3.5      1.23      0.57      jun     82%
+Santa Compaña                    2.9          2.2      3.50      1.19      oct     85%
+magosto                          2.5          1.5      2.84      9.32      nov     95%
+María Pita                       0.4          0.1      0.00      0.00      dic     98%
+meigas                           0.4          0.5      0.00      0.00      jun     97%
+Samaín                           0.3          0.3      6.19      0.00      oct     98%
+conjuro queimada                 0.3          0.4      2.71      0.00      abr     98%
+brujas gallegas                  0.2          0.0      0.00      0.00      dic    100%
+Romasanta                        0.2          0.2      0.00      0.00      ago     98%
+leyendas gallegas                0.1          0.0      0.00      5.39      abr     99%
+San Xoán                         0.1          0.0      0.00      0.00      ene    100%
+batalla de Rande                 0.1          0.4      0.00      0.00      sep    100%
+mouras                           0.1          0.0      0.00      0.00      abr    100%
+María Soliña                     0.0          0.0       nan       nan        -    100%
+San Andrés de Teixido            0.0          0.0       nan       nan        -    100%
+
+=== ES-GA / web (5 años, semanal; Santa Compaña = ancla) ===
+término                  vol.rel(5a) vol.rel(12m) oct/media nov/media mes pico  %sem=0
+Camino de Santiago              86.7         86.4      1.02      0.50      ago      0%
+queimada                        11.7          9.1      1.14      0.65      jun     21%
+muiñeira                        10.4          9.6      0.98      0.94      may     12%
+magosto                          7.8          8.2      4.70      6.56      nov     81%
+meigas                           5.8          4.9      1.40      0.86      ago     42%
+María Pita                       5.8         11.7      0.06      0.42      ago     66%
+Santa Compaña                    2.2          2.0      7.27      0.13      oct     82%
+Samaín                           1.5          1.5     11.00      0.25      oct     93%
+San Andrés de Teixido            1.2          1.8      0.00      0.74      ago     86%
+San Xoán                         0.7          1.1      0.00      0.69      jun     94%
+conjuro queimada                 0.3          0.0      0.00      0.00      jun     97%
+mouras                           0.2          0.4      0.00      1.33      dic     98%
+Romasanta                        0.2          0.6      3.86      0.00      oct     97%
+leyendas gallegas                0.1          0.3      0.00      2.51      jul     98%
+batalla de Rande                 0.1          0.0      5.30      0.00      oct     98%
+María Soliña                     0.0          0.0      0.00      0.00      ene     99%
+brujas gallegas                  0.0          0.0       nan       nan        -    100%
+
+=== ES-GA / youtube (5 años, semanal; Santa Compaña = ancla) ===
+término                  vol.rel(5a) vol.rel(12m) oct/media nov/media mes pico  %sem=0
+muiñeira                        45.1         54.4      0.86      0.80      may     15%
+Camino de Santiago               6.9          8.0      0.23      0.72      dic     84%
+magosto                          3.2          2.0      1.91      9.59      nov     95%
+Romasanta                        0.5          0.7      0.00      0.00      dic     99%
+María Pita                       0.5          0.0      0.00      0.00      dic     99%
+queimada                         0.4          0.7      0.00      0.00      jun     98%
+Santa Compaña                    0.4          0.1      3.95      0.00      ago     98%
+batalla de Rande                 0.3          0.0      0.00      0.00      ago     99%
+meigas                           0.2          0.1      0.00      0.00      jul     99%
+leyendas gallegas                0.2          0.0      0.00      6.31      nov     99%
+Samaín                           0.2          0.0      5.78      0.00      ago     99%
+brujas gallegas                  0.2          0.0      0.00      0.00      abr     99%
+María Soliña                     0.2          0.0      0.00      0.00      jun     99%
+conjuro queimada                 0.2          0.0      0.00      0.00      dic    100%
+San Andrés de Teixido            0.0          0.0       nan       nan        -    100%
+mouras                           0.0          0.0       nan       nan        -    100%
+San Xoán                         0.0          0.0       nan       nan        -    100%
+
+## B. Serie mensual larga (web: 'all' desde 2004; YouTube: 2008-01 a 2026-09), índice estacional con los meses desde 2019
+# (Los ficheros con 'today5-y' que salen aquí también son semanales: se incluyen porque el patrón de nombre coincide; su índice es el de la parte A.)
+
+## ES-GA_web_all_SantaCompaña_leyendasdeGalicia_CaminodeSantiago (272 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   1.3  oct=3.12  nov=1.29  meses pico: oct, nov, ago  ceros=2%  oct2025=4
+   leyendas de Galicia    media=   0.0  oct=3.29  nov=3.29  meses pico: oct, nov, jun  ceros=96%  oct2025=0
+   Camino de Santiago     media=  21.7  oct=1.03  nov=0.55  meses pico: ago, jul, sep  ceros=0%  oct2025=24
+
+## ES-GA_web_all_SantaCompaña_meigas_queimada_Samaín (272 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   8.0  oct=3.23  nov=1.33  meses pico: oct, nov, ago  ceros=1%  oct2025=27
+   meigas                 media=  12.9  oct=1.14  nov=0.80  meses pico: ago, jun, oct  ceros=0%  oct2025=17
+   queimada               media=  21.2  oct=0.97  nov=0.74  meses pico: jun, ago, jul  ceros=0%  oct2025=21
+   Samaín                 media=   2.7  oct=11.04  nov=1.89  meses pico: oct, nov, sep  ceros=84%  oct2025=30
+
+## ES-GA_web_all_brujas_SantaCompaña_meigas (272 meses; índice con 92 meses desde 2019)
+   brujas                 media=  23.5  oct=1.82  nov=1.51  meses pico: oct, nov, feb  ceros=0%  oct2025=34
+   Santa Compaña          media=   3.2  oct=3.17  nov=1.31  meses pico: oct, nov, ago  ceros=1%  oct2025=11
+   meigas                 media=   5.1  oct=1.10  nov=0.82  meses pico: ago, jun, jul  ceros=0%  oct2025=6
+
+## ES-GA_web_today5-y_SantaCompaña_batalladeRande_mouras_magosto_CaminodeSantiago (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   1.1  oct=7.20  nov=0.13  meses pico: oct, ago, sep  ceros=82%  oct2025=nan
+   batalla de Rande       media=   0.1  oct=5.30  nov=0.00  meses pico: oct, jun, jul  ceros=98%  oct2025=nan
+   mouras                 media=   0.1  oct=0.00  nov=1.33  meses pico: dic, feb, may  ceros=98%  oct2025=nan
+   magosto                media=   3.9  oct=4.70  nov=6.56  meses pico: nov, oct, sep  ceros=81%  oct2025=nan
+   Camino de Santiago     media=  43.6  oct=1.02  nov=0.50  meses pico: ago, jul, sep  ceros=0%  oct2025=nan
+
+## ES-GA_web_today5-y_SantaCompaña_brujasgallegas_leyendasgallegas_conjuroqueimada_SanXoán (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   6.3  oct=7.23  nov=0.13  meses pico: oct, ago, sep  ceros=82%  oct2025=nan
+   brujas gallegas        sin datos
+   leyendas gallegas      media=   0.4  oct=0.00  nov=2.51  meses pico: jul, nov, dic  ceros=98%  oct2025=nan
+   conjuro queimada       media=   0.8  oct=0.00  nov=0.00  meses pico: jun, feb, ago  ceros=97%  oct2025=nan
+   San Xoán               media=   1.9  oct=0.00  nov=0.69  meses pico: jun, feb, nov  ceros=94%  oct2025=nan
+
+## ES-GA_youtube_2008-01-012026-09-29_SantaCompaña_leyendasdeGalicia_CaminodeSantiago (224 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   0.5  oct=4.29  nov=0.00  meses pico: oct, ago, sep  ceros=93%  oct2025=8
+   leyendas de Galicia    sin datos
+   Camino de Santiago     media=  13.6  oct=0.81  nov=1.07  meses pico: may, sep, dic  ceros=37%  oct2025=24
+
+## ES-GA_youtube_2008-01-012026-09-29_SantaCompaña_meigas_queimada_Samaín (224 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   1.2  oct=4.34  nov=0.00  meses pico: oct, ago, sep  ceros=93%  oct2025=18
+   meigas                 media=   0.7  oct=0.00  nov=0.00  meses pico: jul, sep, jun  ceros=97%  oct2025=0
+   queimada               media=   2.9  oct=0.00  nov=0.00  meses pico: jun, jul, sep  ceros=89%  oct2025=0
+   Samaín                 media=   3.3  oct=12.07  nov=0.00  meses pico: oct, may, ene  ceros=92%  oct2025=22
+
+## ES-GA_youtube_2008-01-012026-09-29_brujas_SantaCompaña_meigas (224 meses; índice con 92 meses desde 2019)
+   brujas                 media=   6.1  oct=2.36  nov=1.27  meses pico: oct, dic, nov  ceros=14%  oct2025=10
+   Santa Compaña          media=   0.1  oct=4.78  nov=0.00  meses pico: oct, ago, sep  ceros=93%  oct2025=2
+   meigas                 media=   0.1  oct=0.00  nov=0.00  meses pico: sep, jun, jul  ceros=97%  oct2025=0
+
+## ES-GA_youtube_today5-y_SantaCompaña_batalladeRande_mouras_magosto_CaminodeSantiago (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   0.1  oct=4.03  nov=0.00  meses pico: ago, oct, sep  ceros=98%  oct2025=nan
+   batalla de Rande       media=   0.1  oct=0.00  nov=0.00  meses pico: ago, ene, mar  ceros=99%  oct2025=nan
+   mouras                 sin datos
+   magosto                media=   1.1  oct=1.91  nov=9.59  meses pico: nov, oct, ene  ceros=95%  oct2025=nan
+   Camino de Santiago     media=   2.3  oct=0.23  nov=0.72  meses pico: dic, may, abr  ceros=84%  oct2025=nan
+
+## ES-GA_youtube_today5-y_SantaCompaña_brujasgallegas_leyendasgallegas_conjuroqueimada_SanXoán (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   0.8  oct=3.93  nov=0.00  meses pico: ago, oct, sep  ceros=98%  oct2025=nan
+   brujas gallegas        media=   0.5  oct=0.00  nov=0.00  meses pico: abr, ago, feb  ceros=99%  oct2025=nan
+   leyendas gallegas      media=   0.5  oct=0.00  nov=6.31  meses pico: nov, ene, mar  ceros=99%  oct2025=nan
+   conjuro queimada       media=   0.4  oct=0.00  nov=0.00  meses pico: dic, ene, mar  ceros=100%  oct2025=nan
+   San Xoán               sin datos
+
+## ES_web_all_SantaCompaña_leyendasdeGalicia_CaminodeSantiago (272 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   0.3  oct=3.68  nov=2.63  meses pico: oct, nov, feb  ceros=73%  oct2025=1
+   leyendas de Galicia    sin datos
+   Camino de Santiago     media=  23.6  oct=0.77  nov=0.54  meses pico: ago, jul, jun  ceros=0%  oct2025=16
+
+## ES_web_all_SantaCompaña_meigas_queimada_Samaín (272 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   8.5  oct=2.26  nov=1.30  meses pico: oct, nov, ago  ceros=0%  oct2025=18
+   meigas                 media=  15.6  oct=1.14  nov=0.92  meses pico: ago, jun, oct  ceros=0%  oct2025=16
+   queimada               media=  25.4  oct=1.07  nov=0.89  meses pico: jun, ago, jul  ceros=0%  oct2025=23
+   Samaín                 media=   1.3  oct=10.39  nov=2.23  meses pico: oct, nov, sep  ceros=79%  oct2025=15
+
+## ES_web_all_brujas_SantaCompaña_meigas (272 meses; índice con 92 meses desde 2019)
+   brujas                 media=  25.6  oct=1.69  nov=1.48  meses pico: oct, nov, feb  ceros=0%  oct2025=35
+   Santa Compaña          media=   0.2  oct=4.84  nov=2.77  meses pico: oct, nov, ago  ceros=79%  oct2025=1
+   meigas                 media=   1.0  oct=1.01  nov=1.01  meses pico: ene, feb, abr  ceros=1%  oct2025=1
+
+## ES_web_today5-y_SantaCompaña_batalladeRande_mouras_magosto_CaminodeSantiago (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   1.0  oct=2.37  nov=1.00  meses pico: oct, ago, nov  ceros=18%  oct2025=nan
+   batalla de Rande       media=   0.1  oct=4.54  nov=0.00  meses pico: jun, oct, abr  ceros=94%  oct2025=nan
+   mouras                 media=   0.0  oct=3.40  nov=0.00  meses pico: ago, oct, sep  ceros=96%  oct2025=nan
+   magosto                media=   1.0  oct=5.00  nov=5.52  meses pico: nov, oct, sep  ceros=74%  oct2025=nan
+   Camino de Santiago     media=  48.4  oct=0.80  nov=0.54  meses pico: ago, jul, jun  ceros=0%  oct2025=nan
+
+## ES_web_today5-y_SantaCompaña_brujasgallegas_leyendasgallegas_conjuroqueimada_SanXoán (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=  13.0  oct=2.60  nov=1.03  meses pico: oct, ago, nov  ceros=18%  oct2025=nan
+   brujas gallegas        media=   0.1  oct=2.00  nov=0.00  meses pico: jun, ago, jul  ceros=98%  oct2025=nan
+   leyendas gallegas      media=   0.0  oct=0.00  nov=0.00  meses pico: abr, ene, feb  ceros=100%  oct2025=nan
+   conjuro queimada       media=   2.6  oct=2.09  nov=0.40  meses pico: jun, ago, oct  ceros=77%  oct2025=nan
+   San Xoán               media=   0.8  oct=0.00  nov=0.47  meses pico: jun, may, ago  ceros=94%  oct2025=nan
+
+## ES_youtube_2008-01-012026-09-29_SantaCompaña_leyendasdeGalicia_CaminodeSantiago (224 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=   2.1  oct=2.43  nov=0.70  meses pico: oct, feb, may  ceros=26%  oct2025=4
+   leyendas de Galicia    sin datos
+   Camino de Santiago     media=  28.4  oct=0.80  nov=0.73  meses pico: ago, may, jul  ceros=0%  oct2025=29
+
+## ES_youtube_2008-01-012026-09-29_SantaCompaña_meigas_queimada_Samaín (224 meses; índice con 92 meses desde 2019)
+   Santa Compaña          media=  15.9  oct=2.39  nov=0.74  meses pico: oct, may, dic  ceros=26%  oct2025=31
+   meigas                 media=   4.1  oct=0.93  nov=0.42  meses pico: feb, dic, ago  ceros=58%  oct2025=13
+   queimada               media=  15.1  oct=1.16  nov=0.62  meses pico: ago, jun, ene  ceros=32%  oct2025=16
+   Samaín                 media=   1.3  oct=13.14  nov=0.00  meses pico: oct, ene, mar  ceros=93%  oct2025=10
+
+## ES_youtube_2008-01-012026-09-29_brujas_SantaCompaña_meigas (224 meses; índice con 92 meses desde 2019)
+   brujas                 media=  23.8  oct=1.99  nov=1.29  meses pico: oct, nov, dic  ceros=0%  oct2025=30
+   Santa Compaña          media=   0.7  oct=2.12  nov=0.64  meses pico: oct, dic, jun  ceros=38%  oct2025=1
+   meigas                 media=   0.0  oct=0.00  nov=0.00  meses pico: dic, feb, mar  ceros=98%  oct2025=0
+
+## ES_youtube_today5-y_SantaCompaña_batalladeRande_mouras_magosto_CaminodeSantiago (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   0.2  oct=3.49  nov=1.15  meses pico: oct, ago, nov  ceros=85%  oct2025=nan
+   batalla de Rande       media=   0.0  oct=0.00  nov=0.00  meses pico: sep, ene, mar  ceros=100%  oct2025=nan
+   mouras                 media=   0.0  oct=0.00  nov=0.00  meses pico: abr, ene, feb  ceros=100%  oct2025=nan
+   magosto                media=   0.2  oct=2.84  nov=9.32  meses pico: nov, oct, ene  ceros=95%  oct2025=nan
+   Camino de Santiago     media=  11.6  oct=0.72  nov=0.75  meses pico: may, ago, jul  ceros=1%  oct2025=nan
+
+## ES_youtube_today5-y_SantaCompaña_brujasgallegas_leyendasgallegas_conjuroqueimada_SanXoán (261 meses; índice con 261 meses desde 2019)
+   Santa Compaña          media=   5.0  oct=3.49  nov=1.19  meses pico: oct, ago, jul  ceros=85%  oct2025=nan
+   brujas gallegas        media=   0.4  oct=0.00  nov=0.00  meses pico: dic, ene, mar  ceros=100%  oct2025=nan
+   leyendas gallegas      media=   0.2  oct=0.00  nov=5.39  meses pico: abr, nov, feb  ceros=99%  oct2025=nan
+   conjuro queimada       media=   0.4  oct=2.71  nov=0.00  meses pico: abr, jun, oct  ceros=98%  oct2025=nan
+   San Xoán               media=   0.2  oct=0.00  nov=0.00  meses pico: ene, feb, mar  ceros=100%  oct2025=nan

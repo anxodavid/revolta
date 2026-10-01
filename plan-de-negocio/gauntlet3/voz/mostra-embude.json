@@ -1,0 +1,72 @@
+{
+ "duracion_s": 115.8,
+ "marcas_s": [
+  [
+   "gancho",
+   0.5
+  ],
+  [
+   "durmir",
+   20.6
+  ],
+  [
+   "embude",
+   51.3
+  ]
+ ],
+ "curva": "herramientas/pipeline/curva.py (= candidata F, datos/candidatas/r2_F.json)",
+ "ref_wav": "brais-norm-11535.wav:brais-norm-01372.wav:brais-norm-04078.wav",
+ "ref_wav_calmo": "brais-norm-03720.wav",
+ "embude": [
+  {
+   "pal": 0,
+   "texto": "Seguramente oíches o conxuro da queimada e pensas que é moi antigo."
+  },
+  {
+   "pal": 40,
+   "texto": "Non o é: escribiuno en Vigo, en mil novecentos sesenta e sete, Mariano Marcos Abalo."
+  },
+  {
+   "pal": 90,
+   "texto": "E en Vilalba, en mil seiscentos dezasete, unha testemuña declarou que unha parteira dicía poder pasarlle a un home as dores do parto."
+  },
+  {
+   "pal": 150,
+   "texto": "Isto é Cousas de Galiza para durmir."
+  },
+  {
+   "pal": 280,
+   "texto": "Esta noite imos buscar as meigas de verdade, as que deixaron o seu nome nos papeis."
+  },
+  {
+   "pal": 500,
+   "texto": "A meiga dos papeis non era a bruxa dos contos, senón a curandeira, a parteira, a muller que sabía de herbas."
+  },
+  {
+   "pal": 950,
+   "texto": "Nas casas de pedra, arredor da lareira, as avoas falaban das herbas, do leite e do mal de ollo."
+  },
+  {
+   "pal": 1400,
+   "texto": "Contan que na noite de San Xoán as mozas ían á fonte antes de que saíse o sol."
+  },
+  {
+   "pal": 1800,
+   "texto": "Levaban herbas, auga e palabras moi antigas."
+  },
+  {
+   "pal": 2700,
+   "texto": "Fóra, a choiva caía amodo sobre os tellados de lousa."
+  },
+  {
+   "pal": 3600,
+   "texto": "Chove na lousa, amodo, e a historia pode esperar ata mañá."
+  }
+ ],
+ "parte1": [
+  "Seguramente oíches o conxuro da queimada e pensas que é moi antigo.",
+  "En Vilalba, en mil seiscentos dezasete, unha testemuña declarou que unha parteira dicía poder pasarlle a un home as dores do parto.",
+  "A meiga dos papeis non era a bruxa dos contos, senón a curandeira, a parteira, a muller que sabía de herbas."
+ ],
+ "nota": "Voz sintética (Nos_StyleTTS2-Brais-GL) sen choiva nin ambiente. Parte 1: as mesmas 3 frases en ton de gancho (palabra 0 da curva) e en ton de durmir (palabra 3600). Parte 2: o embude en 11 frases, cada unha no seu punto da curva. Texto escrito por Claude (axente de voz) co tema elixido; ninguén escoitou a mostra antes de subila."
+}
