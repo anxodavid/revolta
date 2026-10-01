@@ -32,6 +32,8 @@ LIGHTNING = 'ByteDance/SDXL-Lightning'
 MODELOS = {
     'turbo': {'repo': 'stabilityai/sdxl-turbo', 'W': 1024, 'H': 576, 'pasos': 4},
     'lightning': {'unet': 'sdxl_lightning_4step_unet.safetensors', 'W': 1344, 'H': 768, 'pasos': 4},
+    # 01-10-2026: nunha CPU sen bf16 nativo (cálculo en fp32) 1344x768 tarda ~150 s e 1024x576 ~95 s por imaxe
+    'lightning1024': {'unet': 'sdxl_lightning_4step_unet.safetensors', 'W': 1024, 'H': 576, 'pasos': 4},
     'lightning8': {'unet': 'sdxl_lightning_8step_unet.safetensors', 'W': 1344, 'H': 768, 'pasos': 8},
 }
 MODELO_DEFECTO = 'lightning'
@@ -53,6 +55,19 @@ def modelo(nome=None):
 M = modelo()
 MODELO, W, H, PASOS = M['nome'], M['W'], M['H'], M['pasos']       # compatibilidade co código anterior
 MAX_INTENTOS, INTENTO_PRUDENTE, RESERVAS = int(os.environ.get('IMG_MAX_INTENTOS', '5')), 2, 2
+
+
+def bf16_rapido():
+    """¿Ten a CPU bfloat16 nativo (AVX512_BF16 ou AMX)? O 01-10-2026 un reinicio levou o contedor a unha máquina
+    sen el: en bf16 emulado cada imaxe tardaba 370 s en vez de ~30 s. IMG_CALC=fp32|bf16 forza un modo."""
+    f = os.environ.get('IMG_CALC')
+    if f:
+        return f == 'bf16'
+    try:
+        fl = open('/proc/cpuinfo').read()
+        return 'avx512_bf16' in fl or 'amx_bf16' in fl
+    except OSError:
+        return True
 
 
 def cargar_pipe(nome=None):
@@ -89,6 +104,34 @@ def cargar_pipe(nome=None):
         del sd
         pipe = StableDiffusionXLPipeline(vae=vae, text_encoder=te1, text_encoder_2=te2, tokenizer=tok1,
                                          tokenizer_2=tok2, unet=unet, scheduler=sched, add_watermarker=False)
+    if not bf16_rapido():
+        # sen bf16 nativo: pesos da UNet gardados en bf16 (memoria) pero cálculo en fp32 capa a capa (AVX-512);
+        # VAE en fp32; os embeddings do texto pásanse a fp32 en xerar_unha
+        # sen excepcións (por defecto diffusers deixa sen converter normas e proj_in/out, que quedarían en bf16)
+        pipe.unet.enable_layerwise_casting(storage_dtype=torch.bfloat16, compute_dtype=torch.float32,
+                                           skip_modules_pattern=(), skip_modules_classes=())
+        pipe.vae.to(torch.float32)
+        # o pipeline volve pasar os embeddings ao tipo dos codificadores de texto (bf16) e crea o ruído nese tipo:
+        # todas as entradas en coma flotante da UNet pásanse a fp32 xusto antes de cada chamada
+        def _entradas_fp32(mod, args, kwargs):
+            def c(x):
+                if torch.is_tensor(x) and x.is_floating_point():
+                    return x.float()
+                if isinstance(x, dict):
+                    return {k: c(v) for k, v in x.items()}
+                return x
+            return tuple(c(a) for a in args), {k: c(v) for k, v in kwargs.items()}
+        pipe.unet.register_forward_pre_hook(_entradas_fp32, with_kwargs=True)
+        # o casting por capas de diffusers só trata Linear e Conv: as normas (GroupNorm, LayerNorm) e calquera outra
+        # capa con parámetros propios pásanse a fp32 (son pequenas)
+        for mod in pipe.unet.modules():
+            if not isinstance(mod, (torch.nn.Linear, torch.nn.Conv1d, torch.nn.Conv2d, torch.nn.ConvTranspose2d)):
+                for nome_p, par in list(mod.named_parameters(recurse=False)):
+                    if par.dtype == torch.bfloat16:
+                        par.data = par.data.float()
+        pipe._calc_fp32 = True
+        # VAE en fp32 a resolución completa: decodificar por teselas para non pasar do límite de memoria
+        pipe.vae.enable_tiling(); pipe.vae.tile_sample_min_size = 256; pipe.vae.tile_latent_min_size = 32
     pipe.vae.to(memory_format=torch.channels_last)
     pipe.set_progress_bar_config(disable=True)
     pipe._revolta = m
