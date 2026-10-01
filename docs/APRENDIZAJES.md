@@ -269,3 +269,37 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   como paso intermedio.
 - **Partir un MP4 con su pista de subtítulos `mov_text` deja huecos al reunirlo** (~0,1 s por unión: 1883,02 s frente a
   1882,05 s en 10 anacos). Partir solo vídeo y audio: 1882,07 s. Los subtítulos van aparte en `.srt`.
+
+# Ronda de arreglos del episodio "As meigas de verdade" (01-10-2026, noche)
+
+## Imagen: lo que SDXL-Lightning dibuja mal y cómo se esquivó
+- **Palabras que traen el siglo XX:** "lane/street + night/dusk" dibuja aldeas inglesas con farolas (4 de 4 intentos del
+  plano 5 y 2 de 2 del 61); "kitchen" dibuja un salón moderno con estufa (4 de 4 del plano 91 viejo); "road" sale
+  asfaltada y con líneas pintadas (plano 67, **aprobado por la puerta**); "door" sale un pasillo moderno con felpudo
+  (plano 31, **aprobado por la puerta**: Florence lo describió como "a wooden door… a wooden floor and a beige wall").
+- **Lo que funcionó:** planos cerrados de un objeto o un gesto (gato en silueta sobre piedras, losas mojadas bajo un
+  arco, pizarras con gotas, gotas del alero, pote colgado sobre el fuego, libros cerrados) y paisajes sin edificios
+  (luna sobre montes, sendero entre peñas). 9 de los 11 planos salieron bien al primer o segundo intento así.
+- **La puerta no basta: hay que mirar los intentos.** Dos aprobados eran anacrónicos (31 y 67) y en dos planos la
+  puerta eligió peor que el ojo (91: lámpara encendida al fondo; 145: reserva que repetía el plano 11). Mirar cada
+  intento al salir (Monitor sobre la carpeta de imágenes) costó poco y evitó un remontaje entero.
+- **Negativos del plano (`negativo`):** con `IMG_CFG_REINTENTO=0` no se usan al generar; solo los mira CLIP
+  ("a photo with X" frente a "a photo"). Un negativo que se parece al tema rechaza las buenas: "stove" y "fireplace
+  mantel" en un pote sobre el fuego, "open book" en libros cerrados, y "house"/"lights" rechazarían un tejado o la luna.
+  Poner solo objetos que nunca deberían aparecer.
+- **Elegir a mano un intento con el render en marcha:** `longo.py` guarda la elección en memoria pero lee el fichero al
+  graduar (justo antes de `6_son`); copiar el intento bueno sobre el nombre elegido antes de esa etapa funciona.
+  Después se restaura el original y se anota en `revision.json` (`escolla_manual`, `escollida_porta`).
+
+## Caché de imágenes restaurada del repo
+- Solo guarda la imagen elegida de cada plano. Los planos que no pasaron la puerta con menos de 4 intentos se trataban
+  como "sin terminar" y el pipeline volvía a revisar intentos que no existen (FileNotFoundError en el plano 126, y
+  `lanzar-longo.sh` lo reintentaba igual). Arreglado en `imaxes.py`: si faltan ficheros de intentos, el plano se da por
+  hecho.
+- La voz y las puertas de texto también quedan en caché entre lanzamientos en la misma sesión: el segundo lanzamiento
+  fue directo a las imágenes.
+
+## Sonido: pico real
+- `son.limitar` limitaba el pico de muestra a 0,89 y tras el AAC daba −0,1 dBTP. Ahora mide el pico real
+  (sobremuestreo ×4) y limita a 0,79 (−2 dBTP). Prueba con voz de Brais empujada +3 dB: −2,0 dBTP en el WAV y
+  −1,8 dBTP tras AAC 128k. (Una prueba sintética con tonos de 12 kHz daba +1,4 dBTP tras AAC: no es representativa.)
