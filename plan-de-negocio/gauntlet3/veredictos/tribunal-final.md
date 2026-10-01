@@ -312,3 +312,89 @@ licencia y las páginas de ayuda de YouTube consultadas hoy (URL en cada fila). 
 | Personas reales | **Cumple** | Mariano Marcos Abalo y los investigadores se citan con fuente; las personas del XVII salen de los archivos; el Feijoo dibujado por IA queda cubierto por la etiqueta | — |
 | Monetización: «contenido inauténtico» | **Riesgo del canal, no de este vídeo** | YouTube no monetiza «AI-generated content made with generic or unoriginal templates giving the impression of mass production» (https://support.google.com/youtube/answer/1311392). Este episodio aporta investigación propia con fuentes; una serie con la misma plantilla y la misma voz podría leerse así [S] | Vigilarlo al hacer serie |
 | QA automática | **No pasa: NON PUBLICABLE, 12/13** | Falla `imaxes_revisadas`: 127 de 162 planos aprobados | Se resuelve con los arreglos de la sección 7 |
+
+## 7. Veredicto
+
+| Pieza | Frente a la referencia | Frente a la ronda anterior | Por qué |
+|---|---|---|---|
+| **Imagen** | **PIERDE**, por poco | **GANA**, sin cerrar la carencia | A ciegas empata en la suma (21-21) y elegí la referencia ≈ 55/45 por la misma razón que en la ronda 1: allí la gente hace cosas. Frente a la ronda 1 visual, mejoran la luz y el arco hacia el sueño, sobra menos fuego, desaparecen los clichés de meiga y el gancho enseña la premisa con personas. Pero sigue habiendo luz eléctrica y arquitectura inglesa, y 4 planos bloquean (sección 2) |
+| **Guion y gancho** | **GANA** | **GANA** (frente al r2, GANA ajustado) | El gancho saca un 4/5, con dos hechos verdaderos en 35 s y tres bucles pagados. La zona de dormir es más tranquila que la de la referencia y la veracidad es muy superior. Se aplicó la lista cerrada del r2; queda su mismo residuo, el «dossier anotado» de 6:27 a 11:36 |
+| **Voz y embudo** | **GANA en el embudo** (por medidas; la voz no se oyó) | **GANA** | Ritmo 157 → 114,5 palabras/min, plano de 5,2 → 16,2 s y sonoridad −16,5 → −19,8 LUFS, sin saltos. La referencia no está hecha para dormir y su retención es plana desde el minuto 7 (`gauntlet2/referencia.md`). Frente a la muestra del Gauntlet 2 (voz uniforme a 131 palabras/min, WER 0,037; `docs/APRENDIZAJES.md`, `contexto.md` §3): embudo real y WER 0,031 |
+| **Sonido** | **Sin veredicto posible**: no se oyó ninguna de las dos | **GANA** (por medidas) | Ambiente por escena (D13, D14) en lugar de la lluvia continua que el promotor oyó como ruido blanco. En la simulación de la pieza SON la monotonía bajó del 93 % al 9-11 %; aquí, voz limpia el 38,7 % del tiempo y ningún salto del ambiente. Pendiente: pico real de −0,1 dBTP |
+
+### Global: **no se puede publicar tal cual; sí con arreglos**
+
+El texto, la voz medida, el sonido medido y el cumplimiento están listos o casi. Lo que impide publicar es la imagen:
+cuatro planos con objetos del siglo XX o XXI, en momentos marcados (un rótulo de capítulo, el cierre y 15 s de
+cocina con bombilla y radiador). En un canal que se defiende por el rigor ante un público galego que conoce su
+historia (`gauntlet2/referencia.md` §4), eso es lo primero que se comentaría. A eso se suma la etiqueta de contenido
+sintético, que solo puede marcar una persona en YouTube Studio. Coste estimado de los arreglos 1-3 [S]: 11 planos
+× hasta 4 intentos × ≈ 100 s por intento en esta CPU (`docs/APRENDIZAJES.md`), ≈ 1,2 h como mucho, más el remontaje y
+la QA (≈ 67 + 31 min según `qa.md`). Después hay que volver a mirar la hoja de detalle.
+
+**Arreglos antes de publicar** (los ficheros de imagen están en `$SCRATCH/longo/w/imaxes_graduadas/`):
+
+1. **Sustituir los 4 planos que bloquean** y mirarlos antes de montar:
+   - 10:34-10:50, plano 84 (`083-5779b492-3.png`): bombilla y radiador. Prompt sin ventana, con la luz de la lareira y
+     con negativos `light bulb, radiator, lamp, window`.
+   - 22:49-23:03, plano 133 (`132-a8a95fcc-0.png`, fondo del rótulo del capítulo VII): farolas. Un valle oscuro bajo
+     la luna, sin edificios ni luces.
+   - 30:41-31:02, plano 161 (`160-32b10266-0.png`): casa colonial con apliques. Un primer plano de la lluvia goteando
+     del borde de un tejado de lousa, sin ventanas.
+   - 5:51-6:01, plano 56 (`055-93ec6c81-0.png`): maleta de ruedas. Una maleta de cartón llevada a mano, con negativos
+     `wheels, trolley, rolling suitcase`.
+2. **Sustituir 7 planos que molestan en momentos marcados**, en el mismo remontaje:
+   - 0:20, plano 5 (`004-983abd46-0.png`): «Vilalba, 1617» con casas inglesas.
+   - 2:54, plano 31 (`030-ef658184-0.png`): fregadero con grifos.
+   - 6:39, plano 61 (`060-879e4f8a-1.png`): la catedral de Santiago inventada. Unos soportales de granito con lluvia,
+     sin monumento.
+   - 7:32, plano 67 (`066-1eb7df19-4.png`): la anciana sonriente mientras se narran los azotes.
+   - 12:09, plano 91 (`090-c464f180-1.png`): la cocina con apliques que abre la zona de dormir.
+   - 25:57, plano 145 (`144-f4f740ab-4.png`): llamas vivas al dormir. El libro cerrado que pedía el prompt.
+   - 28:25, plano 153 (`152-179e853a-0.png`): tejado con el penacho incandescente.
+3. **Bajar el pico real a ≤ −1 dBTP** en ese mismo remontaje. `qa.md` mide −0,1 dBTP, con los picos en el gancho
+   (0:09-0:39). Hay que limitar el pico real (por ejemplo, a −1,5 dBTP) antes de codificar y volver a medir con
+   `ebur128=peak=true`.
+4. **Corregir `video/descricion.txt`:**
+   - Que la revisión de imágenes fue automática y cuántos planos no la pasaron (o el número nuevo tras los arreglos).
+   - Los ambientes reales: choiva, lume, auga, mar, aldea, noite, campás y murmurio; sin vento.
+   - El primer capítulo como «00:00».
+   - Opcional: «Imaxes: SDXL base 1.0 + SDXL-Lightning (CreativeML Open RAIL++-M)».
+5. **Al subir el vídeo, en YouTube Studio**, cosas que solo puede hacer una persona:
+   - Marcar «AI use: Yes» (contenido alterado o sintético).
+   - Subir el SRT en galego.
+   - Hacer una miniatura que respete los vetos de `contexto.md` §8.5 y no salga del plano 7.
+   - Antes de publicar, enviar el correo de permiso a Nós/USC que pide la decisión D4.
+
+**Mejoras para el siguiente episodio:**
+
+1. **Ningún rechazo al aire sin mirarlo.** Si un plano agota sus intentos, que el pipeline se pare y saque una hoja de
+   rechazos para elegir (agente o persona), en vez de quedarse con «el mejor». Además, añadir a la puerta lo que se
+   escapó aquí: bombilla, radiador, farolas, apliques de porche, maleta de ruedas, fregadero, peluche, gorro de lana,
+   bombín, sombrero vaquero, maletín, guirnaldas de luces y postes de farola. Florence ya lo escribió en varios casos:
+   «briefcase» (17 y 24), «sink» (31), «teddy bear» (34), «beanie» (35), «string lights» (80) y «light poles» (123).
+2. **Que salga lo que se pide.** 36 planos llevan el aviso «falta». Hay que calibrar la comprobación `clave` (CLIP) en
+   vez de apagarla, y escribir la lista de planos con lo que SDXL sí dibuja: una sola acción en plano cerrado, como las
+   manos que amasan, sellan o curan de los planos 13, 18, 79 y 126, mejor que composiciones de dos personas con objetos.
+3. **Una Galicia reconocible.** Salieron casas inglesas o nórdicas en 5, 23, 29, 33, 68, 75, 77, 134 y 161, y el par
+   CLIP «casas británicas» solo frenó 4. Hacen falta imágenes de referencia o semilla (D15) para granito, lousa, pazo y
+   aldea, y no nombrar monumentos reales sin una referencia.
+4. **El guion despierto.** Una sola atribución por caso y una línea de escena para abrir cada caso en 6:27-11:36
+   (`veredictos/guion-r2.md`). En el gancho, condensar en una frase el minuto institucional de 0:55-1:25.
+5. **El final del embudo.**
+   - Decidir la cola de lluvia de 30-60 min (`contexto.md` §8.6) o un episodio más largo.
+   - Que la lista de planos no pida fuego en la zona de dormir.
+   - Hacer una escucha humana del episodio entero (voz y mezcla) antes de publicar. Es la única prueba del embudo que
+     falta.
+
+---
+**Quién hizo qué.** Todo lo de este documento lo hizo Claude (agente tribunal) el 01-10-2026:
+- la comparación a ciegas;
+- la revisión a ojo de las 162 imágenes y de las hojas de detalle;
+- las medidas de luz y sonido, con scripts propios (PIL, numpy, scipy; sin modelos y sin ffmpeg);
+- la lectura de los textos;
+- la consulta de las fichas de licencia y las páginas de ayuda de YouTube citadas.
+
+Es automático (pipeline): la QA de `longo.py` (`qa.md`, `qa.json`), la puerta de imágenes con Florence-2 y CLIP, y las
+puertas de texto. **Ninguna persona ha visto ni oído el episodio.** Una persona tendría que verlo y oírlo entero,
+marcar la etiqueta en YouTube Studio, enviar el correo a Nós/USC y decidir si se publica.
