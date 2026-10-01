@@ -216,3 +216,7 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   UNet), VAE en fp32 por teselas de 256 px: ~150 s a 1344x768 y ~90 s a 1024x576. Para que quepa la puerta en el mismo
   proceso (pico 13,3 GB), Florence-2-base en vez de -large. Comprobar `grep -o 'amx_bf16\|avx512_bf16' /proc/cpuinfo`
   antes de estimar tiempos.
+- **`nice -n 19` no protege a la etapa de imágenes.** Una prueba de 6 min de ffmpeg (x264 a 720p) con `nice 19`
+  mientras se generaba la primera imagen la llevó de ~90 s a 473 s (01-10-2026, 00:45): con 4 núcleos y una UNet que
+  vive del ancho de banda de memoria, cualquier proceso pesado al lado cuesta mucho más que su parte de CPU. Todo lo
+  que use CPU de verdad va con `flock "$CPU_LOCK"`, también las pruebas.
