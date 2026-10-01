@@ -871,6 +871,24 @@ def tramos_envolvente(n, tramos, fundido=1.5):
     return env
 
 
+def limitar(x, tope=0.89, bloque=480, anaco=4_800_000):
+    """Limitador de picos por bloques de 10 ms (48 kHz): onde un bloque pasa de `tope`, a ganancia baixa xusto o
+    necesario, co mínimo dos 3 bloques de cada lado (anticipación) e unha media de 5 (sen chasquidos); o resto queda
+    igual. Cada mostra queda <= tope porque a media de 5 nunca colle un bloque fóra do mínimo de 7 que o cubre."""
+    n = len(x); nb = -(-n // bloque)
+    a = np.zeros(nb * bloque, np.float32); a[:n] = np.abs(x).max(axis=1) if x.ndim == 2 else np.abs(x)
+    g = np.minimum(1.0, tope / np.maximum(a.reshape(nb, bloque).max(axis=1), 1e-9)).astype(np.float32)
+    if g.min() >= 1.0:
+        return x
+    g = uniform_filter1d(minimum_filter1d(g, size=7, mode='nearest'), size=5, mode='nearest')
+    centros = np.arange(nb, dtype=np.float64)
+    for i0 in range(0, n, anaco):     # por anacos: no episodio enteiro son 90 M de mostras
+        pos = (np.arange(i0, min(n, i0 + anaco), dtype=np.float64) + 0.5) / bloque - 0.5
+        gi = np.interp(pos, centros, g).astype(np.float32)
+        x[i0:i0 + len(gi)] *= gi[:, None] if x.ndim == 2 else gi
+    return x
+
+
 def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiva=-17.0, ambiente='choiva',
              rel_db=None, lume_tramos=None, rel_lume=-21.0, escena_tramos=None, calma=None, semente=0, out_amb=None):
     """voz: array mono 24 kHz (sen o offset). Devolve datos de sonoridade.
@@ -915,9 +933,11 @@ def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiv
     if info_escena is not None:
         info_escena['pct_voz_limpa'] = pct_voz_limpa(vt, r)
     mix = r + vt[:, None]
-    pk = np.abs(mix).max()
-    esc = 0.89 / pk if pk > 0.89 else 1.0
+    # sonoridade da mestura ao obxectivo e limitador só nos picos. Antes escalábase toda a mestura polo seu pico máis
+    # alto: un só transitorio baixaba o episodio enteiro (avance do 01-10-2026: -18,5 LUFS, fóra da porta -18/-16)
+    esc = 10 ** ((voz_lufs - meter.integrated_loudness(mix)) / 20)
     mix *= esc
+    mix = limitar(mix, 0.89)
     sf.write(out_mix, mix, SR, subtype='PCM_16')
     sf.write(out_voz, vt, SR, subtype='PCM_16')
     if out_amb:
