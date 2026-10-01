@@ -1,0 +1,21 @@
+termino	vol_rel(Santa Compaña=2,9 como en gauntlet3)	mes_pico	indice_pico	indice_oct	indice_nov	semanas_a_cero
+Camino de Santiago	154.89	5	1.32	0.74	0.73	1%
+vikingos	154.06	2	1.15	0.98	0.95	0%
+entroido	6.86	2	9.71	0.00	0.00	85%
+Ribeira Sacra	4.50	9	5.62	1.64	0.59	86%
+magosto	2.96	11	9.85	1.81	9.85	93%
+castros	1.89	7	2.72	1.64	0.00	90%
+indianos	1.71	2	9.33	0.00	0.00	94%
+Antela	0.48	3	6.43	0.00	0.00	98%
+Costa da Morte	0.45	12	2.55	1.77	0.00	97%
+suevos	0.31	3	9.49	0.00	0.00	99%
+Rande	0.27	5	3.57	0.00	0.00	98%
+monasterio de Samos	0.12	2	13.10	0.00	0.00	99%
+ballenas Galicia	0.07	2	13.10	0.00	0.00	100%
+Ribarteme	0.06	9	11.91	0.00	0.00	100%
+hórreo	0.06	7	11.91	0.00	0.00	100%
+afiladores	0.00	9	11.91	0.00	0.00	100%
+Torre de Hércules	0.00	9	0.00	0.00	0.00	100%
+irmandiños	0.00	9	0.00	0.00	0.00	100%
+Prisciliano	0.00	9	0.00	0.00	0.00	100%
+San Andrés de Teixido	0.00	9	0.00	0.00	0.00	100%
