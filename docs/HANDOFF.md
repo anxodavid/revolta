@@ -72,6 +72,10 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
 **Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
 cada agente; lo que estaba en git o en disco no se perdió.
 
+**Estudio de monetización (01-10-2026):** [`plan-de-negocio/estudio-monetizacion.md`](../plan-de-negocio/estudio-monetizacion.md).
+Los anuncios no son el modelo del año 1; las vías posibles son premios (Youtubeiras+, hasta el 15-11-2026), audio
+largo (Spotify desde el 20-10-2026, iVoox), CRTVG, Xacobeo 2027 y B2B local. La decisión clave es el anonimato (M1).
+
 ## 1. Qué es el proyecto
 
 Un canal de YouTube de vídeos hechos con IA sobre **historia y cultura de Galicia**, pensados para **quedarse dormido**
