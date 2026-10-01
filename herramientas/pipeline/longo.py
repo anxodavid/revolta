@@ -74,6 +74,12 @@ def liberar():
         pass
 
 
+def clave_texto(texto, exc, tema_path):
+    """Clave da caché das portas de texto: guion, excepcións, tema e código das portas (porta_texto, veracidade, qa)."""
+    return hashlib.sha256(json.dumps([texto, exc, Path(tema_path).read_text(), inspect.getsource(porta_texto)] + [
+        (HERE / m).read_text() for m in ('veracidade.py', 'qa.py')], ensure_ascii=False).encode()).hexdigest()[:16]
+
+
 def porta_texto(texto, frases, tema, excepcions):
     """Portas de texto do vídeo longo. Bloqueantes: lingua, H1, estilo e veracidade sen xustificar."""
     import qa, ancoraxe
@@ -244,6 +250,8 @@ def main():
     ap.add_argument('--traballo', required=True); ap.add_argument('--escenas', default=None)
     ap.add_argument('--excepcions', default=None, help='YAML [{frase, xustificacion}] para as frases que marca a veracidade')
     ap.add_argument('--so-texto', action='store_true', help='só as portas de texto (para o Gauntlet do guion)')
+    ap.add_argument('--ata-plano', type=int, default=None,
+                    help='avance: monta só os planos 0..N (os que xa teñen imaxe) coa mesma curva, voz e son do episodio')
     a = ap.parse_args()
     t_inicio = time.time()
     tema = yaml.safe_load(open(a.tema))
@@ -266,8 +274,7 @@ def main():
         exc = yaml.safe_load(open(a.excepcions)) if a.excepcions and Path(a.excepcions).exists() else []
         # caché: co mesmo guion, tema, excepcións e código das portas non se volven cargar LanguageTool nin o NLI
         # (cada reintento tras un OOM deixaba o proceso pai con 1,3-1,8 GB e menos marxe para as imaxes)
-        clave_txt = hashlib.sha256(json.dumps([texto, exc, Path(a.tema).read_text()] + [
-            (HERE / m).read_text() for m in ('longo.py', 'veracidade.py', 'qa.py')], ensure_ascii=False).encode()).hexdigest()[:16]
+        clave_txt = clave_texto(texto, exc, a.tema)
         ptf = W / 'porta_texto.json'
         vello = json.loads(ptf.read_text()) if ptf.exists() else {}
         if vello.get('clave') == clave_txt:
@@ -369,6 +376,17 @@ def main():
             print(f'PENDENTE: escribir a lista de planos ({len(pl)} planos) a partir de {W / "planos.json"} en '
                   f'{a.escenas or "ESCENAS.json"} e volver lanzar o comando con --escenas'); sys.exit(3)
         pl = ler_escenas(a.escenas, pl)
+        if a.ata_plano is not None:
+            # avance: córtase ao final do plano N (os planos empezan nunha frase), con 2 s de cola; a curva segue
+            # medida sobre o episodio enteiro (tot), así que voz, son e luz son os mesmos que no vídeo final
+            pl = pl[:a.ata_plano + 1]
+            fin = pl[-1]['b1']
+            frases = [f for f in frases if tempos[f['i']][0] < fin]
+            voz = voz[:int(max(0.0, fin - OFFSET) * 24000)].copy()
+            nf = min(len(voz), 24000); voz[len(voz) - nf:] *= np.linspace(1, 0, nf, dtype=np.float32)
+            dur = fin + 2.0; pl[-1]['b1'] = dur
+            rot = [r for r in rot if r['t0'] < fin]; caps_t = [c for c in caps_t if c['t0'] < fin]
+            print(f'avance: planos 0-{a.ata_plano}, {dur:.1f} s, {len(frases)} frases', flush=True)
         P.srt(frases, tempos, W / 'subtitulos.srt')
         (W / 'escenas.json').write_text(json.dumps(pl, ensure_ascii=False, indent=1))
     save_t()
