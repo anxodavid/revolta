@@ -42,6 +42,18 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
   31, 61, 67, 91, 145 y 153; (3) pico real ≤ −1 dBTP (mide −0,1: limitar antes de codificar); (4) `descricion.txt`:
   decir que 35/162 imágenes no pasaron la puerta (o arreglarlas), ambientes reales y primer capítulo «00:00»; (5) para
   una persona en YouTube Studio: etiqueta de contenido sintético, subir el SRT, miniatura y correo a Nós/USC (D4).
+- **Ronda de arreglos en una sesión nueva** (≈ 3,5 h de máquina, casi todo desatendido):
+  1. `bash herramientas/pipeline/instalar.sh` y `source herramientas/pipeline/entorno.sh`.
+  2. Restaurar la caché de imágenes según `gauntlet3/video/imaxes/LEEME.md` (162 JPEG → PNG + `revision.json` en
+     `$SCRATCH/longo/w/imaxes/`) y copiar `gauntlet3/guion/guion-r3.txt` a `$SCRATCH/longo/guion-producion.txt`.
+  3. Reescribir en `gauntlet3/video/escenas.json` el prompt de los planos 84, 133, 161, 56, 5, 31, 61, 67, 91, 145 y
+     153 (solo esos se regeneran). Evitar lo que cayó: farolas, bombillas y apliques, casas inglesas, maleta.
+  4. Pico real ≤ −1 dBTP: bajar el tope de `son.limitar` (0,89 de muestra dio −0,1 dBTP tras AAC; probar 0,80 y
+     medir). Descripción: frase de las imágenes con el dato real (35/162 sin pasar la puerta, o 0 si se arreglan),
+     lista real de ambientes y primer capítulo «00:00» (`temas/meigas-de-verdade.yaml` y `longo.descricion`).
+  5. `setsid nohup herramientas/pipeline/lanzar-longo.sh produccion1 &` con un Monitor armado todo el rato; después
+     `entregar.sh` y `paxina_episodio.py`, y republicar la página en la misma URL (desde otra conversación: leerla con
+     `action: read` y publicar con `url`).
 - **Cómo se produjo:** `herramientas/pipeline/lanzar-longo.sh` (reintentos, memoria, puerta ajustada por variables de
   entorno: `IMG_RESERVAS=0`, `REVISOR_LUME_DURMIR=0.015`), `longo.py --ata-plano N` para avances, `entregar.sh`
   (validar, partir, 720p HLS fMP4) y `paxina_episodio.py` (página). Detalles y tropiezos en `docs/APRENDIZAJES.md`
