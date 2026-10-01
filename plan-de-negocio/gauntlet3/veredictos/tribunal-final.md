@@ -241,10 +241,53 @@ colonial iluminada del cierre (30:41). Los cinco salieron sin pasar la puerta.
   fuentes y orballo) verá poca variedad.
 - **Voz: no se puede saber sin oírla.** La curva estrecha a propósito la variación de la F0 (4,76 → 2,60 semitonos en
   el pasaje de prueba), y la valencia también baja (0,45 → 0,39). La propia pieza VOZ pidió al promotor que escuchara si
-  el final suena sereno o triste (`voz/informe.md` §4). Esa escucha no consta.
+  el final suena sereno o triste (`voz/informe.md` §4). Esa escucha no consta en el repo.
 
 **El final.** El vídeo acaba a los 31:22. Los vídeos del género duran 1-4 h: *Relatos al Oído*, 2 h 01 min;
 *Sleepless Historian*, 2-4 h (`veredictos/guion-r1-formato.md`, `gauntlet/investigacion/retornos.md`). Quien siga
 despierto al terminar se encuentra con la reproducción automática del siguiente vídeo, que puede ser cualquier cosa
 [S: depende de la configuración de cada usuario]. La cola de 30-60 min de lluvia sobre lousa de `contexto.md` §8.6
 sigue sin decidir.
+
+## 5. Sonido (D13, D14)
+
+**No lo he oído.** Claude no puede escuchar, y en el repo no consta que nadie haya escuchado la mezcla del episodio
+(`qa.md`: «Ningunha persoa revisou o vídeo»). Juzgo solo lo que se comprueba con datos: el diseño (`son.py` y la lista
+de planos), las medidas de `qa.md`/`qa.json` y una lectura de la mezcla que hizo Claude con un script
+(`mestura.wav` y `voz_linea.wav`, sin modelos).
+
+**Diseño frente a lo que pidió el promotor.**
+
+| Petición | Cómo está | ¿Cumple? |
+|---|---|---|
+| D13: lluvia solo si la escena tiene lluvia; crepitar si hay fuego; nada de ruido blanco constante; tramos de voz limpia | Ambiente por plano (`ambiente: escena`) con 8 tipos en el episodio: `lume` 302 s, `fonte` 108 s, `noite` 526 s, `aldea` 130 s, `mar` 62 s, `xente` 22 s, `choiva` 301 s y `campas` 13 s. Voz limpia el **38,7 %** del tiempo de voz. Lo sintetiza todo el código (`son.py`, con numpy): no hay grabaciones de terceros | **Sí** |
+| D14: que no sea monótono ni cansino y que se adapte a la escena; murmullo ininteligible en el gentío | 34 cambios (10,8 cada 10 min; como mucho 21 en 10 min, en el arranque) y ningún aviso de parpadeo de la QA. El mismo ambiente nunca dura más de 2,7 min. El murmullo solo suena en la taberna de Eligio (6:17-6:39), la única escena de grupo hablando | **Sí** |
+| Embudo también en el sonido (`contexto.md` §2) | Sonoridad a corto plazo, mediana por fase: −16,5 / −16,8 / −18,3 / −19,8 LUFS (sección 4). La lista de planos pone menos eventos hacia el final (grillos de 2 a 6 y la lechuza 0,25-0,5 veces por minuto en `noite`, según `son.py`) | **Sí** |
+
+**Coherencia de imagen y sonido** (lista de planos frente a lo que se ve, revisado por Claude):
+- **Bien:** lluvia con lluvia (6:39-7:50 y 29:42-31:22); lareira con lareira (12:09-13:48 y 26:51-29:00); las
+  cacharelas de san Xoán (18:04-18:58); mar con barcas y costa (4:38-5:14 y 8:48-9:14); fuentes de noche (1:37-1:49,
+  9:38-10:18 y 20:25-21:22); y campanas con Santiago (6:39-6:51).
+- **Huecos menores:**
+  - Las llamas de la queimada del primer plano (0:00) y las dos mujeres junto al fuego (0:50) van sin crepitar
+    (`limpa`), quizá a propósito para dejar limpia la voz del gancho.
+  - La fiesta de emigrantes llena de gente (6:01-6:08) va sin murmullo, contra la letra de D14.
+  - El caballo bajo la tormenta (0:35) va sin lluvia.
+
+**Medidas técnicas.**
+
+| Medida | Valor | Juicio |
+|---|---|---|
+| Sonoridad integrada | −17,1 LUFS (puerta: −18 a −16) | Bien. Más baja que el nivel al que YouTube normaliza (≈ −14 LUFS [S]), así que sonará algo más bajo que otros vídeos, lo que para dormir no es malo |
+| Pico real del MP4 | **−0,1 dBTP** (`qa.md`) | **Ajustar.** La mezcla WAV tiene el pico de muestra en −1,0 dBFS (el limitador funciona), y todos los picos máximos están en los primeros 40 s (0:09, 0:12, 0:21, 0:24, 0:36 y 0:39). La codificación AAC añade ≈ 0,9 dB. EBU R 128 fija un pico real máximo (https://tech.ebu.ch/publications/r128); el valor habitual es −1 dBTP [S]. YouTube recodifica, así que hay riesgo de recorte en los picos del gancho |
+| Rango de sonoridad (LRA) | 10,2 LU (el avance de 4:50 daba 5,5) | Esperable: la voz baja 2,3 dB por la curva y las pausas con solo ambiente quedan 20-25 dB por debajo. Sin otro dato no es un defecto |
+| Saltos de nivel al dormir | Ninguno del ambiente (sección 4) | Bien. Las subidas de 4-7 LU son la voz que vuelve tras una pausa |
+| Pausas en los tramos `limpa` | Silencio digital: −121 LUFS, por ejemplo a las 19:47-19:48 | Cumple D13 (voz limpia), pero entre frase y frase hay silencio absoluto. Un fondo de sala muy bajo (−45/−50 LUFS) podría hacer más suave la vuelta de la voz [S, para probar con el oído del promotor] |
+| ASR de la mezcla, frase a frase | WER 0,031; el 100 % de las frases suena en su tramo; desfase A/V 0,02 s (`qa.md`) | Bien: el ambiente no tapa la voz para un ASR |
+
+**Lo que no se puede comprobar sin oír:** si la lluvia y el fuego sintéticos suenan naturales; si la lechuza y el sapo
+partero de `noite` relajan o distraen; si el murmullo hecho con nuestra propia voz TTS subida de tono
+(`son/informe.md` §6) suena raro en sus 22 s; y si la mezcla, en conjunto, ayuda a dormir.
+
+**Texto público:** la descripción dice que el ambiente es «choiva, lume, auga, vento, noite, campás». Pero `vento` no
+sale en el episodio, y faltan `mar` y `aldea`.
