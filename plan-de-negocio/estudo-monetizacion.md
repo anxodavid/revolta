@@ -33,7 +33,7 @@ documento do repo onde está; as estimacións van marcadas **[S]**. Ningunha per
    - As axudas e a CRTVG esixen un solicitante identificado.
    - O B2B precisa alguén que venda e asine.
 
-   En anónimo, o teito realista é **premios + audio + fan funding: 0-1.500 € o primeiro ano [S]**. **É a decisión
+   En anónimo, o teito realista é **audio e fan funding: 0-500 € o primeiro ano (xa sen Youtubeiras+ 2026) e 0-3.000 € o segundo [S]**. **É a decisión
    principal do promotor** (§6).
 5. **Antes de cobrar nada hai tres bloqueos:**
    - **A voz.** O dataset de Brais é CC BY 4.0, pero os seus termos prohiben expoñer as gravacións en público e
@@ -205,7 +205,7 @@ Só con datos da fase 2:
 
 | # | Decisión | Opcións | O que cambia |
 |---|---|---|---|
-| M1 | **Anonimato (revisa D6)** | (a) Seguir en anónimo; (b) pseudónimo público cunha persoa identificable para as axudas e os clientes; (c) con nome | (a) Teito de 0-1.500 € ao ano [S]. (b) e (c) abren F, G e H e a petición de fotos aos arquivos |
+| M1 | **Anonimato (revisa D6)** | (a) Seguir en anónimo; (b) pseudónimo público cunha persoa identificable para as axudas e os clientes; (c) con nome | (a) Teito de 0-500 € o primeiro ano e 0-3.000 € o segundo [S]. (b) e (c) abren F, G e H e a petición de fotos aos arquivos |
 | M2 | Alta no RETA ou asociación | Non / asociación sen ánimo de lucro / autónomo cando haxa un encargo | O Xacobeo pide RETA, empresa ou entidade sen ánimo de lucro (§9); a CRTVG e o B2B, facturar |
 | M3 | **Escoita humana do que se venda** | Si, declarada / non | Sen ela, E, F e H son moi improbables. Non toca o aviso da canle: só cambia nos episodios que de verdade se escoiten |
 | M4 | Voz | Agardar por Nós / pasar xa a unha voz CC BY | Fixa a data da primeira publicación |
