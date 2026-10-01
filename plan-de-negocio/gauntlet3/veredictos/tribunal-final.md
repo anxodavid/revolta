@@ -43,7 +43,7 @@ dormir elegiría la Imagen 2 sin dudarlo: es la única de las dos con un arco de
 **Destape** (escrito después de guardar lo anterior en git, commit `e0864fe`). `clave.txt`: Imagen 1 = referencia,
 Imagen 2 = episodio. A ciegas elegí la referencia, como en la ronda 1. `folla16_320.json`: los 16 fotogramas son uno
 de cada 10-11 planos (planos 1, 12, 22, 33, 44, 55, 65, 76, 87, 98, 108, 119, 130, 141, 151 y 162) y se reparten así:
-gancho 2, transición 4, calma 3 y dormir 7. Es decir, 7 de 16 caen en la fase de dormir (desde el plano 98, 13:55),
+gancho 2, transición 4, calma 3 y dormir 7. Es decir, 7 de 16 caen en la fase de dormir (desde el plano 98, a las 13:48),
 que por diseño lleva pocas personas, y eso explica parte del 2/5. Pero en los 9 fotogramas anteriores a dormir solo
 hay acción en 2 (planos 12 y 33), así que la carencia sigue ahí aunque se descuente esa fase. Correspondencia para
 las secciones siguientes: el fotograma *n* de la Imagen 2 es el plano de la lista anterior en la posición *n* (el 6,
@@ -78,7 +78,7 @@ cualquiera"*. **Respuesta: a medias. La primera mitad mejora en el gancho; la se
 | Figura sola de espaldas | Planos 2 y 5 | La puerta detecta 6 (planos 5, 22, 29, 33, 46 y 128), y hay más sin detectar (44, 76, 104) | **Igual** |
 
 **Por qué la puerta no lo paró.** 127 planos pasaron la puerta y **35 salieron sin pasarla**: al agotar los intentos,
-el pipeline se queda con el mejor. 27 de esos 35 son posteriores al plano 94, cuando se apagaron las imágenes de reserva
+el pipeline se queda con el mejor. 27 de esos 35 son del plano 94 en adelante, cuando ya no había imágenes de reserva
 (`IMG_RESERVAS=0`). Leídos uno a uno, unos 11 rechazos acertaban y molestan en pantalla: 33, 77, 91, 94, 105, 116, 133,
 134, 145, 153 y 161. Otros ~20 eran falsos positivos o repeticiones aceptables al dormir: 59 (es una taberna de los
 años 50, y la ropa y la lámpara son de su época), 100 (un atardecer), 104, 108, 110 (un "ciprés" que no está), 113,
@@ -93,13 +93,13 @@ montar.** El peor plano del vídeo, el 84, ni siquiera es un rechazo: lo aprobó
 ### 2.2 Defectos visibles
 
 **Bloquea publicar.** Un espectador los ve sin buscarlos, rompen la época que vende el canal y caen en momentos
-marcados: un rótulo de capítulo, el cierre y un plano de 15 s en la parte despierta.
+marcados: un rótulo de capítulo, el cierre, 15 s de cocina en la parte despierta y la escena de los emigrantes.
 
 | Minuto | Plano | Fichero | Qué se ve | Puerta |
 |---|---|---|---|---|
 | 10:34-10:50 (15 s) | 84 | `detalle_3.jpg` (10:42) · `083-5779b492-3.png` | **Bombilla eléctrica desnuda** colgando en el centro, arriba, y **radiador de hierro** bajo una ventana de carpintería moderna, en la cocina de dos curanderas del XVII ("Moitas das acusadas eran parteiras e menciñeiras…") | Aprobado |
 | 22:49-23:03 (14 s) | 133 | `detalle_5.jpg` (22:56) · `132-a8a95fcc-0.png` | Rótulo "Capítulo VII · O frade que dubidaba" sobre una iglesia barroca con **al menos 6 farolas encendidas** en el césped y luces en la ladera: el defecto del plano 2 de la ronda 1, ahora en un rótulo | Rechazado en los 4 intentos ("luz eléctrica (CLIP)") y usado |
-| 30:41-31:02 (20 s) | 161 | `160-32b10266-0.png` | Penúltimo plano ("A casa descansa baixo a chuvia"): **casa colonial anglosajona** de dos plantas con todas las ventanas encendidas y **dos apliques de porche** junto a la puerta | Rechazado ("casas británicas", "repetida") y usado; los 4 intentos tienen luz eléctrica |
+| 30:41-31:02 (20 s) | 161 | `160-32b10266-0.png` | Penúltimo plano ("A casa descansa baixo a chuvia"): **casa colonial anglosajona** de dos plantas con todas las ventanas encendidas y **dos apliques de porche** junto a la puerta | Rechazado ("casas británicas", "repetida") y usado; los otros 3 intentos, además, con "luz eléctrica (CLIP)" |
 | 5:51-6:01 (10 s) | 56 | `055-93ec6c81-0.png` | Emigrantes de los años 50: el hombre lleva una **maleta de ruedas con asa extensible**, en el centro del encuadre | Aprobado |
 
 **Molesta.** Se nota si se mira y rompe la Galicia que se cuenta o el tono del texto.
@@ -233,7 +233,7 @@ con cinco planos de la sección 2: el rótulo del capítulo VII con farolas (22:
 colonial iluminada del cierre (30:41). Los cinco salieron sin pasar la puerta.
 
 **¿Hay tramos monótonos (D14)?**
-- **Sonido: no, según las medidas.** Hay 9 tipos de ambiente; el mismo ambiente dura como mucho 2,7 min seguidos
+- **Sonido: no, según las medidas.** Suenan 8 tipos de ambiente; el mismo ambiente dura como mucho 2,7 min seguidos
   (`noite`, 15:20-18:04); la voz va limpia el 38,7 % del tiempo de voz y hay 10,8 cambios cada 10 min (`qa.md`).
 - **Imagen: sí, y en parte es buscado.** De los 65 planos de dormir, solo 4 tienen a alguien haciendo algo. Hay tiradas
   largas de paisajes nocturnos y bodegones (99-108, 110-115, 118-127), y la puerta marcó 6 como repetidos (CLIP ≥ 0,90).
@@ -279,7 +279,7 @@ de planos), las medidas de `qa.md`/`qa.json` y una lectura de la mezcla que hizo
 | Medida | Valor | Juicio |
 |---|---|---|
 | Sonoridad integrada | −17,1 LUFS (puerta: −18 a −16) | Bien. Más baja que el nivel al que YouTube normaliza (≈ −14 LUFS [S]), así que sonará algo más bajo que otros vídeos, lo que para dormir no es malo |
-| Pico real del MP4 | **−0,1 dBTP** (`qa.md`) | **Ajustar.** La mezcla WAV tiene el pico de muestra en −1,0 dBFS (el limitador funciona), y todos los picos máximos están en los primeros 40 s (0:09, 0:12, 0:21, 0:24, 0:36 y 0:39). La codificación AAC añade ≈ 0,9 dB. EBU R 128 fija un pico real máximo (https://tech.ebu.ch/publications/r128); el valor habitual es −1 dBTP [S]. YouTube recodifica, así que hay riesgo de recorte en los picos del gancho |
+| Pico real del MP4 | **−0,1 dBTP** (`qa.md`) | **Ajustar.** La mezcla WAV tiene el pico de muestra en −1,0 dBFS (el limitador funciona), y todos los picos máximos están en los primeros 40 s (0:09, 0:12, 0:21, 0:24, 0:36 y 0:39). Entre el pico de muestra de la mezcla y el pico real del MP4 hay ≈ 0,9 dB: picos entre muestras y la codificación AAC. EBU R 128 fija un pico real máximo (https://tech.ebu.ch/publications/r128); el valor habitual es −1 dBTP [S]. YouTube recodifica, así que hay riesgo de recorte en los picos del gancho |
 | Rango de sonoridad (LRA) | 10,2 LU (el avance de 4:50 daba 5,5) | Esperable: la voz baja 2,3 dB por la curva y las pausas con solo ambiente quedan 20-25 dB por debajo. Sin otro dato no es un defecto |
 | Saltos de nivel al dormir | Ninguno del ambiente (sección 4) | Bien. Las subidas de 4-7 LU son la voz que vuelve tras una pausa |
 | Pausas en los tramos `limpa` | Silencio digital: −121 LUFS, por ejemplo a las 19:47-19:48 | Cumple D13 (voz limpia), pero entre frase y frase hay silencio absoluto. Un fondo de sala muy bajo (−45/−50 LUFS) podría hacer más suave la vuelta de la voz [S, para probar con el oído del promotor] |
@@ -319,7 +319,7 @@ licencia y las páginas de ayuda de YouTube consultadas hoy (URL en cada fila). 
 |---|---|---|---|
 | **Imagen** | **PIERDE**, por poco | **GANA**, sin cerrar la carencia | A ciegas empata en la suma (21-21) y elegí la referencia ≈ 55/45 por la misma razón que en la ronda 1: allí la gente hace cosas. Frente a la ronda 1 visual, mejoran la luz y el arco hacia el sueño, sobra menos fuego, desaparecen los clichés de meiga y el gancho enseña la premisa con personas. Pero sigue habiendo luz eléctrica y arquitectura inglesa, y 4 planos bloquean (sección 2) |
 | **Guion y gancho** | **GANA** | **GANA** (frente al r2, GANA ajustado) | El gancho saca un 4/5, con dos hechos verdaderos en 35 s y tres bucles pagados. La zona de dormir es más tranquila que la de la referencia y la veracidad es muy superior. Se aplicó la lista cerrada del r2; queda su mismo residuo, el «dossier anotado» de 6:27 a 11:36 |
-| **Voz y embudo** | **GANA en el embudo** (por medidas; la voz no se oyó) | **GANA** | Ritmo 157 → 114,5 palabras/min, plano de 5,2 → 16,2 s y sonoridad −16,5 → −19,8 LUFS, sin saltos. La referencia no está hecha para dormir y su retención es plana desde el minuto 7 (`gauntlet2/referencia.md`). Frente a la muestra del Gauntlet 2 (voz uniforme a 131 palabras/min, WER 0,037; `docs/APRENDIZAJES.md`, `contexto.md` §3): embudo real y WER 0,031 |
+| **Voz y embudo** | **GANA en el embudo** (por medidas; la voz no se oyó) | **GANA** | Ritmo 157 → 114,5 palabras/min, plano de 5,2 → 16,2 s y sonoridad −16,5 → −19,8 LUFS, sin saltos. La referencia no está hecha para dormir y su retención es plana desde el minuto 7 (`gauntlet2/referencia.md`). Frente a la muestra del Gauntlet 2 (131 palabras/min y WER 0,037, sin embudo; `contexto.md` §2-§3): embudo real y WER 0,031 |
 | **Sonido** | **Sin veredicto posible**: no se oyó ninguna de las dos | **GANA** (por medidas) | Ambiente por escena (D13, D14) en lugar de la lluvia continua que el promotor oyó como ruido blanco. En la simulación de la pieza SON la monotonía bajó del 93 % al 9-11 %; aquí, voz limpia el 38,7 % del tiempo y ningún salto del ambiente. Pendiente: pico real de −0,1 dBTP |
 
 ### Global: **no se puede publicar tal cual; sí con arreglos**
@@ -371,13 +371,13 @@ la QA (≈ 67 + 31 min según `qa.md`). Después hay que volver a mirar la hoja 
 1. **Ningún rechazo al aire sin mirarlo.** Si un plano agota sus intentos, que el pipeline se pare y saque una hoja de
    rechazos para elegir (agente o persona), en vez de quedarse con «el mejor». Además, añadir a la puerta lo que se
    escapó aquí: bombilla, radiador, farolas, apliques de porche, maleta de ruedas, fregadero, peluche, gorro de lana,
-   bombín, sombrero vaquero, maletín, guirnaldas de luces y postes de farola. Florence ya lo escribió en varios casos:
-   «briefcase» (17 y 24), «sink» (31), «teddy bear» (34), «beanie» (35), «string lights» (80) y «light poles» (123).
+   bombín, sombrero vaquero, bolso o maletín y postes de farola. Florence ya lo escribió en varios casos: «briefcase»
+   (24), «sink» (31), «teddy bear» (34), «beanie» (35) y «light poles» (123).
 2. **Que salga lo que se pide.** 36 planos llevan el aviso «falta». Hay que calibrar la comprobación `clave` (CLIP) en
    vez de apagarla, y escribir la lista de planos con lo que SDXL sí dibuja: una sola acción en plano cerrado, como las
    manos que amasan, sellan o curan de los planos 13, 18, 79 y 126, mejor que composiciones de dos personas con objetos.
-3. **Una Galicia reconocible.** Salieron casas inglesas o nórdicas en 5, 23, 29, 33, 68, 75, 77, 134 y 161, y el par
-   CLIP «casas británicas» solo frenó 4. Hacen falta imágenes de referencia o semilla (D15) para granito, lousa, pazo y
+3. **Una Galicia reconocible.** Salieron casas inglesas o nórdicas en 5, 23, 29, 33, 68, 75, 77, 134 y 161. El par CLIP
+   «casas británicas» solo detectó 3 (77, 134 y 161), y ninguno se paró. Hacen falta imágenes de referencia o semilla (D15) para granito, lousa, pazo y
    aldea, y no nombrar monumentos reales sin una referencia.
 4. **El guion despierto.** Una sola atribución por caso y una línea de escena para abrir cada caso en 6:27-11:36
    (`veredictos/guion-r2.md`). En el gancho, condensar en una frase el minuto institucional de 0:55-1:25.
