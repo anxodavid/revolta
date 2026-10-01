@@ -209,3 +209,10 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   y sin intentos guiados en producción (`IMG_CFG_REINTENTO=0`).
 - **Un reinicio del contenedor mata también los procesos desacoplados** (`setsid nohup`): el scratchpad sobrevivió,
   pero hay que relanzar. Tras el reinicio, la primera carga de los modelos desde el disco en frío tarda 10-20 min.
+- **La CPU puede cambiar entre reinicios del contenedor.** Hasta el 30-09 a las 22:37 había AMX-BF16 (SDXL-Lightning
+  1344x768 a ~30 s por imagen en bf16); después, una CPU sin bf16 nativo, donde el bf16 se emula y cada imagen tardaba
+  370 s. Arreglo (`imaxes.bf16_rapido`): pesos de la UNet en bf16 y cálculo en fp32 capa a capa
+  (`enable_layerwise_casting` sin excepciones, más las normas en fp32 y un *hook* que pasa a fp32 las entradas de la
+  UNet), VAE en fp32 por teselas de 256 px: ~150 s a 1344x768 y ~90 s a 1024x576. Para que quepa la puerta en el mismo
+  proceso (pico 13,3 GB), Florence-2-base en vez de -large. Comprobar `grep -o 'amx_bf16\|avx512_bf16' /proc/cpuinfo`
+  antes de estimar tiempos.

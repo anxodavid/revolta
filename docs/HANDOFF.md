@@ -29,6 +29,11 @@ quedan en `$SCRATCH/longo/w/imaxes/revision.json`). El script `lanzar.sh` hace
 `flock "$CPU_LOCK" $PY longo.py temas/meigas-de-verdade.yaml --guion $SCRATCH/longo/guion-producion.txt --traballo $SCRATCH/longo/w --saida ../../plan-de-negocio/gauntlet3/video --escenas ../../plan-de-negocio/gauntlet3/video/escenas.json`
 desde `herramientas/pipeline` tras `source entorno.sh`. Si el contenedor se perdió: `instalar.sh` y regenerar (voz ≈ 11 min).
 
+**Cambio de máquina (01-10-2026, 00:45 UTC):** tras un reinicio el contenedor quedó en una CPU sin bf16 nativo
+(sin AVX512_BF16 ni AMX): en bf16 emulado cada imagen tardaba 370 s. Producción relanzada (`produccion5`) con cálculo
+en fp32 capa a capa, 1024x576 (`IMG_MODEL=lightning1024`) y Florence-2-base en la puerta (memoria: pico 13,3 GB);
+~100 s por intento, ~6 h para los 162 planos. En una máquina con AMX, `IMG_MODEL=lightning` (1344x768) va a ~30 s.
+
 **Después del render:** QA (`gauntlet3/video/qa.md`), vídeo en partes < 50 MB para el repo, página privada para verlo,
 tribunal final breve y documentación. La hoja visual r2 no pasó por crítico (se juzgará en el tribunal con el vídeo).
 
