@@ -1,0 +1,54 @@
+As meigas de verdade (e por que o conxuro da queimada é de 1967) | Cousas de Galiza para durmir
+
+Quen eran de verdade as meigas galegas? Neste episodio para durmir contamos o que din os procesos por bruxería que o Arquivo do Reino de Galicia mostrou en 2020: unha parteira de Vilalba, un gato que ninguén deu collido en Xinzo de Limia, unhas veciñas que foron á fonte a noite de san Xoán en Campo Lameiro. Tamén como naceu o conxuro da queimada, escrito en Vigo en 1967, e as cifras da Inquisición de Santiago, que coas meigas foi máis branda ca a xustiza ordinaria. Despois, amodo, a lareira e o mal de ollo, a noite de san Xoán e o frade Feijoo, que dubidaba das historias de bruxas.
+Eu non creo nas meigas, mais habelas, hainas: as lendas cóntanse como lendas, e os datos levan fonte.
+As imaxes están xeradas con intelixencia artificial e representan lugares reais: son contido sintético.
+
+Capítulos
+0:00 Un conxuro de 1967
+1:55 I. Sete fontes e un gato
+4:38 II. O conxuro do barco
+6:39 III. O tribunal e os xuíces
+9:14 IV. Quen eran de verdade
+12:09 V. Á beira da lareira
+16:21 VI. A noite de san Xoán
+22:49 VII. O frade que dubidaba
+26:51 VIII. Chove na lousa
+
+Fontes
+- https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf
+- https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=29953
+- https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=3781
+- https://www.elespanol.com/mujer/mujeres-historia/20210309/verdad-caza-meigas-perseguidas-justicia-ordinaria-inquisicion/564444343_0.html
+- https://www.gciencia.com/retro/a-persecucion-das-bruxas-na-galicia-de-hai-400-anos-eran-apreciadas-e-necesarias-para-o-pobo/
+- https://www.gciencia.com/desmontando-mitos/queimada-entre-lendas-e-conxuros-asi-se-inventou-unha-tradicion/
+- https://www.atlantico.net/articulo/vigo/conxuro-queda-padre-fallece-vigo-mariano-marcos/20220207232642892177.html
+- https://www.elcorreogallego.es/galicia/2019/05/27/mariano-marcos-creo-pobrense-conxuro-109904997.html
+- https://gl.wikipedia.org/wiki/Queimada
+- https://gl.wikipedia.org/wiki/Noite_de_san_Xo%C3%A1n
+- https://gl.wikipedia.org/wiki/Herbas_de_san_Xo%C3%A1n
+- https://gl.wikipedia.org/wiki/Meiga
+- https://gl.wikipedia.org/wiki/Mar%C3%ADa_Soli%C3%B1o
+- https://gl.wikipedia.org/wiki/Inquisici%C3%B3n_espa%C3%B1ola
+- https://gl.wikipedia.org/wiki/Benito_Xer%C3%B3nimo_Feijoo
+- https://gl.wikipedia.org/wiki/Mal_de_ollo
+- https://gl.wikipedia.org/wiki/Figa
+- https://gl.wikipedia.org/wiki/Lareira
+- https://gl.wikipedia.org/wiki/H%C3%B3rreo
+- https://gl.wikipedia.org/wiki/Longa_noite_de_pedra
+- https://cangas.gal/gl/areas/turismo/nosa-historia/maria-solina
+- https://www.lavozdegalicia.es/noticia/vigo/cangas/2017/12/12/mito-meiga-maria-solina/0003_201712V12C6991.htm
+- https://www.filosofia.org/bjf/bjft205.htm
+- https://www.filosofia.org/bjf/bjft000.htm
+- https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-frase-eu-nao-acredito-em-bruxas-mas/16796
+- https://www.gutenberg.org/cache/epub/2000/pg2000.txt
+- https://academia.gal/dicionario
+- https://portaldaspalabras.gal/lexico/palabra-do-dia/meiga/
+
+Como está feito
+- Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto Nós (Universidade de Santiago de Compostela), licenza Apache-2.0.
+- Texto e dossier de fontes preparados con intelixencia artificial (Claude, de Anthropic) a partir das fontes citadas. Ningunha persoa os revisou.
+- Imaxes xeradas con intelixencia artificial e revisadas por unha porta automática: contido sintético, non son fotografías. Son ambiente sintetizado por código segundo a escena (choiva, lume, auga, vento, noite, campás); o murmurio da xente faise coa mesma voz sintética.
+- Conxuro da queimada: primeiro verso, de Mariano Marcos Abalo (1967), obra rexistrada.
+
+Duración: 31:22.

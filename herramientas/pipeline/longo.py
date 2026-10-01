@@ -482,7 +482,8 @@ def main():
     res['publicable'] = all(res['portas'].values())
     for nome in ('contactsheet.jpg', 'descricion.txt', 'subtitulos.srt', 'escenas.json', 'porta_texto.json',
                  'rotulos.json', 'guion.txt'):
-        dest = 'subtitulos.gl.srt' if nome == 'subtitulos.srt' else nome
+        # escenas.json da saída leva os tempos e textos de cada plano: noutro nome, para non pisar a lista de entrada
+        dest = {'subtitulos.srt': 'subtitulos.gl.srt', 'escenas.json': 'escenas-montadas.json'}.get(nome, nome)
         shutil.copy(W / nome, S / f'.{dest}.tmp'); os.replace(S / f'.{dest}.tmp', S / dest)
     (S / 'qa.json').write_text(json.dumps(res, ensure_ascii=False, indent=1))
     (S / 'qa.md').write_text(informe(res, tema))
