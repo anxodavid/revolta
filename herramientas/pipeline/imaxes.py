@@ -81,7 +81,7 @@ def modelo(nome=None):
 
 M = modelo()
 MODELO, W, H, PASOS = M['nome'], M['W'], M['H'], M['pasos']       # compatibilidade co código anterior
-MAX_INTENTOS, INTENTO_PRUDENTE, RESERVAS = int(os.environ.get('IMG_MAX_INTENTOS', '5')), 2, 2
+MAX_INTENTOS, INTENTO_PRUDENTE, RESERVAS = int(os.environ.get('IMG_MAX_INTENTOS', '5')), 2, int(os.environ.get('IMG_RESERVAS', '2'))
 
 
 def bf16_rapido():

@@ -250,3 +250,9 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   espera en background armados, el render aguantó horas. El contenedor parece liberarse cuando la sesión queda
   inactiva, aunque haya procesos `setsid nohup` trabajando (el scratchpad sí sobrevive). Regla: mientras corra un
   trabajo largo, mantener siempre un Monitor armado (re-armarlo al caducar, cada 30 min) además de la revisión horaria.
+- **Las imágenes de reserva ya no ayudan (01-10-2026, planos 90-93):** cuatro interiores con lareira agotaron los 6
+  intentos; los 2 de reserva (prompt genérico sin personas) caían por "repetida" (CLIP 0,92 con otras reservas) o por
+  vehículos y luz eléctrica. Cada plano difícil costaba 10 min para quedarse igualmente con el mejor intento. Ahora
+  `IMG_RESERVAS=0` en producción (4 intentos como mucho). Queda pendiente para el siguiente episodio: "fireplace
+  mantel" como negativo salta en casi cualquier lareira (4 de 4 en el plano 92) y "interior moderno" en muchos
+  interiores; hay que calibrarlos con una hoja de rechazos antes de producir.
