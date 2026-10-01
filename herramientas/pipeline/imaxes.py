@@ -39,6 +39,22 @@ MODELOS = {
 MODELO_DEFECTO = 'lightning'
 
 
+# Problemas da porta que só avisan (non bloquean). Visto na produción do 01-10-2026 mirando os rexeitamentos: CLIP
+# non distingue unha anciá á lareira dunha "witch" (nin "hooked nose" ou "warts") nin ve obxectos pequenos (farol,
+# cunca), e o arquetipo seguido que pide a propia lista de planos non se arranxa repetindo o mesmo prompt; con eles
+# bloqueando, o plano da queimada do gancho acabou nun retrato xenérico. Seguen bloqueando os anacronismos (luz
+# eléctrica, casas británicas, obxectos e interiores modernos), as mans, as repeticións e os demais negativos.
+AVISOS_NEGATIVO = tuple(x for x in os.environ.get('IMG_AVISOS_NEGATIVO', 'witch,hooked nose,warts').split(',') if x)
+
+
+def separar_avisos(problemas, intento):
+    """(bloqueantes, avisos) dos problemas dun intento (0 = primeiro)."""
+    av = [p for p in problemas if p.startswith('falta: ')
+          or any(p.startswith(f'negativo do plano: {x} (') for x in AVISOS_NEGATIVO)
+          or (intento >= 1 and p.startswith('arquetipo seguido'))]
+    return [p for p in problemas if p not in av], av
+
+
 def _liberar():
     """gc e malloc_trim de glibc despois de cada intento: sen isto o proceso medraba ~1 GB en 12 intentos e o OOM do
     cgroup (13,36 GiB para todos os procesos) matouno o 01-10-2026."""
@@ -372,9 +388,10 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
                 rep = repetida(f, it.get('descricion', ''), aceptadas)
                 if rep:
                     it['problemas'] = it['problemas'] + [rep]
+                it['problemas'], it['avisos'] = separar_avisos(it['problemas'], k)
                 intentos.append(it)
                 print(f"imaxe {i:3d} intento {k} {it['s']:5.1f}s + revisión {it.get('s_revision', 0):4.1f}s "
-                      f"{it['problemas'] or 'ok'}", flush=True)
+                      f"{it['problemas'] or 'ok'}" + (f" avisos {it['avisos']}" if it['avisos'] else ''), flush=True)
                 k += 1
                 _liberar()
             best = min(range(len(intentos)), key=lambda j: (len(intentos[j]['problemas']), j))

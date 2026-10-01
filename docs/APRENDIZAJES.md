@@ -233,3 +233,11 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   imagen, `MALLOC_ARENA_MAX=2` y 12 reintentos en `lanzar-longo.sh`.
 - **`mawk` (el `awk` de este sistema) lee la entrada por bloques:** en un vigilante `tail -F | grep | awk` no sale
   nada hasta que se llena el búfer, y el Monitor no avisó de la caída. Usar `awk -W interactive` (o no usar awk).
+- **La puerta de imágenes rechazaba de más y empeoraba el vídeo (01-10-2026, planos 0-7 de la producción):** ~3,5
+  intentos por plano (≈15 h para 162) y, al agotarlos, una imagen de reserva genérica. Mirando la hoja de los
+  rechazos: "falta: clay bowl / lantern" con el objeto en la imagen (CLIP no ve objetos pequeños), "witch" en
+  cualquier anciana junto al fuego (justo lo que pide el plano) y "arquetipo seguido" cuando la propia lista de planos
+  pide dos lareiras seguidas. El plano de la queimada del gancho acabó en un retrato genérico. Ahora esos tres solo
+  avisan (`imaxes.separar_avisos`; el arquetipo desde el 2.º intento) y se reeligió entre los intentos ya hechos sin
+  regenerar. Los anacronismos (farolas, casas británicas, bañera, interiores modernos) sí acertaban y siguen
+  bloqueando. Lección: antes de una producción larga, mirar la hoja de rechazos de los primeros planos.
