@@ -11,6 +11,7 @@
   tempo e o número de plano debaixo de cada un, para buscar defectos con minuto e segundo.
 """
 import json
+import os
 import random
 import subprocess
 import sys
@@ -36,7 +37,7 @@ def main():
     saida, ref, trib, cego = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3]), Path(sys.argv[4])
     trib.mkdir(parents=True, exist_ok=True); cego.mkdir(parents=True, exist_ok=True)
     qa = json.loads((saida / 'qa.json').read_text())
-    pl = qa['escenas']; video = saida / 'video.mp4'
+    pl = qa['escenas']; video = Path(os.environ.get('VIDEO', saida / 'video.mp4'))   # longo.py déixao en TRABALLO/video.mp4
     medio = lambda p: p['b0'] + p['dur_s'] / 2
 
     # folla a cegas: 16 planos repartidos, fotograma no medio de cada un

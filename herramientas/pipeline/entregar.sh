@@ -13,7 +13,7 @@
 set -euo pipefail
 AQUI="$(cd "$(dirname "$0")" && pwd)"
 source "$AQUI/entorno.sh"
-D="$(realpath "$1")"; V="$D/video.mp4"
+D="$(realpath "$1")"; V="${VIDEO:-$D/video.mp4}"   # longo.py deixa o mestre en TRABALLO/video.mp4: VIDEO=... para usalo de alí
 FF="$("$PY" -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')"
 E="$SCRATCH/entrega"; H="$E/hls"; M="$D/mestre"
 SEG=${SEG:-200}            # segundos por anaco do mestre (1,5 Mbit/s * 200 s ~ 38 MB; o corte vai ao keyframe seguinte)

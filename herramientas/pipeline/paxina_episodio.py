@@ -49,6 +49,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('saida'); ap.add_argument('tema'); ap.add_argument('hls'); ap.add_argument('paxina')
     ap.add_argument('--etiqueta', default='episodio piloto · borrador sin publicar')
+    ap.add_argument('--video', default=None, help='mestre (por defecto DIR_SAIDA/video.mp4; longo.py déixao en TRABALLO/video.mp4)')
     a = ap.parse_args()
     S, P = Path(a.saida), Path(a.paxina)
     P.mkdir(parents=True, exist_ok=True)
@@ -110,7 +111,7 @@ def main():
 
     shutil.copy(S / 'contactsheet.jpg', P / 'contactsheet.jpg')
     t_cartel = next((r['t0'] + 2.5 for r in qa.get('rotulos', []) if r.get('texto') == tema['titulo']), 50.0)
-    subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), '-v', 'error', '-y', '-ss', str(t_cartel), '-i', str(S / 'video.mp4'),
+    subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), '-v', 'error', '-y', '-ss', str(t_cartel), '-i', str(a.video or S / 'video.mp4'),
                     '-frames:v', '1', '-vf', 'scale=1280:720', '-q:v', '4', str(P / 'poster.jpg')], check=True)
     h = P / 'hls'
     if h.is_symlink() or h.exists():
