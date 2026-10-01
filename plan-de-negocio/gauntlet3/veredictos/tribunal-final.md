@@ -40,4 +40,11 @@ de ambiente, con 9 de 16 planos sin personas y 3 figuras solas de espaldas, y su
 pueblo inglés y el bodegón con cerveza y café) caen en la primera mitad, la que tiene que enganchar. Para la parte de
 dormir elegiría la Imagen 2 sin dudarlo: es la única de las dos con un arco de luz que baja de verdad.
 
-**Destape.** Pendiente: se escribe después de guardar esta sección y leer `clave.txt`.
+**Destape** (escrito después de guardar lo anterior en git, commit `e0864fe`). `clave.txt`: Imagen 1 = referencia,
+Imagen 2 = episodio. A ciegas elegí la referencia, como en la ronda 1. `folla16_320.json`: los 16 fotogramas son uno
+de cada 10-11 planos (planos 1, 12, 22, 33, 44, 55, 65, 76, 87, 98, 108, 119, 130, 141, 151 y 162) y se reparten así:
+gancho 2, transición 4, calma 3 y dormir 7. Es decir, 7 de 16 caen en la fase de dormir (desde el plano 98, 13:55),
+que por diseño lleva pocas personas, y eso explica parte del 2/5. Pero en los 9 fotogramas anteriores a dormir solo
+hay acción en 2 (planos 12 y 33), así que la carencia sigue ahí aunque se descuente esa fase. Correspondencia para
+las secciones siguientes: el fotograma *n* de la Imagen 2 es el plano de la lista anterior en la posición *n* (el 6,
+bodegón con cerveza y café, es el plano 55, 5:48; el 4, pueblo inglés, es el 33, 3:07).
