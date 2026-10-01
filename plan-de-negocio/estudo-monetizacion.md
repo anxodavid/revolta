@@ -18,7 +18,7 @@ documento do repo onde está; as estimacións van marcadas **[S]**. Ningunha per
    menciona esa fonte; segue como supuesto [S]. No escenario base do plan v2, a canle faría 45-400 subscritores en
    12 meses. Ingresos por anuncios o primeiro ano: **≈ 0 €**.
 2. **Os cartos posibles están noutras cinco vías.** Por orde de calendario:
-   - premios en galego: Youtubeiras+, con inscrición **ata o 15-11-2026**;
+   - premios en galego: Youtubeiras+ **2027**, porque á edición de 2026 xa non chegamos (o promotor, 01-10-2026);
    - audio longo: o Spotify Partner Program, que chega a España o **20-10-2026**, e iVoox;
    - encargos públicos: convocatoria dixital da CRTVG, ata 25.000-26.000 € por proxecto;
    - o Camiño no **Xacobeo 2027**, que comeza o 31-12-2026;
@@ -120,7 +120,7 @@ Probabilidades e importes **[S]** salvo que se indique fonte. "Ano 1" vai de out
 | B | **Fan funding de YouTube** (membresías, Super Thanks) | 500 subscritores + 3.000 h, limiares que non cambian en 2027 (§9); 70 % para quen crea | Medio: público identitario e diáspora | 0 € | 0-200 €/mes no optimista | Si |
 | C | **Spotify Partner Program** | Desde o 20-10-2026 en España: enderezo legal no mercado, 3 episodios, **2.000 h e 1.000 persoas de audiencia en 30 días** (§9). Está pensado para **pódcast en vídeo** | **O mellor encaixe estrutural**: o formato de durmir é audio de escoita nocturna repetida, e o mestre xa existe en vídeo | 0 € (limiar) | 0-60 €/mes | Si, declarando a IA |
 | D | **iVoox** (fans, pago único por paquetes) | Sen limiar; comisión ¿5 %? sen verificar | Medio: paquetes do tipo "6 h de meigas para durmir" a 3-5 € | 0-50 € | 0-300 € | Si |
-| E | **Premio Youtubeiras+ 2026** | Inscrición do 17-09 ao **15-11-2026 ás 23:59**; ≥ 3 publicacións desde o 16-11-2025; maioría en galego. 7 premios con dotación de 1.000-1.250 € (7.500 € en total) e un honorífico. As bases non mencionan a IA (§9) | Medio en cartos, **alto como validación externa**. O xurado valora "dotes interpretativos", o que penaliza a voz sintética | 0-1.000 € (P(premio) 5-15 %) | idem | Si |
+| E | **Premio Youtubeiras+ 2027** (á edición de 2026 **xa non chegamos**, segundo o promotor o 01-10-2026) | Se repite as bases de 2026 [S]: inscrición de setembro a mediados de novembro de 2027, ≥ 3 publicacións no ano anterior e maioría en galego. En 2026 houbo 7 premios con dotación de 1.000-1.250 € (7.500 € en total) e un honorífico, e as bases non mencionan a IA (§9) | Medio en cartos, **alto como validación externa**. Chegaría cun ano de catálogo e de datos. O xurado valora "dotes interpretativos", o que penaliza a voz sintética | 0 € | 0-1.000 € (P(premio) 5-15 %) | Si |
 | F | **Encargo da CRTVG/CSAG** | Convocatoria 2025: ata 357.000 € para 15 proxectos en cinco categorías (ficción, entretemento, **divulgación**, infantil, **videopódcast**), inéditos e integramente en galego. Seleccionáronse 12, con ata 25.000 € cada un (§9). Non atopei convocatoria de 2026; patrón ≈ xuño | **A única vía que cambia a escala.** Hai que presentar unha tempada inédita de 6-8 episodios, non o catálogo xa publicado | 0 € (preséntase no ano 1) | 0 ou 10.000-25.000 € (P 5-15 %) | **Non**: solicitante con nome e factura |
 | G | **Xacobeo 2027** ("O teu Xacobeo", TU300A) | Prazo para actividades de 2027: **1-31-10-2026**. Ata 25.000 €: ao 60 % para autónomos e pemes, ao 80 % para entidades sen ánimo de lucro (§9). O ano santo comeza o 31-12-2026 | Alto no tema (o Camiño ten o mellor dato "para durmir"), pero esixe RETA ou unha asociación **este mes** | 0 € (non chegamos) | Seguinte convocatoria, se a hai | **Non** |
 | H | **B2B: "a historia do teu concello para durmir"**, audioguías, museos | Contrato menor < 15.000 €; tícket de 1.000-6.000 € [S] (`ingresos_alt.md` §6) | Medio-alto se se vende: o custo unitario (§2) permite prezos que unha produtora non pode dar | 0-3.000 € | 3.000-15.000 € | **Non** |
@@ -129,8 +129,8 @@ Probabilidades e importes **[S]** salvo que se indique fonte. "Ano 1" vai de out
 
 **Lectura:**
 
-- **En anónimo** (A-E, I en parte, J): 0-1.500 € o primeiro ano e 0-3.000 € o segundo, case todo dun premio e, se
-  hai tracción, das membresías.
+- **En anónimo** (A-E, I en parte, J): 0-500 € o primeiro ano (sen Youtubeiras+ 2026) e 0-3.000 € o segundo, case
+  todo dun premio e, se hai tracción, das membresías.
 - **Sen anonimato** (engadindo F, G e H): o valor esperado sobe a **≈ 1.500-5.000 € o segundo ano [S]**, cunha cola
   posible de 10.000-25.000 € se a CRTVG escolle o proxecto.
 
@@ -145,8 +145,8 @@ Cada fase ten unha porta que decide se se segue. Os limiares do nicho son os do 
 
 ### Fase 0 · De outubro a mediados de novembro de 2026: saír ben e a tempo
 
-Obxectivo: chegar ao **15-11 con 3 publicacións** (requisito de Youtubeiras+) e aproveitar o pico de "brujas" de
-outubro.
+Obxectivo: aproveitar o pico de "brujas" de outubro e o 1-2 de novembro con 3 publicacións ben feitas. Sen
+Youtubeiras+ 2026 xa non hai unha data límite externa: **mellor publicar tarde que publicar con planos bloqueantes**.
 
 1. **Esta semana:** rolda de arranxos de "As meigas de verdade" (11 planos, pico real ≤ −1 dBTP e descrición) e
    **escoita enteira do promotor** (31 min).
@@ -159,11 +159,11 @@ outubro.
 5. **Publicación 3:** primeiro episodio do Camiño, a aposta para o Xacobeo 2027.
 6. **Probar as referencias semente (D15)** nos planos máis difíciles (hórreo, carro, lousa), só con sementes CC0 ou
    CC BY, ou con fotos propias (§3.2).
-7. **Inscribir a canle en Youtubeiras+** antes do 15-11 (Revelación e Calidade lingüística), dicindo con claridade
-   como está feita.
+7. **Youtubeiras+:** á edición de 2026 xa non chegamos. A meta pasa a ser a de 2027 (Revelación e Calidade
+   lingüística), con ≥ 3 publicacións no ano e dicindo con claridade como está feita a canle.
 
-**Porta 0 (15-11):** ¿tres publicacións sen planos bloqueantes e cunha voz con permiso ou con licenza CC BY? Se non,
-non hai inscrición e a fase 1 empeza co que haxa.
+**Porta 0 (≈ 15-11):** ¿tres publicacións sen planos bloqueantes e cunha voz con permiso ou con licenza CC BY? Se
+non, a fase 1 empeza co que haxa, sen présa.
 
 ### Fase 1 · De novembro de 2026 a febreiro de 2027: a proba do nicho do plan v2
 
@@ -186,6 +186,7 @@ non hai inscrición e a fase 1 empeza co que haxa.
   - unha **oferta B2B dun folio** para 3-5 concellos con patrimonio e turismo (Combarro, O Cebreiro, Samos,
     Allariz...): un episodio da súa historia para durmir e unha audioguía, a prezo pechado.
 - Fan funding en canto haxa 500 subscritores e 3.000 h.
+- Preparar a candidatura a **Youtubeiras+ 2027** (vixiar as bases desde setembro de 2027).
 
 **Porta 2 (xuño de 2027):** ¿algún ingreso que non sexa un premio, ou un si da CRTVG? Se non, a canle volve ao
 réxime MÍNIMO (un episodio ao mes) como hobby, e publícanse a canalización e o informe de erros para Nós.
@@ -232,7 +233,7 @@ Só con datos da fase 2:
   - meigas publicado e arranxado;
   - resposta de Nós;
   - ¿as sementes quitan as casas inglesas nos planos de proba? Si ou non, cunha folla de contactos.
-- **60 días (≈ 30-11):** 3 publicacións e inscrición en Youtubeiras+; primeiras cifras de CTR, retención aos 2 min e
+- **60 días (≈ 30-11):** 3 publicacións; primeiras cifras de CTR, retención aos 2 min e
   horas por plataforma.
 - **90 días (≈ 31-12):** decisión M1 tomada e proba do nicho a medio camiño. Se M1 é (b) ou (c), borrador da oferta
   B2B e da tempada para a CRTVG.
@@ -245,7 +246,7 @@ Fíxoo Claude con buscas web e lendo as páxinas o 01-10-2026. A columna "Cambio
 
 | Referencia | Resultado | Cambio | Fonte |
 |---|---|---|---|
-| Youtubeiras+ 2026: prazo, requisitos, premios | **Confirmado.** Do 17-09 ao 15-11-2026 ás 23:59; ≥ 3 publicacións desde o 16-11-2025; maioría en galego; 7 premios con dotación (7.500 €) e un honorífico; as bases non mencionan a IA | Engádese o premio honorífico | https://youtubeiras.gal/bases-youtubeiras-2026/ |
+| Youtubeiras+ 2026: prazo, requisitos, premios (xa non chegamos, segundo o promotor) | **Confirmado.** Do 17-09 ao 15-11-2026 ás 23:59; ≥ 3 publicacións desde o 16-11-2025; maioría en galego; 7 premios con dotación (7.500 €) e un honorífico; as bases non mencionan a IA | Engádese o premio honorífico | https://youtubeiras.gal/bases-youtubeiras-2026/ |
 | Limiares do YPP en 2027 | **Confirmado en parte.** Desde o 1-02-2027: 8.000 h en 365 días ou 20 M de visualizacións de Shorts en 90 días; os limiares de fan funding non cambian; non afecta a quen xa está dentro. **O resumo da páxina non menciona os 1.000 subscritores** | Os 1.000 subscritores pasan a [S] | https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/ |
 | Spotify Partner Program en España | **Confirmado.** Desde o 20-10-2026; 3 episodios, 2.000 h e 1.000 persoas de audiencia en 30 días; enderezo legal no mercado. Está orientado a **pódcast en vídeo** | Engádese o enderezo legal e o foco no vídeo | https://dircomfidencial.com/marketing-digital/spotify-expande-a-espana-y-otros-34-mercados-el-programa-para-atraer-a-creadores-de-podcast-en-video-20260918-1216/ ; https://support.spotify.com/us/creators/article/spotify-partner-program/ |
 | "O teu Xacobeo" (TU300A) | **Confirmado.** Para actividades de 2027, do 1 ao 31-10-2026; ata 25.000 €; 60 % para persoas autónomas e pemes, 80 % para entidades sen ánimo de lucro; 3 M€ en total | — | https://www.xunta.gal/dog/Publicados/2026/20260325/AnuncioG0256-090326-0002_gl.html |

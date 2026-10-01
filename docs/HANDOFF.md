@@ -84,7 +84,7 @@ cada agente; lo que estaba en git o en disco no se perdió.
 - **Datas próximas:**
   - Xacobeo TU300A: do 1 ao 31-10-2026; esixe RETA ou asociación, así que en anónimo non se chega;
   - Spotify Partner Program en España: desde o 20-10-2026;
-  - Youtubeiras+: inscrición ata o 15-11-2026, con ≥ 3 publicacións;
+  - Youtubeiras+ 2026 (ata o 15-11-2026): **xa non chegamos**, segundo o promotor; a meta é a edición de 2027;
   - YPP con 8.000 h: desde o 1-02-2027.
 - **Decisións pendentes do promotor:** M1-M6 (estudo §6). A ronda de arranxos do episodio das meigas (§0 de abaixo)
   segue pendente e é o primeiro paso da fase 0 do estudo.
