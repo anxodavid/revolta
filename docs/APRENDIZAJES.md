@@ -241,3 +241,7 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   avisan (`imaxes.separar_avisos`; el arquetipo desde el 2.º intento) y se reeligió entre los intentos ya hechos sin
   regenerar. Los anacronismos (farolas, casas británicas, bañera, interiores modernos) sí acertaban y siguen
   bloqueando. Lección: antes de una producción larga, mirar la hoja de rechazos de los primeros planos.
+- **Tercer reinicio del contenedor (01-10-2026, ~03:52 UTC):** mató la producción en el plano 41 y nadie lo vio hasta
+  la revisión programada de las 05:50 (2 h perdidas). Las tareas en segundo plano y los Monitor mueren con el
+  contenedor; lo único que sobrevive es una revisión programada (`send_later`). Para trabajos de horas: revisión cada
+  ~1 h que mire `uptime` y relance si no hay proceso.
