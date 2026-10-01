@@ -25,11 +25,13 @@ valida() { local err; err="$("$FF" -v error -i "$1" -f null - 2>&1 | head -5)"; 
 [ -f "$V" ] || { echo "non hai $V"; exit 1; }
 if pgrep -f "longo.py|montaxe" > /dev/null; then echo "AVISO: hai procesos do pipeline en marcha"; pgrep -af "longo.py|montaxe"; exit 1; fi
 echo "== 1 validar mestre ($(du -m "$V" | cut -f1) MB, $(dur "$V") s)"
-flock "$CPU_LOCK" bash -c "$(declare -f valida); FF='$FF'; valida '$V'"
+[ "${SEN_VALIDAR:-0}" = 1 ] || flock "$CPU_LOCK" bash -c "$(declare -f valida); FF='$FF'; valida '$V'"
 
 echo "== 2 partir o mestre en anacos de ~${SEG} s sen recodificar"
 rm -rf "$M"; mkdir -p "$M" "$E"
-flock "$CPU_LOCK" "$FF" -v error -i "$V" -map 0 -c copy -f segment -segment_time "$SEG" -reset_timestamps 1 \
+# só vídeo e audio: a pista de subtítulos remata despois do vídeo en cada anaco e o concat deixaba ~0,1 s de oco en
+# cada unión (31 min en 10 anacos: 1883,02 s fronte a 1882,05 s). Os subtítulos van aparte en subtitulos.gl.srt
+flock "$CPU_LOCK" "$FF" -v error -i "$V" -map 0:v -map 0:a -c copy -f segment -segment_time "$SEG" -reset_timestamps 1 \
   -segment_format mp4 -segment_format_options movflags=+faststart "$M/parte%02d.mp4"
 ( cd "$M" && for p in parte*.mp4; do echo "file '$p'"; done > partes.txt )
 for p in "$M"/parte*.mp4; do

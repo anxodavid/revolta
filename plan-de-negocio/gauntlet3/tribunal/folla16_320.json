@@ -1,0 +1,98 @@
+[
+ {
+  "pos": 1,
+  "plano": 1,
+  "t": "0:02",
+  "fase": "gancho"
+ },
+ {
+  "pos": 2,
+  "plano": 12,
+  "t": "0:53",
+  "fase": "gancho"
+ },
+ {
+  "pos": 3,
+  "plano": 22,
+  "t": "1:52",
+  "fase": "transicion"
+ },
+ {
+  "pos": 4,
+  "plano": 33,
+  "t": "3:07",
+  "fase": "transicion"
+ },
+ {
+  "pos": 5,
+  "plano": 44,
+  "t": "4:21",
+  "fase": "transicion"
+ },
+ {
+  "pos": 6,
+  "plano": 55,
+  "t": "5:48",
+  "fase": "transicion"
+ },
+ {
+  "pos": 7,
+  "plano": 65,
+  "t": "7:20",
+  "fase": "calma"
+ },
+ {
+  "pos": 8,
+  "plano": 76,
+  "t": "9:07",
+  "fase": "calma"
+ },
+ {
+  "pos": 9,
+  "plano": 87,
+  "t": "11:16",
+  "fase": "calma"
+ },
+ {
+  "pos": 10,
+  "plano": 98,
+  "t": "13:55",
+  "fase": "durmir"
+ },
+ {
+  "pos": 11,
+  "plano": 108,
+  "t": "16:28",
+  "fase": "durmir"
+ },
+ {
+  "pos": 12,
+  "plano": 119,
+  "t": "19:25",
+  "fase": "durmir"
+ },
+ {
+  "pos": 13,
+  "plano": 130,
+  "t": "22:17",
+  "fase": "durmir"
+ },
+ {
+  "pos": 14,
+  "plano": 141,
+  "t": "24:53",
+  "fase": "durmir"
+ },
+ {
+  "pos": 15,
+  "plano": 151,
+  "t": "27:57",
+  "fase": "durmir"
+ },
+ {
+  "pos": 16,
+  "plano": 162,
+  "t": "31:12",
+  "fase": "durmir"
+ }
+]
