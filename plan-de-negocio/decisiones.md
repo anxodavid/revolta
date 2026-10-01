@@ -34,4 +34,4 @@ Contexto y reglas del Gauntlet 3: `plan-de-negocio/gauntlet3/contexto.md`.
 | D14 | Ambiente sonoro (tras la muestra A/B, 30-09-2026) | De los tres fondos, **el mejor es el tercero (lluvia nueva + lareira)**, pero **no debe volverse monótono ni cansino**: adaptarlo a la escena. **Si la escena es de un gentío, murmullo de voces ininteligibles.** Que el Gauntlet mida la mejor opción (D13). |
 | D15 | Imágenes de referencia (30-09-2026) | El promotor quiere **imágenes de referencia o semilla** para lo que el modelo no conoce (carros de bois, hórreos...) y generar variaciones a partir de ellas. Pendiente de probar (img2img, ControlNet, IP-Adapter), con fotos propias o de licencia libre. |
 | D16 | Animación (30-09-2026) | Para **futuras versiones**: un modelo que anime la imagen para que las personas se muevan. Pendiente de evaluar coste y licencia (image-to-video en GPU alquilada; en CPU, paralaje 2,5D y microanimaciones). |
-
+| D17 | Lingua de traballo (01-10-2026) | **Desde agora, todo en galego** (documentos de traballo, planes, QA, README, commits e conversa). O feito antes queda en castelán como histórico. |

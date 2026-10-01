@@ -269,3 +269,21 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   como paso intermedio.
 - **Partir un MP4 con su pista de subtítulos `mov_text` deja huecos al reunirlo** (~0,1 s por unión: 1883,02 s frente a
   1882,05 s en 10 anacos). Partir solo vídeo y audio: 1882,07 s. Los subtítulos van aparte en `.srt`.
+
+# Sesión do 01-10-2026 (tarde): monetización (en galego, D17)
+
+- **Os prezos das APIs cambian dun día para outro:** SDXL-Lightning en Replicate pasou de ≈ 0,0018 $ a ≈ 0,0057 $
+  por execución (https://replicate.com/bytedance/sdxl-lightning-4step). Antes de calcular custos, mirar o prezo ese
+  día.
+- **O dataset de Brais é CC BY 4.0, pero os seus termos mandan:** prohiben a exposición pública das gravacións e
+  limitan o uso á investigación (https://huggingface.co/datasets/proxectonos/Nos_Brais-GL). Para calquera uso
+  comercial fai falta o permiso de Nós/USC ou outra voz.
+- **As referencias CC BY-SA usadas como semente dan, seguramente, obra derivada** ("Adapted Material"): hai que
+  acreditalas e compartir co mesmo tipo de licenza. Para sementes, mellor CC0, CC BY ou fotos propias.
+- **O Spotify Partner Program está pensado para pódcast en vídeo:** pódese subir o mesmo mestre de YouTube.
+- **O anonimato pecha as vías de cartos grandes** (axudas, CRTVG, B2B), porque todas piden unha persoa
+  identificada ou que facture.
+- **Para un estudo rápido, abonda co que xa está no repo e despois contrastar na web** as cifras clave (prazos,
+  limiares e licenzas). De 11 referencias, cambiaron 3: un prezo, unha data e un requisito que non estaba
+  confirmado.
+
