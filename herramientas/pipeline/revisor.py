@@ -48,7 +48,12 @@ LISTA = [
     ('obxectos modernos', r'\b(street ?lamps?|lamp ?posts?|streetlights?|street lights?|lanterns? hanging|hanging lanterns?|'
                           r'city lights?|town lights?|tea ?lights?|glass jar|jar candle|sliced bread|slices? of bread|'
                           r'kettle|teapot|coffee pot|feather boa|power lines?|telephone|umbrella|glasses|sunglasses|'
-                          r'asphalt|electric|light bulbs?|plastic|laptop|cell phone|clock|tv|television)\b'),
+                          r'asphalt|electric|light bulbs?|plastic|laptop|cell phone|clock|tv|television|'
+                          # tribunal final do Gauntlet 3 (01-10-2026): o que se escapou e Florence si nomeara. Engadido sen
+                          # subir VERSION a propósito: só o ven os planos que se rexeneran, non as 151 imaxes xa aprobadas
+                          r'radiators?|sinks?|faucets?|water taps?|rolling suitcases?|suitcases? on wheels|wheeled suitcases?|'
+                          r'trolley|briefcases?|handbags?|teddy bears?|beanies?|bowler hats?|cowboy hats?|light poles?|'
+                          r'wall lamps?|wall lights?|sconces?|porch lights?|ceiling lights?)\b'),
     # versión 5: "lamp" só con adxectivos modernos (o candil, "oil lamp", é a luz da fase calma)
     ('interior moderno', r'\b(bedroom|nightstand|bedside|(table|floor|desk|bedside|electric) lamps?|lampshades?|curtains?|sofa|couch|'
                          r'picture frames?|pillows|cushions?|upholstered|armchairs?|window seat|mantel(piece)?|potted plants?|'
