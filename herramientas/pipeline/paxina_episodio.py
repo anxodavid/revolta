@@ -5,7 +5,8 @@ descrición para YouTube e folla de contactos.
 
 Le DIR_SAIDA/{qa.json,descricion.txt,contactsheet.jpg,video.mp4} (saída de longo.py), o tema e a copia HLS de
 entregar.sh, e escribe en DIR_PAXINA: index.html (plantilla paxina_episodio.html cos datos dentro), poster.jpg,
-contactsheet.jpg e hls/ (ligazón á copia HLS). As rutas son as que a páxina pide, para publicalas tal cal.
+contactsheet.jpg e hls/ (ligazón á copia HLS: init.mp4, fNNN.mp4 e lista.txt). As rutas son as que a páxina pide,
+para publicalas tal cal; os subtítulos (subtitulos.gl.vtt da copia HLS) van dentro da páxina.
 Os textos de traballo da páxina van en castelán (para o promotor); os do público (título, descrición), en galego.
 """
 import argparse
@@ -101,9 +102,9 @@ def main():
         'duracion_s': dur, 'capitulos': caps, 'fases': fases, 'ritmo': qa['ritmo_palabras_min_por_fase'],
         'quen': quen, 'portas': qa['portas'], 'nomes_portas': NOMES_PORTAS, 'publicable': qa['publicable'],
         'medidas': medidas, 'descricion': (S / 'descricion.txt').read_text(),
+        'vtt': (Path(a.hls) / 'subtitulos.gl.vtt').read_text() if (Path(a.hls) / 'subtitulos.gl.vtt').exists() else '',
         'pe': ['Página privada de trabajo del Gauntlet 3. El vídeo no está publicado en ningún canal.',
-               'Esta copia es 720p para verla aquí; el máster 1080p está en el repo, en '
-               'plan-de-negocio/gauntlet3/video/mestre/ (se une con ffmpeg y partes.txt).'] + tema.get('creditos', []),
+               f"Esta copia es 720p para verla aquí; el máster es {f['resolucion']} ({f['mb']:.0f} MB)."] + tema.get('creditos', []),
     }
     html = (AQUI / 'paxina_episodio.html').read_text()
     js = json.dumps(datos, ensure_ascii=False).replace('</', '<\\/')

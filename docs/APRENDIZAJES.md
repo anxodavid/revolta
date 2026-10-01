@@ -261,3 +261,11 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   planos de lareira de la zona de dormir, y al final se elegía igualmente uno de ellos. Ahora es configurable
   (`REVISOR_LUME_DURMIR`) y en producción vale 1,5 %: siguen cayendo los fuegos grandes (6-10 %). Para el siguiente
   episodio: que la lista de planos no pida lume en la zona de dormir, o que la regla mire el prompt.
+- **Páginas (Artifacts) y vídeo (01-10-2026):** solo sirven `.mp4/.webm` como vídeo y texto en `.txt/.json`; ni `.ts`
+  ni `.m3u8`. Para un episodio de 31 min (150 MB a 720p) en una página (≤ 15 MB por fichero, 256 MB por versión, 64 MB
+  por publicación): HLS en fMP4 (`init.mp4`, `fNNN.mp4` de 30 s) con la lista en `lista.txt` y hls.js (que no mira la
+  extensión), subtítulos dentro de la página como blob `text/vtt`, y varias publicaciones a la misma URL.
+- **El ffmpeg estático de imageio-ffmpeg (7.0.2) da *segfault* al leer cualquier `.ts`** (los escribe bien). No usar TS
+  como paso intermedio.
+- **Partir un MP4 con su pista de subtítulos `mov_text` deja huecos al reunirlo** (~0,1 s por unión: 1883,02 s frente a
+  1882,05 s en 10 anacos). Partir solo vídeo y audio: 1882,07 s. Los subtítulos van aparte en `.srt`.

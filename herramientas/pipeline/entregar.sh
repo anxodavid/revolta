@@ -6,7 +6,7 @@
 # 1. Comproba que video.mp4 se decodifica enteiro e que ningún proceso do pipeline segue a escribir.
 # 2. Parte o mestre en anacos < 50 MB SEN recodificar (DIR_SAIDA/mestre/parteNN.mp4): cada anaco vese só e
 #    reúnense sen perda con  ffmpeg -f concat -safe 0 -i partes.txt -c copy video.mp4  (proba feita aquí mesmo).
-# 3. Copia 720p en HLS (segmentos de 30 s) para a páxina de visionado, en $SCRATCH/entrega/hls (non vai ao repo).
+# 3. Copia 720p en HLS fMP4 (segmentos .mp4 de 30 s, lista.txt) para a páxina de visionado, en $SCRATCH/entrega/hls.
 #    Cada versión dunha páxina admite 256 MB en total: con CRF 26 e teito de 800 kbit/s, 31 min quedan en ~150-190 MB.
 # 4. Mostra do gancho (primeiros 3,5 min, 720p, < 30 MB) para mandala ao chat: $SCRATCH/entrega/mostra-gancho.mp4.
 # O traballo pesado vai baixo o candado de CPU (flock $CPU_LOCK).
@@ -46,13 +46,17 @@ rm -f "$E/reunido.mp4"
 
 echo "== 3 copia 720p en HLS para a páxina de visionado"
 rm -rf "$H"; mkdir -p "$H"
+# fMP4 (.mp4) e lista en .txt: as páxinas de Claude non serven .ts nin .m3u8 (hls.js le a lista igual). Ademais, o
+# ffmpeg estático de imageio (7.0.2) rompe (segfault) ao LER calquera .ts, así que tampouco serve remuxar despois
 flock "$CPU_LOCK" "$FF" -v error -i "$V" -map 0:v -map 0:a -vf scale=1280:720:flags=lanczos -c:v libx264 -preset medium \
-  -crf "${CRF720:-26}" -maxrate "${MAX720:-800k}" -bufsize 1600k -g 50 -keyint_min 50 -sc_threshold 0 -pix_fmt yuv420p \
-  -c:a aac -b:a 96k -ac 2 -ar 48000 -f hls -hls_time 30 -hls_playlist_type vod -hls_segment_filename "$H/s%03d.ts" "$H/index.m3u8"
+  -crf "${CRF720:-26}" -maxrate "${MAX720:-800k}" -bufsize 1600k -g 48 -keyint_min 48 -sc_threshold 0 -pix_fmt yuv420p \
+  -c:a aac -b:a 96k -ac 2 -ar 48000 -f hls -hls_time 30 -hls_playlist_type vod -hls_segment_type fmp4 \
+  -hls_fmp4_init_filename init.mp4 -hls_segment_filename "$H/f%03d.mp4" "$H/lista.m3u8"
+mv "$H/lista.m3u8" "$H/lista.txt"
 if [ -f "$D/subtitulos.gl.srt" ]; then
   { echo WEBVTT; echo; sed 's/\r$//; s/\([0-9][0-9]:[0-9][0-9]:[0-9][0-9]\),\([0-9][0-9][0-9]\)/\1.\2/g' "$D/subtitulos.gl.srt"; } > "$H/subtitulos.gl.vtt"
 fi
-echo "   $(ls "$H"/s*.ts | wc -l) segmentos, $(du -cm "$H"/s*.ts | tail -1 | cut -f1) MB, o maior $(du -m "$H"/s*.ts | sort -n | tail -1 | cut -f1) MB"
+echo "   $(ls "$H"/f*.mp4 | wc -l) segmentos, $(du -cm "$H"/f*.mp4 | tail -1 | cut -f1) MB, o maior $(du -m "$H"/f*.mp4 | sort -n | tail -1 | cut -f1) MB"
 
 echo "== 4 mostra do gancho (3,5 min, 720p)"
 flock "$CPU_LOCK" "$FF" -v error -y -i "$V" -t 210 -map 0:v -map 0:a -vf scale=1280:720:flags=lanczos -c:v libx264 \

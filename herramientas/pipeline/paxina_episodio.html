@@ -102,9 +102,7 @@ footer p { margin: 0; max-width: 75ch; }
   </header>
 
   <section class="xanela" aria-label="Vídeo">
-    <video id="v" controls playsinline preload="metadata" poster="poster.jpg" crossorigin="anonymous">
-      <track kind="subtitles" srclang="gl" label="Galego" src="hls/subtitulos.gl.vtt">
-    </video>
+    <video id="v" controls playsinline preload="metadata" poster="poster.jpg"></video>
     <p class="aviso-video" id="aviso" hidden></p>
     <div class="embude" id="embude" role="slider" tabindex="0" aria-label="Posición no episodio e fases do embude"></div>
     <div class="lenda" id="lenda"></div>
@@ -159,18 +157,24 @@ footer p { margin: 0; max-width: 75ch; }
   $('titulo').textContent = D.titulo;
   $('meta').textContent = hms(dur) + ' · ' + D.meta;
 
-  // reprodutor: hls.js onde hai MSE; HLS nativo en Safari e iOS
-  var fonte = 'hls/index.m3u8';
+  // reprodutor: hls.js (MSE, ou ManagedMediaSource en iOS 17.1+). As páxinas só serven .mp4 e .txt: os segmentos son
+  // fMP4 e a lista vai en lista.txt, que hls.js le igual pero o HLS nativo non; os subtítulos van dentro da páxina
+  var fonte = 'hls/lista.txt';
+  if (D.vtt) {
+    var tr = document.createElement('track');
+    tr.kind = 'subtitles'; tr.srclang = 'gl'; tr.label = 'Galego';
+    tr.src = URL.createObjectURL(new Blob([D.vtt], { type: 'text/vtt' }));
+    v.appendChild(tr);
+  }
   if (window.Hls && window.Hls.isSupported()) {
     var hls = new window.Hls({ maxBufferLength: 60 });
     hls.loadSource(fonte); hls.attachMedia(v);
     hls.on(window.Hls.Events.ERROR, function (_, d) {
       if (d.fatal) { $('aviso').hidden = false; $('aviso').textContent = 'No se pudo cargar el vídeo (' + d.details + '). Recarga la página.'; }
     });
-  } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
-    v.src = fonte;
   } else {
-    $('aviso').hidden = false; $('aviso').textContent = 'Este navegador no reproduce HLS. Prueba con Chrome, Firefox, Edge o Safari.';
+    $('aviso').hidden = false;
+    $('aviso').textContent = 'Este navegador no puede reproducir el vídeo aquí. Prueba con Chrome, Firefox, Edge o Safari 17 o posterior.';
   }
 
   // faixa do embude
