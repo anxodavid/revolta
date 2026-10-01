@@ -114,22 +114,22 @@ footer p { margin: 0; max-width: 75ch; }
       <ol class="capitulos" id="capitulos"></ol>
     </section>
     <section class="caderno" aria-labelledby="h-prod">
-      <h2 id="h-prod">Cómo se hizo</h2>
-      <div><h3>Quién hizo qué</h3><ul class="quen" id="quen"></ul></div>
-      <div><h3>Puertas automáticas</h3><p id="veredicto"></p><div class="portas" id="portas"></div></div>
+      <h2 id="h-prod">Como se fixo</h2>
+      <div><h3>Quen fixo que</h3><ul class="quen" id="quen"></ul></div>
+      <div><h3>Portas automáticas</h3><p id="veredicto"></p><div class="portas" id="portas"></div></div>
       <div><h3>Medidas</h3><dl class="medidas" id="medidas"></dl></div>
     </section>
   </div>
 
   <section class="descricion" aria-labelledby="h-desc">
-    <div class="fila"><h2 id="h-desc">Descripción para YouTube</h2><button class="copiar" id="copiar">Copiar texto</button></div>
+    <div class="fila"><h2 id="h-desc">Descrición para YouTube</h2><button class="copiar" id="copiar">Copiar o texto</button></div>
     <pre id="descricion"></pre>
   </section>
 
   <figure id="folla">
-    <h2>Hoja de contactos</h2>
-    <img src="contactsheet.jpg" alt="24 fotogramas del episodio, en orden" loading="lazy">
-    <figcaption>24 fotogramas repartidos por todo el episodio, en orden de lectura.</figcaption>
+    <h2>Folla de contactos</h2>
+    <img src="contactsheet.jpg" alt="24 fotogramas do episodio, en orde" loading="lazy">
+    <figcaption>24 fotogramas repartidos por todo o episodio, en orde de lectura.</figcaption>
   </figure>
 
   <footer id="pe"></footer>
@@ -140,6 +140,7 @@ footer p { margin: 0; max-width: 75ch; }
 <script>
 (function () {
   var D = JSON.parse(document.getElementById('datos').textContent);
+  document.documentElement.lang = 'gl';
   var $ = function (id) { return document.getElementById(id); };
   var el = function (tag, props, kids) {
     var e = document.createElement(tag);
@@ -170,17 +171,17 @@ footer p { margin: 0; max-width: 75ch; }
     var hls = new window.Hls({ maxBufferLength: 60 });
     hls.loadSource(fonte); hls.attachMedia(v);
     hls.on(window.Hls.Events.ERROR, function (_, d) {
-      if (d.fatal) { $('aviso').hidden = false; $('aviso').textContent = 'No se pudo cargar el vídeo (' + d.details + '). Recarga la página.'; }
+      if (d.fatal) { $('aviso').hidden = false; $('aviso').textContent = 'Non se puido cargar o vídeo (' + d.details + '). Recarga a páxina.'; }
     });
   } else {
     $('aviso').hidden = false;
-    $('aviso').textContent = 'Este navegador no puede reproducir el vídeo aquí. Prueba con Chrome, Firefox, Edge o Safari 17 o posterior.';
+    $('aviso').textContent = 'Este navegador non pode reproducir o vídeo aquí. Proba con Chrome, Firefox, Edge ou Safari 17 ou posterior.';
   }
 
   // faixa do embude
   var cores = { gancho: 'var(--candea)', transicion: 'color-mix(in oklab, var(--candea) 45%, #34507a)',
                 calma: '#2c4166', durmir: '#151f33' };
-  var nomes = { gancho: 'gancho', transicion: 'transición', calma: 'calma', durmir: 'dormir' };
+  var nomes = { gancho: 'gancho', transicion: 'transición', calma: 'calma', durmir: 'durmir' };
   var emb = $('embude');
   D.fases.forEach(function (f) {
     var d = el('div', { class: 'fase', style: 'width:' + ((f.t1 - f.t0) / dur * 100) + '%;background:' + cores[f.fase] });
@@ -215,7 +216,7 @@ footer p { margin: 0; max-width: 75ch; }
   var CLAVE = 'pos-' + D.id, gardada = 0;
   try { gardada = parseFloat(localStorage.getItem(CLAVE) || '0') || 0; } catch (e) {}
   if (gardada > 20 && gardada < dur - 30) {
-    var bc = $('continuar'); bc.hidden = false; bc.textContent = 'Seguir en ' + hms(gardada);
+    var bc = $('continuar'); bc.hidden = false; bc.textContent = 'Continuar en ' + hms(gardada);
     bc.addEventListener('click', function () { ir(gardada, true); bc.hidden = true; });
   }
   var ultimo = 0;
@@ -233,8 +234,8 @@ footer p { margin: 0; max-width: 75ch; }
   D.quen.forEach(function (q) { var li = el('li'); li.appendChild(el('b', { text: q[0] + ': ' })); li.appendChild(document.createTextNode(q[1])); $('quen').appendChild(li); });
   var np = Object.keys(D.portas).length, ns = Object.keys(D.portas).filter(function (k) { return D.portas[k]; }).length;
   $('veredicto').appendChild(el('span', { class: 'veredicto ' + (D.publicable ? 'si' : 'non'),
-    text: (D.publicable ? 'Pasa todas' : 'No pasa todas') + ' (' + ns + '/' + np + ')' }));
-  $('veredicto').appendChild(document.createTextNode(' Son controles automáticos: nadie ha visto aún el vídeo entero.'));
+    text: (D.publicable ? 'Pasa todas' : 'Non pasa todas') + ' (' + ns + '/' + np + ')' }));
+  $('veredicto').appendChild(document.createTextNode(' Son controis automáticos: ninguén viu aínda o vídeo enteiro.'));
   Object.keys(D.portas).forEach(function (k) {
     $('portas').appendChild(el('span', { class: 'porta ' + (D.portas[k] ? 'si' : 'non'), text: D.nomes_portas[k] || k, title: k }));
   });
@@ -242,8 +243,8 @@ footer p { margin: 0; max-width: 75ch; }
 
   $('descricion').textContent = D.descricion;
   $('copiar').addEventListener('click', function () {
-    var b = this, ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar texto'; }, 1800); };
-    var sel = function () { var r = document.createRange(); r.selectNodeContents($('descricion')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Seleccionado: copia con Ctrl+C'; };
+    var b = this, ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar o texto'; }, 1800); };
+    var sel = function () { var r = document.createRange(); r.selectNodeContents($('descricion')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Seleccionado: cópiao con Ctrl+C'; };
     try { navigator.clipboard.writeText(D.descricion).then(ok, sel); } catch (e) { sel(); }
   });
   D.pe.forEach(function (p) { $('pe').appendChild(el('p', { text: p })); });

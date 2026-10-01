@@ -7,7 +7,7 @@ Le DIR_SAIDA/{qa.json,descricion.txt,contactsheet.jpg,video.mp4} (saída de long
 entregar.sh, e escribe en DIR_PAXINA: index.html (plantilla paxina_episodio.html cos datos dentro), poster.jpg,
 contactsheet.jpg e hls/ (ligazón á copia HLS: init.mp4, fNNN.mp4 e lista.txt). As rutas son as que a páxina pide,
 para publicalas tal cal; os subtítulos (subtitulos.gl.vtt da copia HLS) van dentro da páxina.
-Os textos de traballo da páxina van en castelán (para o promotor); os do público (título, descrición), en galego.
+Toda a páxina vai en galego normativo (decisión do promotor do 01-10-2026).
 """
 import argparse
 import json
@@ -22,12 +22,17 @@ import yaml
 
 AQUI = Path(__file__).resolve().parent
 NOMES_PORTAS = {
-    'autoria_declarada': 'autoría declarada', 'duracion': 'duración', 'wer_mestura': 'se entiende (ASR)',
-    'sincronia_av': 'sincronía audio-vídeo', 'sincronia_subtitulos': 'sincronía de subtítulos',
-    'lingua_lt': 'lengua (LanguageTool)', 'h1_ancoraxe': 'anclaje del gancho', 'veracidade': 'veracidad',
-    'estilo': 'estilo', 'imaxes_revisadas': 'imágenes aprobadas', 'sonoridade': 'sonoridad', 'bitrate': 'bitrate',
+    'autoria_declarada': 'autoría declarada', 'duracion': 'duración', 'wer_mestura': 'enténdese (ASR)',
+    'sincronia_av': 'sincronía son-vídeo', 'sincronia_subtitulos': 'sincronía dos subtítulos',
+    'lingua_lt': 'lingua (LanguageTool)', 'h1_ancoraxe': 'ancoraxe do gancho', 'veracidade': 'veracidade',
+    'estilo': 'estilo', 'imaxes_revisadas': 'imaxes aprobadas', 'sonoridade': 'sonoridade', 'bitrate': 'taxa de bits',
     'resolucion': 'resolución 1080p'}
 FASES = ('gancho', 'transicion', 'calma', 'durmir')
+
+
+def coma(x, d=1):
+    """Número coa coma decimal do galego."""
+    return f'{x:.{d}f}'.replace('.', ',')
 
 
 def romano(n):
@@ -49,7 +54,7 @@ def hms(s):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('saida'); ap.add_argument('tema'); ap.add_argument('hls'); ap.add_argument('paxina')
-    ap.add_argument('--etiqueta', default='episodio piloto · borrador sin publicar')
+    ap.add_argument('--etiqueta', default='episodio piloto · borrador sen publicar')
     ap.add_argument('--video', default=None, help='mestre (por defecto DIR_SAIDA/video.mp4; longo.py déixao en TRABALLO/video.mp4)')
     a = ap.parse_args()
     S, P = Path(a.saida), Path(a.paxina)
@@ -72,39 +77,39 @@ def main():
             x['t1'] = y['t0']
 
     au = tema.get('autoria') or {}
-    quen = [['Guion', au.get('guion', '(sin declarar)')],
-            ['Dossier de fuentes', au.get('dossier', '(sin declarar)')],
-            ['Prompts de las imágenes', au.get('escenas', '(sin declarar)')],
-            ['Automático y local', au.get('automatico', '')],
-            ['Revisión humana', 'ninguna todavía: nadie ha visto el vídeo entero antes de esta página.']]
+    quen = [['Guion', au.get('guion', '(sen declarar)')],
+            ['Dosier de fontes', au.get('dossier', '(sen declarar)')],
+            ['Indicacións (prompts) das imaxes', au.get('escenas', '(sen declarar)')],
+            ['Automático e local', au.get('automatico', '')],
+            ['Revisión humana', 'ningunha polo momento: ninguén viu o vídeo enteiro antes desta páxina.']]
 
     rex = qa.get('revision_imaxes') or []
     intentos = [len(r.get('intentos', [])) for r in rex]
     a_ = qa['asr']['mestura']
     medidas = [
         ['Duración', f"{hms(dur)} ({len(qa['escenas'])} planos)"],
-        ['Formato', f"{f['resolucion']} a {f['fps']} fps, {f['mb']} MB, {f['kbps']} kb/s (aquí, copia 720p)"],
-        ['Sonoridad', f"{f['lufs_integrado']} LUFS integrados, pico {f['pico_real_dbtp']} dBTP"],
-        ['Inteligibilidad', f"WER {a_['wer']} (Whisper frase a frase, sobre la mezcla con ambiente)"],
+        ['Formato', f"{f['resolucion']} a {coma(f['fps'], 0)} fps, {coma(f['mb'])} MB, {f['kbps']} kb/s (aquí, copia de 720p)"],
+        ['Sonoridade', f"{coma(f['lufs_integrado'])} LUFS integrados, pico real {coma(f['pico_real_dbtp'])} dBTP"],
+        ['Intelixibilidade', f"WER {coma(a_['wer'], 3)} (Whisper frase a frase, sobre a mestura co ambiente)"],
         ['Ritmo por fase', ' → '.join(f"{v:.0f}" for v in qa['ritmo_palabras_min_por_fase'].values()) + ' palabras/min'],
-        ['Plano medio por fase', ' → '.join(f'{v:.0f} s' for v in qa['duracion_media_plano_por_fase_s'].values())],
+        ['Duración media do plano', ' → '.join(f'{v:.0f} s' for v in qa['duracion_media_plano_por_fase_s'].values())],
     ]
     if rex:
-        medidas.append(['Imágenes', f"{sum(r['ok'] for r in rex)}/{len(rex)} aprobadas por la puerta automática, "
-                                    f"{sum(intentos) / len(intentos):.1f} intentos de media"])
+        medidas.append(['Imaxes', f"{sum(r['ok'] for r in rex)}/{len(rex)} aprobadas pola porta automática, "
+                                  f"{coma(sum(intentos) / len(intentos))} intentos de media"])
     cpu = sum(v.get('cpu_s', 0) for v in (qa.get('tempos') or {}).values())
     if cpu:
-        medidas.append(['Cálculo', f'{cpu / 3600:.1f} h de CPU (4 núcleos, sin GPU)'])
+        medidas.append(['Cálculo', f'{coma(cpu / 3600)} h de CPU (4 núcleos, sen GPU)'])
 
     datos = {
         'id': tema['id'], 'serie': 'Cousas de Galiza para durmir', 'etiqueta': a.etiqueta, 'titulo': tema['titulo'],
-        'meta': f"galego · voz sintética · generado el {date.today().strftime('%d-%m-%Y')}",
+        'meta': f"galego · voz sintética · xerado o {date.today().strftime('%d-%m-%Y')}",
         'duracion_s': dur, 'capitulos': caps, 'fases': fases, 'ritmo': qa['ritmo_palabras_min_por_fase'],
         'quen': quen, 'portas': qa['portas'], 'nomes_portas': NOMES_PORTAS, 'publicable': qa['publicable'],
         'medidas': medidas, 'descricion': (S / 'descricion.txt').read_text(),
         'vtt': (Path(a.hls) / 'subtitulos.gl.vtt').read_text() if (Path(a.hls) / 'subtitulos.gl.vtt').exists() else '',
-        'pe': ['Página privada de trabajo del Gauntlet 3. El vídeo no está publicado en ningún canal.',
-               f"Esta copia es 720p para verla aquí; el máster es {f['resolucion']} ({f['mb']:.0f} MB)."] + tema.get('creditos', []),
+        'pe': ['Páxina privada de traballo do Gauntlet 3. O vídeo non está publicado en ningunha canle.',
+               f"Esta copia é de 720p para vela aquí; o orixinal é de {f['resolucion']} ({f['mb']:.0f} MB)."] + tema.get('creditos', []),
     }
     html = (AQUI / 'paxina_episodio.html').read_text()
     js = json.dumps(datos, ensure_ascii=False).replace('</', '<\\/')

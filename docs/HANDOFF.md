@@ -23,12 +23,16 @@ Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 automático (`gauntlet3/video/qa.md`): 12/13 puertas; falla `imaxes_revisadas` (127/162 planos aprobados por la puerta;
 el resto se quedó con su mejor intento). −17,1 LUFS, WER 0,031, subtítulos 100 % en su sitio, ritmo 157 → 114
 palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
-- **Verlo:** página privada https://claude.ai/artifact/6hXeH9wqWbHCWqwVW5K5EX (copia 720p en HLS fMP4, capítulos,
-  faja del embudo, QA, descripción para YouTube). Avance de 4:50 en `gauntlet3/video/avance/`.
+- **Verlo:** página https://claude.ai/artifact/6hXeH9wqWbHCWqwVW5K5EX (en galego normativo por petición del promotor;
+  copia 720p en HLS fMP4, capítulos, faja del embudo, QA, descripción para YouTube). Avance de 4:50 en
+  `gauntlet3/video/avance/`.
+- **Imágenes elegidas** (162, JPEG) y la caché de la puerta en `gauntlet3/video/imaxes/` (su LEEME explica cómo rehacer
+  solo los planos que pide el tribunal sin volver a generar el resto).
 - **Máster 1080p (333 MB):** NO está en git (pendiente de que el promotor decida dónde archivarlo: 333 MB en el
   historial pesan en cada clon). Está en `$SCRATCH/longo/w/video.mp4` y partido sin recodificar en
   `$SCRATCH/entrega/mestre-partes/` (10 anacos, se reúnen con `ffmpeg -f concat -safe 0 -i partes.txt -c copy`).
-  **El scratchpad se pierde al acabar la sesión.**
+  **El scratchpad se pierde al acabar la sesión:** si el promotor no elige dónde archivarlo, el máster se rehace en la
+  ronda de arreglos (las imágenes ya están en el repo; voz ≈ 16 min, montaje ≈ 70 min, QA ≈ 30 min).
 - **Tribunal final (agente Claude, 01-10-2026; nadie ha visto ni oído el episodio entero):** `veredictos/tribunal-final.md`.
   **No publicable tal cual; sí con arreglos.** Gancho 4/5. Imagen: la comparación "a ciegas" no fue ciega de verdad
   (la referencia ya estaba descrita en `visual-r1.md`); empate 21-21 y elige la referencia ≈55/45 porque allí la gente

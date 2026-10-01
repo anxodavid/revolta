@@ -21,6 +21,7 @@ de Galicia para quedarse dormido, **100 % en galego**. Es un hobby con opción d
 | `plan-de-negocio/` | Planes v1 y v2, decisiones, guion muestra v1, tribunal del Gauntlet 1 |
 | `plan-de-negocio/gauntlet/` | Gauntlet 1: investigación y piezas finales |
 | `plan-de-negocio/gauntlet2/` | Gauntlet 2: contexto, referencia, piezas, veredictos de cada ronda, medidas y vídeo de ejemplo |
+| `plan-de-negocio/gauntlet3/` | Gauntlet 3: episodio largo "As meigas de verdade" (31 min): tema, dossier, guion, voz, son, visual, `video/` (QA, avance, imágenes elegidas) y tribunal final |
 | `herramientas/voz/` | Voces de Nós (VITS y StyleTTS2), kit A/B y control ASR |
 | `herramientas/pipeline/` | Pipeline automático tema → MP4 (guion, corrección, voz, escenas, imágenes, sonido, montaje, QA). Su README explica instalación, etapas y licencias |
 
@@ -38,7 +39,9 @@ de Galicia para quedarse dormido, **100 % en galego**. Es un hobby con opción d
 
 - El scratchpad y los entornos (venvs, modelos de ~1-6 GB) **no sobreviven** entre sesiones: hay que reconstruirlos con
   las instrucciones de `herramientas/pipeline/README.md` y `herramientas/voz/README.md`.
-- Solo CPU (4 núcleos, 15 GB). Un workflow corre 2 agentes a la vez. Un vídeo de 3 min ≈ 5 h de CPU de núcleo.
+- Solo CPU (4 núcleos). **Límite real de memoria: 13,36 GiB para todos los procesos** (no los 15,7 de `free`). Un
+  workflow corre 2 agentes a la vez. Un episodio de 31 min ≈ 16,5 h de CPU de núcleo (imágenes ≈ 100 s por intento en
+  una CPU sin bf16; ≈ 30 s si `/proc/cpuinfo` tiene `amx_bf16`).
 - Hugging Face y PyPI son accesibles. Clonar repos públicos de GitHub falló el 29-09-2026 pero funcionó el 30-09-2026
   (`git ls-remote`/`git clone` por el proxy de git): depende de la sesión. ffmpeg completo vía `imageio-ffmpeg`.
 - **Entorno en una orden:** `bash herramientas/pipeline/instalar.sh` (≈6 min, ≈15,7 GB en el scratchpad) y
@@ -47,6 +50,25 @@ de Galicia para quedarse dormido, **100 % en galego**. Es un hobby con opción d
 - El guion del pipeline debe usar un **LLM potente por API** (decisión del promotor); no hay clave de API en el entorno.
 - Para compartir un fichero recién subido, usar la URL `raw/<commit>/...` de GitHub (la de la rama va con caché).
   Adjuntar al chat admite como máximo 30 MB.
+
+## Trabajos largos (render de horas): lo aprendido el 01-10-2026
+
+- **El contenedor se reinicia si la sesión queda ociosa sin ninguna tarea en segundo plano**, aunque haya procesos
+  `setsid nohup` trabajando: mientras dure el trabajo, mantener **siempre un Monitor armado** (re-armarlo al caducar)
+  y una revisión programada cada hora (`send_later`), que sí sobrevive al reinicio. El scratchpad sobrevive a los
+  reinicios, no a una sesión nueva.
+- Todo lo que use CPU o memoria de verdad va con `flock "$CPU_LOCK"`, también las pruebas: `nice 19` no basta.
+- Lanzar con `herramientas/pipeline/lanzar-longo.sh` (reintentos y caché por etapas); mirar la hoja de rechazos de la
+  puerta de imágenes en los primeros planos antes de dejarlo horas (la puerta puede rechazar de más).
+- En los vigilantes, `awk` es `mawk`: usar `awk -W interactive` o no avisa. El ffmpeg estático da *segfault* al leer
+  `.ts`.
+- Páginas (Artifacts): solo sirven `.mp4/.webm` como vídeo y texto en `.txt/.json` (≤ 15 MB por fichero, ≤ 64 MB por
+  publicación, 256 MB por versión). Un episodio se publica como HLS fMP4 con `paxina_episodio.py` (ver el README del
+  pipeline). Para cambiar una página publicada, volver a publicar el mismo fichero: la URL no cambia.
+- Másteres de vídeo de cientos de MB: no subirlos a git sin que el promotor decida dónde archivarlos (quedan para
+  siempre en el historial y en cada clon).
+- Generar imágenes fuera: desde aquí responden por HTTPS Replicate, fal, Hugging Face, OpenAI y Google; Modal no
+  (gRPC). Una clave nueva del entorno solo llega a una sesión nueva.
 
 ## Gauntlet Loop: guardar resultados parciales en git
 
