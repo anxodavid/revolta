@@ -329,8 +329,12 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
         previo = feito.get(clave)
         vella = previo and previo.get('version_revisor') != _rv.VERSION and revisar
         embs = {}                        # ficheiro -> (embedding, arquetipo) dos intentos revisados agora
+        # caché restaurada do repo (gauntlet3/video/imaxes/LEEME.md): só está a imaxe escollida, non os outros
+        # intentos; daquela o plano dáse por feito aínda que non pasase a porta (se non, volvía revisar intentos que
+        # xa non existen: FileNotFoundError na rolda de arranxos do 01-10-2026)
+        restaurada = bool(previo) and any(not (outdir / x['ficheiro']).exists() for x in previo['intentos'])
         novo = not (previo and not vella and (outdir / previo['ficheiro']).exists() and
-                    (previo['ok'] or len(previo['intentos']) >= MAX_INTENTOS + RESERVAS))
+                    (previo['ok'] or restaurada or len(previo['intentos']) >= MAX_INTENTOS + RESERVAS))
         if not novo:
             r = previo
         else:
