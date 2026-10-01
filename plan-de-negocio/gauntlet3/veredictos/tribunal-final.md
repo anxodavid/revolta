@@ -48,3 +48,91 @@ que por diseño lleva pocas personas, y eso explica parte del 2/5. Pero en los 9
 hay acción en 2 (planos 12 y 33), así que la carencia sigue ahí aunque se descuente esa fase. Correspondencia para
 las secciones siguientes: el fotograma *n* de la Imagen 2 es el plano de la lista anterior en la posición *n* (el 6,
 bodegón con cerveza y café, es el plano 55, 5:48; el 4, pueblo inglés, es el 33, 3:07).
+
+## 2. Imagen tras destapar
+
+**Material y método.** Además de las 40 imágenes de `tribunal/detalle_1.jpg` … `detalle_5.jpg`, miré **las 162 imágenes
+que usó el montaje** (`$SCRATCH/longo/w/imaxes_graduadas/`, ya graduadas; abiertas con PIL en hojas de 8, sin
+ffmpeg). El Ken Burns del montaje hace como mucho un zoom de 1,12x (`montaxe.py`, `ZOOM`), así que en pantalla se ve al
+menos el 89 % de cada imagen. De `qa.json` saqué lo que dijo la puerta automática en cada intento (problemas, avisos y
+la descripción de Florence-2). Los recuentos "a ojo" y la clasificación son de Claude; los datos de la puerta son
+automáticos. Tiempos: inicio y fin del plano según `escenas-montadas.json`; "fichero" es la hoja de detalle donde se
+ve o, si no sale en ninguna, la imagen de `imaxes_graduadas/`.
+
+**Corrección de la sección 1.** El fotograma 6 de la hoja a ciegas (plano 55, 5:48: jarra de vidrio, cerveza, café y
+limones) no es un anacronismo: ilustra la queimada del siglo XX ("tradición inventada"). El defecto es otro, menor:
+no se lee como queimada sino como té helado y cerveza.
+
+### 2.1 ¿Se corrigió la mayor carencia de la ronda 1?
+
+La carencia era: *"casi ningún plano muestra a gallegos del siglo XVII haciendo lo que narra el guion (curar,
+denunciar, declarar, juzgar), y encima la luz eléctrica de los planos 2 y 13 rompe la época a la vista de
+cualquiera"*. **Respuesta: a medias. La primera mitad mejora en el gancho; la segunda no se corrigió.**
+
+| Parte de la carencia | Ronda 1 (hoja de 16) | Episodio (162 planos) | ¿Corregida? |
+|---|---|---|---|
+| Gente haciendo lo que se narra | 4 acciones de 16; nadie se relaciona con nadie | Hay personas en 76 de 162 planos (47 %), pero solo en ≈ 25 hacen algo o se relacionan: gancho 8 de 21 (38 %), transición 7 de 37 (19 %), calma 6 de 39 (15 %) y dormir 4 de 65 (6 %) [recuento de Claude a ojo]. Ya hay relaciones (planos 2, 6, 8, 12, 28, 57, 59, 81, 92 y 150), y el gancho enseña la premisa: la declaración (6), el lacre (13), el tribunal (15) y la puerta de la cárcel (17) | **En parte.** Mejora clara en el gancho. En la transición y la calma, casi todos los planos con persona son de una figura sola que mira, camina o posa. Además, en **36 de los 162 planos** la imagen elegida lleva el aviso de la puerta "falta: <elemento>": lo que pedía el prompt no salió. Ejemplos: 16 (un juez → una anciana con velas), 19 (una partera dando una infusión a una embarazada → una mujer sola sentada) y 20 (los vecinos espiando la fuente → un anciano con un fuego encendido encima de la mesa) |
+| Luz eléctrica | Farolas (2) y luces de ciudad (13) | Bombilla desnuda y radiador (84), farolas encendidas en el rótulo del capítulo VII (133) y apliques de porche en una casa colonial (161). Probables: apliques con tulipa (91), un pueblo iluminado al fondo (105), una lámpara colgante (148) y un pie de farol victoriano con cables (82) | **No** |
+| Fuego repetido | Llama en 7 de 16 | 3 de 16 en la hoja a ciegas. Más de un 1,5 % de píxeles de llama en 15 de 162 planos: gancho 24 %, transición 0 %, calma 15 %, dormir 6 % (medida `lume_quente` de la puerta) | **Sí** |
+| Clichés de meiga | Caldero con poción (16) y velas rojas (4) | No hay escobas, sombreros de pico, narices ganchudas ni calderos con poción. El más cercano es el 7 (0:27): una anciana con una llama en las manos, fuegos a los lados y un cuenco que brilla | **Casi** |
+| Figura sola de espaldas | Planos 2 y 5 | La puerta detecta 6 (planos 5, 22, 29, 33, 46 y 128), y hay más sin detectar (44, 76, 104) | **Igual** |
+
+**Por qué la puerta no lo paró.** 127 planos pasaron la puerta y **35 salieron sin pasarla**: al agotar los intentos,
+el pipeline se queda con el mejor. 27 de esos 35 son posteriores al plano 94, cuando se apagaron las imágenes de reserva
+(`IMG_RESERVAS=0`). Leídos uno a uno, unos 11 rechazos acertaban y molestan en pantalla: 33, 77, 91, 94, 105, 116, 133,
+134, 145, 153 y 161. Otros ~20 eran falsos positivos o repeticiones aceptables al dormir: 59 (es una taberna de los
+años 50, y la ropa y la lámpara son de su época), 100 (un atardecer), 104, 108, 110 (un "ciprés" que no está), 113,
+127, 146, 154, 160 y 162 (una vela leída como "lume grande no exterior"), entre otros. Los ajustes de la producción
+(`APRENDIZAJES.md`) eran razonables: "falta: objeto", witch/hooked nose/warts y el arquetipo seguido pasaron a aviso,
+y el umbral de lume en la zona de dormir subió a 1,5 %. Cortaron rechazos falsos que empeoraban el vídeo. El fallo está en
+la combinación: **sin reservas, un rechazo verdadero sale igual al aire, y nadie miró los 35 rechazados antes de
+montar.** El peor plano del vídeo, el 84, ni siquiera es un rechazo: lo aprobó la puerta. Florence lo describió como
+"two young women in a kitchen, cooking together" y no nombró la bombilla ni el radiador, y ningún par de CLIP busca
+"bare light bulb" ni "radiator".
+
+### 2.2 Defectos visibles
+
+**Bloquea publicar.** Un espectador los ve sin buscarlos, rompen la época que vende el canal y caen en momentos
+marcados: un rótulo de capítulo, el cierre y un plano de 15 s en la parte despierta.
+
+| Minuto | Plano | Fichero | Qué se ve | Puerta |
+|---|---|---|---|---|
+| 10:34-10:50 (15 s) | 84 | `detalle_3.jpg` (10:42) · `083-5779b492-3.png` | **Bombilla eléctrica desnuda** colgando en el centro, arriba, y **radiador de hierro** bajo una ventana de carpintería moderna, en la cocina de dos curanderas del XVII ("Moitas das acusadas eran parteiras e menciñeiras…") | Aprobado |
+| 22:49-23:03 (14 s) | 133 | `detalle_5.jpg` (22:56) · `132-a8a95fcc-0.png` | Rótulo "Capítulo VII · O frade que dubidaba" sobre una iglesia barroca con **al menos 6 farolas encendidas** en el césped y luces en la ladera: el defecto del plano 2 de la ronda 1, ahora en un rótulo | Rechazado en los 4 intentos ("luz eléctrica (CLIP)") y usado |
+| 30:41-31:02 (20 s) | 161 | `160-32b10266-0.png` | Penúltimo plano ("A casa descansa baixo a chuvia"): **casa colonial anglosajona** de dos plantas con todas las ventanas encendidas y **dos apliques de porche** junto a la puerta | Rechazado ("casas británicas", "repetida") y usado; los 4 intentos tienen luz eléctrica |
+| 5:51-6:01 (10 s) | 56 | `055-93ec6c81-0.png` | Emigrantes de los años 50: el hombre lleva una **maleta de ruedas con asa extensible**, en el centro del encuadre | Aprobado |
+
+**Molesta.** Se nota si se mira y rompe la Galicia que se cuenta o el tono del texto.
+
+| Minuto | Plano | Fichero | Qué se ve |
+|---|---|---|---|
+| 0:20-0:23 | 5 | `detalle_1.jpg` (0:22) | "Vilalba, mil seiscentos dezasete" sobre una calle de **casas adosadas inglesas** con chimeneas en los hastiales: la primera imagen de la historia |
+| 1:55-2:03 · 2:39-2:47 · 3:04-3:11 | 23 · 29 · 33 | `022-dffb1fc5-2.png` · `028-ebee8eb3-0.png` · `032-c7ff689c-3.png` | Casa de campo inglesa ("San Xiao de Mourence"), mansión georgiana con chimeneas ("Xinzo de Limia") y calle de pueblo de los Cotswolds, este rechazado y usado |
+| 6:39-6:51 | 61 | `060-879e4f8a-1.png` | "En Santiago…" sobre una **catedral inventada**, con dos torres y agujas góticas que no son el Obradoiro: el edificio que todo gallego reconoce |
+| 7:42-7:50 · 8:48-9:00 | 68 · 75 | `067-af638455-1.png` · `detalle_3.jpg` (8:54) | "Pazos de Arenteiro, en Boborás" con un pueblo inglés y su puente; "unha veciña de Cangas" con **casas de madera sobre pilotes** de aire nórdico |
+| 23:03-23:14 | 134 | `133-7829ec6d-1.png` | "Feijoo naceu en Casdemiro" sobre una mansión georgiana con las ventanas encendidas (rechazado y usado) |
+| 2:03-2:10 · 2:18-2:25 · 3:11-3:16 · 3:16-3:24 | 24 · 26 · 34 · 35 | `023-5369e2be-0.png` · `detalle_1.jpg` (2:21) · `detalle_2.jpg` (3:13) · `034-434064b1-0.png` | **Ropa de los siglos XIX-XXI**: abrigo entallado con bolso de mano; gorra plana y chaqueta de tweed; pañuelo tipo hiyab, abrigo moderno y un peluche en brazos (el ovillo de lana del texto); gorro de lana |
+| 4:31-4:38 · 9:22-9:30 · 10:50-11:03 | 46 · 78 · 85 | `detalle_2.jpg` (4:34) · `077-d130fe97-0.png` · `084-6f2a9829-2.png` | Más ropa fuera de época: dos mujeres con bombín; un abrigo de pelo de camello actual; un sombrero vaquero |
+| 2:54-2:59 | 31 | `030-ef658184-0.png` | El gato salta sobre una **encimera con fregadero y grifos** de cuello de cisne |
+| 12:09-12:26 · 12:55-13:05 | 91 · 94 | `090-c464f180-1.png` · `093-3be97fdb-2.png` | "Entremos nunha cociña de aldea": cocina económica de hierro y dos apliques con tulipa de aspecto eléctrico. "O escano de castiñeiro": un cuarto con un cuadro enmarcado, un aplique y una vela en vaso, sin escano ni lareira. Los dos rechazados y usados |
+| 7:32-7:42 | 67 | `detalle_3.jpg` (7:37) | Una anciana **sonriente** mientras se narran azotes y "saír emplumadas á vergonza pública", con lámpara de queroseno y retratos enmarcados |
+| 10:06-10:18 · 15:39-15:54 · 26:51-27:09 · 20:25-20:42 | 82 · 105 · 148 · 123 | `081-d824e3d0-0.png` · `104-3a0177b3-1.png` · `147-a2b14153-0.png` · `122-9fe164c2-0.png` | Pie de farol victoriano de hierro con cables junto a una mujer con un globo luminoso; una casa con cinco ventanas encendidas y un **pueblo iluminado al fondo** (el "luces de ciudad" de la ronda 1, pequeño); una lámpara colgante con tulipa de cristal en "a cociña da lareira"; el estanque de un parque con dos postes de farola, en vez de una fuente de aldea |
+| 1:37-1:44 | 20 | `019-7a39c792-4.png` | "Uns veciños foron espreitar a fonte": un anciano con **un fuego ardiendo encima de la mesa** de madera |
+| 18:37-18:47 · 25:57-26:16 · 28:25-28:44 | 116 · 145 · 153 | `115-2fe0ff20-0.png` · `detalle_5.jpg` (26:07) · `152-179e853a-0.png` | **En la zona de dormir:** una figura con ropa ceñida actual, de brazos abiertos sobre una tarima con dos tarros luminosos, en vez de un mozo saltando las brasas; un primer plano de llamas vivas durante 19 s mientras se habla de Feijoo (el prompt pedía un libro cerrado); un tejado con un penacho de humo incandescente que parece un fuego de chimenea, cuando se dice "chove sobre as lousas". Los tres, rechazados y usados |
+| 0:27-0:30 | 7 | `006-ca7c5324-0.png` | Anciana con una llama en las manos, fuegos a los dos lados y un cuenco que brilla: lo más cerca del cliché de meiga que vetan `contexto.md` §8.5 y la biblia |
+
+**Menor.**
+
+| Minuto | Plano | Fichero | Qué se ve |
+|---|---|---|---|
+| 0:35-0:40 | 9 | `detalle_1.jpg` (0:38) | Caballo negro con un rayo de aspecto de ilustración fantástica: el único plano que se sale del estilo de fotograma |
+| 0:40-0:46 | 10 | `009-7d019425-1.png` | Bajo el aviso hablado, un libro abierto con pseudotexto (puerta: "texto na imaxe") |
+| 0:55-1:02 | 13 | `detalle_1.jpg` (0:59) | Un lacre del tamaño de un plato, prensado con los dedos y sin sello |
+| 5:45-5:51 | 55 | `detalle_2.jpg` (5:48) | Los ingredientes de la queimada parecen té helado y cerveza en vidrio |
+| 21:55-22:13 · 24:44-25:01 | 129 · 141 | `detalle_4.jpg` (22:04) · `detalle_5.jpg` (24:53) | El "cribo" es un disco de metal perforado colgado de una cadena, como un incensario; el apero de hierro se funde con el asa del cesto |
+| 26:37-26:51 · 27:29-27:48 · 29:23-29:42 | 147 · 150 · 156 | `146-2b940b42-0.png` · `detalle_5.jpg` (27:38) · `155-8e45ae6c-0.png` | Una línea blanca pintada en el suelo del claustro de Samos; sillas de madera curvada tipo Thonet (pasa si la escena es actual); unos zapatos brogue de hombre del XX como "os zapatos da muller" |
+
+**Lo que funciona** (para no perderlo al arreglar): caras dignas y sin rasgos de bruja en todo el episodio (14, 64, 69,
+72, 98, 143); la queimada del arranque (1, 2); el gato en el agujero de la puerta (32); el castro sobre el Atlántico
+(53); Feijoo escribiendo en su celda (137-139); los dos vecinos junto al cruceiro al amanecer (128); y la serie de
+bodegones y paisajes nocturnos de la zona de dormir (98-132 y 155-160), oscura y sin sobresaltos.
