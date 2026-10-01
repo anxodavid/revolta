@@ -34,8 +34,18 @@ desde `herramientas/pipeline` tras `source entorno.sh`. Si el contenedor se perd
 en fp32 capa a capa, 1024x576 (`IMG_MODEL=lightning1024`) y Florence-2-base en la puerta (memoria: pico 13,3 GB);
 ~100 s por intento, ~6 h para los 162 planos. En una máquina con AMX, `IMG_MODEL=lightning` (1344x768) va a ~30 s.
 
-**Después del render:** QA (`gauntlet3/video/qa.md`), vídeo en partes < 50 MB para el repo, página privada para verlo,
-tribunal final breve y documentación. La hoja visual r2 no pasó por crítico (se juzgará en el tribunal con el vídeo).
+**Después del render** (todo preparado y probado; ver la línea `saida` del log y `gauntlet3/video/qa.md`):
+1. `bash herramientas/pipeline/entregar.sh plan-de-negocio/gauntlet3/video`: valida el MP4, lo parte sin recodificar en
+   `video/mestre/parteNN.mp4` (< 50 MB, se reúnen con `ffmpeg -f concat -safe 0 -i partes.txt -c copy video.mp4`),
+   copia 720p en HLS (`$SCRATCH/entrega/hls`) y muestra del gancho (`$SCRATCH/entrega/mostra-gancho.mp4`, < 30 MB).
+   Al repo van los anacos, no `video.mp4` (> 50 MB).
+2. `$PY herramientas/pipeline/paxina_episodio.py plan-de-negocio/gauntlet3/video herramientas/pipeline/temas/meigas-de-verdade.yaml $SCRATCH/entrega/hls $SCRATCH/entrega/paxina`
+   y publicar `index.html` como página privada (Artifact) con `poster.jpg`, `contactsheet.jpg` y `hls/*` como ficheros
+   (≤ 64 MB por publicación: varias publicaciones a la misma URL).
+3. Tribunal: `$PY herramientas/pipeline/probas/tribunal_follas.py plan-de-negocio/gauntlet3/video $SCRATCH/visual/ref/ref_16_320.jpg plan-de-negocio/gauntlet3/tribunal $SCRATCH/tribunal/cego`
+   y un agente con el encargo `plan-de-negocio/gauntlet3/tribunal/encargo.md`. La hoja visual r2 no pasó por
+   crítico: se juzga aquí, con el vídeo.
+4. Documentación (este handoff, aprendizajes, README del pipeline).
 
 **Ideas del promotor para después de este vídeo (D15, D16):**
 - **Imágenes de referencia o semilla** para lo que SDXL no conoce (carro de bois, hórreo, pazo, palloza, traje
