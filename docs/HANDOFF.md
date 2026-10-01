@@ -29,7 +29,15 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
   historial pesan en cada clon). Está en `$SCRATCH/longo/w/video.mp4` y partido sin recodificar en
   `$SCRATCH/entrega/mestre-partes/` (10 anacos, se reúnen con `ffmpeg -f concat -safe 0 -i partes.txt -c copy`).
   **El scratchpad se pierde al acabar la sesión.**
-- **Tribunal final:** agente con `gauntlet3/tribunal/encargo.md`; veredicto en `veredictos/tribunal-final.md`.
+- **Tribunal final (agente Claude, 01-10-2026; nadie ha visto ni oído el episodio entero):** `veredictos/tribunal-final.md`.
+  **No publicable tal cual; sí con arreglos.** Gancho 4/5. Imagen: la comparación "a ciegas" no fue ciega de verdad
+  (la referencia ya estaba descrita en `visual-r1.md`); empate 21-21 y elige la referencia ≈55/45 porque allí la gente
+  hace más cosas; la carencia de la ronda 1 queda corregida a medias (sigue la luz eléctrica). Sonido: gana por
+  medidas, sin escucha. Arreglos: (1) sustituir los planos 84 (bombilla y radiador, aprobado por la puerta), 133
+  (farolas tras el rótulo VII), 161 (casa colonial) y 56 (maleta de ruedas); (2) en el mismo remontaje, los planos 5,
+  31, 61, 67, 91, 145 y 153; (3) pico real ≤ −1 dBTP (mide −0,1: limitar antes de codificar); (4) `descricion.txt`:
+  decir que 35/162 imágenes no pasaron la puerta (o arreglarlas), ambientes reales y primer capítulo «00:00»; (5) para
+  una persona en YouTube Studio: etiqueta de contenido sintético, subir el SRT, miniatura y correo a Nós/USC (D4).
 - **Cómo se produjo:** `herramientas/pipeline/lanzar-longo.sh` (reintentos, memoria, puerta ajustada por variables de
   entorno: `IMG_RESERVAS=0`, `REVISOR_LUME_DURMIR=0.015`), `longo.py --ata-plano N` para avances, `entregar.sh`
   (validar, partir, 720p HLS fMP4) y `paxina_episodio.py` (página). Detalles y tropiezos en `docs/APRENDIZAJES.md`
