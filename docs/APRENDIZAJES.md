@@ -256,3 +256,8 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   `IMG_RESERVAS=0` en producción (4 intentos como mucho). Queda pendiente para el siguiente episodio: "fireplace
   mantel" como negativo salta en casi cualquier lareira (4 de 4 en el plano 92) y "interior moderno" en muchos
   interiores; hay que calibrarlos con una hoja de rechazos antes de producir.
+- **La regla de "lume vivo ao durmir" era demasiado estricta para la lista de planos (01-10-2026, planos 110-116):**
+  con el umbral de 0,25 % de píxeles color llama, velas y brasas (0,3-0,9 %) se rechazaban en los 4 intentos de los
+  planos de lareira de la zona de dormir, y al final se elegía igualmente uno de ellos. Ahora es configurable
+  (`REVISOR_LUME_DURMIR`) y en producción vale 1,5 %: siguen cayendo los fuegos grandes (6-10 %). Para el siguiente
+  episodio: que la lista de planos no pida lume en la zona de dormir, o que la regla mire el prompt.

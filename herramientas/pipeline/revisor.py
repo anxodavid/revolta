@@ -134,7 +134,9 @@ ALTAS_LUCES_DURMIR = 0.0012   # r1: fogueira 0,36 %, caldeiro 2,2 %, vela 0,15-1
 # xunto a unha xanela 0,27-0,98 %, a lúa 0,29 %) e 15 rexeneracións inútiles. Agora só contan as altas luces COR DE
 # CHAMA (laranxa: R >= 0,80, 0,25 <= G <= 0,85, B <= 0,45, R-G >= 0,12). Medido: flores e lúa 0,00 %; lareira con
 # chamas 1,1 %; queimada 6,0 %; fogueira de r1 0,33 %; vela nun bodegón 0,40 %; brasas (máis escuras) por debaixo.
-LUME_DURMIR = 0.0025
+# REVISOR_LUME_DURMIR: na produción do 01-10-2026 o 0,25 % rexeitaba velas e brasas (0,3-0,9 %) en todos os intentos
+# dos planos de lareira da zona de durmir; 1,5 % segue parando os lumes grandes (6-10 %)
+LUME_DURMIR = float(os.environ.get('REVISOR_LUME_DURMIR', '0.0025'))
 # Repetición: coseno dos embeddings medios. Na calibración, prompts distintos ata 0,879 (p99 0,866); o mesmo prompt
 # noutro modelo ou estilo, mediana 0,864 (p10 0,80). 0,90: só as imaxes case iguais en contido e composición.
 SIM_CLIP = 0.90
