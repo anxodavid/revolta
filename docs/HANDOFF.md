@@ -88,9 +88,9 @@ cada agente; lo que estaba en git o en disco no se perdió.
   - YPP con 8.000 h: desde o 1-02-2027.
 - **Decisións pendentes do promotor:** M1-M6 (estudo §6). A ronda de arranxos do episodio das meigas (§0 de abaixo)
   segue pendente e é o primeiro paso da fase 0 do estudo.
-- **Rama sen integrar:** as referencias gráficas (226 candidatas, CSV e `descargar.sh`) están só en
-  `origin/ccr-17437293-x0i276` (`docs/referencias-graficas/`, `herramientas/referencias/`). Fusionala ou copiala
-  antes de probar as sementes (D15).
+- **Referencias gráficas:** xa están en `main` (PR #1): `docs/referencias-graficas/` (226 candidatas, CSV e
+  `descargar.sh`) e `herramientas/referencias/`. Ningunha se mirou a ollo; para sementes, só CC0, CC BY ou fotos
+  propias (estudo §3.2).
 - **Nada volátil nesta sesión:** non se lanzou ningún render nin modelo; o scratchpad desta sesión está baleiro.
   O máster 1080p das meigas (333 MB) quedou no scratchpad da sesión anterior e **non está en git**: hai que rehacelo
   na ronda de arranxos (as imaxes están en `gauntlet3/video/imaxes/`) ou decidir onde se arquiva (M6).
