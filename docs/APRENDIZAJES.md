@@ -220,3 +220,9 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   mientras se generaba la primera imagen la llevó de ~90 s a 473 s (01-10-2026, 00:45): con 4 núcleos y una UNet que
   vive del ancho de banda de memoria, cualquier proceso pesado al lado cuesta mucho más que su parte de CPU. Todo lo
   que use CPU de verdad va con `flock "$CPU_LOCK"`, también las pruebas.
+- **Generar imágenes fuera (01-10-2026):** desde este entorno responden por HTTPS Replicate, fal, Together, el router de
+  Hugging Face, OpenAI, Google y BFL; **Modal no sirve** porque su cliente usa gRPC y el proxy del entorno no lo admite
+  (`/root/.ccr/README.md`). Precios vistos ese día: SDXL-Lightning 4 pasos en Replicate ≈ 0,0018 $ por imagen y ~2 s
+  (https://replicate.com/bytedance/sdxl-lightning-4step); FLUX.1 [schnell] en fal 0,003 $ por megapíxel
+  (https://fal.ai/pricing); Hugging Face cobra lo mismo que el proveedor, sin margen, y la cuenta PRO trae 2 $ al mes
+  (https://huggingface.co/docs/inference-providers/pricing). Una clave nueva del entorno solo llega a una sesión nueva.
