@@ -39,6 +39,17 @@ MODELOS = {
 MODELO_DEFECTO = 'lightning'
 
 
+def _liberar():
+    """gc e malloc_trim de glibc despois de cada intento: sen isto o proceso medraba ~1 GB en 12 intentos e o OOM do
+    cgroup (13,36 GiB para todos os procesos) matouno o 01-10-2026."""
+    import ctypes, gc
+    gc.collect()
+    try:
+        ctypes.CDLL('libc.so.6').malloc_trim(0)
+    except OSError:
+        pass
+
+
 def modelo(nome=None):
     """Configuración do modelo `nome` (ou de IMG_MODEL). Un id de repo de HF (con "/") cárgase como antes."""
     nome = nome or os.environ.get('IMG_MODEL', MODELO_DEFECTO)
@@ -365,6 +376,7 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
                 print(f"imaxe {i:3d} intento {k} {it['s']:5.1f}s + revisión {it.get('s_revision', 0):4.1f}s "
                       f"{it['problemas'] or 'ok'}", flush=True)
                 k += 1
+                _liberar()
             best = min(range(len(intentos)), key=lambda j: (len(intentos[j]['problemas']), j))
             r = {'ficheiro': intentos[best]['ficheiro'], 'escollida': best, 'ok': not intentos[best]['problemas'],
                  'intentos': intentos, 'version_revisor': _rv.VERSION, 'modelo': m['nome'], 'fase': e.get('fase')}

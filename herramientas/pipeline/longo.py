@@ -63,6 +63,17 @@ def ler_guion(path):
     return '\n\n'.join(pars), caps
 
 
+def liberar():
+    """gc e malloc_trim de glibc: devolve ao sistema a memoria libre do proceso. O límite do cgroup (13,36 GiB) é
+    común a todos os procesos e o das imaxes chega a ~12,4 GiB: o pai ten que quedar lixeiro."""
+    import ctypes, gc
+    gc.collect()
+    try:
+        ctypes.CDLL('libc.so.6').malloc_trim(0)
+    except OSError:
+        pass
+
+
 def porta_texto(texto, frases, tema, excepcions):
     """Portas de texto do vídeo longo. Bloqueantes: lingua, H1, estilo e veracidade sen xustificar."""
     import qa, ancoraxe
@@ -253,7 +264,18 @@ def main():
             f['pal0'] = pal; pal += len(f['texto'].split())
         tot = pal
         exc = yaml.safe_load(open(a.excepcions)) if a.excepcions and Path(a.excepcions).exists() else []
-        pt = porta_texto(texto, frases, tema, exc)
+        # caché: co mesmo guion, tema, excepcións e código das portas non se volven cargar LanguageTool nin o NLI
+        # (cada reintento tras un OOM deixaba o proceso pai con 1,3-1,8 GB e menos marxe para as imaxes)
+        clave_txt = hashlib.sha256(json.dumps([texto, exc, Path(a.tema).read_text()] + [
+            (HERE / m).read_text() for m in ('longo.py', 'veracidade.py', 'qa.py')], ensure_ascii=False).encode()).hexdigest()[:16]
+        ptf = W / 'porta_texto.json'
+        vello = json.loads(ptf.read_text()) if ptf.exists() else {}
+        if vello.get('clave') == clave_txt:
+            pt = vello
+            print('portas de texto: da caché', flush=True)
+        else:
+            pt = porta_texto(texto, frases, tema, exc)
+            pt['clave'] = clave_txt
         pt['palabras'] = tot; pt['capitulos'] = caps
         (W / 'guion.txt').write_text(texto + '\n')
         (W / 'porta_texto.json').write_text(json.dumps(pt, ensure_ascii=False, indent=1))
@@ -268,7 +290,7 @@ def main():
     # produción do 30-09-2026: o servidor Java de LanguageTool seguía vivo (0,55 GB) e, co NLI sen liberar, a etapa de
     # imaxes (12,3 GB) pasou do límite de memoria do cgroup e o OOM matouna. Péchase á forza.
     subprocess.run(['pkill', '-f', 'languagetool-server.jar'], check=False)
-    import gc; gc.collect()
+    liberar()
 
     # 2 voz, coa curva do embude
     inicio_par = {}
@@ -314,6 +336,7 @@ def main():
                                 'sub': f"Capítulo {cp['num']}", 'y': 0.46, 'tam': 64, 'fundido': 0.9})
                 parts.append(np.zeros(int(g_ * sr))); t += g_
         voz = np.concatenate(parts).astype(np.float32)
+        del parts; liberar()
         dur = OFFSET + len(voz) / sr + COLA
         # rótulo do reclamo cando se di a fórmula
         for f in frases:

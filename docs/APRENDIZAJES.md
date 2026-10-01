@@ -190,7 +190,7 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
 
 ## Entorno: memoria compartida (30-09-2026, noche)
 
-- **Todos los procesos que lanzan las herramientas comparten un cgroup de memoria (~15 GB).** Una puerta de texto
+- **Todos los procesos que lanzan las herramientas comparten un cgroup de memoria: límite real 13,36 GiB** (no los 15,7 GB de `free`; se ve con `dmesg | grep "memory: usage"`). Una puerta de texto
   (NLI + LanguageTool, ~2 GB) lanzada **sin el candado de CPU** mientras se generaban imágenes (11,8 GB) hizo que el
   OOM killer matase las dos. Lección: todo lo que carga modelos va con `flock "$CPU_LOCK"`, aunque sea "rápido"; el
   candado protege también la memoria. Tras un OOM, matar los servidores Java de LanguageTool huérfanos.
@@ -226,3 +226,10 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   (https://replicate.com/bytedance/sdxl-lightning-4step); FLUX.1 [schnell] en fal 0,003 $ por megapíxel
   (https://fal.ai/pricing); Hugging Face cobra lo mismo que el proveedor, sin margen, y la cuenta PRO trae 2 $ al mes
   (https://huggingface.co/docs/inference-providers/pricing). Una clave nueva del entorno solo llega a una sesión nueva.
+- **Segundo OOM (01-10-2026, 01:09):** el trabajador de imágenes (12,2 GiB) más el proceso padre de `longo.py`
+  (1,3-1,8 GiB que le quedaban de LanguageTool, el NLI y el audio de la voz) pasaron del límite de 13,36 GiB en el
+  plano 4. Arreglo: caché de las puertas de texto (con el mismo guion, tema y código no se vuelven a cargar
+  LanguageTool ni el NLI), `del` del audio por frases, `gc` + `malloc_trim(0)` en el padre y tras cada intento de
+  imagen, `MALLOC_ARENA_MAX=2` y 12 reintentos en `lanzar-longo.sh`.
+- **`mawk` (el `awk` de este sistema) lee la entrada por bloques:** en un vigilante `tail -F | grep | awk` no sale
+  nada hasta que se llena el búfer, y el Monitor no avisó de la caída. Usar `awk -W interactive` (o no usar awk).
