@@ -245,3 +245,8 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   la revisión programada de las 05:50 (2 h perdidas). Las tareas en segundo plano y los Monitor mueren con el
   contenedor; lo único que sobrevive es una revisión programada (`send_later`). Para trabajos de horas: revisión cada
   ~1 h que mire `uptime` y relance si no hay proceso.
+- **Causa probable de esos reinicios: la sesión ociosa.** Los dos del 01-10 (03:52 y ~06:00) llegaron 3-7 min después
+  de terminar el turno **sin ninguna tarea en segundo plano** (ni Monitor ni Bash en background); con un Monitor o una
+  espera en background armados, el render aguantó horas. El contenedor parece liberarse cuando la sesión queda
+  inactiva, aunque haya procesos `setsid nohup` trabajando (el scratchpad sí sobrevive). Regla: mientras corra un
+  trabajo largo, mantener siempre un Monitor armado (re-armarlo al caducar, cada 30 min) además de la revisión horaria.
