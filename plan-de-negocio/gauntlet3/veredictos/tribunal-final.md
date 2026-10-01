@@ -191,3 +191,60 @@ publican vídeos de 2-4 h con guiones de 15.000-20.000 palabras y buscan el sue�
 Este episodio sigue la otra estrategia, la que pidió el promotor («más gancho atractivo los primeros minutos»), y para
 eso el texto está mejor construido que las dos referencias. Si engancha de verdad solo lo dirá YouTube Studio. El
 umbral del plan v2 es una retención a 2 min ≥ 25 % (`docs/HANDOFF.md` §3); no hay ningún dato propio para predecirla.
+
+## 4. Embudo hacia dormir
+
+Medidas por fase. Las de `qa.md` son automáticas. Las de luz, sonoridad y densidad de datos las sacó Claude con
+scripts propios: luz sobre las 162 imágenes graduadas; sonoridad sobre `$SCRATCH/longo/w/mestura.wav`, con ventanas
+de 3 s y ponderación K (BS.1770); densidad de datos con expresiones regulares sobre `guion.txt`.
+
+| Medida | Gancho | Transición | Calma | Dormir |
+|---|---|---|---|---|
+| Tramo (planos) | 0:00-1:49 (1-21) | 1:49-6:17 (22-58) | 6:17-13:48 (59-97) | 13:48-31:22 (98-162) |
+| Ritmo de la voz, palabras/min con pausas (`qa.md`) | 157,0 | 154,5 | 136,3 | 114,5 |
+| Duración media de plano, s (`qa.md`) | 5,2 | 7,2 | 11,6 | 16,2 |
+| Luminancia media (0-1) | 0,25 | **0,37** | 0,29 | 0,20 |
+| Altas luces (% de píxeles > 0,85) | 3,0 | 2,9 | 1,1 | 0,05 |
+| Saturación media | 0,38 | 0,28 | 0,30 | 0,23 |
+| Planos con > 1,5 % de píxeles de llama (`lume_quente` de la puerta) | 24 % | 0 % | 15 % | 6 % |
+| Sonoridad a corto plazo, mediana (LUFS) | −16,5 | −16,8 | −18,3 | −19,8 |
+| Cambios de ambiente por cada 10 min (de la lista de planos) | 17 (min 0-10) | | 6 (min 10-20) | 8 (min 20-30) |
+| Atribuciones / años por cada 100 palabras | 1,7 / 0,7 (hasta 1:55) | 1,8 / 1,0 (1:55-12:09) | | 0,5 / 0,05 (desde 12:09) |
+
+**¿Baja de forma gradual y sin saltos?** **Sí en voz, montaje, sonido y contenido.** El ritmo de la voz, la duración de
+plano, la sonoridad y la densidad de datos bajan en cada fase, sin escalones. El permiso para dormir («Desde aquí a
+historia vai máis amodo, e non tes que lembrar nada do que escoites») llega a las 12:13, unos 2 min después de la
+ventana de 8-10 min de `contexto.md` §2. Hay dos matices:
+
+1. **La luz sube del gancho a la transición** (luminancia de 0,25 a 0,37, la más alta del episodio): de la noche y el
+   fuego del arranque se pasa a aldeas y prados de día (1:49-6:17). Es la única medida que va contra la curva común
+   que pide `contexto.md` §2 («voz, ritmo de cortes, luz de las imágenes y sonido siguen la misma curva»). No afecta al
+   sueño, porque es la parte despierta, pero el embudo de luz no empieza a los 2 min sino a los 6:17. Después baja bien:
+   desde el minuto 16, luminancia ≈ 0,20 y prácticamente sin altas luces.
+2. **La voz apenas cambia del gancho a la transición** (157 → 154,5 palabras/min); la bajada fuerte empieza en la
+   calma. Esto es coherente con un gancho largo (1:55).
+
+**¿Hay tramos que despierten?** No en el texto: la zona de dormir no tiene intrusiones nocturnas, muertes, torturas
+ni tribunales, solo un «demo» de pasada en Feijoo. Tampoco en el sonido medido: las subidas de 4-7 LU sobre los 30 s
+anteriores que aparecen en ventanas de 3 s (19:42, 23:03, 25:21 y 27:03-27:18) son la voz que vuelve tras una pausa.
+Lo comprobé ventana a ventana de 1 s contra `voz_linea.wav`, que sube igual; el ambiente no salta. **Sí en la imagen**,
+con cinco planos de la sección 2: el rótulo del capítulo VII con farolas (22:49), la figura actual sobre la tarima
+(18:37), las llamas vivas durante 19 s (25:57), el tejado con el penacho de humo incandescente (28:25) y la casa
+colonial iluminada del cierre (30:41). Los cinco salieron sin pasar la puerta.
+
+**¿Hay tramos monótonos (D14)?**
+- **Sonido: no, según las medidas.** Hay 9 tipos de ambiente; el mismo ambiente dura como mucho 2,7 min seguidos
+  (`noite`, 15:20-18:04); la voz va limpia el 38,7 % del tiempo de voz y hay 10,8 cambios cada 10 min (`qa.md`).
+- **Imagen: sí, y en parte es buscado.** De los 65 planos de dormir, solo 4 tienen a alguien haciendo algo. Hay tiradas
+  largas de paisajes nocturnos y bodegones (99-108, 110-115, 118-127), y la puerta marcó 6 como repetidos (CLIP ≥ 0,90).
+  Para quien ya se duerme está bien; quien siga despierto en el capítulo VI (16:21-22:49, 6 min y medio de hierbas,
+  fuentes y orballo) verá poca variedad.
+- **Voz: no se puede saber sin oírla.** La curva estrecha a propósito la variación de la F0 (4,76 → 2,60 semitonos en
+  el pasaje de prueba), y la valencia también baja (0,45 → 0,39). La propia pieza VOZ pidió al promotor que escuchara si
+  el final suena sereno o triste (`voz/informe.md` §4). Esa escucha no consta.
+
+**El final.** El vídeo acaba a los 31:22. Los vídeos del género duran 1-4 h: *Relatos al Oído*, 2 h 01 min;
+*Sleepless Historian*, 2-4 h (`veredictos/guion-r1-formato.md`, `gauntlet/investigacion/retornos.md`). Quien siga
+despierto al terminar se encuentra con la reproducción automática del siguiente vídeo, que puede ser cualquier cosa
+[S: depende de la configuración de cada usuario]. La cola de 30-60 min de lluvia sobre lousa de `contexto.md` §8.6
+sigue sin decidir.
