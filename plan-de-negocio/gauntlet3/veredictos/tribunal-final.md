@@ -136,3 +136,58 @@ marcados: un rótulo de capítulo, el cierre y un plano de 15 s en la parte desp
 72, 98, 143); la queimada del arranque (1, 2); el gato en el agujero de la puerta (32); el castro sobre el Atlántico
 (53); Feijoo escribiendo en su celda (137-139); los dos vecinos junto al cruceiro al amanecer (128); y la serie de
 bodegones y paisajes nocturnos de la zona de dormir (98-132 y 155-160), oscura y sin sobresaltos.
+
+## 3. Gancho (0:00 a 1:55)
+
+Texto de `video/guion.txt`, tiempos de `subtitulos.gl.srt` y planos de `escenas-montadas.json`. No he oído la voz: juzgo
+el texto, las imágenes y las medidas.
+
+| Tiempo | Qué se dice | Planos | Para qué sirve |
+|---|---|---|---|
+| 0:01-0:20 | «Mouchos, curuxas, sapos e bruxas.» El conxuro parece antiguo, «pero ten autor coñecido, e é de mil novecentos sesenta e sete»: lo escribió Mariano Marcos Abalo en un barco amarrado en Vigo | 1-4: cuenco con llamas, dos mujeres alrededor del fuego, hombre con un pote, cabo de amarre | Dato verdadero y sorprendente n.º 1. Paga en 10 s la promesa del título |
+| 0:20-0:38 | «Vilalba, mil seiscentos dezasete.» Según una testigo, la partera Dorotea do Barro decía que podía pasarle a un hombre los dolores del parto calzándole los zapatos de la mujer: «saltaría coma un poldro bravo» | 5-9: calle inglesa, declaración ante una mesa, anciana con fuego, dos mujeres en la lumbre, caballo con rayo | Dato n.º 2, con picante y atribuido |
+| 0:38-0:49 | «Boas noites.» Aviso hablado (0:40,6-0:45,3) y «Isto é Cousas de Galiza para durmir» | 10-11 | Obligatorio (decisión del promotor) |
+| 0:49-1:09 | Bucle 1: por qué se creyó anónimo el conxuro. Arquivo do Reino y Real Audiencia. Avance: «unha veciña que velou esperta unha noite. E un gato que ninguén deu collido» | 12-14 | Bucles 1 y 2 |
+| 1:09-1:34 | La Inquisición de Santiago llevó a la hoguera a una sola mujer; para Valor Bravo fue «branda», y la justicia ordinaria, «moito máis dura». La meiga era la que curaba | 15-18 | El giro que promete el título («de verdade») |
+| 1:34-1:55 | «E hai unha lista»: Campo Lameiro, la noche de san Xoán, «volveremos a esa fonte». Hoja de ruta | 19-21 | Bucle 3 |
+
+Los tres bucles se pagan, escalonados: el 2 a las 2:47-2:59 (María Feijoa y el gato de Ana González), el 1 a las 5:09
+(«O motivo do que falabamos ao principio é sinxelo») y el 3 a las 9:18-10:12 («E por fin, a lista de Campo Lameiro»
+… «dúas maneiras de mirala»), dentro de la ventana de 8-10 min que pide `contexto.md` §8.3. También se cumple el
+resto del §8.3: el conxuro con un solo verso y su autor, Dorotea atribuida a una testigo, la Inquisición una sola vez y
+sin año, y Cibreira fuera del primer minuto (sale a las 7:42).
+
+### Nota: 4 / 5
+
+**Por qué engancha.**
+- **Dos hechos concretos, verdaderos y raros en 35 s.** La referencia, *Historia Desconocida* (167.509 vistas), abre en
+  segunda persona con tres preguntas retóricas y la promesa de un secreto, y no da el primer dato concreto de lo que
+  promete hasta el minuto 5. *Relatos al Oído* (107.875 vistas) abre con dos leyendas sin fuente y una promesa genérica.
+  Fuentes: `gauntlet2/referencia.md` y `veredictos/guion-r1-formato.md`, con datos de https://youtu.be/_lnOveSTjWA y
+  https://www.youtube.com/watch?v=ij7nuBjh1PQ.
+- **Tres preguntas abiertas que se pagan a los 3, 5 y 9-10 min.** Es justo lo que le falta a la referencia, cuyo mapa
+  de calor muestra una retención "baja y casi plana a partir del minuto 7" (`gauntlet2/referencia.md`).
+- **Ritmo de gancho.** 157 palabras/min con pausas y un plano cada 5,2 s de media (`qa.md`), frente a ≈ 137
+  palabras/min y una imagen distinta cada ≤ 10 s en la referencia (`gauntlet2/referencia.md`).
+- **Las imágenes del gancho cuentan la premisa con gente**: la queimada (1-2), la declaración (6), el lacre (13), el
+  tribunal (15), la puerta de la cárcel (17) y las manos amasando (18).
+
+**Por qué no es un 5.**
+- **De 0:55 a 1:25 hay un minuto institucional**: Arquivo do Reino de Galicia, Real Audiencia, Inquisición de Santiago
+  y Diego Valor Bravo. El gancho tiene 1,7 atribuciones por cada 100 palabras (recuento de Claude con expresiones
+  regulares; el crítico del guion r2 midió lo mismo), frente a ≈ 0,5 en las referencias (`veredictos/guion-r2.md`).
+  Es el punto de abandono más probable del gancho [S].
+- **Varias imágenes no dicen lo que se oye.** La primera imagen de lugar, «Vilalba, mil seiscentos dezasete» (plano 5),
+  es un pueblo inglés, y el público galego lo nota. Los planos 16, 19 y 20 no enseñan al juez, a la partera con la
+  embarazada ni a los vecinos en la fuente.
+- **«Boas noites» y el aviso, de 0:38 a 0:45**, avisan pronto de que es un vídeo para dormir con voz sintética. Es
+  obligatorio y honesto, pero son 7 s sin gancho dentro del primer minuto; su coste en retención no está medido [S].
+- **Nadie ha oído la voz.** El arousal del tono de gancho (0,643, en el cuartil alto de las grabaciones de Brais) se
+  midió sobre un pasaje de prueba (`voz/informe.md`), no sobre este episodio.
+
+**Frente a los canales grandes.** Los grandes del género en inglés, como *Sleepless Historian* (715 K suscriptores),
+publican vídeos de 2-4 h con guiones de 15.000-20.000 palabras y buscan el sueño desde el primer minuto
+(`gauntlet/investigacion/retornos.md`, con https://www.aibase.com/news/21860; lo de "desde el primer minuto" es [S]).
+Este episodio sigue la otra estrategia, la que pidió el promotor («más gancho atractivo los primeros minutos»), y para
+eso el texto está mejor construido que las dos referencias. Si engancha de verdad solo lo dirá YouTube Studio. El
+umbral del plan v2 es una retención a 2 min ≥ 25 % (`docs/HANDOFF.md` §3); no hay ningún dato propio para predecirla.
