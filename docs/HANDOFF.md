@@ -72,6 +72,14 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
 **Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
 cada agente; lo que estaba en git o en disco no se perdió.
 
+## 0 bis. Prospección de temas (01-10-2026)
+
+21 temas candidatos para siguientes episodios, puntuados (demanda medida en YouTube, gancho, dormir, imagen, fuentes,
+identidad, ventana) con ganchos y referencias anotadas: [`plan-de-negocio/prospeccion-temas/`](../plan-de-negocio/prospeccion-temas/README.md).
+Primero: Camiño e o Códice roubado (41/45, ventana dic. 2026); siguientes: indianos (37), Teixido (36) y un grupo
+de 34 (magosto, Torre de Hércules, Santa Compaña, Entroido). Ventana inmediata: magosto (1-10 nov.). Fichas escritas
+por agentes Claude con búsqueda web; notas recalibradas por Claude; nadie lo ha revisado.
+
 ## 1. Qué es el proyecto
 
 Un canal de YouTube de vídeos hechos con IA sobre **historia y cultura de Galicia**, pensados para **quedarse dormido**
