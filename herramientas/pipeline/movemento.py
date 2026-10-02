@@ -356,31 +356,33 @@ class Paralaxe:
                 if not oco.any():
                     break
             zt[zt == 0] = ZFAR
-        buraco = (zt == 0)  # (baleiro: xa enchido)
-        del buraco
-        # inversa analítica na grella media e escala a resolución completa
+        # inversa analítica na grella media
         mx = ((self.o_x - sx) * (zt - tz) + tx) / zt * self.f + self.W / 2 - 0.5
         my = ((self.o_y - sy) * (zt - tz) + ty) / zt * self.f + self.H / 2 - 0.5
+        # ocos destapados (a media resolución): a profundidade proxectada é moito máis lonxana ca a da fonte no punto
+        # onde se vai mostrear (aí a fonte ten primeiro termo e o que se ve tería que ser fondo)
+        zsrc = cv2.remap(self.Z, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
+        oco = np.clip((zt / zsrc - 1.15) / 0.25, 0, 1)
         mx = cv2.resize(mx, (OW, OH), interpolation=cv2.INTER_LINEAR)
         my = cv2.resize(my, (OW, OH), interpolation=cv2.INTER_LINEAR)
-        return mx, my, zt
+        return mx, my, zt, oco
 
     def frame(self, u, src=None):
         """Fotograma de saída (float32 OHxOWx3) para o progreso u; `src` permite pasar a fonte xa animada."""
         import cv2
         src = self.src if src is None else src
-        mx, my, zt = self.mapas(u)
+        mx, my, zt, oco = self.mapas(u)
         out = cv2.remap(src, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
-        # ocos destapados: onde a profundidade proxectada é moito máis lonxana ca a da fonte nese punto
-        zsrc = cv2.remap(self.Z, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
-        zt_full = cv2.resize(zt, (OW, OH), interpolation=cv2.INTER_LINEAR)
-        oco = np.clip((zt_full / zsrc - 1.15) / 0.25, 0, 1)
         if oco.max() > 0.02:
-            oco = cv2.GaussianBlur(oco.astype(np.float32), (0, 0), 2)[..., None]
+            oco = cv2.resize(cv2.GaussianBlur(oco.astype(np.float32), (0, 0), 1.2), (OW, OH),
+                             interpolation=cv2.INTER_LINEAR)[..., None]
+            ys, xs = np.nonzero(oco[..., 0] > 0.01)
+            y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1      # só a caixa dos ocos
             fb = cv2.remap(self._fondo() if src is self.src else self._fondo() + (src - self.src),
-                           mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
-            out = out * (1 - oco) + fb * oco
-        self.zt = zt_full
+                           mx[y0:y1, x0:x1], my[y0:y1, x0:x1], cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
+            o = oco[y0:y1, x0:x1]
+            out[y0:y1, x0:x1] = out[y0:y1, x0:x1] * (1 - o) + fb * o
+        self.zt = zt
         return out
 
 
@@ -425,12 +427,15 @@ class _Chama:
         y0, y1, x0, x1 = caixa
         self.cx = caixa
         hr, wr = y1 - y0, x1 - x0
-        self.v = (1.6 if not candea else 2.4) * alto                 # px/s que soben as linguas de lume
+        self.v = (1.4 if not candea else 1.0) * alto                 # px/s que soben as linguas de lume
         lon = int(self.v * (dur + 2)) + hr + 8
-        lam = max(4.0, (0.16 if not candea else 0.22) * alto)
-        self.tx = (ruido(lon, wr, lam, rng) - 0.5).astype(np.float32)
-        self.ty = (ruido(lon, wr, lam * 1.3, rng) - 0.5).astype(np.float32)
-        self.A = (0.075 if not candea else 0.05) * alto * forza       # amplitude do desprazamento (px)
+        # lonxitude de onda grande e amplitude < lam/4: o desprazamento non dobra a imaxe (sen rachas escuras
+        # dentro da chama, vistas na primeira proba)
+        lam = max(6.0, (0.30 if not candea else 0.55) * alto)
+        self.tx = (ruido(lon, wr, lam, rng, 2) - 0.5).astype(np.float32)
+        self.ty = (ruido(lon, wr, lam * 1.3, rng, 2) - 0.5).astype(np.float32)
+        self.A = min((0.06 if not candea else 0.025) * alto, lam / 4) * forza   # amplitude (px)
+        self.alto = alto
         Fr = F[y0:y1, x0:x1]
         dil = cv2.dilate(Fr, np.ones((max(3, alto // 6) | 1, max(3, alto // 10) | 1), np.uint8))
         arriba = np.zeros_like(dil)
@@ -441,6 +446,10 @@ class _Chama:
         self.Fr = cv2.GaussianBlur(Fr, (0, 0), 1.0).astype(np.float32)[..., None]
         self.gy, self.gx = np.mgrid[0:hr, 0:wr].astype(np.float32)
         self.sem = int(rng.integers(0, 1 << 30))
+        # base da chama (fila máis baixa con chama) e altura relativa de cada fila sobre ela (0 na base, 1 arriba)
+        filas = np.nonzero(Fr.max(1) > 0.2)[0]
+        self.y_base = float(filas.max()) if len(filas) else hr - 1.0
+        self.altura = np.clip((self.y_base - self.gy) / max(1.0, alto), 0, 1.6)
 
 
 class Lume(Efecto):
@@ -496,10 +505,15 @@ class Lume(Efecto):
             L = ch.tx.shape[0]
             o = int(ch.v * t) % max(1, (L - hr))                        # a xanela baixa: o ruído sobe
             dx = ch.tx[o:o + hr] * ch.A * ch.Fd
-            dy = (ch.ty[o:o + hr] * ch.A * 1.4 + ch.A * 0.25) * ch.Fd
-            if self.candea:                                             # a candea abanea un pouco
-                dx = dx + (0.35 * ch.A * math.sin(2 * math.pi * 0.55 * t + ch.sem % 7) +
-                           0.2 * ch.A * math.sin(2 * math.pi * 1.37 * t)) * ch.Fd
+            dy = (ch.ty[o:o + hr] * ch.A * 1.4 + ch.A * 0.2) * ch.Fd
+            if self.candea:
+                # a candea dóbrase coma unha chama de verdade: a punta abanea máis ca a base, e estira e encolle
+                # un pouco arredor do pabío (deformación suave, sen rachas)
+                sw = (0.6 * math.sin(2 * math.pi * 0.47 * t + ch.sem % 7) +
+                      0.4 * math.sin(2 * math.pi * 1.13 * t + ch.sem % 5))
+                es = 0.05 * parpadeo(t, ch.sem + 9, 0.8)
+                dx = dx + sw * 0.07 * ch.alto * ch.altura ** 2 * ch.Fd
+                dy = dy + es * (ch.gy - ch.y_base) * ch.Fd
             roi = S[y0:y1, x0:x1]
             w = cv2.remap(roi, ch.gx + dx, ch.gy + dy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
             pc = parpadeo(t, ch.sem, 1.4 if self.candea else 1.0)
@@ -620,11 +634,24 @@ class Fluxo(Efecto):
             self.brillo = _cl(Lr - cv2.GaussianBlur(Lr, (0, 0), 6), 0.01, 0.08)[..., None]
             self.ns = ruido(L, wr, lam * 0.7, rng)
         elif tipo == 'ceo':
-            self.v = 0.012 * W * forza                                  # nubes: ≈ 1,2 % do ancho por segundo
+            self.v = 0.0035 * W * forza                                 # nubes: ≈ 0,35 % do ancho por segundo
             self.A = 0
             lam = W / 8
-            L = int(wr + 4)
-            self.nx = (ruido(hr, wr, lam, rng) - 0.5) * 6
+            self.nx = (ruido(hr, wr, lam, rng) - 0.5) * 4
+            # textura só de ceo: o que non é ceo énchese co ceo de arredor (inpaint), para que ao desprazar as
+            # nubes nunca se mostree o primeiro termo (na primeira proba aparecía unha pantasma da cabeza)
+            roi = np.clip(src[y0:y1, x0:x1], 0, 255).astype(np.uint8)
+            non = (self.m[..., 0] < 0.5).astype(np.uint8)
+            q = 4
+            r2 = cv2.resize(roi, (max(1, wr // q), max(1, hr // q)), interpolation=cv2.INTER_AREA)
+            n2 = cv2.dilate(cv2.resize(non, (max(1, wr // q), max(1, hr // q)), interpolation=cv2.INTER_NEAREST),
+                            np.ones((5, 5), np.uint8))
+            f2 = cv2.inpaint(r2, n2, 7, cv2.INPAINT_TELEA)
+            fill = cv2.resize(f2, (wr, hr), interpolation=cv2.INTER_CUBIC).astype(np.float32)
+            mk = cv2.GaussianBlur(cv2.resize(n2, (wr, hr), interpolation=cv2.INTER_NEAREST).astype(np.float32), (0, 0), 3)[..., None]
+            self.ceo = roi.astype(np.float32) * (1 - mk) + fill * mk
+            # a máscara de composición encóllese algo: o bordo do ceo xunto ao primeiro termo non se move
+            self.m = cv2.GaussianBlur(cv2.erode(self.m[..., 0], np.ones((9, 9), np.uint8)), (0, 0), 3)[..., None]
         else:   # fume
             self.v = 0.05 * hr + 6; lam = max(8.0, hr / 6); self.A = max(2.0, 0.03 * hr) * forza
             L = int(hr + self.v * (dur + 2) + 4)
@@ -638,7 +665,7 @@ class Fluxo(Efecto):
         roi = S[y0:y1, x0:x1]
         if self.tipo == 'ceo':
             mx = self.gx - self.v * t + self.nx
-            w = cv2.remap(roi, mx, self.gy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
+            w = cv2.remap(self.ceo, mx, self.gy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
         else:
             L = self.nx.shape[0]
             o = int(self.v * t) % max(1, L - hr)                        # a xanela baixa: o ruído (e o fume) sobe

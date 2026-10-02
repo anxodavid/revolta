@@ -73,16 +73,27 @@ def baixar():
 
 @contextmanager
 def candado():
-    """O candado común de CPU (flock), só mentres dura un clip ou un lote de textos."""
+    """O candado común de CPU, só mentres dura un clip ou un lote de textos, co mesmo protocolo cooperativo ca
+    `herramientas/gauntlet/candado.sh`: despois de coller "$CPU_LOCK" mira sen agardar "$CPU_LOCK.prio"; se un
+    traballo do camiño crítico (guion, voz) o ten, solta o candado e volve tentalo aos 15 s."""
     f = os.environ.get('CPU_LOCK')
     if not f:
         yield; return
-    with open(f, 'a') as fh:
+    fh = open(f, 'a')
+    while True:
         fcntl.flock(fh, fcntl.LOCK_EX)
         try:
-            yield
-        finally:
+            with open(f + '.prio', 'a') as fp:
+                fcntl.flock(fp, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                fcntl.flock(fp, fcntl.LOCK_UN)
+            break
+        except BlockingIOError:
             fcntl.flock(fh, fcntl.LOCK_UN)
+            time.sleep(15)
+    try:
+        yield
+    finally:
+        fcntl.flock(fh, fcntl.LOCK_UN); fh.close()
 
 
 class Memoria(threading.Thread):
