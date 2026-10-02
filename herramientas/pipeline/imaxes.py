@@ -97,6 +97,22 @@ def bf16_rapido():
         return True
 
 
+def _entradas_fp32(mod, args, kwargs):
+    """Gancho previo ao forward: pasa a fp32 todas as entradas en coma flotante (tamén dentro de dicts e listas).
+    Na CPU sen bf16 nativo a UNet (e o ControlNet) calculan en fp32, pero o pipeline dálles latentes e embeddings bf16."""
+    import torch
+
+    def c(x):
+        if torch.is_tensor(x) and x.is_floating_point():
+            return x.float()
+        if isinstance(x, dict):
+            return {k: c(v) for k, v in x.items()}
+        if isinstance(x, (list, tuple)):
+            return type(x)(c(v) for v in x)
+        return x
+    return tuple(c(a) for a in args), {k: c(v) for k, v in kwargs.items()}
+
+
 def cargar_pipe(nome=None):
     """Pipeline de diffusers en CPU, bfloat16. VAE en channels_last: ~6 s en vez de ~11 s por imaxe con
     torch 2.10 (aprendizajes/entorno.md), mesma saída."""
@@ -140,14 +156,6 @@ def cargar_pipe(nome=None):
         pipe.vae.to(torch.float32)
         # o pipeline volve pasar os embeddings ao tipo dos codificadores de texto (bf16) e crea o ruído nese tipo:
         # todas as entradas en coma flotante da UNet pásanse a fp32 xusto antes de cada chamada
-        def _entradas_fp32(mod, args, kwargs):
-            def c(x):
-                if torch.is_tensor(x) and x.is_floating_point():
-                    return x.float()
-                if isinstance(x, dict):
-                    return {k: c(v) for k, v in x.items()}
-                return x
-            return tuple(c(a) for a in args), {k: c(v) for k, v in kwargs.items()}
         pipe.unet.register_forward_pre_hook(_entradas_fp32, with_kwargs=True)
         # o casting por capas de diffusers só trata Linear e Conv: as normas (GroupNorm, LayerNorm) e calquera outra
         # capa con parámetros propios pásanse a fp32 (son pequenas)
@@ -165,14 +173,123 @@ def cargar_pipe(nome=None):
     return pipe
 
 
-def xerar_unha(pipe, prompt, seed, m=None, negativo=None, cfg=0.0):
+def xerar_unha(pipe, prompt, seed, m=None, negativo=None, cfg=0.0, ref=None):
     """Unha imaxe. Sen CFG (guidance 0) como pide Lightning; con `negativo` e cfg > 1 fai un intento guiado (dúas
-    pasadas da UNet por paso: ~1,6 veces máis lento) para os planos con relato que fallan dúas veces."""
+    pasadas da UNet por paso: ~1,6 veces máis lento) para os planos con relato que fallan dúas veces.
+    `ref` (Gauntlet 4, D15): semente dunha referencia gráfica, o que devolve `preparar_referencia` (modo `img2img` ou
+    `profundidade`); sen ela, todo igual ca na v1."""
     import torch
     m = m or getattr(pipe, '_revolta', M)
     kw = {'negative_prompt': negativo, 'guidance_scale': cfg} if negativo and cfg > 1 else {'guidance_scale': 0.0}
-    return pipe(prompt=prompt, width=m['W'], height=m['H'], num_inference_steps=m['pasos'],
-                generator=torch.Generator().manual_seed(seed), **kw).images[0]
+    g = torch.Generator().manual_seed(seed)
+    if ref and ref['modo'] == 'img2img':
+        # Lightning: os pasos efectivos son int(pasos x forza) dos 4 do horario "trailing" (0,5 -> 2; 0,75 -> 3).
+        # Os latentes da referencia calcúlanse aquí co VAE no seu tipo (fp32 nesta CPU): o pipeline de img2img, co
+        # `force_upcast` do VAE de SDXL, deixaría o VAE en bf16 despois de codificar
+        return pipe_modo(pipe, 'img2img')(prompt=prompt, image=latentes_referencia(pipe, ref), strength=ref['forza'],
+                                         num_inference_steps=m['pasos'], generator=g, **kw).images[0]
+    if ref and ref['modo'] == 'profundidade':
+        return pipe_modo(pipe, 'profundidade')(prompt=prompt, image=ref['control'], width=m['W'], height=m['H'],
+                                              controlnet_conditioning_scale=ref['forza'],
+                                              control_guidance_end=ref.get('ata', 1.0),
+                                              num_inference_steps=m['pasos'], generator=g, **kw).images[0]
+    return pipe(prompt=prompt, width=m['W'], height=m['H'], num_inference_steps=m['pasos'], generator=g, **kw).images[0]
+
+
+# ------------------------------------------------------------------ referencias semente (Gauntlet 4, D15)
+# Campo `referencia` da lista de planos: {"ficheiro": "01-horreo/02-horreos-galicien-img-0274a.jpg", "modo": "img2img" |
+# "profundidade", "forza": 0.5, opcionais "recorte": [x0, y0, x1, y1] (0-1) e "centro": [x, y] (0-1) para encadrar a
+# referencia en WxH}. Só referencias CC0, dominio público ou CC BY (contexto do Gauntlet 4 §2); as BY-SA só se o
+# promotor o decide. As referencias baixan a $SCRATCH/referencias (docs/referencias-graficas/descargar.sh ou
+# plan-de-negocio/gauntlet4/imaxe/scripts/baixar_refs.sh) e non van ao repo.
+REFS_DIR = Path(os.environ.get('IMG_REFS', str(Path(os.environ.get('SCRATCH', '/tmp')) / 'referencias')))
+CN_PROFUNDIDADE = os.environ.get('IMG_CN_PROF', 'diffusers/controlnet-depth-sdxl-1.0-small')   # OpenRAIL++-M
+PROF_MODELO = os.environ.get('IMG_PROF_MODELO', 'depth-anything/Depth-Anything-V2-Small-hf')   # Apache-2.0
+FORZA_DEFECTO = {'img2img': 0.5, 'profundidade': 0.6}
+
+
+def imaxe_referencia(ref, W, H):
+    """A referencia encadrada en WxH: recorte relativo opcional e recorte ao formato arredor de `centro`."""
+    from PIL import Image, ImageOps
+    p = Path(ref['ficheiro'])
+    p = p if p.is_absolute() else REFS_DIR / p
+    im = ImageOps.exif_transpose(Image.open(p)).convert('RGB')
+    if ref.get('recorte'):
+        x0, y0, x1, y1 = ref['recorte']
+        w, h = im.size
+        im = im.crop((round(x0 * w), round(y0 * h), round(x1 * w), round(y1 * h)))
+    return ImageOps.fit(im, (W, H), Image.LANCZOS, centering=tuple(ref.get('centro') or (0.5, 0.5)))
+
+
+_PROF = {}
+
+
+def mapa_profundidade(im):
+    """Mapa de profundidade (Depth-Anything-V2-Small, Apache-2.0) en RGB, normalizado 0-255, do tamaño da imaxe."""
+    import numpy as np
+    import torch
+    from PIL import Image
+    if 'm' not in _PROF:
+        from transformers import AutoImageProcessor, AutoModelForDepthEstimation
+        _PROF['p'] = AutoImageProcessor.from_pretrained(PROF_MODELO)
+        _PROF['m'] = AutoModelForDepthEstimation.from_pretrained(PROF_MODELO, torch_dtype=torch.float32).eval()
+    with torch.no_grad():
+        out = _PROF['m'](**_PROF['p'](images=im, return_tensors='pt')).predicted_depth
+    d = torch.nn.functional.interpolate(out[:, None], size=im.size[::-1], mode='bicubic', align_corners=False)[0, 0]
+    d = d.numpy()
+    d = (d - d.min()) / (d.max() - d.min() + 1e-6)
+    return Image.fromarray((d * 255).astype(np.uint8)).convert('RGB')
+
+
+def preparar_referencia(ref, m):
+    """Do campo `referencia` dun plano a o que precisa xerar_unha (imaxe encadrada e, se fai falta, a profundidade)."""
+    modo = ref.get('modo', 'img2img')
+    if modo not in FORZA_DEFECTO:
+        raise ValueError(f'modo de referencia descoñecido: {modo} (img2img | profundidade)')
+    im = imaxe_referencia(ref, m['W'], m['H'])
+    r = {'modo': modo, 'forza': float(ref.get('forza', FORZA_DEFECTO[modo])), 'imaxe': im, 'ficheiro': ref['ficheiro']}
+    if ref.get('ata') is not None:
+        r['ata'] = float(ref['ata'])
+    if modo == 'profundidade':
+        r['control'] = mapa_profundidade(im)
+    return r
+
+
+def latentes_referencia(pipe, ref):
+    """Latentes (xa escalados) da imaxe de referencia, calculados unha vez por referencia co VAE do pipeline."""
+    if 'latentes' not in ref:
+        import numpy as np
+        import torch
+        x = torch.from_numpy(np.asarray(ref['imaxe'], dtype=np.float32) / 127.5 - 1).permute(2, 0, 1)[None]
+        with torch.no_grad():
+            lat = pipe.vae.encode(x.to(pipe.vae.dtype)).latent_dist.mode()
+        ref['latentes'] = lat * pipe.vae.config.scaling_factor
+    return ref['latentes']
+
+
+def pipe_modo(pipe, modo):
+    """Pipeline de img2img ou de ControlNet de profundidade cos mesmos compoñentes (UNet, VAE e textos) ca `pipe`:
+    non se carga outra UNet (só o ControlNet small, 320 MB en fp16)."""
+    cache = pipe.__dict__.setdefault('_modos', {})
+    if modo in cache:
+        return cache[modo]
+    import torch
+    from diffusers import StableDiffusionXLControlNetPipeline, StableDiffusionXLImg2ImgPipeline
+    comp = {k: v for k, v in pipe.components.items() if k in ('vae', 'text_encoder', 'text_encoder_2', 'tokenizer',
+                                                               'tokenizer_2', 'unet', 'scheduler')}
+    if modo == 'img2img':
+        p = StableDiffusionXLImg2ImgPipeline(**comp, requires_aesthetics_score=False, add_watermarker=False)
+    else:
+        from diffusers import ControlNetModel
+        calc = torch.float32 if getattr(pipe, '_calc_fp32', False) else torch.bfloat16
+        cn = ControlNetModel.from_pretrained(CN_PROFUNDIDADE, variant='fp16', torch_dtype=calc).eval()
+        if calc == torch.float32:
+            cn.register_forward_pre_hook(_entradas_fp32, with_kwargs=True)
+        p = StableDiffusionXLControlNetPipeline(**comp, controlnet=cn, add_watermarker=False)
+    p.set_progress_bar_config(disable=True)
+    p._revolta = pipe._revolta
+    cache[modo] = p
+    return p
 
 
 # ------------------------------------------------------------------ prompts (biblia visual)
@@ -325,7 +442,9 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
     n_total = n_total or len(escenas)
     reservas_usadas = {}
     for i, e in enumerate(escenas):
-        clave = f"{i:03d}-{hashlib.sha256((e['prompt'] + m['nome'] + str(e.get('fase'))).encode()).hexdigest()[:8]}"
+        # a referencia (Gauntlet 4) entra na clave da caché só se o plano a ten: sen ela, as claves da v1 non cambian
+        txt_ref = json.dumps(e['referencia'], sort_keys=True) if e.get('referencia') else ''
+        clave = f"{i:03d}-{hashlib.sha256((e['prompt'] + m['nome'] + str(e.get('fase')) + txt_ref).encode()).hexdigest()[:8]}"
         previo = feito.get(clave)
         vella = previo and previo.get('version_revisor') != _rv.VERSION and revisar
         embs = {}                        # ficheiro -> (embedding, arquetipo) dos intentos revisados agora
@@ -345,7 +464,8 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
             if rev is None and revisar:
                 rev = _rv.Revisor()
             intentos = list(previo['intentos']) if previo else []     # continúa onde quedou
-            ctx = {'negativo': e.get('negativo'), 'clave': e.get('clave'), 'fase': e.get('fase')}
+            ctx = {'negativo': e.get('negativo'), 'clave': e.get('clave'), 'fase': e.get('fase'), 'epoca': e.get('epoca')}
+            refp = preparar_referencia(e['referencia'], m) if e.get('referencia') else None
             if intentos and rev is not None:     # o revisor cambiou desde entón: volve revisar os intentos gardados
                 for it in intentos:
                     rv = rev.revisar(outdir / it['ficheiro'], prompt=it.get('prompt'), **ctx)
@@ -377,11 +497,14 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
                 ntok, perdido = tokens(pipe, pr)
                 f = outdir / f'{clave}-{k}.png'
                 t = time.time()
-                im = xerar_unha(pipe, pr, seed, m, negativo=neg, cfg=CFG_REINTENTO if guiado else 0.0)
+                ref_k = refp if k < MAX_INTENTOS else None      # a reserva da fase vai sen referencia
+                im = xerar_unha(pipe, pr, seed, m, negativo=neg, cfg=CFG_REINTENTO if guiado else 0.0, ref=ref_k)
                 tmp = f.with_suffix('.tmp.png'); im.save(tmp); os.replace(tmp, f)
                 it = {'intento': k, 'ficheiro': f.name, 'seed': seed, 's': round(time.time() - t, 1), 'prompt': pr,
                       'modelo': m['nome'], 'tokens': ntok, 'truncado': perdido, 'problemas': [],
                       'reserva': k >= MAX_INTENTOS, 'negativo_guiado': neg}
+                if ref_k:
+                    it['referencia'] = {'ficheiro': ref_k['ficheiro'], 'modo': ref_k['modo'], 'forza': ref_k['forza']}
                 if rev is not None:
                     # a reserva é outro motivo: non se lle pide a `clave` do plano (fallo visto na folla r2)
                     ctx_k = dict(ctx, clave=None) if k >= MAX_INTENTOS else ctx
