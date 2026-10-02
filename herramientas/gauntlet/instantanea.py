@@ -127,15 +127,63 @@ def commit_push():
     return f'push fallou: {r.stderr.strip()[:200]}'
 
 
+# Autogardado do traballo en curso dos axentes no repo (petición do promotor, 02-10-2026): ficheiros novos ou
+# cambiados destas carpetas que leven QUEDOS polo menos AUTO_QUEDO s (para non coller un ficheiro a medio escribir).
+# Só texto e imaxes pequenas: vídeo e audio non, porque hai que validalos con ffmpeg antes de subilos (CLAUDE.md).
+AUTO_RUTAS = ('plan-de-negocio/gauntlet4', 'herramientas')
+AUTO_EXT = EXT | {'.jpg', '.jpeg', '.png'}
+AUTO_MAX = {'.jpg': 3_000_000, '.jpeg': 3_000_000, '.png': 3_000_000}
+AUTO_QUEDO = 120
+
+
+def autogardar():
+    r = git('status', '--porcelain', '-uall', '--', *AUTO_RUTAS, check=False)
+    ruta_inst = DEST.relative_to(REPO).as_posix()
+    xa = []
+    for liña in r.stdout.splitlines():
+        estado, f = liña[:2], liña[3:].strip().strip('"')
+        if ' -> ' in f or f.startswith(ruta_inst):
+            continue
+        p = REPO / f
+        if 'D' in estado or not p.is_file():
+            continue
+        ext = p.suffix.lower()
+        if ext not in AUTO_EXT or p.stat().st_size > AUTO_MAX.get(ext, 5_000_000):
+            continue
+        if time.time() - p.stat().st_mtime < AUTO_QUEDO:
+            continue
+        xa.append(f)
+    if not xa:
+        return 'autogardado: nada'
+    for intento in range(6):
+        try:
+            git('add', '--', *xa)
+            git('commit', '-q', '-m', f'Gauntlet 4: autogardado do traballo en curso dos axentes ({len(xa)} ficheiros)\n\n'
+                'Commit automático de herramientas/gauntlet/instantanea.py: ficheiros de texto e imaxes pequenas quedos\n'
+                f'≥ {AUTO_QUEDO} s; os axentes seguen traballando e poden cambialos despois.\n\n'
+                'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n'
+                'Claude-Session: https://claude.ai/code/session_011Mvqh6XmuGVpmihPtorogQ', '--', *xa)
+            break
+        except subprocess.CalledProcessError as e:
+            if intento == 5:
+                return f'autogardado: commit fallou: {e.stderr.strip()[:200]}'
+            time.sleep(7)
+    r = git('push', '-q', 'origin', RAMA, check=False)
+    return f'autogardado: {len(xa)} ficheiros' + ('' if r.returncode == 0 else f' (push fallou: {r.stderr.strip()[:120]})')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--bucle', type=int, default=0, help='segundos entre instantáneas (0 = unha soa vez)')
+    ap.add_argument('--autogardar', action='store_true', help='gardar tamén o traballo en curso de gauntlet4/ e herramientas/')
     a = ap.parse_args()
     while True:
         S = scratch()
         if S and S.exists():
             n, total = copiar(S)
             print(f'{datetime.now(timezone.utc):%H:%M:%S} {n} ficheiros, {total / 1e6:.1f} MB: {commit_push()}', flush=True)
+        if a.autogardar:
+            print(f'{datetime.now(timezone.utc):%H:%M:%S} {autogardar()}', flush=True)
         if not a.bucle:
             break
         time.sleep(a.bucle)
