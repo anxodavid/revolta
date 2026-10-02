@@ -1,3 +1,21 @@
 falta [] sobra []
 carga 5.9 s, pico 1700 MB
 p01_lume {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/ded9a2a1537c7c0d.pt', 's': 30.4, 'tokens': 87}
+p02_mans_lume {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/37da9f240fcea7bc.pt', 's': 23.5, 'tokens': 83}
+p03_remexe {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/ea1e3d0f8530fc47.pt', 's': 20.9, 'tokens': 84}
+p05_camiña_lanterna {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/d6cfe737d27ebabd.pt', 's': 20.8, 'tokens': 85}
+p06_escribe {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/6ae8559ab676802c.pt', 's': 21.1, 'tokens': 70}
+p07_rostro {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/a91464e001a773e1.pt', 's': 20.6, 'tokens': 88}
+p08_lareira {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/74e6a842011e687a.pt', 's': 21.3, 'tokens': 73}
+p12_danza {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/6b53901714c35062.pt', 's': 20.3, 'tokens': 74}
+p14_vixia {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/11f457fbd6f6f6b8.pt', 's': 20.9, 'tokens': 70}
+p16_candeas {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/51e35b0f640008aa.pt', 's': 21.3, 'tokens': 73}
+p17_porta {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/bde815ad6e0b1da4.pt', 's': 21.4, 'tokens': 80}
+p18_amasa {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/37c2f3f547baa3dc.pt', 's': 21.5, 'tokens': 80}
+p20_vello {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/ac57c03941efdd94.pt', 's': 20.7, 'tokens': 78}
+p22_camiña {'ficheiro': '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/emb/835065397c398f3c.pt', 's': 21.5, 'tokens': 92}
+{"carga_s": 5.9, "pico_mb": 6428}
+
+real	5m15.273s
+user	14m3.234s
+sys	4m13.016s
