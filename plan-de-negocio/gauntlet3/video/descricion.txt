@@ -5,7 +5,7 @@ Eu non creo nas meigas, mais habelas, hainas: as lendas cóntanse como lendas, e
 As imaxes están xeradas con intelixencia artificial e representan lugares reais: son contido sintético.
 
 Capítulos
-0:00 Un conxuro de 1967
+00:00 Un conxuro de 1967
 1:55 I. Sete fontes e un gato
 4:38 II. O conxuro do barco
 6:39 III. O tribunal e os xuíces
@@ -48,7 +48,8 @@ Fontes
 Como está feito
 - Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto Nós (Universidade de Santiago de Compostela), licenza Apache-2.0.
 - Texto e dossier de fontes preparados con intelixencia artificial (Claude, de Anthropic) a partir das fontes citadas. Ningunha persoa os revisou.
-- Imaxes xeradas con intelixencia artificial e revisadas por unha porta automática: contido sintético, non son fotografías. Son ambiente sintetizado por código segundo a escena (choiva, lume, auga, vento, noite, campás); o murmurio da xente faise coa mesma voz sintética.
+- Imaxes xeradas con intelixencia artificial (SDXL base 1.0 + SDXL-Lightning, licenza CreativeML Open RAIL++-M) e revisadas só por unha porta automática: 38 de 162 non a pasaron e quedaron co mellor intento. Contido sintético, non son fotografías.
+- Son ambiente sintetizado por código segundo a escena (choiva, lume, auga, mar, aldea, noite, campás, murmurio); o murmurio da xente faise coa mesma voz sintética.
 - Conxuro da queimada: primeiro verso, de Mariano Marcos Abalo (1967), obra rexistrada.
 
 Duración: 31:22.

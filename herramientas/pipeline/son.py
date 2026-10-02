@@ -871,13 +871,32 @@ def tramos_envolvente(n, tramos, fundido=1.5):
     return env
 
 
-def limitar(x, tope=0.89, bloque=480, anaco=4_800_000):
+def _pico_real_bloques(x, bloque, nb, anaco, sobre=4, marxe=32):
+    """Pico real (BS.1770: sobremostraxe x4) de cada bloque, por anacos con `marxe` mostras de contexto."""
+    out = np.zeros(nb, np.float32)
+    for i0 in range(0, len(x), anaco):
+        j0, j1 = max(0, i0 - marxe), min(len(x), i0 + anaco + marxe)
+        y = np.abs(signal.resample_poly(x[j0:j1], sobre, 1, axis=0)).astype(np.float32)
+        y = y.max(axis=1) if y.ndim == 2 else y
+        y = np.maximum(y[(i0 - j0) * sobre:(i0 - j0 + min(anaco, len(x) - i0)) * sobre],
+                       (np.abs(x[i0:i0 + anaco]).max(axis=1) if x.ndim == 2 else np.abs(x[i0:i0 + anaco])).repeat(sobre))
+        b0 = i0 // bloque; k = -(-len(y) // (bloque * sobre))
+        z = np.zeros(k * bloque * sobre, np.float32); z[:len(y)] = y
+        out[b0:b0 + k] = np.maximum(out[b0:b0 + k], z.reshape(k, -1).max(axis=1))
+    return out
+
+
+def limitar(x, tope=0.79, bloque=480, anaco=4_800_000):
     """Limitador de picos por bloques de 10 ms (48 kHz): onde un bloque pasa de `tope`, a ganancia baixa xusto o
     necesario, co mínimo dos 3 bloques de cada lado (anticipación) e unha media de 5 (sen chasquidos); o resto queda
-    igual. Cada mostra queda <= tope porque a media de 5 nunca colle un bloque fóra do mínimo de 7 que o cubre."""
+    igual. Cada mostra queda <= tope porque a media de 5 nunca colle un bloque fóra do mínimo de 7 que o cubre.
+    Mide o pico real (sobremostraxe x4), non o das mostras: co tope de mostra 0,89 o episodio das meigas deu
+    -0,1 dBTP despois do AAC (tribunal final, 01-10-2026). O tope 0,79 (-2 dBTP) deixa marxe para o AAC."""
     n = len(x); nb = -(-n // bloque)
-    a = np.zeros(nb * bloque, np.float32); a[:n] = np.abs(x).max(axis=1) if x.ndim == 2 else np.abs(x)
-    g = np.minimum(1.0, tope / np.maximum(a.reshape(nb, bloque).max(axis=1), 1e-9)).astype(np.float32)
+    if anaco % bloque:
+        anaco -= anaco % bloque
+    a = _pico_real_bloques(x, bloque, nb, anaco)
+    g = np.minimum(1.0, tope / np.maximum(a, 1e-9)).astype(np.float32)
     if g.min() >= 1.0:
         return x
     g = uniform_filter1d(minimum_filter1d(g, size=7, mode='nearest'), size=5, mode='nearest')
@@ -937,7 +956,7 @@ def mesturar(voz, dur_total, offset, out_mix, out_voz, voz_lufs=-17.0, rel_choiv
     # alto: un só transitorio baixaba o episodio enteiro (avance do 01-10-2026: -18,5 LUFS, fóra da porta -18/-16)
     esc = 10 ** ((voz_lufs - meter.integrated_loudness(mix)) / 20)
     mix *= esc
-    mix = limitar(mix, 0.89)
+    mix = limitar(mix)
     sf.write(out_mix, mix, SR, subtype='PCM_16')
     sf.write(out_voz, vt, SR, subtype='PCM_16')
     if out_amb:

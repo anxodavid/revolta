@@ -37538,5 +37538,3318 @@
   "version_revisor": 8,
   "modelo": "lightning1024",
   "fase": "durmir"
+ },
+ "004-dead1677": {
+  "ficheiro": "004-dead1677-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "004-dead1677-0.png",
+    "seed": 1403669023,
+    "s": 83.3,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of a muddy lane between low mossy dry-stone walls at night, a woman in a brown wool shawl walking toward the camera with a horn lantern, dark fields, cold mist",
+    "modelo": "lightning1024",
+    "tokens": 56,
+    "truncado": "",
+    "problemas": [
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a person walking on a wet road in a rural area. The person is wearing a long coat and a hat, and is walking towards the right side of the image. The road is lined with a stone wall on one side and a grassy field on the other. In the background, there are hills and trees, and the sky is foggy. The sun is setting, casting a warm glow over the scene. The overall mood of the photo is peaceful and serene.",
+    "obxectos": [
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.052,
+      0.161
+     ],
+     "muros encalados (CLIP)": [
+      -0.077,
+      0.166
+     ],
+     "ciprés (CLIP)": [
+      0.002,
+      0.136
+     ],
+     "oliveiras (CLIP)": [
+      -0.051,
+      0.146
+     ],
+     "palmeiras (CLIP)": [
+      -0.036,
+      0.146
+     ],
+     "rodas de raios (CLIP)": [
+      0.028,
+      0.102
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.018,
+      0.18
+     ],
+     "eucaliptos (CLIP)": [
+      0.027,
+      0.096
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.023,
+      0.208
+     ],
+     "luces de cidade (CLIP)": [
+      -0.025,
+      0.198
+     ],
+     "salón moderno (CLIP)": [
+      -0.043,
+      0.135
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.016,
+      0.1
+     ],
+     "casas británicas (CLIP)": [
+      0.041,
+      0.179
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.003,
+      0.147
+     ],
+     "negativo: chimneys": 0.006,
+     "negativo: street lamps": 0.009,
+     "clave: lantern": 0.019
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.256
+    },
+    "s_revision": 10.1,
+    "avisos": [
+     "falta: lantern (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "004-dead1677-1.png",
+    "seed": 473612782,
+    "s": 82.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, dark slate roofs, low granite houses, wide shot of a muddy lane between low mossy dry-stone walls at night, a woman in a brown wool shawl walking toward the camera with a horn lantern, dark fields, cold mist",
+    "modelo": "lightning1024",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos",
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0002,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a person walking on a dirt road in a rural area. The person is wearing a long coat and is walking towards the right side of the image. The road is lined with stone cottages on both sides, with a grassy field on the left side. In the background, there is a hill covered in fog and a street lamp. The sky is overcast and the overall mood of the scene is gloomy and gloomy.",
+    "obxectos": [
+     "house",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.028,
+      0.204
+     ],
+     "muros encalados (CLIP)": [
+      -0.045,
+      0.23
+     ],
+     "ciprés (CLIP)": [
+      0.028,
+      0.151
+     ],
+     "oliveiras (CLIP)": [
+      -0.091,
+      0.158
+     ],
+     "palmeiras (CLIP)": [
+      -0.055,
+      0.159
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.089
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.017,
+      0.186
+     ],
+     "eucaliptos (CLIP)": [
+      0.027,
+      0.097
+     ],
+     "luz eléctrica (CLIP)": [
+      0.003,
+      0.192
+     ],
+     "luces de cidade (CLIP)": [
+      -0.053,
+      0.225
+     ],
+     "salón moderno (CLIP)": [
+      -0.04,
+      0.136
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.011,
+      0.105
+     ],
+     "casas británicas (CLIP)": [
+      0.041,
+      0.208
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.011,
+      0.15
+     ],
+     "negativo: chimneys": 0.024,
+     "negativo: street lamps": 0.019,
+     "clave: lantern": 0.019
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.234
+    },
+    "s_revision": 8.7,
+    "avisos": [
+     "falta: lantern (CLIP)"
+    ]
+   },
+   {
+    "intento": 2,
+    "ficheiro": "004-dead1677-2.png",
+    "seed": 2932153306,
+    "s": 76.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, dark slate roofs, low granite houses, wide shot of a muddy lane between low mossy dry-stone walls at night, a woman in a brown wool shawl walking toward the camera with a horn lantern, dark fields, cold mist",
+    "modelo": "lightning1024",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [
+     "luz eléctrica (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0005,
+    "lume_quente": 0.0011,
+    "descricion": "The image shows a person walking down a narrow street in a rural area. The street is lined with stone cottages with thatched roofs and chimneys. The houses are lit up with warm yellow lights, creating a cozy atmosphere. The person is wearing a long coat and a hat, and is walking towards the right side of the image. The sky is overcast and the ground is wet, suggesting that it has recently rained. In the background, there are mountains and a foggy sky. The overall mood of the scene is peaceful and serene.",
+    "obxectos": [
+     "house",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.043,
+      0.168
+     ],
+     "muros encalados (CLIP)": [
+      -0.041,
+      0.189
+     ],
+     "ciprés (CLIP)": [
+      0.006,
+      0.095
+     ],
+     "oliveiras (CLIP)": [
+      -0.121,
+      0.152
+     ],
+     "palmeiras (CLIP)": [
+      -0.024,
+      0.138
+     ],
+     "rodas de raios (CLIP)": [
+      0.027,
+      0.096
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.049,
+      0.168
+     ],
+     "eucaliptos (CLIP)": [
+      -0.006,
+      0.065
+     ],
+     "luz eléctrica (CLIP)": [
+      0.029,
+      0.168
+     ],
+     "luces de cidade (CLIP)": [
+      -0.049,
+      0.202
+     ],
+     "salón moderno (CLIP)": [
+      -0.001,
+      0.135
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.009,
+      0.094
+     ],
+     "casas británicas (CLIP)": [
+      -0.003,
+      0.148
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.034,
+      0.164
+     ],
+     "negativo: chimneys": 0.039,
+     "negativo: street lamps": 0.013,
+     "clave: lantern": 0.004
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.228
+    },
+    "s_revision": 8.3,
+    "avisos": [
+     "falta: lantern (CLIP)"
+    ]
+   },
+   {
+    "intento": 3,
+    "ficheiro": "004-dead1677-3.png",
+    "seed": 1149575277,
+    "s": 76.2,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, dark slate roofs, low granite houses, wide shot of a muddy lane between low mossy dry-stone walls at night, a woman in a brown wool shawl walking toward the camera with a horn lantern, dark fields, cold mist",
+    "modelo": "lightning1024",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0004,
+    "descricion": "The image shows a person walking on a wet road in a rural area. The person is wearing a long brown coat and carrying a black bag. The road is lined with stone cottages on both sides, with a stone wall on one side and a stone fence on the other. The sky is overcast and the ground is covered in a thick layer of fog. In the background, there are trees and hills. The overall mood of the image is gloomy and gloomy.",
+    "obxectos": [
+     "house",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.033,
+      0.153
+     ],
+     "muros encalados (CLIP)": [
+      -0.061,
+      0.189
+     ],
+     "ciprés (CLIP)": [
+      -0.024,
+      0.127
+     ],
+     "oliveiras (CLIP)": [
+      -0.105,
+      0.157
+     ],
+     "palmeiras (CLIP)": [
+      -0.036,
+      0.151
+     ],
+     "rodas de raios (CLIP)": [
+      0.041,
+      0.117
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.02,
+      0.149
+     ],
+     "eucaliptos (CLIP)": [
+      0.018,
+      0.094
+     ],
+     "luz eléctrica (CLIP)": [
+      0.005,
+      0.129
+     ],
+     "luces de cidade (CLIP)": [
+      -0.068,
+      0.178
+     ],
+     "salón moderno (CLIP)": [
+      -0.026,
+      0.145
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.003,
+      0.099
+     ],
+     "casas británicas (CLIP)": [
+      0.038,
+      0.152
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.005,
+      0.146
+     ],
+     "negativo: chimneys": 0.023,
+     "negativo: street lamps": -0.007,
+     "clave: lantern": -0.005
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.222
+    },
+    "s_revision": 8.4,
+    "avisos": [
+     "falta: lantern (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "gancho"
+ },
+ "030-8f40bfcc": {
+  "ficheiro": "030-8f40bfcc-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "030-8f40bfcc-0.png",
+    "seed": 3161221433,
+    "s": 80.0,
+    "prompt": "cinematic film still, period drama, photorealistic, backlit silhouette of a grey cat leaping through a gap under an old wooden plank door, rough granite threshold, faint orange glow of a hearth behind, darkness",
+    "modelo": "lightning1024",
+    "tokens": 45,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0429,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows a black cat walking out of a wooden door. The door is open and the cat is walking towards the right side of the image. The cat is facing towards the left side and appears to be walking towards a door with its front paws on the door handle. The background is blurred, but it seems to be a room with a wooden floor and a beige wall. The image is taken from a low angle, looking up at the cat. The lighting is soft and warm, creating a cozy atmosphere.",
+    "obxectos": [
+     "cat",
+     "door"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.008,
+      0.138
+     ],
+     "muros encalados (CLIP)": [
+      0.01,
+      0.105
+     ],
+     "ciprés (CLIP)": [
+      -0.015,
+      0.099
+     ],
+     "oliveiras (CLIP)": [
+      -0.045,
+      0.087
+     ],
+     "palmeiras (CLIP)": [
+      0.002,
+      0.104
+     ],
+     "rodas de raios (CLIP)": [
+      0.047,
+      0.061
+     ],
+     "paisaxe seca (CLIP)": [
+      0.02,
+      0.097
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.025
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.002,
+      0.087
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.122
+     ],
+     "salón moderno (CLIP)": [
+      0.019,
+      0.133
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.056,
+      0.086
+     ],
+     "casas británicas (CLIP)": [
+      0.02,
+      0.135
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.037,
+      0.123
+     ],
+     "negativo: sink": -0.024,
+     "negativo: faucet": 0.001,
+     "negativo: cupboard": 0.015,
+     "negativo: lamp": 0.017,
+     "clave: cat": 0.052
+    },
+    "arquetipo": null,
+    "s_revision": 8.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "transicion"
+ },
+ "055-27c52c97": {
+  "ficheiro": "055-27c52c97-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "055-27c52c97-0.png",
+    "seed": 890693591,
+    "s": 77.5,
+    "prompt": "cinematic film still, period drama, photorealistic, backlit silhouette of an emigrant couple in 1950s coats on a granite quay before a large steamship, the man holding a small cardboard suitcase by its handle, pale overcast sky",
+    "modelo": "lightning1024",
+    "tokens": 51,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a man standing on a pier, facing away from the camera. He is wearing a long coat and carrying a brown suitcase in his left hand. The man is facing a large ship with two smokestacks on the right side of the image. The ship appears to be a steamboat or a similar type of ship. The sky is overcast and the water is calm. The image is in black and white, giving it a somber mood.",
+    "obxectos": [
+     "boat",
+     "coat",
+     "footwear",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.038,
+      0.102
+     ],
+     "muros encalados (CLIP)": [
+      -0.048,
+      0.128
+     ],
+     "ciprés (CLIP)": [
+      0.011,
+      0.09
+     ],
+     "oliveiras (CLIP)": [
+      -0.028,
+      0.045
+     ],
+     "palmeiras (CLIP)": [
+      0.005,
+      0.102
+     ],
+     "rodas de raios (CLIP)": [
+      0.064,
+      0.112
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.018,
+      0.075
+     ],
+     "eucaliptos (CLIP)": [
+      0.026,
+      0.014
+     ],
+     "luz eléctrica (CLIP)": [
+      0.021,
+      0.074
+     ],
+     "luces de cidade (CLIP)": [
+      -0.071,
+      0.114
+     ],
+     "salón moderno (CLIP)": [
+      0.024,
+      0.081
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.041,
+      0.054
+     ],
+     "casas británicas (CLIP)": [
+      0.017,
+      0.074
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.024,
+      0.093
+     ],
+     "negativo: rolling suitcase": 0.04,
+     "negativo: trolley": -0.013,
+     "negativo: cars": -0.018,
+     "clave: steamship": 0.077
+    },
+    "arquetipo": null,
+    "s_revision": 9.0,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "transicion"
+ },
+ "060-f442170b": {
+  "ficheiro": "060-f442170b-2.png",
+  "escollida": 2,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "060-f442170b-0.png",
+    "seed": 1464231265,
+    "s": 81.9,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of old granite arcades along a narrow empty stone street in soft rain, wet flagstones reflecting a grey-blue dusk",
+    "modelo": "lightning1024",
+    "tokens": 41,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos",
+     "luz eléctrica (CLIP)",
+     "negativo do plano: street lamps (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0044,
+    "lume_quente": 0.0011,
+    "descricion": "The image shows a long, narrow street with arched windows and stone pillars on either side. The street is made of cobblestones and is lit up with warm, golden lights. The sky is dark and the street is wet, indicating that it has recently rained. In the background, there is a building with a blue roof and a clock tower. The overall atmosphere of the image is peaceful and serene.",
+    "obxectos": [
+     "building"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.043,
+      0.159
+     ],
+     "muros encalados (CLIP)": [
+      -0.013,
+      0.145
+     ],
+     "ciprés (CLIP)": [
+      0.011,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      -0.03,
+      0.086
+     ],
+     "palmeiras (CLIP)": [
+      -0.025,
+      0.133
+     ],
+     "rodas de raios (CLIP)": [
+      0.045,
+      0.098
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.003,
+      0.095
+     ],
+     "eucaliptos (CLIP)": [
+      -0.016,
+      0.046
+     ],
+     "luz eléctrica (CLIP)": [
+      0.053,
+      0.243
+     ],
+     "luces de cidade (CLIP)": [
+      -0.005,
+      0.152
+     ],
+     "salón moderno (CLIP)": [
+      0.015,
+      0.097
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.097,
+      0.183
+     ],
+     "casas británicas (CLIP)": [
+      -0.011,
+      0.138
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.061,
+      0.141
+     ],
+     "negativo: cathedral": 0.006,
+     "negativo: street lamps": 0.045,
+     "negativo: cars": -0.007,
+     "clave: arcades": 0.031
+    },
+    "arquetipo": null,
+    "s_revision": 7.6,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "060-f442170b-1.png",
+    "seed": 702905177,
+    "s": 78.4,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, dark slate roofs, low granite houses, wide shot of old granite arcades along a narrow empty stone street in soft rain, wet flagstones reflecting a grey-blue dusk",
+    "modelo": "lightning1024",
+    "tokens": 49,
+    "truncado": "",
+    "problemas": [
+     "interior moderno",
+     "luz eléctrica (CLIP)",
+     "casas británicas (CLIP)",
+     "negativo do plano: street lamps (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0003,
+    "lume_quente": 0.0006,
+    "descricion": "The image shows a cobblestone street in a medieval town at dusk. The street is lined with old, stone-built buildings on both sides, each with a row of windows and doors. The buildings have pointed roofs and chimneys, and the street is empty except for a few potted plants on the sidewalk. The sky is dark and cloudy, and there are a few clouds in the background. The overall mood of the image is gloomy and gloomy.",
+    "obxectos": [
+     "building",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.087,
+      0.217
+     ],
+     "muros encalados (CLIP)": [
+      -0.059,
+      0.207
+     ],
+     "ciprés (CLIP)": [
+      0.033,
+      0.131
+     ],
+     "oliveiras (CLIP)": [
+      -0.058,
+      0.102
+     ],
+     "palmeiras (CLIP)": [
+      -0.023,
+      0.137
+     ],
+     "rodas de raios (CLIP)": [
+      0.04,
+      0.093
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.035,
+      0.117
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.048
+     ],
+     "luz eléctrica (CLIP)": [
+      0.059,
+      0.235
+     ],
+     "luces de cidade (CLIP)": [
+      -0.033,
+      0.186
+     ],
+     "salón moderno (CLIP)": [
+      0.031,
+      0.13
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.04,
+      0.122
+     ],
+     "casas británicas (CLIP)": [
+      0.021,
+      0.2
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.036,
+      0.152
+     ],
+     "negativo: cathedral": -0.027,
+     "negativo: street lamps": 0.044,
+     "negativo: cars": 0.008,
+     "clave: arcades": -0.005
+    },
+    "arquetipo": null,
+    "s_revision": 8.9,
+    "avisos": [
+     "falta: arcades (CLIP)"
+    ]
+   },
+   {
+    "intento": 2,
+    "ficheiro": "060-f442170b-2.png",
+    "seed": 3534912237,
+    "s": 82.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, dark slate roofs, low granite houses, thick granite walls, wide shot of old granite arcades along a narrow empty stone street in soft rain, wet flagstones reflecting a grey-blue dusk",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [
+     "luz eléctrica (CLIP)",
+     "arquetipo repetido: camiñantes de costas (6 xa, tope 5)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a cobblestone street in a residential area. The street is lined with old stone buildings on both sides, with their windows and doors visible. The buildings have a row of terraced houses on the left side of the street, with a row on the right side. The sky is overcast and the street is wet, suggesting that it has recently rained. The overall mood of the image is gloomy and gloomy.",
+    "obxectos": [
+     "building",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.088,
+      0.22
+     ],
+     "muros encalados (CLIP)": [
+      -0.075,
+      0.224
+     ],
+     "ciprés (CLIP)": [
+      0.012,
+      0.125
+     ],
+     "oliveiras (CLIP)": [
+      -0.046,
+      0.103
+     ],
+     "palmeiras (CLIP)": [
+      -0.031,
+      0.134
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.117
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.025,
+      0.129
+     ],
+     "eucaliptos (CLIP)": [
+      0.001,
+      0.049
+     ],
+     "luz eléctrica (CLIP)": [
+      0.049,
+      0.207
+     ],
+     "luces de cidade (CLIP)": [
+      -0.051,
+      0.172
+     ],
+     "salón moderno (CLIP)": [
+      0.012,
+      0.134
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.001,
+      0.122
+     ],
+     "casas británicas (CLIP)": [
+      -0.005,
+      0.197
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.006,
+      0.133
+     ],
+     "negativo: cathedral": -0.023,
+     "negativo: street lamps": 0.014,
+     "negativo: cars": 0.016,
+     "clave: arcades": 0.005
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.215
+    },
+    "s_revision": 9.4,
+    "avisos": [
+     "falta: arcades (CLIP)"
+    ]
+   },
+   {
+    "intento": 3,
+    "ficheiro": "060-f442170b-3.png",
+    "seed": 1605537228,
+    "s": 75.4,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, dark slate roofs, low granite houses, thick granite walls, wide shot of old granite arcades along a narrow empty stone street in soft rain, wet flagstones reflecting a grey-blue dusk, seen from a low angle",
+    "modelo": "lightning1024",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "luz eléctrica (CLIP)",
+     "casas británicas (CLIP)",
+     "arquetipo repetido: camiñantes de costas (6 xa, tope 5)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a cobblestone street in a residential area. The street is lined with old stone buildings on both sides, with a row of terraced houses on the left side. The houses have a flat roof with a chimney on top. The sky is overcast and the street is wet, suggesting that it has recently rained. The buildings have large windows and doors, and there is a sign on the front of one of the houses. The overall mood of the image is gloomy and gloomy.",
+    "obxectos": [
+     "building",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.083,
+      0.221
+     ],
+     "muros encalados (CLIP)": [
+      -0.063,
+      0.217
+     ],
+     "ciprés (CLIP)": [
+      0.025,
+      0.125
+     ],
+     "oliveiras (CLIP)": [
+      -0.061,
+      0.104
+     ],
+     "palmeiras (CLIP)": [
+      -0.029,
+      0.138
+     ],
+     "rodas de raios (CLIP)": [
+      0.041,
+      0.11
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.012,
+      0.127
+     ],
+     "eucaliptos (CLIP)": [
+      -0.016,
+      0.047
+     ],
+     "luz eléctrica (CLIP)": [
+      0.05,
+      0.21
+     ],
+     "luces de cidade (CLIP)": [
+      -0.04,
+      0.168
+     ],
+     "salón moderno (CLIP)": [
+      0.01,
+      0.131
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.025,
+      0.14
+     ],
+     "casas británicas (CLIP)": [
+      0.01,
+      0.206
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.016,
+      0.143
+     ],
+     "negativo: cathedral": -0.023,
+     "negativo: street lamps": 0.031,
+     "negativo: cars": 0.005,
+     "clave: arcades": -0.002
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.206
+    },
+    "s_revision": 9.4,
+    "avisos": [
+     "falta: arcades (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma"
+ },
+ "066-8b1fdedc": {
+  "ficheiro": "066-8b1fdedc-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "066-8b1fdedc-0.png",
+    "seed": 566176275,
+    "s": 79.0,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of an empty muddy road between granite walls leading toward distant hills in soft rain, a small cloth bundle left on a stone, grey-blue dusk",
+    "modelo": "lightning1024",
+    "tokens": 46,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos",
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0005,
+    "lume_quente": 0.0,
+    "descricion": "The image is a photograph of a dirt road in the middle of a mountainous landscape. The road is empty and is surrounded by dry grass and shrubs on both sides. The sky is cloudy and the mountains in the background are covered in snow. On the right side of the road, there is a telephone pole with a power line running along it. The overall mood of the image is bleak and desolate.",
+    "obxectos": [
+     "picture frame"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.065,
+      0.143
+     ],
+     "muros encalados (CLIP)": [
+      -0.064,
+      0.176
+     ],
+     "ciprés (CLIP)": [
+      -0.011,
+      0.112
+     ],
+     "oliveiras (CLIP)": [
+      -0.012,
+      0.123
+     ],
+     "palmeiras (CLIP)": [
+      0.004,
+      0.135
+     ],
+     "rodas de raios (CLIP)": [
+      0.01,
+      0.117
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.01,
+      0.171
+     ],
+     "eucaliptos (CLIP)": [
+      0.031,
+      0.109
+     ],
+     "luz eléctrica (CLIP)": [
+      0.028,
+      0.129
+     ],
+     "luces de cidade (CLIP)": [
+      -0.04,
+      0.202
+     ],
+     "salón moderno (CLIP)": [
+      -0.017,
+      0.095
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.053,
+      0.07
+     ],
+     "casas británicas (CLIP)": [
+      -0.026,
+      0.118
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.002,
+      0.129
+     ],
+     "negativo: smiling face": -0.053,
+     "negativo: candle": -0.041,
+     "negativo: lamp": -0.035,
+     "clave: road": 0.036
+    },
+    "arquetipo": null,
+    "s_revision": 7.8,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "066-8b1fdedc-1.png",
+    "seed": 139148653,
+    "s": 79.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, thick granite walls, wide shot of an empty muddy road between granite walls leading toward distant hills in soft rain, a small cloth bundle left on a stone, grey-blue dusk",
+    "modelo": "lightning1024",
+    "tokens": 50,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a long, straight road with a stone wall on the right side. The road is wet and there are small puddles of water on the ground. On the left side of the road, there is a grassy field with a few trees scattered around. In the background, there are mountains and a cloudy sky. The overall mood of the image is gloomy and desolate.",
+    "obxectos": [],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.053,
+      0.132
+     ],
+     "muros encalados (CLIP)": [
+      -0.101,
+      0.204
+     ],
+     "ciprés (CLIP)": [
+      -0.02,
+      0.136
+     ],
+     "oliveiras (CLIP)": [
+      -0.028,
+      0.16
+     ],
+     "palmeiras (CLIP)": [
+      -0.03,
+      0.163
+     ],
+     "rodas de raios (CLIP)": [
+      0.016,
+      0.147
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.039,
+      0.208
+     ],
+     "eucaliptos (CLIP)": [
+      0.011,
+      0.112
+     ],
+     "luz eléctrica (CLIP)": [
+      0.006,
+      0.107
+     ],
+     "luces de cidade (CLIP)": [
+      -0.051,
+      0.193
+     ],
+     "salón moderno (CLIP)": [
+      -0.014,
+      0.082
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.065,
+      0.094
+     ],
+     "casas británicas (CLIP)": [
+      -0.012,
+      0.132
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.022,
+      0.122
+     ],
+     "negativo: smiling face": -0.057,
+     "negativo: candle": -0.085,
+     "negativo: lamp": -0.063,
+     "clave: road": 0.032
+    },
+    "arquetipo": null,
+    "s_revision": 7.4,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma"
+ },
+ "083-f3713dc1": {
+  "ficheiro": "083-f3713dc1-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "083-f3713dc1-0.png",
+    "seed": 3406495546,
+    "s": 78.1,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of the wrinkled hands of an old midwife guiding a young woman's hands grinding herbs in a stone mortar, dried herbs, smoke-blackened granite wall, warm firelight",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (2)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.397,
+       0.347
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.153,
+      "tamaño": 0.188
+     },
+     {
+      "pulso": [
+       0.611,
+       0.492
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.194,
+      "tamaño": 0.163
+     }
+    ],
+    "corpos": 4,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0006,
+    "descricion": "The image shows two people, a man and a woman, holding hands over a table. The table is covered with a cloth and there are various objects scattered around it. The man is wearing a beige shirt and the woman is wearing an apron. They appear to be working together on a project, as there are tools and materials on the table.\n\nThe hands of the two people are clasped together in a prayer-like gesture, with the man's hand resting on the woman's hand. The woman's fingers are slightly curled around the man, and her thumb is resting",
+    "obxectos": [
+     "human hand",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.02,
+      0.091
+     ],
+     "muros encalados (CLIP)": [
+      0.013,
+      0.083
+     ],
+     "ciprés (CLIP)": [
+      -0.026,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      -0.024,
+      0.122
+     ],
+     "palmeiras (CLIP)": [
+      0.002,
+      0.145
+     ],
+     "rodas de raios (CLIP)": [
+      0.04,
+      0.111
+     ],
+     "paisaxe seca (CLIP)": [
+      0.011,
+      0.109
+     ],
+     "eucaliptos (CLIP)": [
+      -0.01,
+      0.102
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.023,
+      0.087
+     ],
+     "luces de cidade (CLIP)": [
+      -0.006,
+      0.115
+     ],
+     "salón moderno (CLIP)": [
+      -0.049,
+      0.128
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.027,
+      0.075
+     ],
+     "casas británicas (CLIP)": [
+      0.008,
+      0.063
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.005,
+      0.155
+     ],
+     "negativo: light bulb": -0.021,
+     "negativo: radiator": -0.068,
+     "negativo: window": -0.046,
+     "negativo: witch": 0.027,
+     "clave: stone mortar": -0.012
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.231
+    },
+    "s_revision": 8.8,
+    "avisos": [
+     "falta: stone mortar (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "083-f3713dc1-1.png",
+    "seed": 797935252,
+    "s": 79.5,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of the wrinkled hands of an old midwife guiding a young woman's hands grinding herbs in a stone mortar, dried herbs, smoke-blackened granite wall, warm firelight",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.717,
+       0.558
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.039,
+      "tamaño": 0.087
+     },
+     {
+      "pulso": [
+       0.552,
+       0.515
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.103,
+      "tamaño": 0.1
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0215,
+    "lume_quente": 0.0096,
+    "descricion": "The image shows two people, a man and a woman, standing in a kitchen. They are both wearing aprons and are holding hands. The woman is on the left side of the image, and the man on the right side is standing behind her. In front of them, there is a wooden table with a bowl of brown powder, a small candle, and a small yellow bell pepper. The table is covered with a green cloth and there are various kitchen utensils and ingredients scattered around. The background is dark and the lighting is dim, creating a cozy atmosphere.",
+    "obxectos": [
+     "candle",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.021,
+      0.123
+     ],
+     "muros encalados (CLIP)": [
+      0.011,
+      0.113
+     ],
+     "ciprés (CLIP)": [
+      -0.028,
+      0.142
+     ],
+     "oliveiras (CLIP)": [
+      -0.009,
+      0.118
+     ],
+     "palmeiras (CLIP)": [
+      -0.029,
+      0.139
+     ],
+     "rodas de raios (CLIP)": [
+      0.025,
+      0.123
+     ],
+     "paisaxe seca (CLIP)": [
+      0.017,
+      0.095
+     ],
+     "eucaliptos (CLIP)": [
+      -0.044,
+      0.08
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.037,
+      0.096
+     ],
+     "luces de cidade (CLIP)": [
+      -0.008,
+      0.122
+     ],
+     "salón moderno (CLIP)": [
+      -0.08,
+      0.204
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.004,
+      0.08
+     ],
+     "casas británicas (CLIP)": [
+      0.012,
+      0.105
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.005,
+      0.201
+     ],
+     "negativo: light bulb": -0.006,
+     "negativo: radiator": -0.052,
+     "negativo: window": -0.013,
+     "negativo: witch": 0.052,
+     "clave: stone mortar": 0.051
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.182
+    },
+    "s_revision": 8.2,
+    "avisos": [
+     "negativo do plano: witch (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma"
+ },
+ "090-647825d8": {
+  "ficheiro": "090-647825d8-1.png",
+  "escollida": 1,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "090-647825d8-0.png",
+    "seed": 638805403,
+    "s": 80.7,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of an open stone hearth at floor level with a small log fire in a dark peasant kitchen, a wooden high-backed bench beside it, smoke-blackened granite walls, warm firelight",
+    "modelo": "lightning1024",
+    "tokens": 56,
+    "truncado": "",
+    "problemas": [
+     "interior moderno",
+     "salón moderno (CLIP)",
+     "casas británicas (CLIP)",
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0105,
+    "lume_quente": 0.0139,
+    "descricion": "The image shows a cozy living room with a stone fireplace and a bookshelf on the right side. The fireplace is made of wood and has a large window on the left side, allowing natural light to enter the room. There are two fireplaces in the center of the room, one with a fire burning inside and the other with a wood burning stove. The room is dimly lit, with a rug on the floor and a few candles on the table. The walls are made of stone and there is a large mirror hanging above the fireplace. The floor is covered with a gray rug",
+    "obxectos": [
+     "book",
+     "bookcase",
+     "bottle",
+     "candle",
+     "fireplace"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.024,
+      0.143
+     ],
+     "muros encalados (CLIP)": [
+      -0.008,
+      0.107
+     ],
+     "ciprés (CLIP)": [
+      -0.039,
+      0.144
+     ],
+     "oliveiras (CLIP)": [
+      -0.075,
+      0.129
+     ],
+     "palmeiras (CLIP)": [
+      -0.023,
+      0.15
+     ],
+     "rodas de raios (CLIP)": [
+      0.007,
+      0.092
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.009,
+      0.101
+     ],
+     "eucaliptos (CLIP)": [
+      -0.028,
+      0.073
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.009,
+      0.092
+     ],
+     "luces de cidade (CLIP)": [
+      -0.037,
+      0.17
+     ],
+     "salón moderno (CLIP)": [
+      0.036,
+      0.238
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.035,
+      0.091
+     ],
+     "casas británicas (CLIP)": [
+      0.052,
+      0.168
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.009,
+      0.21
+     ],
+     "negativo: window": 0.028,
+     "negativo: wall lamp": 0.008,
+     "negativo: sconce": 0.011,
+     "negativo: stove": 0.021,
+     "negativo: fireplace mantel": 0.074,
+     "clave: fire": 0.028
+    },
+    "arquetipo": null,
+    "s_revision": 9.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "090-647825d8-1.png",
+    "seed": 1752119208,
+    "s": 79.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, thick granite walls, small shuttered window, smoke-blackened granite walls, open stone hearth at floor level, medium shot of an open stone hearth at floor level with a small log fire in a dark peasant kitchen, a wooden high-backed bench beside it, smoke-blackened granite walls, warm firelight",
+    "modelo": "lightning1024",
+    "tokens": 80,
+    "truncado": "warm firelight",
+    "problemas": [
+     "interior moderno",
+     "casas británicas (CLIP)",
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.015,
+    "lume_quente": 0.0035,
+    "descricion": "The image shows a cozy and rustic room with a fireplace. The room has a high ceiling with wooden beams and a large window on the left side. The walls are made of stone and there are various tools hanging on the walls. On the right side of the room, there is a wooden table with a vase, a bottle, and a few other items on it. In front of the table, there are two wooden barrels and a pile of firewood. The floor is made of dark wood and the room is lit by natural light coming in from the large window. The overall",
+    "obxectos": [
+     "house",
+     "table",
+     "window",
+     "wood burning stove"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.009,
+      0.152
+     ],
+     "muros encalados (CLIP)": [
+      0.003,
+      0.128
+     ],
+     "ciprés (CLIP)": [
+      -0.07,
+      0.16
+     ],
+     "oliveiras (CLIP)": [
+      -0.064,
+      0.159
+     ],
+     "palmeiras (CLIP)": [
+      -0.037,
+      0.179
+     ],
+     "rodas de raios (CLIP)": [
+      0.011,
+      0.129
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.012,
+      0.11
+     ],
+     "eucaliptos (CLIP)": [
+      -0.036,
+      0.071
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.004,
+      0.082
+     ],
+     "luces de cidade (CLIP)": [
+      -0.03,
+      0.155
+     ],
+     "salón moderno (CLIP)": [
+      -0.036,
+      0.25
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.047,
+      0.107
+     ],
+     "casas británicas (CLIP)": [
+      0.053,
+      0.184
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.008,
+      0.238
+     ],
+     "negativo: window": 0.03,
+     "negativo: wall lamp": -0.014,
+     "negativo: sconce": -0.003,
+     "negativo: stove": -0.005,
+     "negativo: fireplace mantel": 0.054,
+     "clave: fire": 0.005
+    },
+    "arquetipo": null,
+    "s_revision": 8.9,
+    "avisos": [
+     "falta: fire (CLIP)"
+    ]
+   },
+   {
+    "intento": 2,
+    "ficheiro": "090-647825d8-2.png",
+    "seed": 2147923545,
+    "s": 81.7,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, thick granite walls, small shuttered window, smoke-blackened granite walls, open stone hearth at floor level, medium shot of an open stone hearth at floor level with a small log fire in a dark peasant kitchen, a wooden high-backed bench beside it, smoke-blackened granite walls, warm firelight",
+    "modelo": "lightning1024",
+    "tokens": 80,
+    "truncado": "warm firelight",
+    "problemas": [
+     "salón moderno (CLIP)",
+     "casas británicas (CLIP)",
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0117,
+    "lume_quente": 0.0092,
+    "descricion": "The image shows a cozy living room with a fireplace. The fireplace is made of stone and has a large chimney on top. The fire is burning brightly and there are several pieces of wood burning in the fireplace. On the left side of the image, there is a wooden table with a pot and other items on it. Next to the table, there are two small tables with a vase and a basket on them. The room has a stone wall and a window on the right side, letting in natural light. The floor is covered with a gray rug. The overall atmosphere of the",
+    "obxectos": [
+     "fireplace",
+     "house",
+     "table",
+     "window",
+     "wood burning stove"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.019,
+      0.138
+     ],
+     "muros encalados (CLIP)": [
+      0.009,
+      0.115
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.138
+     ],
+     "oliveiras (CLIP)": [
+      -0.054,
+      0.118
+     ],
+     "palmeiras (CLIP)": [
+      -0.022,
+      0.147
+     ],
+     "rodas de raios (CLIP)": [
+      0.008,
+      0.097
+     ],
+     "paisaxe seca (CLIP)": [
+      0.001,
+      0.083
+     ],
+     "eucaliptos (CLIP)": [
+      -0.007,
+      0.066
+     ],
+     "luz eléctrica (CLIP)": [
+      0.007,
+      0.067
+     ],
+     "luces de cidade (CLIP)": [
+      -0.04,
+      0.152
+     ],
+     "salón moderno (CLIP)": [
+      0.023,
+      0.236
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.001,
+      0.07
+     ],
+     "casas británicas (CLIP)": [
+      0.036,
+      0.156
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.044,
+      0.236
+     ],
+     "negativo: window": 0.007,
+     "negativo: wall lamp": -0.021,
+     "negativo: sconce": -0.007,
+     "negativo: stove": 0.013,
+     "negativo: fireplace mantel": 0.085,
+     "clave: fire": 0.037
+    },
+    "arquetipo": {
+     "etiqueta": "persoa á lareira",
+     "sim": 0.253
+    },
+    "s_revision": 8.9,
+    "avisos": []
+   },
+   {
+    "intento": 3,
+    "ficheiro": "090-647825d8-3.png",
+    "seed": 3483660488,
+    "s": 79.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, thick granite walls, small shuttered window, smoke-blackened granite walls, open stone hearth at floor level, medium shot of an open stone hearth at floor level with a small log fire in a dark peasant kitchen, a wooden high-backed bench beside it, smoke-blackened granite walls, warm firelight",
+    "modelo": "lightning1024",
+    "tokens": 80,
+    "truncado": "warm firelight",
+    "problemas": [
+     "interior moderno",
+     "casas británicas (CLIP)",
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0305,
+    "lume_quente": 0.0064,
+    "descricion": "The image shows a cozy living room with a stone fireplace. The fireplace is made of stacked stone and has a large chimney on the left side. The fire is burning brightly and there are several wooden logs burning in it. On the right side of the fireplace, there is a wooden table with a few items on it, including a basket of apples and a vase of flowers. The room has a wooden ceiling and a large window on the far wall, allowing natural light to enter. The floor is covered with a gray rug, and there is an open door leading to another room.",
+    "obxectos": [
+     "fireplace",
+     "house",
+     "table",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.02,
+      0.137
+     ],
+     "muros encalados (CLIP)": [
+      0.008,
+      0.117
+     ],
+     "ciprés (CLIP)": [
+      -0.061,
+      0.146
+     ],
+     "oliveiras (CLIP)": [
+      -0.026,
+      0.137
+     ],
+     "palmeiras (CLIP)": [
+      -0.047,
+      0.159
+     ],
+     "rodas de raios (CLIP)": [
+      0.025,
+      0.101
+     ],
+     "paisaxe seca (CLIP)": [
+      0.02,
+      0.098
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.081
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.022,
+      0.096
+     ],
+     "luces de cidade (CLIP)": [
+      -0.047,
+      0.142
+     ],
+     "salón moderno (CLIP)": [
+      -0.023,
+      0.249
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.006,
+      0.087
+     ],
+     "casas británicas (CLIP)": [
+      0.053,
+      0.177
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.031,
+      0.238
+     ],
+     "negativo: window": 0.022,
+     "negativo: wall lamp": -0.003,
+     "negativo: sconce": 0.015,
+     "negativo: stove": 0.016,
+     "negativo: fireplace mantel": 0.072,
+     "clave: fire": 0.01
+    },
+    "arquetipo": null,
+    "s_revision": 8.9,
+    "avisos": [
+     "falta: fire (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma"
+ },
+ "004-6c78d74f": {
+  "ficheiro": "004-6c78d74f-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "004-6c78d74f-0.png",
+    "seed": 2156620387,
+    "s": 84.9,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, medium shot of a woman in a brown wool shawl holding a horn lantern beside a mossy dry-stone wall at night, empty dark fields behind her, cold mist, deep shadows",
+    "modelo": "lightning1024",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0002,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows a woman walking on a dirt path in a field. She is wearing a long dress and carrying a lantern in her hand. The woman is walking towards the horizon with her back towards the camera. The field is covered in dry grass and there are a few rocks scattered around. In the background, there are hills and a clear blue sky. The sun is setting, casting a warm glow over the scene. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.032,
+      0.087
+     ],
+     "muros encalados (CLIP)": [
+      -0.049,
+      0.133
+     ],
+     "ciprés (CLIP)": [
+      -0.01,
+      0.103
+     ],
+     "oliveiras (CLIP)": [
+      -0.107,
+      0.142
+     ],
+     "palmeiras (CLIP)": [
+      -0.034,
+      0.144
+     ],
+     "rodas de raios (CLIP)": [
+      0.018,
+      0.086
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.032,
+      0.151
+     ],
+     "eucaliptos (CLIP)": [
+      -0.052,
+      0.111
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.058,
+      0.17
+     ],
+     "luces de cidade (CLIP)": [
+      -0.039,
+      0.187
+     ],
+     "salón moderno (CLIP)": [
+      -0.034,
+      0.1
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.021,
+      0.066
+     ],
+     "casas británicas (CLIP)": [
+      0.015,
+      0.091
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.032,
+      0.154
+     ],
+     "negativo: chimneys": 0.003,
+     "negativo: street lamps": -0.004,
+     "negativo: houses": -0.014,
+     "clave: lantern": 0.041
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.224
+    },
+    "s_revision": 9.9,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "gancho"
+ },
+ "030-48739fa3": {
+  "ficheiro": "030-48739fa3-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "030-48739fa3-0.png",
+    "seed": 3238776251,
+    "s": 82.0,
+    "prompt": "cinematic film still, period drama, photorealistic, backlit silhouette of a grey cat leaping across rough granite stones in a dark old byre with straw on the floor at night, faint moonlight through gaps in the rough planks, deep black shadows",
+    "modelo": "lightning1024",
+    "tokens": 52,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0,
+    "descricion": "The image is a black cat walking on a stone wall. The cat is in mid-stride, with its body stretched out and its tail curled around its body. The wall is made of large, irregularly shaped stones, and there is a stone pillar on the right side of the image. The background is dark, with a faint light shining through the window on the left side. The image is taken from a low angle, looking up at the cat. The overall mood of the scene is peaceful and serene.",
+    "obxectos": [
+     "cat"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.055,
+      0.101
+     ],
+     "muros encalados (CLIP)": [
+      -0.021,
+      0.084
+     ],
+     "ciprés (CLIP)": [
+      0.008,
+      0.05
+     ],
+     "oliveiras (CLIP)": [
+      -0.004,
+      0.047
+     ],
+     "palmeiras (CLIP)": [
+      0.02,
+      0.086
+     ],
+     "rodas de raios (CLIP)": [
+      0.042,
+      0.043
+     ],
+     "paisaxe seca (CLIP)": [
+      0.02,
+      0.075
+     ],
+     "eucaliptos (CLIP)": [
+      -0.059,
+      0.017
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.03,
+      0.114
+     ],
+     "luces de cidade (CLIP)": [
+      -0.032,
+      0.15
+     ],
+     "salón moderno (CLIP)": [
+      -0.03,
+      0.102
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.001,
+      0.076
+     ],
+     "casas británicas (CLIP)": [
+      0.021,
+      0.072
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.034,
+      0.144
+     ],
+     "negativo: sink": -0.016,
+     "negativo: faucet": -0.019,
+     "negativo: cupboard": -0.008,
+     "negativo: lamp": -0.017,
+     "negativo: doormat": -0.006,
+     "clave: cat": 0.055
+    },
+    "arquetipo": null,
+    "s_revision": 8.0,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "transicion"
+ },
+ "060-e0b97acb": {
+  "ficheiro": "060-e0b97acb-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "060-e0b97acb-0.png",
+    "seed": 982898057,
+    "s": 78.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of rain falling on worn granite flagstones beneath a heavy old stone arch, puddles reflecting a pale grey rainy daylight",
+    "modelo": "lightning1024",
+    "tokens": 41,
+    "truncado": "",
+    "problemas": [
+     "arquetipo repetido: camiñantes de costas (6 xa, tope 5)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.001,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a large courtyard with a large stone building in the background. The courtyard is made of concrete and has a tiled floor. The building has multiple arches and columns, and there are two people walking in the center of the courtyard. The arches are arched and have intricate carvings on them. The floor is tiled and there is a reflection of the building on the floor. In the background, there are other buildings and a tree. The overall atmosphere of the image is peaceful and serene.",
+    "obxectos": [
+     "building",
+     "person",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.047,
+      0.146
+     ],
+     "muros encalados (CLIP)": [
+      -0.005,
+      0.12
+     ],
+     "ciprés (CLIP)": [
+      0.013,
+      0.111
+     ],
+     "oliveiras (CLIP)": [
+      -0.013,
+      0.101
+     ],
+     "palmeiras (CLIP)": [
+      -0.012,
+      0.136
+     ],
+     "rodas de raios (CLIP)": [
+      0.031,
+      0.125
+     ],
+     "paisaxe seca (CLIP)": [
+      0.033,
+      0.083
+     ],
+     "eucaliptos (CLIP)": [
+      -0.009,
+      0.05
+     ],
+     "luz eléctrica (CLIP)": [
+      0.039,
+      0.125
+     ],
+     "luces de cidade (CLIP)": [
+      -0.036,
+      0.126
+     ],
+     "salón moderno (CLIP)": [
+      -0.002,
+      0.093
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.102,
+      0.166
+     ],
+     "casas británicas (CLIP)": [
+      -0.08,
+      0.119
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.007,
+      0.093
+     ],
+     "negativo: cathedral": 0.035,
+     "negativo: street lamps": -0.023,
+     "negativo: cars": -0.021,
+     "negativo: windows": 0.018,
+     "clave: stone arch": -0.024
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.213
+    },
+    "s_revision": 8.9,
+    "avisos": [
+     "falta: stone arch (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "060-e0b97acb-1.png",
+    "seed": 18976052,
+    "s": 78.6,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of rain falling on worn granite flagstones beneath a heavy old stone arch, puddles reflecting a pale grey rainy daylight",
+    "modelo": "lightning1024",
+    "tokens": 41,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0003,
+    "lume_quente": 0.0,
+    "descricion": "The image is a close-up of a cobblestone pavement with water droplets on it. The pavement is wet and there is a puddle of water in the center of the image. The water is reflecting the buildings in the background, creating a mirror-like effect. The buildings appear to be old and weathered, with arches and columns visible. The image is taken from a low angle, looking up at the pavement. The sky is overcast and the overall mood of the photo is gloomy and gloomy.",
+    "obxectos": [
+     "building"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.047,
+      0.159
+     ],
+     "muros encalados (CLIP)": [
+      -0.032,
+      0.17
+     ],
+     "ciprés (CLIP)": [
+      -0.026,
+      0.125
+     ],
+     "oliveiras (CLIP)": [
+      -0.002,
+      0.106
+     ],
+     "palmeiras (CLIP)": [
+      -0.019,
+      0.151
+     ],
+     "rodas de raios (CLIP)": [
+      0.03,
+      0.124
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.015,
+      0.108
+     ],
+     "eucaliptos (CLIP)": [
+      -0.009,
+      0.069
+     ],
+     "luz eléctrica (CLIP)": [
+      0.04,
+      0.132
+     ],
+     "luces de cidade (CLIP)": [
+      -0.017,
+      0.111
+     ],
+     "salón moderno (CLIP)": [
+      0.015,
+      0.103
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.023,
+      0.147
+     ],
+     "casas británicas (CLIP)": [
+      -0.014,
+      0.13
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.029,
+      0.135
+     ],
+     "negativo: cathedral": 0.019,
+     "negativo: street lamps": -0.015,
+     "negativo: cars": -0.019,
+     "negativo: windows": 0.01,
+     "clave: stone arch": -0.001
+    },
+    "arquetipo": null,
+    "s_revision": 8.4,
+    "avisos": [
+     "falta: stone arch (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma"
+ },
+ "066-fc84a787": {
+  "ficheiro": "066-fc84a787-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "066-fc84a787-0.png",
+    "seed": 2696658772,
+    "s": 78.6,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of a small knotted cloth bundle left on a mossy granite boulder in soft rain, misty hills blurred far behind, grey-blue dusk",
+    "modelo": "lightning1024",
+    "tokens": 46,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a ball of yarn lying on a rock. The yarn is a light green color and appears to be made of a soft, fuzzy material. It is tightly wound around the rock, with the ends of the yarn twisted and twisted together. The background is blurred, but it seems to be a rocky landscape with mountains in the distance. The rock is covered in moss and lichen, and there are a few small rocks scattered around. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "animal"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.036,
+      0.069
+     ],
+     "muros encalados (CLIP)": [
+      -0.024,
+      0.098
+     ],
+     "ciprés (CLIP)": [
+      -0.031,
+      0.115
+     ],
+     "oliveiras (CLIP)": [
+      -0.062,
+      0.121
+     ],
+     "palmeiras (CLIP)": [
+      -0.003,
+      0.125
+     ],
+     "rodas de raios (CLIP)": [
+      0.046,
+      0.107
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.049,
+      0.15
+     ],
+     "eucaliptos (CLIP)": [
+      -0.054,
+      0.09
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.025,
+      0.054
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.125
+     ],
+     "salón moderno (CLIP)": [
+      0.041,
+      0.097
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.01,
+      0.071
+     ],
+     "casas británicas (CLIP)": [
+      0.021,
+      0.08
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.031,
+      0.156
+     ],
+     "negativo: road": -0.023,
+     "negativo: asphalt": -0.002,
+     "negativo: people": -0.028,
+     "negativo: smiling face": -0.046,
+     "negativo: candle": -0.013,
+     "negativo: lamp": -0.04,
+     "clave: cloth bundle": 0.096
+    },
+    "arquetipo": null,
+    "s_revision": 7.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma"
+ },
+ "090-9cea88bf": {
+  "ficheiro": "090-9cea88bf-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "090-9cea88bf-0.png",
+    "seed": 2276581422,
+    "s": 80.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a black iron pot hanging on a sooty chain above a low log fire, steam rising from the pot, smoke-blackened granite stones, warm firelight, darkness around",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: stove (CLIP)",
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0099,
+    "lume_quente": 0.0194,
+    "descricion": "The image shows a black cauldron with a handle and a lid on top, sitting on a wooden stand in front of a fire. The cauldron is filled with black beans and appears to be cooking. The fire is burning brightly, with orange and yellow flames visible. The background is blurred, but it seems to be a cozy living room with a brick wall and a wooden chair. The overall mood of the image is warm and inviting.",
+    "obxectos": [
+     "fireplace"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.036,
+      0.124
+     ],
+     "muros encalados (CLIP)": [
+      -0.023,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.055,
+      0.129
+     ],
+     "oliveiras (CLIP)": [
+      -0.02,
+      0.099
+     ],
+     "palmeiras (CLIP)": [
+      -0.042,
+      0.123
+     ],
+     "rodas de raios (CLIP)": [
+      0.026,
+      0.133
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.023,
+      0.077
+     ],
+     "eucaliptos (CLIP)": [
+      -0.043,
+      0.084
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.038,
+      0.1
+     ],
+     "luces de cidade (CLIP)": [
+      -0.041,
+      0.142
+     ],
+     "salón moderno (CLIP)": [
+      -0.075,
+      0.213
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.023,
+      0.084
+     ],
+     "casas británicas (CLIP)": [
+      0.011,
+      0.109
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.004,
+      0.27
+     ],
+     "negativo: window": -0.01,
+     "negativo: wall lamp": -0.034,
+     "negativo: sconce": -0.005,
+     "negativo: stove": 0.041,
+     "negativo: fireplace mantel": 0.052,
+     "negativo: glass door": -0.056,
+     "clave: iron pot": 0.099
+    },
+    "arquetipo": null,
+    "s_revision": 8.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "090-9cea88bf-1.png",
+    "seed": 3841950643,
+    "s": 82.1,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a black iron pot hanging on a sooty chain above a low log fire, steam rising from the pot, smoke-blackened granite stones, warm firelight, darkness around",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0581,
+    "lume_quente": 0.0855,
+    "descricion": "The image shows a black cauldron with a handle and a chain hanging from it, cooking over a fire. The cauldron is filled with a dark liquid, possibly a mixture of spices or herbs, and is being cooked over the fire with a spoon. The fire is burning brightly, with orange and yellow flames visible in the background. The flames are dancing and flickering, creating a warm and cozy atmosphere. The background is blurred, but it appears to be a cozy living room with a fireplace and a bookshelf. The overall mood of the image is warm and inviting.",
+    "obxectos": [
+     "kettle"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.001,
+      0.091
+     ],
+     "muros encalados (CLIP)": [
+      0.013,
+      0.087
+     ],
+     "ciprés (CLIP)": [
+      -0.064,
+      0.109
+     ],
+     "oliveiras (CLIP)": [
+      -0.023,
+      0.08
+     ],
+     "palmeiras (CLIP)": [
+      -0.026,
+      0.103
+     ],
+     "rodas de raios (CLIP)": [
+      0.016,
+      0.106
+     ],
+     "paisaxe seca (CLIP)": [
+      0.002,
+      0.059
+     ],
+     "eucaliptos (CLIP)": [
+      -0.024,
+      0.057
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.036,
+      0.098
+     ],
+     "luces de cidade (CLIP)": [
+      -0.035,
+      0.134
+     ],
+     "salón moderno (CLIP)": [
+      -0.077,
+      0.199
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.015,
+      0.068
+     ],
+     "casas británicas (CLIP)": [
+      0.027,
+      0.097
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.022,
+      0.27
+     ],
+     "negativo: window": -0.016,
+     "negativo: wall lamp": -0.026,
+     "negativo: sconce": -0.001,
+     "negativo: stove": 0.037,
+     "negativo: fireplace mantel": 0.04,
+     "negativo: glass door": -0.058,
+     "clave: iron pot": 0.095
+    },
+    "arquetipo": null,
+    "s_revision": 8.6,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "090-9cea88bf-2.png",
+    "seed": 3632464465,
+    "s": 84.4,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a black iron pot hanging on a sooty chain above a low log fire, steam rising from the pot, smoke-blackened granite stones, warm firelight, darkness around",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [
+     "clichés de meiga",
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0256,
+    "lume_quente": 0.0326,
+    "descricion": "The image shows a black cauldron with a chain hanging from it, placed on a bed of small rocks. The cauldron is filled with a yellow liquid, which appears to be a potion or potion. The flames of the cauldron are burning brightly, creating a warm and cozy atmosphere. The background is blurred, but it seems to be an indoor setting with a fireplace and a window. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "fireplace"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.017,
+      0.103
+     ],
+     "muros encalados (CLIP)": [
+      -0.022,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.056,
+      0.109
+     ],
+     "oliveiras (CLIP)": [
+      -0.031,
+      0.09
+     ],
+     "palmeiras (CLIP)": [
+      -0.024,
+      0.12
+     ],
+     "rodas de raios (CLIP)": [
+      0.024,
+      0.128
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.024,
+      0.087
+     ],
+     "eucaliptos (CLIP)": [
+      -0.061,
+      0.071
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.036,
+      0.096
+     ],
+     "luces de cidade (CLIP)": [
+      -0.04,
+      0.138
+     ],
+     "salón moderno (CLIP)": [
+      -0.054,
+      0.207
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.025,
+      0.101
+     ],
+     "casas británicas (CLIP)": [
+      0.018,
+      0.102
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.035,
+      0.288
+     ],
+     "negativo: window": -0.006,
+     "negativo: wall lamp": -0.009,
+     "negativo: sconce": 0.008,
+     "negativo: stove": 0.036,
+     "negativo: fireplace mantel": 0.066,
+     "negativo: glass door": -0.045,
+     "clave: iron pot": 0.078
+    },
+    "arquetipo": null,
+    "s_revision": 8.8,
+    "avisos": []
+   },
+   {
+    "intento": 3,
+    "ficheiro": "090-9cea88bf-3.png",
+    "seed": 471500839,
+    "s": 78.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a black iron pot hanging on a sooty chain above a low log fire, steam rising from the pot, smoke-blackened granite stones, warm firelight, darkness around",
+    "modelo": "lightning1024",
+    "tokens": 53,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: fireplace mantel (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0218,
+    "lume_quente": 0.043,
+    "descricion": "The image shows a black cauldron hanging from a chain. The cauldron has two handles on either side and a lid on top. The flame of the cauldron is visible in the background, and it appears to be burning brightly. The background is blurred, but it seems to be a room with a fireplace and a statue. The overall mood of the image is dark and mysterious.",
+    "obxectos": [
+     "lantern"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.013,
+      0.101
+     ],
+     "muros encalados (CLIP)": [
+      0.002,
+      0.097
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.1
+     ],
+     "oliveiras (CLIP)": [
+      -0.024,
+      0.069
+     ],
+     "palmeiras (CLIP)": [
+      -0.034,
+      0.11
+     ],
+     "rodas de raios (CLIP)": [
+      0.031,
+      0.116
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.018,
+      0.064
+     ],
+     "eucaliptos (CLIP)": [
+      -0.053,
+      0.063
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.046,
+      0.129
+     ],
+     "luces de cidade (CLIP)": [
+      -0.037,
+      0.133
+     ],
+     "salón moderno (CLIP)": [
+      -0.056,
+      0.192
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.004,
+      0.088
+     ],
+     "casas británicas (CLIP)": [
+      0.035,
+      0.111
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.042,
+      0.281
+     ],
+     "negativo: window": -0.021,
+     "negativo: wall lamp": 0.009,
+     "negativo: sconce": 0.02,
+     "negativo: stove": 0.031,
+     "negativo: fireplace mantel": 0.055,
+     "negativo: glass door": -0.051,
+     "clave: iron pot": 0.091
+    },
+    "arquetipo": null,
+    "s_revision": 7.2,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "calma",
+  "escollida_porta": 1,
+  "escolla_manual": "Claude (rolda de arranxos, 01-10-2026): o intento escollido pola porta tiña unha lámpada acesa ao fondo"
+ },
+ "132-39570a7e": {
+  "ficheiro": "132-39570a7e-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "132-39570a7e-0.png",
+    "seed": 1909335560,
+    "s": 82.9,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, wide landscape of a full moon rising behind thin clouds over dark forested hills, a pale halo, very dim",
+    "modelo": "lightning1024",
+    "tokens": 38,
+    "truncado": "",
+    "problemas": [
+     "repetida (CLIP 0.91 co plano 108)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0053,
+    "lume_quente": 0.0,
+    "descricion": "The image is a landscape photograph of a full moon rising over a mountain range. The sky is filled with dark clouds and the moon is partially obscured by a thick layer of fog. The mountains are covered in green trees and shrubs, and the horizon is visible in the distance. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "coin"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.067,
+      0.137
+     ],
+     "muros encalados (CLIP)": [
+      -0.051,
+      0.135
+     ],
+     "ciprés (CLIP)": [
+      0.032,
+      0.168
+     ],
+     "oliveiras (CLIP)": [
+      -0.039,
+      0.162
+     ],
+     "palmeiras (CLIP)": [
+      -0.017,
+      0.168
+     ],
+     "rodas de raios (CLIP)": [
+      0.002,
+      0.087
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.068,
+      0.178
+     ],
+     "eucaliptos (CLIP)": [
+      0.013,
+      0.13
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.004,
+      0.128
+     ],
+     "luces de cidade (CLIP)": [
+      -0.009,
+      0.207
+     ],
+     "salón moderno (CLIP)": [
+      -0.004,
+      0.089
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.01,
+      0.068
+     ],
+     "casas británicas (CLIP)": [
+      -0.004,
+      0.105
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.04,
+      0.146
+     ],
+     "negativo: monastery": -0.012,
+     "negativo: buildings": -0.036,
+     "negativo: street lamps": -0.008,
+     "negativo: city lights": -0.019,
+     "clave: moon": 0.035
+    },
+    "arquetipo": {
+     "etiqueta": "bosque con néboa",
+     "sim": 0.225
+    },
+    "s_revision": 7.4,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "132-39570a7e-1.png",
+    "seed": 2896650384,
+    "s": 79.0,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, wide landscape of a full moon rising behind thin clouds over dark forested hills, a pale halo, very dim",
+    "modelo": "lightning1024",
+    "tokens": 38,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.001,
+    "lume_quente": 0.0,
+    "descricion": "The image is a landscape photograph of a full moon rising over a mountain range. The sky is filled with dark, ominous clouds that are covering the entire sky. The moon is partially obscured by the clouds, creating a dramatic and ominous atmosphere. The mountains in the background are covered in fog, and the sun is setting, casting a warm glow over the scene. In the foreground, there are two tall pine trees silhouetted against the sky, adding to the sense of depth and dimension. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "coin"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.067,
+      0.134
+     ],
+     "muros encalados (CLIP)": [
+      -0.031,
+      0.113
+     ],
+     "ciprés (CLIP)": [
+      0.005,
+      0.153
+     ],
+     "oliveiras (CLIP)": [
+      -0.024,
+      0.155
+     ],
+     "palmeiras (CLIP)": [
+      -0.031,
+      0.163
+     ],
+     "rodas de raios (CLIP)": [
+      -0.004,
+      0.086
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.036,
+      0.138
+     ],
+     "eucaliptos (CLIP)": [
+      -0.005,
+      0.124
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.003,
+      0.134
+     ],
+     "luces de cidade (CLIP)": [
+      -0.017,
+      0.201
+     ],
+     "salón moderno (CLIP)": [
+      -0.008,
+      0.073
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.006,
+      0.061
+     ],
+     "casas británicas (CLIP)": [
+      -0.008,
+      0.097
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.049,
+      0.153
+     ],
+     "negativo: monastery": -0.026,
+     "negativo: buildings": -0.036,
+     "negativo: street lamps": -0.005,
+     "negativo: city lights": -0.01,
+     "clave: moon": 0.046
+    },
+    "arquetipo": null,
+    "s_revision": 8.0,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "durmir"
+ },
+ "144-945d2456": {
+  "ficheiro": "144-945d2456-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "144-945d2456-0.png",
+    "seed": 1038468341,
+    "s": 77.8,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, still life of a stack of three closed leather-bound books with brass clasps on a dark oak shelf, faint moonlight, soft darkness",
+    "modelo": "lightning1024",
+    "tokens": 43,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: open book (CLIP)",
+     "repetida (CLIP 0.91 co plano 138)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0002,
+    "lume_quente": 0.0017,
+    "descricion": "The image shows a stack of old books on a wooden shelf. The books are arranged in a horizontal line, with the topmost book on the left side of the image and the bottommost book in the middle. The cover of the books is brown with gold lettering and patterns. The spine of each book is also brown and appears to be made of leather. On the right side, there is a black book with a gold trim. The background is dark, making the books stand out. The image is taken from a low angle, looking up at the books.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.021,
+      0.131
+     ],
+     "muros encalados (CLIP)": [
+      0.001,
+      0.119
+     ],
+     "ciprés (CLIP)": [
+      -0.02,
+      0.146
+     ],
+     "oliveiras (CLIP)": [
+      -0.028,
+      0.114
+     ],
+     "palmeiras (CLIP)": [
+      -0.011,
+      0.132
+     ],
+     "rodas de raios (CLIP)": [
+      0.023,
+      0.132
+     ],
+     "paisaxe seca (CLIP)": [
+      0.025,
+      0.101
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.091
+     ],
+     "luz eléctrica (CLIP)": [
+      0.005,
+      0.068
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.139
+     ],
+     "salón moderno (CLIP)": [
+      0.026,
+      0.106
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.012,
+      0.053
+     ],
+     "casas británicas (CLIP)": [
+      0.032,
+      0.128
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.013,
+      0.124
+     ],
+     "negativo: open book": 0.067,
+     "negativo: candle": -0.02,
+     "negativo: flames": -0.027,
+     "clave: books": 0.07
+    },
+    "arquetipo": null,
+    "s_revision": 9.2,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "144-945d2456-1.png",
+    "seed": 2965588231,
+    "s": 78.0,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, still life of a stack of three closed leather-bound books with brass clasps on a dark oak shelf, faint moonlight, soft darkness",
+    "modelo": "lightning1024",
+    "tokens": 43,
+    "truncado": "",
+    "problemas": [
+     "lume vivo ao durmir (3.9% de altas luces cor de chama)",
+     "lume grande no exterior",
+     "negativo do plano: open book (CLIP)",
+     "repetida (CLIP 0.92 co plano 10)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0121,
+    "lume_quente": 0.039,
+    "descricion": "The image shows a stack of old books on a wooden table. The books are arranged in a way that they are stacked on top of each other. The top book is brown with a gold-colored cover and appears to be a hardcover. The spine of the books is also brown and has a gold trim. On the right side of the image, there is a small candle with a flame burning brightly. The background is blurred, but it seems to be an indoor setting with a window. The image is taken from a low angle, looking up at the books.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.024,
+      0.122
+     ],
+     "muros encalados (CLIP)": [
+      -0.001,
+      0.106
+     ],
+     "ciprés (CLIP)": [
+      -0.022,
+      0.133
+     ],
+     "oliveiras (CLIP)": [
+      -0.026,
+      0.11
+     ],
+     "palmeiras (CLIP)": [
+      -0.012,
+      0.142
+     ],
+     "rodas de raios (CLIP)": [
+      0.027,
+      0.124
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.002,
+      0.092
+     ],
+     "eucaliptos (CLIP)": [
+      -0.032,
+      0.087
+     ],
+     "luz eléctrica (CLIP)": [
+      0.002,
+      0.1
+     ],
+     "luces de cidade (CLIP)": [
+      -0.011,
+      0.144
+     ],
+     "salón moderno (CLIP)": [
+      0.023,
+      0.116
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.011,
+      0.055
+     ],
+     "casas británicas (CLIP)": [
+      0.038,
+      0.12
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.015,
+      0.141
+     ],
+     "negativo: open book": 0.06,
+     "negativo: candle": -0.006,
+     "negativo: flames": -0.021,
+     "clave: books": 0.07
+    },
+    "arquetipo": null,
+    "s_revision": 8.8,
+    "avisos": []
+   },
+   {
+    "intento": 4,
+    "ficheiro": "144-945d2456-4.png",
+    "seed": 4244811172,
+    "s": 78.2,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, an ancient oak forest at night, mist between mossy trunks, pale moonlight, very dim",
+    "modelo": "lightning1024",
+    "tokens": 34,
+    "truncado": "",
+    "problemas": [
+     "repetida (CLIP 0.95 co plano 11)"
+    ],
+    "reserva": true,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image is a photograph of a large tree in a foggy forest. The tree has a thick trunk and branches that are covered in green moss and lichen. The roots of the tree are visible and extend upwards towards the ground. The ground is covered in fallen leaves and twigs, and there are a few fallen branches scattered around. The background is filled with other trees, and the overall mood of the image is eerie and mysterious. The lighting is soft and foggy, creating a sense of depth and mystery.",
+    "obxectos": [
+     "tree"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.03,
+      0.085
+     ],
+     "muros encalados (CLIP)": [
+      -0.034,
+      0.079
+     ],
+     "ciprés (CLIP)": [
+      -0.024,
+      0.197
+     ],
+     "oliveiras (CLIP)": [
+      -0.078,
+      0.183
+     ],
+     "palmeiras (CLIP)": [
+      -0.095,
+      0.214
+     ],
+     "rodas de raios (CLIP)": [
+      0.041,
+      0.119
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.094,
+      0.175
+     ],
+     "eucaliptos (CLIP)": [
+      -0.086,
+      0.234
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.033,
+      0.118
+     ],
+     "luces de cidade (CLIP)": [
+      -0.067,
+      0.167
+     ],
+     "salón moderno (CLIP)": [
+      0.013,
+      0.075
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.013,
+      0.071
+     ],
+     "casas británicas (CLIP)": [
+      0.035,
+      0.076
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.054,
+      0.157
+     ],
+     "negativo: open book": -0.002,
+     "negativo: candle": -0.045,
+     "negativo: flames": -0.029
+    },
+    "arquetipo": null,
+    "s_revision": 7.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "durmir",
+  "escollida_porta": 2,
+  "escolla_manual": "Claude (rolda de arranxos, 01-10-2026): o intento escollido pola porta tiña unha carballeira que repetía o plano 11 (CLIP 0,95); o 0 só ten o falso \"open book\" de CLIP"
+ },
+ "152-4fd833d5": {
+  "ficheiro": "152-4fd833d5-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "152-4fd833d5-0.png",
+    "seed": 2348705611,
+    "s": 78.0,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, extreme close-up of rain droplets on overlapping dark grey slate tiles at night, thin rivulets of water between the slates, very dim",
+    "modelo": "lightning1024",
+    "tokens": 48,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0112,
+    "lume_quente": 0.0,
+    "descricion": "The image is a close-up of a black surface with multiple rows of small droplets of water scattered across it. The droplets are of different sizes and shapes, creating a textured pattern. The surface appears to be made of a shiny, reflective material, possibly leather or a similar material. The background is dark, making the droplets stand out even more. The overall mood of the image is dark and moody.",
+    "obxectos": [
+     "nail"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.075,
+      0.236
+     ],
+     "muros encalados (CLIP)": [
+      -0.058,
+      0.185
+     ],
+     "ciprés (CLIP)": [
+      -0.024,
+      0.114
+     ],
+     "oliveiras (CLIP)": [
+      -0.01,
+      0.102
+     ],
+     "palmeiras (CLIP)": [
+      0.002,
+      0.132
+     ],
+     "rodas de raios (CLIP)": [
+      0.02,
+      0.101
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.019,
+      0.111
+     ],
+     "eucaliptos (CLIP)": [
+      0.013,
+      0.062
+     ],
+     "luz eléctrica (CLIP)": [
+      0.03,
+      0.096
+     ],
+     "luces de cidade (CLIP)": [
+      -0.031,
+      0.15
+     ],
+     "salón moderno (CLIP)": [
+      -0.026,
+      0.108
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.004,
+      0.053
+     ],
+     "casas británicas (CLIP)": [
+      -0.028,
+      0.164
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.013,
+      0.136
+     ],
+     "negativo: chimney": 0.017,
+     "negativo: smoke": -0.039,
+     "negativo: fire": -0.044,
+     "negativo: street lamps": -0.025,
+     "clave: slate": 0.066
+    },
+    "arquetipo": null,
+    "s_revision": 8.1,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "durmir"
+ },
+ "160-cdd45202": {
+  "ficheiro": "160-cdd45202-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "160-cdd45202-0.png",
+    "seed": 3641543545,
+    "s": 74.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, close-up of rainwater dripping from the edge of a dark slate roof at night, a row of falling drops against darkness, wet granite below, very dim",
+    "modelo": "lightning1024",
+    "tokens": 48,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0172,
+    "lume_quente": 0.0074,
+    "descricion": "The image shows a close-up of a black surface with water droplets hanging from it. The droplets are glistening in the light and appear to be dripping down the surface. The background is blurred, but it appears to be a body of water, possibly a pond or a lake. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.034,
+      0.133
+     ],
+     "muros encalados (CLIP)": [
+      -0.039,
+      0.132
+     ],
+     "ciprés (CLIP)": [
+      -0.034,
+      0.122
+     ],
+     "oliveiras (CLIP)": [
+      -0.008,
+      0.117
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.153
+     ],
+     "rodas de raios (CLIP)": [
+      0.045,
+      0.151
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.022,
+      0.129
+     ],
+     "eucaliptos (CLIP)": [
+      -0.015,
+      0.092
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.002,
+      0.115
+     ],
+     "luces de cidade (CLIP)": [
+      0.002,
+      0.147
+     ],
+     "salón moderno (CLIP)": [
+      -0.033,
+      0.135
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.036,
+      0.118
+     ],
+     "casas británicas (CLIP)": [
+      -0.01,
+      0.098
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.034,
+      0.23
+     ],
+     "negativo: windows": 0.001,
+     "negativo: street lamps": -0.013,
+     "negativo: sconce": -0.021,
+     "clave: drops": 0.079
+    },
+    "arquetipo": null,
+    "s_revision": 7.0,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 8,
+  "modelo": "lightning1024",
+  "fase": "durmir"
  }
 }
