@@ -35,3 +35,10 @@ Contexto y reglas del Gauntlet 3: `plan-de-negocio/gauntlet3/contexto.md`.
 | D15 | Imágenes de referencia (30-09-2026) | El promotor quiere **imágenes de referencia o semilla** para lo que el modelo no conoce (carros de bois, hórreos...) y generar variaciones a partir de ellas. Pendiente de probar (img2img, ControlNet, IP-Adapter), con fotos propias o de licencia libre. |
 | D16 | Animación (30-09-2026) | Para **futuras versiones**: un modelo que anime la imagen para que las personas se muevan. Pendiente de evaluar coste y licencia (image-to-video en GPU alquilada; en CPU, paralaje 2,5D y microanimaciones). |
 | D17 | Lingua de traballo (01-10-2026) | **Desde agora, todo en galego** (documentos de traballo, planes, QA, README, commits e conversa). O feito antes queda en castelán como histórico. |
+
+# Decisións do promotor (02-10-2026): v2 das meigas (Gauntlet 4)
+
+| # | Decisión | Resposta |
+|---|---|---|
+| D18 | Segunda versión das meigas | Corrixir as tres queixas de quen viu a v1 (texto inconexo e pobre; imaxes sen relación co que se di e que non chaman a mirada; falta de movemento, "xente que camiña, planos que evolucionan", como Versalles) cun Gauntlet ata mellorar a v1. **"Dame igual facer unha v2 máis curta (12 min) pero quero amosar calidade"**: a v2 dura ≈ 12 min e a calidade manda sobre a cobertura e o custo. Contexto: `plan-de-negocio/gauntlet4/contexto.md`. |
+| D19 | Referencias na imaxe | **"Consideremos na imaxe usar as referencias buscadas"**: as referencias libres de `docs/referencias-graficas/` (D15) entran na v2, coa regra de licenzas do estudo de monetización §3.2 (sementes só CC0, dominio público ou CC BY; as CC BY-SA, tal cal e co crédito, ou como semente se o promotor o decide). |

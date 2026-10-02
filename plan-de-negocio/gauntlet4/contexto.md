@@ -30,7 +30,7 @@ E, a continuación: *"Consideremos na imaxen usar as referencias buscadas"* (as 
 
 | Punto | Decisión operativa |
 |---|---|
-| Que é a v2 | O mesmo episodio ("As meigas de verdade"), co mesmo dossier verificado (`gauntlet3/dossier/feitos.yaml`, `dossier.md` coa lista "Non dicir") e as mesmas regras de rigor, pero con **guion novo**, **lista de planos nova** feita frase a frase, **imaxes novas** (con referencias semente onde SDXL falla) e **movemento en todos os planos**. Duración: ≈ 25-32 min (a v1 durou 31:22 con 3.952 palabras). |
+| Que é a v2 | O mesmo episodio ("As meigas de verdade"), co mesmo dossier verificado (`gauntlet3/dossier/feitos.yaml`, `dossier.md` coa lista "Non dicir") e as mesmas regras de rigor, pero con **guion novo**, **lista de planos nova** feita frase a frase, **imaxes novas** (con referencias semente onde SDXL falla) e **movemento en todos os planos**. **Duración: ≈ 12 min (D18, §8)**, ≈ 1.500-1.700 palabras e ≈ 60-75 planos; a v1 durou 31:22 con 3.952 palabras e 162 planos. |
 | Guion | Escríbeno axentes Claude nun Gauntlet (D8 segue vixente): **non é desatendido** e declárase na QA. As portas automáticas (LanguageTool + hunspell, H1, estilo e veracidade) seguen como rede de seguridade. Cambio clave: a v1 escribiuse para que a porta de veracidade vise apoio léxico en cada frase, e iso deu un dossier recitado. Na v2 o texto **pode ter tecido narrativo** (escenas, transicións, imaxes, motivos que volven) sempre que **non afirme nada que non estea no dossier**; as frases que marque a porta xustifícaas por escrito o crítico de veracidade (`longo.py --excepcions`). |
 | Imaxe | Cada plano ilustra **o que se oe nese momento** (quen, que fai, onde, con que obxecto). Os cortes saen do sentido do texto (unha frase ou un anaco de frase), non dun reloxo. Composicións que **chaman a mirada** (rostros, mans, xestos, luz motivada, primeiro termo, profundidade) e xente facendo cousas na parte esperta. Referencias semente (D15) para o que SDXL non sabe debuxar. |
 | Movemento | **Ningún plano fixo.** En CPU (4 núcleos, sen GPU nin clave de API nesta sesión): (a) **imaxe a vídeo (I2V)** cun modelo aberto para os planos con persoas que camiñan ou fan algo; (b) **paralaxe 2,5D** cun mapa de profundidade (cámara que avanza ou xira con relevo de verdade); (c) **microanimacións** (lume, fume, brétema, choiva, auga, ceo, candea). A peza MOVEMENTO mide que é posible e a que custo, e pon prezo a unha alternativa con GPU alugada para que decida o promotor (unha clave nova só chega a unha sesión nova). |
@@ -129,8 +129,11 @@ veredicto a cegas.
 - CPU do 02-10-2026: Intel Xeon 2,8 GHz, 4 núcleos, AVX-512 **sen bf16 nin AMX** (`/proc/cpuinfo`). Imaxe
   SDXL-Lightning: ≈ 90-150 s por intento (`docs/APRENDIZAJES.md`); ≈ 2 intentos por plano.
 - Voz ≈ 16 min; montaxe ≈ 70 min (máis co movemento); QA ≈ 30 min.
-- Teito razoable para o movemento: ≈ 10-12 h de reloxo para o episodio enteiro (unha noite). O I2V vai onde máis
-  rende (gancho e momentos con persoas que fan algo) e a paralaxe, que é barata, no resto.
+- Teito razoable para o movemento: ≈ 10-12 h de reloxo para o episodio enteiro (unha noite). Con 12 min (D18) e
+  ≈ 65 planos son ≈ 8-10 min de CPU por plano: o I2V pode ir na maioría dos planos con persoas, e a paralaxe, que é
+  barata, no resto. Imaxe: ≈ 3-4 h para ≈ 65 planos (máis intentos por plano e revisión dun axente de cada imaxe).
+- A curva do embude (`curva.py`) está pensada para 30 min (nós en palabras fixas: gancho 280, transición 950): para
+  12 min hai que escalala (peza 5).
 
 ## 7. Regras de traballo para os axentes (obrigatorias)
 
@@ -170,4 +173,15 @@ veredicto a cegas.
 
 ## 8. Decisións novas do promotor durante o Gauntlet 4
 
-- **02-10-2026:** usar na imaxe as referencias gráficas buscadas (§1 e §2).
+- **02-10-2026 (D19):** usar na imaxe as referencias gráficas buscadas (§1 e §2).
+- **02-10-2026, 22:58 UTC:** "Asegúrate de que se vai gardando o contido do scratchpad dos axentes e as anotacións
+  parciais do Gauntlet no repo para poder relanzar se é preciso" → instantánea do scratchpad cada 20 min
+  (`herramientas/gauntlet/instantanea.py`), encargos literais en `encargos/`, `estado.md` do orquestrador e un
+  `estado.md` por peza.
+- **02-10-2026, 23:05 UTC (D18) — PRIORITARIO:** *"Dame igual facer unha v2 máis curta (12 min) pero quero amosar
+  calidade"*. A v2 dura **≈ 12 min** (≈ 1.500-1.700 palabras, 3-5 capítulos, ≈ 60-75 planos). **A calidade manda**
+  sobre a cobertura e o custo: menos casos e menos nomes, escenas máis fondas; máis I2V, máis intentos por imaxe e
+  revisión dun axente de cada plano. Embude comprimido: gancho ≈ 0-1:30, transición ata ≈ 5 min, calma ata ≈ 8:30 e
+  peche de durmir ata o final.
+- **02-10-2026, 23:05 UTC:** *"Asegúrate de rearrancar si te paras por cuota"* → revisión horaria programada que
+  retoma o Gauntlet (axentes e procesos) despois dun corte por cota ou dun reinicio (`estado.md`).

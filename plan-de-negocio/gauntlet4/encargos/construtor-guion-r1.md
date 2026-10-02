@@ -61,3 +61,6 @@ As do §7 de `gauntlet4/contexto.md`: commit e push de cada entrega (plan, guion
   traer eses dous créditos novos. `longo.py` só cambiou na descrición.
 - 22:55 UTC: gardar no repo, e non só no scratchpad, os scripts propios e as notas parciais (commit polo menos cada
   30 min) e manter `plan-de-negocio/gauntlet4/guion/estado.md` (feito, en curso, como retomar).
+- 23:04 UTC (D18): v2 de ≈ 12 min: ≈ 1.500-1.700 palabras, 3-5 capítulos; calidade por riba de cobertura (menos
+  casos e nomes, escenas máis fondas, un fío que se pague); embude comprimido (gancho ≈ 0-1:30, transición ata ≈ 5 min,
+  calma ata ≈ 8:30, durmir ata o final); na ficha v2, `palabras` ≈ 1600 e `duracion_s: [600, 840]`.

@@ -43,3 +43,6 @@ Despois de ti, un crítico (director de fotografía) comparará a cegas tiras de
   que ficheiros de modelo fan falta para producir e cales se poden borrar (a produción precisa ≈ 8 GB libres).
 - 22:55 UTC: gardar no repo os scripts propios e as notas parciais (commit polo menos cada 30 min) e manter
   `plan-de-negocio/gauntlet4/movemento/estado.md` (feito, en curso, como reconstruír o contorno e retomar).
+- 23:04 UTC (D18): episodio de ≈ 12 min e ≈ 60-75 planos; co mesmo teito de 10-12 h, ≈ 8-10 min de CPU por plano:
+  I2V na maioría dos planos con persoas; a calidade manda sobre o custo (máis resolución, fotogramas ou pasos se
+  melloran); refacer o orzamento para ≈ 65 planos.

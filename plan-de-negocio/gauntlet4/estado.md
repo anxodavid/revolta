@@ -1,7 +1,7 @@
 # Estado do Gauntlet 4 e como relanzalo
 
 Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a sesión se corta, retomar desde aquí.**
-Última actualización: 02-10-2026, 22:58 UTC.
+Última actualización: 02-10-2026, 23:06 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
 
 ## Que hai en marcha
 
@@ -25,7 +25,9 @@ Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador 
   axentes (scripts, notas, medidas, rexistros recortados) e fai commit só desa carpeta. Se o contedor se reinicia,
   relanzala:
   `SCRATCH=… setsid nohup python3 herramientas/gauntlet/instantanea.py --bucle 1200 > $SCRATCH/logs/instantanea.log 2>&1 &`
-- **Revisión programada** (`send_later`) cada ≈ 75 min: mira `uptime`, os axentes, o disco e a instantánea.
+- **Revisión horaria e rearranque** (rutina `trig_01CHFESbR8j5JWtTkAhQsCDN`, ao minuto 53 de cada hora, nesta mesma
+  sesión): mira `uptime`, os axentes, o disco e a instantánea, e retoma o que parase por cota ou por reinicio. Bórrase
+  cando se entregue a v2.
 
 ## Como relanzar nunha sesión nova
 
@@ -41,4 +43,5 @@ Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador 
 - Disco: ≈ 39 GB por sesión; o contorno colle ≈ 16 GB e LTX-Video + T5 fp8 ≈ 11 GB. A produción precisa ≈ 8 GB libres.
 - PR #5 (rolda de arranxos da v1) fusionado en main e na rama (c4fcc72): a v1 de referencia é a arranxada.
 - PR #4 (prospección de temas) sen fusionar: non é necesario para a v2; queda para o promotor.
+- D18 (23:05 UTC): v2 de ≈ 12 min (≈ 1.500-1.700 palabras, ≈ 60-75 planos), calidade por riba de cobertura e custo.
 - Pendente do promotor: GPU alugada para o movemento (requiriría unha clave e unha sesión nova) e sementes CC BY-SA.

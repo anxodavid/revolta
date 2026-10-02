@@ -42,3 +42,6 @@ As do §7 de `gauntlet4/contexto.md`: `export SCRATCH=/tmp/claude-0/-home-user-r
   Gardar ≥ 1,5 GB libres.
 - 22:55 UTC: gardar no repo os scripts propios e as notas parciais (commit polo menos cada 30 min) e manter
   `plan-de-negocio/gauntlet4/imaxe/estado.md` (feito, en curso, como retomar).
+- 23:04 UTC (D18): episodio de ≈ 12 min e ≈ 60-75 planos: máis intentos por plano (4-6), revisión dun axente de cada
+  imaxe escollida e sementes en todos os planos de iconografía galega; recomendar a mellor configuración dentro de
+  ≈ 3-4 h de CPU.
