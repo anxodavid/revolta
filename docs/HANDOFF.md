@@ -89,6 +89,29 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
 **Cortes por límite de uso:** el 30-09-2026 a las 16:30 UTC (5 agentes a la vez). Se retomó con `SendMessage` a
 cada agente; lo que estaba en git o en disco no se perdió.
 
+## Sesión do 01-10-2026 (tarde): estudo de monetización e cambio a galego
+
+**Desde agora todo vai en galego (D17).** Os documentos anteriores quedan en castelán como histórico.
+
+- **Estudo de monetización:** [`plan-de-negocio/estudo-monetizacion.md`](../plan-de-negocio/estudo-monetizacion.md),
+  coas referencias contrastadas na web (§9). Conclusións:
+  - os anuncios non son o modelo do ano 1;
+  - as vías son premios, audio longo, CRTVG, Xacobeo 2027 e B2B local;
+  - a decisión clave é o anonimato (M1).
+- **Datas próximas:**
+  - Xacobeo TU300A: do 1 ao 31-10-2026; esixe RETA ou asociación, así que en anónimo non se chega;
+  - Spotify Partner Program en España: desde o 20-10-2026;
+  - Youtubeiras+ 2026 (ata o 15-11-2026): **xa non chegamos**, segundo o promotor; a meta é a edición de 2027;
+  - YPP con 8.000 h: desde o 1-02-2027.
+- **Decisións pendentes do promotor:** M1-M6 (estudo §6). A ronda de arranxos do episodio das meigas fíxose despois,
+  na noite do 01-10 (§0, "Ronda de arreglos"), e era o primeiro paso da fase 0 do estudo.
+- **Referencias gráficas:** xa están en `main` (PR #1): `docs/referencias-graficas/` (226 candidatas, CSV e
+  `descargar.sh`) e `herramientas/referencias/`. Ningunha se mirou a ollo; para sementes, só CC0, CC BY ou fotos
+  propias (estudo §3.2).
+- **Nada volátil nesta sesión:** non se lanzou ningún render nin modelo; o scratchpad desta sesión está baleiro.
+  O máster 1080p das meigas non está en git: a rolda de arranxos rehíxoo (316 MB) e segue pendente decidir onde se
+  arquiva (M6).
+
 ## 1. Qué es el proyecto
 
 Un canal de YouTube de vídeos hechos con IA sobre **historia y cultura de Galicia**, pensados para **quedarse dormido**

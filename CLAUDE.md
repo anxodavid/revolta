@@ -27,7 +27,9 @@ de Galicia para quedarse dormido, **100 % en galego**. Es un hobby con opción d
 
 ## Convenciones
 
-- **Idioma:** documentos de trabajo y planes en **castellano**; todo lo que ve u oye el público en **galego normativo (RAG)**.
+- **Idioma (D17, 01-10-2026): desde agora, todo en galego normativo (RAG):** documentos de traballo, planes, QA,
+  README, mensaxes de commit e respostas ao promotor, ademais do que ve ou oe o público. Os documentos anteriores
+  quedan en castelán como histórico; non se traducen salvo que o promotor o pida.
 - **Evidencia:** cada cifra con fuente (URL) o marcada como supuesto [S]. No inventar datos.
 - **Nunca afirmar en público una revisión humana que no existe.** Aviso hablado vigente: "A voz que vas escoitar é
   sintética, e este texto preparouno un proceso automático."
