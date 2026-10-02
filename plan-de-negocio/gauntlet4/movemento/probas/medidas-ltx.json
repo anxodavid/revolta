@@ -1,0 +1,32 @@
+{
+ "ltx_p22_800x448_f49_s8": {
+  "id": "ltx_p22_800x448_f49_s8",
+  "imaxe": "/home/user/revolta/plan-de-negocio/gauntlet3/video/imaxes/021-de4f25ff-0.jpg",
+  "accion": "p22_camiña",
+  "W": 800,
+  "H": 448,
+  "F": 49,
+  "pasos": 8,
+  "semente": 42,
+  "modelo": "ltxv-2b-0.9.8-distilled",
+  "s_total": 470.3,
+  "s_pasos": [
+   70.6,
+   39.9,
+   43.5,
+   42.7,
+   38.4,
+   45.1,
+   43.3,
+   43.6
+  ],
+  "s_decodificar_aprox": 103.2,
+  "tokens": 2450,
+  "fotogramas": 49,
+  "res": "800x448",
+  "pico_proceso_mb": 11356,
+  "pico_cgroup_rss_mb": 9003,
+  "s_carga_modelo": 3.2,
+  "cpu": 4
+ }
+}
