@@ -154,7 +154,10 @@ veredicto a cegas.
 4. **CPU e memoria compartidas:** 4 núcleos e **13,36 GiB para todos os procesos** (non os 15,7 de `free`). Todo o
    que use CPU ou memoria de verdade (modelos, xeración, render, NLI, LanguageTool, probas) vai con
    `flock "$CPU_LOCK" <orde>`; `nice` non abonda. Coller o candado **por experimento**, non durante horas, para que
-   as outras pezas poidan pasar. Disco: ≈ 30 GB libres ao empezar, e o contorno colle ≈ 16 GB: borrar o que non se
+   as outras pezas poidan pasar. **Desde o 02-10-2026 (23:20 UTC), co envoltorio `herramientas/gauntlet/candado.sh`:**
+   `candado.sh <orde>` para os experimentos normais e `candado.sh --prioridade <orde>` para o camiño crítico (portas
+   do guion, voz, probas curtas que agardan outras pezas): cun prioritario agardando, os normais ceden a vez. **Non
+   aniñar candados:** se a orde xa o colle por dentro (`instalar.sh verificar`), lanzala sen envoltorio. Disco: ≈ 30 GB libres ao empezar, e o contorno colle ≈ 16 GB: borrar o que non se
    use (modelos de probas descartadas).
 5. **Contorno:** `export SCRATCH=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad`
    e despois `source herramientas/pipeline/entorno.sh` (HF_HOME, PY, CPU_LOCK…). Se aínda non está instalado, a
