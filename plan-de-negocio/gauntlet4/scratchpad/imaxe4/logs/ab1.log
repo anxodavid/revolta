@@ -1,0 +1,3 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+carga 21.7 s {'unet': 'sdxl_lightning_4step_unet.safetensors', 'W': 1024, 'H': 576, 'pasos': 4, 'nome': 'lightning1024'}
+aldea-texto-lightning1024: 121.5 s (+0.0 s de preparación)

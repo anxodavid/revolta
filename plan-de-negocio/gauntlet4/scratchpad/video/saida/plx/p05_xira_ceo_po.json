@@ -1,0 +1,22 @@
+{
+ "imaxe": "/home/user/revolta/plan-de-negocio/gauntlet3/video/imaxes/004-6c78d74f-0.jpg",
+ "animacion": {
+  "modo": "paralaxe",
+  "camara": "xira_esq",
+  "efectos": [
+   "ceo",
+   "po"
+  ]
+ },
+ "dur": 6.0,
+ "fotogramas": 144,
+ "s_preparar": 13.89,
+ "s_iniciar": 0.37,
+ "s_por_fotograma": 0.383,
+ "s_por_fotograma_p95": 0.549,
+ "zoom_k": 1.0,
+ "efectos_activos": [
+  "Fluxo",
+  "Po"
+ ]
+}

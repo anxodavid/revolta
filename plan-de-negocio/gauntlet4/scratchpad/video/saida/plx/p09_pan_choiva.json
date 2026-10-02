@@ -1,0 +1,20 @@
+{
+ "imaxe": "/home/user/revolta/plan-de-negocio/gauntlet3/video/imaxes/008-83441bad-0.jpg",
+ "animacion": {
+  "modo": "paralaxe",
+  "camara": "pan_esq",
+  "efectos": [
+   "choiva"
+  ]
+ },
+ "dur": 6.0,
+ "fotogramas": 144,
+ "s_preparar": 12.29,
+ "s_iniciar": 0.38,
+ "s_por_fotograma": 0.313,
+ "s_por_fotograma_p95": 0.45,
+ "zoom_k": 1.0,
+ "efectos_activos": [
+  "Choiva"
+ ]
+}

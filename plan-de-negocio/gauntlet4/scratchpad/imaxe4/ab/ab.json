@@ -1,0 +1,16 @@
+{
+ "aldea-texto-lightning1024": {
+  "concepto": "aldea",
+  "tecnica": "texto",
+  "modelo": "lightning1024",
+  "W": 1024,
+  "H": 576,
+  "semente": 1101,
+  "prompt": "cinematic film still, period drama, photorealistic, wide shot through a small granite window of a Galician hamlet, grey granite houses with dark weathered tile roofs, a Romanesque granite church with a bell gable, green hills, a woman in a dark wool shawl walking in the lane below, bright overcast daylight",
+  "clave": "stone church",
+  "referencia": null,
+  "s_xeracion": 121.5,
+  "s_preparacion": 0.0,
+  "carga_pipe_s": 21.7
+ }
+}

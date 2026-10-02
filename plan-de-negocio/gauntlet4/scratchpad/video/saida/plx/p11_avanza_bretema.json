@@ -1,0 +1,20 @@
+{
+ "imaxe": "/home/user/revolta/plan-de-negocio/gauntlet3/video/imaxes/010-b2223ce8-0.jpg",
+ "animacion": {
+  "modo": "paralaxe",
+  "camara": "avanza",
+  "efectos": [
+   "bretema"
+  ]
+ },
+ "dur": 6.0,
+ "fotogramas": 144,
+ "s_preparar": 10.81,
+ "s_iniciar": 0.4,
+ "s_por_fotograma": 0.325,
+ "s_por_fotograma_p95": 0.454,
+ "zoom_k": 1.0,
+ "efectos_activos": [
+  "Bretema"
+ ]
+}
