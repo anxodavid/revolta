@@ -4,5 +4,5 @@ Xerada por `herramientas/gauntlet/instantanea.py` o 2026-10-02 22:49 UTC desde `
 Só ficheiros de texto pequenos (scripts, notas, medidas, rexistros recortados); nada de modelos, binarios nin
 materiais a cegas. Para relanzar unha peza, ler antes `plan-de-negocio/gauntlet4/estado.md`.
 
-33 ficheiros, 1.4 MB.
+34 ficheiros, 1.4 MB.
 
