@@ -229,16 +229,30 @@ def ler_escenas(path, pl):
 
 
 # ------------------------------------------------------------------ descrición de YouTube
-def descricion(tema, caps_t, dur):
+# nome público (galego) de cada tipo de ambiente de son.AMBIENTES, na orde en que se listan na descrición
+NOME_AMBIENTE = {'choiva': 'choiva', 'lume': 'lume', 'fonte': 'auga', 'mar': 'mar', 'aldea': 'aldea', 'noite': 'noite',
+                 'campas': 'campás', 'vento': 'vento', 'xente': 'murmurio'}
+
+
+def descricion(tema, caps_t, dur, tramos=(), rex=()):
+    """Descrición para YouTube. Nos `creditos` do tema, {ambientes} e {imaxes} cóbrense cos datos deste episodio (os
+    tipos de son que soan de verdade e cantas imaxes pasaron a porta), para non dicir nada que non sexa certo
+    (tribunal final do Gauntlet 3: a descrición nomeaba vento, que non soa, e non dicía que 35 imaxes non pasaran)."""
+    tipos = {t for _, _, tp in tramos for t in str(tp).split('+')}
+    ambientes = ', '.join(v for k, v in NOME_AMBIENTE.items() if k in tipos)
+    sen_porta = sum(1 for r in rex if not r['ok'])
+    imaxes = (f'pasaron todas ({len(rex)})' if not sen_porta else
+              f'{sen_porta} de {len(rex)} non a pasaron e quedaron co mellor intento') if rex else ''
     L = [tema.get('titulo_youtube', tema['titulo']), '']
     if tema.get('descricion'):
         L += [tema['descricion'].strip(), '']
-    L += ['Capítulos', f"0:00 {tema.get('capitulo_inicial', 'Comezo')}"]
+    # YouTube só recoñece os capítulos se o primeiro empeza en 0:00; «00:00» como pediu o tribunal
+    L += ['Capítulos', f"00:00 {tema.get('capitulo_inicial', 'Comezo')}"]
     L += [f"{hms(c['t0'])} {c['num']}. {c['titulo']}" for c in caps_t]
     L += ['', 'Fontes']
     L += [f'- {v}' for v in (tema.get('fontes') or {}).values()]
     L += ['', 'Como está feito']
-    L += [f'- {x}' for x in tema.get('creditos', [])]
+    L += [f'- {x}'.replace('{ambientes}', ambientes).replace('{imaxes}', imaxes) for x in tema.get('creditos', [])]
     L += ['', f'Duración: {hms(dur)}.']
     return '\n'.join(L) + '\n'
 
@@ -461,7 +475,7 @@ def main():
             for fase in curva.FASES if any(p['fase'] == fase for p in pl)}
         cortes = [p['b0'] for p in pl[1:]]
         qa.folla_contactos(mp4, dur, W / 'contactsheet.jpg', n=24, cols=6, evitar=cortes, xf=3.0)
-        (W / 'descricion.txt').write_text(descricion(tema, caps_t, dur))
+        (W / 'descricion.txt').write_text(descricion(tema, caps_t, dur, info_son.get('tramos') or (), rex))
     save_t()
     res['tempos'] = P.TEMPOS
     res['parede_total_desta_execucion_s'] = round(time.time() - t_inicio, 1)

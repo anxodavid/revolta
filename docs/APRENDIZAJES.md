@@ -287,3 +287,47 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
   limiares e licenzas). De 11 referencias, cambiaron 3: un prezo, unha data e un requisito que non estaba
   confirmado.
 
+# Ronda de arreglos del episodio "As meigas de verdade" (01-10-2026, noche)
+
+## Imagen: lo que SDXL-Lightning dibuja mal y cómo se esquivó
+- **Palabras que traen el siglo XX:** "lane/street + night/dusk" dibuja aldeas inglesas con farolas (4 de 4 intentos del
+  plano 5 y 2 de 2 del 61); "kitchen" dibuja un salón moderno con estufa (4 de 4 del plano 91 viejo); "road" sale
+  asfaltada y con líneas pintadas (plano 67, **aprobado por la puerta**); "door" sale un pasillo moderno con felpudo
+  (plano 31, **aprobado por la puerta**: Florence lo describió como "a wooden door… a wooden floor and a beige wall").
+- **Lo que funcionó:** planos cerrados de un objeto o un gesto (gato en silueta sobre piedras, losas mojadas bajo un
+  arco, pizarras con gotas, gotas del alero, pote colgado sobre el fuego, libros cerrados) y paisajes sin edificios
+  (luna sobre montes, sendero entre peñas). 9 de los 11 planos salieron bien al primer o segundo intento así.
+- **La puerta no basta: hay que mirar los intentos.** Dos aprobados eran anacrónicos (31 y 67) y en dos planos la
+  puerta eligió peor que el ojo (91: lámpara encendida al fondo; 145: reserva que repetía el plano 11). Mirar cada
+  intento al salir (Monitor sobre la carpeta de imágenes) costó poco y evitó un remontaje entero.
+- **Negativos del plano (`negativo`):** con `IMG_CFG_REINTENTO=0` no se usan al generar; solo los mira CLIP
+  ("a photo with X" frente a "a photo"). Un negativo que se parece al tema rechaza las buenas: "stove" y "fireplace
+  mantel" en un pote sobre el fuego, "open book" en libros cerrados, y "house"/"lights" rechazarían un tejado o la luna.
+  Poner solo objetos que nunca deberían aparecer.
+- **Elegir a mano un intento con el render en marcha:** `longo.py` guarda la elección en memoria pero lee el fichero al
+  graduar (justo antes de `6_son`); copiar el intento bueno sobre el nombre elegido antes de esa etapa funciona.
+  Después se restaura el original y se anota en `revision.json` (`escolla_manual`, `escollida_porta`).
+
+## Caché de imágenes restaurada del repo
+- Solo guarda la imagen elegida de cada plano. Los planos que no pasaron la puerta con menos de 4 intentos se trataban
+  como "sin terminar" y el pipeline volvía a revisar intentos que no existen (FileNotFoundError en el plano 126, y
+  `lanzar-longo.sh` lo reintentaba igual). Arreglado en `imaxes.py`: si faltan ficheros de intentos, el plano se da por
+  hecho.
+- La voz y las puertas de texto también quedan en caché entre lanzamientos en la misma sesión: el segundo lanzamiento
+  fue directo a las imágenes.
+
+## Sonido: pico real
+- `son.limitar` limitaba el pico de muestra a 0,89 y tras el AAC daba −0,1 dBTP. Ahora mide el pico real
+  (sobremuestreo ×4) y limita a 0,79 (−2 dBTP). Prueba con voz de Brais empujada +3 dB: −2,0 dBTP en el WAV y
+  −1,8 dBTP tras AAC 128k. (Una prueba sintética con tonos de 12 kHz daba +1,4 dBTP tras AAC: no es representativa.)
+
+## Trabajos largos: reinicios y paradas (01-10-2026, noche)
+- **El contenedor se reinició a las 22:32 con un Monitor armado** (el de las imágenes acababa de terminar y el del log
+  seguía vivo). Se perdió el montaje en curso; el scratchpad y el entorno (venv, paquetes de apt) sobrevivieron. La
+  revisión con `send_later` es la que de verdad cubre el reinicio: dejarla siempre programada, con la orden de relanzar.
+- `montaxe.py` no reaprovecha sus tramos a medias: un reinicio en el montaje cuesta los ≈70 min enteros.
+- Un plano con menos de 4 intentos que no pasó la puerta se trata como "sin terminar" en cada relanzamiento y genera
+  más intentos (y deshace una elección manual). `imaxes.py` respeta ahora `escolla_manual`.
+- `pkill -f longo.py` mata también la shell del agente si la orden contiene "longo.py": matar por PID.
+- La cifra de CPU de `qa.md` es la de esa ejecución, no la del episodio: con caché, 9,9 h frente a 16,6 h de la
+  producción inicial.
