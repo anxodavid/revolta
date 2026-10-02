@@ -60,6 +60,13 @@ E, a continuación: *"Consideremos na imaxen usar as referencias buscadas"* (as 
 
 **Movemento:** só Ken Burns (zoom ≤ 1,12x) e brétema ao 6 %.
 
+**Rolda de arranxos da v1 (PR #5, fusionado en main o 02-10-2026):** cambiou os 11 planos que pedira o tribunal (5,
+31, 56, 61, 67, 84, 91, 133, 145, 153 e 161), engadiu á porta máis anacronismos (radiador, fregadeiro, billas,
+maleta de rodas, apliques…), mide o pico real (−1,7 dBTP) e enche a descrición cos datos reais
+(`gauntlet3/video/arranxos/LEEME.md`). **A v1 de referencia para os críticos e o tribunal é esta versión arranxada**
+(a que está agora en `gauntlet3/video/`). Non sabemos se as persoas do §1 viron a primeira montaxe ou a arranxada; as
+súas tres queixas valen para as dúas.
+
 **O que funcionou e non se pode perder:** o gancho (4/5: dous feitos verdadeiros e raros nos primeiros 35 s e tres
 bucles que se pagan); o embude de voz, ritmo e luz; o son por escena (D13, D14); caras dignas sen clichés de bruxa;
 a queimada do arranque, o gato no burato da porta, o castro sobre o Atlántico, Feijoo na cela e os nocturnos da zona
