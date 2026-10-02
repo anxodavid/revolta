@@ -218,6 +218,14 @@ def imaxe_referencia(ref, W, H):
         x0, y0, x1, y1 = ref['recorte']
         w, h = im.size
         im = im.crop((round(x0 * w), round(y0 * h), round(x1 * w), round(y1 * h)))
+    if ref.get('encadre') == 'encaixar':
+        # a referencia enteira dentro de WxH (p. ex. un hórreo vertical nun plano 16:9): os lados son a mesma imaxe
+        # estirada e moi desenfocada, que o modelo repinta (mellor con `profundidade` ou forza alta)
+        from PIL import ImageFilter
+        fondo = im.resize((W, H), Image.LANCZOS).filter(ImageFilter.GaussianBlur(max(W, H) // 25))
+        im = ImageOps.contain(im, (W, H), Image.LANCZOS)
+        fondo.paste(im, ((W - im.size[0]) // 2, (H - im.size[1]) // 2))
+        return fondo
     return ImageOps.fit(im, (W, H), Image.LANCZOS, centering=tuple(ref.get('centro') or (0.5, 0.5)))
 
 

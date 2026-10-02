@@ -31,12 +31,14 @@ import math, os, re
 from pathlib import Path
 
 MODELOS = Path(os.environ.get('REVISOR_DIR', '/tmp/claude-0/-home-user-revolta/2e7d1051-da1e-54e9-bb2d-6cd0b746c55a/scratchpad/revisor'))
-FLORENCE = os.environ.get('REVISOR_VLM', 'florence-community/Florence-2-large')
+# Gauntlet 4: Florence-2-base por defecto (a que usou a produción das meigas, `lanzar-longo.sh`; a large, 1,5 GB,
+# borrouse do contorno por falta de disco). A lista de palabras calibrouse coas descricións de base.
+FLORENCE = os.environ.get('REVISOR_VLM', 'florence-community/Florence-2-base')
 CLIP_MODEL = os.environ.get('CLIP_MODEL', 'openai/clip-vit-large-patch14')
 MAN_DIST = 0.14
 MAN_DETALLE = 0.12   # sen corpos na imaxe, unha man máis ancha ca isto (fracción do ancho) é un primeiro plano
 CORPOS_MAX = 5
-VERSION = 8   # súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
+VERSION = 9   # 9 = porta v6 do Gauntlet 4. Súbese cando cambia a lista ou as portas; imaxes.py volve revisar as imaxes gardadas cunha versión anterior
 
 # (etiqueta, expresión regular sobre a descrición en inglés e os obxectos de <OD>)
 LISTA = [
@@ -46,18 +48,41 @@ LISTA = [
     ('tellados laranxas', r'\b(red|orange|terracotta|clay)[- ]?(tiled? )?roofs?\b|\broof tiles\b|\btiled roofs?\b'),
     ('vehículos modernos', r'\b(car|cars|truck|bus|bicycle|motorcycle|train|airplane|traffic light)\b'),
     ('obxectos modernos', r'\b(street ?lamps?|lamp ?posts?|streetlights?|street lights?|lanterns? hanging|hanging lanterns?|'
-                          r'city lights?|town lights?|tea ?lights?|glass jar|jar candle|sliced bread|slices? of bread|'
-                          r'kettle|teapot|coffee pot|feather boa|power lines?|telephone|umbrella|glasses|sunglasses|'
-                          r'asphalt|electric|light bulbs?|plastic|laptop|cell phone|clock|tv|television|'
+                          r'city lights?|town lights?|tea ?lights?|jar candle|sliced bread|slices? of bread|'
+                          r'feather boa|power lines?|sunglasses|asphalt|electric|light bulbs?|plastic|laptop|cell phone|tv|television|'
                           # tribunal final do Gauntlet 3 (01-10-2026): o que se escapou e Florence si nomeara. Engadido sen
                           # subir VERSION a propósito: só o ven os planos que se rexeneran, non as 151 imaxes xa aprobadas
-                          r'radiators?|sinks?|faucets?|water taps?|rolling suitcases?|suitcases? on wheels|wheeled suitcases?|'
-                          r'trolley|briefcases?|handbags?|teddy bears?|beanies?|bowler hats?|cowboy hats?|light poles?|'
-                          r'wall lamps?|wall lights?|sconces?|porch lights?|ceiling lights?)\b'),
+                          # porta v6: sen "sinks?" nin "countertop" (Florence-2-base chama así a unha pía de pedra e a
+                          # calquera mesa de madeira: planos 1, 114, 124 e 151 da v1)
+                          r'radiators?|kitchen sinks?|faucets?|water taps?|cabinetry|rolling suitcases?|suitcases? on wheels|wheeled suitcases?|'
+                          r'trolley|light poles?|wall lamps?|wall lights?|sconces?|porch lights?|ceiling lights?|'
+                          # porta v6 (Gauntlet 4): o que Florence-2-base dixo das imaxes malas da v1
+                          # (sen "chandelier": os lampadarios de velas do XVII tamén o son)
+                          r'pendant (lights?|lamps?)|light fixtures?|spotlights?|neon)\b'),
+    # porta v6: "lit up with warm lights" = fiestras ou fachadas con luz eléctrica (6 de 6 imaxes da v1 que o din son
+    # malas: pobo iluminado, casa colonial, igrexa con farolas, catedral e casas inglesas)
+    ('luz eléctrica (Florence)', r'\b(lit up|illuminated) (with|by) [^.|]{0,40}\blights\b'),
+    # porta v6: casas alleas (o tribunal: casas inglesas, xeorxianas e coloniais, aldea dos Cotswolds, casas nórdicas)
+    ('casas alleas', r'\b(cottages?|english|british|scottish|irish|cotswolds?|georgian|victorian|colonial|mansion|'
+                     r'manor house|two-stor(e)?y (house|building|home)|townhouses?|terraced houses?|row houses|porch|veranda|'
+                     r'sash windows?|bay windows?|dormer windows?|picket fence|wooden houses)\b'),
+    # porta v6: roupa e accesorios de hoxe. Depende da época: non conta se o plano é do século XX (campo `epoca`
+    # ou o prompt di 1950s, twentieth century...), como os emigrantes ou a taberna dos anos 50 da v1
+    # (sen "sweater" nin "hoodie": Florence-2-base chama así á roupa de la e ao capucho dun frade)
+    ('roupa actual', r'\b(jeans|t-shirts?|sweatshirts?|blazers?|neckties?|suit and tie|trench coats?|'
+                     r'parkas?|baseball caps?|flat caps?|beanies?|bowler hats?|cowboy hats?|fedoras?|top hats?|sneakers|'
+                     r'high heels|handbags?|purses?|backpacks?|briefcases?|wrist ?watch(es)?|teddy bears?|tweed)\b'),
     # versión 5: "lamp" só con adxectivos modernos (o candil, "oil lamp", é a luz da fase calma)
     ('interior moderno', r'\b(bedroom|nightstand|bedside|(table|floor|desk|bedside|electric) lamps?|lampshades?|curtains?|sofa|couch|'
                          r'picture frames?|pillows|cushions?|upholstered|armchairs?|window seat|mantel(piece)?|potted plants?|'
                          r'flower ?pots?|vase of flowers|large window|view from the window)\b'),
+    # porta v6: cadros, paredes pintadas, luces de feira e obxectos do XIX-XX que xa estaban na lista (bote de vidro,
+    # teteira, reloxo, paraugas...: o plano 59, taberna dos anos 50, caía por eles). Depende da época
+    # (sen "living room": Florence-2-base chámalle así a calquera fondo desenfocado, plano 91 novo)
+    ('cousas do século XX', r'\b(glass jar|kettle|teapot|coffee pot|telephone|umbrella|glasses|clock|'
+                            r'string lights|fairy lights|framed (pictures?|photos?|photographs?|portraits?|paintings?)|'
+                              r'(pictures?|paintings?|portraits?) (hanging )?on the walls?|walls are painted|painted walls|'
+                              r'wallpaper)\b'),
     ('texto na imaxe', r'\b(text|letters?|words?|writing|written|sign that reads|watermark|logo|caption|signature|'
                        r'open book|book open|pages of|document|newspaper)\b'),
     ('cruces portadas', r'\b(carrying|holding|with) (large |wooden )?(crosses|a cross|crucifix(es)?)\b'),
@@ -251,6 +276,35 @@ class Clip:
         return {'etiqueta': mellor[1], 'sim': round(mellor[2], 3)}
 
 
+# Época do plano (porta v6): a roupa e os accesorios de hoxe non contan nun plano do século XX (campo `epoca` da lista
+# de planos, p. ex. "xx", ou un prompt que di 1950s, twentieth century...).
+SECULO_XX_RX = r'\b(19[0-9]0s|twentieth[- ]century|20th[- ]century)\b'
+SO_FORA_DO_XX = ('roupa actual', 'cousas do século XX')
+# v6: tamén as brasas e as luces de chama (planos 115 e 162 da v1: Florence di "burning brightly" dunha vela)
+LUME_PROMPT_RX = r'\b(fire|flames?|bonfires?|blaze|queimada|burning|embers?|candles?|lanterns?|torch(es)?|oil lamps?)\b'
+
+
+def epoca_xx(epoca=None, prompt=None):
+    if epoca and re.match(r'\s*(xx|s\.? ?xx|s[ée]culo xx|19\d\d)', str(epoca), re.I):
+        return True
+    return bool(prompt and re.search(SECULO_XX_RX, prompt, re.I))
+
+
+def lista_anacronismos(texto):
+    """Etiquetas de LISTA que aparecen na descrición e nos obxectos de Florence (texto en minúsculas)."""
+    return [et for et, rx, *exc in LISTA if re.search(rx, texto) and not (exc and re.search(exc[0], texto))]
+
+
+def filtrar_contexto(problemas, prompt=None, epoca=None):
+    """Quita o que o propio plano pide: o lume grande se o prompt pide lume (versión 8, orquestador: neste episodio o
+    lume é o tema; o de durmir segue) e a roupa de hoxe nun plano do século XX (porta v6)."""
+    if prompt and re.search(LUME_PROMPT_RX, prompt, re.I):
+        problemas = [x for x in problemas if x != 'lume grande no exterior']
+    if epoca_xx(epoca, prompt):
+        problemas = [x for x in problemas if x not in SO_FORA_DO_XX]
+    return problemas
+
+
 def _lista_negativo(negativo):
     if not negativo:
         return []
@@ -362,10 +416,9 @@ class Revisor:
         od = self._florence(im, '<OD>', 80)
         obx = sorted(set(od.get('labels', [])))
         texto = (cap + ' | ' + ', '.join(obx)).lower()
-        problemas = [et for et, rx, *exc in LISTA if re.search(rx, texto) and not (exc and re.search(exc[0], texto))]
-        return problemas, {'descricion': cap, 'obxectos': obx}
+        return lista_anacronismos(texto), {'descricion': cap, 'obxectos': obx}
 
-    def revisar(self, png, negativo=None, clave=None, fase=None, prompt=None, **_):
+    def revisar(self, png, negativo=None, clave=None, fase=None, prompt=None, epoca=None, **_):
         """{'ok', 'problemas', 'mans', 'corpos', 'descricion', 'obxectos', 'iconografia', 'arquetipo', 'clip_emb',
         'altas_luces'}. A repetición non se mira aquí (depende do episodio): ver `repeticion`."""
         pr, det = self.mans(png)
@@ -377,11 +430,7 @@ class Revisor:
             pr.append(f'lume vivo ao durmir ({quente:.1%} de altas luces cor de chama)')
         if self.vlm is not None:
             p2, d2 = self.anacronismos(png)
-            # Versión 8 (orquestador): o veto de lume grande veu do Gauntlet 2 (edificios ardendo). Neste episodio o lume
-            # é o tema (a queimada, as fogueiras de San Xoán): se o prompt pide lume, non se veta; o de durmir segue.
-            if prompt and re.search(r'\b(fire|flames?|bonfires?|blaze|queimada|burning)\b', prompt, re.I):
-                p2 = [x for x in p2 if x != 'lume grande no exterior']
-            pr += p2; det.update(d2)
+            pr += filtrar_contexto(p2, prompt, epoca); det.update(d2)
         if self.clip is not None:
             E, emb = self.clip.analizar(png)
             p3, d3 = self.clip.iconografia(E, negativo)
