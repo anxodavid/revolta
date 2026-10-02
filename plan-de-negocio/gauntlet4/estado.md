@@ -20,11 +20,12 @@ Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador 
 
 ## Procesos de fondo desta sesión
 
-- **Instantánea do scratchpad** cada 20 min: `herramientas/gauntlet/instantanea.py --bucle 1200` (log en
-  `$SCRATCH/logs/instantanea.log`). Copia a `gauntlet4/scratchpad/` os ficheiros de texto pequenos que deixan os
-  axentes (scripts, notas, medidas, rexistros recortados) e fai commit só desa carpeta. Se o contedor se reinicia,
-  relanzala:
-  `SCRATCH=… setsid nohup python3 herramientas/gauntlet/instantanea.py --bucle 1200 > $SCRATCH/logs/instantanea.log 2>&1 &`
+- **Instantánea do scratchpad e autogardado** cada 20 min: `herramientas/gauntlet/instantanea.py --bucle 1200
+  --autogardar` (log en `$SCRATCH/logs/instantanea.log`). Copia a `gauntlet4/scratchpad/` os ficheiros de texto
+  pequenos que deixan os axentes no scratchpad (scripts, notas, medidas, rexistros recortados) e, ademais, fai commit
+  do traballo en curso de `gauntlet4/` e `herramientas/` (texto e imaxes pequenas quedos ≥ 2 min; vídeo e audio non,
+  que os validan os axentes). Se o contedor se reinicia, relanzala:
+  `SCRATCH=… setsid nohup python3 herramientas/gauntlet/instantanea.py --bucle 1200 --autogardar >> $SCRATCH/logs/instantanea.log 2>&1 &`
 - **Revisión horaria e rearranque** (rutina `trig_01CHFESbR8j5JWtTkAhQsCDN`, ao minuto 53 de cada hora, nesta mesma
   sesión): mira `uptime`, os axentes, o disco e a instantánea, e retoma o que parase por cota ou por reinicio. Bórrase
   cando se entregue a v2.
