@@ -1,3 +1,6 @@
 __pycache__/
 plan-de-negocio/gauntlet2/medidas/escala/asr_longo_x4.wav
 plan-de-negocio/gauntlet2/medidas/escala/*.wav
+
+# Anacos do mestre que deixa entregar.sh (centos de MB): non van a git ata que o promotor decida onde arquivalo
+plan-de-negocio/*/video/mestre/
