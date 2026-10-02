@@ -21,11 +21,46 @@ axente viu os clips en movemento.
 
 ## 4. Paralaxe 2,5D
 
-(que fai, custo por fotograma)
+**Que fai** (`movemento.Paralaxe`): unha cámara virtual que se despraza diante da imaxe co relevo dun mapa de
+profundidade, non un zoom 2D.
+
+1. Profundidade relativa con Depth-Anything-V2-Small a 756 px de lado curto (adestrado a 518; con máis resolución
+   saen bordos máis finos), normalizada (percentís 1 e 99,5) e pasada a profundidade co primeiro termo en 1 e o fondo
+   en `ZFAR` = 5 (canto relevo hai). Caché por sha256 da imaxe.
+2. Cada fotograma: proxección dos puntos da imaxe (a media resolución) coa cámara nova, de lonxe a preto, para que
+   o máis próximo quede enriba (z-buffer); os ocos que destapa a cámara énchense coa profundidade máis lonxana da
+   veciñanza (o fondo continúa por detrás do primeiro termo).
+3. Inversa analítica para cada píxel de saída, `x = ((x' − sx)(Z − tz) + tx) / Z`, e `cv2.remap` da imaxe a
+   resolución completa (a imaxe prepárase a 1,1 veces a saída con Lanczos e a mesma máscara de desenfoque ca na
+   v1).
+4. Onde a cámara destapa fondo que estaba tapado, mostréase unha copia da imaxe co primeiro termo "borrado" nunha
+   banda á beira de cada salto de profundidade (inpaint de Telea a media resolución) en vez de estirar o borde.
+5. Zoom mínimo calculado para que ningún bordo da saída mostree fóra da imaxe en ningún momento (coas
+   profundidades que hai de verdade en cada bordo).
+
+**Cámaras** (contexto §6.1): `avanza`/`recua` (travelling cara a dentro ou fóra: o primeiro termo medra máis ca o
+fondo), `pan_esq`/`pan_der` (travelling lateral), `sobe`/`baixa` (grúa), `xira_esq`/`xira_der` (arco arredor do
+suxeito: o punto de xiro, á profundidade do centro da imaxe, queda quieto e fondo e primeiro termo móvense en
+sentidos contrarios). Velocidade dun travelling lento: no plano de 8 s, o primeiro termo percorre ≈ 4 % do ancho
+(lateral) ou medra ≈ 9 % (avance); o fondo, un cuarto diso. `forza` escala todo.
 
 ## 5. Microanimacións
 
-(efectos, máscaras, custo)
+Sutís: mellor pouco que de videoxogo. Todas teñen custo cero onde non atopan nada (a máscara baleira desactívaas).
+
+| Efecto | Máscara | Animación |
+|---|---|---|
+| `lume` | píxeles brillantes e quentes (R > G > B, luminancia > 0,42) × CLIPSeg "fire"/"flames"; cada compoñente conexa é unha chama | desprazamento con ruído que sobe sobre cada chama e a súa estela (linguas de lume); intensidade da chama con parpadeo 1/f (0,4-11 Hz, fases distintas por chama); **a luz do contorno tremela** (±7 %, ton quente) co mapa da chama desenfocada a gran escala |
+| `candea` | igual, chamas pequenas, CLIPSeg "candle flame" | o mesmo máis suave e rápido, e a chama abanea (0,55 e 1,37 Hz); luz do contorno ±4,5 % nun raio menor |
+| `choiva` | ningunha (en pantalla) | tres capas de raias (lonxe, medio, preto) a 650, 1.150 e 1.850 px/s, con antialias e algo de desenfoque nas próximas; máis visibles sobre fondos escuros |
+| `bretema` | profundidade (máis densa ao lonxe) | dúas capas de ruído suave que corren a 9 e 4 px/s; cor tirada das luces lonxanas da propia imaxe; opacidade ≤ 20 % |
+| `fume` | CLIPSeg "smoke"/"mist" × zonas máis claras ca o arredor | desprazamento que sobe amodo |
+| `auga` | CLIPSeg "water"/"river"/"water surface" | ondas horizontais (desprazamento de ≈ 2 px) e reflexos que escintilan nos brillos |
+| `ceo` | CLIPSeg "sky"/"clouds" × fondo (profundidade) | as nubes desprázanse ≈ 1,2 % do ancho por segundo |
+| `po` | ningunha (en pantalla) | 90 partículas mínimas que flotan amodo, visibles só onde hai luz |
+
+Os efectos `lume`, `candea`, `bretema`, `fume`, `auga` e `ceo` aplícanse á imaxe antes da cámara 2,5D (móvense
+co relevo); `choiva` e `po`, ao fotograma.
 
 ## 6. Cámara lenta e escala
 

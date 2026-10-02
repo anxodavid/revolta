@@ -174,6 +174,14 @@ def preparar(planos, imaxes, lado=756):
         if not an:
             continue
         profundidade(im, lado)          # tamén nos I2V: se falta o clip, o plano vai en paralaxe
+        if an.get('modo') == 'i2v' and e.get('vis'):
+            # cámara lenta (RIFE) calculada aquí unha vez e non en cada proceso de montaxe
+            f = Path(an.get('clip') or i2v_ficheiro(im, an.get('accion', ''), an.get('i2v')))
+            if f.exists():
+                n = len(ler_video(f))
+                v = (n - 1) / FPS / max(1e-3, e['vis'][1] - e['vis'][0])
+                if v < 0.98 and os.environ.get('MOVEMENTO_RIFE', '1') == '1':
+                    clip_lento(f, 2 if v >= 0.45 else 4)
         txt = [t for ef in an.get('efectos', []) for t in TEXTOS_MASCARA.get(ef, [])]
         if txt:
             clipseg(im, txt)
@@ -486,7 +494,7 @@ class Lume(Efecto):
             y0, y1, x0, x1 = ch.cx
             hr = y1 - y0
             L = ch.tx.shape[0]
-            o = L - hr - int(ch.v * t) % max(1, (L - hr))               # o ruído corre cara arriba
+            o = int(ch.v * t) % max(1, (L - hr))                        # a xanela baixa: o ruído sobe
             dx = ch.tx[o:o + hr] * ch.A * ch.Fd
             dy = (ch.ty[o:o + hr] * ch.A * 1.4 + ch.A * 0.25) * ch.Fd
             if self.candea:                                             # a candea abanea un pouco
@@ -633,9 +641,7 @@ class Fluxo(Efecto):
             w = cv2.remap(roi, mx, self.gy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
         else:
             L = self.nx.shape[0]
-            o = int(self.v * t) % max(1, L - hr)
-            if self.tipo == 'fume':
-                o = L - hr - o                                          # sobe
+            o = int(self.v * t) % max(1, L - hr)                        # a xanela baixa: o ruído (e o fume) sobe
             dx = self.nx[o:o + hr] * self.A
             dy = self.ny[o:o + hr] * self.A * (0.35 if self.tipo == 'auga' else 1.0)
             w = cv2.remap(roi, self.gx + dx, self.gy + dy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
@@ -998,7 +1004,7 @@ def porta_video(mp4, mostras=16, clip=None):
         import tempfile
         from PIL import Image
         embs = []
-        with tempfile.TemporaryDirectory() as td:
+        with tempfile.TemporaryDirectory(dir=os.environ.get('SCRATCH')) as td:
             for i in idx[::2].tolist() + [int(idx[-1])]:
                 f = f'{td}/{i}.png'; Image.fromarray(fr[i]).save(f)
                 embs.append(clip.imaxe(f))

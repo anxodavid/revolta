@@ -102,5 +102,49 @@ def montar():
     print(json.dumps(info))
 
 
+DURMIR = [  # (plano da v1, animación): 60 s da zona de durmir, sen son (o avance da v1 só chega aos 4:50)
+    (151, {'modo': 'paralaxe', 'camara': 'avanza', 'efectos': ['fume']}),
+    (153, {'modo': 'paralaxe', 'camara': 'pan_der', 'efectos': ['choiva', 'auga']}),
+    (157, {'modo': 'paralaxe', 'camara': 'avanza', 'efectos': ['auga', 'choiva', 'bretema']}),
+    (160, {'modo': 'paralaxe', 'camara': 'xira_esq', 'efectos': ['bretema']}),
+]
+
+
+def durmir():
+    """60 s da zona de durmir (catro planos de 15 s cos fundidos longos da v1), con paralaxe e efectos, sen son."""
+    import imageio_ffmpeg
+    import montaxe
+    ff = imageio_ffmpeg.get_ffmpeg_exe()
+    esc = {e['n']: e for e in escenas()}
+    planos, imgs, srt, t = [], [], [], 0.0
+    for k, (n, an) in enumerate(DURMIR):
+        e = esc[n]
+        imgs.append(sorted(glob.glob(str(W / 'graduadas' / f"{n - 1:03d}-*.png")))[0])
+        planos.append({'b0': t, 'b1': t + 15.0, 'movemento': 'zoom_in', 'xf': e['xf'], 'n': n, 'animacion': an})
+        srt.append((t + 0.5, t + 14.5, e['texto']))
+        t += 15.0
+    dur = t
+    wav = W / 'silencio.wav'
+    subprocess.run([ff, '-y', '-v', 'error', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-t', str(dur),
+                    str(wav)], check=True)
+    def ts(x):
+        return f'{int(x // 3600):02d}:{int(x % 3600 // 60):02d}:{x % 60:06.3f}'.replace('.', ',')
+    f_srt = W / 'durmir.srt'
+    f_srt.write_text('\n\n'.join(f'{i + 1}\n{ts(a)} --> {ts(b)}\n{tx}' for i, (a, b, tx) in enumerate(srt)) + '\n')
+    out = AQUI / 'demo-durmir.mp4'
+    tmp = W / 'demo-durmir.tmp.mp4'
+    t0 = time.time()
+    montaxe.render(planos, imgs, dur, str(wav), str(f_srt), str(tmp), W / 'montaxe_durmir', procs=4, vbr='1400k',
+                   bufsize='2800k')
+    r = subprocess.run([ff, '-v', 'error', '-i', str(tmp), '-f', 'null', '-'], capture_output=True, text=True)
+    if r.stderr.strip():
+        raise SystemExit(f'o MP4 non descodifica limpo: {r.stderr[:300]}')
+    mb = tmp.stat().st_size / 1e6
+    if mb > 30:
+        raise SystemExit(f'{mb:.1f} MB: máis de 30 MB')
+    os.replace(tmp, out)
+    print(json.dumps({'dur_s': dur, 'mb': round(mb, 1), 's_montaxe': round(time.time() - t0, 1)}))
+
+
 if __name__ == '__main__':
-    {'preparar': preparar, 'montar': montar}[sys.argv[1]]()
+    {'preparar': preparar, 'montar': montar, 'durmir': durmir}[sys.argv[1]]()
