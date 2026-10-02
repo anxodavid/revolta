@@ -1,0 +1,125 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning (dev) at CMakeLists.txt:63 (file):
+  Policy CMP0152 is not set: file(REAL_PATH) resolves symlinks before
+  collapsing ../ components.  Run "cmake --help-policy CMP0152" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+
+  From input path:
+
+    /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/../bin64
+
+  the policy OLD behavior produces path:
+
+    /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/bin64
+
+  but the policy NEW behavior produces path:
+
+    /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/../bin64
+
+  Since the policy is not set, CMake is using the OLD behavior for
+  compatibility.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Compiler: GNU - Version: 13.3.0
+-- Target system: Linux - Processor: x86_64
+-- Cross-compiling: FALSE
+-- Platform: 
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done (8.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_deps/string_theory-build
+[  7%] Building CXX object _deps/gtest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 15%] Linking CXX static library ../../../lib/libgtest.a
+[ 15%] Built target gtest
+[ 23%] Building CXX object _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 30%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 30%] Built target gtest_main
+[ 38%] Building CXX object test/CMakeFiles/st_gtests.dir/test_buffer.cpp.o
+[ 46%] Building CXX object test/CMakeFiles/st_gtests.dir/test_string.cpp.o
+[ 53%] Building CXX object test/CMakeFiles/st_gtests.dir/test_codecs.cpp.o
+[ 61%] Building CXX object test/CMakeFiles/st_gtests.dir/test_iostream.cpp.o
+[ 69%] Building CXX object test/CMakeFiles/st_gtests.dir/test_sstream.cpp.o
+[ 76%] Building CXX object test/CMakeFiles/st_gtests.dir/test_format.cpp.o
+[ 84%] Building CXX object test/CMakeFiles/st_gtests.dir/test_stdio.cpp.o
+/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_deps/string_theory-src/test/test_stdio.cpp: In member function 'virtual void stdio_printf_Test::TestBody()':
+/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_deps/string_theory-src/test/test_stdio.cpp:47:10: warning: ignoring return value of 'char* fgets(char*, int, FILE*)' declared with attribute 'warn_unused_result' [-Wunused-result]
+   47 |     fgets(buffer, BUFFER_LEN, test_f);
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 92%] Building CXX object test/CMakeFiles/st_gtests.dir/test_regress.cpp.o
+[100%] Linking CXX executable st_gtests
+[100%] Built target st_gtests
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_assert.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_charbuffer.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_codecs.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_codecs_priv.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_format.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_format_numeric.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_format_priv.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_formatter.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_iostream.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_stdio.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_string.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_string_priv.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_stringstream.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_utf_conv.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_utf_conv_priv.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/st_config.h
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/assert
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/char_buffer
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/codecs
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/exceptions
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/formatter
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/format
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/iostream
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/stdio
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/string
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/string_stream
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/include/string_theory/utf_conversion
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/lib/cmake/string_theory/string_theory-config.cmake
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/lib/cmake/string_theory/string_theory-config-version.cmake
+-- Installing: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/_install/string_theory/lib/cmake/string_theory/string_theory-targets.cmake
+-- Building PCRE 8.45 from source
+-- Building PCRE for native-x86_64
+-- Staging path: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build/staging
+-- Found BISON: /usr/bin/bison (found version "3.8.2") 
+-- Found FLEX: /usr/bin/flex (found version "2.6.4") 
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio support disabled. Defining _SIN_VOZ.
+-- Audio: OFF
+-- Configuring done (108.5s)
+-- Generating done (0.2s)
+-- Build files have been written to: /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova/build

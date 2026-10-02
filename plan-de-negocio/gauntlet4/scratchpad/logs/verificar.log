@@ -1,0 +1,9 @@
+[22:36:06] SCRATCH=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad  HF_HOME=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf  (libre: 15G)
+[22:36:06] == verificar: empieza
+== voz
+   voz   1   5.1s Nas noites de inverno, a xente reuníase ao carón da lareira
+   voz   2   4.3s Contan que polos camiños da aldea pasaba, en silencio, a San
+   voz: 50 s {"parede_s": 49.6, "cpu_s": 66.4, "audio_s": [5.07, 4.32], "marcas_s": [45.3, 47.4], "carga_mais_frase1_s": 45.3, "rtf_frase2": 0.477, "rtf_total_con_carga": 5.279}
+== imaxe
+`torch_dtype` is deprecated! Use `dtype` instead!
+herramientas/pipeline/instalar.sh: line 364:  3622 Killed                  "$PY" "$HERE/probas/proba_entorno.py"

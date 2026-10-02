@@ -1,0 +1,4 @@
+[22:30:21] == nli: empieza
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files:  50%|█████     | 4/8 [00:00<00:00,  4.58it/s]Fetching 8 files: 100%|██████████| 8/8 [00:16<00:00,  2.01s/it]Fetching 8 files: 100%|██████████| 8/8 [00:16<00:00,  2.01s/it]
+MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7 -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf/hub/models--MoritzLaurer--mDeBERTa-v3-base-xnli-multilingual-nli-2mil7/snapshots/b5113eb38ab63efdd7f280f8c144ea8b13f978ce
+[22:30:39] == nli: hecho en 18 s

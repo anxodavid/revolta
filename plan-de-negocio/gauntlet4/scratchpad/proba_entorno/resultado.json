@@ -1,0 +1,17 @@
+{
+ "voz": {
+  "parede_s": 49.6,
+  "cpu_s": 66.4,
+  "audio_s": [
+   5.07,
+   4.32
+  ],
+  "marcas_s": [
+   45.3,
+   47.4
+  ],
+  "carga_mais_frase1_s": 45.3,
+  "rtf_frase2": 0.477,
+  "rtf_total_con_carga": 5.279
+ }
+}

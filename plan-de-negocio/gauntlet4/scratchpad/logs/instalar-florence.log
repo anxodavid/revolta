@@ -1,0 +1,4 @@
+[22:30:21] == florence: empieza
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  31%|███       | 4/13 [00:00<00:01,  5.17it/s]Fetching 13 files:  62%|██████▏   | 8/13 [00:01<00:00,  7.13it/s]Fetching 13 files:  92%|█████████▏| 12/13 [00:03<00:00,  3.47it/s]Fetching 13 files:  92%|█████████▏| 12/13 [00:20<00:01,  1.67s/it]Fetching 13 files: 100%|██████████| 13/13 [00:49<00:00,  3.79s/it]Fetching 13 files: 100%|██████████| 13/13 [00:49<00:00,  3.79s/it]
+florence-community/Florence-2-large -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf/hub/models--florence-community--Florence-2-large/snapshots/4271c66b88cdbc05735372ec13b2360108de5317
+[22:31:13] == florence: hecho en 52 s

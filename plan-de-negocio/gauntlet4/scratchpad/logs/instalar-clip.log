@@ -1,0 +1,4 @@
+[22:30:21] == clip: empieza
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files:  50%|█████     | 4/8 [00:00<00:00,  5.09it/s]Fetching 8 files:  88%|████████▊ | 7/8 [00:20<00:02,  2.86s/it]Fetching 8 files: 100%|██████████| 8/8 [00:43<00:00,  5.38s/it]Fetching 8 files: 100%|██████████| 8/8 [00:43<00:00,  5.38s/it]
+openai/clip-vit-large-patch14 -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41
+[22:31:06] == clip: hecho en 45 s

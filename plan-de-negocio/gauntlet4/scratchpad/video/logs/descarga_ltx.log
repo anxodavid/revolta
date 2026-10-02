@@ -1,0 +1,12 @@
+0.3 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/model_index.json
+0.4 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/scheduler/scheduler_config.json
+0.6 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/transformer/config.json
+0.7 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/vae/config.json
+0.9 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/text_encoder/config.json
+1.0 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/tokenizer/added_tokens.json
+1.2 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/tokenizer/special_tokens_map.json
+1.6 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/tokenizer/spiece.model
+1.7 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/tokenizer/tokenizer_config.json
+69.2 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--Lightricks--LTX-Video/snapshots/8984fa25007f376c1a299016d0957a37a2f797bb/ltxv-2b-0.9.8-distilled.safetensors
+101.1 s /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/hf/hub/models--comfyanonymous--flux_text_encoders/snapshots/6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5/t5xxl_fp8_e4m3fn.safetensors
+DESCARGA_OK

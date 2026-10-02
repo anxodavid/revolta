@@ -1,0 +1,227 @@
+[22:29:52] SCRATCH=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad  HF_HOME=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf  (libre: 30G)
+[22:29:52] == sistema: empieza
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 55398 files and directories currently installed.)
+Preparing to unpack .../0-libgl1-mesa-dri_25.2.8-0ubuntu0.24.04.4_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.4) over (25.2.8-0ubuntu0.24.04.2) ...
+Preparing to unpack .../1-libglx-mesa0_25.2.8-0ubuntu0.24.04.4_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.4) over (25.2.8-0ubuntu0.24.04.2) ...
+Preparing to unpack .../2-libgbm1_25.2.8-0ubuntu0.24.04.4_amd64.deb ...
+Unpacking libgbm1:amd64 (25.2.8-0ubuntu0.24.04.4) over (25.2.8-0ubuntu0.24.04.2) ...
+Preparing to unpack .../3-mesa-libgallium_25.2.8-0ubuntu0.24.04.4_amd64.deb ...
+Unpacking mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.4) over (25.2.8-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libegl-mesa0:amd64.
+Preparing to unpack .../4-libegl-mesa0_25.2.8-0ubuntu0.24.04.4_amd64.deb ...
+Unpacking libegl-mesa0:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+Selecting previously unselected package libportaudio2:amd64.
+Preparing to unpack .../5-libportaudio2_19.6.0-1.2build3_amd64.deb ...
+Unpacking libportaudio2:amd64 (19.6.0-1.2build3) ...
+Selecting previously unselected package libegl1:amd64.
+Preparing to unpack .../6-libegl1_1.7.0-1build1_amd64.deb ...
+Unpacking libegl1:amd64 (1.7.0-1build1) ...
+Selecting previously unselected package libgles2:amd64.
+Preparing to unpack .../7-libgles2_1.7.0-1build1_amd64.deb ...
+Unpacking libgles2:amd64 (1.7.0-1build1) ...
+Setting up libportaudio2:amd64 (19.6.0-1.2build3) ...
+Setting up mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+Setting up libgbm1:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+Setting up libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+Setting up libegl-mesa0:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+Setting up libgles2:amd64 (1.7.0-1build1) ...
+Setting up libegl1:amd64 (1.7.0-1build1) ...
+Setting up libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+[22:30:03] == sistema: hecho en 11 s
+[22:30:03] == cotovia: empieza
+[22:30:07] == cotovia: hecho en 4 s
+[22:30:07] == venv_base: empieza
+[22:30:21] == venv_base: hecho en 14 s
+[22:32:43]    paquetes: ok ([22:32:43] == paquetes: hecho en 142 s)
+[22:32:43]    st2: ok ([22:31:43] == st2: hecho en 82 s)
+[22:32:43]    brais: ok ([22:31:20] == brais: hecho en 59 s)
+[22:32:43]    revisor: ok ([22:30:23] == revisor: hecho en 2 s)
+[22:32:43]    sdxl: ok ([22:32:13] == sdxl: hecho en 112 s)
+[22:32:43]    florence: ok ([22:31:13] == florence: hecho en 52 s)
+[22:32:43]    nli: ok ([22:30:39] == nli: hecho en 18 s)
+[22:32:43]    clip: ok ([22:31:06] == clip: hecho en 45 s)
+[22:32:43]    whisper_hf: ok ([22:31:24] == whisper_hf: hecho en 63 s)
+[22:32:43] == stubs: empieza
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+StyleTTS2 importa: bóa nójte.
+[22:32:51] == stubs: hecho en 8 s
+[22:32:51] == whisper: empieza
+[22:33:17] == whisper: hecho en 26 s
+[22:33:17] == languagetool: empieza
+Downloading LanguageTool 6.8:   0%|          | 0.00/259M [00:00<?, ?B/s]Downloading LanguageTool 6.8:   4%|▍         | 10.5M/259M [00:00<00:02, 99.9MB/s]Downloading LanguageTool 6.8:  11%|█▏        | 29.4M/259M [00:00<00:01, 149MB/s] Downloading LanguageTool 6.8:  18%|█▊        | 47.2M/259M [00:00<00:01, 159MB/s]Downloading LanguageTool 6.8:  26%|██▌       | 67.1M/259M [00:00<00:01, 174MB/s]Downloading LanguageTool 6.8:  33%|███▎      | 84.9M/259M [00:00<00:01, 167MB/s]Downloading LanguageTool 6.8:  40%|███▉      | 103M/259M [00:00<00:01, 147MB/s] Downloading LanguageTool 6.8:  46%|████▌     | 118M/259M [00:00<00:00, 141MB/s]Downloading LanguageTool 6.8:  52%|█████▏    | 133M/259M [00:00<00:00, 133MB/s]Downloading LanguageTool 6.8:  57%|█████▋    | 147M/259M [00:01<00:01, 68.9MB/s]Downloading LanguageTool 6.8:  62%|██████▏   | 160M/259M [00:01<00:01, 79.8MB/s]Downloading LanguageTool 6.8:  67%|██████▋   | 174M/259M [00:01<00:00, 89.3MB/s]Downloading LanguageTool 6.8:  72%|███████▏  | 187M/259M [00:01<00:00, 79.7MB/s]Downloading LanguageTool 6.8:  76%|███████▋  | 197M/259M [00:01<00:00, 76.0MB/s]Downloading LanguageTool 6.8:  80%|███████▉  | 207M/259M [00:02<00:00, 73.6MB/s]Downloading LanguageTool 6.8:  83%|████████▎ | 215M/259M [00:02<00:00, 72.8MB/s]Downloading LanguageTool 6.8:  86%|████████▋ | 223M/259M [00:02<00:00, 72.1MB/s]Downloading LanguageTool 6.8:  90%|████████▉ | 232M/259M [00:02<00:00, 72.4MB/s]Downloading LanguageTool 6.8:  93%|█████████▎| 240M/259M [00:02<00:00, 72.4MB/s]Downloading LanguageTool 6.8:  96%|█████████▌| 249M/259M [00:02<00:00, 71.7MB/s]Downloading LanguageTool 6.8:  99%|█████████▉| 256M/259M [00:02<00:00, 70.8MB/s]Downloading LanguageTool 6.8: 100%|██████████| 259M/259M [00:02<00:00, 91.9MB/s]
+LanguageTool gl-ES: [('GENERAL_VERB_AGREEMENT_ERRORS', 'Os rapaces foi'), ('HUNSPELL_RULE', 'fortaleiras')]
+[22:33:30] == languagetool: hecho en 13 s
+[22:33:30] SCRATCH=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad  HF_HOME=/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf  (libre: 16G)
+[22:33:30] == cotovia_nova: empieza
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package flex.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 55432 files and directories currently installed.)
+Preparing to unpack .../flex_2.6.4-8.2build1_amd64.deb ...
+Unpacking flex (2.6.4-8.2build1) ...
+Selecting previously unselected package libasound2-dev:amd64.
+Preparing to unpack .../libasound2-dev_1.2.11-1ubuntu0.3_amd64.deb ...
+Unpacking libasound2-dev:amd64 (1.2.11-1ubuntu0.3) ...
+Selecting previously unselected package libfl2:amd64.
+Preparing to unpack .../libfl2_2.6.4-8.2build1_amd64.deb ...
+Unpacking libfl2:amd64 (2.6.4-8.2build1) ...
+Selecting previously unselected package libfl-dev:amd64.
+Preparing to unpack .../libfl-dev_2.6.4-8.2build1_amd64.deb ...
+Unpacking libfl-dev:amd64 (2.6.4-8.2build1) ...
+Setting up flex (2.6.4-8.2build1) ...
+Setting up libfl2:amd64 (2.6.4-8.2build1) ...
+Setting up libasound2-dev:amd64 (1.2.11-1ubuntu0.3) ...
+Setting up libfl-dev:amd64 (2.6.4-8.2build1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+[22:36:01] == cotovia_nova: hecho en 151 s
+[22:36:01] instalar.sh: terminado en 2 min 31 s
+[22:36:01] == limpieza: empieza
+[22:36:01] Tamaños en /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad:
+2.4G	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/tts/venv
+11G	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/hf
+1.1G	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/bench/st2
+788M	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/bench/wgl_ct2
+16M	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia
+89M	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/cotovia_nova
+400M	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/languagetool
+17M	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/revisor
+11M	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/tts/refs
+15G	/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad
+/dev/vda        252G   24G   15G  62% /
+[22:36:01] == limpieza: hecho en 0 s
+[22:36:01] instalar.sh: terminado en 6 min 9 s

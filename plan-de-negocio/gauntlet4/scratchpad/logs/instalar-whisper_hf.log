@@ -1,0 +1,4 @@
+[22:30:21] == whisper_hf: empieza
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:  36%|███▋      | 4/11 [00:00<00:01,  5.00it/s]Fetching 11 files:  73%|███████▎  | 8/11 [00:01<00:00,  7.00it/s]Fetching 11 files:  91%|█████████ | 10/11 [00:20<00:02,  2.00s/it]Fetching 11 files: 100%|██████████| 11/11 [01:00<00:00,  5.53s/it]Fetching 11 files: 100%|██████████| 11/11 [01:00<00:00,  5.53s/it]
+proxectonos/whisper-large-v3-turbo-gl-v1.0 -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/tmp/whisper-hf
+[22:31:24] == whisper_hf: hecho en 63 s

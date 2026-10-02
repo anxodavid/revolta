@@ -1,0 +1,4 @@
+[22:30:21] == paquetes: empieza
+No broken requirements found.
+torch 2.10.0+cpu diffusers 0.35.2 transformers 4.57.6 mediapipe 1.0.1 ctranslate2 4.8.2
+[22:32:43] == paquetes: hecho en 142 s
