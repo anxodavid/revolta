@@ -800,8 +800,14 @@ class Clip:
     de RIFE) ata `lento_min` (0,5 = a metade de velocidade); se aínda sobra plano, o derradeiro fotograma segue coa
     cámara 2D lenta. Escala a 1080p con Lanczos e unha máscara de desenfoque suave; zoom lento opcional."""
 
-    def __init__(self, mp4, dur, camara_nome='avanza', lento_min=0.5, zoom=1.05):
+    def __init__(self, mp4, dur, camara_nome='avanza', lento_min=0.5, zoom=1.05, imaxe=None):
         base = ler_video(mp4)
+        # detalle: a imaxe fonte a 1080p (a mesma coa que se condicionou o clip) para devolverlle ao clip o
+        # detalle fino que perde a 448p (transferencia guiada polo fluxo óptico, ver _detalle)
+        self.still = None
+        if imaxe is not None and os.environ.get('MOVEMENTO_DETALLE', '1') == '1':
+            self.still = fonte(imaxe, 1.0)
+            self.f0 = base[0]
         self.fps = FPS
         dur_clip = (len(base) - 1) / FPS
         v = dur_clip / max(dur, 1e-3)
@@ -829,8 +835,45 @@ class Clip:
         x0, y0 = (w0 - cw) / 2, (h0 - ch) / 2
         M = np.array([[OW / cw, 0, -x0 * OW / cw], [0, OH / ch, -y0 * OH / ch]], np.float32)
         out = cv2.warpAffine(im, M, (OW, OH), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REFLECT101)
+        if self.still is not None:
+            return self._detalle(im, out, M)
         bl = cv2.GaussianBlur(out, (0, 0), 1.6)
         return np.clip(out * 1.45 - bl * 0.45, 0, 255)
+
+    def _detalle(self, im, out, M):
+        """Transferencia de detalle: o fluxo óptico (DIS) do fotograma actual ao primeiro, escalado a 1080p,
+        deforma a imaxe fonte a 1080p ata a xeometría do fotograma; o seu detalle fino (paso alto) súmase ao clip
+        escalado só onde a imaxe deformada e o clip coinciden (confianza). Onde o clip trae contido novo (unha
+        perna que avanza, algo que se destapa) a confianza baixa e queda o clip escalado."""
+        import cv2
+        h0, w0 = im.shape[:2]
+        if not hasattr(self, '_dis'):
+            self._dis = cv2.DISOpticalFlow_create(cv2.DISOPTICAL_FLOW_PRESET_MEDIUM)
+            self._g0 = cv2.cvtColor(self.f0, cv2.COLOR_RGB2GRAY)
+            # a fonte na xeometría do fotograma 0 do clip (mesmo recorte), a 1080p
+            Hs, Ws = self.still.shape[:2]
+            self._Ms = np.array([[w0 / Ws, 0, 0], [0, h0 / Hs, 0]], np.float32)
+        g = cv2.cvtColor(np.clip(im, 0, 255).astype(np.uint8), cv2.COLOR_RGB2GRAY)
+        fl = self._dis.calc(g, self._g0, None)                       # fotograma actual -> fotograma 0 (px do clip)
+        sx, sy = M[0, 0], M[1, 1]
+        flo = cv2.warpAffine(fl, M, (OW, OH), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+        # punto de saída -> punto do clip actual -> punto do fotograma 0 -> punto da fonte a 1080p
+        if not hasattr(self, '_xy'):
+            self._xy = np.mgrid[0:OH, 0:OW].astype(np.float32)
+        ys, xs = self._xy
+        cx = (xs - M[0, 2]) / sx + flo[..., 0]
+        cy = (ys - M[1, 2]) / sy + flo[..., 1]
+        mx = cx / self._Ms[0, 0]; my = cy / self._Ms[1, 1]
+        W_ = cv2.remap(self.still, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
+        # confianza: a fonte deformada e o clip teñen que coincidir a baixa frecuencia
+        a = cv2.GaussianBlur(W_, (0, 0), 3.0); b = cv2.GaussianBlur(out, (0, 0), 3.0)
+        err = np.abs(a - b).mean(-1)
+        c = np.exp(-(err / 12.0) ** 2)
+        c = cv2.GaussianBlur(c, (0, 0), 4.0)[..., None]
+        det = W_ - cv2.GaussianBlur(W_, (0, 0), 1.8)
+        bl = cv2.GaussianBlur(out, (0, 0), 1.6)
+        base = out * 1.25 - bl * 0.25
+        return np.clip(base + c * det, 0, 255)
 
 
 # ------------------------------------------------------------------ plano animado (o que usa a montaxe)
@@ -848,7 +891,7 @@ class Plano:
         if self.modo == 'i2v':
             f = an.get('clip') or i2v_ficheiro(imaxe, an.get('accion', ''), an.get('i2v'))
             if Path(f).exists():
-                self.clip = Clip(f, dur, cam)
+                self.clip = Clip(f, dur, cam, imaxe=imaxe)
             else:                                    # sen clip na caché: paralaxe (e avísase)
                 print(f'movemento: falta o clip I2V do plano {e.get("n")} ({f}); vai en paralaxe', flush=True)
                 self.modo = 'paralaxe'

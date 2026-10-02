@@ -3,7 +3,7 @@
 Ficheiro do construtor (enxeñeiro de VFX, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar
 desde aquí** (non repetir medidas que xa estean en `probas/medidas-*.json`).
 
-Última actualización: 02-10-2026, 23:20 UTC.
+Última actualización: 02-10-2026, 23:35 UTC.
 
 ## Feito
 
@@ -17,15 +17,28 @@ desde aquí** (non repetir medidas que xa estean en `probas/medidas-*.json`).
 - Embeddings de T5 para 14 accións (`scripts/accions.json`) en `$SCRATCH/video/emb/` (`scripts/t5_emb.py`: pesos
   en fp8, cálculo en fp32; 6 s de carga, ≈ 21 s por texto, pico 6,4 GB). O T5 só fai falta para accións novas.
 
+- Primeira medida de I2V (LTX 2B, plano 22, 800x448, 49 fotogramas, 8 pasos): 470 s; camiña de verdade
+  (`probas/ltx_p22_*`, `probas/medidas-ltx.json`).
+- Código: `herramientas/pipeline/movemento.py` (paralaxe 2,5D, efectos, encaixe de clips I2V con cámara lenta
+  RIFE e transferencia de detalle, porta de vídeo), `movemento_i2v.py` (T5 por lotes e LTX con caché por hash, no
+  venv de vídeo; colle o candado el mesmo: non envolvelo en `flock`), integración en `montaxe.py` (planos con
+  `animacion`; sen ela, Ken Burns coma na v1) e `longo.py` (pasa `animacion`).
+- Imaxes da v1 graduadas coma na montaxe da v1 en `$SCRATCH/video/demo/graduadas/` (`scripts/demo_gancho.py
+  preparar`): os clips I2V da demo condiciónanse nelas.
+
 ## En curso
 
-- Medida de I2V con LTX-Video 2B 0.9.8 destilado (`scripts/ltx_proba.py`, co candado de CPU).
+- Clips I2V das probas que serven tamén para a demo (`scripts/lanzar_i2v.sh xerar i2v_probas1.json`: planos 3, 7,
+  22, 1 e 14) e primeira proba da paralaxe e dos efectos (`lanzar_plx1.sh`). Os dous agardan o candado.
 
 ## Falta
 
-Paralaxe 2,5D, microanimacións, interpolación e escala, porta de vídeo, `herramientas/pipeline/movemento.py` e
-integración en `montaxe.py`, demo do gancho, informe e aprendizaxes. Opcional: Wan2.2-TI2V-5B (só se cabe no
-orzamento de disco de ≈ 13 GB para `$SCRATCH/video`), tiras de Versalles.
+Mirar as tiras (mans, rostro, lume), calibrar a porta de vídeo, resto de clips da demo (2, 5, 17, 18), montar a
+demo (`demo_gancho.py montar`), informe e aprendizaxes. Opcional: Wan2.2-TI2V-5B (só se cabe en ≈ 13 GB para
+`$SCRATCH/video`), proba a 1024x576 e con 6 pasos.
+
+Tiras de Versalles (tarefa 10): YouTube só dá storyboards de 320x180 co cliente `mweb` (android_vr, ios e tv piden
+iniciar sesión); non serven para ver movemento. Descartado.
 
 ## Como reconstruír o contorno de vídeo nunha sesión nova
 
