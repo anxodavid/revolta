@@ -1,0 +1,2517 @@
+{
+ "descricion": "Avaliación da porta v6 fronte á anterior (VERSION 8 coa lista ampliada da rolda de arranxos) sobre as 173 imaxes\netiquetadas da v1, sen volver executar os modelos: Florence-2-base coas descricións gardadas pola produción\n(revision.json, a mesma Florence-2-base), CLIP-L cos embeddings gardados por calibrar_clip.py, e o lume ao durmir\ncalculado nas imaxes. Uso: $PY avaliar_porta.py REVISOR_ANTERIOR.py  -> calibracion/porta-v6.json",
+ "resumo": {
+  "bloquea": {
+   "v8": "2/4",
+   "v6": "2/4"
+  },
+  "molesta": {
+   "v8": "14/29",
+   "v6": "25/29"
+  },
+  "menor": {
+   "v8": "3/10",
+   "v6": "4/10"
+  },
+  "defectos de Claude": {
+   "v8": "4/10",
+   "v6": "6/10"
+  },
+  "funciona (tribunal)": {
+   "v8": "4/35",
+   "v6": "1/35"
+  },
+  "aceptable (falsos da v5 segundo o tribunal)": {
+   "v8": "4/11",
+   "v6": "2/11"
+  },
+  "limpas sen mención": {
+   "v8": "6/74",
+   "v6": "6/74"
+  },
+  "clave: ausentes cazadas": {
+   "v8": "14/18",
+   "v6": "8/18"
+  },
+  "clave: falsas alarmas": {
+   "v8": "25/144",
+   "v6": "0/144"
+  }
+ },
+ "imaxes": [
+  {
+   "n": 1,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "blue flames",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 2,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "clay bowl",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: clay bowl (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 3,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "bearded man",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 4,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "rope",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 5,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "lantern",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 6,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "candle",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 7,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "clixe_meiga"
+   ],
+   "clave": "old woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 8,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "leather shoes",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: leather shoes (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: leather shoes (CLIP)"
+   ]
+  },
+  {
+   "n": 9,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "estilo"
+   ],
+   "clave": "horse",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 10,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "texto"
+   ],
+   "clave": "candle",
+   "clave_ve": true,
+   "v8": [
+    "texto na imaxe"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "texto na imaxe"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 11,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "oak trees",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 12,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "bonfire",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 13,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ],
+   "clave": "red wax seal",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 14,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 15,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "long table",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 16,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "judge",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: judge (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 17,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "oak door",
+   "clave_ve": false,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [
+    "falta: oak door (CLIP)"
+   ],
+   "v6": [
+    "farol victoriano (CLIP)",
+    "roupa actual"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 18,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "dough",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 19,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "old woman",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: old woman (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 20,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "lume_mesa"
+   ],
+   "clave": "fountain",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: fountain (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: fountain (CLIP)"
+   ]
+  },
+  {
+   "n": 21,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay jug",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 22,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay jug",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: clay jug (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: clay jug (CLIP)"
+   ]
+  },
+  {
+   "n": 23,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "granite houses",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 24,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "doorway",
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "abrigo moderno (CLIP)",
+    "roupa actual"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 25,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "cows",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 26,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "stream",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: stream (CLIP)"
+   ],
+   "v6": [
+    "chaqueta de tweed (CLIP)"
+   ],
+   "v6_falta": [
+    "falta: stream (CLIP)"
+   ]
+  },
+  {
+   "n": 27,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "quill",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 28,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "priest",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 29,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "manor house",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "catedral inventada (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 30,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "village woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: village woman (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 31,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "cat",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 32,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "cat",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 33,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "two women",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)",
+    "luz eléctrica (CLIP)"
+   ],
+   "v8_falta": [
+    "falta: two women (CLIP)"
+   ],
+   "v6": [
+    "casas alleas",
+    "casas británicas (CLIP)",
+    "luz eléctrica (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 34,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "two women",
+   "clave_ve": false,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "roupa actual"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 35,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "woman",
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [
+    "falta: woman (CLIP)"
+   ],
+   "v6": [
+    "roupa actual"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 36,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "earring",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 37,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "church",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: church (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: church (CLIP)"
+   ]
+  },
+  {
+   "n": 38,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "cow",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 39,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "two women",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: two women (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 40,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [
+    "casa_allea",
+    "roupa_actual"
+   ],
+   "clave": "young woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 41,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "comb",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 42,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "toad",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 43,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "wolf",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 44,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "field",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 45,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "old woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 46,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "two women",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "sombreiro moderno (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 47,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "fishing boats",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 48,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay cup",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: clay cup (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: clay cup (CLIP)"
+   ]
+  },
+  {
+   "n": 49,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay bowl",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 50,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "boat",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 51,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay bowls",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 52,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "leather folder",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 53,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "stone ruins",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [
+    "falta: stone ruins (CLIP)"
+   ],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 54,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "copper still",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 55,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ],
+   "clave": "clay jug",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 56,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "steamship",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 57,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "long table",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: long table (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 58,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "potter's wheel",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 59,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "tavern",
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 60,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "coffee beans",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 61,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "stone arch",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: stone arch (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 62,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "long table",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: long table (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 63,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "book",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: book (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 64,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "friar",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 65,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "hills",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 66,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "wooden chest",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 67,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "cloth bundle",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 68,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "stone bridge",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: stone bridge (CLIP)"
+   ],
+   "v6": [
+    "casas alleas"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 69,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "young woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 70,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "bandage",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: bandage (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 71,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "river",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: river (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 72,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: woman (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 73,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "judge",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 74,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "rosary",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 75,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "boats",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 76,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "sea",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 77,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "hills",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 78,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "stone wall",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 79,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "calf",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 80,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": "man",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "cousas do século XX"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 81,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "fountain",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 82,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": "lantern",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "farol victoriano (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 83,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "old woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 84,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "stone mortar",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 85,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "cow",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 86,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "sheep",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 87,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "cows",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 88,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "woman",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [
+    "falta: woman (CLIP)"
+   ],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 89,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "old man",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 90,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "stone houses",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "casas británicas (CLIP)",
+    "luz eléctrica (Florence)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 91,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "iron pot",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 92,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay cups",
+   "clave_ve": true,
+   "v8": [
+    "interior moderno"
+   ],
+   "v8_falta": [
+    "falta: clay cups (CLIP)"
+   ],
+   "v6": [
+    "interior moderno"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 93,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "fire",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 94,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "interior_moderno",
+    "luz_electrica"
+   ],
+   "clave": "wooden bench",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)",
+    "paisaxe seca (CLIP)"
+   ],
+   "v8_falta": [
+    "falta: wooden bench (CLIP)"
+   ],
+   "v6": [
+    "casas británicas (CLIP)",
+    "cousas do século XX",
+    "paisaxe seca (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 95,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "old woman",
+   "clave_ve": true,
+   "v8": [
+    "interior moderno"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "interior moderno"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 96,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "hen",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 97,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "bread",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: bread (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 98,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "old woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 99,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "earring",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: earring (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 100,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "sheep",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 101,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "garlic",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 102,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "amulet",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 103,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "cow",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 104,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "stone houses",
+   "clave_ve": true,
+   "v8": [
+    "luz eléctrica (CLIP)"
+   ],
+   "v8_falta": [
+    "falta: stone houses (CLIP)"
+   ],
+   "v6": [
+    "luz eléctrica (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 105,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": "wicker basket",
+   "clave_ve": true,
+   "v8": [
+    "lume vivo ao durmir (3.9%)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "lume vivo ao durmir (3.9%)",
+    "luz eléctrica (Florence)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 106,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "corn field",
+   "clave_ve": true,
+   "v8": [
+    "eucaliptos (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 107,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "dried herbs",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 108,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "moon",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 109,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "wild flowers",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 110,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "herbs",
+   "clave_ve": true,
+   "v8": [
+    "ciprés (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "ciprés (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 111,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "yellow flowers",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 112,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": "white flowers",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 113,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "foxgloves",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 114,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "sardines",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 115,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "smoke",
+   "clave_ve": true,
+   "v8": [
+    "lume grande no exterior"
+   ],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 116,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "embers",
+   "clave_ve": true,
+   "v8": [
+    "lume vivo ao durmir (9.8%)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "lume vivo ao durmir (9.8%)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 117,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "embers",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 118,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "cows",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 119,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "clay jar",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 120,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "meadow",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: meadow (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 121,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: woman (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 122,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [
+    "xanela_moderna"
+   ],
+   "clave": "pillow",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [
+    "falta: pillow (CLIP)"
+   ],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 123,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": "fountain",
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "obxectos modernos"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 124,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "water",
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 125,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "robin",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 126,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "clay basin",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: clay basin (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: clay basin (CLIP)"
+   ]
+  },
+  {
+   "n": 127,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "misty hills",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 128,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "stone cross",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 129,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ],
+   "clave": "sieve",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 130,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "xanela_moderna"
+   ],
+   "clave": "oak door",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 131,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [
+    "xanela_moderna"
+   ],
+   "clave": "thistles",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 132,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "river",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: river (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 133,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "moon",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 134,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "manor house",
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "casas británicas (CLIP)",
+    "farol victoriano (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 135,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [
+    "xanela_moderna"
+   ],
+   "clave": "book",
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [
+    "falta: book (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": [
+    "falta: book (CLIP)"
+   ]
+  },
+  {
+   "n": 136,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "cloister",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 137,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "monk",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 138,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "books",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 139,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "monk",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 140,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "stars",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: stars (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 141,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ],
+   "clave": "sickle",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 142,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "donkey",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 143,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "old woman",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 144,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "owl",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 145,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "books",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 146,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "meadow",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: meadow (CLIP)"
+   ],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 147,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ],
+   "clave": "statue",
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [
+    "falta: statue (CLIP)"
+   ],
+   "v6": [
+    "cousas do século XX"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 148,
+   "version": "actual",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": "embers",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "cousas do século XX"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 149,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay bowl",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 150,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "mobles_actuais"
+   ],
+   "clave": "silhouettes",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 151,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "clay cups",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 152,
+   "version": "actual",
+   "tribunal": "sen_mencion",
+   "defectos": [],
+   "clave": "boat",
+   "clave_ve": true,
+   "v8": [
+    "salón moderno (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "salón moderno (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 153,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "slate",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 154,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "wooden bench",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 155,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "cows",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 156,
+   "version": "actual",
+   "tribunal": "menor",
+   "defectos": [
+    "roupa_actual"
+   ],
+   "clave": "leather shoes",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "abrigo moderno (CLIP)",
+    "chaqueta de tweed (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 157,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "stream",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 158,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [],
+   "clave": "grass",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 159,
+   "version": "actual",
+   "tribunal": "funciona",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": "valley",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [
+    "falta: valley (CLIP)"
+   ],
+   "v6": [
+    "casas alleas"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 160,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "oak trees",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 161,
+   "version": "actual",
+   "tribunal": "despois_dos_arranxos",
+   "defectos": [],
+   "clave": "drops",
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 162,
+   "version": "actual",
+   "tribunal": "aceptable",
+   "defectos": [],
+   "clave": "smoke",
+   "clave_ve": true,
+   "v8": [
+    "lume grande no exterior"
+   ],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 5,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ],
+   "clave": null,
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "luz eléctrica (Florence)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 31,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "billa_fregadoiro"
+   ],
+   "clave": null,
+   "clave_ve": true,
+   "v8": [
+    "obxectos modernos"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "obxectos modernos"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 56,
+   "version": "vella",
+   "tribunal": "bloquea",
+   "defectos": [
+    "maleta_rodas"
+   ],
+   "clave": null,
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 61,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "catedral_inventada"
+   ],
+   "clave": null,
+   "clave_ve": true,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "catedral inventada (CLIP)",
+    "luz eléctrica (Florence)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 67,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "interior_moderno",
+    "xesto_contrario"
+   ],
+   "clave": null,
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [
+    "cadros na parede (CLIP)",
+    "cousas do século XX"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 84,
+   "version": "vella",
+   "tribunal": "bloquea",
+   "defectos": [
+    "luz_electrica",
+    "radiador"
+   ],
+   "clave": null,
+   "clave_ve": false,
+   "v8": [],
+   "v8_falta": [],
+   "v6": [],
+   "v6_falta": []
+  },
+  {
+   "n": 91,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "cocina_economica",
+    "luz_electrica"
+   ],
+   "clave": null,
+   "clave_ve": false,
+   "v8": [
+    "casas británicas (CLIP)",
+    "interior moderno"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas británicas (CLIP)",
+    "interior moderno"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 133,
+   "version": "vella",
+   "tribunal": "bloquea",
+   "defectos": [
+    "luz_electrica"
+   ],
+   "clave": null,
+   "clave_ve": false,
+   "v8": [
+    "luz eléctrica (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "luz eléctrica (CLIP)",
+    "luz eléctrica (Florence)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 145,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "lume_durmir"
+   ],
+   "clave": null,
+   "clave_ve": false,
+   "v8": [
+    "lume vivo ao durmir (4.7%)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "lume vivo ao durmir (4.7%)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 153,
+   "version": "vella",
+   "tribunal": "molesta",
+   "defectos": [
+    "lume_durmir"
+   ],
+   "clave": null,
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas británicas (CLIP)"
+   ],
+   "v6_falta": []
+  },
+  {
+   "n": 161,
+   "version": "vella",
+   "tribunal": "bloquea",
+   "defectos": [
+    "casa_allea",
+    "luz_electrica"
+   ],
+   "clave": null,
+   "clave_ve": true,
+   "v8": [
+    "casas británicas (CLIP)"
+   ],
+   "v8_falta": [],
+   "v6": [
+    "casas alleas",
+    "casas británicas (CLIP)",
+    "farol victoriano (CLIP)",
+    "luz eléctrica (Florence)"
+   ],
+   "v6_falta": []
+  }
+ ]
+}

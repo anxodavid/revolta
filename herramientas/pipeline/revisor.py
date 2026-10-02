@@ -24,6 +24,13 @@ Tres revisores abertos, en CPU:
    - ARQUETIPOS de composición con tope por episodio e separación mínima (o crítico visual viu "figuras con capa
      afastándose por un camiño" 3-4 veces en 12 fotogramas).
 
+Porta v6 (Gauntlet 4, VERSION 9; calibración en plan-de-negocio/gauntlet4/imaxe/informe-r1.md): Florence-2-base por
+defecto; na lista, luz eléctrica ("lit up with ... lights"), casas alleas (cottages, english, georgian, two-story...),
+roupa e cousas do século XX (dependen do campo `epoca` do plano: nun plano do XX non contan); en CLIP, 9 recortes (os
+3 grandes e unha grella 3x2), seis pares novos (catedral inventada, abrigo, tweed, sombreiro, cadros, farol victoriano)
+e a `clave` comparada con 73 distractores (z). Non ve obxectos pequenos como a bombilla e o radiador do plano 84 da
+v1 nin as rodas dunha maleta: iso queda para o axente que mira as imaxes (D18).
+
 Limitacións (medidas nas probas, ver README e gauntlet3/aprendizajes/visual.md): MediaPipe só ve mans medianas ou
 grandes; Florence describe ben obxectos e materiais pero non conta dedos; a lista de palabras é conservadora e dá falsos positivos (unha rexeneración máis).
 """
@@ -134,6 +141,16 @@ PARES = [
      'low granite houses with small openings and slate roofs'),
     ('caldeiro de meiga (CLIP)', "a witch's cauldron with a glowing potion",
      'an iron cooking pot over embers in a peasant hearth'),
+    # porta v6 (Gauntlet 4): o que o tribunal viu na v1 e Florence non nomeou. Calibrados con
+    # plan-de-negocio/gauntlet4/imaxe/scripts/calibrar_clip.py (173 imaxes da v1, 0 falsos nas imaxes limpas). Os pares
+    # de obxectos pequenos (bombilla, radiador, maleta de rodas, billa, cociña de ferro) non separaban: non se usan
+    ('catedral inventada (CLIP)', 'a large baroque cathedral with two tall towers', 'a small romanesque granite church'),
+    ('abrigo moderno (CLIP)', 'a woman in a modern tailored coat with a handbag',
+     'a peasant woman in a long wool skirt and a shawl'),
+    ('chaqueta de tweed (CLIP)', 'a man in a tweed jacket and a flat cap', 'a peasant man in a coarse wool cloak'),
+    ('sombreiro moderno (CLIP)', 'a person wearing a bowler hat or a cowboy hat', 'a person wearing a wool cap'),
+    ('cadros na parede (CLIP)', 'framed pictures hanging on the wall', 'a bare stone wall'),
+    ('farol victoriano (CLIP)', 'a victorian cast iron lamp post', 'a wooden fence post'),
 ]
 # Umbrais por par, calibrados o 30-09-2026 con probas/visual_calibrar_clip.py (72 imaxes etiquetadas por Claude:
 # 33 fotogramas das rondas 1-3 do Gauntlet 2, 32 da comparativa de modelos e 7 escenas alleas feitas adrede):
@@ -149,14 +166,37 @@ PAR_MARXE = {'tellados laranxas (CLIP)': 0.045, 'muros encalados (CLIP)': 0.060,
              # Patio e caldeiro saen INVERTIDOS nas imaxes da r1 (o patio puntúa máis "fonte con pía"; o caldeiro, "pota
              # sobre brasas"): desactivados; deses encárgase Florence ("potted plants", "potion"...).
              'luz eléctrica (CLIP)': 0.015, 'luces de cidade (CLIP)': 0.012, 'salón moderno (CLIP)': 0.015,
-             'patio mediterráneo (CLIP)': 9.0, 'casas británicas (CLIP)': 0.010, 'caldeiro de meiga (CLIP)': 9.0}
+             'patio mediterráneo (CLIP)': 9.0, 'casas británicas (CLIP)': 0.010, 'caldeiro de meiga (CLIP)': 9.0,
+             # porta v6 (malas cazadas / malas, nas 173 imaxes da v1): catedral 1/1 (plano 61), abrigo 2/11 de roupa
+             # actual (24, 156), tweed 2/11 (26, 156), sombreiro 1/11 (46), cadros 1/2 (67), farol 2/11 de luz
+             # eléctrica (82, 161) e o aplique do plano 17, que ninguén listara
+             'catedral inventada (CLIP)': 0.050, 'abrigo moderno (CLIP)': 0.060, 'chaqueta de tweed (CLIP)': 0.040,
+             'sombreiro moderno (CLIP)': 0.050, 'cadros na parede (CLIP)': 0.060, 'farol victoriano (CLIP)': 0.050}
+PAR_MARXE['eucaliptos (CLIP)'] = 0.075   # v6: 0,070 marcaba un millo de noite (plano 106 da v1, 0,074) e ningunha mala
 PAR_PERTINENCIA = 0.15       # (0,20 deixaba fóra a maioría das malas: as similitudes de CLIP-L andan en 0,08-0,30)
+# v6: os pares novos calibráronse sen pertinencia, e o dos cadros mira tamén os 6 recortes pequenos (os cadros son
+# pequenos no plano); os demais, os 3 cadrados grandes coma na v5
+PAR_SEN_PERTINENCIA = {'catedral inventada (CLIP)', 'abrigo moderno (CLIP)', 'chaqueta de tweed (CLIP)',
+                       'sombreiro moderno (CLIP)', 'cadros na parede (CLIP)', 'farol victoriano (CLIP)'}
+PAR_RECORTES = {'cadros na parede (CLIP)': 9}
 # Conceptos do campo `negativo`: sim("a photo with X") − sim("a photo") no mesmo recorte. Na calibración, as boas
 # chegan a 0,037 e as malas claras a 0,047-0,12 (o valor absoluto non separaba: boas ata 0,19, malas desde 0,09).
 NEGATIVO_MARXE = 0.040
 # Versión 6: campo `clave` (o que TEN que verse): sim("a photo with X") − sim("a photo") no mellor recorte, por riba
 # de CLAVE_MARXE. Calibrado coas imaxes da folla r1 (ver aprendizajes/visual.md).
 CLAVE_MARXE = 0.020   # r1: colle 7 dos 12 elementos que faltaban, cunha falsa alarma (unha vela, -0,011)
+# Porta v6 (Gauntlet 4): a `clave` compárase con 73 obxectos e escenas comúns (CLAVE_DISTRACTORES) en cada un dos 9
+# recortes: z = (sim(clave) - media(distractores)) / desviación, o mellor recorte. Nas 162 imaxes da v1 (etiquetas de
+# Claude: 18 sen a clave), z < 1,5 colle 8 das 18 ausencias con 0 falsas alarmas en 144; a marxe da v5 (0,02) collía
+# 14 pero con 25 falsas alarmas (por iso a produción a pasara a aviso). As persoas ("two women", "judge") recoñéceas mal.
+CLAVE_Z = float(os.environ.get('REVISOR_CLAVE_Z', '1.5'))
+CLAVE_DISTRACTORES = ['person', 'woman', 'man', 'old woman', 'old man', 'face', 'hands', 'cat', 'dog', 'cow', 'sheep',
+                      'horse', 'bird', 'house', 'village', 'church', 'castle', 'tree', 'forest', 'field', 'hills', 'mountain',
+                      'sea', 'river', 'boat', 'ship', 'fire', 'candle', 'lantern', 'table', 'chair', 'bench', 'door',
+                      'window', 'wall', 'road', 'bread', 'pot', 'bowl', 'jug', 'cup', 'basket', 'book', 'paper', 'flowers',
+                      'herbs', 'moon', 'sky', 'clouds', 'rain', 'snow', 'smoke', 'stone', 'cross', 'fountain', 'bridge',
+                      'kitchen', 'room', 'shoes', 'clothes', 'rope', 'coins', 'jewel', 'animal', 'food', 'drink', 'fish',
+                      'night', 'sunset', 'statue', 'cloister']
 # Versión 6: na fase de durmir, nada de lume vivo: fracción de píxeles con luminancia > 0,85 (as brasas quedan
 # por debaixo; as chamas amarelas, por riba). Na r1: o caldeiro con chamas do plano 16 daba 0,97 %.
 ALTAS_LUCES_DURMIR = 0.0012   # r1: fogueira 0,36 %, caldeiro 2,2 %, vela 0,15-1,4 %; lúa e néboa 0,03-0,10 %
@@ -214,7 +254,8 @@ class Clip:
         return np.stack([self._txt[t] for t in lista])
 
     def analizar(self, png):
-        """(E: embeddings dos 3 recortes [3, 768], emb: media normalizada [768])."""
+        """(E: embeddings de 9 recortes [9, 768]: os 3 cadrados grandes da v5 (esquerda, centro, dereita) e, desde a
+        porta v6, unha grella 3x2 de cadrados pequenos; emb: media normalizada dos 3 grandes [768], coma na v5)."""
         import numpy as np
         from PIL import Image
         im = Image.open(png).convert('RGB')
@@ -223,10 +264,16 @@ class Clip:
         xs = [0, (w - s) // 2, w - s] if w >= h else [0]
         ys = [0] if w >= h else [0, (h - s) // 2, h - s]
         rec = [im.crop((x, y, x + s, y + s)) for x in xs for y in ys]
+        t = min(w // 3, h // 2) if w >= h else min(w // 2, h // 3)
+        nx, ny = (3, 2) if w >= h else (2, 3)
+        for j in range(ny):
+            for i in range(nx):
+                x = round(i * (w - t) / (nx - 1)); y = round(j * (h - t) / (ny - 1))
+                rec.append(im.crop((x, y, x + t, y + t)))
         with self.torch.no_grad():
             e = self.m.get_image_features(**self.proc(images=rec, return_tensors='pt'))
         E = (e / e.norm(dim=-1, keepdim=True)).numpy()
-        m = E.mean(0)
+        m = E[:3].mean(0)
         return E, m / (np.linalg.norm(m) + 1e-9)
 
     def imaxe(self, png):
@@ -237,11 +284,13 @@ class Clip:
         problemas, det = [], {}
         T = self.textos([t for _, a, b in PARES for t in (a, b)])
         for k, (et, _, _) in enumerate(PARES):
-            sb, sg = E @ T[2 * k], E @ T[2 * k + 1]
+            Ek = E[:PAR_RECORTES.get(et, 3)]
+            sb, sg = Ek @ T[2 * k], Ek @ T[2 * k + 1]
             marxe, pert = float((sb - sg).max()), float(max(sb.max(), sg.max()))
             det[et] = [round(marxe, 3), round(pert, 3)]
-            if marxe > PAR_MARXE[et] and pert > PAR_PERTINENCIA:
+            if marxe > PAR_MARXE[et] and (pert > PAR_PERTINENCIA or et in PAR_SEN_PERTINENCIA):
                 problemas.append(et)
+        E = E[:3]            # o `negativo` do plano, coma na v5: os 3 cadrados grandes
         base = E @ self.textos(['a photo'])[0]
         for x in _lista_negativo(negativo):
             s = float((E @ self.textos([f'a photo with {x}'])[0] - base).max())
@@ -251,13 +300,19 @@ class Clip:
         return problemas, det
 
     def clave(self, E, clave=None):
-        """O que o plano TEN que mostrar (campo `clave`, 1-3 conceptos): falla se ningún recorte o amosa."""
+        """O que o plano TEN que mostrar (campo `clave`, 1-3 conceptos): falla se en ningún dos 9 recortes destaca
+        fronte aos distractores (z < CLAVE_Z). Porta v6; a marxe da v5 queda no detalle (`clave_v5: X`)."""
+        import numpy as np
         problemas, det = [], {}
-        base = E @ self.textos(['a photo'])[0]
+        base = E[:3] @ self.textos(['a photo'])[0]
         for x in _lista_negativo(clave):
-            s = float((E @ self.textos([f'a photo with {x}'])[0] - base).max())
-            det[f'clave: {x}'] = round(s, 3)
-            if s < CLAVE_MARXE:
+            s5 = float((E[:3] @ self.textos([f'a photo with {x}'])[0] - base).max())
+            outros = [d for d in CLAVE_DISTRACTORES if d != x.lower() and d not in x.lower() and x.lower() not in d]
+            D = E @ self.textos([f'a photo of {d}' for d in outros]).T          # [recortes, distractores]
+            sx = E @ self.textos([f'a photo of {x}'])[0]
+            z = float(((sx - D.mean(1)) / (D.std(1) + 1e-6)).max())
+            det[f'clave: {x}'] = round(z, 2); det[f'clave_v5: {x}'] = round(s5, 3)
+            if z < CLAVE_Z:
                 problemas.append(f'falta: {x} (CLIP)')
         return problemas, det
 
@@ -279,7 +334,8 @@ class Clip:
 # Época do plano (porta v6): a roupa e os accesorios de hoxe non contan nun plano do século XX (campo `epoca` da lista
 # de planos, p. ex. "xx", ou un prompt que di 1950s, twentieth century...).
 SECULO_XX_RX = r'\b(19[0-9]0s|twentieth[- ]century|20th[- ]century)\b'
-SO_FORA_DO_XX = ('roupa actual', 'cousas do século XX')
+SO_FORA_DO_XX = ('roupa actual', 'cousas do século XX', 'abrigo moderno (CLIP)', 'chaqueta de tweed (CLIP)',
+                 'sombreiro moderno (CLIP)', 'cadros na parede (CLIP)')
 # v6: tamén as brasas e as luces de chama (planos 115 e 162 da v1: Florence di "burning brightly" dunha vela)
 LUME_PROMPT_RX = r'\b(fire|flames?|bonfires?|blaze|queimada|burning|embers?|candles?|lanterns?|torch(es)?|oil lamps?)\b'
 
@@ -435,7 +491,7 @@ class Revisor:
             E, emb = self.clip.analizar(png)
             p3, d3 = self.clip.iconografia(E, negativo)
             p4, d4 = self.clip.clave(E, clave)
-            pr += [x for x in p3 + p4 if x not in pr]
+            pr += [x for x in filtrar_contexto(p3, prompt, epoca) + p4 if x not in pr]
             det.update({'iconografia': {**d3, **d4}, 'arquetipo': self.clip.arquetipo(emb, prompt), 'clip_emb': emb})
         return {'ok': not pr, 'problemas': pr, **det}
 

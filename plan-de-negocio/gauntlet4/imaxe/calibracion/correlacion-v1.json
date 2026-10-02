@@ -1,0 +1,1330 @@
+{
+ "descricion": "Medida de correlación imaxe-texto da v1 (162 planos) con CLIP ViT-L/14: z de cada imaxe co seu texto_en fronte aos 140 textos distintos da v1 (herramientas/pipeline/correlacion.py; mesma conta que calibrar_clip.py). ilustra_claude: etiqueta de Claude (2 ilustra o que se oe, 1 ambiente, 0 desconectada). Para comparar coa v2, volver medir as dúas co mesmo banco (textos da v1 e da v2).",
+ "resumo": {
+  "planos": 162,
+  "z_medio": 1.292,
+  "z_mediana": 1.352,
+  "ilustran (z >= 1)": 0.593,
+  "desconectados (z < 0,5)": 0.284
+ },
+ "por_fase": {
+  "gancho": {
+   "planos": 21,
+   "z_medio": 0.38,
+   "z>=1": 0.29
+  },
+  "transicion": {
+   "planos": 37,
+   "z_medio": 1.0,
+   "z>=1": 0.41
+  },
+  "calma": {
+   "planos": 39,
+   "z_medio": 1.15,
+   "z>=1": 0.54
+  },
+  "durmir": {
+   "planos": 65,
+   "z_medio": 1.84,
+   "z>=1": 0.83
+  }
+ },
+ "planos": [
+  {
+   "n": 1,
+   "imaxe": "imaxes/000-c13ff7ad-0.jpg",
+   "z": -1.078,
+   "sim": 0.1178,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 2,
+   "imaxe": "imaxes/001-69418ea4-0.jpg",
+   "z": 0.883,
+   "sim": 0.2059,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 3,
+   "imaxe": "imaxes/002-304ea412-2.jpg",
+   "z": -1.464,
+   "sim": 0.1255,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 4,
+   "imaxe": "imaxes/003-13facaf5-0.jpg",
+   "z": 0.072,
+   "sim": 0.1634,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 5,
+   "imaxe": "imaxes/004-6c78d74f-0.jpg",
+   "z": -1.254,
+   "sim": 0.1331,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 6,
+   "imaxe": "imaxes/005-ecaf63ff-0.jpg",
+   "z": 0.75,
+   "sim": 0.1873,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 7,
+   "imaxe": "imaxes/006-ca7c5324-0.jpg",
+   "z": 1.015,
+   "sim": 0.2155,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 8,
+   "imaxe": "imaxes/007-751c8b43-1.jpg",
+   "z": -1.147,
+   "sim": 0.1358,
+   "ilustra_claude": 0,
+   "fase": "gancho"
+  },
+  {
+   "n": 9,
+   "imaxe": "imaxes/008-83441bad-0.jpg",
+   "z": 3.471,
+   "sim": 0.2327,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 10,
+   "imaxe": "imaxes/009-7d019425-1.jpg",
+   "z": 0.318,
+   "sim": 0.1805,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 11,
+   "imaxe": "imaxes/010-b2223ce8-0.jpg",
+   "z": -0.519,
+   "sim": 0.151,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 12,
+   "imaxe": "imaxes/011-aaa12dcb-0.jpg",
+   "z": -0.441,
+   "sim": 0.1518,
+   "ilustra_claude": 0,
+   "fase": "gancho"
+  },
+  {
+   "n": 13,
+   "imaxe": "imaxes/012-eaca155a-0.jpg",
+   "z": 1.352,
+   "sim": 0.1741,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 14,
+   "imaxe": "imaxes/013-ff9a4e6a-0.jpg",
+   "z": 0.775,
+   "sim": 0.1739,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 15,
+   "imaxe": "imaxes/014-b7ce3205-1.jpg",
+   "z": 1.264,
+   "sim": 0.1997,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 16,
+   "imaxe": "imaxes/015-0fdf1035-4.jpg",
+   "z": 0.1,
+   "sim": 0.1865,
+   "ilustra_claude": 0,
+   "fase": "gancho"
+  },
+  {
+   "n": 17,
+   "imaxe": "imaxes/016-02ec0d98-0.jpg",
+   "z": 1.411,
+   "sim": 0.1984,
+   "ilustra_claude": 2,
+   "fase": "gancho"
+  },
+  {
+   "n": 18,
+   "imaxe": "imaxes/017-b95f657f-1.jpg",
+   "z": 0.101,
+   "sim": 0.1619,
+   "ilustra_claude": 1,
+   "fase": "gancho"
+  },
+  {
+   "n": 19,
+   "imaxe": "imaxes/018-0b69e460-2.jpg",
+   "z": 1.718,
+   "sim": 0.2262,
+   "ilustra_claude": 0,
+   "fase": "gancho"
+  },
+  {
+   "n": 20,
+   "imaxe": "imaxes/019-7a39c792-4.jpg",
+   "z": 0.342,
+   "sim": 0.1819,
+   "ilustra_claude": 0,
+   "fase": "gancho"
+  },
+  {
+   "n": 21,
+   "imaxe": "imaxes/020-194670e7-0.jpg",
+   "z": 0.238,
+   "sim": 0.1867,
+   "ilustra_claude": 0,
+   "fase": "gancho"
+  },
+  {
+   "n": 22,
+   "imaxe": "imaxes/021-de4f25ff-0.jpg",
+   "z": 0.716,
+   "sim": 0.1932,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 23,
+   "imaxe": "imaxes/022-dffb1fc5-2.jpg",
+   "z": -0.303,
+   "sim": 0.1367,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 24,
+   "imaxe": "imaxes/023-5369e2be-0.jpg",
+   "z": 0.208,
+   "sim": 0.1632,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 25,
+   "imaxe": "imaxes/024-f51123d9-2.jpg",
+   "z": 3.388,
+   "sim": 0.271,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 26,
+   "imaxe": "imaxes/025-1ebf0ae3-4.jpg",
+   "z": 0.89,
+   "sim": 0.1718,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 27,
+   "imaxe": "imaxes/026-aadbffc5-2.jpg",
+   "z": -0.33,
+   "sim": 0.1518,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 28,
+   "imaxe": "imaxes/027-61c65c69-0.jpg",
+   "z": 2.435,
+   "sim": 0.2272,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 29,
+   "imaxe": "imaxes/028-ebee8eb3-0.jpg",
+   "z": 0.084,
+   "sim": 0.1414,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 30,
+   "imaxe": "imaxes/029-77aed7b7-0.jpg",
+   "z": -0.126,
+   "sim": 0.1561,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 31,
+   "imaxe": "imaxes/030-48739fa3-0.jpg",
+   "z": 2.869,
+   "sim": 0.2306,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 32,
+   "imaxe": "imaxes/031-9a59b80d-0.jpg",
+   "z": 3.91,
+   "sim": 0.2504,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 33,
+   "imaxe": "imaxes/032-c7ff689c-3.jpg",
+   "z": -1.736,
+   "sim": 0.0894,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 34,
+   "imaxe": "imaxes/033-e06af45f-1.jpg",
+   "z": 1.26,
+   "sim": 0.1842,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 35,
+   "imaxe": "imaxes/034-434064b1-0.jpg",
+   "z": 1.361,
+   "sim": 0.1819,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 36,
+   "imaxe": "imaxes/035-97d9d4ce-1.jpg",
+   "z": 0.864,
+   "sim": 0.1832,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 37,
+   "imaxe": "imaxes/036-7a8f89e7-4.jpg",
+   "z": 0.511,
+   "sim": 0.1782,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 38,
+   "imaxe": "imaxes/037-48f11feb-0.jpg",
+   "z": 2.213,
+   "sim": 0.2191,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 39,
+   "imaxe": "imaxes/038-a98ab955-1.jpg",
+   "z": 1.123,
+   "sim": 0.2263,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 40,
+   "imaxe": "imaxes/039-544dc43b-2.jpg",
+   "z": 0.371,
+   "sim": 0.1519,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 41,
+   "imaxe": "imaxes/040-ec794446-0.jpg",
+   "z": 2.825,
+   "sim": 0.2011,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 42,
+   "imaxe": "imaxes/041-3d6856f7-0.jpg",
+   "z": 1.242,
+   "sim": 0.1726,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 43,
+   "imaxe": "imaxes/042-17fbe3ba-0.jpg",
+   "z": 1.121,
+   "sim": 0.1841,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 44,
+   "imaxe": "imaxes/043-5d3d7180-0.jpg",
+   "z": 1.169,
+   "sim": 0.1807,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 45,
+   "imaxe": "imaxes/044-2526c3b9-0.jpg",
+   "z": 1.495,
+   "sim": 0.2061,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 46,
+   "imaxe": "imaxes/045-078b1c07-2.jpg",
+   "z": 0.605,
+   "sim": 0.1844,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 47,
+   "imaxe": "imaxes/046-1619de48-0.jpg",
+   "z": 0.115,
+   "sim": 0.1521,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 48,
+   "imaxe": "imaxes/047-5a1ed894-4.jpg",
+   "z": 0.078,
+   "sim": 0.1491,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 49,
+   "imaxe": "imaxes/048-249a3f59-3.jpg",
+   "z": 0.315,
+   "sim": 0.1677,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 50,
+   "imaxe": "imaxes/049-3751009e-0.jpg",
+   "z": 0.456,
+   "sim": 0.1328,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 51,
+   "imaxe": "imaxes/050-8a6af2cd-2.jpg",
+   "z": -0.152,
+   "sim": 0.1641,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 52,
+   "imaxe": "imaxes/051-ebc19315-0.jpg",
+   "z": 0.094,
+   "sim": 0.1334,
+   "ilustra_claude": 1,
+   "fase": "transicion"
+  },
+  {
+   "n": 53,
+   "imaxe": "imaxes/052-74a6323f-1.jpg",
+   "z": 2.211,
+   "sim": 0.2173,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 54,
+   "imaxe": "imaxes/053-0df34678-0.jpg",
+   "z": 0.796,
+   "sim": 0.2162,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 55,
+   "imaxe": "imaxes/054-a5a8d294-0.jpg",
+   "z": -0.067,
+   "sim": 0.1359,
+   "ilustra_claude": 0,
+   "fase": "transicion"
+  },
+  {
+   "n": 56,
+   "imaxe": "imaxes/055-27c52c97-0.jpg",
+   "z": 0.883,
+   "sim": 0.1611,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 57,
+   "imaxe": "imaxes/056-2684caf9-0.jpg",
+   "z": 0.756,
+   "sim": 0.1562,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 58,
+   "imaxe": "imaxes/057-3c0559a3-0.jpg",
+   "z": 3.421,
+   "sim": 0.2535,
+   "ilustra_claude": 2,
+   "fase": "transicion"
+  },
+  {
+   "n": 59,
+   "imaxe": "imaxes/058-60ce462f-0.jpg",
+   "z": 0.68,
+   "sim": 0.1574,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 60,
+   "imaxe": "imaxes/059-85f4a16b-0.jpg",
+   "z": 3.047,
+   "sim": 0.2297,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 61,
+   "imaxe": "imaxes/060-e0b97acb-1.jpg",
+   "z": -0.254,
+   "sim": 0.1494,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 62,
+   "imaxe": "imaxes/061-e1697165-0.jpg",
+   "z": 0.649,
+   "sim": 0.1778,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 63,
+   "imaxe": "imaxes/062-22a35fb1-1.jpg",
+   "z": -0.032,
+   "sim": 0.1599,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 64,
+   "imaxe": "imaxes/063-a57993b6-0.jpg",
+   "z": 0.268,
+   "sim": 0.1608,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 65,
+   "imaxe": "imaxes/064-61ad1024-0.jpg",
+   "z": -0.123,
+   "sim": 0.1413,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 66,
+   "imaxe": "imaxes/065-b1023e94-2.jpg",
+   "z": 0.176,
+   "sim": 0.1809,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 67,
+   "imaxe": "imaxes/066-fc84a787-0.jpg",
+   "z": 0.037,
+   "sim": 0.1504,
+   "ilustra_claude": 0,
+   "fase": "calma"
+  },
+  {
+   "n": 68,
+   "imaxe": "imaxes/067-af638455-1.jpg",
+   "z": -0.492,
+   "sim": 0.1548,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 69,
+   "imaxe": "imaxes/068-3e15678d-2.jpg",
+   "z": 1.661,
+   "sim": 0.2327,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 70,
+   "imaxe": "imaxes/069-34e9d6e6-2.jpg",
+   "z": 1.026,
+   "sim": 0.1548,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 71,
+   "imaxe": "imaxes/070-b1fb6160-0.jpg",
+   "z": 1.852,
+   "sim": 0.1955,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 72,
+   "imaxe": "imaxes/071-b6e0a11e-0.jpg",
+   "z": 0.729,
+   "sim": 0.1846,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 73,
+   "imaxe": "imaxes/072-ce91a30e-0.jpg",
+   "z": 0.997,
+   "sim": 0.1763,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 74,
+   "imaxe": "imaxes/073-00a75146-0.jpg",
+   "z": 3.205,
+   "sim": 0.2464,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 75,
+   "imaxe": "imaxes/074-500e6e52-1.jpg",
+   "z": -0.123,
+   "sim": 0.1344,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 76,
+   "imaxe": "imaxes/075-275d0b60-1.jpg",
+   "z": 0.358,
+   "sim": 0.1655,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 77,
+   "imaxe": "imaxes/076-58a81dc3-0.jpg",
+   "z": -1.144,
+   "sim": 0.1029,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 78,
+   "imaxe": "imaxes/077-d130fe97-0.jpg",
+   "z": 1.457,
+   "sim": 0.1953,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 79,
+   "imaxe": "imaxes/078-8dff3cf6-0.jpg",
+   "z": 2.163,
+   "sim": 0.2128,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 80,
+   "imaxe": "imaxes/079-43d6289d-0.jpg",
+   "z": 0.572,
+   "sim": 0.1517,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 81,
+   "imaxe": "imaxes/080-95978f35-1.jpg",
+   "z": 1.749,
+   "sim": 0.2328,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 82,
+   "imaxe": "imaxes/081-d824e3d0-0.jpg",
+   "z": 1.481,
+   "sim": 0.2211,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 83,
+   "imaxe": "imaxes/082-54c204b5-0.jpg",
+   "z": 1.707,
+   "sim": 0.2121,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 84,
+   "imaxe": "imaxes/083-f3713dc1-1.jpg",
+   "z": 2.041,
+   "sim": 0.2714,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 85,
+   "imaxe": "imaxes/084-6f2a9829-2.jpg",
+   "z": 1.428,
+   "sim": 0.194,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 86,
+   "imaxe": "imaxes/085-20daf139-2.jpg",
+   "z": 2.13,
+   "sim": 0.2149,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 87,
+   "imaxe": "imaxes/086-e00bb837-2.jpg",
+   "z": 1.651,
+   "sim": 0.1986,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 88,
+   "imaxe": "imaxes/087-68b21ace-2.jpg",
+   "z": 1.158,
+   "sim": 0.1961,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 89,
+   "imaxe": "imaxes/088-2c2ebefb-2.jpg",
+   "z": 0.132,
+   "sim": 0.16,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 90,
+   "imaxe": "imaxes/089-dca101af-1.jpg",
+   "z": 0.572,
+   "sim": 0.1721,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 91,
+   "imaxe": "imaxes/090-9cea88bf-0.jpg",
+   "z": 1.4,
+   "sim": 0.2575,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 92,
+   "imaxe": "imaxes/091-0261567c-1.jpg",
+   "z": 1.433,
+   "sim": 0.2204,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 93,
+   "imaxe": "imaxes/092-a6da711e-0.jpg",
+   "z": 2.266,
+   "sim": 0.2263,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 94,
+   "imaxe": "imaxes/093-3be97fdb-2.jpg",
+   "z": 2.281,
+   "sim": 0.2426,
+   "ilustra_claude": 1,
+   "fase": "calma"
+  },
+  {
+   "n": 95,
+   "imaxe": "imaxes/094-21f0bd13-0.jpg",
+   "z": 0.915,
+   "sim": 0.192,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 96,
+   "imaxe": "imaxes/095-a1d60055-0.jpg",
+   "z": 3.595,
+   "sim": 0.242,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 97,
+   "imaxe": "imaxes/096-1c8e12ea-3.jpg",
+   "z": 2.14,
+   "sim": 0.2334,
+   "ilustra_claude": 2,
+   "fase": "calma"
+  },
+  {
+   "n": 98,
+   "imaxe": "imaxes/097-fe85f130-2.jpg",
+   "z": 0.373,
+   "sim": 0.1868,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 99,
+   "imaxe": "imaxes/098-2d8a0f53-0.jpg",
+   "z": 1.843,
+   "sim": 0.2032,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 100,
+   "imaxe": "imaxes/099-919a7444-1.jpg",
+   "z": 2.391,
+   "sim": 0.2474,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 101,
+   "imaxe": "imaxes/100-0f948444-0.jpg",
+   "z": 3.027,
+   "sim": 0.2265,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 102,
+   "imaxe": "imaxes/101-cb74f362-0.jpg",
+   "z": 2.601,
+   "sim": 0.1936,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 103,
+   "imaxe": "imaxes/102-a764198e-1.jpg",
+   "z": 2.693,
+   "sim": 0.2395,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 104,
+   "imaxe": "imaxes/103-27572e1e-0.jpg",
+   "z": 2.461,
+   "sim": 0.2445,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 105,
+   "imaxe": "imaxes/104-3a0177b3-1.jpg",
+   "z": 2.083,
+   "sim": 0.2245,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 106,
+   "imaxe": "imaxes/105-30a7219b-2.jpg",
+   "z": 2.116,
+   "sim": 0.2257,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 107,
+   "imaxe": "imaxes/106-10b8d9c7-0.jpg",
+   "z": 1.108,
+   "sim": 0.2294,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 108,
+   "imaxe": "imaxes/107-acb4f300-0.jpg",
+   "z": 1.881,
+   "sim": 0.2253,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 109,
+   "imaxe": "imaxes/108-4c8d4a42-1.jpg",
+   "z": 1.828,
+   "sim": 0.2446,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 110,
+   "imaxe": "imaxes/109-46377de2-0.jpg",
+   "z": 2.635,
+   "sim": 0.2611,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 111,
+   "imaxe": "imaxes/110-4fc28088-3.jpg",
+   "z": 1.933,
+   "sim": 0.215,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 112,
+   "imaxe": "imaxes/111-ca66ab97-0.jpg",
+   "z": 0.552,
+   "sim": 0.1836,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 113,
+   "imaxe": "imaxes/112-91cba97e-0.jpg",
+   "z": 2.438,
+   "sim": 0.2384,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 114,
+   "imaxe": "imaxes/113-701f66e8-0.jpg",
+   "z": 3.136,
+   "sim": 0.2551,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 115,
+   "imaxe": "imaxes/114-3dd1eeea-2.jpg",
+   "z": 1.974,
+   "sim": 0.2414,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 116,
+   "imaxe": "imaxes/115-2fe0ff20-0.jpg",
+   "z": 2.192,
+   "sim": 0.2131,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 117,
+   "imaxe": "imaxes/116-515b1cbd-1.jpg",
+   "z": 1.795,
+   "sim": 0.2333,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 118,
+   "imaxe": "imaxes/117-e8b4b41b-0.jpg",
+   "z": 4.106,
+   "sim": 0.2919,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 119,
+   "imaxe": "imaxes/118-ec695d11-0.jpg",
+   "z": 1.721,
+   "sim": 0.2283,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 120,
+   "imaxe": "imaxes/119-0e894ec7-3.jpg",
+   "z": 2.026,
+   "sim": 0.2151,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 121,
+   "imaxe": "imaxes/120-9f60ae4c-0.jpg",
+   "z": 1.693,
+   "sim": 0.2199,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 122,
+   "imaxe": "imaxes/121-38fc6086-3.jpg",
+   "z": 1.546,
+   "sim": 0.2184,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 123,
+   "imaxe": "imaxes/122-9fe164c2-0.jpg",
+   "z": 2.484,
+   "sim": 0.2273,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 124,
+   "imaxe": "imaxes/123-494cc503-0.jpg",
+   "z": 2.432,
+   "sim": 0.247,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 125,
+   "imaxe": "imaxes/124-9b02e0c5-0.jpg",
+   "z": 2.137,
+   "sim": 0.1988,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 126,
+   "imaxe": "imaxes/125-581752e3-2.jpg",
+   "z": 1.773,
+   "sim": 0.2202,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 127,
+   "imaxe": "imaxes/126-29bd42af-0.jpg",
+   "z": 2.934,
+   "sim": 0.2281,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 128,
+   "imaxe": "imaxes/127-b42b390e-1.jpg",
+   "z": 1.533,
+   "sim": 0.2048,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 129,
+   "imaxe": "imaxes/128-01e758e6-0.jpg",
+   "z": 3.404,
+   "sim": 0.2086,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 130,
+   "imaxe": "imaxes/129-3a393f91-0.jpg",
+   "z": 3.268,
+   "sim": 0.2631,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 131,
+   "imaxe": "imaxes/130-2c8690ec-1.jpg",
+   "z": 2.403,
+   "sim": 0.2173,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 132,
+   "imaxe": "imaxes/131-673d6f36-0.jpg",
+   "z": -0.379,
+   "sim": 0.1598,
+   "ilustra_claude": 0,
+   "fase": "durmir"
+  },
+  {
+   "n": 133,
+   "imaxe": "imaxes/132-39570a7e-1.jpg",
+   "z": 0.984,
+   "sim": 0.2015,
+   "ilustra_claude": 0,
+   "fase": "durmir"
+  },
+  {
+   "n": 134,
+   "imaxe": "imaxes/133-7829ec6d-1.jpg",
+   "z": -0.21,
+   "sim": 0.1411,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 135,
+   "imaxe": "imaxes/134-973beaa8-3.jpg",
+   "z": 0.447,
+   "sim": 0.1886,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 136,
+   "imaxe": "imaxes/135-cca7252a-0.jpg",
+   "z": 1.919,
+   "sim": 0.2054,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 137,
+   "imaxe": "imaxes/136-dc2e2072-0.jpg",
+   "z": 0.362,
+   "sim": 0.1862,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 138,
+   "imaxe": "imaxes/137-59e61065-1.jpg",
+   "z": 2.339,
+   "sim": 0.2311,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 139,
+   "imaxe": "imaxes/138-bb34dc32-0.jpg",
+   "z": -0.002,
+   "sim": 0.1563,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 140,
+   "imaxe": "imaxes/139-07d7e1d0-0.jpg",
+   "z": 1.352,
+   "sim": 0.1956,
+   "ilustra_claude": 0,
+   "fase": "durmir"
+  },
+  {
+   "n": 141,
+   "imaxe": "imaxes/140-5823395d-1.jpg",
+   "z": 2.196,
+   "sim": 0.2194,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 142,
+   "imaxe": "imaxes/141-4198d4cd-0.jpg",
+   "z": 1.829,
+   "sim": 0.2,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 143,
+   "imaxe": "imaxes/142-84b3e4af-0.jpg",
+   "z": 2.309,
+   "sim": 0.2148,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 144,
+   "imaxe": "imaxes/143-eec462c8-0.jpg",
+   "z": 1.247,
+   "sim": 0.1834,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 145,
+   "imaxe": "imaxes/144-945d2456-0.jpg",
+   "z": 1.754,
+   "sim": 0.2005,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 146,
+   "imaxe": "imaxes/145-83103587-0.jpg",
+   "z": 1.131,
+   "sim": 0.2064,
+   "ilustra_claude": 0,
+   "fase": "durmir"
+  },
+  {
+   "n": 147,
+   "imaxe": "imaxes/146-2b940b42-0.jpg",
+   "z": 1.241,
+   "sim": 0.1908,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 148,
+   "imaxe": "imaxes/147-a2b14153-0.jpg",
+   "z": 1.885,
+   "sim": 0.2646,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 149,
+   "imaxe": "imaxes/148-c98dd184-3.jpg",
+   "z": 3.226,
+   "sim": 0.2246,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 150,
+   "imaxe": "imaxes/149-e3b45039-1.jpg",
+   "z": 0.436,
+   "sim": 0.1645,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 151,
+   "imaxe": "imaxes/150-5f7bb994-0.jpg",
+   "z": 1.75,
+   "sim": 0.2133,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 152,
+   "imaxe": "imaxes/151-43417c22-2.jpg",
+   "z": 1.921,
+   "sim": 0.2415,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 153,
+   "imaxe": "imaxes/152-4fd833d5-0.jpg",
+   "z": 3.964,
+   "sim": 0.2021,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 154,
+   "imaxe": "imaxes/153-46ff3530-0.jpg",
+   "z": -2.111,
+   "sim": 0.1041,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 155,
+   "imaxe": "imaxes/154-e23b0bef-0.jpg",
+   "z": 3.012,
+   "sim": 0.2521,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 156,
+   "imaxe": "imaxes/155-8e45ae6c-0.jpg",
+   "z": -0.085,
+   "sim": 0.1259,
+   "ilustra_claude": 0,
+   "fase": "durmir"
+  },
+  {
+   "n": 157,
+   "imaxe": "imaxes/156-f97c9ca0-1.jpg",
+   "z": 2.456,
+   "sim": 0.2295,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 158,
+   "imaxe": "imaxes/157-acf98c29-0.jpg",
+   "z": 2.288,
+   "sim": 0.2233,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 159,
+   "imaxe": "imaxes/158-2185b3d0-3.jpg",
+   "z": 2.703,
+   "sim": 0.2373,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 160,
+   "imaxe": "imaxes/159-04cc02c7-1.jpg",
+   "z": 1.601,
+   "sim": 0.2137,
+   "ilustra_claude": 1,
+   "fase": "durmir"
+  },
+  {
+   "n": 161,
+   "imaxe": "imaxes/160-cdd45202-0.jpg",
+   "z": 1.342,
+   "sim": 0.2029,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  },
+  {
+   "n": 162,
+   "imaxe": "imaxes/161-9bef0550-0.jpg",
+   "z": 2.127,
+   "sim": 0.223,
+   "ilustra_claude": 2,
+   "fase": "durmir"
+  }
+ ]
+}
