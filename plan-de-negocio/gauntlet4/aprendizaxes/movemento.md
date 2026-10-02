@@ -31,3 +31,25 @@ dun axente Claude mirando tiras de fotogramas: ninguén viu os clips en movement
   páxinas mapeadas do ficheiro), memoria anónima de todo o cgroup 9,0 GB. ≈ 260 GFLOPS efectivos.
 - Calidade (plano 22, muller de costas nun camiño): **camiña de verdade** (pés que alternan, saia que abanea) e a
   cámara acompáñaa como nun travelling; sen deformacións visibles na tira nin no recorte das pernas.
+
+## Paralaxe 2,5D e efectos (primeira proba, 02-10-2026)
+
+- **Custo**: 0,31-0,41 s por fotograma a 1920x1080 nun proceso (4 fíos de OpenCV), incluídos os efectos; preparar
+  profundidade e máscaras, 11-18 s por imaxe a primeira vez (carga dos modelos incluída), despois caché.
+- **Funcionan á primeira** (tiras `probas/plx1_*`): o avance co relevo (o carballo do centro medra máis ca o fondo),
+  a choiva en tres capas, a brétema que se move, o lume da queimada.
+- **Dous defectos que só se viron mirando as tiras** (e que unha medida automática non cazaría):
+  - **Candea con rachas escuras dentro da chama**: o desprazamento con ruído de onda curta e amplitude grande
+    "dobraba" a imaxe e metía fondo escuro na chama. Arranxo: na candea, deformación xeométrica suave (a punta
+    abanea máis ca a base, estira e encolle arredor do pabío) e, no lume, lonxitude de onda grande con amplitude
+    menor ca un cuarto dela (sen dobras).
+  - **Pantasma da cabeza ao mover o ceo**: a máscara de ceo de CLIPSeg (352x352) chega ata o pelo a contraluz, e
+    ao desprazar as nubes mostreábase a cabeza. Arranxo: textura só de ceo (o resto énchese co ceo de arredor por
+    inpaint) e máscara encollida no bordo; e as nubes a 0,35 % do ancho por segundo (antes 1,2 %: de máis).
+- **O candado**: con `flock` non hai orde de chegada e os experimentos de vídeo collen a CPU 10-20 min. O
+  orquestrador puxo `herramientas/gauntlet/candado.sh` (prioridade para guion e voz); `movemento_i2v.py` segue o
+  mesmo protocolo por dentro (despois de coller o candado mira `$CPU_LOCK.prio` e, se está collido, cede e
+  reinténtao aos 15 s).
+- **O OOM das 22:46 UTC** (dmesg: uptime 1.435 s, `proba_entorno.py` con 10,5 GB de memoria anónima) foi antes de
+  lanzar a primeira proba de LTX (22:56); nese momento desta peza só corrían o `pip install` do venv de vídeo e a
+  descarga de modelos (sen modelos cargados). Igualmente, desde entón todo vai co candado, tamén as probas curtas.

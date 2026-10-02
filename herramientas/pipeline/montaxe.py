@@ -222,6 +222,9 @@ def _frame(t, esc, dur):
 def _chunk(args):
     idx, f0, f1, esc, dur, imgs, out, rotulos = args
     t0, t1 = f0 / FPS, f1 / FPS
+    if any(_animado(e) for e in esc):
+        import cv2                      # catro procesos en paralelo: un fío de OpenCV en cada un (Gauntlet 4)
+        cv2.setNumThreads(int(os.environ.get('MONTAXE_CV2_FIOS', '1')))
     _init(imgs, {k for k, e in enumerate(esc) if e['vis'][0] <= t1 and e['vis'][1] >= t0},
           [r for r in rotulos if r['t0'] <= t1 and r['t1'] >= t0], esc)
     cmd = [FFMPEG, '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{OW}x{OH}',
