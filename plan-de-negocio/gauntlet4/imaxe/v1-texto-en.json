@@ -1,0 +1,1411 @@
+{
+ "descricion": "Versión en inglés de cada anaco de narración da v1 de \"As meigas de verdade\" (gauntlet3/video/escenas-montadas.json, 162 planos), para medir con CLIP-L a correlación imaxe-texto (o CLIP de OpenAI só entende inglés). Tradución de Claude (axente), 02-10-2026: fiel ao galego, sen engadir nada que non estea no texto. Os planos que reparten unha frase levan o mesmo texto. Termos sen equivalente: queimada = \"queimada (a bowl of burning spirits)\" na primeira mención; meiga = witch; hórreo = \"hórreo, a granary raised on stone pillars\"; escano = settle (high-backed bench); gramalleira = pot-hanger. Aviso: o tradutor xa vira as imaxes da v1 antes de traducir; a v2 debe levar o seu texto_en escrito coa mesma regra (tradución fiel, non descrición da imaxe).",
+ "planos": [
+  {
+   "n": 1,
+   "frases": [
+    1
+   ],
+   "texto": "Mouchos, curuxas, sapos e bruxas.",
+   "texto_en": "Owls, barn owls, toads and witches."
+  },
+  {
+   "n": 2,
+   "frases": [
+    2
+   ],
+   "texto": "Case todo galego oíu algunha vez este conxuro nunha queimada, e parece levarte moitos séculos atrás.",
+   "texto_en": "Almost every Galician has heard this spell at some point at a queimada (a bowl of burning spirits), and it seems to take you back many centuries."
+  },
+  {
+   "n": 3,
+   "frases": [
+    3
+   ],
+   "texto": "Pero ten autor coñecido, e é de mil novecentos sesenta e sete.",
+   "texto_en": "But it has a known author, and it dates from nineteen sixty-seven."
+  },
+  {
+   "n": 4,
+   "frases": [
+    4
+   ],
+   "texto": "Escribiuno Mariano Marcos Abalo, en Vigo, nun vello barco amarrado no porto.",
+   "texto_en": "Mariano Marcos Abalo wrote it, in Vigo, on an old boat moored in the harbour."
+  },
+  {
+   "n": 5,
+   "frases": [
+    5
+   ],
+   "texto": "Vilalba, mil seiscentos dezasete.",
+   "texto_en": "Vilalba, sixteen seventeen."
+  },
+  {
+   "n": 6,
+   "frases": [
+    6
+   ],
+   "texto": "Segundo declarou unha testemuña, a parteira Dorotea do Barro dixera que podía pasar as dores do parto dunha muller a un home.",
+   "texto_en": "According to a witness, the midwife Dorotea do Barro had said that she could pass a woman's labour pains on to a man."
+  },
+  {
+   "n": 7,
+   "frases": [
+    6
+   ],
+   "texto": "Segundo declarou unha testemuña, a parteira Dorotea do Barro dixera que podía pasar as dores do parto dunha muller a un home.",
+   "texto_en": "According to a witness, the midwife Dorotea do Barro had said that she could pass a woman's labour pains on to a man."
+  },
+  {
+   "n": 8,
+   "frases": [
+    7
+   ],
+   "texto": "Abondaba con calzarlle ao home os zapatos da muller, dicindo unhas palabras.",
+   "texto_en": "It was enough to put the woman's shoes on the man while saying a few words."
+  },
+  {
+   "n": 9,
+   "frases": [
+    8,
+    9
+   ],
+   "texto": "E o home saltaría coma un poldro bravo. Boas noites.",
+   "texto_en": "And the man would leap like a wild colt. Good night."
+  },
+  {
+   "n": 10,
+   "frases": [
+    10
+   ],
+   "texto": "A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
+   "texto_en": "The voice you are about to hear is synthetic, and this text was prepared by an automatic process."
+  },
+  {
+   "n": 11,
+   "frases": [
+    11
+   ],
+   "texto": "Isto é Cousas de Galiza para durmir.",
+   "texto_en": "This is Galician Things to Fall Asleep To."
+  },
+  {
+   "n": 12,
+   "frases": [
+    12
+   ],
+   "texto": "E hai un motivo polo que moita xente pensou que o conxuro era un texto popular e anónimo.",
+   "texto_en": "And there is a reason why many people thought the spell was a popular, anonymous text."
+  },
+  {
+   "n": 13,
+   "frases": [
+    13
+   ],
+   "texto": "Aquel testemuño de Vilalba gárdase no Arquivo do Reino de Galicia, nun proceso por bruxería da Real Audiencia.",
+   "texto_en": "That testimony from Vilalba is kept in the Archive of the Kingdom of Galicia, in a witchcraft trial of the Royal Court."
+  },
+  {
+   "n": 14,
+   "frases": [
+    14,
+    15
+   ],
+   "texto": "E alí hai máis: unha veciña que velou esperta unha noite. E un gato que ninguén deu collido.",
+   "texto_en": "And there is more there: a neighbour woman who stayed awake one night. And a cat that nobody managed to catch."
+  },
+  {
+   "n": 15,
+   "frases": [
+    16
+   ],
+   "texto": "En máis dun século de procesos, segundo o mesmo Arquivo, a Inquisición de Santiago só levou á fogueira unha muller acusada de bruxería.",
+   "texto_en": "In more than a century of trials, according to the same Archive, the Inquisition of Santiago sent only one woman accused of witchcraft to the stake."
+  },
+  {
+   "n": 16,
+   "frases": [
+    17
+   ],
+   "texto": "Para o investigador Diego Valor Bravo, coas meigas a temida Inquisición foi branda, e os xuíces da xustiza ordinaria foron moito máis duros.",
+   "texto_en": "For the researcher Diego Valor Bravo, the dreaded Inquisition was lenient with the witches, and the judges of the ordinary courts were much harsher."
+  },
+  {
+   "n": 17,
+   "frases": [
+    17
+   ],
+   "texto": "Para o investigador Diego Valor Bravo, coas meigas a temida Inquisición foi branda, e os xuíces da xustiza ordinaria foron moito máis duros.",
+   "texto_en": "For the researcher Diego Valor Bravo, the dreaded Inquisition was lenient with the witches, and the judges of the ordinary courts were much harsher."
+  },
+  {
+   "n": 18,
+   "frases": [
+    18
+   ],
+   "texto": "Hai catrocentos anos, a meiga moitas veces non era a bruxa dos contos.",
+   "texto_en": "Four hundred years ago, the witch was often not the witch of fairy tales."
+  },
+  {
+   "n": 19,
+   "frases": [
+    19,
+    20
+   ],
+   "texto": "Era a que curaba, a que axudaba nos partos, a que sabía de herbas. E hai unha lista.",
+   "texto_en": "She was the one who healed, who helped women give birth, who knew about herbs. And there is a list."
+  },
+  {
+   "n": 20,
+   "frases": [
+    21
+   ],
+   "texto": "Unha noite de san Xoán, en Campo Lameiro, uns veciños foron espreitar a fonte e apuntaron nunha lista as mulleres que viron alí.",
+   "texto_en": "One Saint John's night, in Campo Lameiro, some neighbours went to spy on the fountain and wrote down in a list the women they saw there."
+  },
+  {
+   "n": 21,
+   "frases": [
+    22
+   ],
+   "texto": "Unha testemuña contou por que a fixeron, e volveremos a esa fonte.",
+   "texto_en": "A witness told why they made it, and we will come back to that fountain."
+  },
+  {
+   "n": 22,
+   "frases": [
+    23
+   ],
+   "texto": "Esta noite imos coñecer as meigas de verdade: as dos papeis dos xuízos, as da lareira e as das fontes.",
+   "texto_en": "Tonight we are going to meet the real witches: those in the trial papers, those by the hearth and those at the fountains."
+  },
+  {
+   "n": 23,
+   "frases": [
+    24
+   ],
+   "texto": "Dorotea e María do Barro, nai e filla, eran de San Xiao de Mourence, en Vilalba.",
+   "texto_en": "Dorotea and María do Barro, mother and daughter, were from San Xiao de Mourence, in Vilalba."
+  },
+  {
+   "n": 24,
+   "frases": [
+    25
+   ],
+   "texto": "A filla foi acusada tamén de alcaiota: dicían que acollía na súa casa homes casados e mulleres solteiras.",
+   "texto_en": "The daughter was also accused of being a procuress: they said she took married men and single women into her house."
+  },
+  {
+   "n": 25,
+   "frases": [
+    26
+   ],
+   "texto": "Segundo unha testemuña, cando María do Barro tiña o gando no monte dicía unhas palabras, unhas en voz baixa e outras que se oían.",
+   "texto_en": "According to a witness, when María do Barro had her cattle on the hillside she would say some words, some in a low voice and others that could be heard."
+  },
+  {
+   "n": 26,
+   "frases": [
+    27
+   ],
+   "texto": "Entre esas palabras, dicía que o seu gando bebese auga de sete fontes e trouxese leite de sete cortes e de sete montes.",
+   "texto_en": "Among those words, she said that her cattle should drink water from seven springs and bring milk from seven byres and seven hills."
+  },
+  {
+   "n": 27,
+   "frases": [
+    28
+   ],
+   "texto": "No papel quedou escrita ata a corrección: que trouxese auga, digo, leite.",
+   "texto_en": "On the paper even the correction was written down: that it should bring water, I mean, milk."
+  },
+  {
+   "n": 28,
+   "frases": [
+    29
+   ],
+   "texto": "O vicario xeral do bispado de Mondoñedo excomungou as acusadas e mandou que ninguén lles dese pan, sal, auga nin lume.",
+   "texto_en": "The vicar general of the diocese of Mondoñedo excommunicated the accused women and ordered that nobody give them bread, salt, water or fire."
+  },
+  {
+   "n": 29,
+   "frases": [
+    30
+   ],
+   "texto": "En Xinzo de Limia, en mil seiscentos doce, a xustiza do conde de Monterrei abriu un proceso contra Ana González, que tiña fama de meiga.",
+   "texto_en": "In Xinzo de Limia, in sixteen twelve, the court of the Count of Monterrei opened a trial against Ana González, who was reputed to be a witch."
+  },
+  {
+   "n": 30,
+   "frases": [
+    31
+   ],
+   "texto": "Segundo unha testemuña, unha veciña, María Feijoa, velou esperta unha noite para ver quen lle facía mal.",
+   "texto_en": "According to a witness, a neighbour, María Feijoa, stayed awake one night to see who was doing her harm."
+  },
+  {
+   "n": 31,
+   "frases": [
+    32,
+    33
+   ],
+   "texto": "E viu, contaba, a Ana González en figura de gato, que andaba saltando dun lado para outro. Ninguén o deu collido: escapou por un burato da porta.",
+   "texto_en": "And she saw, she said, Ana González in the shape of a cat, jumping from one side to the other. Nobody managed to catch it: it escaped through a hole in the door."
+  },
+  {
+   "n": 32,
+   "frases": [
+    32,
+    33
+   ],
+   "texto": "E viu, contaba, a Ana González en figura de gato, que andaba saltando dun lado para outro. Ninguén o deu collido: escapou por un burato da porta.",
+   "texto_en": "And she saw, she said, Ana González in the shape of a cat, jumping from one side to the other. Nobody managed to catch it: it escaped through a hole in the door."
+  },
+  {
+   "n": 33,
+   "frases": [
+    34
+   ],
+   "texto": "Outra veciña, a muller de Rodrigo Colmenero, contou que un día estaba á porta debandando cando chegou Ana González.",
+   "texto_en": "Another neighbour, the wife of Rodrigo Colmenero, said that one day she was at her door winding yarn when Ana González arrived."
+  },
+  {
+   "n": 34,
+   "frases": [
+    35
+   ],
+   "texto": "Viña dicirlle que o seu home, Rodrigo, andaba chamándoa meiga.",
+   "texto_en": "She came to tell her that her husband, Rodrigo, was going around calling her a witch."
+  },
+  {
+   "n": 35,
+   "frases": [
+    36
+   ],
+   "texto": "E contou que, cando Ana González saía polas portas do curral, volveu mirar para ela, e que nese momento a arracada rompeu en tres anacos.",
+   "texto_en": "And she said that, as Ana González went out through the gate of the farmyard, she turned to look at her, and at that moment her earring broke into three pieces."
+  },
+  {
+   "n": 36,
+   "frases": [
+    37
+   ],
+   "texto": "Ela tiña por moi certo que fora polo mal mirar de Ana González.",
+   "texto_en": "She was quite certain it had happened because of Ana González's evil eye."
+  },
+  {
+   "n": 37,
+   "frases": [
+    38
+   ],
+   "texto": "En mil seiscentos once, na parroquia de Palio, en Lalín, a Real Audiencia procesou a Marta de Quián, que tiña fama de meiga feiticeira.",
+   "texto_en": "In sixteen eleven, in the parish of Palio, in Lalín, the Royal Court put on trial Marta de Quián, who was reputed to be a witch and sorceress."
+  },
+  {
+   "n": 38,
+   "frases": [
+    39
+   ],
+   "texto": "Segundo o proceso, unha veciña queixábase de que o leite das súas vacas se lle derramaba.",
+   "texto_en": "According to the trial, a neighbour complained that the milk of her cows was being spilled."
+  },
+  {
+   "n": 39,
+   "frases": [
+    40
+   ],
+   "texto": "E Marta díxolle que faría unha menciña para que as meigas non llo derramasen nin llo levasen.",
+   "texto_en": "And Marta told her that she would make a remedy so that the witches would not spill it or take it away."
+  },
+  {
+   "n": 40,
+   "frases": [
+    41
+   ],
+   "texto": "Outra testemuña declarou que Marta lle dixera que, por catro ou cinco reais, faría que unha moza deixase de mirar para un home.",
+   "texto_en": "Another witness declared that Marta had told her that, for four or five reales, she would make a young woman stop looking at a man."
+  },
+  {
+   "n": 41,
+   "frases": [
+    42
+   ],
+   "texto": "Para iso pedía terra da pegada que el deixaba ao pisar e cabelos da moza, dos que quedaban no peite.",
+   "texto_en": "For that she asked for earth from the footprint he left when he stepped, and hairs of the young woman, the ones left in her comb."
+  },
+  {
+   "n": 42,
+   "frases": [
+    43,
+    44
+   ],
+   "texto": "Daquela crían que as meigas se transformaban en gatos, en sapos ou en lobos. Contaban que, mentres a meiga voaba ás xuntanzas, na súa cama quedaba durmindo un corpo finxido.",
+   "texto_en": "Back then they believed that witches turned into cats, toads or wolves. They said that while the witch flew to the gatherings, a fake body stayed asleep in her bed."
+  },
+  {
+   "n": 43,
+   "frases": [
+    43,
+    44
+   ],
+   "texto": "Daquela crían que as meigas se transformaban en gatos, en sapos ou en lobos. Contaban que, mentres a meiga voaba ás xuntanzas, na súa cama quedaba durmindo un corpo finxido.",
+   "texto_en": "Back then they believed that witches turned into cats, toads or wolves. They said that while the witch flew to the gatherings, a fake body stayed asleep in her bed."
+  },
+  {
+   "n": 44,
+   "frases": [
+    45
+   ],
+   "texto": "Críase que con bebedizos, ungüentos e obxectos como terra ou pelos podían estragar o leite, facer morrer as vacas e botar a perder as colleitas.",
+   "texto_en": "It was believed that with potions, ointments and objects such as earth or hair they could spoil the milk, kill the cows and ruin the harvests."
+  },
+  {
+   "n": 45,
+   "frases": [
+    46
+   ],
+   "texto": "E admitíase que algunhas meigas eran boas, capaces de protexer e de curar.",
+   "texto_en": "And it was accepted that some witches were good, able to protect and to heal."
+  },
+  {
+   "n": 46,
+   "frases": [
+    47
+   ],
+   "texto": "Pero, segundo Rodrigo Pousa, historiador, no acervo das galegas daquel tempo non entraba o voo en vasoira.",
+   "texto_en": "But, according to Rodrigo Pousa, historian, flying on a broomstick was not part of the beliefs of Galician women at that time."
+  },
+  {
+   "n": 47,
+   "frases": [
+    48
+   ],
+   "texto": "E agora, o conxuro do barco, que Mariano Marcos Abalo escribiu en Vigo en mil novecentos sesenta e sete.",
+   "texto_en": "And now, the spell from the boat, which Mariano Marcos Abalo wrote in Vigo in nineteen sixty-seven."
+  },
+  {
+   "n": 48,
+   "frases": [
+    49
+   ],
+   "texto": "Segundo contou el mesmo, quería darlles un pouco de ritual ás queimadas que facía cos amigos nos anos sesenta.",
+   "texto_en": "As he himself told, he wanted to give a bit of ritual to the queimadas (bowls of burning spirits) he made with his friends in the sixties."
+  },
+  {
+   "n": 49,
+   "frases": [
+    50
+   ],
+   "texto": "Xuntábanse a bordo dun vello barco comisado, amarrado no porto, e alí facían as queimadas.",
+   "texto_en": "They gathered on board an old confiscated boat, moored in the harbour, and there they made the queimadas."
+  },
+  {
+   "n": 50,
+   "frases": [
+    51,
+    52
+   ],
+   "texto": "E contaba que houbo outros cinco ou seis conxuros daquela época, pero que ningún tivo a saída do seu. O motivo do que falabamos ao principio é sinxelo.",
+   "texto_en": "And he said there were five or six other spells from that time, but none was as successful as his. The reason we mentioned at the beginning is simple."
+  },
+  {
+   "n": 51,
+   "frases": [
+    53
+   ],
+   "texto": "Unha empresa vendeu copias do conxuro sen o nome do autor, e por iso moita xente pensou que era un texto popular e anónimo.",
+   "texto_en": "A company sold copies of the spell without the author's name, and that is why many people thought it was a popular, anonymous text."
+  },
+  {
+   "n": 52,
+   "frases": [
+    54,
+    55
+   ],
+   "texto": "En dous mil un, Mariano Marcos Abalo rexistrou o conxuro como propiedade intelectual. A propia queimada tampouco é tan vella como parece.",
+   "texto_en": "In two thousand one, Mariano Marcos Abalo registered the spell as intellectual property. The queimada itself is not as old as it seems either."
+  },
+  {
+   "n": 53,
+   "frases": [
+    56,
+    57
+   ],
+   "texto": "Popularmente atribúenselle orixes celtas, pero iso é imposible, porque o alambique chegou a Galiza na Idade Media. Así o escribiu en mil novecentos setenta e dous o catedrático Carlos Alonso del Real.",
+   "texto_en": "It is popularly given Celtic origins, but that is impossible, because the still arrived in Galicia in the Middle Ages. Professor Carlos Alonso del Real wrote so in nineteen seventy-two."
+  },
+  {
+   "n": 54,
+   "frases": [
+    56,
+    57
+   ],
+   "texto": "Popularmente atribúenselle orixes celtas, pero iso é imposible, porque o alambique chegou a Galiza na Idade Media. Así o escribiu en mil novecentos setenta e dous o catedrático Carlos Alonso del Real.",
+   "texto_en": "It is popularly given Celtic origins, but that is impossible, because the still arrived in Galicia in the Middle Ages. Professor Carlos Alonso del Real wrote so in nineteen seventy-two."
+  },
+  {
+   "n": 55,
+   "frases": [
+    58
+   ],
+   "texto": "E o historiador Xavier Castro chámalle unha tradición inventada.",
+   "texto_en": "And the historian Xavier Castro calls it an invented tradition."
+  },
+  {
+   "n": 56,
+   "frases": [
+    59
+   ],
+   "texto": "Segundo o antropólogo González Reboredo, o costume de tomar queimada nas festas xurdiu arredor dos anos cincuenta do século vinte, entre galegos que vivían fóra.",
+   "texto_en": "According to the anthropologist González Reboredo, the custom of drinking queimada at parties arose around the nineteen fifties, among Galicians who lived abroad."
+  },
+  {
+   "n": 57,
+   "frases": [
+    60
+   ],
+   "texto": "En xuntanzas así naceu, probablemente, o costume de acompañala con conxuros escritos para a ocasión.",
+   "texto_en": "At gatherings like these, the custom of accompanying it with spells written for the occasion was probably born."
+  },
+  {
+   "n": 58,
+   "frases": [
+    61
+   ],
+   "texto": "En mil novecentos cincuenta e cinco, o oleiro Tito Freire creou a tarteira de barro con patas na que hoxe se adoita facer a queimada.",
+   "texto_en": "In nineteen fifty-five, the potter Tito Freire created the clay bowl with legs in which the queimada is usually made today."
+  },
+  {
+   "n": 59,
+   "frases": [
+    62
+   ],
+   "texto": "E na taberna de Eligio, en Vigo, escritores e artistas como Cunqueiro e Castroviejo foron construíndo o ritual arredor do pote.",
+   "texto_en": "And in Eligio's tavern, in Vigo, writers and artists such as Cunqueiro and Castroviejo built up the ritual around the pot."
+  },
+  {
+   "n": 60,
+   "frases": [
+    63,
+    64
+   ],
+   "texto": "Castroviejo dicía que botarlle grans de café á queimada era unha horrible herexía moderna. Así, entre amigos, barcos e tabernas, naceu en poucas décadas un ritual que parece de sempre.",
+   "texto_en": "Castroviejo said that adding coffee beans to the queimada was a horrible modern heresy. So, among friends, boats and taverns, a ritual that seems ancient was born in a few decades."
+  },
+  {
+   "n": 61,
+   "frases": [
+    65
+   ],
+   "texto": "En Santiago, onde hoxe está o Hotel Compostela, estivo a última sede da Inquisición, a Casa Grande de Calo, derrubada en mil novecentos trece.",
+   "texto_en": "In Santiago, where the Hotel Compostela stands today, was the last seat of the Inquisition, the Casa Grande de Calo, demolished in nineteen thirteen."
+  },
+  {
+   "n": 62,
+   "frases": [
+    66
+   ],
+   "texto": "Pero a bruxería era un delito de foro mixto: podían xulgala a xustiza civil, a eclesiástica e a Inquisición.",
+   "texto_en": "But witchcraft was a crime of mixed jurisdiction: it could be judged by the civil courts, the church courts and the Inquisition."
+  },
+  {
+   "n": 63,
+   "frases": [
+    67
+   ],
+   "texto": "Entre mil cincocentos setenta e catro e mil setecentos, a Inquisición procesou por bruxería noventa e dúas mulleres e corenta e oito homes.",
+   "texto_en": "Between fifteen seventy-four and seventeen hundred, the Inquisition tried ninety-two women and forty-eight men for witchcraft."
+  },
+  {
+   "n": 64,
+   "frases": [
+    68,
+    69
+   ],
+   "texto": "Son cifras terribles, di o Arquivo do Reino, pero moi baixas comparadas coas doutros tribunais da Inquisición. A febre das bruxas chegou a Galiza, pero, segundo Pousa, sen a histeria doutras partes de Europa.",
+   "texto_en": "They are terrible figures, says the Archive of the Kingdom, but very low compared with those of other Inquisition tribunals. The witch craze reached Galicia, but, according to Pousa, without the hysteria of other parts of Europe."
+  },
+  {
+   "n": 65,
+   "frases": [
+    68,
+    69
+   ],
+   "texto": "Son cifras terribles, di o Arquivo do Reino, pero moi baixas comparadas coas doutros tribunais da Inquisición. A febre das bruxas chegou a Galiza, pero, segundo Pousa, sen a histeria doutras partes de Europa.",
+   "texto_en": "They are terrible figures, says the Archive of the Kingdom, but very low compared with those of other Inquisition tribunals. The witch craze reached Galicia, but, according to Pousa, without the hysteria of other parts of Europe."
+  },
+  {
+   "n": 66,
+   "frases": [
+    70
+   ],
+   "texto": "O Arquivo garda tamén uns trinta procesos por bruxería da xustiza real, que en dous mil vinte aínda estaban sen estudar.",
+   "texto_en": "The Archive also keeps some thirty witchcraft trials of the royal courts, which in twenty twenty had still not been studied."
+  },
+  {
+   "n": 67,
+   "frases": [
+    71
+   ],
+   "texto": "Neles, todas as acusadas eran mulleres, e algúns acabaron en condenas de desterro, de azoutes ou de saír emplumadas á vergonza pública.",
+   "texto_en": "In them, all the accused were women, and some ended in sentences of exile, of flogging or of being paraded covered in feathers to public shame."
+  },
+  {
+   "n": 68,
+   "frases": [
+    72
+   ],
+   "texto": "En mil seiscentos trinta e nove, a Real Audiencia procesou a María Cibreira e a outras veciñas de Pazos de Arenteiro, en Boborás.",
+   "texto_en": "In sixteen thirty-nine, the Royal Court put on trial María Cibreira and other women from Pazos de Arenteiro, in Boborás."
+  },
+  {
+   "n": 69,
+   "frases": [
+    73,
+    74
+   ],
+   "texto": "Despois de ser torturada, María Cibreira confesou que había uns doce anos que exercía o oficio de bruxa e feiticeira. E que llo ensinara a súa nai, Guiomar Douteiro.",
+   "texto_en": "After being tortured, María Cibreira confessed that for some twelve years she had practised the trade of witch and sorceress. And that her mother, Guiomar Douteiro, had taught it to her."
+  },
+  {
+   "n": 70,
+   "frases": [
+    75,
+    76
+   ],
+   "texto": "Contou que á casa da nai acudía moita xente, e que ela lles facía curas e menciñas. Dixo tamén que as noites de san Xoán e as do primeiro de maio as meigas ían ás xuntanzas do demo, nas areas de Sevilla.",
+   "texto_en": "She said that many people came to her mother's house, and that she made cures and remedies for them. She also said that on Saint John's nights and on the first of May the witches went to the devil's gatherings, on the sands of Seville."
+  },
+  {
+   "n": 71,
+   "frases": [
+    75,
+    76
+   ],
+   "texto": "Contou que á casa da nai acudía moita xente, e que ela lles facía curas e menciñas. Dixo tamén que as noites de san Xoán e as do primeiro de maio as meigas ían ás xuntanzas do demo, nas areas de Sevilla.",
+   "texto_en": "She said that many people came to her mother's house, and that she made cures and remedies for them. She also said that on Saint John's nights and on the first of May the witches went to the devil's gatherings, on the sands of Seville."
+  },
+  {
+   "n": 72,
+   "frases": [
+    77,
+    78
+   ],
+   "texto": "Pousa explica que aquelas mulleres non sabían que declarar: as respostas xa ían nas preguntas. Aínda en mil oitocentos vinte e seis, en Santiago de Compostela, a Real Audiencia condenou a adiviña Benita Montero.",
+   "texto_en": "Pousa explains that those women did not know what to declare: the answers were already in the questions. As late as eighteen twenty-six, in Santiago de Compostela, the Royal Court sentenced the fortune-teller Benita Montero."
+  },
+  {
+   "n": 73,
+   "frases": [
+    77,
+    78
+   ],
+   "texto": "Pousa explica que aquelas mulleres non sabían que declarar: as respostas xa ían nas preguntas. Aínda en mil oitocentos vinte e seis, en Santiago de Compostela, a Real Audiencia condenou a adiviña Benita Montero.",
+   "texto_en": "Pousa explains that those women did not know what to declare: the answers were already in the questions. As late as eighteen twenty-six, in Santiago de Compostela, the Royal Court sentenced the fortune-teller Benita Montero."
+  },
+  {
+   "n": 74,
+   "frases": [
+    79,
+    80
+   ],
+   "texto": "Na súa casa atoparan unha baralla vella, un rosario e un escapulario cunha figa de acibeche. A pena foi saír do cárcere emplumada e montada nunha besta, un día de mercado, coa baralla colgada do pescozo.",
+   "texto_en": "In her house they had found an old deck of cards, a rosary and a scapular with a jet fig-hand amulet. Her sentence was to leave prison covered in feathers and riding a mule, on a market day, with the deck of cards hung around her neck."
+  },
+  {
+   "n": 75,
+   "frases": [
+    81,
+    82
+   ],
+   "texto": "Tamén a Inquisición xulgou por bruxería a María Soliña, unha veciña de Cangas. Dela, advirte o Consello da Cultura Galega, temos poucos datos persoais.",
+   "texto_en": "The Inquisition also tried María Soliña, a neighbour from Cangas, for witchcraft. About her, warns the Council of Galician Culture, we have few personal details."
+  },
+  {
+   "n": 76,
+   "frases": [
+    83,
+    84
+   ],
+   "texto": "O poeta Celso Emilio Ferreiro dedicoulle un poema no libro Longa noite de pedra, publicado en mil novecentos sesenta e dous. Hoxe, María Soliña é un símbolo do sufrimento do pobo, e sobre todo das mulleres.",
+   "texto_en": "The poet Celso Emilio Ferreiro dedicated a poem to her in the book Long Night of Stone, published in nineteen sixty-two. Today, María Soliña is a symbol of the suffering of the people, and above all of women."
+  },
+  {
+   "n": 77,
+   "frases": [
+    85
+   ],
+   "texto": "E por fin, a lista de Campo Lameiro.",
+   "texto_en": "And finally, the list of Campo Lameiro."
+  },
+  {
+   "n": 78,
+   "frases": [
+    86,
+    87
+   ],
+   "texto": "En mil seiscentos corenta e tres, a Real Audiencia procesou a Inés de Maquieira e a outras mulleres de Campo Lameiro. Uns veciños dicían que unha das acusadas fixera morrer as becerras e os leitóns deles, porque estaban rifados con ela.",
+   "texto_en": "In sixteen forty-three, the Royal Court put on trial Inés de Maquieira and other women of Campo Lameiro. Some neighbours said that one of the accused had made their calves and piglets die, because they had quarrelled with her."
+  },
+  {
+   "n": 79,
+   "frases": [
+    86,
+    87
+   ],
+   "texto": "En mil seiscentos corenta e tres, a Real Audiencia procesou a Inés de Maquieira e a outras mulleres de Campo Lameiro. Uns veciños dicían que unha das acusadas fixera morrer as becerras e os leitóns deles, porque estaban rifados con ela.",
+   "texto_en": "In sixteen forty-three, the Royal Court put on trial Inés de Maquieira and other women of Campo Lameiro. Some neighbours said that one of the accused had made their calves and piglets die, because they had quarrelled with her."
+  },
+  {
+   "n": 80,
+   "frases": [
+    88,
+    89
+   ],
+   "texto": "Unha testemuña contou que, pola sospeita que tiñan delas, uns veciños foran espreitar as mulleres á fonte. Foi a noite de san Xoán do ano anterior, na fonte da Nogueira.",
+   "texto_en": "A witness said that, because of their suspicion of the women, some neighbours had gone to spy on them at the fountain. It was Saint John's night of the previous year, at the fountain of A Nogueira."
+  },
+  {
+   "n": 81,
+   "frases": [
+    90,
+    91
+   ],
+   "texto": "Alí viron e recoñeceron as mulleres, e apuntáronas nunha lista porque eran moitas. A noite de san Xoán era costume ir ás fontes, porque se cría que a auga desa noite tiña virtudes especiais.",
+   "texto_en": "There they saw and recognised the women, and wrote them down in a list because there were many. On Saint John's night it was the custom to go to the fountains, because the water of that night was believed to have special virtues."
+  },
+  {
+   "n": 82,
+   "frases": [
+    92,
+    93
+   ],
+   "texto": "E na crenza popular, esa era tamén a noite en que as meigas andaban máis libres. A mesma fonte, a mesma noite, e dúas maneiras de mirala.",
+   "texto_en": "And in popular belief, that was also the night when the witches roamed most freely. The same fountain, the same night, and two ways of looking at it."
+  },
+  {
+   "n": 83,
+   "frases": [
+    94,
+    95
+   ],
+   "texto": "Segundo o Consello da Cultura Galega, as curandeiras ou meigas, sobre todo se eran solteiras ou viúvas, foron as vítimas máis frecuentes das denuncias. Nunha aldea, ser solteira ou viúva xa sinalaba unha muller como diferente.",
+   "texto_en": "According to the Council of Galician Culture, the healers or witches, above all if they were single or widowed, were the most frequent victims of denunciations. In a village, being single or a widow already marked a woman out as different."
+  },
+  {
+   "n": 84,
+   "frases": [
+    96,
+    97
+   ],
+   "texto": "Moitas das acusadas eran parteiras e menciñeiras que aprenderan o oficio doutras mulleres, a miúdo das súas nais. Nos papeis, Pousa atopou esta expresión: maldita a nai que non ensina a súa filla a meigar.",
+   "texto_en": "Many of the accused were midwives and folk healers who had learned the trade from other women, often from their mothers. In the papers, Pousa found this expression: cursed be the mother who does not teach her daughter to work as a witch."
+  },
+  {
+   "n": 85,
+   "frases": [
+    98,
+    99
+   ],
+   "texto": "Eran necesarias, di o mesmo historiador, porque resolvían os problemas de cada día: a saúde, as colleitas e o gando. Moitas denuncias nacían de xenreiras e liortas entre veciños.",
+   "texto_en": "They were necessary, says the same historian, because they solved everyday problems: health, the harvests and the livestock. Many denunciations arose from grudges and quarrels between neighbours."
+  },
+  {
+   "n": 86,
+   "frases": [
+    100,
+    101
+   ],
+   "texto": "E Pousa conta que ás veces se falaba de bruxería cando, en realidade, as ovellas dun veciño lle comeran a viña ao outro. Segundo el, a caza de bruxas nos tribunais civís decaeu despois do primeiro terzo do século dezasete.",
+   "texto_en": "And Pousa says that sometimes there was talk of witchcraft when, in reality, one neighbour's sheep had eaten the other's vineyard. According to him, the witch hunt in the civil courts declined after the first third of the seventeenth century."
+  },
+  {
+   "n": 87,
+   "frases": [
+    100,
+    101
+   ],
+   "texto": "E Pousa conta que ás veces se falaba de bruxería cando, en realidade, as ovellas dun veciño lle comeran a viña ao outro. Segundo el, a caza de bruxas nos tribunais civís decaeu despois do primeiro terzo do século dezasete.",
+   "texto_en": "And Pousa says that sometimes there was talk of witchcraft when, in reality, one neighbour's sheep had eaten the other's vineyard. According to him, the witch hunt in the civil courts declined after the first third of the seventeenth century."
+  },
+  {
+   "n": 88,
+   "frases": [
+    102,
+    103
+   ],
+   "texto": "E pensa que axudou a chegada do millo de América, que aliviou a fame. Nos papeis daqueles procesos aparecen tamén frases en galego, un tesouro para a historia da lingua.",
+   "texto_en": "And he thinks that the arrival of maize from America, which eased hunger, helped. In the papers of those trials there are also phrases in Galician, a treasure for the history of the language."
+  },
+  {
+   "n": 89,
+   "frases": [
+    104,
+    105
+   ],
+   "texto": "Na mentalidade popular había varios tipos de meigas, entre eles as feiticeiras e as adiviñas, e nos papeis aparece a expresión meiga feiticeira. E queda un dito moi coñecido: eu non creo nas meigas, mais habelas, hainas.",
+   "texto_en": "In popular thinking there were several kinds of witches, among them sorceresses and fortune-tellers, and the papers contain the expression sorceress witch. And a very well-known saying remains: I don't believe in witches, but they exist, they do."
+  },
+  {
+   "n": 90,
+   "frases": [
+    106,
+    107,
+    108
+   ],
+   "texto": "Ninguén lle coñece autor: é un dito popular, tamén en castelán, ao que se lle atribúe orixe galega. A frase, ademais, non aparece no Quixote de Cervantes. E aquí, amodo, deixamos atrás os tribunais e as testemuñas.",
+   "texto_en": "Nobody knows its author: it is a popular saying, also in Spanish, which is attributed a Galician origin. Besides, the phrase does not appear in Cervantes' Don Quixote. And here, slowly, we leave the courts and the witnesses behind."
+  },
+  {
+   "n": 91,
+   "frases": [
+    109,
+    110
+   ],
+   "texto": "Desde aquí a historia vai máis amodo, e non tes que lembrar nada do que escoites. Entremos nunha cociña de aldea, á noitiña, cando xa se acendeu o lume.",
+   "texto_en": "From here the story goes more slowly, and you don't have to remember anything you hear. Let's go into a village kitchen, at nightfall, when the fire has already been lit."
+  },
+  {
+   "n": 92,
+   "frases": [
+    111,
+    112
+   ],
+   "texto": "A cociña era a estancia máis importante e acolledora da casa: alí recibían as visitas, comían e facían faladoiros. Tamén alí se pechaban tratos de compravenda, e desde ela pasábase doadamente aos cortellos dos animais.",
+   "texto_en": "The kitchen was the most important and welcoming room of the house: there they received visitors, ate and chatted. Buying and selling deals were also closed there, and from it one passed easily into the animals' stalls."
+  },
+  {
+   "n": 93,
+   "frases": [
+    113,
+    114
+   ],
+   "texto": "Na lareira arde o lume, sobre a pedra do lar, e por riba del a cambota guía o fume cara á cheminea. Case sempre había un forno dentro da lareira.",
+   "texto_en": "In the hearth the fire burns, on the hearthstone, and above it the smoke hood guides the smoke towards the chimney. There was almost always an oven inside the hearth."
+  },
+  {
+   "n": 94,
+   "frases": [
+    115,
+    116
+   ],
+   "texto": "A carón do lume está o escano de castiñeiro, onde a xente sentaba a comer, a quentarse ou a matar o tempo. Cando a pedra do lar estaba en alto, as patas do escano podían apoiarse nela, e así a xente quedaba sentada máis preto do lume.",
+   "texto_en": "Next to the fire is the chestnut-wood settle, a high-backed bench where people sat to eat, to warm up or to pass the time. When the hearthstone was raised, the legs of the settle could rest on it, and so people sat closer to the fire."
+  },
+  {
+   "n": 95,
+   "frases": [
+    115,
+    116
+   ],
+   "texto": "A carón do lume está o escano de castiñeiro, onde a xente sentaba a comer, a quentarse ou a matar o tempo. Cando a pedra do lar estaba en alto, as patas do escano podían apoiarse nela, e así a xente quedaba sentada máis preto do lume.",
+   "texto_en": "Next to the fire is the chestnut-wood settle, a high-backed bench where people sat to eat, to warm up or to pass the time. When the hearthstone was raised, the legs of the settle could rest on it, and so people sat closer to the fire."
+  },
+  {
+   "n": 96,
+   "frases": [
+    117,
+    118
+   ],
+   "texto": "Nalgunhas casas o escano tiña unha mesa de levante, e había que sentar antes de baixala, porque despois quedabas preso no asento. No oco baixo o asento podía estar a capoeira, onde cebaban os capóns.",
+   "texto_en": "In some houses the settle had a fold-down table, and you had to sit down before lowering it, because afterwards you were trapped in the seat. In the hollow under the seat there could be the coop where they fattened capons."
+  },
+  {
+   "n": 97,
+   "frases": [
+    119,
+    120,
+    121
+   ],
+   "texto": "O pote colga sobre o lume dunha cadea de ferro, a gramalleira. Nas zonas gandeiras, os potes grandes eran para a comida dos animais, e os pequenos para a familia. E nas lacenas da parede gárdanse os alimentos.",
+   "texto_en": "The pot hangs over the fire from an iron chain, the pot-hanger. In cattle-raising areas, the big pots were for the animals' food, and the small ones for the family. And the food is kept in the cupboards in the wall."
+  },
+  {
+   "n": 98,
+   "frases": [
+    122,
+    123
+   ],
+   "texto": "Nestas casas críase no mal de ollo, o dano que a mirada dalgunhas persoas podía facerlle á saúde da xente ou dos animais. Críase que se podía botar por envexa, ou mesmo sen querer.",
+   "texto_en": "In these houses people believed in the evil eye, the harm that some people's gaze could do to the health of people or animals. It was believed that it could be cast out of envy, or even unintentionally."
+  },
+  {
+   "n": 99,
+   "frases": [
+    124,
+    125
+   ],
+   "texto": "A veciña de Xinzo de Limia, a da arracada, tiña por moi certo que fora polo mal mirar. Segundo Xosé Ramón Mariño Ferro, a crenza servía para explicar desgrazas sen motivo coñecido, e tamén para conter a envexa.",
+   "texto_en": "The neighbour from Xinzo de Limia, the one with the earring, was quite certain it had been the evil eye. According to Xosé Ramón Mariño Ferro, the belief served to explain misfortunes with no known cause, and also to restrain envy."
+  },
+  {
+   "n": 100,
+   "frases": [
+    126,
+    127
+   ],
+   "texto": "Porque ninguén quería que o acusasen de botar o mal de ollo. E había pastores e labregos que cuspían no gando cando alguén lles gababa os animais, por se acaso, como recolleu Vicente Risco.",
+   "texto_en": "Because nobody wanted to be accused of casting the evil eye. And there were shepherds and farmers who spat on their cattle when someone praised their animals, just in case, as Vicente Risco recorded."
+  },
+  {
+   "n": 101,
+   "frases": [
+    128,
+    129
+   ],
+   "texto": "Contra o mal de ollo levábanse amuletos: unha castaña brava, un dente de allo, un corno pequeno. Aos meniños poñíanlles un destes amuletos entre a roupa ou colgado do pescozo.",
+   "texto_en": "Against the evil eye people carried amulets: a horse chestnut, a clove of garlic, a small horn. On little children they put one of these amulets among their clothes or hung around their neck."
+  },
+  {
+   "n": 102,
+   "frases": [
+    130,
+    131
+   ],
+   "texto": "Había quen levaba unha bolsa pequena cun dente de allo e cousas bendicidas, como auga bendita, unha cruz ou un escapulario. E estaba a figa, un amuleto con forma de man pechada, contra o mal de ollo e os meigallos.",
+   "texto_en": "Some carried a small bag with a clove of garlic and blessed things, such as holy water, a cross or a scapular. And there was the figa, an amulet shaped like a closed hand, against the evil eye and spells."
+  },
+  {
+   "n": 103,
+   "frases": [
+    132,
+    133
+   ],
+   "texto": "O meigallo era outra cousa: un feitizo, a obra dunha meiga. Nos anos sesenta, o antropólogo danés Gustav Henningsen fotografou en Galiza os amuletos cos que se protexían as vacas do mal de ollo.",
+   "texto_en": "The spell was something else: an enchantment, the work of a witch. In the sixties, the Danish anthropologist Gustav Henningsen photographed in Galicia the amulets with which cows were protected from the evil eye."
+  },
+  {
+   "n": 104,
+   "frases": [
+    134,
+    135,
+    136
+   ],
+   "texto": "Fóra, na noite, o hórreo descansa sobre os seus pés, que o afastan da humidade e dos animais. O seu tellado podía ser de tella, de lousa ou de colmo de centeo. O aire corre polas aberturas das paredes, e dentro gárdase o millo.",
+   "texto_en": "Outside, in the night, the hórreo, a granary raised on stone pillars, rests on its feet, which keep it away from the damp and the animals. Its roof could be of tiles, of slate or of rye thatch. The air flows through the openings in the walls, and inside the maize is kept."
+  },
+  {
+   "n": 105,
+   "frases": [
+    137,
+    138
+   ],
+   "texto": "E nos tornarratos do hórreo adoitaban deixar secar as cabazas. Había tamén cabazos, pequenos celeiros de pólas ou vimbios tecidos, cubertos cun cono de xesta ou de colmo.",
+   "texto_en": "And on the rat-stones of the hórreo they used to leave pumpkins to dry. There were also cabazos, small granaries of woven branches or wicker, covered with a cone of broom or thatch."
+  },
+  {
+   "n": 106,
+   "frases": [
+    139,
+    140
+   ],
+   "texto": "O millo non agroma ata o comezo do verán, e madurece case no outono. O hórreo, tal como o coñecemos, estendeuse co cultivo do millo, que chegou a Galiza no século dezasete.",
+   "texto_en": "Maize does not sprout until the beginning of summer, and it ripens almost in autumn. The hórreo as we know it spread with the cultivation of maize, which arrived in Galicia in the seventeenth century."
+  },
+  {
+   "n": 107,
+   "frases": [
+    141,
+    142
+   ],
+   "texto": "É o mesmo millo que, segundo Pousa, aliviou a fame. E nalgún lugar da casa, secas e recendentes, colgan as herbas do verán pasado.",
+   "texto_en": "It is the same maize that, according to Pousa, eased hunger. And somewhere in the house, dry and fragrant, hang last summer's herbs."
+  },
+  {
+   "n": 108,
+   "frases": [
+    143
+   ],
+   "texto": "A noite de san Xoán é a noite entre os días vinte e tres e vinte e catro de xuño, preto do solsticio de verán.",
+   "texto_en": "Saint John's night is the night between the twenty-third and the twenty-fourth of June, close to the summer solstice."
+  },
+  {
+   "n": 109,
+   "frases": [
+    144,
+    145
+   ],
+   "texto": "É unha noite de lume e de auga, de herbas e de orballo, e imos percorrela amodo, desde a tarde ata o amencer. Na véspera de san Xoán apáñanse as herbas de san Xoán: plantas e flores, moitas delas medicinais.",
+   "texto_en": "It is a night of fire and water, of herbs and dew, and we are going to walk through it slowly, from the evening until dawn. On Saint John's eve the Saint John's herbs are gathered: plants and flowers, many of them medicinal."
+  },
+  {
+   "n": 110,
+   "frases": [
+    146,
+    147
+   ],
+   "texto": "Adoita dicirse que han ser sete herbas distintas, e a lista cambia moito dun lugar a outro. Había quen as apañaba no campo un día antes, para vendelas na véspera nos mercados das vilas e das cidades.",
+   "texto_en": "It is often said that there must be seven different herbs, and the list changes a lot from one place to another. Some people gathered them in the fields a day earlier, to sell them on the eve at the markets of the towns and cities."
+  },
+  {
+   "n": 111,
+   "frases": [
+    148,
+    149
+   ],
+   "texto": "Entre elas están o fiúncho, o romeu, o codeso, o fento, a malva, a herba luísa e as follas de sabugueiro. O fiúncho ten flores amarelas, un cheiro agradable e un gusto doce, e abunda moito en Galiza.",
+   "texto_en": "Among them are fennel, rosemary, broom, fern, mallow, lemon verbena and elder leaves. Fennel has yellow flowers, a pleasant smell and a sweet taste, and it is very abundant in Galicia."
+  },
+  {
+   "n": 112,
+   "frases": [
+    150,
+    151
+   ],
+   "texto": "O romeu é un arbusto aromático de follas pequenas, e crese que é a herba que protexe e purifica os fogares galegos. O sabugueiro, pola súa banda, dá flores pequenas e brancas.",
+   "texto_en": "Rosemary is an aromatic shrub with small leaves, and it is believed to be the herb that protects and purifies Galician homes. Elder, for its part, has small white flowers."
+  },
+  {
+   "n": 113,
+   "frases": [
+    152,
+    153
+   ],
+   "texto": "O codeso, de flores amarelas, servía para facer vasoiras, e crían que esas vasoiras varrían da casa os malos espíritos. E polo san Xoán florean tamén as abelurias, de flores de cor púrpura.",
+   "texto_en": "Broom, with yellow flowers, was used to make brooms, and they believed that those brooms swept evil spirits out of the house. And around Saint John's day the foxgloves also bloom, with purple flowers."
+  },
+  {
+   "n": 114,
+   "frases": [
+    154,
+    155
+   ],
+   "texto": "Nos días de antes, os mozos e os veciños ían amoreando leña nun lugar aberto. Á noitiña prendían as fogueiras, as cacharelas, e a xente comía sardiñas á brasa, cachelos e broa de millo.",
+   "texto_en": "In the days before, the young people and the neighbours piled up firewood in an open place. At nightfall they lit the bonfires, and people ate grilled sardines, boiled potatoes and maize bread."
+  },
+  {
+   "n": 115,
+   "frases": [
+    156,
+    157
+   ],
+   "texto": "Bebían viño, e cantaban e bailaban arredor do lume. O fume subía amodo, e nalgúns lugares queimaban leña verde, que dá moito fume, para espantar as meigas.",
+   "texto_en": "They drank wine, and sang and danced around the fire. The smoke rose slowly, and in some places they burned green wood, which gives off a lot of smoke, to scare the witches away."
+  },
+  {
+   "n": 116,
+   "frases": [
+    158,
+    159
+   ],
+   "texto": "Cando a fogueira xa case se apagaba, saltábase por riba das últimas lapas, sempre un número impar de veces, polo menos tres. E ao saltar dicíase: salto por riba do lume de san Xoán, para que non me morda cadela nin can.",
+   "texto_en": "When the bonfire was almost out, people jumped over the last flames, always an odd number of times, at least three. And while jumping they said: I jump over the fire of Saint John, so that no bitch or dog will bite me."
+  },
+  {
+   "n": 117,
+   "frases": [
+    158,
+    159
+   ],
+   "texto": "Cando a fogueira xa case se apagaba, saltábase por riba das últimas lapas, sempre un número impar de veces, polo menos tres. E ao saltar dicíase: salto por riba do lume de san Xoán, para que non me morda cadela nin can.",
+   "texto_en": "When the bonfire was almost out, people jumped over the last flames, always an odd number of times, at least three. And while jumping they said: I jump over the fire of Saint John, so that no bitch or dog will bite me."
+  },
+  {
+   "n": 118,
+   "frases": [
+    160,
+    161
+   ],
+   "texto": "Nesta noite tamén se afumaba o gando, para protexelo do meigallo. E críase que o orballo desa noite protexía os animais, así que os sacaban das cortes para que andasen pola herba mollada.",
+   "texto_en": "On this night the cattle were also smoked, to protect them from spells. And it was believed that the dew of that night protected the animals, so they took them out of the byres to walk on the wet grass."
+  },
+  {
+   "n": 119,
+   "frases": [
+    162,
+    163
+   ],
+   "texto": "Para facer o cacho, collían auga de sete fontes, coma nas palabras que, segundo unha testemuña, dicía María do Barro. Deixaban as herbas nunha talla con auga, á intemperie, para que lles caese o orballo da noite.",
+   "texto_en": "To make the cacho, they took water from seven springs, as in the words that, according to a witness, María do Barro used to say. They left the herbs in a jar of water, outdoors, so that the night dew would fall on them."
+  },
+  {
+   "n": 120,
+   "frases": [
+    164,
+    165
+   ],
+   "texto": "Crían que era o orballo o que lles daba ás herbas as súas virtudes. Co cristianismo, pasou a dicirse que era san Xoán quen as bendicía.",
+   "texto_en": "They believed that it was the dew that gave the herbs their virtues. With Christianity, people came to say that it was Saint John who blessed them."
+  },
+  {
+   "n": 121,
+   "frases": [
+    166,
+    167
+   ],
+   "texto": "Contan as lendas que o fento bota flor a noite de san Xoán, xusto á medianoite. E contan que na fonte da Moza, na Veiga, esa noite aparece unha moura a peitear os seus cabelos.",
+   "texto_en": "The legends say that the fern blooms on Saint John's night, right at midnight. And they say that at the fountain of A Moza, in A Veiga, an enchanted maiden appears that night combing her hair."
+  },
+  {
+   "n": 122,
+   "frases": [
+    168,
+    169
+   ],
+   "texto": "Esa mesma lenda, a da moura que se peitea na fonte, cóntase en moitos lugares de Galiza. Críase que, se as mozas metían certas herbas debaixo do traveseiro esa noite, podían ver en soños o home co que ían casar.",
+   "texto_en": "That same legend, of the enchanted maiden who combs her hair at the fountain, is told in many places in Galicia. It was believed that if the young women put certain herbs under their pillow that night, they could see in their dreams the man they would marry."
+  },
+  {
+   "n": 123,
+   "frases": [
+    170,
+    171
+   ],
+   "texto": "E así, co cheiro das herbas, a noite ía pasando amodo cara ao día. Ao amencer, a primeira auga da fonte chamábase flor da auga, e crían que daba saúde e beleza.",
+   "texto_en": "And so, with the scent of the herbs, the night slowly passed towards day. At dawn, the first water of the fountain was called the flower of the water, and they believed it gave health and beauty."
+  },
+  {
+   "n": 124,
+   "frases": [
+    172,
+    173
+   ],
+   "texto": "A flor da auga era a tona, a capa máis superficial da auga, na que se reflicte o sol cando nace. Nalgúns lugares ían á fonte cunha póla de bieiteiro, e o primeiro que chegaba podía coller con ela a flor da auga.",
+   "texto_en": "The flower of the water was the film on top, the uppermost layer of the water, in which the sun is reflected as it rises. In some places they went to the fountain with a branch of broom, and the first to arrive could gather the flower of the water with it."
+  },
+  {
+   "n": 125,
+   "frases": [
+    174,
+    175
+   ],
+   "texto": "Nas Vendas da Barreira, no Riós, crese que a moza que recolla a flor da auga casará dentro do ano. E críase que un paxaro traía no peteiro, ao amencer, unha pinga de auga e de orballo, e que a deitaba nunha flor.",
+   "texto_en": "In As Vendas da Barreira, in Riós, it is believed that the young woman who gathers the flower of the water will marry within the year. And it was believed that at dawn a bird carried in its beak a drop of water and dew, and laid it on a flower."
+  },
+  {
+   "n": 126,
+   "frases": [
+    176
+   ],
+   "texto": "Á mañá lavábase a cara coa auga das herbas, verde e recendente, mirando ao oriente nalgunhas zonas, para recibir as primeiras raiolas do sol.",
+   "texto_en": "In the morning they washed their faces with the herb water, green and fragrant, facing east in some areas, to receive the first rays of the sun."
+  },
+  {
+   "n": 127,
+   "frases": [
+    177,
+    178
+   ],
+   "texto": "Uns versos din: día de san Xoán, alegre meniña, vaite lavar, pillarás auga do paxaro antes de que o sol raiar. Moita xente cría que o sol baila ao amencer do día de san Xoán, de ledicia pola festa, e subía aos montes para velo.",
+   "texto_en": "Some verses say: on Saint John's day, happy girl, go and wash, you will catch the bird's water before the sun rises. Many people believed that the sun dances at dawn on Saint John's day, out of joy for the feast, and they climbed the hills to see it."
+  },
+  {
+   "n": 128,
+   "frases": [
+    177,
+    178
+   ],
+   "texto": "Uns versos din: día de san Xoán, alegre meniña, vaite lavar, pillarás auga do paxaro antes de que o sol raiar. Moita xente cría que o sol baila ao amencer do día de san Xoán, de ledicia pola festa, e subía aos montes para velo.",
+   "texto_en": "Some verses say: on Saint John's day, happy girl, go and wash, you will catch the bird's water before the sun rises. Many people believed that the sun dances at dawn on Saint John's day, out of joy for the feast, and they climbed the hills to see it."
+  },
+  {
+   "n": 129,
+   "frases": [
+    179,
+    180
+   ],
+   "texto": "Nalgúns sitios mirábano bailar a través dos buratos dun cribo. Unha copla di: madrugada de san Xoán, madrugada máis garrida, que baila o sol cando nace e ri cando morre o día.",
+   "texto_en": "In some places they watched it dance through the holes of a sieve. A couplet says: Saint John's dawn, the loveliest dawn, the sun dances when it is born and laughs when the day dies."
+  },
+  {
+   "n": 130,
+   "frases": [
+    181
+   ],
+   "texto": "Despois poñíanse ramos de herbas e flores nas portas e nas fiestras, para que non entrasen as meigas.",
+   "texto_en": "Then they put bunches of herbs and flowers on the doors and windows, so that the witches would not come in."
+  },
+  {
+   "n": 131,
+   "frases": [
+    182
+   ],
+   "texto": "Tamén poñían cardos ou espadanas: crían que as flores protexían polo seu recendo, os cardos polas espiñas e as espadanas polas follas, que semellan espadas.",
+   "texto_en": "They also put up thistles or bulrushes: they believed that the flowers protected by their scent, the thistles by their thorns and the bulrushes by their leaves, which look like swords."
+  },
+  {
+   "n": 132,
+   "frases": [
+    183,
+    184
+   ],
+   "texto": "Os ramos secábanse e colgábanse nalgún lugar da casa, para que a protexesen durante o resto do ano. Un refrán di: en san Xoán, as bruxas fuxirán.",
+   "texto_en": "The bunches were dried and hung somewhere in the house, to protect it for the rest of the year. A proverb says: on Saint John's day, the witches will flee."
+  },
+  {
+   "n": 133,
+   "frases": [
+    185
+   ],
+   "texto": "Deixamos atrás as fogueiras, e agora imos coñecer un frade que escribiu contra as fábulas de bruxería.",
+   "texto_en": "We leave the bonfires behind, and now we are going to meet a friar who wrote against the fables of witchcraft."
+  },
+  {
+   "n": 134,
+   "frases": [
+    186,
+    187
+   ],
+   "texto": "Benito Xerónimo Feijoo naceu en Casdemiro, no Pereiro de Aguiar, en mil seiscentos setenta e seis. Fillo maior dunha familia fidalga, renunciou á herdanza para facerse frade da orde de san Bieito, pouco antes de facer os catorce anos.",
+   "texto_en": "Benito Xerónimo Feijoo was born in Casdemiro, in O Pereiro de Aguiar, in sixteen seventy-six. The eldest son of a noble family, he gave up his inheritance to become a Benedictine friar, shortly before turning fourteen."
+  },
+  {
+   "n": 135,
+   "frases": [
+    186,
+    187
+   ],
+   "texto": "Benito Xerónimo Feijoo naceu en Casdemiro, no Pereiro de Aguiar, en mil seiscentos setenta e seis. Fillo maior dunha familia fidalga, renunciou á herdanza para facerse frade da orde de san Bieito, pouco antes de facer os catorce anos.",
+   "texto_en": "Benito Xerónimo Feijoo was born in Casdemiro, in O Pereiro de Aguiar, in sixteen seventy-six. The eldest son of a noble family, he gave up his inheritance to become a Benedictine friar, shortly before turning fourteen."
+  },
+  {
+   "n": 136,
+   "frases": [
+    188
+   ],
+   "texto": "Máis tarde ordenouse sacerdote no mosteiro de Samos, e viviu moitos anos en Oviedo, onde foi catedrático da universidade.",
+   "texto_en": "Later he was ordained a priest at the monastery of Samos, and he lived for many years in Oviedo, where he was a university professor."
+  },
+  {
+   "n": 137,
+   "frases": [
+    189,
+    190
+   ],
+   "texto": "Escribiu o Teatro crítico universal, e porque escribía contra as falsas crenzas e as supersticións chamáronlle o desenganador das Españas. Nun discurso sobre a maxia, Feijoo escribiu que había feiticeiros, pero non tantos como cría o vulgo.",
+   "texto_en": "He wrote the Universal Critical Theatre, and because he wrote against false beliefs and superstitions they called him the disabuser of the Spains. In a discourse on magic, Feijoo wrote that there were sorcerers, but not as many as the common people believed."
+  },
+  {
+   "n": 138,
+   "frases": [
+    191,
+    192
+   ],
+   "texto": "Advertía que as fábulas de bruxería pasan do pobo aos libros, e dos libros outra vez ao pobo. E que así unha fábula nacida no recuncho dunha aldea chega a encher o mundo enteiro.",
+   "texto_en": "He warned that the fables of witchcraft pass from the people to the books, and from the books back to the people. And that in this way a fable born in the corner of a village comes to fill the whole world."
+  },
+  {
+   "n": 139,
+   "frases": [
+    193,
+    194
+   ],
+   "texto": "Por iso pedía ler con moita desconfianza os libros que falaban de bruxería. Feijoo buscou as causas de que houbese tantas fábulas de bruxería.",
+   "texto_en": "That is why he asked people to read with great distrust the books that spoke of witchcraft. Feijoo looked for the reasons why there were so many fables of witchcraft."
+  },
+  {
+   "n": 140,
+   "frases": [
+    195,
+    196
+   ],
+   "texto": "Unha era o gusto da xente por contar e escribir cousas prodixiosas. Outra, que moitas veces a xente lle atribuía ao demo o que era natural ou froito do traballo.",
+   "texto_en": "One was people's taste for telling and writing about prodigious things. Another, that people often attributed to the devil what was natural or the fruit of work."
+  },
+  {
+   "n": 141,
+   "frases": [
+    197,
+    198
+   ],
+   "texto": "Contaba o caso dun labrego romano acusado de meigallo porque a súa leira daba máis froito ca as dos veciños. O labrego defendeuse mostrando que traballaba máis e mellor ca eles.",
+   "texto_en": "He told the case of a Roman farmer accused of sorcery because his field yielded more than his neighbours' fields. The farmer defended himself by showing that he worked more and better than they did."
+  },
+  {
+   "n": 142,
+   "frases": [
+    199,
+    200
+   ],
+   "texto": "E outra causa era a malevolencia, a xenreira contra as persoas acusadas. Feijoo riu dunha historia na que unhas bruxas que voaban máis rápido ca as aguias non daban alcanzado un burro.",
+   "texto_en": "And another cause was malevolence, spite against the accused people. Feijoo laughed at a story in which some witches who flew faster than eagles could not catch up with a donkey."
+  },
+  {
+   "n": 143,
+   "frases": [
+    201,
+    202
+   ],
+   "texto": "Contou tamén que coñecera unha vella que tiña fama de feiticeira porque ela mesma quería tela. Así, dicía, ninguén lle negaba unha esmola nin un anaco de pan.",
+   "texto_en": "He also told that he had known an old woman who was reputed to be a sorceress because she herself wanted that reputation. That way, he said, nobody refused her alms or a piece of bread."
+  },
+  {
+   "n": 144,
+   "frases": [
+    203,
+    204
+   ],
+   "texto": "Recollía que moitos autores crían que o voo das bruxas era un soño, que o ungüento só as adormecía profundamente e que soñaban que voaban. E Feijoo admitía que moitas veces o voo das bruxas era só soñado, pero non negaba que houbese bruxas.",
+   "texto_en": "He recorded that many authors believed the witches' flight was a dream, that the ointment only put them into a deep sleep and that they dreamed they were flying. And Feijoo admitted that the witches' flight was often only dreamed, but he did not deny that witches existed."
+  },
+  {
+   "n": 145,
+   "frases": [
+    205,
+    206
+   ],
+   "texto": "Pensaba que dicir que todo era ilusión era caer no outro extremo. Defendeu tamén que as mulleres tiñan a mesma capacidade de entendemento ca os homes, e que o galego non era un dialecto do castelán.",
+   "texto_en": "He thought that saying everything was illusion was falling into the other extreme. He also argued that women had the same capacity for understanding as men, and that Galician was not a dialect of Spanish."
+  },
+  {
+   "n": 146,
+   "frases": [
+    207,
+    208
+   ],
+   "texto": "No século dezaoito, frei Martín Sarmiento defendeu o saber das curandeiras, as meigas, como o de auténticos médicos e botánicos. Feijoo foi sempre de saúde delicada, con catarros frecuentes, e aínda así chegou a vello.",
+   "texto_en": "In the eighteenth century, Friar Martín Sarmiento defended the knowledge of the healers, the witches, as that of true doctors and botanists. Feijoo always had delicate health, with frequent colds, and even so he lived to an old age."
+  },
+  {
+   "n": 147,
+   "frases": [
+    209,
+    210
+   ],
+   "texto": "Ao abade e ao convento de Samos dedicou o terceiro tomo do Teatro crítico. No claustro grande do mosteiro de Samos hai unha estatua de Feijoo, obra de Asorey.",
+   "texto_en": "He dedicated the third volume of the Critical Theatre to the abbot and the convent of Samos. In the great cloister of the monastery of Samos there is a statue of Feijoo, by Asorey."
+  },
+  {
+   "n": 148,
+   "frases": [
+    211,
+    212
+   ],
+   "texto": "Volvamos á cociña da lareira, que xa está en penumbra. Tras a cea, na escuridade da noite, prepárase a queimada.",
+   "texto_en": "Let's go back to the kitchen with the hearth, which is now in half-darkness. After supper, in the darkness of the night, the queimada is prepared."
+  },
+  {
+   "n": 149,
+   "frases": [
+    213,
+    214
+   ],
+   "texto": "No pote de barro vai a augardente co azucre, a casca de limón e uns poucos grans de café. Os comensais reúnense arredor do pote, coas luces apagadas, para animar os corazóns e estreitar os lazos de amizade.",
+   "texto_en": "Into the clay pot go the grape spirits with the sugar, the lemon peel and a few coffee beans. The diners gather around the pot, with the lights out, to cheer their hearts and tighten the bonds of friendship."
+  },
+  {
+   "n": 150,
+   "frases": [
+    215,
+    216
+   ],
+   "texto": "Préndeselle lume e reméxese amodo, deixando que suban as lapas do alcohol, que fan cascadas. Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro.",
+   "texto_en": "It is set alight and stirred slowly, letting the flames of the alcohol rise, which fall in cascades. One of them lifts the burning liquid with a ladle and lets it fall little by little into the pot, while reciting the spell."
+  },
+  {
+   "n": 151,
+   "frases": [
+    217,
+    218
+   ],
+   "texto": "E así arde un bo anaco, ata que se esgota case todo o alcohol. Despois sérvese quente, con todos os seus ingredientes, e segundo a tradición afasta os malos espíritos e as meigas.",
+   "texto_en": "And so it burns for a good while, until almost all the alcohol is used up. Then it is served hot, with all its ingredients, and according to tradition it drives away evil spirits and witches."
+  },
+  {
+   "n": 152,
+   "frases": [
+    219,
+    220
+   ],
+   "texto": "E alguén lembra aquel dito tan coñecido: eu non creo nas meigas, mais habelas, hainas. E se oes algunha vez o conxuro nunha queimada, xa sabes que naceu nun barco, entre amigos.",
+   "texto_en": "And someone remembers that well-known saying: I don't believe in witches, but they exist, they do. And if you ever hear the spell at a queimada, now you know it was born on a boat, among friends."
+  },
+  {
+   "n": 153,
+   "frases": [
+    221,
+    222,
+    223
+   ],
+   "texto": "Agora chove sobre as lousas do tellado, grises e negras. É unha chuvia miúda e mansa, coma o orballo. Na lareira quedan as brasas, quentes e calmas, e o escano xa está baleiro.",
+   "texto_en": "Now it is raining on the slates of the roof, grey and black. It is a fine, gentle rain, like dew. In the hearth the embers remain, warm and calm, and the settle is already empty."
+  },
+  {
+   "n": 154,
+   "frases": [
+    224,
+    225
+   ],
+   "texto": "No pote, a queimada xa non arde, porque se esgotou case todo o alcohol. O fume sobe amodo pola cheminea, e o pote segue colgado da gramalleira.",
+   "texto_en": "In the pot, the queimada no longer burns, because almost all the alcohol is used up. The smoke rises slowly up the chimney, and the pot still hangs from the pot-hanger."
+  },
+  {
+   "n": 155,
+   "frases": [
+    226,
+    227,
+    228
+   ],
+   "texto": "Na parede, as lacenas gardan o pan para mañá, e o forno aínda conserva un pouco de calor. Na corte, ao carón da cociña, o gando dorme quente. Fóra, no hórreo, repousa o millo, e as cabazas agardan nos tornarratos.",
+   "texto_en": "On the wall, the cupboards keep the bread for tomorrow, and the oven still holds a little warmth. In the byre, next to the kitchen, the cattle sleep warm. Outside, in the hórreo, the maize rests, and the pumpkins wait on the rat-stones."
+  },
+  {
+   "n": 156,
+   "frases": [
+    229,
+    230
+   ],
+   "texto": "Nalgún lugar da casa colgan as herbas secas do verán, e aínda cheiran a fiúncho e a romeu. Esta noite escoitamos unha parteira, unhas palabras de sete fontes e unha lista escrita xunto a unha fonte.",
+   "texto_en": "Somewhere in the house hang last summer's dried herbs, and they still smell of fennel and rosemary. Tonight we heard a midwife, some words about seven springs and a list written beside a fountain."
+  },
+  {
+   "n": 157,
+   "frases": [
+    231,
+    232
+   ],
+   "texto": "Agora ninguén vela nin apunta nomes: a noite é de todos, e a chuvia cae igual sobre todas as casas. Lonxe, as sete fontes seguen correndo na escuridade, e a auga baixa mansa cara ao río.",
+   "texto_en": "Now nobody keeps watch or writes down names: the night belongs to everyone, and the rain falls the same on all the houses. Far away, the seven springs keep flowing in the darkness, and the water runs gently down to the river."
+  },
+  {
+   "n": 158,
+   "frases": [
+    233,
+    234
+   ],
+   "texto": "Sobre os prados, o orballo pousa nas herbas, pinga a pinga. A chuvia cae tamén sobre o hórreo, sobre as lousas e as tellas, e escorrega amodo polos seus pés de pedra.",
+   "texto_en": "Over the meadows, the dew settles on the grass, drop by drop. The rain also falls on the hórreo, on the slates and the tiles, and slides slowly down its stone feet."
+  },
+  {
+   "n": 159,
+   "frases": [
+    235,
+    236,
+    237
+   ],
+   "texto": "Xa non se oe o lume: só a chuvia no tellado, sempre igual, sempre mansa. Mañá, cando amenza, as herbas do prado estarán molladas de orballo. A chuvia segue caendo, amodo, igual que caía sobre aquelas aldeas hai catrocentos anos.",
+   "texto_en": "The fire can no longer be heard: only the rain on the roof, always the same, always gentle. Tomorrow, at dawn, the grass of the meadow will be wet with dew. The rain keeps falling, slowly, just as it fell on those villages four hundred years ago."
+  },
+  {
+   "n": 160,
+   "frases": [
+    235,
+    236,
+    237
+   ],
+   "texto": "Xa non se oe o lume: só a chuvia no tellado, sempre igual, sempre mansa. Mañá, cando amenza, as herbas do prado estarán molladas de orballo. A chuvia segue caendo, amodo, igual que caía sobre aquelas aldeas hai catrocentos anos.",
+   "texto_en": "The fire can no longer be heard: only the rain on the roof, always the same, always gentle. Tomorrow, at dawn, the grass of the meadow will be wet with dew. The rain keeps falling, slowly, just as it fell on those villages four hundred years ago."
+  },
+  {
+   "n": 161,
+   "frases": [
+    238,
+    239,
+    240
+   ],
+   "texto": "A casa descansa baixo a chuvia, e xa non tes que lembrar nada. E agora, amodo, xa se pode apagar a candea. Boas noites.",
+   "texto_en": "The house rests under the rain, and now you don't have to remember anything. And now, slowly, you can put out the candle. Good night."
+  },
+  {
+   "n": 162,
+   "frases": [
+    238,
+    239,
+    240
+   ],
+   "texto": "A casa descansa baixo a chuvia, e xa non tes que lembrar nada. E agora, amodo, xa se pode apagar a candea. Boas noites.",
+   "texto_en": "The house rests under the rain, and now you don't have to remember anything. And now, slowly, you can put out the candle. Good night."
+  }
+ ]
+}
