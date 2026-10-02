@@ -1,7 +1,7 @@
 # Estado da peza 1 (guion v2) · Gauntlet 4
 
 Ficheiro do construtor (guionista, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar desde
-aquí.** Última actualización: 02-10-2026, 23:45 UTC.
+aquí.** Última actualización: 02-10-2026, 23:40 UTC.
 
 ## Encargo vixente
 
@@ -25,8 +25,11 @@ aquí.** Última actualización: 02-10-2026, 23:45 UTC.
 
 ## En curso
 
-- Porta de lingua rápida (`scripts/lingua_rapida.py`) na cola do candado da CPU (outras pezas usan os modelos).
-- `feitos-r1.md` (mapa de feitos por parágrafo) e `notas-r1.md`.
+- Porta de texto completa (`scripts/porta-r1.sh`, longo.py --so-texto) lanzada ás 23:33 UTC con
+  `herramientas/gauntlet/candado.sh --prioridade`, sobre `$SCRATCH/guion/guion-r1-conxelado.txt`; rexistro en
+  `$SCRATCH/guion/porta-r1.log`. Ao rematar: copiar `$SCRATCH/guion/w-r1/porta_texto.json` a `porta_texto-r1.json`,
+  escribir `excepcions-r1.yaml` coas frases marcadas e volver pasala.
+- Feitos: `feitos-r1.md` (mapa por frase) e `notas-r1.md` (borrador; falta a sección 4, portas).
 
 ## Falta (orde)
 
@@ -46,9 +49,10 @@ aquí.** Última actualización: 02-10-2026, 23:45 UTC.
     cd /home/user/revolta/herramientas/pipeline
     # copia conxelada do guion para non editar o que está a pasar a porta
     cp ../../plan-de-negocio/gauntlet4/guion/guion-r1.txt $SCRATCH/guion/guion-r1-conxelado.txt
-    flock "$CPU_LOCK" "$PY" longo.py temas/meigas-de-verdade-v2.yaml --guion $SCRATCH/guion/guion-r1-conxelado.txt \
-      --traballo $SCRATCH/guion/w-r1 --saida $SCRATCH/guion/s-r1 --so-texto \
-      --excepcions ../../plan-de-negocio/gauntlet4/guion/excepcions-r1.yaml
+    ../gauntlet/candado.sh --prioridade "$PY" longo.py temas/meigas-de-verdade-v2.yaml \
+      --guion $SCRATCH/guion/guion-r1-conxelado.txt --traballo $SCRATCH/guion/w-r1 --saida $SCRATCH/guion/s-r1 \
+      --so-texto --excepcions ../../plan-de-negocio/gauntlet4/guion/excepcions-r1.yaml
+    # ou, desacoplado: setsid nohup bash ../../plan-de-negocio/gauntlet4/guion/scripts/porta-r1.sh > $SCRATCH/guion/porta-r1.log 2>&1 &
     cp $SCRATCH/guion/w-r1/porta_texto.json ../../plan-de-negocio/gauntlet4/guion/porta_texto-r1.json
 
 Entradas: `gauntlet3/dossier/feitos.yaml` e `dossier.md` (só se pode afirmar o que está aí), a ficha v2 e a v1
