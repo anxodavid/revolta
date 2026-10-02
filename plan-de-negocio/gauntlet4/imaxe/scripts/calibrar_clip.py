@@ -140,21 +140,126 @@ def cargar():
     return z['E'], z['T'], ix, et
 
 
-def analizar():
+CATEGORIA = {   # par -> defecto das etiquetas que debería cazar
+    'bombilla': 'luz_electrica', 'radiador': 'radiador', 'lampada colgante': 'luz_electrica', 'aplique': 'luz_electrica',
+    'farolas': 'luz_electrica', 'farol victoriano': 'luz_electrica', 'ventas acesas': 'luz_electrica',
+    'pobo iluminado': 'luz_electrica', 'maleta de rodas': 'maleta_rodas', 'fregadoiro': 'billa_fregadoiro',
+    'cocina economica': 'cocina_economica', 'casa inglesa': 'casa_allea', 'casa xeorxiana': 'casa_allea',
+    'casa colonial': 'casa_allea', 'cotswolds': 'casa_allea', 'casa nordica': 'casa_allea', 'roupa actual': 'roupa_actual',
+    'chaqueta tweed': 'roupa_actual', 'abrigo moderno': 'roupa_actual', 'gorro de la': 'roupa_actual',
+    'sombreiro moderno': 'roupa_actual', 'cadros': 'interior_moderno', 'xanela moderna': 'xanela_moderna',
+    'lume na mesa': 'lume_mesa', 'salon': 'interior_moderno', 'catedral': 'catedral_inventada'}
+
+
+def defectos(d):
+    return set(d.get('defectos') or []) | set(d.get('defectos_claude') or [])
+
+
+def limpa(d):
+    """Imaxe sen ningún defecto anotado (nin do tribunal nin de Claude)."""
+    return not defectos(d) and d['tribunal'] in ('funciona', 'aceptable', 'sen_mencion', 'despois_dos_arranxos')
+
+
+def auc(pos, neg):
     import numpy as np
-    E, T, ix, et = cargar()
-    N = len(et)
-    malo = lambda d: d['tribunal'] in ('bloquea', 'molesta')
-    def resumo(nome, val, sinal_def=None):
-        """val[i] para cada imaxe; imprime as malas co defecto e as 6 boas máis altas."""
-        orde = np.argsort(-val)
-        tops = [(et[i]['n'], et[i]['version'][0], et[i]['tribunal'][:4], round(float(val[i]), 3)) for i in orde[:14]]
-        print(f'  {nome}: top {tops}')
+    pos, neg = np.asarray(pos, float), np.asarray(neg, float)
+    if not len(pos) or not len(neg):
+        return float('nan')
+    return float(((pos[:, None] > neg[None, :]).mean() + 0.5 * (pos[:, None] == neg[None, :]).mean()))
+
+
+def pares(E, T, ix, et, imprimir=True):
+    """Para cada par novo: marxe (peor recorte) en 3 e en 9 recortes; umbral = máximo das imaxes limpas + 0,003."""
+    import numpy as np
+    out = {}
     for etq, a, b in PARES_NOVOS:
         sa, sb = E @ T[ix[a]], E @ T[ix[b]]
+        cat = CATEGORIA[etq]
         for nome, sl in (('3', slice(0, 3)), ('9', slice(0, 9))):
             marxe = (sa[:, sl] - sb[:, sl]).max(1)
-            resumo(f'{etq} [{nome} recortes]', marxe)
+            pert = np.maximum(sa[:, sl].max(1), sb[:, sl].max(1))
+            ok = [i for i, d in enumerate(et) if limpa(d) and not (cat == 'roupa_actual' and d['seculo_xx'])]
+            malas = [i for i, d in enumerate(et) if cat in defectos(d)]
+            umbral = float(marxe[ok].max()) + 0.003
+            cazadas = [i for i in malas if marxe[i] > umbral]
+            outras = [i for i, d in enumerate(et) if i not in ok and i not in malas and marxe[i] > umbral]
+            out[(etq, nome)] = {'umbral': round(umbral, 3), 'malas': [(et[i]['n'], et[i]['version'][0], round(float(marxe[i]), 3)) for i in malas],
+                                'cazadas': [(et[i]['n'], et[i]['version'][0]) for i in cazadas],
+                                'outras_marcadas': [(et[i]['n'], et[i]['version'][0], et[i]['tribunal'][:4], sorted(defectos(et[i]))) for i in outras],
+                                'auc': round(auc(marxe[malas], marxe[ok]), 3), 'pert_mediana': round(float(np.median(pert)), 3)}
+            if imprimir:
+                o = out[(etq, nome)]
+                print(f"{etq:18s} [{nome}] umbral {o['umbral']:.3f} AUC {o['auc']:.2f} cazadas {len(cazadas)}/{len(malas)} {o['cazadas']} "
+                      f"| malas {o['malas']} | outras {o['outras_marcadas'][:6]}")
+    return out
+
+
+def clave(E, T, ix, et, imprimir=True):
+    """Tres maneiras de ver se está a clave do plano, contra a etiqueta de Claude (`clave_ve`)."""
+    import numpy as np
+    esc = json.load(open(V1 / 'escenas-montadas.json'))
+    base = E @ T[ix['a photo']]
+    claves = sorted({x.get('clave') for x in esc if x.get('clave')})
+    res = {}
+    datos = [(i, d) for i, d in enumerate(et) if d['version'] == 'actual' and d.get('clave')]
+    for i, d in datos:
+        c = d['clave']
+        sw = E[i] @ T[ix[f'a photo with {c}']] - base[i]
+        so = E[i] @ T[ix[f'a photo of {c}']]
+        outros = [x for x in claves + DISTRACTORES if x != c and x not in c and c not in x]
+        Do = np.stack([E[i] @ T[ix[f'a photo of {x}']] for x in outros])      # [n_outros, 9]
+        z = (so - Do.mean(0)) / (Do.std(0) + 1e-6)
+        rango = (Do < so[None, :]).mean(0)                                     # fracción de outros por debaixo
+        res[i] = {'v5_3': float(sw[:3].max()), 'v5_9': float(sw.max()), 'z_3': float(z[:3].max()), 'z_9': float(z.max()),
+                  'rango_9': float(rango.max()), 'rango_3': float(rango[:3].max())}
+    for met in ('v5_3', 'v5_9', 'z_3', 'z_9', 'rango_3', 'rango_9'):
+        ve = [res[i][met] for i, d in datos if d['clave_ve']]
+        nove = [res[i][met] for i, d in datos if not d['clave_ve']]
+        # umbral que colle a metade das ausentes e falsas alarmas a ese umbral
+        nv = np.sort(nove)
+        u = float(np.median(nv))
+        fa = float(np.mean(np.asarray(ve) < u))
+        if imprimir:
+            print(f'clave {met:8s} AUC(ve>non) {auc(ve, nove):.3f}  ausentes {len(nove)}: mediana {u:.3f} -> falsas alarmas {fa:.0%} das {len(ve)} presentes')
+    return res, datos
+
+
+def correlacion(E, T, ix, et, imprimir=True):
+    """CLIP-L entre cada imaxe e o texto_en do seu plano, fronte á etiqueta `ilustra` de Claude (0/1/2)."""
+    import numpy as np
+    esc = json.load(open(REPO / 'plan-de-negocio/gauntlet4/imaxe/v1-texto-en.json'))['planos']
+    datos = [(i, d) for i, d in enumerate(et) if d['version'] == 'actual']
+    emb = E[:, :3].mean(1); emb = emb / np.linalg.norm(emb, axis=1, keepdims=True)
+    textos_unicos = list(dict.fromkeys(x['texto_en'] for x in esc))
+    Tt = np.stack([T[ix[t]] for t in textos_unicos])
+    fr = {t: [T[ix[f]] for f in frases_en(t) if f in ix] for t in textos_unicos}
+    res = {}
+    for i, d in datos:
+        t = esc[d['n'] - 1]['texto_en']
+        s_all = Tt @ emb[i]                       # imaxe fronte a todos os textos
+        s = float(emb[i] @ T[ix[t]])
+        sf = max(float(emb[i] @ v) for v in fr[t]) if fr[t] else s
+        # frases de todos os textos, para normalizar a medida por frase
+        res[i] = {'cos': s, 'cos_frase': sf, 'z': float((s - s_all.mean()) / (s_all.std() + 1e-6)),
+                  'rango': float((s_all < s).mean())}
+    for met in ('cos', 'cos_frase', 'z', 'rango'):
+        v = {k: [res[i][met] for i, d in datos if d['ilustra'] == k] for k in (0, 1, 2)}
+        if imprimir:
+            print(f'correlación {met:9s} medias 0/1/2: {np.mean(v[0]):.3f} / {np.mean(v[1]):.3f} / {np.mean(v[2]):.3f}  '
+                  f'AUC 2 fronte a 0: {auc(v[2], v[0]):.3f}  (1+2) fronte a 0: {auc(v[1] + v[2], v[0]):.3f}  n={[len(v[k]) for k in (0, 1, 2)]}')
+    return res, datos
+
+
+def analizar():
+    E, T, ix, et = cargar()
+    print('== pares novos (porta v6) ==')
+    o = pares(E, T, ix, et)
+    print('== clave ==')
+    clave(E, T, ix, et)
+    print('== correlación imaxe-texto ==')
+    correlacion(E, T, ix, et)
+    CAL.mkdir(parents=True, exist_ok=True)
+    (CAL / 'pares.json').write_text(json.dumps({f'{a}|{b}': v for (a, b), v in o.items()}, ensure_ascii=False, indent=1))
 
 
 if __name__ == '__main__':
