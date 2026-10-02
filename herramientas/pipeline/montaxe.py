@@ -7,6 +7,12 @@ Gauntlet 3 (vídeo longo): cada proceso só carga as imaxes do seu treito (antes
 e proceso), o fundido pode ser distinto en cada plano (`xf`, máis longo cara ao final: curva.py) e hai rótulos
 (título do episodio e capítulos) debuxados con PIL e fundidos sobre a imaxe.
 
+Gauntlet 4 (movemento): un plano con campo `animacion` ({"modo": "paralaxe" | "i2v" | "fixo", "camara", "efectos",
+"accion"}) xa non leva Ken Burns: o seu fotograma faino movemento.Plano (cámara 2,5D con profundidade e
+microanimacións, ou o clip I2V da caché). Os planos sen `animacion` móntanse coma sempre (a v1 sae igual). A
+profundidade e as máscaras calcúlanse antes, nun proceso aparte (movemento.preparar); cada proceso de montaxe crea
+os planos animados do seu treito só cando empezan a verse e líbraos cando rematan.
+
 Os fotogramas xéranse en Python (PIL + numpy) en 4 procesos en paralelo, cada un codifica o seu
 treito sen perdas visibles (x264 crf 14) e logo concaténanse e codifícase a versión final co audio
 e cos subtítulos galegos como pista aparte (mov_text, lingua glg) ou queimados (--queimar-subtitulos).
@@ -74,11 +80,22 @@ def _a_16_9(im):
     return im.crop((0, y, w, y + nh))
 
 
-def _init(imgs, idxs=None, rotulos=()):
-    """Carga (reescaladas para o movemento) só as imaxes `idxs` (todas se é None) e prepara os rótulos."""
+def _animado(e):
+    """¿O plano vai con movemento.Plano (Gauntlet 4) e non co Ken Burns?"""
+    an = e.get('animacion') if isinstance(e, dict) else None
+    return bool(an) and an.get('modo', 'paralaxe') in ('paralaxe', 'i2v', 'fixo')
+
+
+def _init(imgs, idxs=None, rotulos=(), esc=None):
+    """Carga (reescaladas para o movemento) só as imaxes `idxs` (todas se é None) e prepara os rótulos. Os planos
+    animados (`esc[k]['animacion']`) non se cargan aquí: créanse cando empezan a verse (_plano_animado)."""
     _G['src'] = {}
+    _G['mov'] = {}
+    _G['imgs'] = imgs
     for i, p in enumerate(imgs):
         if idxs is not None and i not in idxs:
+            continue
+        if esc is not None and _animado(esc[i]):
             continue
         im = _a_16_9(Image.open(p).convert('RGB')).resize((SW, SH), Image.LANCZOS)
         _G['src'][i] = im.filter(ImageFilter.UnsharpMask(radius=2, percent=40, threshold=2))
@@ -150,15 +167,33 @@ def _crop(mov, u):
     return (cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2)
 
 
+def _plano_animado(k, e):
+    """movemento.Plano do plano k, creado ao empezar a verse; libera os planos animados que xa remataron."""
+    if k not in _G['mov']:
+        import movemento
+        a0, a1 = e['vis']
+        _G['mov'][k] = movemento.Plano(e, _G['imgs'][k], a1 - a0, semente=k)
+    return _G['mov'][k]
+
+
+def _liberar_animados(t, esc):
+    for k in [k for k in _G.get('mov', {}) if esc[k]['vis'][1] <= t]:
+        del _G['mov'][k]
+
+
 def _frame(t, esc, dur):
     acc = None
+    _liberar_animados(t, esc)
     for k, e in enumerate(esc):
         a0, a1 = e['vis']
         if not (a0 <= t < a1):
             continue
         u = (t - a0) / (a1 - a0)
-        im = np.asarray(_G['src'][k].transform((OW, OH), Image.EXTENT, _crop(e['movemento'], u),
-                                               resample=Image.BILINEAR), np.float32)
+        if _animado(e):
+            im = _plano_animado(k, e).frame(u, t - a0)
+        else:
+            im = np.asarray(_G['src'][k].transform((OW, OH), Image.EXTENT, _crop(e['movemento'], u),
+                                                   resample=Image.BILINEAR), np.float32)
         alpha = 1.0
         xf = e.get('xf', XF)
         if k > 0 and t < e['b0'] + xf / 2:
@@ -188,7 +223,7 @@ def _chunk(args):
     idx, f0, f1, esc, dur, imgs, out, rotulos = args
     t0, t1 = f0 / FPS, f1 / FPS
     _init(imgs, {k for k, e in enumerate(esc) if e['vis'][0] <= t1 and e['vis'][1] >= t0},
-          [r for r in rotulos if r['t0'] <= t1 and r['t1'] >= t0])
+          [r for r in rotulos if r['t0'] <= t1 and r['t1'] >= t0], esc)
     cmd = [FFMPEG, '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{OW}x{OH}',
            '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '14',
            '-pix_fmt', 'yuv420p', out]
@@ -201,7 +236,8 @@ def _chunk(args):
 
 def render(escenas, imgs, dur, audio, srt, out, work, procs=4, queimar=False, vbr='1100k', rotulos=(),
            bufsize=None):
-    """escenas: [{'b0': inicio, 'b1': fin, 'movemento': ..., 'xf': fundido opcional}] sobre a liña de tempo final.
+    """escenas: [{'b0': inicio, 'b1': fin, 'movemento': ..., 'xf': fundido opcional, 'animacion': opcional
+    (Gauntlet 4, ver movemento.py)}] sobre a liña de tempo final.
     rotulos: [{'t0', 't1', 'texto', 'sub' opcional, 'y' (0-1), 'tam'}] debuxados enriba da imaxe."""
     work = Path(work); work.mkdir(parents=True, exist_ok=True)
     esc = []
@@ -210,6 +246,14 @@ def render(escenas, imgs, dur, audio, srt, out, work, procs=4, queimar=False, vb
         xf_out = escenas[k + 1].get('xf', XF) if k + 1 < len(escenas) else XF
         a0 = max(0.0, e['b0'] - xf_in / 2); a1 = min(dur, e['b1'] + xf_out / 2)
         esc.append({**e, 'vis': (a0, a1)})
+    if any(_animado(e) for e in esc):
+        # profundidade e máscaras (modelos ≈ 0,5 GB) nun proceso aparte, antes de repartir: os procesos de
+        # montaxe só len a caché
+        import multiprocessing as mp_
+        from concurrent.futures import ProcessPoolExecutor
+        import movemento
+        with ProcessPoolExecutor(1, mp_context=mp_.get_context('spawn')) as ex_:
+            ex_.submit(movemento.preparar, esc, list(imgs)).result()
     nf = int(round(dur * FPS))
     step = math.ceil(nf / procs)
     jobs = [(i, i * step, min(nf, (i + 1) * step), esc, dur, imgs, str(work / f'treito_{i}.mp4'), list(rotulos))

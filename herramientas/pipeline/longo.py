@@ -222,7 +222,7 @@ def ler_escenas(path, pl):
     for p in pl:
         x = por_n[p['n']]
         p['prompt'] = re.sub(r'[*_#`]+', '', str(x['prompt'])).strip().strip('"')
-        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son', 'clave'):
+        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son', 'clave', 'animacion'):   # animacion: Gauntlet 4
             if x.get(k):
                 p[k] = x[k]
     return pl
@@ -444,7 +444,8 @@ def main():
     with P.Etapa('7_montaxe'):
         import montaxe
         mp4 = W / 'video.mp4'; tmp = W / '.video.tmp.mp4'
-        montaxe.render([{'b0': p['b0'], 'b1': p['b1'], 'movemento': p['movemento'], 'xf': p['xf']} for p in pl], imgs, dur,
+        montaxe.render([{'b0': p['b0'], 'b1': p['b1'], 'movemento': p['movemento'], 'xf': p['xf'], 'n': p['n'],
+                        **({'animacion': p['animacion']} if p.get('animacion') else {})} for p in pl], imgs, dur,
                        str(W / 'mestura.wav'), str(W / 'subtitulos.srt'), tmp, W / 'montaxe', rotulos=rot,
                        vbr=f"{UMBRAIS['kbps_max'] - 200}k", bufsize='3000k')
         os.replace(tmp, mp4)

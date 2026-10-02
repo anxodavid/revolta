@@ -171,9 +171,9 @@ def preparar(planos, imaxes, lado=756):
     t0 = time.time(); n = 0
     for e, im in zip(planos, imaxes):
         an = e.get('animacion') or {}
-        if an.get('modo') in (None, 'fixo', 'i2v') and not an.get('efectos'):
+        if not an:
             continue
-        profundidade(im, lado)
+        profundidade(im, lado)          # tamén nos I2V: se falta o clip, o plano vai en paralaxe
         txt = [t for ef in an.get('efectos', []) for t in TEXTOS_MASCARA.get(ef, [])]
         if txt:
             clipseg(im, txt)
@@ -264,7 +264,7 @@ class Paralaxe:
         self.hs, self.ws = H // 2, W // 2
         Zs = cv2.resize(self.Z, (self.ws, self.hs), interpolation=cv2.INTER_NEAREST)
         ys, xs = np.mgrid[0:self.hs, 0:self.ws].astype(np.float32)
-        xn = (xs * 2 + 0.5 - W / 2) / self.f; yn = (ys * 2 + 0.5 - H / 2) / self.f
+        xn = (xs * 2 + 1.0 - W / 2) / self.f; yn = (ys * 2 + 1.0 - H / 2) / self.f
         orde = np.argsort(-Zs.ravel(), kind='stable')        # de lonxe a preto
         self.p_x, self.p_y, self.p_z = xn.ravel()[orde], yn.ravel()[orde], Zs.ravel()[orde]
         # grella de saída a media resolución (coordenadas normalizadas da cámara)
@@ -277,16 +277,23 @@ class Paralaxe:
         self.d = d
 
     def _zoom_necesario(self):
-        """Zoom mínimo (≥ 1) para que nin a esquina máis próxima nin a máis lonxana saian da fonte en ningún momento."""
+        """Zoom mínimo (≥ 1) para que ningún punto do bordo da saída mostree fóra da fonte en ningún momento. Para
+        cada bordo úsanse as profundidades que hai de verdade nunha banda da fonte xunto a ese bordo."""
+        H, W = self.H, self.W
+        b = max(4, int(0.12 * min(H, W)))
+        bandas = {'esq': self.Z[:, :b], 'der': self.Z[:, -b:], 'arr': self.Z[:b], 'aba': self.Z[-b:]}
+        zs = {k: np.unique(np.percentile(v, [0, 25, 50, 75, 100]).round(3)) for k, v in bandas.items()}
+        hw, hh = (W / SOBRE) / 2 / self.f, (H / SOBRE) / 2 / self.f        # semiancho visible (normalizado)
+        lim_x, lim_y = (W / 2 - 2) / self.f, (H / 2 - 2) / self.f
+        t = np.linspace(-1, 1, 9)
+        bordos = ([('esq', -hw, hh * v) for v in t] + [('der', hw, hh * v) for v in t] +
+                  [('arr', hw * v, -hh) for v in t] + [('aba', hw * v, hh) for v in t])
         k = 1.0
-        hw, hh = (self.W / SOBRE) / 2 / self.f, (self.H / SOBRE) / 2 / self.f     # semiancho visible (normalizado)
-        lim_x, lim_y = (self.W / 2 - 2) / self.f, (self.H / 2 - 2) / self.f
         for u in np.linspace(0, 1, 9):
             tx, ty, tz, sx, sy = self.cam(u)
-            for Z in (1.0, 1.4, 2.5, ZFAR):
-                for cx, cy in ((hw, hh), (-hw, hh), (hw, -hh), (-hw, -hh)):
-                    # punto de saída (cx/k, cy/k): onde está na fonte?
-                    for kk in np.arange(k, 1.6, 0.01):
+            for nome, cx, cy in bordos:
+                for Z in zs[nome]:
+                    for kk in np.arange(k, 1.6, 0.005):
                         x = ((cx / kk - sx) * (Z - tz) + tx) / Z
                         y = ((cy / kk - sy) * (Z - tz) + ty) / Z
                         if abs(x) <= lim_x and abs(y) <= lim_y:
@@ -402,11 +409,37 @@ class Efecto:
         return F
 
 
+class _Chama:
+    """Unha chama (compoñente conexa da máscara de lume): caixa, ruído que corre cara arriba e zona de desprazamento."""
+
+    def __init__(self, F, caixa, alto, dur, rng, candea, forza):
+        import cv2
+        y0, y1, x0, x1 = caixa
+        self.cx = caixa
+        hr, wr = y1 - y0, x1 - x0
+        self.v = (1.6 if not candea else 2.4) * alto                 # px/s que soben as linguas de lume
+        lon = int(self.v * (dur + 2)) + hr + 8
+        lam = max(4.0, (0.16 if not candea else 0.22) * alto)
+        self.tx = (ruido(lon, wr, lam, rng) - 0.5).astype(np.float32)
+        self.ty = (ruido(lon, wr, lam * 1.3, rng) - 0.5).astype(np.float32)
+        self.A = (0.075 if not candea else 0.05) * alto * forza       # amplitude do desprazamento (px)
+        Fr = F[y0:y1, x0:x1]
+        dil = cv2.dilate(Fr, np.ones((max(3, alto // 6) | 1, max(3, alto // 10) | 1), np.uint8))
+        arriba = np.zeros_like(dil)
+        n = max(2, alto // 3)
+        for k in range(1, n):                                           # estela cara arriba
+            arriba[:-k] = np.maximum(arriba[:-k], dil[k:] * (1 - k / n))
+        self.Fd = cv2.GaussianBlur(np.maximum(dil, arriba), (0, 0), max(1.0, alto / 25)).astype(np.float32)
+        self.Fr = cv2.GaussianBlur(Fr, (0, 0), 1.0).astype(np.float32)[..., None]
+        self.gy, self.gx = np.mgrid[0:hr, 0:wr].astype(np.float32)
+        self.sem = int(rng.integers(0, 1 << 30))
+
+
 class Lume(Efecto):
     """Chamas (lareira, fogueira, queimada) ou candea: as linguas de lume suben (desprazamento con ruído que
-    corre cara arriba só sobre os píxeles de chama), a chama tremela en intensidade e a luz do contorno tremela
-    co mesmo sinal (o que máis vende o efecto). Máscara: píxeles brillantes e quentes (R > G > B) e, se hai,
-    CLIPSeg "fire"/"candle flame"."""
+    corre cara arriba só sobre os píxeles de cada chama), cada chama tremela en intensidade co seu propio sinal e a
+    luz do contorno tremela co sinal medio (o que máis vende o efecto). Máscara: píxeles brillantes e quentes
+    (R > G > B) e, se hai, CLIPSeg "fire"/"candle flame"; cada compoñente conexa é unha chama."""
 
     def __init__(self, src, prob=None, dur=10.0, semente=0, candea=False, forza=1.0):
         import cv2
@@ -419,32 +452,21 @@ class Lume(Efecto):
         F = cv2.morphologyEx(F.astype(np.float32), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
         self.candea = candea
         H, W = F.shape
-        area = float(F.sum())
-        if area < (40 if candea else 300):
+        rng = np.random.default_rng(semente + 21)
+        n, lab, st, _ = cv2.connectedComponentsWithStats((F > 0.2).astype(np.uint8), 8)
+        minimo = (25 if candea else 120)
+        self.chamas = []
+        for c in np.argsort(-st[1:, cv2.CC_STAT_AREA])[:12] + 1:        # as 12 maiores
+            x, y, w, h, area = st[c]
+            if area < minimo:
+                continue
+            alto = max(10, int(h))
+            caixa = (max(0, int(y - (1.4 if candea else 0.9) * alto)), min(H, int(y + h + 0.12 * alto)),
+                     max(0, int(x - 0.35 * w)), min(W, int(x + w + 0.35 * w)))
+            Fc = F * (lab == c)
+            self.chamas.append(_Chama(Fc, caixa, alto, dur, rng, candea, forza))
+        if not self.chamas:
             self.activo = False; return
-        cx = _caixa(F, 0.2, (0.35, 0.35, 0.9 if not candea else 1.4, 0.12), minimo=16)
-        y0, y1, x0, x1 = cx
-        self.cx = cx
-        ys = np.nonzero(F > 0.2)[0]
-        alto = max(12, int(np.percentile(ys, 95) - np.percentile(ys, 5)))
-        self.alto = alto
-        rng = np.random.default_rng(semente)
-        hr, wr = y1 - y0, x1 - x0
-        self.v = (1.6 if not candea else 2.4) * alto                 # px/s que soben as linguas de lume
-        lon = int(self.v * (dur + 2)) + hr + 8
-        lam = max(5.0, (0.16 if not candea else 0.22) * alto)
-        self.tx = (ruido(lon, wr, lam, rng) - 0.5).astype(np.float32)
-        self.ty = (ruido(lon, wr, lam * 1.3, rng) - 0.5).astype(np.float32)
-        self.A = (0.075 if not candea else 0.05) * alto * forza       # amplitude do desprazamento (px)
-        # zona onde se despraza: a chama, estendida cara arriba e esvaída
-        Fr = F[y0:y1, x0:x1]
-        dil = cv2.dilate(Fr, np.ones((max(3, alto // 6) | 1, max(3, alto // 10) | 1), np.uint8))
-        arriba = np.zeros_like(dil)
-        for k in range(1, max(2, alto // 3)):                          # estela cara arriba
-            arriba[:-k] = np.maximum(arriba[:-k], dil[k:] * (1 - k / max(2, alto // 3)))
-        self.Fd = cv2.GaussianBlur(np.maximum(dil, arriba), (0, 0), max(1.0, alto / 25)).astype(np.float32)
-        self.Fr = cv2.GaussianBlur(Fr, (0, 0), 1.0).astype(np.float32)
-        self.gy, self.gx = np.mgrid[0:hr, 0:wr].astype(np.float32)
         # mapa de luz do contorno: a chama desenfocada a gran escala, normalizada
         p = 4
         Fp = cv2.resize(F, (W // p, H // p), interpolation=cv2.INTER_AREA)
@@ -459,23 +481,23 @@ class Lume(Efecto):
 
     def fonte(self, S, t):
         import cv2
-        y0, y1, x0, x1 = self.cx
-        hr = y1 - y0
-        o = int(self.v * t) % max(1, (self.tx.shape[0] - hr))
-        o = self.tx.shape[0] - hr - o                                  # o ruído corre cara arriba
-        dx = self.tx[o:o + hr] * self.A * self.Fd
-        dy = (self.ty[o:o + hr] * self.A * 1.4 + self.A * 0.25) * self.Fd
-        if self.candea:                                                # a candea abanea un pouco
-            dx += (0.35 * self.A * math.sin(2 * math.pi * 0.55 * t + self.sem) +
-                   0.2 * self.A * math.sin(2 * math.pi * 1.37 * t)) * self.Fd
-        roi = S[y0:y1, x0:x1]
-        w = cv2.remap(roi, self.gx + dx, self.gy + dy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
-        p = parpadeo(t, self.sem, 1.4 if self.candea else 1.0)
-        w = w * (1 + self.amp_chama * p * self.Fr[..., None])
         S = S.copy() if S is self._orixe else S
-        S[y0:y1, x0:x1] = w
-        # luz do contorno co mesmo parpadeo, algo máis lenta (a luz suma as linguas de lume)
-        pl = 0.65 * p + 0.35 * parpadeo(t - 0.05, self.sem + 1, 0.5)
+        for ch in self.chamas:
+            y0, y1, x0, x1 = ch.cx
+            hr = y1 - y0
+            L = ch.tx.shape[0]
+            o = L - hr - int(ch.v * t) % max(1, (L - hr))               # o ruído corre cara arriba
+            dx = ch.tx[o:o + hr] * ch.A * ch.Fd
+            dy = (ch.ty[o:o + hr] * ch.A * 1.4 + ch.A * 0.25) * ch.Fd
+            if self.candea:                                             # a candea abanea un pouco
+                dx = dx + (0.35 * ch.A * math.sin(2 * math.pi * 0.55 * t + ch.sem % 7) +
+                           0.2 * ch.A * math.sin(2 * math.pi * 1.37 * t)) * ch.Fd
+            roi = S[y0:y1, x0:x1]
+            w = cv2.remap(roi, ch.gx + dx, ch.gy + dy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT101)
+            pc = parpadeo(t, ch.sem, 1.4 if self.candea else 1.0)
+            S[y0:y1, x0:x1] = w * (1 + self.amp_chama * pc * ch.Fr)
+        # luz do contorno: parpadeo propio, algo máis lento (a luz suma as linguas de lume)
+        pl = 0.65 * parpadeo(t, self.sem + 1, 1.0) + 0.35 * parpadeo(t - 0.05, self.sem + 2, 0.5)
         S *= 1 + self.amp_luz * pl * self.I * self.ton
         return S
 
@@ -514,16 +536,16 @@ class Choiva(Efecto):
         self.cor = np.array([228, 232, 238], np.float32)
 
     def pantalla(self, F, t):
+        a = np.zeros((OH, OW), np.float32)
         for v, op, T in self.tex:
-            o = int(v * t) % (2 * OH)
-            o = 2 * OH - o
+            o = 2 * OH - int(v * t) % (2 * OH)
             if o + OH <= 2 * OH:
                 capa = T[o:o + OH]
             else:
                 capa = np.concatenate([T[o:], T[:o + OH - 2 * OH]])
-            a = capa.astype(np.float32)[..., None] * op
-            F = F + a * (self.cor - F)
-        return F
+            a += capa.astype(np.float32) * op
+        a = np.minimum(a, 0.6)[..., None]
+        return F + a * (self.cor - F)
 
 
 class Bretema(Efecto):
@@ -687,3 +709,313 @@ def efectos_do_plano(nomes, src, disp, imaxe, dur, semente=0, forza=1.0):
         if e.activo:
             out.append((nome, e))
     return out
+
+
+# ------------------------------------------------------------------ clips I2V: caché, cámara lenta e escala
+I2V_PARAMS = {'modelo': 'ltxv-2b-0.9.8-distilled', 'W': 800, 'H': 448, 'F': 97, 'pasos': 8, 'semente': 42,
+              'ruido_cond': 0.15}
+
+
+def i2v_clave(imaxe, accion, params=None):
+    p = dict(I2V_PARAMS, **(params or {}))
+    txt = json.dumps({'imaxe': sha_ficheiro(imaxe), 'accion': accion, **p}, sort_keys=True)
+    return hashlib.sha256(txt.encode()).hexdigest()[:16]
+
+
+def i2v_ficheiro(imaxe, accion, params=None):
+    """Ruta do clip na caché (exista ou non)."""
+    return cache_dir('i2v') / f'{i2v_clave(imaxe, accion, params)}.mp4'
+
+
+def ler_video(f):
+    """Fotogramas (N, h, w, 3) uint8 dun vídeo, co ffmpeg de imageio."""
+    import imageio_ffmpeg
+    ff = imageio_ffmpeg.get_ffmpeg_exe()
+    info = subprocess.run([ff, '-i', str(f)], capture_output=True, text=True).stderr
+    import re
+    m = re.search(r'Stream.*Video.*?(\d{2,5})x(\d{2,5})', info)
+    w, h = int(m.group(1)), int(m.group(2))
+    p = subprocess.run([ff, '-v', 'error', '-i', str(f), '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+                       capture_output=True, check=True)
+    return np.frombuffer(p.stdout, np.uint8).reshape(-1, h, w, 3)
+
+
+_RIFE = {}
+
+
+def _rife():
+    """RIFE v4 (ECCV2022-RIFE, MIT, © Megvii) desde o repo TensorForger/RIFE-safetensors: só o punto medio."""
+    if 'm' not in _RIFE:
+        import importlib.util
+        import torch
+        from huggingface_hub import hf_hub_download
+        from safetensors.torch import load_file
+        cd = _hf_cache('TensorForger/RIFE-safetensors')
+        py = hf_hub_download('TensorForger/RIFE-safetensors', 'interpolation_model.py', cache_dir=cd)
+        pesos = hf_hub_download('TensorForger/RIFE-safetensors', 'flownet.safetensors', cache_dir=cd)
+        spec = importlib.util.spec_from_file_location('rife_ifnet', py)
+        mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+        mod.device, mod.dtype = torch.device('cpu'), torch.float32       # o módulo trae a grella en fp16
+        m = mod.IFNet(); m.load_state_dict(load_file(pesos)); m.eval()
+        _RIFE['m'] = m
+    return _RIFE['m']
+
+
+def interpolar(frames, veces=2):
+    """Insire fotogramas intermedios con RIFE (punto medio, recursivo): N -> (N-1)*veces+1. veces = 2 ou 4."""
+    import torch
+    m = _rife()
+    n, h, w, _ = frames.shape
+    ph, pw = (32 - h % 32) % 32, (32 - w % 32) % 32
+    x = torch.from_numpy(frames).permute(0, 3, 1, 2).float() / 255
+    if ph or pw:
+        x = torch.nn.functional.pad(x, (0, pw, 0, ph), mode='replicate')
+    with torch.no_grad():
+        for _ in range(int(math.log2(veces))):
+            medios = []
+            for i in range(0, x.shape[0] - 1, 4):
+                a = x[i:i + 4]; b = x[i + 1:i + 5]
+                k = min(len(a), len(b))
+                medios.append(m(torch.cat([a[:k], b[:k]], 1)).clamp(0, 1))
+            md = torch.cat(medios)
+            out = torch.empty((x.shape[0] * 2 - 1, *x.shape[1:]))
+            out[0::2] = x; out[1::2] = md
+            x = out
+    x = x[:, :, :h, :w]
+    return (x.permute(0, 2, 3, 1).numpy() * 255 + 0.5).astype(np.uint8)
+
+
+def clip_lento(mp4, veces=2):
+    """Clip interpolado (caché xunto ao clip): para a cámara lenta dos planos máis longos ca o clip."""
+    f = Path(mp4).with_name(Path(mp4).stem + f'_x{veces}.npy')
+    if f.exists():
+        return np.load(f, mmap_mode='r')
+    fr = interpolar(ler_video(mp4), veces)
+    tmp = f.with_suffix('.tmp.npy'); np.save(tmp, fr); os.replace(tmp, f)
+    return np.load(f, mmap_mode='r')
+
+
+class Clip:
+    """Encaixa un clip I2V nun plano de duración `dur`: se o plano é máis longo ca o clip, cámara lenta (fotogramas
+    de RIFE) ata `lento_min` (0,5 = a metade de velocidade); se aínda sobra plano, o derradeiro fotograma segue coa
+    cámara 2D lenta. Escala a 1080p con Lanczos e unha máscara de desenfoque suave; zoom lento opcional."""
+
+    def __init__(self, mp4, dur, camara_nome='avanza', lento_min=0.5, zoom=1.05):
+        base = ler_video(mp4)
+        self.fps = FPS
+        dur_clip = (len(base) - 1) / FPS
+        v = dur_clip / max(dur, 1e-3)
+        if v >= 0.98:
+            self.fr, self.vel = base, 1.0
+        else:
+            veces = 2 if v >= 0.45 else 4
+            self.fr = clip_lento(mp4, veces) if os.environ.get('MOVEMENTO_RIFE', '1') == '1' else base
+            fact = (len(self.fr) - 1) / (len(base) - 1)
+            self.vel = max(v, lento_min) * fact                     # fotogramas do clip lento por fotograma de saída
+        self.dur = dur
+        self.camara = camara_nome
+        self.zoom = zoom
+
+    def frame(self, t):
+        import cv2
+        i = min(len(self.fr) - 1, t * FPS * self.vel)
+        a = int(i); b = min(a + 1, len(self.fr) - 1); w = i - a
+        im = self.fr[a].astype(np.float32) if w < 0.02 else (self.fr[a] * (1 - w) + self.fr[b] * w).astype(np.float32)
+        h0, w0 = im.shape[:2]
+        # recorte 16:9 do clip e zoom lento (a cámara 2D: o clip xa trae o seu propio movemento)
+        u = min(1.0, max(0.0, t / max(self.dur, 1e-3)))
+        z = 1 + (self.zoom - 1) * (u if self.camara != 'recua' else 1 - u)
+        cw, ch = w0 / z, min(h0, w0 / z * OH / OW)
+        x0, y0 = (w0 - cw) / 2, (h0 - ch) / 2
+        M = np.array([[OW / cw, 0, -x0 * OW / cw], [0, OH / ch, -y0 * OH / ch]], np.float32)
+        out = cv2.warpAffine(im, M, (OW, OH), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REFLECT101)
+        bl = cv2.GaussianBlur(out, (0, 0), 1.6)
+        return np.clip(out * 1.45 - bl * 0.45, 0, 255)
+
+
+# ------------------------------------------------------------------ plano animado (o que usa a montaxe)
+class Plano:
+    """Un plano animado: paralaxe + efectos, ou clip I2V (+ efectos de pantalla). `frame(u, t)` devolve float32
+    OHxOWx3 (0-255) para o progreso u (0-1) e o tempo t (s) desde que o plano empeza a verse."""
+
+    def __init__(self, e, imaxe, dur, semente=0):
+        an = dict(e.get('animacion') or {})
+        self.modo = an.get('modo', 'paralaxe')
+        cam = an.get('camara') or 'avanza'
+        forza = float(an.get('forza', 1.0))
+        self.efs, self.efp = [], []
+        self.clip = None
+        if self.modo == 'i2v':
+            f = an.get('clip') or i2v_ficheiro(imaxe, an.get('accion', ''), an.get('i2v'))
+            if Path(f).exists():
+                self.clip = Clip(f, dur, cam)
+            else:                                    # sen clip na caché: paralaxe (e avísase)
+                print(f'movemento: falta o clip I2V do plano {e.get("n")} ({f}); vai en paralaxe', flush=True)
+                self.modo = 'paralaxe'
+        if self.modo != 'i2v':
+            self.src = fonte(imaxe)
+            disp = profundidade(imaxe)
+            efs = efectos_do_plano(an.get('efectos'), self.src, disp, imaxe, dur, semente, forza)
+            self.efs = [x for n, x in efs if n not in ('choiva', 'po')]
+            self.efp = [x for n, x in efs if n in ('choiva', 'po')]
+            self.plx = Paralaxe(self.src, disp, cam if self.modo == 'paralaxe' else 'avanza', dur,
+                                forza if self.modo == 'paralaxe' else 0.0, semente)
+        else:
+            efs = efectos_do_plano([x for x in an.get('efectos', []) if x in ('choiva', 'po')], None, None,
+                                   imaxe, dur, semente, forza)
+            self.efp = [x for n, x in efs]
+
+    def frame(self, u, t):
+        if self.clip is not None:
+            F = self.clip.frame(t)
+        else:
+            S = self.src
+            for ef in self.efs:
+                S = ef.fonte(S, t)
+            F = self.plx.frame(u, S)
+        for ef in self.efp:
+            F = ef.pantalla(F, t)
+        return F
+
+
+# ------------------------------------------------------------------ porta de vídeo (clips I2V)
+# Limiares calibrados coas probas da rolda 1 (plan-de-negocio/gauntlet4/movemento/informe-r1.md, §porta)
+PORTA = {
+    'clip_min': 0.80,          # coseno CLIP entre o primeiro fotograma e calquera outro (cambio de escena / fusión)
+    'parpadeo_max': 3.0,       # desviación (0-255) da luminancia media fóra da súa tendencia (media móbil de 9)
+    'fluxo_min': 0.12,         # px/fotograma de media (a 800 px de ancho): por debaixo, o clip está quieto
+    'fluxo_max': 4.5,          # px/fotograma de media: por riba, movemento caótico ou cámara tola
+    'incoherencia_max': 0.85,  # desorde local do fluxo (0 = ríxido, 1 = ruído)
+    'salto_max': 0.45,         # salto dos puntos do corpo entre mostras seguidas, en tamaños de torso
+    'proporcion_cv_max': 0.30, # variación (CV) da lonxitude dos brazos e pernas respecto do torso
+}
+
+
+def _mediapipe():
+    if 'mp' not in _MOD:
+        import mediapipe as mp
+        from mediapipe.tasks.python import BaseOptions, vision
+        d = Path(os.environ.get('REVISOR_DIR', f'{_scratch()}/revisor'))
+        hands = vision.HandLandmarker.create_from_options(vision.HandLandmarkerOptions(
+            base_options=BaseOptions(model_asset_path=str(d / 'hand_landmarker.task')), num_hands=8,
+            min_hand_detection_confidence=0.35, min_hand_presence_confidence=0.35))
+        pose = vision.PoseLandmarker.create_from_options(vision.PoseLandmarkerOptions(
+            base_options=BaseOptions(model_asset_path=str(d / 'pose_landmarker_full.task')), num_poses=4,
+            min_pose_detection_confidence=0.3))
+        _MOD['mp'] = (mp, hands, pose)
+    return _MOD['mp']
+
+
+def _corpos(fr):
+    """Corpos de MediaPipe nun fotograma: lista de arrays (33, 3) x, y (en unidades do alto), visibilidade."""
+    mp, hands, pose = _mediapipe()
+    h, w = fr.shape[:2]
+    im = mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(fr))
+    p = pose.detect(im); hd = hands.detect(im)
+    cs = [np.array([[l.x * w / h, l.y, l.visibility] for l in lm], np.float32) for lm in p.pose_landmarks]
+    mans = [np.array([lm[0].x * w / h, lm[0].y], np.float32) for lm in hd.hand_landmarks]
+    return cs, mans
+
+
+def porta_video(mp4, mostras=16, clip=None):
+    """Porta automática dun clip I2V. Mide: (1) deriva de CLIP entre o primeiro fotograma e o resto; (2) parpadeo
+    de luminancia; (3) fluxo óptico (Farneback): nin quieto nin caótico, e a súa desorde local; (4) MediaPipe
+    (corpo e mans) en `mostras` fotogramas: saltos dos puntos do corpo, proporcións que cambian (corpos que se
+    deforman), mans sen corpo. Devolve {'ok', 'problemas', 'avisos', medidas...}."""
+    import cv2
+    fr = ler_video(mp4)
+    N, h, w = fr.shape[:3]
+    res = {'fotogramas': int(N), 'res': f'{w}x{h}'}
+    # (2) parpadeo
+    L = fr.reshape(N, -1).mean(1)
+    k = 9
+    tend = np.convolve(np.pad(L, (k // 2, k // 2), mode='edge'), np.ones(k) / k, mode='valid')
+    res['parpadeo'] = round(float(np.abs(L - tend).max()), 2)
+    # (3) fluxo óptico a media resolución
+    g = [cv2.cvtColor(cv2.resize(x, (w // 2, h // 2), interpolation=cv2.INTER_AREA), cv2.COLOR_RGB2GRAY) for x in fr]
+    mags, inco = [], []
+    for i in range(0, N - 1, 2):
+        fl = cv2.calcOpticalFlowFarneback(g[i], g[i + 1], None, 0.5, 3, 15, 3, 5, 1.2, 0)
+        mg = np.linalg.norm(fl, axis=-1) * 2                       # a px de resolución do clip
+        mags.append(float(mg.mean()))
+        loc = cv2.blur(fl, (15, 15))
+        dev = np.linalg.norm(fl - loc, axis=-1) * 2
+        inco.append(float(dev.mean() / (mg.mean() + 0.05)))
+    esc = 800.0 / w                                                 # normalizado a 800 px de ancho
+    res['fluxo_medio'] = round(float(np.mean(mags)) * esc, 3)
+    res['fluxo_p95'] = round(float(np.percentile(mags, 95)) * esc, 3)
+    res['incoherencia'] = round(float(np.median(inco)), 3)
+    # (1) CLIP
+    idx = np.linspace(0, N - 1, min(mostras, N)).round().astype(int)
+    try:
+        if clip is None:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            import revisor
+            clip = revisor.Clip()
+        import tempfile
+        from PIL import Image
+        embs = []
+        with tempfile.TemporaryDirectory() as td:
+            for i in idx[::2].tolist() + [int(idx[-1])]:
+                f = f'{td}/{i}.png'; Image.fromarray(fr[i]).save(f)
+                embs.append(clip.imaxe(f))
+        cs = [float(embs[0] @ e) for e in embs[1:]]
+        res['clip_min'] = round(min(cs), 3); res['clip_fin'] = round(cs[-1], 3)
+    except Exception as ex:                                         # sen CLIP: a porta segue co resto
+        res['clip_erro'] = str(ex)[:120]
+    # (4) MediaPipe
+    saltos, props, ncorp, orfas = [], [], [], 0
+    prev = None
+    for i in idx:
+        cs, mans = _corpos(fr[i])
+        ncorp.append(len(cs))
+        for c in cs:
+            vis = c[:, 2] > 0.5
+            torso = np.linalg.norm((c[11, :2] + c[12, :2]) / 2 - (c[23, :2] + c[24, :2]) / 2)
+            if torso < 0.04 or not vis[[11, 12, 23, 24]].all():
+                continue
+            membros = [(11, 13), (13, 15), (12, 14), (14, 16), (23, 25), (25, 27), (24, 26), (26, 28)]
+            props.append([np.linalg.norm(c[a, :2] - c[b, :2]) / torso if vis[a] and vis[b] else np.nan
+                          for a, b in membros])
+            if prev is not None:
+                cen = (c[11, :2] + c[24, :2]) / 2
+                pc = min(prev, key=lambda q: np.linalg.norm((q[11, :2] + q[24, :2]) / 2 - cen))
+                v2 = vis & (pc[:, 2] > 0.5)
+                if v2.sum() >= 6:
+                    saltos.append(float(np.median(np.linalg.norm(c[v2, :2] - pc[v2, :2], axis=1)) / torso))
+        pulsos = [c[j, :2] for c in cs for j in (15, 16)]
+        for m in mans:
+            d = min((np.linalg.norm(m - q) for q in pulsos), default=9.0)
+            orfas += d > 0.14 and len(cs) > 0
+        prev = cs if cs else prev
+    res['corpos'] = ncorp
+    # salto entre mostras: normalízase a mostras cada ~3 fotogramas
+    paso = max(1, (N - 1) / max(1, len(idx) - 1))
+    res['salto_max'] = round(max(saltos) * 3 / paso, 3) if saltos else None
+    if props:
+        P = np.array(props, np.float32)
+        cv = np.nanstd(P, 0) / (np.nanmean(P, 0) + 1e-6)
+        cv = cv[np.sum(~np.isnan(P), 0) >= 4]
+        res['proporcion_cv'] = round(float(np.nanmax(cv)), 3) if len(cv) else None
+    res['mans_sen_corpo'] = int(orfas)
+    pr, av = [], []
+    if res.get('clip_min') is not None and res['clip_min'] < PORTA['clip_min']:
+        pr.append(f"deriva da escena (CLIP {res['clip_min']})")
+    if res['parpadeo'] > PORTA['parpadeo_max']:
+        pr.append(f"parpadeo de luz ({res['parpadeo']})")
+    if res['fluxo_medio'] < PORTA['fluxo_min']:
+        pr.append(f"case quieto (fluxo {res['fluxo_medio']} px/f)")
+    if res['fluxo_medio'] > PORTA['fluxo_max']:
+        pr.append(f"movemento excesivo (fluxo {res['fluxo_medio']} px/f)")
+    if res['incoherencia'] > PORTA['incoherencia_max']:
+        av.append(f"movemento desordenado ({res['incoherencia']})")
+    if res.get('salto_max') and res['salto_max'] > PORTA['salto_max']:
+        pr.append(f"salto do corpo ({res['salto_max']} torsos)")
+    if res.get('proporcion_cv') and res['proporcion_cv'] > PORTA['proporcion_cv_max']:
+        pr.append(f"corpo que se deforma (CV {res['proporcion_cv']})")
+    if orfas > 1:
+        av.append(f'mans sen corpo en {orfas} mostras')
+    if len(set(ncorp)) > 2:
+        av.append(f'corpos que aparecen e desaparecen {sorted(set(ncorp))}')
+    res.update({'ok': not pr, 'problemas': pr, 'avisos': av})
+    return res
