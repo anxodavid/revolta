@@ -80,7 +80,7 @@ def xerar(ns):
             s = round(time.time() - t, 1)
             tmp = f.with_suffix('.tmp.png'); im.save(tmp); os.replace(tmp, f)
             rex[k] = {'n': n, 'version': ver, 'modelo': m['nome'], 'W': m['W'], 'H': m['H'], 'semente': seed, 'prompt': pr,
-                      'clave': e1.get('clave'), 'texto': e1['texto'], 'epoca': EPOCA.get(n), 's_xeracion': s}
+                      'clave': e1.get('clave'), 'texto': e1['texto'], 'epoca': EPOCA.get(n), 'fase': e1['fase'], 's_xeracion': s}
             rexf.write_text(json.dumps(rex, ensure_ascii=False, indent=1))
             print(f'{k}: {s} s', flush=True)
             imaxes._liberar()
