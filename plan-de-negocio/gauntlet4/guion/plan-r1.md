@@ -117,3 +117,45 @@ só o primeiro verso e co autor; nada inquietante desde ≈ 8:30; aviso e fórmu
 preguntas, díxitos nin parénteses; frases ≤ 28 palabras; "segundo" ≤ 5; ≤ 0,8 atribucións por 100 palabras na parte
 esperta; reconstrución só explícita ("podemos pensala…") e xenérica, como moito unha por escena. A porta de estilo
 veta a subcadea "imaxina" (imaxinar, imaxinación): as reconstrucións usan "podemos pensar" ou "podemos velo".
+
+## Anexo (despois de escribir): momento visible de cada parágrafo do texto final
+
+O texto final ten 36 parágrafos narrados (os do plan eran 22 previstos). Numeración de [`feitos-r1.md`](feitos-r1.md)
+(P = parágrafo, S = frase). Todo o que se ve ten que estar no texto ou ser xenérico (luz, tempo, lugar).
+
+| P | S | Momento que se pode filmar |
+|---|---|---|
+| 1 | 1-4 | Cociña ás escuras; un home ergue un cazo de augardente en chamas sobre un pote de barro; logo, un barco vello amarrado no porto de Vigo |
+| 2 | 5-8 | Vilalba, 1617: unha testemuña fala ante quen escribe; unha parteira á beira dunha muller de parto; un home ao que lle calzan uns zapatos de muller e que dá un salto |
+| 3-4 | 9-11 | Aviso e fórmula: imaxe tranquila (a peza de planos decide) |
+| 5 | 12-13 | O pote que arde fronte a un legaxo vello atado cunha cinta |
+| 6 | 14-16 | Mans que pasan follas dun proceso nun arquivo; unha liña emendada; unha fonte de noite con mulleres e sombras que miran |
+| 7 | 17-19 | Mulleres de aldea: unha menciñeira con herbas, unhas mans de parteira |
+| 8 | 20-22 | Nai e filla á porta dunha casa de pedra en Vilalba; veciñas que murmuran nun camiño |
+| 9 | 23-25 | María no monte co gando, falando baixo; vento na herba |
+| 10 | 26-30 | Unha testemuña fala e unha man escribe cunha pluma "auga, digo, leite"; o mesmo papel hoxe, vello, nunha mesa do arquivo |
+| 11 | 31-35 | Un clérigo le a excomuñón; unha porta pechada; pan, sal, unha xerra de auga e o lume que non se dan |
+| 12 | 36-38 | O papel vello e, ao lado, unha folla impresa sen nome |
+| 13 | 39-41 | Amigos arredor dun pote que arde na cuberta dun barco vello no porto, de noite |
+| 14 | 42-44 | Copias do conxuro sen nome que pasan de man en man; un home asina un rexistro |
+| 15 | 45-47 | O pote do barco fronte a un tribunal; tres portas: a da xustiza civil, a da Igrexa e a da Inquisición |
+| 16 | 48-50 | Un tribunal da Inquisición en Santiago; xuíces da xustiza ordinaria; mulleres acusadas |
+| 17 | 51-56 | María Cibreira ante un xuíz que pregunta e un escribán que escribe (sen tortura en imaxe); a casa da nai chea de xente que vén curarse |
+| 18 | 57-58 | Unha pregunta lida en voz alta; unha muller que calla; a pluma que escribe |
+| 19 | 59-61 | Campo Lameiro: veciños enfadados nun curral con becerras e leitóns |
+| 20 | 62-63 | Veciños que espreitan de noite a fonte da Nogueira; unha man apunta nomes nun papel |
+| 21 | 64-66 | Noite curta de xuño: auga fría da fonte, ollos na escuridade; a lista |
+| 22 | 67-69 | Xente que vai ás fontes a noite de san Xoán con xerras; a mesma fonte vista de dous lados |
+| 23 | 70-72 | Unha nai ensina á filla a recoller herbas; mans dunha parteira |
+| 24 | 73-75 | Unha menciñeira cura un animal; dous veciños rifando; ovellas comendo unha viña |
+| 25 | 76-79 | Feijoo escribe á luz dunha candea na súa cela; un libro que pasa de man en man; unha silueta que voa nun soño |
+| 26 | 80-82 | Sarmiento entre plantas e libros; os papeis que se pechan |
+| 27 | 83-85 | Noite de xuño: alguén enche unha talla con auga de fontes e herbas, que queda fóra baixo o orballo |
+| 28 | 86-88 | Unha cacharela que se apaga; xente que salta as últimas lapas |
+| 29 | 89-91 | Amencer na fonte; alguén lava a cara con auga verde de herbas cara ao sol; ramos secos colgados na casa |
+| 30 | 92-95 | Cociña de aldea coas luces apagadas; o pote de barro; o cazo con lume que cae |
+| 31 | 96-99 | As lapas da queimada; caras arredor do pote; un sorriso co dito |
+| 32 | 100-102 | As lapas baixan; a cociña á luz das brasas |
+| 33 | 103-104 | Chuvia sobre un tellado de lousa; o gando durmindo na corte; herbas secas colgadas |
+| 34 | 105-106 | Unha fonte que corre de noite cara ao río; a chuvia na lousa |
+| 35-36 | 107-109 | A casa baixo a chuvia; unha candea que se apaga |
