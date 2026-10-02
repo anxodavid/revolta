@@ -1,6 +1,6 @@
 # Mapa de feitos do guion v2, rolda 1
 
-Guionista do Gauntlet 4 (axente Claude), 02-10-2026. Texto: [`guion-r1.txt`](guion-r1.txt) (1.610 palabras). Ficha:
+Guionista do Gauntlet 4 (axente Claude), 02-10-2026. Texto: [`guion-r1.txt`](guion-r1.txt) (1.602 palabras). Ficha:
 `herramientas/pipeline/temas/meigas-de-verdade-v2.yaml` (o dossier da v1 máis F052). Ningunha persoa o revisou.
 
 **Como ler.** S = frase, coa mesma numeración ca `pipeline.partir` e `frases.json` ("Boas noites." é S9, o resto do aviso S10 e a
@@ -76,7 +76,7 @@ excomuñón contra as dúas (p. 16), a confesión de María Cibreira despois do 
 | 16 | 48 | Para Diego Valor Bravo, coas meigas a temida Inquisición foi branda: en tres séculos só condenou a morte unha meiga | F039, F036 (**unha soa vez e sen ano**, `gauntlet3/contexto.md` §8.1; nunca "Galicia librouse") |
 | 16 | 49 | Os xuíces da xustiza ordinaria foron moito máis duros | F040 (mesmo bloque de Valor Bravo) |
 | 16 | 50 | Nos procesos da Real Audiencia, a xustiza do rei, todas as acusadas eran mulleres | F085, F083 ("xustiza real"); acoutado á Real Audiencia ("Non dicir" n.º 14) |
-| 17 | 51 | En 1639, a Real Audiencia procesou a María Cibreira e outras veciñas de Boborás | F088 |
+| 17 | 51 | Unha delas [das acusadas da Real Audiencia] foi María Cibreira, procesada en 1639 con outras veciñas de Boborás | F088 |
 | 17 | 52 | Despois de ser torturada, confesou que había uns doce anos que exercía o oficio de bruxa e feiticeira | F089, F091 (a tortura nómease unha vez e non se describe) |
 | 17 | 53-55 | "Que llo ensinara a súa nai. Que á casa da nai acudía moita xente... E que as noites de san Xoán as meigas ían ás xuntanzas do demo, nas areas de Sevilla" | F089, F090, F092 (todo dentro do "confesou": a letanía de "que" é estilo indirecto) |
 | 17 | 56 | "Cómpre pensala diante de quen pregunta e de quen escribe" | reconstrución explícita e xenérica · tecido |

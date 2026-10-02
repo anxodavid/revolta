@@ -9,7 +9,7 @@ remate a porta de texto**, que está na cola do candado da CPU. O texto escribiu
 | Ficheiro | Que é |
 |---|---|
 | [`plan-r1.md`](plan-r1.md) | Plan escrito antes do guion: pregunta, fío, arquitectura, embude, persoas e momento visible |
-| [`guion-r1.txt`](guion-r1.txt) | O guion: 1.610 palabras, 109 frases, 5 capítulos + o inicial |
+| [`guion-r1.txt`](guion-r1.txt) | O guion: 1.602 palabras, 109 frases, 5 capítulos + o inicial |
 | [`feitos-r1.md`](feitos-r1.md) | Cada frase cos seus feitos (F###) e a lista de frases de tecido para o crítico B |
 | `excepcions-r1.yaml`, `porta_texto-r1.json` | Cando remate a porta (sección 4) |
 | [`scripts/`](scripts/) | `medidas.py`, `veracidade_lexica.py` (predición sen NLI), `lingua_rapida.py`, `porta-r1.sh` |
