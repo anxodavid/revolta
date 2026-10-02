@@ -289,6 +289,8 @@ dossier: |
   - [ARG] En dous mil vinte, polo Día Internacional da Muller, o Arquivo do Reino de Galicia mostrou seis procesos por bruxería da Real Audiencia.
   - [RAG] A lousa é unha pedra gris ou negra que se parte doadamente en láminas.
   - [RAG] O lousado é o tellado dunha casa cuberto de lousas.
+  - [== V2. Feitos con «ficha: false» en feitos.yaml que usa o guion v2 (Gauntlet 4); ID no comezo de cada liña seguinte: F052 ==]
+  - [ARG] Algúns veciños murmuraban que María do Barro era meiga e que non era boa cristiá.
 fontes:
   ARG: https://arquivosdegalicia.xunta.gal/sites/default/files/arquivos_artividades/expo_mulleres_2020_01_C.pdf
   CCG-MEIGAS: https://consellodacultura.gal/album-de-galicia/detalle.php?persoa=29953

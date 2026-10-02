@@ -1,7 +1,7 @@
 # Estado da peza 1 (guion v2) · Gauntlet 4
 
 Ficheiro do construtor (guionista, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar desde
-aquí.** Última actualización: 02-10-2026, 23:20 UTC.
+aquí.** Última actualización: 02-10-2026, 23:45 UTC.
 
 ## Encargo vixente
 
@@ -16,19 +16,25 @@ aquí.** Última actualización: 02-10-2026, 23:20 UTC.
 | Fito | Onde | Commit |
 |---|---|---|
 | Lecturas (CLAUDE.md, contextos G4 e G3 §2 e §8, v1, veredictos, dossier, ficha, portas) | — | — |
-| Este ficheiro | `gauntlet4/guion/estado.md` | (este) |
+| Este ficheiro | `gauntlet4/guion/estado.md` | 9f956b8 |
+| Plan para 12 min | `gauntlet4/guion/plan-r1.md` | 9f956b8 |
+| Ficha v2 (mesmo dossier + F052) | `herramientas/pipeline/temas/meigas-de-verdade-v2.yaml` | ccebb9e e seguintes |
+| Borrador do guion (1.602 palabras, ≈ 11:40-12:45) | `gauntlet4/guion/guion-r1.txt` | ccebb9e e seguintes |
+| Scripts: medidas e lingua rápida | `gauntlet4/guion/scripts/` | ccebb9e e seguintes |
+| Comprobación na fonte primaria (PDF do Arquivo, p. 4-7 e 15) dos pasaxes de Vilalba, Cibreira e Campo Lameiro | `$SCRATCH/fontes/ARG-PDF.txt` (non se sobe: dereitos) | — |
 
 ## En curso
 
-- `plan-r1.md` para 12 min (pregunta, fío, arquitectura, embude, persoas, momento visible por parágrafo).
+- Porta de lingua rápida (`scripts/lingua_rapida.py`) na cola do candado da CPU (outras pezas usan os modelos).
+- `feitos-r1.md` (mapa de feitos por parágrafo) e `notas-r1.md`.
 
 ## Falta (orde)
 
-1. `plan-r1.md` → commit.
-2. Ficha `herramientas/pipeline/temas/meigas-de-verdade-v2.yaml` (copia da v1 + autoría G4, `capitulo_inicial`,
-   `palabras: 1600`, `duracion_s: [600, 840]`, feitos `ficha: false` que use o guion, co seu ID).
-3. `guion-r1.txt` → commit.
-4. Scripts de medida en `gauntlet4/guion/scripts/` (palabras por fase, atribucións, "segundo", nomes novos).
+1. ~~`plan-r1.md`~~ feito.
+2. ~~Ficha `herramientas/pipeline/temas/meigas-de-verdade-v2.yaml` (copia da v1 + autoría G4, `capitulo_inicial`,
+   `palabras: 1600`, `duracion_s: [600, 840]`, feitos `ficha: false` que use o guion, co seu ID)~~ feito.
+3. ~~`guion-r1.txt`~~ borrador feito; pendente das portas.
+4. ~~Scripts de medida en `gauntlet4/guion/scripts/` (palabras por fase, atribucións, "segundo", nomes novos)~~ feito.
 5. Portas: `qa.lingua` rápido e despois `longo.py --so-texto` (ordes abaixo) → `porta_texto-r1.json`,
    `excepcions-r1.yaml`.
 6. `feitos-r1.md`, `notas-r1.md`, `gauntlet4/aprendizaxes/guion.md` → commit.
