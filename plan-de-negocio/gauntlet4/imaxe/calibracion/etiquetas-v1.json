@@ -1,0 +1,2073 @@
+{
+ "descricion": "Etiquetas das imaxes da v1 para calibrar a porta v6 e a medida de correlación (Gauntlet 4, peza IMAXE).\n\nFontes: (1) tribunal final do Gauntlet 3 (`gauntlet3/veredictos/tribunal-final.md` §2: \"Bloquea\", \"Molesta\", \"Menor\",\n\"Lo que funciona\" e os rexeitamentos que considerou falsos); viu as imaxes ANTES da rolda de arranxos, así que os 11\nplanos cambiados (5, 31, 56, 61, 67, 84, 91, 133, 145, 153, 161) etiquétanse na súa versión vella (git 4f43fb5, `v`);\nas versións novas entran como imaxes sen etiqueta do tribunal. (2) Claude (este axente), mirando as follas de contactos\no 02-10-2026: defectos que o tribunal non listou (`fonte: claude`), se a `clave` do plano se ve (`clave_ve`) e se a\nimaxe ilustra o que se di (`ilustra`: 2 = ilustra o que se oe, 1 = relacionada ou de ambiente, 0 = desconectada).\nSon xuízos dun axente, non dunha persoa.\nSaída: calibracion/etiquetas-v1.json. Uso: python etiquetas_v1.py",
+ "imaxes": [
+  {
+   "n": 1,
+   "ficheiro": "imaxes/000-c13ff7ad-0.jpg",
+   "version": "actual",
+   "clave": "blue flames",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 2,
+   "ficheiro": "imaxes/001-69418ea4-0.jpg",
+   "version": "actual",
+   "clave": "clay bowl",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 3,
+   "ficheiro": "imaxes/002-304ea412-2.jpg",
+   "version": "actual",
+   "clave": "bearded man",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 4,
+   "ficheiro": "imaxes/003-13facaf5-0.jpg",
+   "version": "actual",
+   "clave": "rope",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 5,
+   "ficheiro": "imaxes/004-6c78d74f-0.jpg",
+   "version": "actual",
+   "clave": "lantern",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 6,
+   "ficheiro": "imaxes/005-ecaf63ff-0.jpg",
+   "version": "actual",
+   "clave": "candle",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 7,
+   "ficheiro": "imaxes/006-ca7c5324-0.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "molesta",
+   "defectos": [
+    "clixe_meiga"
+   ]
+  },
+  {
+   "n": 8,
+   "ficheiro": "imaxes/007-751c8b43-1.jpg",
+   "version": "actual",
+   "clave": "leather shoes",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 9,
+   "ficheiro": "imaxes/008-83441bad-0.jpg",
+   "version": "actual",
+   "clave": "horse",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "menor",
+   "defectos": [
+    "estilo"
+   ]
+  },
+  {
+   "n": 10,
+   "ficheiro": "imaxes/009-7d019425-1.jpg",
+   "version": "actual",
+   "clave": "candle",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "menor",
+   "defectos": [
+    "texto"
+   ]
+  },
+  {
+   "n": 11,
+   "ficheiro": "imaxes/010-b2223ce8-0.jpg",
+   "version": "actual",
+   "clave": "oak trees",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 12,
+   "ficheiro": "imaxes/011-aaa12dcb-0.jpg",
+   "version": "actual",
+   "clave": "bonfire",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 13,
+   "ficheiro": "imaxes/012-eaca155a-0.jpg",
+   "version": "actual",
+   "clave": "red wax seal",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ]
+  },
+  {
+   "n": 14,
+   "ficheiro": "imaxes/013-ff9a4e6a-0.jpg",
+   "version": "actual",
+   "clave": "woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 15,
+   "ficheiro": "imaxes/014-b7ce3205-1.jpg",
+   "version": "actual",
+   "clave": "long table",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 16,
+   "ficheiro": "imaxes/015-0fdf1035-4.jpg",
+   "version": "actual",
+   "clave": "judge",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 17,
+   "ficheiro": "imaxes/016-02ec0d98-0.jpg",
+   "version": "actual",
+   "clave": "oak door",
+   "clave_ve": false,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 18,
+   "ficheiro": "imaxes/017-b95f657f-1.jpg",
+   "version": "actual",
+   "clave": "dough",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 19,
+   "ficheiro": "imaxes/018-0b69e460-2.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 20,
+   "ficheiro": "imaxes/019-7a39c792-4.jpg",
+   "version": "actual",
+   "clave": "fountain",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "molesta",
+   "defectos": [
+    "lume_mesa"
+   ]
+  },
+  {
+   "n": 21,
+   "ficheiro": "imaxes/020-194670e7-0.jpg",
+   "version": "actual",
+   "clave": "clay jug",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 22,
+   "ficheiro": "imaxes/021-de4f25ff-0.jpg",
+   "version": "actual",
+   "clave": "clay jug",
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 23,
+   "ficheiro": "imaxes/022-dffb1fc5-2.jpg",
+   "version": "actual",
+   "clave": "granite houses",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 24,
+   "ficheiro": "imaxes/023-5369e2be-0.jpg",
+   "version": "actual",
+   "clave": "doorway",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 25,
+   "ficheiro": "imaxes/024-f51123d9-2.jpg",
+   "version": "actual",
+   "clave": "cows",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 26,
+   "ficheiro": "imaxes/025-1ebf0ae3-4.jpg",
+   "version": "actual",
+   "clave": "stream",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 27,
+   "ficheiro": "imaxes/026-aadbffc5-2.jpg",
+   "version": "actual",
+   "clave": "quill",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 28,
+   "ficheiro": "imaxes/027-61c65c69-0.jpg",
+   "version": "actual",
+   "clave": "priest",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 29,
+   "ficheiro": "imaxes/028-ebee8eb3-0.jpg",
+   "version": "actual",
+   "clave": "manor house",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 30,
+   "ficheiro": "imaxes/029-77aed7b7-0.jpg",
+   "version": "actual",
+   "clave": "village woman",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 31,
+   "ficheiro": "imaxes/030-48739fa3-0.jpg",
+   "version": "actual",
+   "clave": "cat",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 32,
+   "ficheiro": "imaxes/031-9a59b80d-0.jpg",
+   "version": "actual",
+   "clave": "cat",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 33,
+   "ficheiro": "imaxes/032-c7ff689c-3.jpg",
+   "version": "actual",
+   "clave": "two women",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 34,
+   "ficheiro": "imaxes/033-e06af45f-1.jpg",
+   "version": "actual",
+   "clave": "two women",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 35,
+   "ficheiro": "imaxes/034-434064b1-0.jpg",
+   "version": "actual",
+   "clave": "woman",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 36,
+   "ficheiro": "imaxes/035-97d9d4ce-1.jpg",
+   "version": "actual",
+   "clave": "earring",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 37,
+   "ficheiro": "imaxes/036-7a8f89e7-4.jpg",
+   "version": "actual",
+   "clave": "church",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion",
+   "defectos_claude": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 38,
+   "ficheiro": "imaxes/037-48f11feb-0.jpg",
+   "version": "actual",
+   "clave": "cow",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 39,
+   "ficheiro": "imaxes/038-a98ab955-1.jpg",
+   "version": "actual",
+   "clave": "two women",
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 40,
+   "ficheiro": "imaxes/039-544dc43b-2.jpg",
+   "version": "actual",
+   "clave": "young woman",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion",
+   "defectos_claude": [
+    "casa_allea",
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 41,
+   "ficheiro": "imaxes/040-ec794446-0.jpg",
+   "version": "actual",
+   "clave": "comb",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 42,
+   "ficheiro": "imaxes/041-3d6856f7-0.jpg",
+   "version": "actual",
+   "clave": "toad",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 43,
+   "ficheiro": "imaxes/042-17fbe3ba-0.jpg",
+   "version": "actual",
+   "clave": "wolf",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 44,
+   "ficheiro": "imaxes/043-5d3d7180-0.jpg",
+   "version": "actual",
+   "clave": "field",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 45,
+   "ficheiro": "imaxes/044-2526c3b9-0.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 46,
+   "ficheiro": "imaxes/045-078b1c07-2.jpg",
+   "version": "actual",
+   "clave": "two women",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 47,
+   "ficheiro": "imaxes/046-1619de48-0.jpg",
+   "version": "actual",
+   "clave": "fishing boats",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 48,
+   "ficheiro": "imaxes/047-5a1ed894-4.jpg",
+   "version": "actual",
+   "clave": "clay cup",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 49,
+   "ficheiro": "imaxes/048-249a3f59-3.jpg",
+   "version": "actual",
+   "clave": "clay bowl",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 50,
+   "ficheiro": "imaxes/049-3751009e-0.jpg",
+   "version": "actual",
+   "clave": "boat",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 51,
+   "ficheiro": "imaxes/050-8a6af2cd-2.jpg",
+   "version": "actual",
+   "clave": "clay bowls",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 52,
+   "ficheiro": "imaxes/051-ebc19315-0.jpg",
+   "version": "actual",
+   "clave": "leather folder",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 53,
+   "ficheiro": "imaxes/052-74a6323f-1.jpg",
+   "version": "actual",
+   "clave": "stone ruins",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 54,
+   "ficheiro": "imaxes/053-0df34678-0.jpg",
+   "version": "actual",
+   "clave": "copper still",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 55,
+   "ficheiro": "imaxes/054-a5a8d294-0.jpg",
+   "version": "actual",
+   "clave": "clay jug",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ]
+  },
+  {
+   "n": 56,
+   "ficheiro": "imaxes/055-27c52c97-0.jpg",
+   "version": "actual",
+   "clave": "steamship",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 57,
+   "ficheiro": "imaxes/056-2684caf9-0.jpg",
+   "version": "actual",
+   "clave": "long table",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 58,
+   "ficheiro": "imaxes/057-3c0559a3-0.jpg",
+   "version": "actual",
+   "clave": "potter's wheel",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 59,
+   "ficheiro": "imaxes/058-60ce462f-0.jpg",
+   "version": "actual",
+   "clave": "tavern",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "calma",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 60,
+   "ficheiro": "imaxes/059-85f4a16b-0.jpg",
+   "version": "actual",
+   "clave": "coffee beans",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 61,
+   "ficheiro": "imaxes/060-e0b97acb-1.jpg",
+   "version": "actual",
+   "clave": "stone arch",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 62,
+   "ficheiro": "imaxes/061-e1697165-0.jpg",
+   "version": "actual",
+   "clave": "long table",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 63,
+   "ficheiro": "imaxes/062-22a35fb1-1.jpg",
+   "version": "actual",
+   "clave": "book",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 64,
+   "ficheiro": "imaxes/063-a57993b6-0.jpg",
+   "version": "actual",
+   "clave": "friar",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 65,
+   "ficheiro": "imaxes/064-61ad1024-0.jpg",
+   "version": "actual",
+   "clave": "hills",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 66,
+   "ficheiro": "imaxes/065-b1023e94-2.jpg",
+   "version": "actual",
+   "clave": "wooden chest",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 67,
+   "ficheiro": "imaxes/066-fc84a787-0.jpg",
+   "version": "actual",
+   "clave": "cloth bundle",
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 68,
+   "ficheiro": "imaxes/067-af638455-1.jpg",
+   "version": "actual",
+   "clave": "stone bridge",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 69,
+   "ficheiro": "imaxes/068-3e15678d-2.jpg",
+   "version": "actual",
+   "clave": "young woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 70,
+   "ficheiro": "imaxes/069-34e9d6e6-2.jpg",
+   "version": "actual",
+   "clave": "bandage",
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 71,
+   "ficheiro": "imaxes/070-b1fb6160-0.jpg",
+   "version": "actual",
+   "clave": "river",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 72,
+   "ficheiro": "imaxes/071-b6e0a11e-0.jpg",
+   "version": "actual",
+   "clave": "woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 73,
+   "ficheiro": "imaxes/072-ce91a30e-0.jpg",
+   "version": "actual",
+   "clave": "judge",
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 74,
+   "ficheiro": "imaxes/073-00a75146-0.jpg",
+   "version": "actual",
+   "clave": "rosary",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 75,
+   "ficheiro": "imaxes/074-500e6e52-1.jpg",
+   "version": "actual",
+   "clave": "boats",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 76,
+   "ficheiro": "imaxes/075-275d0b60-1.jpg",
+   "version": "actual",
+   "clave": "sea",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 77,
+   "ficheiro": "imaxes/076-58a81dc3-0.jpg",
+   "version": "actual",
+   "clave": "hills",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 78,
+   "ficheiro": "imaxes/077-d130fe97-0.jpg",
+   "version": "actual",
+   "clave": "stone wall",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 79,
+   "ficheiro": "imaxes/078-8dff3cf6-0.jpg",
+   "version": "actual",
+   "clave": "calf",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 80,
+   "ficheiro": "imaxes/079-43d6289d-0.jpg",
+   "version": "actual",
+   "clave": "man",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion",
+   "defectos_claude": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 81,
+   "ficheiro": "imaxes/080-95978f35-1.jpg",
+   "version": "actual",
+   "clave": "fountain",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 82,
+   "ficheiro": "imaxes/081-d824e3d0-0.jpg",
+   "version": "actual",
+   "clave": "lantern",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 83,
+   "ficheiro": "imaxes/082-54c204b5-0.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 84,
+   "ficheiro": "imaxes/083-f3713dc1-1.jpg",
+   "version": "actual",
+   "clave": "stone mortar",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 85,
+   "ficheiro": "imaxes/084-6f2a9829-2.jpg",
+   "version": "actual",
+   "clave": "cow",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 86,
+   "ficheiro": "imaxes/085-20daf139-2.jpg",
+   "version": "actual",
+   "clave": "sheep",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 87,
+   "ficheiro": "imaxes/086-e00bb837-2.jpg",
+   "version": "actual",
+   "clave": "cows",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 88,
+   "ficheiro": "imaxes/087-68b21ace-2.jpg",
+   "version": "actual",
+   "clave": "woman",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 89,
+   "ficheiro": "imaxes/088-2c2ebefb-2.jpg",
+   "version": "actual",
+   "clave": "old man",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 90,
+   "ficheiro": "imaxes/089-dca101af-1.jpg",
+   "version": "actual",
+   "clave": "stone houses",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion",
+   "defectos_claude": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 91,
+   "ficheiro": "imaxes/090-9cea88bf-0.jpg",
+   "version": "actual",
+   "clave": "iron pot",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 92,
+   "ficheiro": "imaxes/091-0261567c-1.jpg",
+   "version": "actual",
+   "clave": "clay cups",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 93,
+   "ficheiro": "imaxes/092-a6da711e-0.jpg",
+   "version": "actual",
+   "clave": "fire",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 94,
+   "ficheiro": "imaxes/093-3be97fdb-2.jpg",
+   "version": "actual",
+   "clave": "wooden bench",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "interior_moderno",
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 95,
+   "ficheiro": "imaxes/094-21f0bd13-0.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 96,
+   "ficheiro": "imaxes/095-a1d60055-0.jpg",
+   "version": "actual",
+   "clave": "hen",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 97,
+   "ficheiro": "imaxes/096-1c8e12ea-3.jpg",
+   "version": "actual",
+   "clave": "bread",
+   "clave_ve": false,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 98,
+   "ficheiro": "imaxes/097-fe85f130-2.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 99,
+   "ficheiro": "imaxes/098-2d8a0f53-0.jpg",
+   "version": "actual",
+   "clave": "earring",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 100,
+   "ficheiro": "imaxes/099-919a7444-1.jpg",
+   "version": "actual",
+   "clave": "sheep",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 101,
+   "ficheiro": "imaxes/100-0f948444-0.jpg",
+   "version": "actual",
+   "clave": "garlic",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 102,
+   "ficheiro": "imaxes/101-cb74f362-0.jpg",
+   "version": "actual",
+   "clave": "amulet",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 103,
+   "ficheiro": "imaxes/102-a764198e-1.jpg",
+   "version": "actual",
+   "clave": "cow",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 104,
+   "ficheiro": "imaxes/103-27572e1e-0.jpg",
+   "version": "actual",
+   "clave": "stone houses",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 105,
+   "ficheiro": "imaxes/104-3a0177b3-1.jpg",
+   "version": "actual",
+   "clave": "wicker basket",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 106,
+   "ficheiro": "imaxes/105-30a7219b-2.jpg",
+   "version": "actual",
+   "clave": "corn field",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 107,
+   "ficheiro": "imaxes/106-10b8d9c7-0.jpg",
+   "version": "actual",
+   "clave": "dried herbs",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 108,
+   "ficheiro": "imaxes/107-acb4f300-0.jpg",
+   "version": "actual",
+   "clave": "moon",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 109,
+   "ficheiro": "imaxes/108-4c8d4a42-1.jpg",
+   "version": "actual",
+   "clave": "wild flowers",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 110,
+   "ficheiro": "imaxes/109-46377de2-0.jpg",
+   "version": "actual",
+   "clave": "herbs",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 111,
+   "ficheiro": "imaxes/110-4fc28088-3.jpg",
+   "version": "actual",
+   "clave": "yellow flowers",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona",
+   "defectos_claude": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 112,
+   "ficheiro": "imaxes/111-ca66ab97-0.jpg",
+   "version": "actual",
+   "clave": "white flowers",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona",
+   "defectos_claude": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 113,
+   "ficheiro": "imaxes/112-91cba97e-0.jpg",
+   "version": "actual",
+   "clave": "foxgloves",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 114,
+   "ficheiro": "imaxes/113-701f66e8-0.jpg",
+   "version": "actual",
+   "clave": "sardines",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 115,
+   "ficheiro": "imaxes/114-3dd1eeea-2.jpg",
+   "version": "actual",
+   "clave": "smoke",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 116,
+   "ficheiro": "imaxes/115-2fe0ff20-0.jpg",
+   "version": "actual",
+   "clave": "embers",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 117,
+   "ficheiro": "imaxes/116-515b1cbd-1.jpg",
+   "version": "actual",
+   "clave": "embers",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 118,
+   "ficheiro": "imaxes/117-e8b4b41b-0.jpg",
+   "version": "actual",
+   "clave": "cows",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 119,
+   "ficheiro": "imaxes/118-ec695d11-0.jpg",
+   "version": "actual",
+   "clave": "clay jar",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 120,
+   "ficheiro": "imaxes/119-0e894ec7-3.jpg",
+   "version": "actual",
+   "clave": "meadow",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 121,
+   "ficheiro": "imaxes/120-9f60ae4c-0.jpg",
+   "version": "actual",
+   "clave": "woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 122,
+   "ficheiro": "imaxes/121-38fc6086-3.jpg",
+   "version": "actual",
+   "clave": "pillow",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona",
+   "defectos_claude": [
+    "xanela_moderna"
+   ]
+  },
+  {
+   "n": 123,
+   "ficheiro": "imaxes/122-9fe164c2-0.jpg",
+   "version": "actual",
+   "clave": "fountain",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 124,
+   "ficheiro": "imaxes/123-494cc503-0.jpg",
+   "version": "actual",
+   "clave": "water",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 125,
+   "ficheiro": "imaxes/124-9b02e0c5-0.jpg",
+   "version": "actual",
+   "clave": "robin",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 126,
+   "ficheiro": "imaxes/125-581752e3-2.jpg",
+   "version": "actual",
+   "clave": "clay basin",
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 127,
+   "ficheiro": "imaxes/126-29bd42af-0.jpg",
+   "version": "actual",
+   "clave": "misty hills",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 128,
+   "ficheiro": "imaxes/127-b42b390e-1.jpg",
+   "version": "actual",
+   "clave": "stone cross",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 129,
+   "ficheiro": "imaxes/128-01e758e6-0.jpg",
+   "version": "actual",
+   "clave": "sieve",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ]
+  },
+  {
+   "n": 130,
+   "ficheiro": "imaxes/129-3a393f91-0.jpg",
+   "version": "actual",
+   "clave": "oak door",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "menor",
+   "defectos": [
+    "xanela_moderna"
+   ]
+  },
+  {
+   "n": 131,
+   "ficheiro": "imaxes/130-2c8690ec-1.jpg",
+   "version": "actual",
+   "clave": "thistles",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona",
+   "defectos_claude": [
+    "xanela_moderna"
+   ]
+  },
+  {
+   "n": 132,
+   "ficheiro": "imaxes/131-673d6f36-0.jpg",
+   "version": "actual",
+   "clave": "river",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 133,
+   "ficheiro": "imaxes/132-39570a7e-1.jpg",
+   "version": "actual",
+   "clave": "moon",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 134,
+   "ficheiro": "imaxes/133-7829ec6d-1.jpg",
+   "version": "actual",
+   "clave": "manor house",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 135,
+   "ficheiro": "imaxes/134-973beaa8-3.jpg",
+   "version": "actual",
+   "clave": "book",
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion",
+   "defectos_claude": [
+    "xanela_moderna"
+   ]
+  },
+  {
+   "n": 136,
+   "ficheiro": "imaxes/135-cca7252a-0.jpg",
+   "version": "actual",
+   "clave": "cloister",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 137,
+   "ficheiro": "imaxes/136-dc2e2072-0.jpg",
+   "version": "actual",
+   "clave": "monk",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 138,
+   "ficheiro": "imaxes/137-59e61065-1.jpg",
+   "version": "actual",
+   "clave": "books",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 139,
+   "ficheiro": "imaxes/138-bb34dc32-0.jpg",
+   "version": "actual",
+   "clave": "monk",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 140,
+   "ficheiro": "imaxes/139-07d7e1d0-0.jpg",
+   "version": "actual",
+   "clave": "stars",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 141,
+   "ficheiro": "imaxes/140-5823395d-1.jpg",
+   "version": "actual",
+   "clave": "sickle",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ]
+  },
+  {
+   "n": 142,
+   "ficheiro": "imaxes/141-4198d4cd-0.jpg",
+   "version": "actual",
+   "clave": "donkey",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 143,
+   "ficheiro": "imaxes/142-84b3e4af-0.jpg",
+   "version": "actual",
+   "clave": "old woman",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 144,
+   "ficheiro": "imaxes/143-eec462c8-0.jpg",
+   "version": "actual",
+   "clave": "owl",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 145,
+   "ficheiro": "imaxes/144-945d2456-0.jpg",
+   "version": "actual",
+   "clave": "books",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 146,
+   "ficheiro": "imaxes/145-83103587-0.jpg",
+   "version": "actual",
+   "clave": "meadow",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 147,
+   "ficheiro": "imaxes/146-2b940b42-0.jpg",
+   "version": "actual",
+   "clave": "statue",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "menor",
+   "defectos": [
+    "obxecto_mal"
+   ]
+  },
+  {
+   "n": 148,
+   "ficheiro": "imaxes/147-a2b14153-0.jpg",
+   "version": "actual",
+   "clave": "embers",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 149,
+   "ficheiro": "imaxes/148-c98dd184-3.jpg",
+   "version": "actual",
+   "clave": "clay bowl",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 150,
+   "ficheiro": "imaxes/149-e3b45039-1.jpg",
+   "version": "actual",
+   "clave": "silhouettes",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "menor",
+   "defectos": [
+    "mobles_actuais"
+   ]
+  },
+  {
+   "n": 151,
+   "ficheiro": "imaxes/150-5f7bb994-0.jpg",
+   "version": "actual",
+   "clave": "clay cups",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 152,
+   "ficheiro": "imaxes/151-43417c22-2.jpg",
+   "version": "actual",
+   "clave": "boat",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "sen_mencion"
+  },
+  {
+   "n": 153,
+   "ficheiro": "imaxes/152-4fd833d5-0.jpg",
+   "version": "actual",
+   "clave": "slate",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 154,
+   "ficheiro": "imaxes/153-46ff3530-0.jpg",
+   "version": "actual",
+   "clave": "wooden bench",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 155,
+   "ficheiro": "imaxes/154-e23b0bef-0.jpg",
+   "version": "actual",
+   "clave": "cows",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 156,
+   "ficheiro": "imaxes/155-8e45ae6c-0.jpg",
+   "version": "actual",
+   "clave": "leather shoes",
+   "clave_ve": true,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "menor",
+   "defectos": [
+    "roupa_actual"
+   ]
+  },
+  {
+   "n": 157,
+   "ficheiro": "imaxes/156-f97c9ca0-1.jpg",
+   "version": "actual",
+   "clave": "stream",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 158,
+   "ficheiro": "imaxes/157-acf98c29-0.jpg",
+   "version": "actual",
+   "clave": "grass",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona"
+  },
+  {
+   "n": 159,
+   "ficheiro": "imaxes/158-2185b3d0-3.jpg",
+   "version": "actual",
+   "clave": "valley",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "funciona",
+   "defectos_claude": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 160,
+   "ficheiro": "imaxes/159-04cc02c7-1.jpg",
+   "version": "actual",
+   "clave": "oak trees",
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 161,
+   "ficheiro": "imaxes/160-cdd45202-0.jpg",
+   "version": "actual",
+   "clave": "drops",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "despois_dos_arranxos"
+  },
+  {
+   "n": 162,
+   "ficheiro": "imaxes/161-9bef0550-0.jpg",
+   "version": "actual",
+   "clave": "smoke",
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "aceptable"
+  },
+  {
+   "n": 5,
+   "ficheiro": "vellas/004-983abd46-0.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "gancho",
+   "tribunal": "molesta",
+   "defectos": [
+    "casa_allea"
+   ]
+  },
+  {
+   "n": 31,
+   "ficheiro": "vellas/030-ef658184-0.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "transicion",
+   "tribunal": "molesta",
+   "defectos": [
+    "billa_fregadoiro"
+   ]
+  },
+  {
+   "n": 56,
+   "ficheiro": "vellas/055-93ec6c81-0.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": true,
+   "fase": "transicion",
+   "tribunal": "bloquea",
+   "defectos": [
+    "maleta_rodas"
+   ]
+  },
+  {
+   "n": 61,
+   "ficheiro": "vellas/060-879e4f8a-1.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "catedral_inventada"
+   ]
+  },
+  {
+   "n": 67,
+   "ficheiro": "vellas/066-1eb7df19-4.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "interior_moderno",
+    "xesto_contrario"
+   ]
+  },
+  {
+   "n": 84,
+   "ficheiro": "vellas/083-5779b492-3.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "bloquea",
+   "defectos": [
+    "luz_electrica",
+    "radiador"
+   ]
+  },
+  {
+   "n": 91,
+   "ficheiro": "vellas/090-c464f180-1.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "calma",
+   "tribunal": "molesta",
+   "defectos": [
+    "cocina_economica",
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 133,
+   "ficheiro": "vellas/132-a8a95fcc-0.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": false,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "bloquea",
+   "defectos": [
+    "luz_electrica"
+   ]
+  },
+  {
+   "n": 145,
+   "ficheiro": "vellas/144-f4f740ab-4.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": false,
+   "ilustra": 0,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "lume_durmir"
+   ]
+  },
+  {
+   "n": 153,
+   "ficheiro": "vellas/152-179e853a-0.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": true,
+   "ilustra": 1,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "molesta",
+   "defectos": [
+    "lume_durmir"
+   ]
+  },
+  {
+   "n": 161,
+   "ficheiro": "vellas/160-32b10266-0.jpg",
+   "version": "vella",
+   "clave": null,
+   "clave_ve": true,
+   "ilustra": 2,
+   "seculo_xx": false,
+   "fase": "durmir",
+   "tribunal": "bloquea",
+   "defectos": [
+    "casa_allea",
+    "luz_electrica"
+   ]
+  }
+ ]
+}
