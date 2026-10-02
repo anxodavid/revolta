@@ -1,0 +1,63 @@
+inicio intento 1 Thu Oct  1 21:59:42 UTC 2026
+== 1_texto
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 3952 | frases marcadas pola veracidade: 0 | sen xustificar: 0
+== 3_voz
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:990: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+== 4_escenas
+== 5_imaxes
+imaxe   4 intento 0  84.9s + revisión  9.9s ok
+imaxe  30 intento 0  82.0s + revisión  8.0s ok
+imaxe  60 intento 0  78.3s + revisión  8.9s ['arquetipo repetido: camiñantes de costas (6 xa, tope 5)'] avisos ['falta: stone arch (CLIP)']
+imaxe  60 intento 1  78.6s + revisión  8.4s ok avisos ['falta: stone arch (CLIP)']
+imaxe  66 intento 0  78.6s + revisión  7.7s ok
+imaxe  90 intento 0  80.2s + revisión  8.7s ['negativo do plano: stove (CLIP)', 'negativo do plano: fireplace mantel (CLIP)']
+imaxe  90 intento 1  82.1s + revisión  8.6s ['obxectos modernos']
+imaxe  90 intento 2  84.4s + revisión  8.8s ['clichés de meiga', 'negativo do plano: fireplace mantel (CLIP)']
+imaxe  90 intento 3  78.3s + revisión  7.2s ['negativo do plano: fireplace mantel (CLIP)']
+imaxe 132 intento 0  82.9s + revisión  7.4s ['repetida (CLIP 0.91 co plano 108)']
+imaxe 132 intento 1  79.0s + revisión  8.0s ok
+imaxe 144 intento 0  77.8s + revisión  9.2s ['negativo do plano: open book (CLIP)', 'repetida (CLIP 0.91 co plano 138)']
+imaxe 144 intento 1  78.0s + revisión  8.8s ['lume vivo ao durmir (3.9% de altas luces cor de chama)', 'lume grande no exterior', 'negativo do plano: open book (CLIP)', 'repetida (CLIP 0.92 co plano 10)']
+imaxe 144 intento 4  78.2s + revisión  7.8s ['repetida (CLIP 0.95 co plano 11)']
+imaxe 152 intento 0  78.0s + revisión  8.1s ok
+imaxe 160 intento 0  74.7s + revisión  7.0s ok
+== 6_son
+== 7_montaxe
+reinicio do contedor ás 22:32 UTC en 7_montaxe; relanzado 23:04
+inicio intento 1 Thu Oct  1 23:04:13 UTC 2026
+== 1_texto
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 3952 | frases marcadas pola veracidade: 0 | sen xustificar: 0
+== 3_voz
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:990: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+== 4_escenas
+== 5_imaxes
+imaxe 144 intento 4 revisado de novo: ['falta: books (CLIP)', 'repetida (CLIP 0.95 co plano 11)']
+parado 23:1x: o plano 145 (escolla manual, 3 intentos) ía xerar outro intento; imaxes.py respecta agora escolla_manual; relanzado 23:16
+inicio intento 1 Thu Oct  1 23:16:41 UTC 2026
+== 1_texto
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 3952 | frases marcadas pola veracidade: 0 | sen xustificar: 0
+== 3_voz
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:990: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+== 4_escenas
+== 5_imaxes
+== 6_son
+== 7_montaxe
+== 8_qa
+publicable: False {'autoria_declarada': True, 'duracion': True, 'wer_mestura': True, 'sincronia_av': True, 'sincronia_subtitulos': True, 'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True, 'imaxes_revisadas': False, 'sonoridade': True, 'bitrate': True, 'resolucion': True}
+real	126m58.533s
+user	387m13.752s
+sys	39m42.204s
+rc 0 Fri Oct  2 01:23:39 UTC 2026
+saida 0 Fri Oct  2 01:23:39 UTC 2026

@@ -303,3 +303,14 @@ Se va completando según avanzan las piezas. Detalle por pieza en `plan-de-negoc
 - `son.limitar` limitaba el pico de muestra a 0,89 y tras el AAC daba −0,1 dBTP. Ahora mide el pico real
   (sobremuestreo ×4) y limita a 0,79 (−2 dBTP). Prueba con voz de Brais empujada +3 dB: −2,0 dBTP en el WAV y
   −1,8 dBTP tras AAC 128k. (Una prueba sintética con tonos de 12 kHz daba +1,4 dBTP tras AAC: no es representativa.)
+
+## Trabajos largos: reinicios y paradas (01-10-2026, noche)
+- **El contenedor se reinició a las 22:32 con un Monitor armado** (el de las imágenes acababa de terminar y el del log
+  seguía vivo). Se perdió el montaje en curso; el scratchpad y el entorno (venv, paquetes de apt) sobrevivieron. La
+  revisión con `send_later` es la que de verdad cubre el reinicio: dejarla siempre programada, con la orden de relanzar.
+- `montaxe.py` no reaprovecha sus tramos a medias: un reinicio en el montaje cuesta los ≈70 min enteros.
+- Un plano con menos de 4 intentos que no pasó la puerta se trata como "sin terminar" en cada relanzamiento y genera
+  más intentos (y deshace una elección manual). `imaxes.py` respeta ahora `escolla_manual`.
+- `pkill -f longo.py` mata también la shell del agente si la orden contiene "longo.py": matar por PID.
+- La cifra de CPU de `qa.md` es la de esa ejecución, no la del episodio: con caché, 9,9 h frente a 16,6 h de la
+  producción inicial.

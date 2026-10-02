@@ -1,0 +1,309 @@
+inicio intento 1 Thu Oct  1 21:12:58 UTC 2026
+== 1_texto
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 3952 | frases marcadas pola veracidade: 0 | sen xustificar: 0
+== 3_voz
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:990: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+voz   1   2.6s Mouchos, curuxas, sapos e bruxas.
+voz   2   5.8s Case todo galego oíu algunha vez este conxuro nunha queimada
+voz   3   3.8s Pero ten autor coñecido, e é de mil novecentos sesenta e set
+voz   4   4.5s Escribiuno Mariano Marcos Abalo, en Vigo, nun vello barco am
+voz   5   2.5s Vilalba, mil seiscentos dezasete.
+voz   6   6.8s Segundo declarou unha testemuña, a parteira Dorotea do Barro
+voz   7   4.1s Abondaba con calzarlle ao home os zapatos da muller, dicindo
+voz   8   3.0s E o home saltaría coma un poldro bravo.
+voz   9   1.4s Boas noites.
+voz  10   4.6s A voz que vas escoitar é sintética, e este texto preparouno 
+voz  11   2.3s Isto é Cousas de Galiza para durmir.
+voz  12   4.9s E hai un motivo polo que moita xente pensou que o conxuro er
+voz  13   5.9s Aquel testemuño de Vilalba gárdase no Arquivo do Reino de Ga
+voz  14   3.7s E alí hai máis: unha veciña que velou esperta unha noite.
+voz  15   2.3s E un gato que ninguén deu collido.
+voz  16   6.9s En máis dun século de procesos, segundo o mesmo Arquivo, a I
+voz  17   7.4s Para o investigador Diego Valor Bravo, coas meigas a temida 
+voz  18   4.2s Hai catrocentos anos, a meiga moitas veces non era a bruxa d
+voz  19   3.8s Era a que curaba, a que axudaba nos partos, a que sabía de h
+voz  20   1.7s E hai unha lista.
+voz  21   6.9s Unha noite de san Xoán, en Campo Lameiro, uns veciños foron 
+voz  22   3.8s Unha testemuña contou por que a fixeron, e volveremos a esa 
+voz  23   5.7s Esta noite imos coñecer as meigas de verdade: as dos papeis 
+voz  24   4.7s Dorotea e María do Barro, nai e filla, eran de San Xiao de M
+voz  25   5.9s A filla foi acusada tamén de alcaiota: dicían que acollía na
+voz  26   7.1s Segundo unha testemuña, cando María do Barro tiña o gando no
+voz  27   7.1s Entre esas palabras, dicía que o seu gando bebese auga de se
+voz  28   4.5s No papel quedou escrita ata a corrección: que trouxese auga,
+voz  29   6.5s O vicario xeral do bispado de Mondoñedo excomungou as acusad
+voz  30   7.3s En Xinzo de Limia, en mil seiscentos doce, a xustiza do cond
+voz  31   6.1s Segundo unha testemuña, unha veciña, María Feijoa, velou esp
+voz  32   5.4s E viu, contaba, a Ana González en figura de gato, que andaba
+voz  33   3.2s Ninguén o deu collido: escapou por un burato da porta.
+voz  34   6.2s Outra veciña, a muller de Rodrigo Colmenero, contou que un d
+voz  35   3.8s Viña dicirlle que o seu home, Rodrigo, andaba chamándoa meig
+voz  36   8.0s E contou que, cando Ana González saía polas portas do curral
+voz  37   3.8s Ela tiña por moi certo que fora polo mal mirar de Ana Gonzál
+voz  38   7.6s En mil seiscentos once, na parroquia de Palio, en Lalín, a R
+voz  39   4.8s Segundo o proceso, unha veciña queixábase de que o leite das
+voz  40   5.4s E Marta díxolle que faría unha menciña para que as meigas no
+voz  41   6.8s Outra testemuña declarou que Marta lle dixera que, por catro
+voz  42   5.6s Para iso pedía terra da pegada que el deixaba ao pisar e cab
+voz  43   4.5s Daquela crían que as meigas se transformaban en gatos, en sa
+voz  44   5.5s Contaban que, mentres a meiga voaba ás xuntanzas, na súa cam
+voz  45   8.1s Críase que con bebedizos, ungüentos e obxectos como terra ou
+voz  46   4.9s E admitíase que algunhas meigas eran boas, capaces de protex
+voz  47   6.2s Pero, segundo Rodrigo Pousa, historiador, no acervo das gale
+voz  48   6.2s E agora, o conxuro do barco, que Mariano Marcos Abalo escrib
+voz  49   6.7s Segundo contou el mesmo, quería darlles un pouco de ritual á
+voz  50   5.7s Xuntábanse a bordo dun vello barco comisado, amarrado no por
+voz  51   5.9s E contaba que houbo outros cinco ou seis conxuros daquela ép
+voz  52   3.5s O motivo do que falabamos ao principio é sinxelo.
+voz  53   6.6s Unha empresa vendeu copias do conxuro sen o nome do autor, e
+voz  54   5.3s En dous mil un, Mariano Marcos Abalo rexistrou o conxuro com
+voz  55   3.4s A propia queimada tampouco é tan vella como parece.
+voz  56   6.5s Popularmente atribúenselle orixes celtas, pero iso é imposib
+voz  57   5.0s Así o escribiu en mil novecentos setenta e dous o catedrátic
+voz  58   4.2s E o historiador Xavier Castro chámalle unha tradición invent
+voz  59   9.4s Segundo o antropólogo González Reboredo, o costume de tomar 
+voz  60   6.0s En xuntanzas así naceu, probablemente, o costume de acompaña
+voz  61   7.8s En mil novecentos cincuenta e cinco, o oleiro Tito Freire cr
+voz  62   7.5s E na taberna de Eligio, en Vigo, escritores e artistas como 
+voz  63   5.1s Castroviejo dicía que botarlle grans de café á queimada era 
+voz  64   5.8s Así, entre amigos, barcos e tabernas, naceu en poucas década
+voz  65   8.0s En Santiago, onde hoxe está o Hotel Compostela, estivo a últ
+voz  66   6.6s Pero a bruxería era un delito de foro mixto: podían xulgala 
+voz  67   7.9s Entre mil cincocentos setenta e catro e mil setecentos, a In
+voz  68   6.5s Son cifras terribles, di o Arquivo do Reino, pero moi baixas
+voz  69   6.0s A febre das bruxas chegou a Galiza, pero, segundo Pousa, sen
+voz  70   7.0s O Arquivo garda tamén uns trinta procesos por bruxería da xu
+voz  71   8.0s Neles, todas as acusadas eran mulleres, e algúns acabaron en
+voz  72   7.6s En mil seiscentos trinta e nove, a Real Audiencia procesou a
+voz  73   6.6s Despois de ser torturada, María Cibreira confesou que había 
+voz  74   3.9s E que llo ensinara a súa nai, Guiomar Douteiro.
+voz  75   5.1s Contou que á casa da nai acudía moita xente, e que ela lles 
+voz  76   6.9s Dixo tamén que as noites de san Xoán e as do primeiro de mai
+voz  77   5.5s Pousa explica que aquelas mulleres non sabían que declarar: 
+voz  78   6.9s Aínda en mil oitocentos vinte e seis, en Santiago de Compost
+voz  79   5.5s Na súa casa atoparan unha baralla vella, un rosario e un esc
+voz  80   6.6s A pena foi saír do cárcere emplumada e montada nunha besta, 
+voz  81   5.0s Tamén a Inquisición xulgou por bruxería a María Soliña, unha
+voz  82   4.9s Dela, advirte o Consello da Cultura Galega, temos poucos dat
+voz  83   7.2s O poeta Celso Emilio Ferreiro dedicoulle un poema no libro L
+voz  84   5.3s Hoxe, María Soliña é un símbolo do sufrimento do pobo, e sob
+voz  85   3.2s E por fin, a lista de Campo Lameiro.
+voz  86   7.0s En mil seiscentos corenta e tres, a Real Audiencia procesou 
+voz  87   6.3s Uns veciños dicían que unha das acusadas fixera morrer as be
+voz  88   6.2s Unha testemuña contou que, pola sospeita que tiñan delas, un
+voz  89   4.2s Foi a noite de san Xoán do ano anterior, na fonte da Nogueir
+voz  90   5.2s Alí viron e recoñeceron as mulleres, e apuntáronas nunha lis
+voz  91   6.5s A noite de san Xoán era costume ir ás fontes, porque se cría
+voz  92   5.4s E na crenza popular, esa era tamén a noite en que as meigas 
+voz  93   4.0s A mesma fonte, a mesma noite, e dúas maneiras de mirala.
+voz  94   9.3s Segundo o Consello da Cultura Galega, as curandeiras ou meig
+voz  95   4.8s Nunha aldea, ser solteira ou viúva xa sinalaba unha muller c
+voz  96   6.6s Moitas das acusadas eran parteiras e menciñeiras que aprende
+voz  97   5.7s Nos papeis, Pousa atopou esta expresión: maldita a nai que n
+voz  98   7.3s Eran necesarias, di o mesmo historiador, porque resolvían os
+voz  99   4.1s Moitas denuncias nacían de xenreiras e liortas entre veciños
+voz 100   7.6s E Pousa conta que ás veces se falaba de bruxería cando, en r
+voz 101   6.6s Segundo el, a caza de bruxas nos tribunais civís decaeu desp
+voz 102   4.8s E pensa que axudou a chegada do millo de América, que alivio
+voz 103   5.8s Nos papeis daqueles procesos aparecen tamén frases en galego
+voz 104   8.5s Na mentalidade popular había varios tipos de meigas, entre e
+voz 105   5.3s E queda un dito moi coñecido: eu non creo nas meigas, mais h
+voz 106   6.0s Ninguén lle coñece autor: é un dito popular, tamén en castel
+voz 107   4.0s A frase, ademais, non aparece no Quixote de Cervantes.
+voz 108   4.8s E aquí, amodo, deixamos atrás os tribunais e as testemuñas.
+voz 109   4.8s Desde aquí a historia vai máis amodo, e non tes que lembrar 
+voz 110   4.8s Entremos nunha cociña de aldea, á noitiña, cando xa se acend
+voz 111   7.2s A cociña era a estancia máis importante e acolledora da casa
+voz 112   6.7s Tamén alí se pechaban tratos de compravenda, e desde ela pas
+voz 113   6.1s Na lareira arde o lume, sobre a pedra do lar, e por riba del
+voz 114   3.8s Case sempre había un forno dentro da lareira.
+voz 115   6.5s A carón do lume está o escano de castiñeiro, onde a xente se
+voz 116   8.5s Cando a pedra do lar estaba en alto, as patas do escano podí
+voz 117   7.6s Nalgunhas casas o escano tiña unha mesa de levante, e había 
+voz 118   4.5s No oco baixo o asento podía estar a capoeira, onde cebaban o
+voz 119   4.2s O pote colga sobre o lume dunha cadea de ferro, a gramalleir
+voz 120   6.0s Nas zonas gandeiras, os potes grandes eran para a comida dos
+voz 121   4.0s E nas lacenas da parede gárdanse os alimentos.
+voz 122   7.1s Nestas casas críase no mal de ollo, o dano que a mirada dalg
+voz 123   4.1s Críase que se podía botar por envexa, ou mesmo sen querer.
+voz 124   5.7s A veciña de Xinzo de Limia, a da arracada, tiña por moi cert
+voz 125   7.7s Segundo Xosé Ramón Mariño Ferro, a crenza servía para explic
+voz 126   4.2s Porque ninguén quería que o acusasen de botar o mal de ollo.
+voz 127   8.1s E había pastores e labregos que cuspían no gando cando algué
+voz 128   6.3s Contra o mal de ollo levábanse amuletos: unha castaña brava,
+voz 129   4.8s Aos meniños poñíanlles un destes amuletos entre a roupa ou c
+voz 130   7.4s Había quen levaba unha bolsa pequena cun dente de allo e cou
+voz 131   5.8s E estaba a figa, un amuleto con forma de man pechada, contra
+voz 132   4.3s O meigallo era outra cousa: un feitizo, a obra dunha meiga.
+voz 133   7.8s Nos anos sesenta, o antropólogo danés Gustav Henningsen foto
+voz 134   6.1s Fóra, na noite, o hórreo descansa sobre os seus pés, que o a
+voz 135   4.5s O seu tellado podía ser de tella, de lousa ou de colmo de ce
+voz 136   4.7s O aire corre polas aberturas das paredes, e dentro gárdase o
+voz 137   4.7s E nos tornarratos do hórreo adoitaban deixar secar as cabaza
+voz 138   6.8s Había tamén cabazos, pequenos celeiros de pólas ou vimbios t
+voz 139   4.6s O millo non agroma ata o comezo do verán, e madurece case no
+voz 140   6.8s O hórreo, tal como o coñecemos, estendeuse co cultivo do mil
+voz 141   4.0s É o mesmo millo que, segundo Pousa, aliviou a fame.
+voz 142   6.2s E nalgún lugar da casa, secas e recendentes, colgan as herba
+voz 143   7.3s A noite de san Xoán é a noite entre os días vinte e tres e v
+voz 144   7.3s É unha noite de lume e de auga, de herbas e de orballo, e im
+voz 145   7.0s Na véspera de san Xoán apáñanse as herbas de san Xoán: plant
+voz 146   6.8s Adoita dicirse que han ser sete herbas distintas, e a lista 
+voz 147   7.7s Había quen as apañaba no campo un día antes, para vendelas n
+voz 148   8.4s Entre elas están o fiúncho, o romeu, o codeso, o fento, a ma
+voz 149   7.3s O fiúncho ten flores amarelas, un cheiro agradable e un gust
+voz 150   8.6s O romeu é un arbusto aromático de follas pequenas, e crese q
+voz 151   5.3s O sabugueiro, pola súa banda, dá flores pequenas e brancas.
+voz 152   8.8s O codeso, de flores amarelas, servía para facer vasoiras, e 
+voz 153   6.3s E polo san Xoán florean tamén as abelurias, de flores de cor
+voz 154   6.1s Nos días de antes, os mozos e os veciños ían amoreando leña 
+voz 155   8.4s Á noitiña prendían as fogueiras, as cacharelas, e a xente co
+voz 156   4.5s Bebían viño, e cantaban e bailaban arredor do lume.
+voz 157   7.6s O fume subía amodo, e nalgúns lugares queimaban leña verde, 
+voz 158   9.7s Cando a fogueira xa case se apagaba, saltábase por riba das 
+voz 159   7.5s E ao saltar dicíase: salto por riba do lume de san Xoán, par
+voz 160   5.2s Nesta noite tamén se afumaba o gando, para protexelo do meig
+voz 161   9.0s E críase que o orballo desa noite protexía os animais, así q
+voz 162   8.8s Para facer o cacho, collían auga de sete fontes, coma nas pa
+voz 163   7.1s Deixaban as herbas nunha talla con auga, á intemperie, para 
+voz 164   5.3s Crían que era o orballo o que lles daba ás herbas as súas vi
+voz 165   5.7s Co cristianismo, pasou a dicirse que era san Xoán quen as be
+voz 166   5.9s Contan as lendas que o fento bota flor a noite de san Xoán, 
+voz 167   7.7s E contan que na fonte da Moza, na Veiga, esa noite aparece u
+voz 168   6.9s Esa mesma lenda, a da moura que se peitea na fonte, cóntase 
+voz 169   9.3s Críase que, se as mozas metían certas herbas debaixo do trav
+voz 170   5.7s E así, co cheiro das herbas, a noite ía pasando amodo cara a
+voz 171   7.4s Ao amencer, a primeira auga da fonte chamábase flor da auga,
+voz 172   7.3s A flor da auga era a tona, a capa máis superficial da auga, 
+voz 173   8.4s Nalgúns lugares ían á fonte cunha póla de bieiteiro, e o pri
+voz 174   7.1s Nas Vendas da Barreira, no Riós, crese que a moza que recoll
+voz 175   9.1s E críase que un paxaro traía no peteiro, ao amencer, unha pi
+voz 176  10.7s Á mañá lavábase a cara coa auga das herbas, verde e recenden
+voz 177   8.6s Uns versos din: día de san Xoán, alegre meniña, vaite lavar,
+voz 178   8.7s Moita xente cría que o sol baila ao amencer do día de san Xo
+voz 179   4.9s Nalgúns sitios mirábano bailar a través dos buratos dun crib
+voz 180   8.5s Unha copla di: madrugada de san Xoán, madrugada máis garrida
+voz 181   7.7s Despois poñíanse ramos de herbas e flores nas portas e nas f
+voz 182  12.0s Tamén poñían cardos ou espadanas: crían que as flores protex
+voz 183   7.3s Os ramos secábanse e colgábanse nalgún lugar da casa, para q
+voz 184   4.4s Un refrán di: en san Xoán, as bruxas fuxirán.
+voz 185   7.7s Deixamos atrás as fogueiras, e agora imos coñecer un frade q
+voz 186   7.8s Benito Xerónimo Feijoo naceu en Casdemiro, no Pereiro de Agu
+voz 187  10.5s Fillo maior dunha familia fidalga, renunciou á herdanza para
+voz 188   9.4s Máis tarde ordenouse sacerdote no mosteiro de Samos, e viviu
+voz 189   9.9s Escribiu o Teatro crítico universal, e porque escribía contr
+voz 190   7.4s Nun discurso sobre a maxia, Feijoo escribiu que había feitic
+voz 191   6.9s Advertía que as fábulas de bruxería pasan do pobo aos libros
+voz 192   6.8s E que así unha fábula nacida no recuncho dunha aldea chega a
+voz 193   6.4s Por iso pedía ler con moita desconfianza os libros que falab
+voz 194   5.0s Feijoo buscou as causas de que houbese tantas fábulas de bru
+voz 195   5.6s Unha era o gusto da xente por contar e escribir cousas prodi
+voz 196   6.8s Outra, que moitas veces a xente lle atribuía ao demo o que e
+voz 197   8.6s Contaba o caso dun labrego romano acusado de meigallo porque
+voz 198   5.6s O labrego defendeuse mostrando que traballaba máis e mellor 
+voz 199   6.2s E outra causa era a malevolencia, a xenreira contra as perso
+voz 200   8.5s Feijoo riu dunha historia na que unhas bruxas que voaban mái
+voz 201   7.6s Contou tamén que coñecera unha vella que tiña fama de feitic
+voz 202   5.5s Así, dicía, ninguén lle negaba unha esmola nin un anaco de p
+voz 203   9.7s Recollía que moitos autores crían que o voo das bruxas era u
+voz 204   8.0s E Feijoo admitía que moitas veces o voo das bruxas era só so
+voz 205   5.2s Pensaba que dicir que todo era ilusión era caer no outro ext
+voz 206   9.4s Defendeu tamén que as mulleres tiñan a mesma capacidade de e
+voz 207  10.0s No século dezaoito, frei Martín Sarmiento defendeu o saber d
+voz 208   7.5s Feijoo foi sempre de saúde delicada, con catarros frecuentes
+voz 209   5.9s Ao abade e ao convento de Samos dedicou o terceiro tomo do T
+voz 210   6.0s No claustro grande do mosteiro de Samos hai unha estatua de 
+voz 211   4.6s Volvamos á cociña da lareira, que xa está en penumbra.
+voz 212   5.1s Tras a cea, na escuridade da noite, prepárase a queimada.
+voz 213   6.9s No pote de barro vai a augardente co azucre, a casca de limó
+voz 214   9.0s Os comensais reúnense arredor do pote, coas luces apagadas, 
+voz 215   7.5s Préndeselle lume e reméxese amodo, deixando que suban as lap
+voz 216   8.4s Un deles ergue cun cazo o líquido en chamas e déixao caer po
+voz 217   5.3s E así arde un bo anaco, ata que se esgota case todo o alcoho
+voz 218   9.2s Despois sérvese quente, con todos os seus ingredientes, e se
+voz 219   7.6s E alguén lembra aquel dito tan coñecido: eu non creo nas mei
+voz 220   7.2s E se oes algunha vez o conxuro nunha queimada, xa sabes que 
+voz 221   4.9s Agora chove sobre as lousas do tellado, grises e negras.
+voz 222   4.0s É unha chuvia miúda e mansa, coma o orballo.
+voz 223   5.9s Na lareira quedan as brasas, quentes e calmas, e o escano xa
+voz 224   6.0s No pote, a queimada xa non arde, porque se esgotou case todo
+voz 225   6.2s O fume sobe amodo pola cheminea, e o pote segue colgado da g
+voz 226   7.1s Na parede, as lacenas gardan o pan para mañá, e o forno aínd
+voz 227   4.8s Na corte, ao carón da cociña, o gando dorme quente.
+voz 228   6.4s Fóra, no hórreo, repousa o millo, e as cabazas agardan nos t
+voz 229   7.1s Nalgún lugar da casa colgan as herbas secas do verán, e aínd
+voz 230   7.9s Esta noite escoitamos unha parteira, unhas palabras de sete 
+voz 231   8.3s Agora ninguén vela nin apunta nomes: a noite é de todos, e a
+voz 232   7.0s Lonxe, as sete fontes seguen correndo na escuridade, e a aug
+voz 233   5.1s Sobre os prados, o orballo pousa nas herbas, pinga a pinga.
+voz 234   7.8s A chuvia cae tamén sobre o hórreo, sobre as lousas e as tell
+voz 235   6.4s Xa non se oe o lume: só a chuvia no tellado, sempre igual, s
+voz 236   5.3s Mañá, cando amenza, as herbas do prado estarán molladas de o
+voz 237   7.2s A chuvia segue caendo, amodo, igual que caía sobre aquelas a
+voz 238   5.1s A casa descansa baixo a chuvia, e xa non tes que lembrar nad
+voz 239   4.6s E agora, amodo, xa se pode apagar a candea.
+voz 240   1.8s Boas noites.
+== 4_escenas
+== 5_imaxes
+imaxe   4 intento 0  83.3s + revisión 10.1s ['casas británicas (CLIP)'] avisos ['falta: lantern (CLIP)']
+imaxe   4 intento 1  82.1s + revisión  8.7s ['obxectos modernos', 'casas británicas (CLIP)'] avisos ['falta: lantern (CLIP)']
+imaxe   4 intento 2  76.1s + revisión  8.3s ['luz eléctrica (CLIP)'] avisos ['falta: lantern (CLIP)']
+imaxe   4 intento 3  76.2s + revisión  8.4s ['casas británicas (CLIP)'] avisos ['falta: lantern (CLIP)']
+imaxe  30 intento 0  80.0s + revisión  8.8s ok
+imaxe  55 intento 0  77.5s + revisión  9.0s ok
+imaxe  60 intento 0  81.9s + revisión  7.6s ['obxectos modernos', 'luz eléctrica (CLIP)', 'negativo do plano: street lamps (CLIP)']
+imaxe  60 intento 1  78.4s + revisión  8.9s ['interior moderno', 'luz eléctrica (CLIP)', 'casas británicas (CLIP)', 'negativo do plano: street lamps (CLIP)'] avisos ['falta: arcades (CLIP)']
+imaxe  60 intento 2  82.3s + revisión  9.4s ['luz eléctrica (CLIP)', 'arquetipo repetido: camiñantes de costas (6 xa, tope 5)'] avisos ['falta: arcades (CLIP)']
+imaxe  60 intento 3  75.4s + revisión  9.4s ['luz eléctrica (CLIP)', 'casas británicas (CLIP)', 'arquetipo repetido: camiñantes de costas (6 xa, tope 5)'] avisos ['falta: arcades (CLIP)']
+imaxe  66 intento 0  79.0s + revisión  7.8s ['obxectos modernos', 'interior moderno']
+imaxe  66 intento 1  79.2s + revisión  7.4s ok
+imaxe  83 intento 0  78.1s + revisión  8.8s ['man sen corpo (2)'] avisos ['falta: stone mortar (CLIP)']
+imaxe  83 intento 1  79.5s + revisión  8.2s ok avisos ['negativo do plano: witch (CLIP)']
+imaxe  90 intento 0  80.7s + revisión  9.7s ['interior moderno', 'salón moderno (CLIP)', 'casas británicas (CLIP)', 'negativo do plano: fireplace mantel (CLIP)']
+Token indices sequence length is longer than the specified maximum sequence length for this model (80 > 77). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (80 > 77). Running this sequence through the model will result in indexing errors
+imaxe  90 intento 1  79.3s + revisión  8.9s ['interior moderno', 'casas británicas (CLIP)', 'negativo do plano: fireplace mantel (CLIP)'] avisos ['falta: fire (CLIP)']
+imaxe  90 intento 2  81.7s + revisión  8.9s ['salón moderno (CLIP)', 'casas británicas (CLIP)', 'negativo do plano: fireplace mantel (CLIP)']
+imaxe  90 intento 3  79.2s + revisión  8.9s ['interior moderno', 'casas británicas (CLIP)', 'negativo do plano: fireplace mantel (CLIP)'] avisos ['falta: fire (CLIP)']
+imaxe 126 intento 0 revisado de novo: ['repetida (CLIP 0.92 co plano 108)']
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/concurrent/futures/process.py", line 261, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/revolta/herramientas/pipeline/imaxes.py", line 345, in xerar
+    rv = rev.revisar(outdir / it['ficheiro'], prompt=it.get('prompt'), **ctx)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/revolta/herramientas/pipeline/revisor.py", line 371, in revisar
+    pr, det = self.mans(png)
+              ^^^^^^^^^^^^^^
+  File "/home/user/revolta/herramientas/pipeline/revisor.py", line 331, in mans
+    im = self.mp.Image.create_from_file(str(png))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/mediapipe/tasks/python/vision/core/image.py", line 319, in create_from_file
+    mediapipe_c_utils.handle_status(status, error_msg)
+  File "/tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/tts/venv/lib/python3.11/site-packages/mediapipe/tasks/python/core/mediapipe_c_utils.py", line 232, in handle_status
+    raise exception
+FileNotFoundError: Can't find file: /tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/longo/w/imaxes/126-29bd42af-1.png
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/user/revolta/herramientas/pipeline/longo.py", line 550, in <module>
+    main()
+  File "/home/user/revolta/herramientas/pipeline/longo.py", line 415, in main
+    imgs, rex = ex_.submit(imaxes.xerar, pl, W / 'imaxes', seed_base=tema['id']).result()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+FileNotFoundError: Can't find file: /tmp/claude-0/-home-user-revolta/b1dc0095-400f-5e0e-a6fe-d32c0dedfece/scratchpad/longo/w/imaxes/126-29bd42af-1.png
+real	46m4.117s
+user	161m54.402s
+sys	8m4.294s
+rc 1 Thu Oct  1 21:59:02 UTC 2026

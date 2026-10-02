@@ -1,6 +1,6 @@
 # Handoff: canal "Serán · Historia de Galicia para durmir"
 
-Estado a 30-09-2026. Resume la primera sesión de trabajo (29 y 30 de septiembre de 2026) para poder retomarla en otra.
+Estado a 02-10-2026 (ronda de arreglos del episodio de las meigas hecha). Resume la primera sesión de trabajo (29 y 30 de septiembre de 2026) para poder retomarla en otra.
 Los aprendizajes están en [`APRENDIZAJES.md`](APRENDIZAJES.md).
 
 ## 0. Gauntlet 3 (30-09 a 01-10-2026): vídeo largo "Cousas de Galiza para durmir"
@@ -59,6 +59,23 @@ palabras/min, planos de 5 a 16 s. Nadie lo ha revisado a mano.
   (validar, partir, 720p HLS fMP4) y `paxina_episodio.py` (página). Detalles y tropiezos en `docs/APRENDIZAJES.md`
   (memoria del cgroup 13,36 GiB, reinicios por sesión ociosa, puerta demasiado estricta, sonoridad, tipos de las
   páginas).
+
+**Ronda de arreglos (01-10-2026 noche → 02-10-2026 01:45 UTC): hecha.** Detalle en
+[`gauntlet3/video/arranxos/LEEME.md`](../plan-de-negocio/gauntlet3/video/arranxos/LEEME.md).
+- **Arreglos 1-2 (11 planos):** hechos. Claude reescribió los prompts, miró cada intento y eligió a mano el 91 y el 145.
+  Hoja antes/después en `gauntlet3/video/arranxos/antes-despois.jpg`. Nadie más los ha visto.
+- **Arreglo 3 (pico real):** hecho. `son.limitar` mide el pico real ×4 con tope −2 dBTP: el episodio da **−1,7 dBTP**.
+- **Arreglo 4 (descripción):** hecho y automático. `longo.descricion` rellena `{imaxes}` y `{ambientes}` con los datos
+  del episodio (hoy: 38 de 162 sin pasar la puerta; choiva, lume, auga, mar, aldea, noite, campás, murmurio) y el primer
+  capítulo va como «00:00».
+- **QA:** 12/13 (falla `imaxes_revisadas`, 124/162), WER 0,03, −17,1 LUFS. Página actualizada en la misma URL
+  (https://claude.ai/artifact/6hXeH9wqWbHCWqwVW5K5EX).
+- **Puerta:** veta ahora radiador, fregadero, grifos, maleta de ruedas, maletín, peluche, gorro, apliques, etc.
+  (`revisor.py`, sin subir `VERSION`).
+- **Pendiente del promotor:** (a) dónde archivar el máster 1080p (316 MB; está solo en el scratchpad de esta sesión,
+  partido en `video/mestre/`, que `.gitignore` excluye; si no se archiva se rehace en ≈2 h: todo lo necesario está en
+  el repo); (b) arreglo 5, que solo puede hacer una persona: etiqueta de contenido sintético en YouTube Studio, subir
+  el SRT, miniatura y correo a Nós/USC (D4); (c) una escucha y un visionado humanos antes de publicar.
 
 **Ideas del promotor para después de este vídeo (D15, D16):**
 - **Imágenes de referencia o semilla** para lo que SDXL no conoce (carro de bois, hórreo, pazo, palloza, traje
