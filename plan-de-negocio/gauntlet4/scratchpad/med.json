@@ -1,0 +1,1143 @@
+{
+ "medidas": {
+  "palabras": 1554,
+  "frases": 105,
+  "capitulos": 5,
+  "fases_palabras": [
+   231,
+   570,
+   1107
+  ],
+  "minutos": {
+   "media_v1": 12.33,
+   "ritmo_v1_por_fase_de_contido": 11.51,
+   "curva_actual_280_950": 11.24
+  },
+  "por_capitulo": [
+   {
+    "titulo": "(inicial)",
+    "palabras": 231,
+    "comeza_min": "0:00"
+   },
+   {
+    "titulo": "Auga, digo, leite",
+    "palabras": 217,
+    "comeza_min": "1:28"
+   },
+   {
+    "titulo": "O conxuro do barco",
+    "palabras": 122,
+    "comeza_min": "2:53"
+   },
+   {
+    "titulo": "As respostas nas preguntas",
+    "palabras": 187,
+    "comeza_min": "3:40"
+   },
+   {
+    "titulo": "A lista da fonte",
+    "palabras": 350,
+    "comeza_min": "5:02"
+   },
+   {
+    "titulo": "Chove na lousa",
+    "palabras": 447,
+    "comeza_min": "7:37"
+   }
+  ],
+  "por_fase": {
+   "gancho": {
+    "palabras": 208,
+    "frases": 15,
+    "palabras_por_frase_media": 13.9,
+    "frase_max": 25,
+    "atribucions": 2,
+    "atribucions_por_100": 0.96,
+    "nomes_novos": 5,
+    "nomes_novos_por_100": 2.4,
+    "cantidades": 2,
+    "cantidades_por_100": 0.96
+   },
+   "transicion": {
+    "palabras": 339,
+    "frases": 24,
+    "palabras_por_frase_media": 14.1,
+    "frase_max": 26,
+    "atribucions": 2,
+    "atribucions_por_100": 0.59,
+    "nomes_novos": 7,
+    "nomes_novos_por_100": 2.06,
+    "cantidades": 8,
+    "cantidades_por_100": 2.36
+   },
+   "calma": {
+    "palabras": 537,
+    "frases": 36,
+    "palabras_por_frase_media": 14.9,
+    "frase_max": 25,
+    "atribucions": 6,
+    "atribucions_por_100": 1.12,
+    "nomes_novos": 9,
+    "nomes_novos_por_100": 1.68,
+    "cantidades": 6,
+    "cantidades_por_100": 1.12
+   },
+   "durmir": {
+    "palabras": 445,
+    "frases": 26,
+    "palabras_por_frase_media": 17.1,
+    "frase_max": 24,
+    "atribucions": 1,
+    "atribucions_por_100": 0.22,
+    "nomes_novos": 0,
+    "nomes_novos_por_100": 0.0,
+    "cantidades": 3,
+    "cantidades_por_100": 0.67
+   }
+  },
+  "parte_esperta": {
+   "palabras": 1084,
+   "atribucions": 10,
+   "atribucions_por_100": 0.92
+  },
+  "segundo": 1,
+  "frases_mais_de_28": [],
+  "frases_menos_de_8": [
+   [
+    1,
+    5,
+    "Mouchos, curuxas, sapos e bruxas."
+   ],
+   [
+    3,
+    4,
+    "Parecen de hai séculos."
+   ],
+   [
+    5,
+    4,
+    "Vilalba, mil seiscentos dezasete."
+   ],
+   [
+    30,
+    7,
+    "E as palabras tamén podían pechar portas."
+   ],
+   [
+    32,
+    7,
+    "Auga de sete fontes para o gando."
+   ],
+   [
+    33,
+    5,
+    "E para elas, nin auga."
+   ],
+   [
+    34,
+    7,
+    "Aquel papel gardou ata unha palabra trabucada."
+   ],
+   [
+    51,
+    6,
+    "Que llo ensinara a súa nai."
+   ],
+   [
+    63,
+    6,
+    "Queda a lista, escrita por outros."
+   ],
+   [
+    77,
+    5,
+    "E aquí deixamos os papeis."
+   ],
+   [
+    92,
+    5,
+    "Mouchos, curuxas, sapos e bruxas."
+   ]
+  ],
+  "estilo": {
+   "digitos": [],
+   "interrogacions": 0,
+   "signos": [],
+   "imaxina": false,
+   "aviso_literal": true,
+   "formula_literal": true,
+   "aviso_palabra": 100,
+   "aviso_min": "0:38"
+  },
+  "nomes_distintos": [
+   "Arquivo do Reino de Galicia",
+   "Benito Xerónimo Feijoo",
+   "Boborás",
+   "Campo Lameiro",
+   "Diego Valor Bravo",
+   "Dorotea",
+   "Dorotea do Barro",
+   "Inquisición",
+   "Marcos Abalo",
+   "Mariano Marcos Abalo",
+   "María",
+   "María Cibreira",
+   "María do Barro",
+   "Mondoñedo",
+   "Nogueira",
+   "Pousa",
+   "Real Audiencia",
+   "Sevilla",
+   "Vigo",
+   "Vilalba",
+   "Xoán"
+  ]
+ },
+ "frases": [
+  {
+   "i": 1,
+   "par": 0,
+   "texto": "Mouchos, curuxas, sapos e bruxas.",
+   "pal0": 0,
+   "n": 5,
+   "t0": 0.0,
+   "fase": "gancho"
+  },
+  {
+   "i": 2,
+   "par": 0,
+   "texto": "Coas luces apagadas, alguén di estas palabras mentres ergue cun cazo o líquido en chamas.",
+   "pal0": 5,
+   "n": 15,
+   "t0": 0.03,
+   "fase": "gancho"
+  },
+  {
+   "i": 3,
+   "par": 0,
+   "texto": "Parecen de hai séculos.",
+   "pal0": 20,
+   "n": 4,
+   "t0": 0.13,
+   "fase": "gancho"
+  },
+  {
+   "i": 4,
+   "par": 0,
+   "texto": "Pero teñen autor coñecido e son de mil novecentos sesenta e sete: escribiunas Mariano Marcos Abalo nun vello barco amarrado no porto de Vigo.",
+   "pal0": 24,
+   "n": 24,
+   "t0": 0.15,
+   "fase": "gancho"
+  },
+  {
+   "i": 5,
+   "par": 1,
+   "texto": "Vilalba, mil seiscentos dezasete.",
+   "pal0": 48,
+   "n": 4,
+   "t0": 0.31,
+   "fase": "gancho"
+  },
+  {
+   "i": 6,
+   "par": 1,
+   "texto": "Unha testemuña declara que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.",
+   "pal0": 52,
+   "n": 25,
+   "t0": 0.33,
+   "fase": "gancho"
+  },
+  {
+   "i": 7,
+   "par": 1,
+   "texto": "Abondaba con calzarlle ao home os zapatos da muller, dicindo unhas palabras que ela sabía.",
+   "pal0": 77,
+   "n": 15,
+   "t0": 0.49,
+   "fase": "gancho"
+  },
+  {
+   "i": 8,
+   "par": 1,
+   "texto": "E o home saltaría coma un poldro bravo.",
+   "pal0": 92,
+   "n": 8,
+   "t0": 0.59,
+   "fase": "gancho"
+  },
+  {
+   "i": 9,
+   "par": 2,
+   "texto": "Boas noites.",
+   "pal0": 100,
+   "n": 2,
+   "t0": 0.64,
+   "fase": "gancho"
+  },
+  {
+   "i": 10,
+   "par": 2,
+   "texto": "A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
+   "pal0": 102,
+   "n": 14,
+   "t0": 0.65,
+   "fase": "gancho"
+  },
+  {
+   "i": 11,
+   "par": 3,
+   "texto": "Isto é Cousas de Galiza para durmir.",
+   "pal0": 116,
+   "n": 7,
+   "t0": 0.74,
+   "fase": "gancho"
+  },
+  {
+   "i": 12,
+   "par": 4,
+   "texto": "As palabras do conxuro parecen vellas e son novas, e hai un motivo polo que parecen de ninguén.",
+   "pal0": 123,
+   "n": 18,
+   "t0": 0.78,
+   "fase": "gancho"
+  },
+  {
+   "i": 13,
+   "par": 4,
+   "texto": "As de Dorotea son vellas de verdade, e só as coñecemos porque alguén as escribiu nun proceso por bruxería.",
+   "pal0": 141,
+   "n": 19,
+   "t0": 0.9,
+   "fase": "gancho"
+  },
+  {
+   "i": 14,
+   "par": 5,
+   "texto": "Nos papeis daqueles procesos hai moitas máis palabras.",
+   "pal0": 160,
+   "n": 8,
+   "t0": 1.02,
+   "fase": "gancho"
+  },
+  {
+   "i": 15,
+   "par": 5,
+   "texto": "Hai mesmo unha lista de nomes: os das mulleres que uns veciños viron nunha fonte, a noite de san Xoán.",
+   "pal0": 168,
+   "n": 20,
+   "t0": 1.07,
+   "fase": "gancho"
+  },
+  {
+   "i": 16,
+   "par": 6,
+   "texto": "Detrás de todas esas palabras había mulleres de aldea.",
+   "pal0": 188,
+   "n": 9,
+   "t0": 1.2,
+   "fase": "gancho"
+  },
+  {
+   "i": 17,
+   "par": 6,
+   "texto": "A meiga, moitas veces, non era a bruxa dos contos, senón a que curaba, a que axudaba nos partos, a que sabía de herbas.",
+   "pal0": 197,
+   "n": 24,
+   "t0": 1.25,
+   "fase": "gancho"
+  },
+  {
+   "i": 18,
+   "par": 6,
+   "texto": "Esta noite imos buscalas no pouco que delas quedou escrito.",
+   "pal0": 221,
+   "n": 10,
+   "t0": 1.41,
+   "fase": "gancho"
+  },
+  {
+   "i": 19,
+   "par": 7,
+   "texto": "En Vilalba, a Real Audiencia xulgou tamén a María do Barro, a filla de Dorotea.",
+   "pal0": 231,
+   "n": 15,
+   "t0": 1.47,
+   "fase": "transicion"
+  },
+  {
+   "i": 20,
+   "par": 7,
+   "texto": "Da filla dicían outra cousa: que era alcaiota, e que acollía na súa casa homes casados e mulleres solteiras.",
+   "pal0": 246,
+   "n": 19,
+   "t0": 1.57,
+   "fase": "transicion"
+  },
+  {
+   "i": 21,
+   "par": 8,
+   "texto": "Unha testemuña contou que, cando María tiña o gando no monte, dicía unhas palabras: unhas en voz baixa, e outras que se oían.",
+   "pal0": 265,
+   "n": 23,
+   "t0": 1.69,
+   "fase": "transicion"
+  },
+  {
+   "i": 22,
+   "par": 8,
+   "texto": "Podemos pensala alí, co gando arredor e o vento levando a medias o que dicía.",
+   "pal0": 288,
+   "n": 15,
+   "t0": 1.84,
+   "fase": "transicion"
+  },
+  {
+   "i": 23,
+   "par": 8,
+   "texto": "E entre aquelas palabras había un desexo para o gando: que bebese auga de sete fontes e trouxese leite de sete cortes e de sete montes.",
+   "pal0": 303,
+   "n": 26,
+   "t0": 1.94,
+   "fase": "transicion"
+  },
+  {
+   "i": 24,
+   "par": 9,
+   "texto": "Eran palabras para o gando, non para un tribunal.",
+   "pal0": 329,
+   "n": 9,
+   "t0": 2.11,
+   "fase": "transicion"
+  },
+  {
+   "i": 25,
+   "par": 9,
+   "texto": "Pero do monte pasaron á boca da testemuña, e da boca ao papel.",
+   "pal0": 338,
+   "n": 13,
+   "t0": 2.16,
+   "fase": "transicion"
+  },
+  {
+   "i": 26,
+   "par": 9,
+   "texto": "No papel quedou ata a emenda de quen escribía: que trouxese auga, digo, leite.",
+   "pal0": 351,
+   "n": 14,
+   "t0": 2.25,
+   "fase": "transicion"
+  },
+  {
+   "i": 27,
+   "par": 9,
+   "texto": "Aquel papel gárdao hoxe o Arquivo do Reino de Galicia.",
+   "pal0": 365,
+   "n": 10,
+   "t0": 2.34,
+   "fase": "transicion"
+  },
+  {
+   "i": 28,
+   "par": 9,
+   "texto": "Máis de catrocentos anos despois, a palabra trabucada segue alí, xusto antes da boa.",
+   "pal0": 375,
+   "n": 14,
+   "t0": 2.4,
+   "fase": "transicion"
+  },
+  {
+   "i": 29,
+   "par": 10,
+   "texto": "Así nos chegan as palabras daquelas mulleres: na voz doutros, e na man de quen escribía.",
+   "pal0": 389,
+   "n": 16,
+   "t0": 2.49,
+   "fase": "transicion"
+  },
+  {
+   "i": 30,
+   "par": 10,
+   "texto": "E as palabras tamén podían pechar portas.",
+   "pal0": 405,
+   "n": 7,
+   "t0": 2.6,
+   "fase": "transicion"
+  },
+  {
+   "i": 31,
+   "par": 10,
+   "texto": "O vicario xeral do bispado de Mondoñedo excomungou a nai e a filla, e mandou que ninguén lles dese pan, sal, auga nin lume.",
+   "pal0": 412,
+   "n": 24,
+   "t0": 2.64,
+   "fase": "transicion"
+  },
+  {
+   "i": 32,
+   "par": 10,
+   "texto": "Auga de sete fontes para o gando.",
+   "pal0": 436,
+   "n": 7,
+   "t0": 2.8,
+   "fase": "transicion"
+  },
+  {
+   "i": 33,
+   "par": 10,
+   "texto": "E para elas, nin auga.",
+   "pal0": 443,
+   "n": 5,
+   "t0": 2.84,
+   "fase": "transicion"
+  },
+  {
+   "i": 34,
+   "par": 11,
+   "texto": "Aquel papel gardou ata unha palabra trabucada.",
+   "pal0": 448,
+   "n": 7,
+   "t0": 2.88,
+   "fase": "transicion"
+  },
+  {
+   "i": 35,
+   "par": 11,
+   "texto": "Ás veces pasa o contrario, e o que se perde é o nome de quen escribiu.",
+   "pal0": 455,
+   "n": 16,
+   "t0": 2.92,
+   "fase": "transicion"
+  },
+  {
+   "i": 36,
+   "par": 11,
+   "texto": "Foi o que lle pasou ao conxuro da queimada.",
+   "pal0": 471,
+   "n": 9,
+   "t0": 3.02,
+   "fase": "transicion"
+  },
+  {
+   "i": 37,
+   "par": 12,
+   "texto": "Mariano Marcos Abalo xuntábase cos amigos a bordo daquel vello barco, amarrado no porto, e alí facían queimadas.",
+   "pal0": 480,
+   "n": 18,
+   "t0": 3.08,
+   "fase": "transicion"
+  },
+  {
+   "i": 38,
+   "par": 12,
+   "texto": "Contaba que escribira o conxuro para darlles un pouco de ritual.",
+   "pal0": 498,
+   "n": 11,
+   "t0": 3.2,
+   "fase": "transicion"
+  },
+  {
+   "i": 39,
+   "par": 12,
+   "texto": "E que houbo outros cinco ou seis conxuros daquela época, pero ningún tivo a saída do seu.",
+   "pal0": 509,
+   "n": 17,
+   "t0": 3.27,
+   "fase": "transicion"
+  },
+  {
+   "i": 40,
+   "par": 13,
+   "texto": "Unha empresa vendeu copias sen o nome do autor, e por iso moita xente pensou que era un texto popular e anónimo.",
+   "pal0": 526,
+   "n": 22,
+   "t0": 3.38,
+   "fase": "transicion"
+  },
+  {
+   "i": 41,
+   "par": 13,
+   "texto": "En dous mil un, rexistrouno como propiedade intelectual.",
+   "pal0": 548,
+   "n": 8,
+   "t0": 3.52,
+   "fase": "transicion"
+  },
+  {
+   "i": 42,
+   "par": 13,
+   "texto": "Así, unhas palabras sen nome no papel acabaron parecendo de todos, e de sempre.",
+   "pal0": 556,
+   "n": 14,
+   "t0": 3.57,
+   "fase": "transicion"
+  },
+  {
+   "i": 43,
+   "par": 14,
+   "texto": "O conxuro naceu entre amigos, arredor dun pote.",
+   "pal0": 570,
+   "n": 8,
+   "t0": 3.67,
+   "fase": "calma"
+  },
+  {
+   "i": 44,
+   "par": 14,
+   "texto": "As palabras dos procesos naceron noutro sitio: diante dos xuíces.",
+   "pal0": 578,
+   "n": 10,
+   "t0": 3.72,
+   "fase": "calma"
+  },
+  {
+   "i": 45,
+   "par": 14,
+   "texto": "E a bruxería podían xulgala tres xustizas: a civil, a eclesiástica e a Inquisición.",
+   "pal0": 588,
+   "n": 14,
+   "t0": 3.8,
+   "fase": "calma"
+  },
+  {
+   "i": 46,
+   "par": 15,
+   "texto": "Para o investigador Diego Valor Bravo, coas meigas a temida Inquisición foi branda: en tres séculos só condenou a morte unha meiga.",
+   "pal0": 602,
+   "n": 22,
+   "t0": 3.9,
+   "fase": "calma"
+  },
+  {
+   "i": 47,
+   "par": 15,
+   "texto": "Os xuíces da xustiza ordinaria foron moito máis duros.",
+   "pal0": 624,
+   "n": 9,
+   "t0": 4.06,
+   "fase": "calma"
+  },
+  {
+   "i": 48,
+   "par": 15,
+   "texto": "E nos procesos da Real Audiencia, a xustiza do rei, todas as acusadas eran mulleres.",
+   "pal0": 633,
+   "n": 15,
+   "t0": 4.13,
+   "fase": "calma"
+  },
+  {
+   "i": 49,
+   "par": 16,
+   "texto": "En mil seiscentos trinta e nove, a Real Audiencia procesou a María Cibreira e a outras veciñas de Boborás.",
+   "pal0": 648,
+   "n": 19,
+   "t0": 4.24,
+   "fase": "calma"
+  },
+  {
+   "i": 50,
+   "par": 16,
+   "texto": "Despois de ser torturada, María Cibreira confesou que había uns doce anos que exercía o oficio de bruxa e feiticeira.",
+   "pal0": 667,
+   "n": 20,
+   "t0": 4.38,
+   "fase": "calma"
+  },
+  {
+   "i": 51,
+   "par": 16,
+   "texto": "Que llo ensinara a súa nai.",
+   "pal0": 687,
+   "n": 6,
+   "t0": 4.52,
+   "fase": "calma"
+  },
+  {
+   "i": 52,
+   "par": 16,
+   "texto": "Que á casa da nai acudía moita xente, e que ela lles facía curas e menciñas.",
+   "pal0": 693,
+   "n": 16,
+   "t0": 4.57,
+   "fase": "calma"
+  },
+  {
+   "i": 53,
+   "par": 16,
+   "texto": "E que as noites de san Xoán as meigas ían ás xuntanzas do demo, nas areas de Sevilla.",
+   "pal0": 709,
+   "n": 18,
+   "t0": 4.69,
+   "fase": "calma"
+  },
+  {
+   "i": 54,
+   "par": 17,
+   "texto": "Rodrigo Pousa, historiador, explica que aquelas mulleres non sabían que declarar: as respostas xa ían nas preguntas.",
+   "pal0": 727,
+   "n": 17,
+   "t0": 4.82,
+   "fase": "calma"
+  },
+  {
+   "i": 55,
+   "par": 17,
+   "texto": "Ás veces, a voz era dunha muller, e as palabras, de quen preguntaba.",
+   "pal0": 744,
+   "n": 13,
+   "t0": 4.94,
+   "fase": "calma"
+  },
+  {
+   "i": 56,
+   "par": 18,
+   "texto": "Unha noite de san Xoán aparece tamén nos papeis de Campo Lameiro.",
+   "pal0": 757,
+   "n": 12,
+   "t0": 5.04,
+   "fase": "calma"
+  },
+  {
+   "i": 57,
+   "par": 18,
+   "texto": "En mil seiscentos corenta e tres, a Real Audiencia procesou alí a varias mulleres.",
+   "pal0": 769,
+   "n": 14,
+   "t0": 5.13,
+   "fase": "calma"
+  },
+  {
+   "i": 58,
+   "par": 18,
+   "texto": "Os veciños, rifados cunha delas, culpábana de lles facer morrer as becerras e os leitóns.",
+   "pal0": 783,
+   "n": 15,
+   "t0": 5.23,
+   "fase": "calma"
+  },
+  {
+   "i": 59,
+   "par": 19,
+   "texto": "Unha testemuña contou que, pola sospeita que tiñan delas, uns veciños foran espreitalas á fonte da Nogueira, a noite de san Xoán do ano anterior.",
+   "pal0": 798,
+   "n": 25,
+   "t0": 5.34,
+   "fase": "calma"
+  },
+  {
+   "i": 60,
+   "par": 19,
+   "texto": "Alí viron e recoñeceron as mulleres, e apuntáronas nunha lista porque eran moitas.",
+   "pal0": 823,
+   "n": 13,
+   "t0": 5.52,
+   "fase": "calma"
+  },
+  {
+   "i": 61,
+   "par": 20,
+   "texto": "Podemos pensar nunha noite curta de xuño, na auga fría da fonte e nuns ollos que miran desde a escuridade.",
+   "pal0": 836,
+   "n": 20,
+   "t0": 5.62,
+   "fase": "calma"
+  },
+  {
+   "i": 62,
+   "par": 20,
+   "texto": "Do que falaban elas aquela noite, nestes papeis non queda nin unha palabra.",
+   "pal0": 856,
+   "n": 13,
+   "t0": 5.76,
+   "fase": "calma"
+  },
+  {
+   "i": 63,
+   "par": 20,
+   "texto": "Queda a lista, escrita por outros.",
+   "pal0": 869,
+   "n": 6,
+   "t0": 5.86,
+   "fase": "calma"
+  },
+  {
+   "i": 64,
+   "par": 21,
+   "texto": "A noite de san Xoán era costume ir ás fontes, porque se cría que a auga desa noite tiña virtudes especiais.",
+   "pal0": 875,
+   "n": 21,
+   "t0": 5.9,
+   "fase": "calma"
+  },
+  {
+   "i": 65,
+   "par": 21,
+   "texto": "E na crenza popular, era tamén a noite en que as meigas andaban máis libres.",
+   "pal0": 896,
+   "n": 15,
+   "t0": 6.06,
+   "fase": "calma"
+  },
+  {
+   "i": 66,
+   "par": 21,
+   "texto": "A mesma fonte, a mesma noite, e dúas maneiras de mirala.",
+   "pal0": 911,
+   "n": 11,
+   "t0": 6.17,
+   "fase": "calma"
+  },
+  {
+   "i": 67,
+   "par": 22,
+   "texto": "Moitas das acusadas eran parteiras e menciñeiras que aprenderan o oficio doutras mulleres, a miúdo das súas nais.",
+   "pal0": 922,
+   "n": 18,
+   "t0": 6.25,
+   "fase": "calma"
+  },
+  {
+   "i": 68,
+   "par": 22,
+   "texto": "Nai e filla eran as de Vilalba, e unha nai aparece tamén na confesión de María Cibreira.",
+   "pal0": 940,
+   "n": 17,
+   "t0": 6.38,
+   "fase": "calma"
+  },
+  {
+   "i": 69,
+   "par": 22,
+   "texto": "E nos papeis, Pousa atopou estas palabras: maldita a nai que non ensina a súa filla a meigar.",
+   "pal0": 957,
+   "n": 18,
+   "t0": 6.5,
+   "fase": "calma"
+  },
+  {
+   "i": 70,
+   "par": 23,
+   "texto": "Para el, eran necesarias, porque resolvían os problemas de cada día: a saúde, as colleitas e o gando.",
+   "pal0": 975,
+   "n": 18,
+   "t0": 6.64,
+   "fase": "calma"
+  },
+  {
+   "i": 71,
+   "par": 23,
+   "texto": "E moitas denuncias nacían de liortas entre veciños, coma en Campo Lameiro.",
+   "pal0": 993,
+   "n": 12,
+   "t0": 6.77,
+   "fase": "calma"
+  },
+  {
+   "i": 72,
+   "par": 23,
+   "texto": "Ás veces había quen falaba de bruxería cando, en realidade, as ovellas dun veciño lle comeran a viña ao outro.",
+   "pal0": 1005,
+   "n": 20,
+   "t0": 6.86,
+   "fase": "calma"
+  },
+  {
+   "i": 73,
+   "par": 24,
+   "texto": "Moito despois, o frade Benito Xerónimo Feijoo escribiu contra as falsas crenzas e as supersticións.",
+   "pal0": 1025,
+   "n": 15,
+   "t0": 7.0,
+   "fase": "calma"
+  },
+  {
+   "i": 74,
+   "par": 24,
+   "texto": "Advertía que as fábulas de bruxería pasan do pobo aos libros, e dos libros outra vez ao pobo.",
+   "pal0": 1040,
+   "n": 18,
+   "t0": 7.11,
+   "fase": "calma"
+  },
+  {
+   "i": 75,
+   "par": 24,
+   "texto": "Así, para el, unha fábula nacida no recuncho dunha aldea chega a encher o mundo enteiro.",
+   "pal0": 1058,
+   "n": 16,
+   "t0": 7.25,
+   "fase": "calma"
+  },
+  {
+   "i": 76,
+   "par": 24,
+   "texto": "E admitía que moitas veces o voo das bruxas era só soñado.",
+   "pal0": 1074,
+   "n": 12,
+   "t0": 7.36,
+   "fase": "calma"
+  },
+  {
+   "i": 77,
+   "par": 25,
+   "texto": "E aquí deixamos os papeis.",
+   "pal0": 1086,
+   "n": 5,
+   "t0": 7.45,
+   "fase": "calma"
+  },
+  {
+   "i": 78,
+   "par": 25,
+   "texto": "Desde agora a historia vai máis amodo, e non tes que lembrar nada do que escoites.",
+   "pal0": 1091,
+   "n": 16,
+   "t0": 7.49,
+   "fase": "calma"
+  },
+  {
+   "i": 79,
+   "par": 26,
+   "texto": "É outra vez aquela noite de xuño, e esta vez ninguén espreita na escuridade nin apunta nomes nunha lista.",
+   "pal0": 1107,
+   "n": 19,
+   "t0": 7.61,
+   "fase": "durmir"
+  },
+  {
+   "i": 80,
+   "par": 26,
+   "texto": "Para facer o cacho, alguén colle auga de sete fontes, coma naquelas palabras do monte, e deixa nela as herbas da véspera.",
+   "pal0": 1126,
+   "n": 22,
+   "t0": 7.77,
+   "fase": "durmir"
+  },
+  {
+   "i": 81,
+   "par": 26,
+   "texto": "A talla queda fóra toda a noite, para que lle caia o orballo, que segundo a crenza daba ás herbas as súas virtudes.",
+   "pal0": 1148,
+   "n": 23,
+   "t0": 7.96,
+   "fase": "durmir"
+  },
+  {
+   "i": 82,
+   "par": 27,
+   "texto": "Lonxe, cando a cacharela xa case se apaga, a xente salta as últimas lapas, sempre un número impar de veces, polo menos tres.",
+   "pal0": 1171,
+   "n": 23,
+   "t0": 8.16,
+   "fase": "durmir"
+  },
+  {
+   "i": 83,
+   "par": 27,
+   "texto": "E ao saltar di unhas palabras que ninguén apunta nunha lista.",
+   "pal0": 1194,
+   "n": 11,
+   "t0": 8.37,
+   "fase": "durmir"
+  },
+  {
+   "i": 84,
+   "par": 27,
+   "texto": "Salto por riba do lume de san Xoán, para que non me morda cadela nin can.",
+   "pal0": 1205,
+   "n": 16,
+   "t0": 8.46,
+   "fase": "durmir"
+  },
+  {
+   "i": 85,
+   "par": 28,
+   "texto": "Ao amencer, a primeira auga da fonte chámase flor da auga, e crese que dá saúde e beleza.",
+   "pal0": 1221,
+   "n": 18,
+   "t0": 8.6,
+   "fase": "durmir"
+  },
+  {
+   "i": 86,
+   "par": 28,
+   "texto": "Coa auga das herbas, verde e recendente, lávase a cara; e nalgunhas zonas lávase mirando ao oriente, para recibir as primeiras raiolas do sol.",
+   "pal0": 1239,
+   "n": 24,
+   "t0": 8.76,
+   "fase": "durmir"
+  },
+  {
+   "i": 87,
+   "par": 28,
+   "texto": "Despois, os ramos de herbas colgan secos nalgún lugar da casa, para que a protexan o resto do ano.",
+   "pal0": 1263,
+   "n": 19,
+   "t0": 8.97,
+   "fase": "durmir"
+  },
+  {
+   "i": 88,
+   "par": 29,
+   "texto": "Nunha cociña de aldea, tras a cea, apáganse as luces.",
+   "pal0": 1282,
+   "n": 10,
+   "t0": 9.13,
+   "fase": "durmir"
+  },
+  {
+   "i": 89,
+   "par": 29,
+   "texto": "No pote de barro van a augardente e o azucre, a casca de limón e uns poucos grans de café.",
+   "pal0": 1292,
+   "n": 20,
+   "t0": 9.22,
+   "fase": "durmir"
+  },
+  {
+   "i": 90,
+   "par": 29,
+   "texto": "Os comensais xúntanse arredor do pote, para animar os corazóns e estreitar os lazos de amizade.",
+   "pal0": 1312,
+   "n": 16,
+   "t0": 9.4,
+   "fase": "durmir"
+  },
+  {
+   "i": 91,
+   "par": 29,
+   "texto": "Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro.",
+   "pal0": 1328,
+   "n": 21,
+   "t0": 9.54,
+   "fase": "durmir"
+  },
+  {
+   "i": 92,
+   "par": 30,
+   "texto": "Mouchos, curuxas, sapos e bruxas.",
+   "pal0": 1349,
+   "n": 5,
+   "t0": 9.72,
+   "fase": "durmir"
+  },
+  {
+   "i": 93,
+   "par": 30,
+   "texto": "Agora xa sabes quen escribiu estas palabras, que parecían de ninguén: un home nun barco, entre amigos.",
+   "pal0": 1354,
+   "n": 17,
+   "t0": 9.76,
+   "fase": "durmir"
+  },
+  {
+   "i": 94,
+   "par": 30,
+   "texto": "E alguén di aquel dito tan coñecido: eu non creo nas meigas, mais habelas, hainas.",
+   "pal0": 1371,
+   "n": 15,
+   "t0": 9.91,
+   "fase": "durmir"
+  },
+  {
+   "i": 95,
+   "par": 30,
+   "texto": "Ese si é de todos, porque ninguén lle coñece autor.",
+   "pal0": 1386,
+   "n": 10,
+   "t0": 10.04,
+   "fase": "durmir"
+  },
+  {
+   "i": 96,
+   "par": 31,
+   "texto": "As lapas do alcohol van baixando amodo, ata que se esgota case todo, e a cociña queda á luz das brasas.",
+   "pal0": 1396,
+   "n": 21,
+   "t0": 10.13,
+   "fase": "durmir"
+  },
+  {
+   "i": 97,
+   "par": 31,
+   "texto": "Das meigas de verdade escoitamos esta noite poucas palabras, e todas as escribiu outra man.",
+   "pal0": 1417,
+   "n": 15,
+   "t0": 10.31,
+   "fase": "durmir"
+  },
+  {
+   "i": 98,
+   "par": 31,
+   "texto": "A outra meiga, a dos contos, fixérona as fábulas que van da aldea aos libros.",
+   "pal0": 1432,
+   "n": 15,
+   "t0": 10.44,
+   "fase": "durmir"
+  },
+  {
+   "i": 99,
+   "par": 32,
+   "texto": "Agora chove sobre as lousas do tellado, unha chuvia miúda e mansa, coma o orballo que caía sobre as herbas.",
+   "pal0": 1447,
+   "n": 20,
+   "t0": 10.57,
+   "fase": "durmir"
+  },
+  {
+   "i": 100,
+   "par": 32,
+   "texto": "Na corte, o gando dorme quente, e nalgún lugar da casa colgan as herbas secas daquela noite, que aínda cheiran a monte.",
+   "pal0": 1467,
+   "n": 22,
+   "t0": 10.75,
+   "fase": "durmir"
+  },
+  {
+   "i": 101,
+   "par": 33,
+   "texto": "Lonxe, as sete fontes seguen correndo na escuridade, e a auga baixa mansa cara ao río, sen que ninguén a espreite.",
+   "pal0": 1489,
+   "n": 21,
+   "t0": 10.94,
+   "fase": "durmir"
+  },
+  {
+   "i": 102,
+   "par": 33,
+   "texto": "Ninguén apunta nomes, ninguén pregunta, e xa non fan falta palabras: só a chuvia na lousa, sempre igual, sempre mansa.",
+   "pal0": 1510,
+   "n": 20,
+   "t0": 11.13,
+   "fase": "durmir"
+  },
+  {
+   "i": 103,
+   "par": 34,
+   "texto": "A casa descansa baixo a chuvia, e xa non tes que lembrar nada.",
+   "pal0": 1530,
+   "n": 13,
+   "t0": 11.3,
+   "fase": "durmir"
+  },
+  {
+   "i": 104,
+   "par": 34,
+   "texto": "E agora, amodo, xa se pode apagar a candea.",
+   "pal0": 1543,
+   "n": 9,
+   "t0": 11.41,
+   "fase": "durmir"
+  },
+  {
+   "i": 105,
+   "par": 35,
+   "texto": "Boas noites.",
+   "pal0": 1552,
+   "n": 2,
+   "t0": 11.49,
+   "fase": "durmir"
+  }
+ ]
+}
