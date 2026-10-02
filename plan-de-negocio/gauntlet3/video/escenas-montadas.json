@@ -96,9 +96,9 @@
   "fase": "gancho",
   "u": 0.0114,
   "capitulo": "Comezo",
-  "prompt": "wide establishing shot of a hamlet of low granite houses with dark slate roofs at night, a woman in a brown wool shawl carrying a horn lantern along the muddy lane, cold mist",
-  "tipo": "xeral",
-  "negativo": "street lamps, chimneys",
+  "prompt": "medium shot of a woman in a brown wool shawl holding a horn lantern beside a mossy dry-stone wall at night, empty dark fields behind her, cold mist, deep shadows",
+  "tipo": "plano_medio",
+  "negativo": "chimneys, street lamps, houses",
   "son": "limpa",
   "clave": "lantern"
  },
@@ -645,8 +645,9 @@
   "fase": "transicion",
   "u": 0.1154,
   "capitulo": "I. Sete fontes e un gato",
-  "prompt": "backlit silhouette of a grey cat leaping across the moonlit doorway of a dark granite kitchen at night, the faint glow of the hearth inside",
+  "prompt": "backlit silhouette of a grey cat leaping across rough granite stones in a dark old byre with straw on the floor at night, faint moonlight through gaps in the rough planks, deep black shadows",
   "tipo": "contraluz",
+  "negativo": "sink, faucet, cupboard, lamp, doormat",
   "son": "limpa",
   "clave": "cat"
  },
@@ -1166,9 +1167,9 @@
   "fase": "transicion",
   "u": 0.2285,
   "capitulo": "II. O conxuro do barco",
-  "prompt": "backlit silhouette of an emigrant couple in 1950s coats with a cardboard suitcase standing on a granite quay before a large steamship, pale bright overcast sky",
+  "prompt": "backlit silhouette of an emigrant couple in 1950s coats on a granite quay before a large steamship, the man holding a small cardboard suitcase by its handle, pale overcast sky",
   "tipo": "contraluz",
-  "negativo": "cars",
+  "negativo": "rolling suitcase, trolley, cars",
   "son": "limpa",
   "clave": "steamship"
  },
@@ -1269,11 +1270,11 @@
   "fase": "calma",
   "u": 0.2578,
   "capitulo": "III. O tribunal e os xuíces",
-  "prompt": "wide establishing shot of the baroque granite towers of Santiago de Compostela cathedral above wet slate roofs, soft rain, grey-blue dusk",
-  "tipo": "xeral",
-  "negativo": "street lamps, cars",
+  "prompt": "close-up of rain falling on worn granite flagstones beneath a heavy old stone arch, puddles reflecting a pale grey rainy daylight",
+  "tipo": "detalle",
+  "negativo": "cathedral, street lamps, cars, windows",
   "son": "choiva+campas",
-  "clave": "cathedral"
+  "clave": "stone arch"
  },
  {
   "frases": [
@@ -1396,10 +1397,11 @@
   "fase": "calma",
   "u": 0.2885,
   "capitulo": "III. O tribunal e os xuíces",
-  "prompt": "backlit silhouette of a lone woman in a wool cloak carrying a cloth bundle on a muddy road toward distant hills, soft rain, grey-blue dusk",
-  "tipo": "contraluz",
+  "prompt": "close-up of a small knotted cloth bundle left on a mossy granite boulder in soft rain, misty hills blurred far behind, grey-blue dusk",
+  "tipo": "detalle",
+  "negativo": "road, asphalt, people, smiling face, candle, lamp",
   "son": "choiva",
-  "clave": "woman"
+  "clave": "cloth bundle"
  },
  {
   "frases": [
@@ -1768,9 +1770,9 @@
   "fase": "calma",
   "u": 0.3952,
   "capitulo": "IV. Quen eran de verdade",
-  "prompt": "wide shot of a smoke-blackened kitchen, an old midwife showing her grown daughter how to grind herbs in a stone mortar at the table, bundles of dried herbs hanging above, warm light of an oil lamp",
-  "tipo": "xeral",
-  "negativo": "witch, cushions",
+  "prompt": "close-up of the wrinkled hands of an old midwife guiding a young woman's hands grinding herbs in a stone mortar, dried herbs, smoke-blackened granite wall, warm firelight",
+  "tipo": "detalle",
+  "negativo": "light bulb, radiator, window, witch",
   "son": "limpa",
   "clave": "stone mortar"
  },
@@ -1924,11 +1926,11 @@
   "fase": "calma",
   "u": 0.4479,
   "capitulo": "V. Á beira da lareira",
-  "prompt": "wide shot of a dark peasant kitchen with smoke-blackened granite walls, an open stone hearth at floor level with a small log fire, a wooden high-backed bench beside it, warm firelight",
-  "tipo": "xeral",
-  "negativo": "cushions, fireplace mantel",
+  "prompt": "medium shot of a black iron pot hanging on a sooty chain above a low log fire, steam rising from the pot, smoke-blackened granite stones, warm firelight, darkness around",
+  "tipo": "plano_medio",
+  "negativo": "window, wall lamp, sconce, stove, fireplace mantel, glass door",
   "son": "lume",
-  "clave": "fire"
+  "clave": "iron pot"
  },
  {
   "frases": [
@@ -2823,11 +2825,11 @@
   "fase": "durmir",
   "u": 0.7819,
   "capitulo": "VII. O frade que dubidaba",
-  "prompt": "wide establishing shot of a large granite Benedictine monastery with a baroque church in a deep green valley at night, mist in the moonlight, very dim",
+  "prompt": "wide landscape of a full moon rising behind thin clouds over dark forested hills, a pale halo, very dim",
   "tipo": "xeral",
-  "negativo": "city lights, street lamps",
+  "negativo": "monastery, buildings, street lamps, city lights",
   "son": "noite",
-  "clave": "monastery"
+  "clave": "moon"
  },
  {
   "frases": [
@@ -3079,10 +3081,11 @@
   "fase": "durmir",
   "u": 0.8666,
   "capitulo": "VII. O frade que dubidaba",
-  "prompt": "extreme close-up of a closed leather-bound book with brass clasps and a goose quill on a wooden desk, faint moonlight from a narrow window, soft darkness",
+  "prompt": "still life of a stack of three closed leather-bound books with brass clasps on a dark oak shelf, faint moonlight, soft darkness",
   "tipo": "detalle",
+  "negativo": "open book, candle, flames",
   "son": "limpa",
-  "clave": "book"
+  "clave": "books"
  },
  {
   "frases": [
@@ -3249,10 +3252,11 @@
   "fase": "durmir",
   "u": 0.9322,
   "capitulo": "VIII. Chove na lousa",
-  "prompt": "extreme close-up of rain falling on dark grey slate roof tiles at night, water running along the slates, a thin wisp of smoke from a stone chimney, very dim",
+  "prompt": "extreme close-up of rain droplets on overlapping dark grey slate tiles at night, thin rivulets of water between the slates, very dim",
   "tipo": "detalle",
+  "negativo": "chimney, smoke, fire, street lamps",
   "son": "lume+choiva",
-  "clave": "slate roof"
+  "clave": "slate"
  },
  {
   "frases": [
@@ -3426,11 +3430,11 @@
   "fase": "durmir",
   "u": 0.9939,
   "capitulo": "VIII. Chove na lousa",
-  "prompt": "wide shot of a single granite house with a dark slate roof in soft rain at night, dark small windows, mist, very dim",
+  "prompt": "close-up of rainwater dripping from the edge of a dark slate roof at night, a row of falling drops against darkness, wet granite below, very dim",
   "tipo": "xeral",
-  "negativo": "street lamps, city lights",
+  "negativo": "windows, street lamps, sconce",
   "son": "choiva",
-  "clave": "stone house"
+  "clave": "drops"
  },
  {
   "frases": [
