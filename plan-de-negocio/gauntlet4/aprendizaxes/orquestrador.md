@@ -20,3 +20,10 @@
   ≈ 23:30 UTC), e a cota non volveu ata as 03:10. Para avanzar máis por cada xanela de cota: menos axentes á vez, que non
   relean ficheiros grandes, que agarden os traballos longos cunha soa espera en segundo plano (sen consultas
   frecuentes) e axentes novos e curtos para os críticos. A rutina horaria retomou o traballo ao volver a cota.
+- **Vixiar cunha tarefa de fondo longa, non só co Monitor.** O 03-10-2026 o Monitor (30 min como moito) caducou ás
+  12:18 UTC, cando a sesión xa non podía responder (cota), e o contedor reciclouse aos poucos minutos: as imaxes
+  pararon no plano 31 e perdéronse ≈ 1,5 h de CPU ata que a rutina horaria o espertou ás 13:53. Unha orde Bash en
+  segundo plano (`run_in_background`) pode durar 2 h: usala como garda mentres corre un traballo longo (un bucle que
+  remata cando remata o traballo) e volver armala en cada espertar. A cota sóese esgotar ≈ 3,5 h despois de volver se
+  hai axentes traballando; sen eles, aforrar avisos de progreso (cada aviso é unha volta enteira do orquestrador).
+
