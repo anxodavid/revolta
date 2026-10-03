@@ -182,3 +182,16 @@ imaxe  54 intento 0 126.0s + revisión 11.5s ok
 imaxe  55 intento 0 126.9s + revisión 10.9s ['animais en grupo']
 imaxe  55 intento 1 131.3s + revisión 11.1s ['animais en grupo']
 imaxe  55 intento 2 128.1s + revisión 10.8s ['animais en grupo']
+imaxe  56 intento 0 129.7s + revisión 11.7s ok
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['century']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['century']
+imaxe  57 intento 0 125.3s + revisión 10.6s ok
+imaxe  58 intento 0 123.5s + revisión 10.6s ['man sen corpo (1)', 'texto na imaxe']
+imaxe  58 intento 1 126.9s + revisión 10.9s ['man sen corpo (1)', 'texto na imaxe']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['the sleeves or out of frame']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['the sleeves or out of frame']
+imaxe  58 intento 2 123.9s + revisión 10.8s ['texto na imaxe']
+imaxe  59 intento 0 125.9s + revisión 10.9s ok
+imaxe  60 intento 0 127.6s + revisión 10.4s ok
+imaxe  61 intento 0 119.3s + revisión 10.5s ['texto na imaxe', 'repetida (CLIP 0.93 co plano 26)']
+imaxe  61 intento 1 124.0s + revisión 10.9s ['repetida (CLIP 0.93 co plano 26)']

@@ -14321,5 +14321,971 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "calma"
+ },
+ "056-71584a1c": {
+  "ficheiro": "056-71584a1c-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "056-71584a1c-0.png",
+    "seed": 4258287276,
+    "s": 129.7,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of an old village healer in a dark blue wool shawl, kneeling in a stone byre to rub ointment on a cow's swollen leg while a farmer holds a horn lantern for her, straw on the floor, warm lantern light",
+    "modelo": "lightning",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.691,
+       0.587
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.006,
+      "tamaño": 0.052
+     },
+     {
+      "pulso": [
+       0.646,
+       0.564
+      ],
+      "confianza": 0.87,
+      "dist_corpo": 0.044,
+      "tamaño": 0.054
+     },
+     {
+      "pulso": [
+       0.482,
+       0.534
+      ],
+      "confianza": 0.79,
+      "dist_corpo": 0.027,
+      "tamaño": 0.037
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0053,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows an elderly couple sitting on a hay bale in a rural area with a small hut in the background. The man is on the left side of the image, wearing a brown sweater and blue pants, and the woman on the right side is wearing a blue robe. They are both looking at a small white cow lying on the ground in front of them. The cow is lying down and appears to be resting its head on the hay. In the foreground, there is a small candle with a flame burning brightly. The background shows a mountainous landscape with trees and hills. The sky",
+    "obxectos": [
+     "cattle",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.031,
+      0.1
+     ],
+     "muros encalados (CLIP)": [
+      0.024,
+      0.133
+     ],
+     "ciprés (CLIP)": [
+      -0.03,
+      0.123
+     ],
+     "oliveiras (CLIP)": [
+      -0.049,
+      0.173
+     ],
+     "palmeiras (CLIP)": [
+      -0.048,
+      0.14
+     ],
+     "rodas de raios (CLIP)": [
+      0.029,
+      0.115
+     ],
+     "paisaxe seca (CLIP)": [
+      0.022,
+      0.135
+     ],
+     "eucaliptos (CLIP)": [
+      -0.011,
+      0.065
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.019,
+      0.07
+     ],
+     "luces de cidade (CLIP)": [
+      -0.029,
+      0.126
+     ],
+     "salón moderno (CLIP)": [
+      -0.055,
+      0.137
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.037,
+      0.084
+     ],
+     "casas británicas (CLIP)": [
+      -0.013,
+      0.087
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.03,
+      0.163
+     ],
+     "catedral inventada (CLIP)": [
+      -0.055,
+      0.113
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.061,
+      0.158
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.085,
+      0.199
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.06,
+      0.168
+     ],
+     "cadros na parede (CLIP)": [
+      -0.025,
+      0.203
+     ],
+     "farol victoriano (CLIP)": [
+      -0.065,
+      0.11
+     ],
+     "negativo: electric light": 0.002,
+     "negativo: light bulb": -0.014,
+     "negativo: lamp": -0.014,
+     "negativo: glass window": -0.017,
+     "negativo: modern clothes": -0.011,
+     "negativo: street lamp": -0.045,
+     "clave: cow": 4.59,
+     "clave_v5: cow": 0.065
+    },
+    "arquetipo": null,
+    "s_revision": 11.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "057-9bb95889": {
+  "ficheiro": "057-9bb95889-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "057-9bb95889-0.png",
+    "seed": 2328329222,
+    "s": 125.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a stout Benedictine friar of about fifty with a round face, in a black habit, studying a sprig of a medicinal herb that an old village woman with a basket of herbs shows him, in a monastery garden of herbs, a notebook in his hand, soft daylight, 18th century",
+    "modelo": "lightning",
+    "tokens": 78,
+    "truncado": "century",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.473,
+       0.784
+      ],
+      "confianza": 0.95,
+      "dist_corpo": 0.084,
+      "tamaño": 0.125
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0172,
+    "lume_quente": 0.0002,
+    "descricion": "The image shows an elderly man wearing a black robe and a black cap, standing in a garden and reading a book. He is holding a pen in his right hand and appears to be deep in thought. In the background, there are other people walking around and a stone building with columns. The garden is filled with greenery and there are trees and bushes on either side of the man. The overall mood of the image is peaceful and contemplative.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.002,
+      0.099
+     ],
+     "muros encalados (CLIP)": [
+      0.019,
+      0.108
+     ],
+     "ciprés (CLIP)": [
+      0.025,
+      0.128
+     ],
+     "oliveiras (CLIP)": [
+      -0.045,
+      0.137
+     ],
+     "palmeiras (CLIP)": [
+      -0.048,
+      0.142
+     ],
+     "rodas de raios (CLIP)": [
+      0.03,
+      0.108
+     ],
+     "paisaxe seca (CLIP)": [
+      0.029,
+      0.108
+     ],
+     "eucaliptos (CLIP)": [
+      -0.03,
+      0.093
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.034,
+      0.096
+     ],
+     "luces de cidade (CLIP)": [
+      -0.04,
+      0.135
+     ],
+     "salón moderno (CLIP)": [
+      -0.036,
+      0.114
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.028,
+      0.115
+     ],
+     "casas británicas (CLIP)": [
+      -0.041,
+      0.064
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.004,
+      0.108
+     ],
+     "catedral inventada (CLIP)": [
+      -0.031,
+      0.14
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.01,
+      0.108
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.095,
+      0.199
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.016,
+      0.163
+     ],
+     "cadros na parede (CLIP)": [
+      -0.025,
+      0.169
+     ],
+     "farol victoriano (CLIP)": [
+      -0.038,
+      0.119
+     ],
+     "negativo: electric light": -0.006,
+     "negativo: light bulb": -0.032,
+     "negativo: lamp": -0.008,
+     "negativo: glass window": -0.002,
+     "negativo: modern clothes": 0.002,
+     "negativo: street lamp": -0.014,
+     "clave: monk": 5.85,
+     "clave_v5: monk": 0.1
+    },
+    "arquetipo": null,
+    "s_revision": 10.6,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "058-4344e708": {
+  "ficheiro": "058-4344e708-2.png",
+  "escollida": 2,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "058-4344e708-0.png",
+    "seed": 436552184,
+    "s": 123.5,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of an elderly Benedictine monk with thin white hair and a lined face, in a black hooded habit, writing with a quill at a tall wooden lectern in a bare stone monastery cell, a pile of closed leather books beside him, soft morning light from a small shuttered opening",
+    "modelo": "lightning",
+    "tokens": 73,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.516,
+       0.738
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.011,
+      "tamaño": 0.108
+     },
+     {
+      "pulso": [
+       0.342,
+       0.738
+      ],
+      "confianza": 0.84,
+      "dist_corpo": 0.309,
+      "tamaño": 0.065
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0179,
+    "lume_quente": 0.0,
+    "descricion": "The image shows an elderly man with a long white beard and a black robe sitting at a wooden table in a room with large windows. He is holding a pen and appears to be writing in an open book. There are several other books on the table in front of him, and a vase with flowers on the right side of the image. The room is dimly lit, with a warm glow from the windows. The man seems to be focused on his work, with his eyes closed and a peaceful expression on his face.",
+    "obxectos": [
+     "book",
+     "human face",
+     "man",
+     "table",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.027,
+      0.108
+     ],
+     "muros encalados (CLIP)": [
+      0.011,
+      0.112
+     ],
+     "ciprés (CLIP)": [
+      0.006,
+      0.093
+     ],
+     "oliveiras (CLIP)": [
+      -0.029,
+      0.101
+     ],
+     "palmeiras (CLIP)": [
+      -0.028,
+      0.121
+     ],
+     "rodas de raios (CLIP)": [
+      0.038,
+      0.113
+     ],
+     "paisaxe seca (CLIP)": [
+      0.024,
+      0.066
+     ],
+     "eucaliptos (CLIP)": [
+      -0.023,
+      0.036
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.015,
+      0.07
+     ],
+     "luces de cidade (CLIP)": [
+      -0.029,
+      0.116
+     ],
+     "salón moderno (CLIP)": [
+      -0.046,
+      0.132
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.007,
+      0.048
+     ],
+     "casas británicas (CLIP)": [
+      0.015,
+      0.098
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.007,
+      0.116
+     ],
+     "catedral inventada (CLIP)": [
+      -0.031,
+      0.127
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.063,
+      0.133
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.085,
+      0.195
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.077,
+      0.189
+     ],
+     "cadros na parede (CLIP)": [
+      -0.001,
+      0.192
+     ],
+     "farol victoriano (CLIP)": [
+      -0.008,
+      0.096
+     ],
+     "negativo: electric light": 0.015,
+     "negativo: light bulb": -0.002,
+     "negativo: lamp": -0.015,
+     "negativo: glass window": -0.006,
+     "negativo: modern clothes": -0.008,
+     "negativo: street lamp": -0.029,
+     "clave: monk": 5.1,
+     "clave_v5: monk": 0.032
+    },
+    "arquetipo": null,
+    "s_revision": 10.6,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "058-4344e708-1.png",
+    "seed": 22995159,
+    "s": 126.9,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of an elderly Benedictine monk with thin white hair and a lined face, in a black hooded habit, writing with a quill at a tall wooden lectern in a bare stone monastery cell, a pile of closed leather books beside him, soft morning light from a small shuttered opening",
+    "modelo": "lightning",
+    "tokens": 73,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.514,
+       0.322
+      ],
+      "confianza": 0.86,
+      "dist_corpo": 0.321,
+      "tamaño": 0.05
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.022,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two men in black robes standing in an old, arched corridor with stone walls and arches. They are both looking at an open book on a wooden table in front of them. The man on the left is holding the book and appears to be reading it intently, while the other man is looking down at it with a serious expression on his face. The background is blurred, but it seems to be an indoor space with a high ceiling and arched windows. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "book",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.032,
+      0.096
+     ],
+     "muros encalados (CLIP)": [
+      -0.019,
+      0.098
+     ],
+     "ciprés (CLIP)": [
+      0.014,
+      0.105
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.106
+     ],
+     "palmeiras (CLIP)": [
+      -0.058,
+      0.13
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.101
+     ],
+     "paisaxe seca (CLIP)": [
+      0.002,
+      0.078
+     ],
+     "eucaliptos (CLIP)": [
+      -0.039,
+      0.083
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.05,
+      0.086
+     ],
+     "luces de cidade (CLIP)": [
+      -0.06,
+      0.132
+     ],
+     "salón moderno (CLIP)": [
+      -0.046,
+      0.14
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.013,
+      0.058
+     ],
+     "casas británicas (CLIP)": [
+      0.003,
+      0.079
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.001,
+      0.116
+     ],
+     "catedral inventada (CLIP)": [
+      -0.031,
+      0.172
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.051,
+      0.128
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.126,
+      0.205
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.072,
+      0.157
+     ],
+     "cadros na parede (CLIP)": [
+      -0.02,
+      0.212
+     ],
+     "farol victoriano (CLIP)": [
+      -0.035,
+      0.082
+     ],
+     "negativo: electric light": 0.006,
+     "negativo: light bulb": -0.02,
+     "negativo: lamp": -0.021,
+     "negativo: glass window": -0.003,
+     "negativo: modern clothes": -0.019,
+     "negativo: street lamp": -0.051,
+     "clave: monk": 3.56,
+     "clave_v5: monk": 0.045
+    },
+    "arquetipo": null,
+    "s_revision": 10.9,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "058-4344e708-2.png",
+    "seed": 3689964112,
+    "s": 123.9,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of an elderly Benedictine monk with thin white hair and a lined face, in a black hooded habit, writing with a quill at a tall wooden lectern in a bare stone monastery cell, a pile of closed leather books beside him, soft morning light from a small shuttered opening, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 83,
+    "truncado": "the sleeves or out of frame",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.651,
+       0.835
+      ],
+      "confianza": 0.95,
+      "dist_corpo": 0.106,
+      "tamaño": 0.106
+     },
+     {
+      "pulso": [
+       0.384,
+       0.826
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.052,
+      "tamaño": 0.053
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0366,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two elderly men sitting at a wooden table in a church. They are both wearing black robes and appear to be in deep thought. The man on the left is holding a pen and appears to be writing in a book, while the other man is looking down at the book with a serious expression on his face. On the table, there is a small wooden box and a candle on a candle holder. The background shows a window with a view of the outside. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "human face",
+     "man",
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.025,
+      0.103
+     ],
+     "muros encalados (CLIP)": [
+      -0.007,
+      0.104
+     ],
+     "ciprés (CLIP)": [
+      -0.011,
+      0.088
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.101
+     ],
+     "palmeiras (CLIP)": [
+      -0.039,
+      0.128
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.114
+     ],
+     "paisaxe seca (CLIP)": [
+      0.009,
+      0.06
+     ],
+     "eucaliptos (CLIP)": [
+      -0.053,
+      0.06
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.014,
+      0.068
+     ],
+     "luces de cidade (CLIP)": [
+      -0.048,
+      0.128
+     ],
+     "salón moderno (CLIP)": [
+      -0.055,
+      0.115
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.045,
+      0.058
+     ],
+     "casas británicas (CLIP)": [
+      -0.011,
+      0.072
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.001,
+      0.114
+     ],
+     "catedral inventada (CLIP)": [
+      -0.02,
+      0.133
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.054,
+      0.136
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.124,
+      0.203
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.08,
+      0.161
+     ],
+     "cadros na parede (CLIP)": [
+      -0.02,
+      0.169
+     ],
+     "farol victoriano (CLIP)": [
+      -0.04,
+      0.095
+     ],
+     "negativo: electric light": 0.009,
+     "negativo: light bulb": -0.012,
+     "negativo: lamp": -0.017,
+     "negativo: glass window": -0.01,
+     "negativo: modern clothes": -0.012,
+     "negativo: street lamp": -0.042,
+     "clave: monk": 4.21,
+     "clave_v5: monk": 0.034
+    },
+    "arquetipo": null,
+    "s_revision": 10.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "059-7bd4a5fa": {
+  "ficheiro": "059-7bd4a5fa-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "059-7bd4a5fa-0.png",
+    "seed": 2580476936,
+    "s": 125.9,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of an old village woman whispering into a young woman's ear against a mossy granite wall, cupping her hand around her mouth, the young woman's eyes widening, soft evening light",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.577,
+       1.01
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.035,
+      "tamaño": 0.121
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0148,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows two women in a forest. The woman on the left is an older woman with shoulder-length blonde hair, wearing a green sweater. She has a serious expression on her face and her hand is resting on her chin, as if she is deep in thought. The other woman is a younger woman with short brown hair, also wearing a brown sweater. They are both looking at each other and appear to be engaged in a conversation. The background is blurred, but it appears to be a wooded area with trees and foliage. The overall mood of the image is somber and",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.021,
+      0.064
+     ],
+     "muros encalados (CLIP)": [
+      -0.011,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.053,
+      0.145
+     ],
+     "oliveiras (CLIP)": [
+      -0.093,
+      0.16
+     ],
+     "palmeiras (CLIP)": [
+      -0.041,
+      0.16
+     ],
+     "rodas de raios (CLIP)": [
+      0.015,
+      0.119
+     ],
+     "paisaxe seca (CLIP)": [
+      0.005,
+      0.131
+     ],
+     "eucaliptos (CLIP)": [
+      -0.101,
+      0.115
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.041,
+      0.084
+     ],
+     "luces de cidade (CLIP)": [
+      -0.046,
+      0.133
+     ],
+     "salón moderno (CLIP)": [
+      -0.028,
+      0.118
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.042,
+      0.098
+     ],
+     "casas británicas (CLIP)": [
+      0.006,
+      0.066
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.018,
+      0.159
+     ],
+     "catedral inventada (CLIP)": [
+      -0.041,
+      0.098
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.101,
+      0.22
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.132,
+      0.195
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.076,
+      0.165
+     ],
+     "cadros na parede (CLIP)": [
+      -0.024,
+      0.195
+     ],
+     "farol victoriano (CLIP)": [
+      -0.086,
+      0.159
+     ],
+     "negativo: electric light": -0.003,
+     "negativo: light bulb": -0.022,
+     "negativo: lamp": -0.014,
+     "negativo: glass window": -0.0,
+     "negativo: modern clothes": -0.009,
+     "negativo: street lamp": -0.027,
+     "clave: woman": 3.53,
+     "clave_v5: woman": 0.03
+    },
+    "arquetipo": null,
+    "s_revision": 10.9,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "060-435398fa": {
+  "ficheiro": "060-435398fa-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "060-435398fa-0.png",
+    "seed": 2283516271,
+    "s": 127.6,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a village woman asleep on a straw mattress in a dark granite room, her face calm, moonlight from a small opening, and on the wall above her the soft shadow of a bird in flight, as in a dream",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0003,
+    "descricion": "The image shows a young woman lying on her back on a woven mat in a dark room. She is wearing a long-sleeved shirt and her arms are stretched out to the sides. Her head is tilted back and her eyes are closed, as if she is in a peaceful state. The room is dimly lit, with a full moon visible in the background. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "bed",
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.026,
+      0.092
+     ],
+     "muros encalados (CLIP)": [
+      0.02,
+      0.071
+     ],
+     "ciprés (CLIP)": [
+      0.014,
+      0.114
+     ],
+     "oliveiras (CLIP)": [
+      -0.022,
+      0.112
+     ],
+     "palmeiras (CLIP)": [
+      -0.003,
+      0.124
+     ],
+     "rodas de raios (CLIP)": [
+      0.029,
+      0.139
+     ],
+     "paisaxe seca (CLIP)": [
+      0.029,
+      0.095
+     ],
+     "eucaliptos (CLIP)": [
+      -0.005,
+      0.049
+     ],
+     "luz eléctrica (CLIP)": [
+      0.003,
+      0.083
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.129
+     ],
+     "salón moderno (CLIP)": [
+      -0.014,
+      0.111
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.003,
+      0.07
+     ],
+     "casas británicas (CLIP)": [
+      0.016,
+      0.055
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.034,
+      0.141
+     ],
+     "catedral inventada (CLIP)": [
+      -0.037,
+      0.067
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.056,
+      0.136
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.063,
+      0.17
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.036,
+      0.144
+     ],
+     "cadros na parede (CLIP)": [
+      0.004,
+      0.175
+     ],
+     "farol victoriano (CLIP)": [
+      -0.027,
+      0.113
+     ],
+     "negativo: electric light": 0.035,
+     "negativo: light bulb": 0.017,
+     "negativo: lamp": 0.008,
+     "negativo: glass window": 0.001,
+     "negativo: modern clothes": -0.008,
+     "negativo: street lamp": -0.024,
+     "clave: sleeping woman": 7.09,
+     "clave_v5: sleeping woman": 0.079
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
  }
 }
