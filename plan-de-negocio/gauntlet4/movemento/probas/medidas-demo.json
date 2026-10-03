@@ -1,0 +1,13 @@
+{
+ "dur_s": 115.235,
+ "mb": 25.4,
+ "s_montaxe": 716.8,
+ "s_por_segundo_de_video": 6.22,
+ "planos_i2v": {
+  "3": "porta: ['corpo que se deforma (CV 0.487)']",
+  "14": "i2v",
+  "17": "porta: ['salto do corpo (1.869 torsos)']",
+  "18": "porta: ['salto do corpo (3.726 torsos)', 'corpo que se deforma (CV 0.514)']",
+  "22": "i2v"
+ }
+}
