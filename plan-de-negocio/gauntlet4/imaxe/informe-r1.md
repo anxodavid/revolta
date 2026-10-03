@@ -12,7 +12,7 @@ xulga as follas un crítico visual.
 | Referencias (D15) | 226 baixadas e miradas; 226/226 licenzas comprobadas nas APIs (coinciden co CSV). **29 sementes permitidas** (CC0, dominio público, CC BY) en 12 conceptos; **ningunha** para cruceiro e peto, Samos, pazo (unha pobre), fonte, escano nin roupa do XVII. O 72 % do lote é BY-SA |
 | Porta v6 | Nas 173 imaxes etiquetadas da v1: molestas 25/29 (antes 14/29), bloqueantes 2/4 (igual), boas marcadas 1/35 (antes 4/35); `clave` 8/18 ausencias con **0/144 falsas alarmas** (antes 14/18 con 25/144) |
 | Correlación imaxe-texto | CLIP-L fronte ao texto en inglés: AUC 0,90 entre planos que ilustran e desconectados. Liña de base da v1: z medio 1,29; o 59 % dos planos "ilustran" (z ≥ 1); no gancho só o 29 % |
-| Sementes | ver §4 (pendente) |
+| Sementes | 7 escenas x 4 técnicas: a semente arranxa a forma (roda maciza, hórreo, palloza, lareira) en 5 de 7; img2img 0,5 para obxectos, 0,75 para espazos con xente, profundidade para recompoñer; **non encarece** (53-94 s fronte a 66-91 s) |
 | Biblia v2 | [`biblia-v2.md`](biblia-v2.md); proba en §5 (pendente) |
 
 ## 1. Referencias
@@ -103,22 +103,44 @@ Folla: [`ab-sementes.jpg`](ab-sementes.jpg) (a primeira columna é a semente, to
 `scripts/sementes_ab.py`, o mesmo código ca produción: campo `referencia` de `imaxes.py`). Mesmo prompt e mesma
 semente en cada fila; SDXL-Lightning 4 pasos a 1024x576 (a configuración da produción da v1 nesta CPU sen bf16).
 
-**Tempo por imaxe** (CPU de 4 núcleos, co candado): texto só 82-91 s (122 s a primeira, en frío); img2img 0,5
-(2 pasos) 66-94 s; img2img 0,75 (3 pasos) 77-105 s; ControlNet de profundidade small a 0,6: 84-100 s, **só ≈ 3-5 %
-máis ca o texto** (o ControlNet small engade pouco), e 1,4-2,4 s de mapa de profundidade.
+**Tempo por imaxe** (CPU de 4 núcleos, co candado; dúas máquinas: antes e despois do reinicio do 03-10, a segunda
+≈ 20 % máis rápida): texto só 66-91 s (122 s a primeira, en frío); img2img 0,5 (2 pasos) 53-94 s; img2img 0,75
+(3 pasos) 64-105 s; ControlNet de profundidade small a 0,6: 68-102 s, **≈ 3-10 % máis ca o texto**, e 1-2,4 s de
+mapa de profundidade. **A semente non encarece: img2img 0,5 é a opción máis barata** (≈ 20 % menos ca o texto).
 
-Primeiras catro filas (xuízo de Claude mirando a folla; o crítico visual decide):
-- **Lareira:** con texto só sae unha cheminea de salón á altura da cintura (o erro de sempre); **img2img 0,75 dá
-  a lareira galega da semente (lar ao nivel do chan, campá de granito) cunha anciá sentada ao lume: a mellor
-  imaxe da folla.** Con 0,5 a muller sae medio transparente; a profundidade 0,6 debuxou unha cara xigante na campá.
-- **Carro:** con texto só, rodas de raios (como sempre). Con img2img 0,5 a roda maciza da semente consérvase, pero a
-  caixa do carro enche de buratos redondos; con 0,75 e coa profundidade volven as rodas de raios.
-- **Palloza:** img2img 0,5 copia a palloza da semente (planta redonda, colmo, muro de pedra)... incluído o tubo
-  metálico de cheminea e a casa de corredor do lado: a semente ten que estar limpa ou recortada.
-- **Aldea (vista desde a fiestra):** img2img mantén o marco de granito, os tellados e a torre da igrexa, pero tamén a
-  vila moderna do fondo do val; con texto só sae unha rúa de granito verosímil coa figura de costas de sempre.
+Que sae (xuízo de Claude mirando a folla; o crítico visual decide):
 
-(continúa cando rematen queimada, hórreo e hórreos)
+| Escena (semente) | Texto só | img2img 0,5 | img2img 0,75 | Profundidade 0,6 |
+|---|---|---|---|---|
+| Lareira (06-01) | cheminea de salón á altura da cintura | lar de granito correcto, muller medio transparente | **lar ao nivel do chan e campá de granito, anciá sentada ao lume: a mellor da folla** | cara xigante na campá |
+| Carro (02-01) | rodas de raios | **roda maciza da semente**, pero buratos redondos na caixa | rodas de raios | rodas de raios |
+| Palloza (03-01) | cabana de colmo "escocesa" | **palloza da semente** (planta redonda, colmo)... co tubo metálico da foto | paredes brancas (encalado) | silueta correcta entre néboa |
+| Queimada (07-02, recortada) | lapas laranxas e azuis enormes arredor dun cazo negro | mesa de restaurante con "tea" azul | vermes azuis no cuncón | **cunca de barro con lume e cazo**, lapa laranxa |
+| Hórreos (01-02) | patio con barrís de pedra: sen hórreo | **hórreos sobre pés con tornarratos**, e a casa moderna do fondo da foto | os pés convertidos en estatuas | **hórreo correcto e un home traballando ao lado** |
+| Hórreo vertical (01-01, encaixado con bandas desenfocadas) | muller ante unha cabana | pila de bloques entre bandas borrosas | muller cun cesto, bandas borrosas | figura con capucha dentro dunha caseta: **fallo do encadre** |
+| Aldea desde a fiestra (12-01) | rúa de granito verosímil, figura de costas | marco e tellados da semente e a vila moderna do val | aldea de pedra, figura de costas | composición rara |
+
+**Conclusións:**
+1. **A semente arranxa a forma que SDXL non sabe** (roda maciza, hórreo, palloza, lareira ao nivel do chan): en 5 de
+   7 escenas a mellor imaxe é unha das tres técnicas con semente; o texto só non deu ningún hórreo nin ningunha roda
+   maciza (como na v1).
+2. **A técnica depende do que se pide:** img2img 0,5 para un obxecto que ten que saír igual (carro, hórreo,
+   palloza); img2img 0,75 para un espazo onde se engade xente (lareira); profundidade 0,6 para recompoñer cun
+   personaxe novo (hórreos con home traballando, cunca da queimada). Non hai unha forza que valla para todo.
+3. **A semente arrastra o presente da foto** (tubo de cheminea, vila moderna, mesa de restaurante, casa con
+   cheminea de ladrillo): hai que recortala (`recorte`) ou escoller outra. **O encadre con bandas desenfocadas
+   (`"encadre": "encaixar"`) fallou**: o modelo pinta as bandas como bandas; para unha semente vertical, recortar
+   unha parte 16:9 ou usar outra horizontal.
+4. A lapa azul da queimada sae mellor sen semente (o lume é o que SDXL sabe facer); a semente serve para a cunca.
+5. **Sen probar** (falta de disco, orde do orquestrador): IP-Adapter e ControlNet de bordos (canny); o de
+   profundidade "small" pode ser o motivo das formas pobres (rodas, cara na campá) [S].
+
+**Créditos das sementes que aparecen na folla** (CC BY pide o crédito; xeradas con IA a partir delas):
+«Dende a Fiestra» de amaianos (CC BY 2.0); «Horreos-Galicien-IMG 0274a» de Christof46 (CC0); «Carro, Monte Pío,
+Santiago de Compostela» de Feans (CC BY 2.0); «Palloza Cantexeira» de FCPB (CC BY 3.0); «Reitoral de Beiro,
+Carballeda de Avia 3» de José Antonio Gil Martínez (CC BY 2.0); «Pequena queimada» de Kimia Solutions (CC BY 2.0);
+«Hórreos de Muimenta, Carballeda de Avia» de José Antonio Gil Martínez (CC BY 2.0); todas vía Wikimedia Commons
+(URL en `referencias.json`).
 
 ## 5. Biblia v2: proba de 10 prompts
 
