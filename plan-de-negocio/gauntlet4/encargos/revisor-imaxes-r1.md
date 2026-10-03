@@ -35,3 +35,26 @@ antes do movemento e da montaxe (configuración recomendada en `plan-de-negocio/
 Commit e push (rutas concretas; "Gauntlet 4: vídeo: revisión das imaxes r1" en galego coas dúas liñas de autoría de
 `gauntlet4/contexto.md` §7). Non xeres imaxes: iso faino o orquestrador despois. Es un axente Claude: dio no
 documento. Aforra cota (follas lixeiras, sen reler ficheiros grandes) e devolve un resumo de ≤ 10 liñas.
+
+## Mensaxe de lanzamento (orquestrador, 03-10-2026 14:55 UTC)
+
+Primeira pasada: **planos 1-42** (as imaxes 000-041 xa están; o proceso de imaxes segue cos planos 43-77 e escribe
+`revision.json` despois de cada plano: só lelo, nunca modificalo). Cando rematen as imaxes (≈ 17:30 UTC) recibirás
+unha mensaxe para facer os planos 43-77 nos mesmos ficheiros de saída.
+
+Precisións para o JSON (o orquestrador aplícao con `video/scripts/produccion.py revision`):
+- `escollas` leva **todos** os planos revisados que non se rexeneran: os que valen, co seu ficheiro actual, e os de
+  outro intento, co ficheiro novo. Engade `motivos`: `{"n": "motivo curto"}` para cada decisión (queda en
+  `revision.json` como `revision_manual`, coa túa autoría de axente Claude).
+- `rexenerar`: sempre cun **prompt revisado** (un prompt novo dá sementes novas; o campo `semente` non o usa a
+  pipeline: omíteo). O prompt vai sen o prefixo de estilo que antepón a pipeline ("cinematic film still, period
+  drama, photorealistic, dramatic chiaroscuro," ≈ 12 tokens), así que como moito ≈ 60 tokens de CLIP, co esencial ao
+  principio. `negativo` se fai falla. Se o problema é arquitectura allea (casas inglesas, ventás de vidro), propón
+  `referencia` cunha semente permitida (`imaxe/referencias.json`, uso `semente`: CC0, dominio público ou CC BY) co modo
+  e a forza do §4 de `imaxe/informe-r1.md`.
+- O que xa viu o orquestrador nunha folla dos rexeitados (planos 7, 12, 15, 18, 19 e 21): a porta acerta no 7 (zapatos
+  modernos con cordóns), no 21 (casas inglesas con cheminea) e nas ventás de vidro; rexeita de máis cando o asunto do
+  plano é escritura (15, 19). Nun plano de escritura, a letra antiga ilexible vale; o que non vale son letras de
+  imprenta modernas ou palabras falsas lexibles.
+- Para as follas usa o Python do pipeline (`$SCRATCH/tts/venv/bin/python`, ten PIL; o python3 do sistema non) con
+  `nice -n 19`; non precisa o candado (uns segundos de CPU).
