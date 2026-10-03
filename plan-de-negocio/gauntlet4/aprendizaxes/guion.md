@@ -38,11 +38,19 @@ Guionista da v2 (axente Claude), rolda 1. O texto escribiuno Claude a man; as me
 - **O gancho mide 280 palabras na porta, non 1:30.** Co embude comprimido da D18 o gancho de contido remata nas 241
   palabras, pero a porta segue esixindo apoio ata a 280: as primeiras frases do capítulo I tamén. Convén que esas
   frases sexan case literais dun feito.
+- **Falsos positivos de LanguageTool co "haber" existencial:** "esas palabras había mulleres", "entre elas había un
+  desexo" e "falaban elas aquela noite" dan `GENERAL_VERB_AGREEMENT_ERRORS` (LT toma o substantivo plural de antes
+  polo suxeito). Sen tocar `qa.py`, arránxase poñendo o verbo antes ("Había mulleres de aldea detrás de..."), cunha
+  frase nominal ("E, entre elas, un desexo...") ou co suxeito antes do verbo ("Do que elas falaban...").
+- **Un reinicio do contedor mata as esperas do candado.** Co límite de uso (≈ 23:30 UTC) a porta quedou na cola e
+  morreu no reinicio (03:53 UTC). Relanzada, tardou 4 min coa CPU libre; o segundo intento agardou 27 min detrás dun
+  traballo de imaxe que xa collera o candado (a prioridade non interrompe o que xa corre).
 - **`curva.py` ten os nós en palabras absolutas** (280 e 950). Nun guion de 1.610 palabras a calma quedaría en 100
   palabras; hai que escalalos (proposta nas notas).
 
 ## Cifras da rolda 1
 
-1.610 palabras, 109 frases, 5 capítulos; ≈ 11:53 estimado; frases de 13,6 palabras de media no gancho e 17,1 no
-durmir (ningunha > 28); 22 nomes propios distintos (75 na v1); 6 frases de tecido previstas na porta de veracidade,
-todas no gancho.
+1.602 palabras, 109 frases, 5 capítulos; ≈ 11:50 estimado; frases de 13,6 palabras de media no gancho e 17,1 no
+durmir (ningunha > 28); 22 nomes propios distintos (75 na v1); 0,88 atribucións por 100 palabras na parte esperta
+(2,0 na v1) e "segundo" unha vez (15 na v1). Portas: lingua 0 avisos (no segundo intento), H1 55/55, estilo correcto,
+veracidade 5 frases marcadas no gancho e xustificadas (a predición léxica sen NLI dera 6; o NLI aprobou unha).

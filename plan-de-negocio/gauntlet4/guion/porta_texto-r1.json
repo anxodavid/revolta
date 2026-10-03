@@ -1,0 +1,175 @@
+{
+ "lingua": [],
+ "h1_ancoraxe": {
+  "items": 55,
+  "non_ancorados": [],
+  "pct_ancorado": 100.0
+ },
+ "estilo": {
+  "palabras": 1602,
+  "palabras_obxectivo": 1600,
+  "desvio_palabras_pct": 0.1,
+  "cifras": [],
+  "signos_prohibidos": [],
+  "preguntas": 0,
+  "palabras_vetadas": [],
+  "aviso_literal": true,
+  "formula_literal": true,
+  "frases_fora_8_25": [
+   1,
+   3,
+   5,
+   32,
+   34,
+   35,
+   36,
+   53,
+   66,
+   71,
+   81,
+   96
+  ],
+  "nomes_propios_distintos": [
+   "Abalo",
+   "Arquivo",
+   "Audiencia",
+   "Barro",
+   "Benito",
+   "Boborás",
+   "Bravo",
+   "Campo",
+   "Cibreira",
+   "Cousas",
+   "Diego",
+   "Dorotea",
+   "Feijoo",
+   "Galicia",
+   "Galiza",
+   "Inquisición",
+   "Lameiro",
+   "Marcos",
+   "Mariano",
+   "Martín",
+   "María",
+   "Mondoñedo",
+   "Nogueira",
+   "Pousa",
+   "Real",
+   "Reino",
+   "Sarmiento",
+   "Sevilla",
+   "Valor",
+   "Vigo",
+   "Vilalba",
+   "Xerónimo",
+   "Xoán"
+  ],
+  "max_nomes_novos_por_110_palabras": 4
+ },
+ "veracidade": {
+  "frases_avaliadas": 109,
+  "marcadas": [
+   {
+    "i": 12,
+    "frase": "As palabras do conxuro parecen vellas e son novas, e hai un motivo polo que semellan de ninguén.",
+    "modo": "gancho",
+    "motivo": "afirmación sen apoio no dossier",
+    "E": 0.264,
+    "cobertura": 0.5,
+    "apoio": [
+     4,
+     212
+    ],
+    "xustificacion": "Síntese do arranque (S1-S4: F001-F004 e F246, o conxuro parece de séculos e é de 1967) e anuncio do bucle que se paga en S42 (F014: copias sen o nome do autor, e por iso parecía popular e anónimo). Non engade feitos. (proposta do guionista, axente Claude)"
+   },
+   {
+    "i": 13,
+    "frase": "As de Dorotea son vellas de verdade, e só as coñecemos porque alguén as escribiu nun proceso por bruxería.",
+    "modo": "gancho",
+    "motivo": "afirmación sen apoio no dossier",
+    "E": 0.485,
+    "cobertura": 0.44,
+    "apoio": [
+     16,
+     69
+    ],
+    "xustificacion": "Síntese de S5-S8: as palabras atribuídas a Dorotea son de 1617 (F006) e chegan polo testemuño recollido no proceso da Real Audiencia (F008, 'Segundo declarou unha testemuña'; F055, o papel do proceso). Non afirma nada novo de Dorotea. (proposta do guionista, axente Claude)"
+   },
+   {
+    "i": 15,
+    "frase": "Hai unha palabra trabucada que ninguén borrou en máis de catrocentos anos.",
+    "modo": "gancho",
+    "motivo": "afirmación sen apoio no dossier",
+    "E": 0.883,
+    "cobertura": 0.5,
+    "apoio": [
+     43,
+     10
+    ],
+    "xustificacion": "Bucle que se paga en S28-S30: no papel de 1617 quedou escrita a emenda 'que trouxese auga, digo, leite' (F055, F006; o PDF do Arquivo transcribe 'traxese agua, digo, leche', co 'agua' sen borrar). De 1617 a 2026 van 409 anos. (proposta do guionista, axente Claude)"
+   },
+   {
+    "i": 17,
+    "frase": "Había mulleres de aldea detrás de todas esas palabras.",
+    "modo": "gancho",
+    "motivo": "afirmación sen apoio no dossier",
+    "E": 0.002,
+    "cobertura": 0.6,
+    "apoio": [
+     10,
+     94
+    ],
+    "xustificacion": "Síntese: as acusadas dos procesos que se contan eran veciñas de parroquias rurais (Vilalba, F006 e F051; Boborás, F088; Campo Lameiro, F129) e nos procesos da Real Audiencia todas eran mulleres (F085). Introduce F048 (S18). (proposta do guionista, axente Claude)"
+   },
+   {
+    "i": 19,
+    "frase": "Esta noite imos buscalas no pouco que delas quedou escrito.",
+    "modo": "gancho",
+    "motivo": "afirmación sen apoio no dossier",
+    "E": 0.005,
+    "cobertura": 0.57,
+    "apoio": [
+     49,
+     104
+    ],
+    "xustificacion": "Promesa do narrador, sen contido factual: anuncia o fío do episodio (as palabras escritas por outros, S31 e S101). (proposta do guionista, axente Claude)"
+   }
+  ],
+  "sen_xustificar": []
+ },
+ "portas_texto": {
+  "lingua_lt": true,
+  "h1_ancoraxe": true,
+  "veracidade": true,
+  "estilo": true
+ },
+ "clave": "746cdd9bc758a26e",
+ "palabras": 1602,
+ "capitulos": [
+  {
+   "titulo": "Auga, digo, leite",
+   "num": "I",
+   "par0": 7
+  },
+  {
+   "titulo": "O conxuro do barco",
+   "num": "II",
+   "par0": 11
+  },
+  {
+   "titulo": "As respostas nas preguntas",
+   "num": "III",
+   "par0": 14
+  },
+  {
+   "titulo": "A lista da fonte",
+   "num": "IV",
+   "par0": 18
+  },
+  {
+   "titulo": "Chove na lousa",
+   "num": "V",
+   "par0": 26
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 # Estado da peza 1 (guion v2) · Gauntlet 4
 
 Ficheiro do construtor (guionista, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar desde
-aquí.** Última actualización: 03-10-2026, 03:56 UTC.
+aquí.** Última actualización: 03-10-2026, 04:30 UTC.
 
 ## Encargo vixente
 
@@ -25,24 +25,13 @@ aquí.** Última actualización: 03-10-2026, 03:56 UTC.
 
 ## En curso
 
-- **Reinicio do contedor (límite de uso ≈ 23:30 UTC; volta ás 03:53 UTC):** a porta que agardaba o candado morreu.
-  Relanzada ás 03:55 UTC (a CPU estaba libre). O orquestrador gardou os dous últimos cambios do guion (4fb50ec).
-- Porta de texto completa (`scripts/porta-r1.sh`, longo.py --so-texto) lanzada con
-  `herramientas/gauntlet/candado.sh --prioridade`, sobre `$SCRATCH/guion/guion-r1-conxelado.txt`; rexistro en
-  `$SCRATCH/guion/porta-r1.log`. Ao rematar: copiar `$SCRATCH/guion/w-r1/porta_texto.json` a `porta_texto-r1.json`,
-  escribir `excepcions-r1.yaml` coas frases marcadas e volver pasala.
-- Feitos: `feitos-r1.md` (mapa por frase) e `notas-r1.md` (borrador; falta a sección 4, portas).
+- Nada: **rolda 1 entregada** (04:30 UTC). Portas de texto en verde no segundo intento (lingua 0, H1 100 %, estilo
+  correcto, veracidade 5 marcadas e xustificadas). Agarda os críticos A (a cegas) e B.
 
-## Falta (orde)
+## Falta
 
-1. ~~`plan-r1.md`~~ feito.
-2. ~~Ficha `herramientas/pipeline/temas/meigas-de-verdade-v2.yaml` (copia da v1 + autoría G4, `capitulo_inicial`,
-   `palabras: 1600`, `duracion_s: [600, 840]`, feitos `ficha: false` que use o guion, co seu ID)~~ feito.
-3. ~~`guion-r1.txt`~~ borrador feito; pendente das portas.
-4. ~~Scripts de medida en `gauntlet4/guion/scripts/` (palabras por fase, atribucións, "segundo", nomes novos)~~ feito.
-5. Portas: `qa.lingua` rápido e despois `longo.py --so-texto` (ordes abaixo) → `porta_texto-r1.json`,
-   `excepcions-r1.yaml`.
-6. `feitos-r1.md`, `notas-r1.md`, `gauntlet4/aprendizaxes/guion.md` → commit.
+- Rolda 2 se os críticos o piden: aplicar as substitucións do crítico B e as melloras do A, e volver pasar a porta
+  coas mesmas ordes (`guion-r2.txt`, `excepcions-r2.yaml`, `porta_texto-r2.json`).
 
 ## Como retomar (ordes exactas)
 
