@@ -137,3 +137,14 @@ imaxe  35 intento 1 122.7s + revisión 11.4s ok
 imaxe  36 intento 0 120.5s + revisión 10.7s ['texto na imaxe']
 imaxe  36 intento 1 123.1s + revisión 11.5s ['man sen corpo (1)', 'texto na imaxe']
 imaxe  36 intento 2 120.4s + revisión  9.9s ['texto na imaxe']
+imaxe  37 intento 0 120.1s + revisión 10.5s ok
+imaxe  38 intento 0 122.2s + revisión 10.6s ok
+imaxe  39 intento 0 124.8s + revisión 12.0s ['interior moderno', 'multitude']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['itor in a white habit and black cape, light from a high opening']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['itor in a white habit and black cape, light from a high opening']
+imaxe  39 intento 1 119.3s + revisión 11.6s ok
+imaxe  40 intento 0 119.7s + revisión 11.1s ['man sen corpo (1)', 'cousas do século XX', 'texto na imaxe']
+imaxe  40 intento 1 125.0s + revisión 10.1s ['cousas do século XX', 'texto na imaxe']
+imaxe  40 intento 2 119.9s + revisión 10.9s ['cousas do século XX']
+imaxe  41 intento 0 123.2s + revisión 10.2s ok
+imaxe  42 intento 0 116.4s + revisión 11.8s ok
