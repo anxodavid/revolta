@@ -18,3 +18,13 @@ W0000 00:00:1791055628.904317    1927 inference_feedback_manager.cc:121] Feedbac
 W0000 00:00:1791055629.694014    1934 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
 W0000 00:00:1791055629.730080    1935 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
 Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1791056333.257043    2225 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe   1 intento 0 127.0s + revisión 18.7s ['negativo do plano: cauldron (CLIP)', 'negativo do plano: iron pot (CLIP)', 'negativo do plano: frying pan (CLIP)']
+imaxe   1 intento 1 121.5s + revisión  9.9s ['interior moderno', 'negativo do plano: cauldron (CLIP)', 'negativo do plano: iron pot (CLIP)', 'negativo do plano: frying pan (CLIP)']
+imaxe   1 intento 2 124.2s + revisión 10.5s ['negativo do plano: cauldron (CLIP)', 'negativo do plano: iron pot (CLIP)', 'negativo do plano: frying pan (CLIP)']
+imaxe   5 intento 0 121.6s + revisión 11.4s ok
+imaxe   6 intento 0 123.2s + revisión 10.8s ['man sen corpo (1)']
+imaxe   6 intento 1 121.7s + revisión 10.5s ok
+imaxe   8 intento 0 117.9s + revisión  9.6s ok
+imaxe   9 intento 0  98.2s + revisión 10.0s ok
