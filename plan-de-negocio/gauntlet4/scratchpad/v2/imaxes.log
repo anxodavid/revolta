@@ -127,3 +127,13 @@ Token indices sequence length is longer than the specified maximum sequence leng
 The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['at night, hands hidden in the sleeves or out of frame']
 Token indices sequence length is longer than the specified maximum sequence length for this model (89 > 77). Running this sequence through the model will result in indexing errors
 The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['at night, hands hidden in the sleeves or out of frame']
+imaxe  32 intento 2 123.6s + revisión 11.8s ['negativo do plano: modern yacht (CLIP)']
+imaxe  33 intento 0 120.4s + revisión 10.1s ok
+imaxe  34 intento 0 118.4s + revisión 10.7s ['balcóns', 'texto na imaxe', 'repetida (CLIP 0.92 co plano 26)']
+imaxe  34 intento 1 118.5s + revisión 10.7s ['texto na imaxe', 'repetida (CLIP 0.93 co plano 26)']
+imaxe  34 intento 3 118.6s + revisión 10.4s ok
+imaxe  35 intento 0 120.6s + revisión 11.7s ['interior moderno']
+imaxe  35 intento 1 122.7s + revisión 11.4s ok
+imaxe  36 intento 0 120.5s + revisión 10.7s ['texto na imaxe']
+imaxe  36 intento 1 123.1s + revisión 11.5s ['man sen corpo (1)', 'texto na imaxe']
+imaxe  36 intento 2 120.4s + revisión  9.9s ['texto na imaxe']

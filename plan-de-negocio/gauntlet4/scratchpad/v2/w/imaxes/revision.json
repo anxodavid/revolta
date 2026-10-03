@@ -8112,5 +8112,1672 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "032-5d0efc36": {
+  "ficheiro": "032-5d0efc36-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "032-5d0efc36-0.png",
+    "seed": 118159823,
+    "s": 121.0,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater, and two friends in white shirts and dark wool sweaters, laughing on coils of rope around a clay bowl of burning spirits glowing blue on the deck of an old wooden boat in a harbour at night",
+    "modelo": "lightning",
+    "tokens": 71,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: modern yacht (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.294,
+       0.629
+      ],
+      "confianza": 0.84,
+      "dist_corpo": 0.007,
+      "tamaño": 0.013
+     },
+     {
+      "pulso": [
+       0.401,
+       0.67
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.013,
+      "tamaño": 0.039
+     },
+     {
+      "pulso": [
+       0.696,
+       0.656
+      ],
+      "confianza": 0.92,
+      "dist_corpo": 0.027,
+      "tamaño": 0.039
+     },
+     {
+      "pulso": [
+       0.582,
+       0.68
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.023,
+      "tamaño": 0.036
+     },
+     {
+      "pulso": [
+       0.59,
+       0.652
+      ],
+      "confianza": 0.76,
+      "dist_corpo": 0.053,
+      "tamaño": 0.03
+     }
+    ],
+    "corpos": 3,
+    "altas_luces": 0.0175,
+    "lume_quente": 0.0094,
+    "descricion": "The image shows three young men sitting on a wooden boat at night. They are all wearing white shirts and are smiling and laughing. In front of them, there is a fire pit with flames burning brightly. The boat is docked on the water and there are buildings and lights in the background. The sky is dark and cloudy, suggesting that it is either night or early morning. The men appear to be enjoying each other's company and the fire pit.",
+    "obxectos": [
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.046,
+      0.114
+     ],
+     "muros encalados (CLIP)": [
+      0.056,
+      0.147
+     ],
+     "ciprés (CLIP)": [
+      -0.015,
+      0.076
+     ],
+     "oliveiras (CLIP)": [
+      0.01,
+      0.047
+     ],
+     "palmeiras (CLIP)": [
+      0.049,
+      0.126
+     ],
+     "rodas de raios (CLIP)": [
+      0.026,
+      0.08
+     ],
+     "paisaxe seca (CLIP)": [
+      0.059,
+      0.107
+     ],
+     "eucaliptos (CLIP)": [
+      0.031,
+      0.021
+     ],
+     "luz eléctrica (CLIP)": [
+      0.036,
+      0.117
+     ],
+     "luces de cidade (CLIP)": [
+      0.001,
+      0.11
+     ],
+     "salón moderno (CLIP)": [
+      0.019,
+      0.111
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.054,
+      0.112
+     ],
+     "casas británicas (CLIP)": [
+      -0.012,
+      0.065
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.02,
+      0.152
+     ],
+     "catedral inventada (CLIP)": [
+      0.028,
+      0.074
+     ],
+     "abrigo moderno (CLIP)": [
+      0.055,
+      0.059
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.017,
+      0.104
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.02,
+      0.108
+     ],
+     "cadros na parede (CLIP)": [
+      0.023,
+      0.141
+     ],
+     "farol victoriano (CLIP)": [
+      -0.006,
+      0.114
+     ],
+     "negativo: neon": -0.013,
+     "negativo: plastic": -0.04,
+     "negativo: television": -0.004,
+     "negativo: smartphone": -0.019,
+     "negativo: modern yacht": 0.042,
+     "negativo: street lamps": -0.006,
+     "clave: boat": 2.11,
+     "clave_v5: boat": 0.026
+    },
+    "arquetipo": null,
+    "s_revision": 10.6,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "032-5d0efc36-1.png",
+    "seed": 1388359567,
+    "s": 123.7,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater, and two friends in white shirts and dark wool sweaters, laughing on coils of rope around a clay bowl of burning spirits glowing blue on the deck of an old wooden boat in a harbour at night",
+    "modelo": "lightning",
+    "tokens": 71,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (2)",
+     "muros encalados (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.767,
+       0.784
+      ],
+      "confianza": 0.9,
+      "dist_corpo": 0.121,
+      "tamaño": 0.048
+     },
+     {
+      "pulso": [
+       0.387,
+       0.531
+      ],
+      "confianza": 0.6,
+      "dist_corpo": 0.27,
+      "tamaño": 0.037
+     },
+     {
+      "pulso": [
+       0.671,
+       0.612
+      ],
+      "confianza": 0.97,
+      "dist_corpo": 0.008,
+      "tamaño": 0.049
+     },
+     {
+      "pulso": [
+       0.251,
+       0.799
+      ],
+      "confianza": 0.56,
+      "dist_corpo": 0.506,
+      "tamaño": 0.067
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0325,
+    "lume_quente": 0.0391,
+    "descricion": "The image shows four young men on a boat, laughing and enjoying a fire. They are all wearing white shirts and are standing on the deck of the boat, with the fire burning in the background. The boat appears to be docked at night, with other boats visible in the distance. The men are holding hands and appear to be having a good time. The overall mood of the image is joyful and relaxed.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.006,
+      0.063
+     ],
+     "muros encalados (CLIP)": [
+      0.09,
+      0.155
+     ],
+     "ciprés (CLIP)": [
+      -0.023,
+      0.102
+     ],
+     "oliveiras (CLIP)": [
+      0.0,
+      0.072
+     ],
+     "palmeiras (CLIP)": [
+      -0.001,
+      0.126
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.089
+     ],
+     "paisaxe seca (CLIP)": [
+      0.056,
+      0.102
+     ],
+     "eucaliptos (CLIP)": [
+      0.0,
+      0.022
+     ],
+     "luz eléctrica (CLIP)": [
+      0.018,
+      0.1
+     ],
+     "luces de cidade (CLIP)": [
+      -0.033,
+      0.11
+     ],
+     "salón moderno (CLIP)": [
+      0.0,
+      0.055
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.054,
+      0.095
+     ],
+     "casas británicas (CLIP)": [
+      0.043,
+      0.066
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.004,
+      0.105
+     ],
+     "catedral inventada (CLIP)": [
+      0.036,
+      0.056
+     ],
+     "abrigo moderno (CLIP)": [
+      0.035,
+      0.038
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.02,
+      0.091
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.02,
+      0.098
+     ],
+     "cadros na parede (CLIP)": [
+      0.028,
+      0.137
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.103
+     ],
+     "negativo: neon": -0.035,
+     "negativo: plastic": -0.029,
+     "negativo: television": -0.003,
+     "negativo: smartphone": -0.008,
+     "negativo: modern yacht": 0.021,
+     "negativo: street lamps": -0.006,
+     "clave: boat": 2.26,
+     "clave_v5: boat": 0.026
+    },
+    "arquetipo": null,
+    "s_revision": 10.5,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "032-5d0efc36-2.png",
+    "seed": 2412200586,
+    "s": 123.6,
+    "prompt": "cinematic film still, period drama, photorealistic, dark slate roofs, low granite houses, medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater, and two friends in white shirts and dark wool sweaters, laughing on coils of rope around a clay bowl of burning spirits glowing blue on the deck of an old wooden boat in a harbour at night, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 89,
+    "truncado": "at night, hands hidden in the sleeves or out of frame",
+    "problemas": [
+     "negativo do plano: modern yacht (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.723,
+       0.748
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.024,
+      "tamaño": 0.055
+     },
+     {
+      "pulso": [
+       0.639,
+       0.71
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.006,
+      "tamaño": 0.035
+     },
+     {
+      "pulso": [
+       0.374,
+       0.591
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.014,
+      "tamaño": 0.06
+     },
+     {
+      "pulso": [
+       0.243,
+       0.644
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.011,
+      "tamaño": 0.062
+     }
+    ],
+    "corpos": 3,
+    "altas_luces": 0.0258,
+    "lume_quente": 0.0049,
+    "descricion": "The image shows three young people sitting around a fire pit on a wooden boat. The fire pit is made of concrete and is placed on the deck of the boat. There are three people in the image, two men and a woman, all of them are smiling and appear to be enjoying the fire. The woman is on the left side of the image and the two men are on the right side. In the background, there is a body of water with boats and buildings visible. The sky is cloudy and the sun is setting, casting a warm glow over the scene.",
+    "obxectos": [
+     "boat",
+     "footwear",
+     "human face",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.048,
+      0.09
+     ],
+     "muros encalados (CLIP)": [
+      0.004,
+      0.124
+     ],
+     "ciprés (CLIP)": [
+      -0.04,
+      0.131
+     ],
+     "oliveiras (CLIP)": [
+      -0.027,
+      0.097
+     ],
+     "palmeiras (CLIP)": [
+      -0.012,
+      0.122
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.113
+     ],
+     "paisaxe seca (CLIP)": [
+      0.009,
+      0.109
+     ],
+     "eucaliptos (CLIP)": [
+      0.026,
+      0.036
+     ],
+     "luz eléctrica (CLIP)": [
+      0.015,
+      0.067
+     ],
+     "luces de cidade (CLIP)": [
+      -0.03,
+      0.12
+     ],
+     "salón moderno (CLIP)": [
+      0.011,
+      0.128
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.021,
+      0.088
+     ],
+     "casas británicas (CLIP)": [
+      0.026,
+      0.088
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.005,
+      0.163
+     ],
+     "catedral inventada (CLIP)": [
+      0.029,
+      0.094
+     ],
+     "abrigo moderno (CLIP)": [
+      0.037,
+      0.112
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.034,
+      0.161
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.006,
+      0.146
+     ],
+     "cadros na parede (CLIP)": [
+      0.014,
+      0.156
+     ],
+     "farol victoriano (CLIP)": [
+      -0.011,
+      0.113
+     ],
+     "negativo: neon": -0.026,
+     "negativo: plastic": -0.03,
+     "negativo: television": 0.021,
+     "negativo: smartphone": -0.002,
+     "negativo: modern yacht": 0.044,
+     "negativo: street lamps": -0.015,
+     "clave: boat": 2.55,
+     "clave_v5: boat": 0.046
+    },
+    "arquetipo": null,
+    "s_revision": 11.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "033-e502ad3e": {
+  "ficheiro": "033-e502ad3e-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "033-e502ad3e-0.png",
+    "seed": 1136752614,
+    "s": 120.4,
+    "prompt": "cinematic film still, period drama, photorealistic, medium close-up of a dark-haired man of about forty in a white shirt and dark wool sweater, reading verses aloud from a sheet of paper with a solemn face, lit from below by a soft blue glow, a friend smiling beside him, night on the deck of a boat, 1960s",
+    "modelo": "lightning",
+    "tokens": 76,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.454,
+       0.949
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.028,
+      "tamaño": 0.108
+     },
+     {
+      "pulso": [
+       0.782,
+       0.993
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.064,
+      "tamaño": 0.085
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0279,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows two young men sitting at a table in a restaurant at night. They are both looking at a piece of paper and appear to be engaged in a conversation. The man on the left is wearing a white shirt and has dark hair, while the man in the middle is wearing dark clothing. The background is blurred, but it appears to be a cityscape with buildings and lights. The overall mood of the image is serious and focused.",
+    "obxectos": [
+     "human face",
+     "man",
+     "suit"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.012,
+      0.074
+     ],
+     "muros encalados (CLIP)": [
+      0.048,
+      0.124
+     ],
+     "ciprés (CLIP)": [
+      0.013,
+      0.055
+     ],
+     "oliveiras (CLIP)": [
+      0.024,
+      0.038
+     ],
+     "palmeiras (CLIP)": [
+      0.049,
+      0.098
+     ],
+     "rodas de raios (CLIP)": [
+      0.028,
+      0.063
+     ],
+     "paisaxe seca (CLIP)": [
+      0.05,
+      0.084
+     ],
+     "eucaliptos (CLIP)": [
+      0.02,
+      -0.029
+     ],
+     "luz eléctrica (CLIP)": [
+      0.036,
+      0.125
+     ],
+     "luces de cidade (CLIP)": [
+      -0.02,
+      0.117
+     ],
+     "salón moderno (CLIP)": [
+      0.023,
+      0.07
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.057,
+      0.087
+     ],
+     "casas británicas (CLIP)": [
+      0.028,
+      0.067
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.044,
+      0.099
+     ],
+     "catedral inventada (CLIP)": [
+      0.035,
+      0.064
+     ],
+     "abrigo moderno (CLIP)": [
+      0.036,
+      0.1
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.04,
+      0.138
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.014,
+      0.11
+     ],
+     "cadros na parede (CLIP)": [
+      0.037,
+      0.147
+     ],
+     "farol victoriano (CLIP)": [
+      0.004,
+      0.099
+     ],
+     "negativo: neon": -0.012,
+     "negativo: plastic": -0.032,
+     "negativo: television": 0.001,
+     "negativo: smartphone": -0.001,
+     "negativo: light bulb": 0.009,
+     "negativo: glasses": 0.004,
+     "clave: sheet of paper": 4.08,
+     "clave_v5: sheet of paper": 0.012
+    },
+    "arquetipo": null,
+    "s_revision": 10.1,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "034-440f5505": {
+  "ficheiro": "034-440f5505-3.png",
+  "escollida": 2,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "034-440f5505-0.png",
+    "seed": 288183094,
+    "s": 118.4,
+    "prompt": "cinematic film still, period drama, photorealistic, still life of five or six handwritten sheets of verses scattered on a worn wooden table beside an oil lantern on the deck of a boat at night, one sheet lit in the warm light, the others in shadow, 1960s",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "balcóns",
+     "texto na imaxe",
+     "repetida (CLIP 0.92 co plano 26)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0046,
+    "lume_quente": 0.0025,
+    "descricion": "The image shows a wooden table with an open book and two lanterns on it. The table is located on a balcony overlooking the ocean. The lanterns are lit, casting a warm glow on the pages of the book. On the left side of the table, there is an old-fashioned clock with a vintage design and a small clock face. Next to the clock, there are a few other items scattered around the table. The background is blurred, but it appears to be a balcony with a view of the ocean and the sky. The overall mood of the image is peaceful and se",
+    "obxectos": [
+     "book",
+     "candle",
+     "lantern",
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.031,
+      0.092
+     ],
+     "muros encalados (CLIP)": [
+      -0.0,
+      0.114
+     ],
+     "ciprés (CLIP)": [
+      -0.008,
+      0.114
+     ],
+     "oliveiras (CLIP)": [
+      -0.0,
+      0.091
+     ],
+     "palmeiras (CLIP)": [
+      -0.007,
+      0.133
+     ],
+     "rodas de raios (CLIP)": [
+      0.017,
+      0.123
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.006,
+      0.096
+     ],
+     "eucaliptos (CLIP)": [
+      -0.007,
+      0.064
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.016,
+      0.141
+     ],
+     "luces de cidade (CLIP)": [
+      -0.002,
+      0.138
+     ],
+     "salón moderno (CLIP)": [
+      -0.007,
+      0.111
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.013,
+      0.083
+     ],
+     "casas británicas (CLIP)": [
+      0.049,
+      0.108
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.02,
+      0.169
+     ],
+     "catedral inventada (CLIP)": [
+      -0.009,
+      0.107
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.026,
+      0.119
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.035,
+      0.162
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.0,
+      0.121
+     ],
+     "cadros na parede (CLIP)": [
+      0.022,
+      0.159
+     ],
+     "farol victoriano (CLIP)": [
+      0.008,
+      0.154
+     ],
+     "negativo: neon": -0.034,
+     "negativo: plastic": -0.034,
+     "negativo: television": -0.036,
+     "negativo: smartphone": -0.005,
+     "negativo: printed text": 0.005,
+     "negativo: typewriter": -0.011,
+     "clave: papers": 4.5,
+     "clave_v5: papers": 0.016
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "034-440f5505-1.png",
+    "seed": 3967368479,
+    "s": 118.5,
+    "prompt": "cinematic film still, period drama, photorealistic, still life of five or six handwritten sheets of verses scattered on a worn wooden table beside an oil lantern on the deck of a boat at night, one sheet lit in the warm light, the others in shadow, 1960s",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe",
+     "repetida (CLIP 0.93 co plano 26)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0008,
+    "lume_quente": 0.0013,
+    "descricion": "The image shows an old, worn-out document lying on a wooden table. The document appears to be a letter or a document of some kind, with some text visible on it. Next to the document, there is a small lantern with a handle and a spout, and a small candle with a flame burning inside. The table is covered with a white cloth, and there are a few other items scattered around the table, including a knife and a piece of paper. The background is dark, and the overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "book",
+     "candle",
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.033,
+      0.105
+     ],
+     "muros encalados (CLIP)": [
+      0.008,
+      0.111
+     ],
+     "ciprés (CLIP)": [
+      -0.01,
+      0.121
+     ],
+     "oliveiras (CLIP)": [
+      -0.017,
+      0.101
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.139
+     ],
+     "rodas de raios (CLIP)": [
+      0.016,
+      0.129
+     ],
+     "paisaxe seca (CLIP)": [
+      0.009,
+      0.096
+     ],
+     "eucaliptos (CLIP)": [
+      -0.017,
+      0.074
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.009,
+      0.12
+     ],
+     "luces de cidade (CLIP)": [
+      -0.006,
+      0.125
+     ],
+     "salón moderno (CLIP)": [
+      -0.023,
+      0.146
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.009,
+      0.094
+     ],
+     "casas británicas (CLIP)": [
+      0.049,
+      0.119
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.013,
+      0.168
+     ],
+     "catedral inventada (CLIP)": [
+      -0.01,
+      0.112
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.041,
+      0.125
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.036,
+      0.156
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.001,
+      0.116
+     ],
+     "cadros na parede (CLIP)": [
+      0.01,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      -0.022,
+      0.145
+     ],
+     "negativo: neon": -0.047,
+     "negativo: plastic": -0.045,
+     "negativo: television": -0.034,
+     "negativo: smartphone": -0.004,
+     "negativo: printed text": 0.004,
+     "negativo: typewriter": 0.005,
+     "clave: papers": 3.54,
+     "clave_v5: papers": 0.029
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 3,
+    "ficheiro": "034-440f5505-3.png",
+    "seed": 1498115715,
+    "s": 118.6,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a farmer in a wool jacket resting against a mossy granite wall, green fields, bright overcast daylight",
+    "modelo": "lightning",
+    "tokens": 35,
+    "truncado": "",
+    "problemas": [],
+    "reserva": true,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.387,
+       0.794
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.017,
+      "tamaño": 0.086
+     },
+     {
+      "pulso": [
+       0.295,
+       0.779
+      ],
+      "confianza": 0.97,
+      "dist_corpo": 0.022,
+      "tamaño": 0.056
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.018,
+    "lume_quente": 0.0,
+    "descricion": "The image shows an elderly man sitting on a large rock formation in a grassy field. He is wearing a green coat and a brown hat, and is looking off to the side with a serious expression on his face. The rock formation is covered in green moss and rocks, and in the background, there are hills and a cloudy sky. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.034,
+      0.085
+     ],
+     "muros encalados (CLIP)": [
+      -0.072,
+      0.129
+     ],
+     "ciprés (CLIP)": [
+      -0.036,
+      0.127
+     ],
+     "oliveiras (CLIP)": [
+      -0.072,
+      0.142
+     ],
+     "palmeiras (CLIP)": [
+      -0.052,
+      0.142
+     ],
+     "rodas de raios (CLIP)": [
+      0.025,
+      0.083
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.064,
+      0.178
+     ],
+     "eucaliptos (CLIP)": [
+      -0.087,
+      0.133
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.03,
+      0.07
+     ],
+     "luces de cidade (CLIP)": [
+      -0.05,
+      0.157
+     ],
+     "salón moderno (CLIP)": [
+      -0.013,
+      0.122
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.038,
+      0.083
+     ],
+     "casas británicas (CLIP)": [
+      0.001,
+      0.1
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.0,
+      0.127
+     ],
+     "catedral inventada (CLIP)": [
+      -0.052,
+      0.083
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.037,
+      0.14
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.015,
+      0.229
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.061,
+      0.213
+     ],
+     "cadros na parede (CLIP)": [
+      -0.01,
+      0.194
+     ],
+     "farol victoriano (CLIP)": [
+      -0.054,
+      0.119
+     ],
+     "negativo: neon": -0.029,
+     "negativo: plastic": -0.028,
+     "negativo: television": -0.0,
+     "negativo: smartphone": 0.008,
+     "negativo: printed text": -0.011,
+     "negativo: typewriter": -0.04
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "035-7e6df055": {
+  "ficheiro": "035-7e6df055-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "035-7e6df055-0.png",
+    "seed": 1041654426,
+    "s": 120.6,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of two tourists in late-20th-century clothes reading a printed card with a poem and a small drawing of a clay bowl, at the wooden counter of a souvenir shop where stacks of the same printed cards lie for sale, warm shop light",
+    "modelo": "lightning",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.326,
+       0.671
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.008,
+      "tamaño": 0.087
+     },
+     {
+      "pulso": [
+       0.68,
+       0.691
+      ],
+      "confianza": 0.96,
+      "dist_corpo": 0.019,
+      "tamaño": 0.063
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0296,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two young women standing in a room with a bookshelf in the background. They are both wearing school uniforms, with the girl on the left wearing a green dress and the girl in the middle wearing a white blouse and a purple vest. Both women are holding a small white card in their hands and appear to be looking at it intently. On the table in front of them, there are various items such as plates, bowls, and cups. The room is dimly lit with hanging lamps and there are several framed pictures hanging on the walls. The overall mood of",
+    "obxectos": [
+     "book",
+     "bookcase",
+     "coffee cup",
+     "human face",
+     "person",
+     "picture frame",
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.004,
+      0.067
+     ],
+     "muros encalados (CLIP)": [
+      0.015,
+      0.085
+     ],
+     "ciprés (CLIP)": [
+      -0.057,
+      0.111
+     ],
+     "oliveiras (CLIP)": [
+      -0.059,
+      0.09
+     ],
+     "palmeiras (CLIP)": [
+      -0.029,
+      0.111
+     ],
+     "rodas de raios (CLIP)": [
+      0.043,
+      0.103
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.011,
+      0.05
+     ],
+     "eucaliptos (CLIP)": [
+      -0.03,
+      0.038
+     ],
+     "luz eléctrica (CLIP)": [
+      0.011,
+      0.073
+     ],
+     "luces de cidade (CLIP)": [
+      -0.027,
+      0.085
+     ],
+     "salón moderno (CLIP)": [
+      0.01,
+      0.085
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.037,
+      0.046
+     ],
+     "casas británicas (CLIP)": [
+      0.04,
+      0.097
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.017,
+      0.096
+     ],
+     "catedral inventada (CLIP)": [
+      0.024,
+      0.041
+     ],
+     "abrigo moderno (CLIP)": [
+      0.005,
+      0.117
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.043,
+      0.131
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.041,
+      0.149
+     ],
+     "cadros na parede (CLIP)": [
+      0.029,
+      0.163
+     ],
+     "farol victoriano (CLIP)": [
+      0.005,
+      0.089
+     ],
+     "negativo: neon": -0.059,
+     "negativo: plastic": -0.039,
+     "negativo: television": -0.02,
+     "negativo: smartphone": -0.0,
+     "negativo: computer": 0.006,
+     "clave: printed card": 2.26,
+     "clave_v5: printed card": 0.005
+    },
+    "arquetipo": null,
+    "s_revision": 11.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "035-7e6df055-1.png",
+    "seed": 3349865511,
+    "s": 122.7,
+    "prompt": "cinematic film still, period drama, photorealistic, thick granite walls, medium shot of two tourists in late-20th-century clothes reading a printed card with a poem and a small drawing of a clay bowl, at the wooden counter of a souvenir shop where stacks of the same printed cards lie for sale, warm shop light",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.329,
+       0.713
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.027,
+      "tamaño": 0.066
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0234,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a man and a woman sitting at a wooden table in a library. The man is on the left side of the image, wearing a green coat and tie, and the woman on the right side is wearing a red blouse and a black skirt. They are both looking at a book and appear to be engrossed in it. On the table, there are several books and papers scattered around. In the background, there is a bookshelf filled with books and a window with a view of the outside. The room is dimly lit, with a few framed pictures",
+    "obxectos": [
+     "book",
+     "human face",
+     "man",
+     "table",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.002,
+      0.071
+     ],
+     "muros encalados (CLIP)": [
+      0.005,
+      0.088
+     ],
+     "ciprés (CLIP)": [
+      -0.033,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      0.002,
+      0.105
+     ],
+     "palmeiras (CLIP)": [
+      -0.025,
+      0.131
+     ],
+     "rodas de raios (CLIP)": [
+      0.054,
+      0.119
+     ],
+     "paisaxe seca (CLIP)": [
+      0.009,
+      0.071
+     ],
+     "eucaliptos (CLIP)": [
+      0.012,
+      0.062
+     ],
+     "luz eléctrica (CLIP)": [
+      0.005,
+      0.082
+     ],
+     "luces de cidade (CLIP)": [
+      -0.04,
+      0.107
+     ],
+     "salón moderno (CLIP)": [
+      0.011,
+      0.104
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.042,
+      0.044
+     ],
+     "casas británicas (CLIP)": [
+      0.029,
+      0.085
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.014,
+      0.104
+     ],
+     "catedral inventada (CLIP)": [
+      -0.007,
+      0.065
+     ],
+     "abrigo moderno (CLIP)": [
+      0.027,
+      0.115
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.038,
+      0.172
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.031,
+      0.166
+     ],
+     "cadros na parede (CLIP)": [
+      0.013,
+      0.148
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.098
+     ],
+     "negativo: neon": -0.055,
+     "negativo: plastic": -0.033,
+     "negativo: television": -0.024,
+     "negativo: smartphone": -0.008,
+     "negativo: computer": 0.007,
+     "clave: printed card": 1.58,
+     "clave_v5: printed card": 0.0
+    },
+    "arquetipo": null,
+    "s_revision": 11.4,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "036-2831cd58": {
+  "ficheiro": "036-2831cd58-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "036-2831cd58-0.png",
+    "seed": 3193145623,
+    "s": 120.5,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of an older man's hand signing an official registration form with a fountain pen on an office desk, a rubber stamp and a printed copy of a poem beside it, daylight, 2001",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.166,
+       0.426
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 9.0,
+      "tamaño": 0.238
+     }
+    ],
+    "corpos": 0,
+    "altas_luces": 0.0562,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a person's hands holding a pen and signing a document. The document appears to be a legal document, as there are several other papers and documents scattered around the table. The person is wearing a white sweater and has a watch on their wrist. The background is blurred, but it seems like the person is sitting at a desk or a table with a book and a pen holder. The focus of the image is on the hands and the document.",
+    "obxectos": [
+     "penguin",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.033,
+      0.113
+     ],
+     "muros encalados (CLIP)": [
+      -0.007,
+      0.092
+     ],
+     "ciprés (CLIP)": [
+      -0.025,
+      0.094
+     ],
+     "oliveiras (CLIP)": [
+      -0.006,
+      0.07
+     ],
+     "palmeiras (CLIP)": [
+      -0.003,
+      0.1
+     ],
+     "rodas de raios (CLIP)": [
+      0.022,
+      0.087
+     ],
+     "paisaxe seca (CLIP)": [
+      0.035,
+      0.074
+     ],
+     "eucaliptos (CLIP)": [
+      -0.012,
+      0.031
+     ],
+     "luz eléctrica (CLIP)": [
+      0.026,
+      0.045
+     ],
+     "luces de cidade (CLIP)": [
+      -0.037,
+      0.103
+     ],
+     "salón moderno (CLIP)": [
+      0.007,
+      0.071
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.024,
+      0.045
+     ],
+     "casas británicas (CLIP)": [
+      0.013,
+      0.08
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.005,
+      0.083
+     ],
+     "catedral inventada (CLIP)": [
+      -0.002,
+      0.058
+     ],
+     "abrigo moderno (CLIP)": [
+      0.014,
+      0.084
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.009,
+      0.11
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.001,
+      0.125
+     ],
+     "cadros na parede (CLIP)": [
+      0.024,
+      0.136
+     ],
+     "farol victoriano (CLIP)": [
+      -0.031,
+      0.107
+     ],
+     "negativo: neon": -0.022,
+     "negativo: plastic": -0.031,
+     "negativo: television": -0.02,
+     "negativo: smartphone": -0.01,
+     "negativo: laptop": -0.025,
+     "clave: document": 6.82,
+     "clave_v5: document": 0.06
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "036-2831cd58-1.png",
+    "seed": 140271886,
+    "s": 123.1,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of an older man's hand signing an official registration form with a fountain pen on an office desk, a rubber stamp and a printed copy of a poem beside it, daylight, 2001",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)",
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.245,
+       0.413
+      ],
+      "confianza": 0.66,
+      "dist_corpo": 0.166,
+      "tamaño": 0.244
+     }
+    ],
+    "corpos": 3,
+    "altas_luces": 0.0298,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a person's hand holding a pen and filling out a document. The document appears to be a legal document, as there is text written on it in black ink. The text is written in a neat and legible font and is centered on the page. The person is holding the pen in their right hand and is using it to write down the details of the document. There is a black pen resting on top of the paper next to the pen. The background is blurred, but it seems like the person is sitting at a desk or table.",
+    "obxectos": [
+     "penguin"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.033,
+      0.097
+     ],
+     "muros encalados (CLIP)": [
+      -0.01,
+      0.105
+     ],
+     "ciprés (CLIP)": [
+      -0.009,
+      0.093
+     ],
+     "oliveiras (CLIP)": [
+      -0.018,
+      0.077
+     ],
+     "palmeiras (CLIP)": [
+      0.007,
+      0.094
+     ],
+     "rodas de raios (CLIP)": [
+      0.023,
+      0.074
+     ],
+     "paisaxe seca (CLIP)": [
+      0.029,
+      0.074
+     ],
+     "eucaliptos (CLIP)": [
+      -0.033,
+      0.037
+     ],
+     "luz eléctrica (CLIP)": [
+      0.019,
+      0.027
+     ],
+     "luces de cidade (CLIP)": [
+      -0.043,
+      0.102
+     ],
+     "salón moderno (CLIP)": [
+      0.014,
+      0.058
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.049,
+      0.061
+     ],
+     "casas británicas (CLIP)": [
+      0.007,
+      0.075
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.007,
+      0.08
+     ],
+     "catedral inventada (CLIP)": [
+      -0.013,
+      0.1
+     ],
+     "abrigo moderno (CLIP)": [
+      0.032,
+      0.086
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.007,
+      0.107
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.025,
+      0.121
+     ],
+     "cadros na parede (CLIP)": [
+      0.037,
+      0.136
+     ],
+     "farol victoriano (CLIP)": [
+      -0.047,
+      0.107
+     ],
+     "negativo: neon": -0.037,
+     "negativo: plastic": -0.025,
+     "negativo: television": -0.01,
+     "negativo: smartphone": -0.002,
+     "negativo: laptop": -0.03,
+     "clave: document": 6.82,
+     "clave_v5: document": 0.052
+    },
+    "arquetipo": null,
+    "s_revision": 11.5,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "036-2831cd58-2.png",
+    "seed": 533016252,
+    "s": 120.4,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of an older man's hand signing an official registration form with a fountain pen on an office desk, a rubber stamp and a printed copy of a poem beside it, daylight, 2001, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.1567,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a person's hand holding a black pen and signing a document. The document appears to be a legal document, as there are several other papers visible on the table in front of them. The person is wearing a suit and is sitting at a desk, and the background is blurred, suggesting that the focus is on the hand and the document.",
+    "obxectos": [
+     "human hand",
+     "penguin",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.023,
+      0.106
+     ],
+     "muros encalados (CLIP)": [
+      0.004,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.025,
+      0.097
+     ],
+     "oliveiras (CLIP)": [
+      -0.018,
+      0.078
+     ],
+     "palmeiras (CLIP)": [
+      0.008,
+      0.106
+     ],
+     "rodas de raios (CLIP)": [
+      0.02,
+      0.079
+     ],
+     "paisaxe seca (CLIP)": [
+      0.031,
+      0.088
+     ],
+     "eucaliptos (CLIP)": [
+      -0.002,
+      0.034
+     ],
+     "luz eléctrica (CLIP)": [
+      0.01,
+      0.05
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.108
+     ],
+     "salón moderno (CLIP)": [
+      0.015,
+      0.063
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.02,
+      0.031
+     ],
+     "casas británicas (CLIP)": [
+      0.019,
+      0.083
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.01,
+      0.085
+     ],
+     "catedral inventada (CLIP)": [
+      -0.015,
+      0.07
+     ],
+     "abrigo moderno (CLIP)": [
+      0.003,
+      0.075
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.01,
+      0.119
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.002,
+      0.125
+     ],
+     "cadros na parede (CLIP)": [
+      0.023,
+      0.145
+     ],
+     "farol victoriano (CLIP)": [
+      -0.049,
+      0.121
+     ],
+     "negativo: neon": -0.024,
+     "negativo: plastic": -0.034,
+     "negativo: television": -0.018,
+     "negativo: smartphone": -0.014,
+     "negativo: laptop": -0.02,
+     "clave: document": 6.13,
+     "clave_v5: document": 0.055
+    },
+    "arquetipo": null,
+    "s_revision": 9.9,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
  }
 }
