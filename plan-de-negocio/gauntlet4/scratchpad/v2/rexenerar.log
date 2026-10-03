@@ -41,3 +41,14 @@ imaxe  19 intento 1 116.3s + revisión 10.6s ok
 `torch_dtype` is deprecated! Use `dtype` instead!
 imaxe  20 intento 0 151.5s + revisión 10.3s ['balcóns', 'casas alleas', 'interior moderno', 'iconografía mediterránea']
 imaxe  20 intento 1 123.7s + revisión 10.7s ['balcóns', 'casas británicas (CLIP)']
+imaxe  20 intento 2 124.4s + revisión 10.7s ['balcóns']
+imaxe  21 intento 0 117.1s + revisión 10.7s ok
+imaxe  28 intento 0 125.5s + revisión 11.3s ['casas británicas (CLIP)']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['mist']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['mist']
+imaxe  28 intento 1 120.8s + revisión 10.7s ok
+imaxe  30 intento 0 121.9s + revisión 10.4s ['texto na imaxe']
+imaxe  30 intento 1 122.6s + revisión 10.1s ['texto na imaxe']
+imaxe  30 intento 2 116.4s + revisión  9.7s ['texto na imaxe', 'negativo do plano: printed text (CLIP)']
+imaxe  37 intento 0 114.5s + revisión  9.8s ok
+imaxe  38 intento 0 115.1s + revisión  9.6s ['negativo do plano: bonfire (CLIP)'] avisos ['falta: clay bowl (CLIP)']

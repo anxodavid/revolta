@@ -21787,5 +21787,1251 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "020-cbe12583": {
+  "ficheiro": "020-cbe12583-2.png",
+  "escollida": 2,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "020-cbe12583-0.png",
+    "seed": 216548889,
+    "s": 151.5,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a woman in a faded red wool headscarf holding a horn lantern at the heavy wooden door of a thatched granite house at dusk, letting in a man in a dark wool cloak, 17th century Galicia",
+    "modelo": "lightning",
+    "tokens": 57,
+    "truncado": "",
+    "problemas": [
+     "balcóns",
+     "casas alleas",
+     "interior moderno",
+     "iconografía mediterránea"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "03-palloza-casa/10-palloza-cantexeira.jpg",
+     "modo": "profundidade",
+     "forza": 0.6
+    },
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a two-story house with a thatched roof. The house is made of light-colored stucco and has a small window on the right side. The roof is covered with a red curtain, and there is a small chimney on the left side of the house. The walls are made of stone, and the roof is also made of thatched tiles. There is a wooden balcony on the ground floor with a wooden railing. The sky is overcast and there are some clouds in the background. The ground is covered in grass and shrubs.",
+    "obxectos": [
+     "door",
+     "house",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.03,
+      0.176
+     ],
+     "muros encalados (CLIP)": [
+      0.019,
+      0.178
+     ],
+     "ciprés (CLIP)": [
+      -0.041,
+      0.125
+     ],
+     "oliveiras (CLIP)": [
+      -0.045,
+      0.135
+     ],
+     "palmeiras (CLIP)": [
+      -0.04,
+      0.134
+     ],
+     "rodas de raios (CLIP)": [
+      -0.017,
+      0.184
+     ],
+     "paisaxe seca (CLIP)": [
+      0.068,
+      0.152
+     ],
+     "eucaliptos (CLIP)": [
+      0.021,
+      0.064
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.021,
+      0.1
+     ],
+     "luces de cidade (CLIP)": [
+      -0.056,
+      0.139
+     ],
+     "salón moderno (CLIP)": [
+      -0.04,
+      0.185
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.036,
+      0.132
+     ],
+     "casas británicas (CLIP)": [
+      -0.003,
+      0.186
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.045,
+      0.193
+     ],
+     "catedral inventada (CLIP)": [
+      -0.075,
+      0.129
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.093,
+      0.195
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.097,
+      0.224
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.029,
+      0.153
+     ],
+     "cadros na parede (CLIP)": [
+      -0.029,
+      0.204
+     ],
+     "farol victoriano (CLIP)": [
+      -0.04,
+      0.122
+     ],
+     "negativo: electric light": -0.003,
+     "negativo: light bulb": -0.034,
+     "negativo: lamp": -0.046,
+     "negativo: glass window": -0.005,
+     "negativo: modern clothes": -0.013,
+     "negativo: street lamp": -0.046,
+     "clave: door": 3.02,
+     "clave_v5: door": 0.021
+    },
+    "arquetipo": null,
+    "s_revision": 10.3,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "020-cbe12583-1.png",
+    "seed": 3553431514,
+    "s": 123.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dark slate roofs, low granite houses, thick granite walls, wide shot of a woman in a faded red wool headscarf holding a horn lantern at the heavy wooden door of a thatched granite house at dusk, letting in a man in a dark wool cloak, 17th century Galicia",
+    "modelo": "lightning",
+    "tokens": 69,
+    "truncado": "",
+    "problemas": [
+     "balcóns",
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "03-palloza-casa/10-palloza-cantexeira.jpg",
+     "modo": "profundidade",
+     "forza": 0.6
+    },
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0004,
+    "descricion": "The image shows two old stone houses with a thatched roof. The houses are located on a hillside with a stone wall in front of them. The house on the left has a wooden balcony with a wooden railing and a small window on the right side. The roof is made of thatched tiles and has a small chimney. There are two red doors on either side of the balcony, one with a gold-colored door handle and the other with a red door handle. The walls of the houses are made of light-colored stone and there is a small garden with a few plants",
+    "obxectos": [
+     "door",
+     "house",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.013,
+      0.195
+     ],
+     "muros encalados (CLIP)": [
+      -0.002,
+      0.203
+     ],
+     "ciprés (CLIP)": [
+      -0.022,
+      0.145
+     ],
+     "oliveiras (CLIP)": [
+      -0.021,
+      0.123
+     ],
+     "palmeiras (CLIP)": [
+      -0.04,
+      0.128
+     ],
+     "rodas de raios (CLIP)": [
+      -0.014,
+      0.147
+     ],
+     "paisaxe seca (CLIP)": [
+      0.061,
+      0.154
+     ],
+     "eucaliptos (CLIP)": [
+      0.032,
+      0.071
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.017,
+      0.129
+     ],
+     "luces de cidade (CLIP)": [
+      -0.039,
+      0.142
+     ],
+     "salón moderno (CLIP)": [
+      -0.035,
+      0.178
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.063,
+      0.166
+     ],
+     "casas británicas (CLIP)": [
+      0.033,
+      0.26
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.038,
+      0.183
+     ],
+     "catedral inventada (CLIP)": [
+      -0.069,
+      0.147
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.052,
+      0.14
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.045,
+      0.18
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.021,
+      0.144
+     ],
+     "cadros na parede (CLIP)": [
+      -0.046,
+      0.246
+     ],
+     "farol victoriano (CLIP)": [
+      0.007,
+      0.123
+     ],
+     "negativo: electric light": 0.013,
+     "negativo: light bulb": -0.012,
+     "negativo: lamp": -0.017,
+     "negativo: glass window": -0.0,
+     "negativo: modern clothes": -0.032,
+     "negativo: street lamp": -0.018,
+     "clave: door": 4.1,
+     "clave_v5: door": 0.007
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "020-cbe12583-2.png",
+    "seed": 1871640130,
+    "s": 124.4,
+    "prompt": "cinematic film still, period drama, photorealistic, dark slate roofs, low granite houses, thick granite walls, wide shot of a woman in a faded red wool headscarf holding a horn lantern at the heavy wooden door of a thatched granite house at dusk, letting in a man in a dark wool cloak, 17th century Galicia",
+    "modelo": "lightning",
+    "tokens": 69,
+    "truncado": "",
+    "problemas": [
+     "balcóns"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "03-palloza-casa/10-palloza-cantexeira.jpg",
+     "modo": "profundidade",
+     "forza": 0.6
+    },
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.003,
+    "lume_quente": 0.0022,
+    "descricion": "The image shows a small stone building with a thatched roof. The building appears to be old and weathered, with a sloping roof and a balcony on the second floor. The walls of the building are made of small, irregularly shaped stones, and there are two small windows on the right side of the image. In front of the house, there is a statue of a person holding a lantern. The sky is orange and pink, indicating that it is either sunrise or sunset. The grass in the foreground is tall and green, and the overall atmosphere is peaceful and serene.",
+    "obxectos": [
+     "house",
+     "person",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.036,
+      0.156
+     ],
+     "muros encalados (CLIP)": [
+      0.012,
+      0.164
+     ],
+     "ciprés (CLIP)": [
+      -0.05,
+      0.118
+     ],
+     "oliveiras (CLIP)": [
+      -0.039,
+      0.132
+     ],
+     "palmeiras (CLIP)": [
+      -0.034,
+      0.142
+     ],
+     "rodas de raios (CLIP)": [
+      0.002,
+      0.124
+     ],
+     "paisaxe seca (CLIP)": [
+      0.038,
+      0.112
+     ],
+     "eucaliptos (CLIP)": [
+      -0.044,
+      0.064
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.012,
+      0.135
+     ],
+     "luces de cidade (CLIP)": [
+      -0.039,
+      0.169
+     ],
+     "salón moderno (CLIP)": [
+      -0.005,
+      0.174
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.009,
+      0.102
+     ],
+     "casas británicas (CLIP)": [
+      0.017,
+      0.148
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.004,
+      0.195
+     ],
+     "catedral inventada (CLIP)": [
+      -0.059,
+      0.116
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.092,
+      0.196
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.097,
+      0.188
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.053,
+      0.161
+     ],
+     "cadros na parede (CLIP)": [
+      -0.038,
+      0.224
+     ],
+     "farol victoriano (CLIP)": [
+      -0.015,
+      0.118
+     ],
+     "negativo: electric light": 0.029,
+     "negativo: light bulb": 0.022,
+     "negativo: lamp": 0.032,
+     "negativo: glass window": -0.002,
+     "negativo: modern clothes": -0.012,
+     "negativo: street lamp": 0.011,
+     "clave: door": 1.9,
+     "clave_v5: door": 0.003
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "021-58ee4f0b": {
+  "ficheiro": "021-58ee4f0b-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "021-58ee4f0b-0.png",
+    "seed": 336340630,
+    "s": 117.1,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of two village women in dark wool headscarves and an old man whispering together beside the round-arched stone doorway of a small Romanesque granite church, one woman glancing sideways with suspicion, overcast daylight, 17th century",
+    "modelo": "lightning",
+    "tokens": 60,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two elderly men standing in front of a stone building with two arched windows. The building appears to be old and weathered, with a stone wall and a wooden door. The men are wearing long black robes and headscarves, and one of them is holding a book in his hand. They are facing each other and appear to be engaged in a conversation. The sky is overcast and the ground is covered in grass. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "building",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.052,
+      0.126
+     ],
+     "muros encalados (CLIP)": [
+      -0.058,
+      0.153
+     ],
+     "ciprés (CLIP)": [
+      -0.003,
+      0.119
+     ],
+     "oliveiras (CLIP)": [
+      -0.043,
+      0.106
+     ],
+     "palmeiras (CLIP)": [
+      -0.051,
+      0.146
+     ],
+     "rodas de raios (CLIP)": [
+      0.036,
+      0.081
+     ],
+     "paisaxe seca (CLIP)": [
+      0.018,
+      0.085
+     ],
+     "eucaliptos (CLIP)": [
+      -0.055,
+      0.095
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.013,
+      0.091
+     ],
+     "luces de cidade (CLIP)": [
+      -0.065,
+      0.141
+     ],
+     "salón moderno (CLIP)": [
+      -0.021,
+      0.11
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.007,
+      0.096
+     ],
+     "casas británicas (CLIP)": [
+      -0.054,
+      0.124
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.03,
+      0.137
+     ],
+     "catedral inventada (CLIP)": [
+      -0.071,
+      0.194
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.012,
+      0.147
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.128,
+      0.214
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.037,
+      0.14
+     ],
+     "cadros na parede (CLIP)": [
+      -0.034,
+      0.244
+     ],
+     "farol victoriano (CLIP)": [
+      -0.013,
+      0.093
+     ],
+     "negativo: electric light": -0.013,
+     "negativo: light bulb": -0.054,
+     "negativo: lamp": -0.05,
+     "negativo: glass window": -0.019,
+     "negativo: modern clothes": -0.035,
+     "negativo: street lamp": -0.052,
+     "clave: church": 3.22,
+     "clave_v5: church": 0.024
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.236
+    },
+    "s_revision": 10.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "028-8b2ad9ae": {
+  "ficheiro": "028-8b2ad9ae-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "028-8b2ad9ae-0.png",
+    "seed": 983173055,
+    "s": 125.5,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a stern priest in a black cassock reading a decree aloud at the door of a small rustic granite chapel, below him two women stand alone, an old one in a dark brown wool headscarf and a younger one in a faded red wool headscarf, morning sunlight through mist",
+    "modelo": "lightning",
+    "tokens": 70,
+    "truncado": "",
+    "problemas": [
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0131,
+    "lume_quente": 0.001,
+    "descricion": "The image shows a group of four people standing in front of a small stone church. The church is located in a wooded area with trees and bushes surrounding it. The sky is blue and the sun is shining through the trees, creating a warm glow. The people are dressed in traditional robes and hats, and one person is holding a book or a book in their hands. They appear to be engaged in a conversation, with one person gesturing with their hands as if they are explaining something to the other two people. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "house",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.025,
+      0.12
+     ],
+     "muros encalados (CLIP)": [
+      0.007,
+      0.111
+     ],
+     "ciprés (CLIP)": [
+      -0.009,
+      0.137
+     ],
+     "oliveiras (CLIP)": [
+      -0.063,
+      0.135
+     ],
+     "palmeiras (CLIP)": [
+      -0.072,
+      0.147
+     ],
+     "rodas de raios (CLIP)": [
+      0.025,
+      0.089
+     ],
+     "paisaxe seca (CLIP)": [
+      0.037,
+      0.082
+     ],
+     "eucaliptos (CLIP)": [
+      -0.014,
+      0.055
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.006,
+      0.091
+     ],
+     "luces de cidade (CLIP)": [
+      -0.027,
+      0.117
+     ],
+     "salón moderno (CLIP)": [
+      -0.031,
+      0.131
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.035,
+      0.118
+     ],
+     "casas británicas (CLIP)": [
+      0.037,
+      0.17
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.011,
+      0.134
+     ],
+     "catedral inventada (CLIP)": [
+      -0.048,
+      0.131
+     ],
+     "abrigo moderno (CLIP)": [
+      0.019,
+      0.152
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.002,
+      0.164
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.017,
+      0.155
+     ],
+     "cadros na parede (CLIP)": [
+      -0.02,
+      0.197
+     ],
+     "farol victoriano (CLIP)": [
+      0.033,
+      0.114
+     ],
+     "negativo: electric light": -0.003,
+     "negativo: light bulb": -0.03,
+     "negativo: lamp": -0.039,
+     "negativo: glass window": -0.019,
+     "negativo: modern clothes": -0.033,
+     "negativo: street lamp": -0.028,
+     "clave: priest": 4.6,
+     "clave_v5: priest": 0.019
+    },
+    "arquetipo": null,
+    "s_revision": 11.3,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "028-8b2ad9ae-1.png",
+    "seed": 2164165620,
+    "s": 120.8,
+    "prompt": "cinematic film still, period drama, photorealistic, dark slate roofs, low granite houses, wide shot of a stern priest in a black cassock reading a decree aloud at the door of a small rustic granite chapel, below him two women stand alone, an old one in a dark brown wool headscarf and a younger one in a faded red wool headscarf, morning sunlight through mist",
+    "modelo": "lightning",
+    "tokens": 78,
+    "truncado": "mist",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0058,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two men standing in front of a small stone building with a red door. The building appears to be a church or a small chapel with a sloping roof and two chimneys on either side. The men are wearing black robes and red hats, and one of them is wearing a red robe. They are facing each other and appear to be engaged in conversation. The background shows a grassy field with trees and hills in the distance. The sky is blue and the sun is shining, creating a warm glow on the scene.",
+    "obxectos": [
+     "house",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.018,
+      0.136
+     ],
+     "muros encalados (CLIP)": [
+      -0.028,
+      0.134
+     ],
+     "ciprés (CLIP)": [
+      0.022,
+      0.136
+     ],
+     "oliveiras (CLIP)": [
+      -0.058,
+      0.159
+     ],
+     "palmeiras (CLIP)": [
+      -0.043,
+      0.15
+     ],
+     "rodas de raios (CLIP)": [
+      0.038,
+      0.115
+     ],
+     "paisaxe seca (CLIP)": [
+      0.008,
+      0.141
+     ],
+     "eucaliptos (CLIP)": [
+      0.019,
+      0.089
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.028,
+      0.096
+     ],
+     "luces de cidade (CLIP)": [
+      -0.048,
+      0.149
+     ],
+     "salón moderno (CLIP)": [
+      -0.054,
+      0.157
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.002,
+      0.101
+     ],
+     "casas británicas (CLIP)": [
+      0.003,
+      0.155
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.013,
+      0.131
+     ],
+     "catedral inventada (CLIP)": [
+      -0.042,
+      0.161
+     ],
+     "abrigo moderno (CLIP)": [
+      0.006,
+      0.155
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.072,
+      0.215
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.018,
+      0.136
+     ],
+     "cadros na parede (CLIP)": [
+      -0.056,
+      0.22
+     ],
+     "farol victoriano (CLIP)": [
+      0.001,
+      0.102
+     ],
+     "negativo: electric light": -0.019,
+     "negativo: light bulb": -0.048,
+     "negativo: lamp": -0.042,
+     "negativo: glass window": -0.007,
+     "negativo: modern clothes": -0.021,
+     "negativo: street lamp": -0.049,
+     "clave: priest": 4.52,
+     "clave_v5: priest": 0.064
+    },
+    "arquetipo": {
+     "etiqueta": "camiñantes de costas",
+     "sim": 0.213
+    },
+    "s_revision": 10.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "030-547fa865": {
+  "ficheiro": "030-547fa865-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "030-547fa865-0.png",
+    "seed": 256817021,
+    "s": 121.9,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0011,
+    "lume_quente": 0.0007,
+    "descricion": "The image shows a magnifying glass resting on top of an open book. The book appears to be old and worn, with some text visible on the pages. The magnifying lens is positioned in the center of the image, with the handle on the right side and the lens on the left side. The background is blurred, but it seems to be an old book with some pages of text visible. The image is taken from a close-up angle, looking down on the book.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.003,
+      0.089
+     ],
+     "muros encalados (CLIP)": [
+      -0.011,
+      0.091
+     ],
+     "ciprés (CLIP)": [
+      -0.021,
+      0.105
+     ],
+     "oliveiras (CLIP)": [
+      -0.019,
+      0.083
+     ],
+     "palmeiras (CLIP)": [
+      -0.02,
+      0.116
+     ],
+     "rodas de raios (CLIP)": [
+      0.026,
+      0.114
+     ],
+     "paisaxe seca (CLIP)": [
+      0.008,
+      0.078
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.063
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.022,
+      0.06
+     ],
+     "luces de cidade (CLIP)": [
+      -0.039,
+      0.111
+     ],
+     "salón moderno (CLIP)": [
+      0.001,
+      0.056
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.013,
+      0.029
+     ],
+     "casas británicas (CLIP)": [
+      0.033,
+      0.094
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.009,
+      0.126
+     ],
+     "catedral inventada (CLIP)": [
+      -0.012,
+      0.102
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.031,
+      0.112
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.019,
+      0.152
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.012,
+      0.113
+     ],
+     "cadros na parede (CLIP)": [
+      0.01,
+      0.139
+     ],
+     "farol victoriano (CLIP)": [
+      -0.025,
+      0.128
+     ],
+     "negativo: hands": -0.006,
+     "negativo: fingers": 0.003,
+     "negativo: electric lamp": -0.009,
+     "negativo: printed text": 0.033,
+     "negativo: typewriter": 0.003,
+     "negativo: plastic": -0.044,
+     "clave: magnifying glass": 8.34,
+     "clave_v5: magnifying glass": 0.101
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "030-547fa865-1.png",
+    "seed": 3734608440,
+    "s": 122.6,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0006,
+    "lume_quente": 0.0002,
+    "descricion": "The image shows a magnifying glass resting on top of an open book. The book appears to be old and worn, with some text visible on the pages. The magnifying lens is positioned in the center of the image, with the handle facing towards the right side of the page. The text on the page is written in black ink and is slightly faded, giving it a vintage feel. The background is blurred, but it seems to be an old book with a wooden surface.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.005,
+      0.101
+     ],
+     "muros encalados (CLIP)": [
+      -0.006,
+      0.104
+     ],
+     "ciprés (CLIP)": [
+      -0.027,
+      0.12
+     ],
+     "oliveiras (CLIP)": [
+      -0.002,
+      0.093
+     ],
+     "palmeiras (CLIP)": [
+      -0.028,
+      0.123
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.111
+     ],
+     "paisaxe seca (CLIP)": [
+      0.003,
+      0.088
+     ],
+     "eucaliptos (CLIP)": [
+      -0.032,
+      0.073
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.025,
+      0.074
+     ],
+     "luces de cidade (CLIP)": [
+      -0.032,
+      0.114
+     ],
+     "salón moderno (CLIP)": [
+      -0.006,
+      0.079
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.014,
+      0.05
+     ],
+     "casas británicas (CLIP)": [
+      0.042,
+      0.109
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.0,
+      0.135
+     ],
+     "catedral inventada (CLIP)": [
+      -0.016,
+      0.127
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.021,
+      0.12
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.021,
+      0.164
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.012,
+      0.129
+     ],
+     "cadros na parede (CLIP)": [
+      0.007,
+      0.15
+     ],
+     "farol victoriano (CLIP)": [
+      -0.014,
+      0.129
+     ],
+     "negativo: hands": -0.003,
+     "negativo: fingers": 0.005,
+     "negativo: electric lamp": -0.016,
+     "negativo: printed text": 0.039,
+     "negativo: typewriter": -0.005,
+     "negativo: plastic": -0.052,
+     "clave: magnifying glass": 8.11,
+     "clave_v5: magnifying glass": 0.089
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.188
+    },
+    "s_revision": 10.1,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "030-547fa865-2.png",
+    "seed": 3621558559,
+    "s": 116.4,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive, plain surfaces",
+    "modelo": "lightning",
+    "tokens": 58,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe",
+     "negativo do plano: printed text (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0037,
+    "lume_quente": 0.0024,
+    "descricion": "The image shows a magnifying glass resting on top of an open book. The book appears to be old and worn, with some creases and wrinkles visible on the pages. The magnifying lens is round and has a handle on one side. The text on the page is written in black ink and is slightly faded, giving it a vintage look. The background is blurred, making the focus of the image the magnifying glasses and the book the focal point.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.007,
+      0.096
+     ],
+     "muros encalados (CLIP)": [
+      0.001,
+      0.103
+     ],
+     "ciprés (CLIP)": [
+      -0.033,
+      0.113
+     ],
+     "oliveiras (CLIP)": [
+      -0.006,
+      0.087
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.116
+     ],
+     "rodas de raios (CLIP)": [
+      0.03,
+      0.106
+     ],
+     "paisaxe seca (CLIP)": [
+      0.012,
+      0.097
+     ],
+     "eucaliptos (CLIP)": [
+      -0.042,
+      0.072
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.035,
+      0.075
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.112
+     ],
+     "salón moderno (CLIP)": [
+      0.019,
+      0.077
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.008,
+      0.043
+     ],
+     "casas británicas (CLIP)": [
+      0.056,
+      0.115
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.012,
+      0.126
+     ],
+     "catedral inventada (CLIP)": [
+      -0.009,
+      0.088
+     ],
+     "abrigo moderno (CLIP)": [
+      0.001,
+      0.095
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.01,
+      0.151
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.001,
+      0.123
+     ],
+     "cadros na parede (CLIP)": [
+      0.022,
+      0.157
+     ],
+     "farol victoriano (CLIP)": [
+      -0.004,
+      0.121
+     ],
+     "negativo: hands": -0.01,
+     "negativo: fingers": -0.001,
+     "negativo: electric lamp": -0.006,
+     "negativo: printed text": 0.042,
+     "negativo: typewriter": 0.011,
+     "negativo: plastic": -0.044,
+     "clave: magnifying glass": 8.07,
+     "clave_v5: magnifying glass": 0.088
+    },
+    "arquetipo": null,
+    "s_revision": 9.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "037-9f099e0f": {
+  "ficheiro": "037-9f099e0f-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "037-9f099e0f-0.png",
+    "seed": 2950704191,
+    "s": 114.5,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a village festival at night seen from behind the crowd, dark silhouettes raising small clay cups toward a wide clay bowl of pale blue flames on a stone table, the blue glow on their raised hands, 1980s",
+    "modelo": "lightning",
+    "tokens": 60,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0265,
+    "lume_quente": 0.0139,
+    "descricion": "The image shows a group of people standing around a bonfire at night. The bonfire is burning brightly and the people are holding up their hands in the air, creating a beautiful display of light. The people are dressed in traditional clothing and appear to be singing or dancing. The background is dark, making the fire stand out even more. The overall mood of the image is joyful and celebratory.",
+    "obxectos": [
+     "person",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.019,
+      0.075
+     ],
+     "muros encalados (CLIP)": [
+      -0.005,
+      0.083
+     ],
+     "ciprés (CLIP)": [
+      -0.0,
+      0.094
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.106
+     ],
+     "palmeiras (CLIP)": [
+      -0.03,
+      0.131
+     ],
+     "rodas de raios (CLIP)": [
+      0.027,
+      0.076
+     ],
+     "paisaxe seca (CLIP)": [
+      0.013,
+      0.058
+     ],
+     "eucaliptos (CLIP)": [
+      0.027,
+      0.063
+     ],
+     "luz eléctrica (CLIP)": [
+      0.026,
+      0.134
+     ],
+     "luces de cidade (CLIP)": [
+      -0.03,
+      0.171
+     ],
+     "salón moderno (CLIP)": [
+      -0.022,
+      0.088
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.018,
+      0.077
+     ],
+     "casas británicas (CLIP)": [
+      0.002,
+      0.04
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.034,
+      0.15
+     ],
+     "catedral inventada (CLIP)": [
+      -0.033,
+      0.062
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.048,
+      0.11
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.048,
+      0.114
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.046,
+      0.12
+     ],
+     "cadros na parede (CLIP)": [
+      -0.004,
+      0.141
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.103
+     ],
+     "negativo: neon": -0.021,
+     "negativo: plastic": -0.035,
+     "negativo: television": 0.019,
+     "negativo: smartphone": -0.004,
+     "negativo: plastic cups": -0.03,
+     "negativo: stage lights": 0.002,
+     "clave: clay bowl": 2.26,
+     "clave_v5: clay bowl": -0.028
+    },
+    "arquetipo": null,
+    "s_revision": 9.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
  }
 }
