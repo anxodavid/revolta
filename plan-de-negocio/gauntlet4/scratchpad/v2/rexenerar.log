@@ -88,3 +88,12 @@ imaxe  53 intento 0 113.8s + revisión  9.7s ok avisos ['falta: fountain (CLIP)'
 imaxe  57 intento 0 113.7s + revisión  9.5s ok
 imaxe  60 intento 0 117.2s + revisión  9.8s ok
 imaxe  62 intento 0 115.7s + revisión  9.4s ['interior moderno']
+imaxe  62 intento 1 118.2s + revisión  9.8s ['repetida (CLIP 0.91 co plano 51)']
+imaxe  62 intento 2 117.9s + revisión 10.6s ok
+imaxe  63 intento 0 118.6s + revisión 10.1s ['obxectos modernos', 'interior moderno']
+imaxe  63 intento 1 118.0s + revisión 10.0s ['interior moderno']
+imaxe  63 intento 2 121.3s + revisión 10.9s ['obxectos modernos', 'interior moderno']
+imaxe  64 intento 0 117.6s + revisión 10.9s ['luz eléctrica (CLIP)', 'sombreiro moderno (CLIP)']
+imaxe  64 intento 1 119.7s + revisión 10.5s ['luz eléctrica (Florence)']
+imaxe  64 intento 2 121.1s + revisión 10.9s ok
+imaxe  66 intento 0 122.3s + revisión 10.1s ok
