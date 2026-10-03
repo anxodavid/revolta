@@ -55,3 +55,13 @@ imaxe  11 intento 1 116.1s + revisión 10.0s ['texto na imaxe']
 The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century, plain surfaces']
 The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century, plain surfaces']
 imaxe  11 intento 2 113.2s + revisión  9.4s ['man sen corpo (2)', 'texto na imaxe']
+imaxe  12 intento 0 122.2s + revisión 11.2s ['roupa actual']
+imaxe  12 intento 1 116.6s + revisión 10.6s ['roupa actual']
+imaxe  12 intento 2 117.7s + revisión 10.3s ok
+imaxe  13 intento 0 118.6s + revisión  9.5s ok
+imaxe  14 intento 0 118.2s + revisión  9.8s ['texto na imaxe']
+imaxe  14 intento 1 117.5s + revisión  9.5s ['texto na imaxe']
+imaxe  14 intento 2 117.7s + revisión 10.1s ['texto na imaxe']
+imaxe  15 intento 0 118.9s + revisión 10.4s ok
+imaxe  16 intento 0 119.3s + revisión 10.2s ok
+imaxe  17 intento 0 117.1s + revisión 10.7s ['interior moderno']
