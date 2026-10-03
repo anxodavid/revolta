@@ -3,7 +3,7 @@
 Ficheiro do construtor (enxeñeiro de VFX, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar
 desde aquí** (non repetir medidas que xa estean en `probas/medidas-*.json`).
 
-Última actualización: 02-10-2026, 23:35 UTC.
+Última actualización: 03-10-2026, 03:58 UTC.
 
 ## Feito
 
@@ -26,19 +26,21 @@ desde aquí** (non repetir medidas que xa estean en `probas/medidas-*.json`).
 - Imaxes da v1 graduadas coma na montaxe da v1 en `$SCRATCH/video/demo/graduadas/` (`scripts/demo_gancho.py
   preparar`): os clips I2V da demo condiciónanse nelas.
 
-## En curso
+## En curso (03-10-2026, 03:58 UTC, despois do reinicio do contedor)
 
-- Clips I2V das probas que serven tamén para a demo (`scripts/lanzar_i2v.sh xerar i2v_probas1.json`: planos 3, 7,
-  22, 1 e 14) e primeira proba da paralaxe e dos efectos (`lanzar_plx1.sh`). Os dous agardan o candado.
+- `scripts/lote_r1.sh` (desacoplado, log en `$SCRATCH/video/logs/lote_r1.log`): (1) segunda proba da paralaxe
+  (recortes nos bordos e compatibilidade coa v1), (2) 9 clips I2V de LTX 2B a 800x448 (planos 3, 7, 22, 1, 14, 18,
+  17, 5 e 2; serven tamén para a demo), (3) porta de vídeo e tiras de cada clip en `probas/`, (4) proba da
+  transferencia de detalle no plano 22. Remata con `LOTE_FIN`. Se o contedor se reinicia, volver lanzalo: os clips
+  feitos quedan na caché (`$SCRATCH/movemento/i2v/`) e non se repiten.
+- Borrado para liberar disco: o T5 fp8 (4,9 GB; os 14 embeddings xa están en `$SCRATCH/video/emb/`; para accións
+  novas, volver baixalo: 100 s) e as imaxes intermedias da demo. Wan2.2-TI2V-5B non se proba: non cabe no disco
+  (ver informe §3).
 
 ## Falta
 
-Mirar as tiras (mans, rostro, lume), calibrar a porta de vídeo, resto de clips da demo (2, 5, 17, 18), montar a
-demo (`demo_gancho.py montar`), informe e aprendizaxes. Opcional: Wan2.2-TI2V-5B (só se cabe en ≈ 13 GB para
-`$SCRATCH/video`), proba a 1024x576 e con 6 pasos.
-
-Tiras de Versalles (tarefa 10): YouTube só dá storyboards de 320x180 co cliente `mweb` (android_vr, ios e tv piden
-iniciar sesión); non serven para ver movemento. Descartado.
+Mirar as tiras, decidir que planos van con I2V, montar a demo (`demo_gancho.py montar`) e, se dá tempo, a de
+durmir (`demo_gancho.py durmir`), informe e aprendizaxes.
 
 ## Como reconstruír o contorno de vídeo nunha sesión nova
 
