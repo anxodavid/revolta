@@ -96,7 +96,10 @@ def revision(fich, quen, so_axustes=False):
         k = f.rsplit('-', 1)[0]
         r = rev[k]
         idx = [x['ficheiro'] for x in r['intentos']].index(f)
-        decision = 'vale' if idx == r['escollida'] else 'outro intento'
+        # a escolla da porta é a de imaxes.xerar (menos problemas, e o primeiro intento en caso de empate):
+        # recalcúlase para que volver aplicar a revisión non cambie a etiqueta
+        porta = min(range(len(r['intentos'])), key=lambda j: (len(r['intentos'][j]['problemas']), j))
+        decision = 'vale' if idx == porta else 'outro intento'
         r.update(ficheiro=f, escollida=idx, escolla_manual=True,
                  revision_manual={'quen': quen, 'decision': decision, 'motivo': motivos.get(n, '')})
     ax = ler(AXUSTES, {})
@@ -122,7 +125,7 @@ def imaxe_aprobada(e, rev, fs):
                                                r['revision_manual']['quen'])
 
 
-def i2v(saida, prioridades, fases_ok, accions):
+def i2v(saida, prioridades, fases_ok, accions, so_revisadas=False):
     prod = ler(PROD)['escenas']; rev = ler(W / 'imaxes' / 'revision.json', {}); fs = fases()
     out, fora = [], []
     for e in prod:
@@ -134,6 +137,8 @@ def i2v(saida, prioridades, fases_ok, accions):
         if fases_ok and fs.get(e['n']) not in fases_ok:
             continue
         im, por = imaxe_aprobada(e, rev, fs)
+        if im and so_revisadas and por == 'porta':
+            im, por = None, 'só aprobada pola porta: falta a revisión do axente'
         if not im and not accions:
             fora.append(f"{e['n']} ({por})"); continue
         out.append({'n': e['n'], 'prioridade_i2v': e.get('prioridade_i2v'), 'imaxe': im or '-',
@@ -188,6 +193,7 @@ def main():
     ap.add_argument('--accions', action='store_true', help='tamén os planos sen imaxe aprobada (para os embeddings)')
     ap.add_argument('--aplicar', action='store_true')
     ap.add_argument('--so-axustes', action='store_true', help='revision: só as rexeneracións, sen tocar revision.json')
+    ap.add_argument('--so-revisadas', action='store_true', help='i2v: só as imaxes que revisou o axente')
     a = ap.parse_args()
     if a.orde == 'lista':
         lista()
@@ -195,7 +201,7 @@ def main():
         revision(a.ficheiro, a.quen, a.so_axustes)
     elif a.orde == 'i2v':
         i2v(a.ficheiro, [int(x) for x in a.prioridade.split(',') if x], [x for x in a.fases.split(',') if x],
-            a.accions)
+            a.accions, a.so_revisadas)
     elif a.orde == 'porta':
         porta(a.aplicar)
     else:

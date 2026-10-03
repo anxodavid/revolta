@@ -71,11 +71,30 @@ def baixar():
     hf_hub_download(T5_REPO, T5_FICH, cache_dir=cd)
 
 
+CEDER_SAINDO = 75     # código de saída cando cede a CPU a un traballo prioritario co LTX en memoria (movemento.sh)
+
+
+def prio_agarda():
+    """¿Hai un traballo prioritario agardando ou traballando (alguén ten "$CPU_LOCK.prio")?"""
+    f = os.environ.get('CPU_LOCK')
+    if not f:
+        return False
+    with open(f + '.prio', 'a') as fp:
+        try:
+            fcntl.flock(fp, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            fcntl.flock(fp, fcntl.LOCK_UN)
+            return False
+        except BlockingIOError:
+            return True
+
+
 @contextmanager
-def candado():
+def candado(sair_se_prio=False):
     """O candado común de CPU, só mentres dura un clip ou un lote de textos, co mesmo protocolo cooperativo ca
     `herramientas/gauntlet/candado.sh`: despois de coller "$CPU_LOCK" mira sen agardar "$CPU_LOCK.prio"; se un
-    traballo do camiño crítico (guion, voz) o ten, solta o candado e volve tentalo aos 15 s."""
+    traballo do camiño crítico (guion, voz) o ten, solta o candado e volve tentalo aos 15 s. Con `sair_se_prio`
+    (o LTX xa está en memoria, ≈ 8 GB) sae do proceso en vez de agardar: se o prioritario (p. ex. unha rexeneración
+    de imaxes, ≈ 9 GB) collese a CPU co LTX cargado, os dous pasarían do límite de memoria (13,4 GiB)."""
     f = os.environ.get('CPU_LOCK')
     if not f:
         yield; return
@@ -89,6 +108,9 @@ def candado():
             break
         except BlockingIOError:
             fcntl.flock(fh, fcntl.LOCK_UN)
+            if sair_se_prio:
+                print('cedo a CPU a un traballo prioritario: saio para liberar a memoria', flush=True)
+                sys.exit(CEDER_SAINDO)
             time.sleep(15)
     try:
         yield
@@ -319,7 +341,10 @@ def main():
     for k, (im, ac, pr) in enumerate(falta):
         if not emb_ficheiro(ac).exists():
             print(f'falta o embedding da acción (fase texto): {ac[:60]}', flush=True); continue
-        with candado():
+        if pipe is not None and prio_agarda():
+            print('cedo a CPU a un traballo prioritario: saio para liberar a memoria', flush=True)
+            sys.exit(CEDER_SAINDO)
+        with candado(sair_se_prio=pipe is not None):
             if pipe is None:
                 pipe = cargar_ltx()
             info = un_clip(pipe, im, ac, pr, M.i2v_ficheiro(im, ac, pr))
