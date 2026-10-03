@@ -1,0 +1,2830 @@
+{
+ "aldea-texto-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0001,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a woman walking down a cobblestone street in an old stone village. She is wearing a long black cloak and has long brown hair. The street is lined with old stone buildings on both sides, with a small stone building on the left side and a stone house on the right side. The sky is overcast and the overall mood of the image is gloomy and gloomy. The woman appears to be walking towards the house, as if she is walking away from the camera.",
+  "obxectos": [
+   "fancy dress",
+   "house",
+   "window",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.037,
+    0.169
+   ],
+   "muros encalados (CLIP)": [
+    -0.026,
+    0.199
+   ],
+   "ciprés (CLIP)": [
+    -0.009,
+    0.128
+   ],
+   "oliveiras (CLIP)": [
+    -0.053,
+    0.148
+   ],
+   "palmeiras (CLIP)": [
+    -0.035,
+    0.155
+   ],
+   "rodas de raios (CLIP)": [
+    0.04,
+    0.114
+   ],
+   "paisaxe seca (CLIP)": [
+    0.015,
+    0.148
+   ],
+   "eucaliptos (CLIP)": [
+    -0.024,
+    0.066
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.005,
+    0.131
+   ],
+   "luces de cidade (CLIP)": [
+    -0.042,
+    0.153
+   ],
+   "salón moderno (CLIP)": [
+    -0.023,
+    0.152
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.008,
+    0.137
+   ],
+   "casas británicas (CLIP)": [
+    -0.022,
+    0.188
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.011,
+    0.148
+   ],
+   "catedral inventada (CLIP)": [
+    -0.082,
+    0.184
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.043,
+    0.187
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.089,
+    0.208
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.01,
+    0.139
+   ],
+   "cadros na parede (CLIP)": [
+    -0.061,
+    0.244
+   ],
+   "farol victoriano (CLIP)": [
+    0.005,
+    0.123
+   ],
+   "clave: stone church": 1.92,
+   "clave_v5: stone church": 0.008
+  },
+  "arquetipo": {
+   "etiqueta": "camiñantes de costas",
+   "sim": 0.208
+  },
+  "s_revision": 113.1
+ },
+ "aldea-img2img_050-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.1046,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a view from a window in a stone wall. The window is open, and the view is of a small village with a few buildings and houses. The village is surrounded by green hills and valleys, and there are trees scattered throughout the landscape. The sky is cloudy and the overall mood of the image is peaceful and serene. The view from the window is breathtaking, with the village and hills providing a stunning backdrop.",
+  "obxectos": [
+   "building",
+   "house",
+   "window"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.018,
+    0.197
+   ],
+   "muros encalados (CLIP)": [
+    -0.005,
+    0.204
+   ],
+   "ciprés (CLIP)": [
+    0.037,
+    0.151
+   ],
+   "oliveiras (CLIP)": [
+    0.02,
+    0.141
+   ],
+   "palmeiras (CLIP)": [
+    -0.014,
+    0.124
+   ],
+   "rodas de raios (CLIP)": [
+    0.017,
+    0.104
+   ],
+   "paisaxe seca (CLIP)": [
+    0.015,
+    0.146
+   ],
+   "eucaliptos (CLIP)": [
+    0.027,
+    0.077
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.007,
+    0.123
+   ],
+   "luces de cidade (CLIP)": [
+    -0.021,
+    0.149
+   ],
+   "salón moderno (CLIP)": [
+    -0.026,
+    0.159
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.0,
+    0.152
+   ],
+   "casas británicas (CLIP)": [
+    0.004,
+    0.195
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.025,
+    0.161
+   ],
+   "catedral inventada (CLIP)": [
+    -0.044,
+    0.199
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.028,
+    0.154
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.031,
+    0.185
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.048,
+    0.172
+   ],
+   "cadros na parede (CLIP)": [
+    -0.032,
+    0.235
+   ],
+   "farol victoriano (CLIP)": [
+    -0.007,
+    0.121
+   ],
+   "clave: stone church": 1.86,
+   "clave_v5: stone church": 0.022
+  },
+  "arquetipo": null,
+  "s_revision": 12.0
+ },
+ "aldea-img2img_075-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.096,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a narrow cobblestone street in a small village. The street is lined with stone buildings on both sides, and there is a stone archway on the right side of the image. The archway is made of stone and has a small window on the left side. In the background, there are hills and a clear blue sky. A person wearing a green coat is walking down the street, and they appear to be walking towards the village.",
+  "obxectos": [
+   "building",
+   "house",
+   "window"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.056,
+    0.177
+   ],
+   "muros encalados (CLIP)": [
+    -0.047,
+    0.212
+   ],
+   "ciprés (CLIP)": [
+    -0.004,
+    0.127
+   ],
+   "oliveiras (CLIP)": [
+    -0.046,
+    0.18
+   ],
+   "palmeiras (CLIP)": [
+    -0.028,
+    0.164
+   ],
+   "rodas de raios (CLIP)": [
+    0.036,
+    0.118
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.031,
+    0.184
+   ],
+   "eucaliptos (CLIP)": [
+    -0.022,
+    0.068
+   ],
+   "luz eléctrica (CLIP)": [
+    0.012,
+    0.122
+   ],
+   "luces de cidade (CLIP)": [
+    -0.027,
+    0.162
+   ],
+   "salón moderno (CLIP)": [
+    -0.005,
+    0.12
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.041,
+    0.14
+   ],
+   "casas británicas (CLIP)": [
+    -0.007,
+    0.19
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.024,
+    0.137
+   ],
+   "catedral inventada (CLIP)": [
+    -0.037,
+    0.14
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.035,
+    0.16
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.031,
+    0.213
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.026,
+    0.152
+   ],
+   "cadros na parede (CLIP)": [
+    -0.058,
+    0.233
+   ],
+   "farol victoriano (CLIP)": [
+    -0.004,
+    0.122
+   ],
+   "clave: stone church": 2.2,
+   "clave_v5: stone church": 0.026
+  },
+  "arquetipo": null,
+  "s_revision": 12.5
+ },
+ "aldea-profundidade_060-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "tellados laranxas",
+   "cousas do século XX",
+   "casas británicas (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0001,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a view from a window of a stone building with a clock tower in the background. The building appears to be a church or a monastery, with a steeple and a bell tower. The clock tower has a red tiled roof and a small window on the right side. In the foreground, there is a stone wall with a small wooden door and a red coat hanging on it. The wall is made of stacked stones and is surrounded by green fields and trees. The sky is overcast and the overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "building",
+   "window"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.026,
+    0.176
+   ],
+   "muros encalados (CLIP)": [
+    -0.063,
+    0.216
+   ],
+   "ciprés (CLIP)": [
+    0.018,
+    0.144
+   ],
+   "oliveiras (CLIP)": [
+    -0.042,
+    0.15
+   ],
+   "palmeiras (CLIP)": [
+    -0.041,
+    0.16
+   ],
+   "rodas de raios (CLIP)": [
+    0.032,
+    0.133
+   ],
+   "paisaxe seca (CLIP)": [
+    0.019,
+    0.163
+   ],
+   "eucaliptos (CLIP)": [
+    0.022,
+    0.082
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.005,
+    0.107
+   ],
+   "luces de cidade (CLIP)": [
+    -0.052,
+    0.151
+   ],
+   "salón moderno (CLIP)": [
+    -0.012,
+    0.138
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.018,
+    0.159
+   ],
+   "casas británicas (CLIP)": [
+    0.03,
+    0.202
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.013,
+    0.144
+   ],
+   "catedral inventada (CLIP)": [
+    -0.062,
+    0.214
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.006,
+    0.198
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.041,
+    0.238
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.015,
+    0.159
+   ],
+   "cadros na parede (CLIP)": [
+    -0.009,
+    0.256
+   ],
+   "farol victoriano (CLIP)": [
+    -0.019,
+    0.15
+   ],
+   "clave: stone church": 3.67,
+   "clave_v5: stone church": 0.037
+  },
+  "arquetipo": {
+   "etiqueta": "camiñantes de costas",
+   "sim": 0.237
+  },
+  "s_revision": 10.5
+ },
+ "carro-texto-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0018,
+  "lume_quente": 0.0211,
+  "descricion": "The image shows a cow standing on a grassy hillside with a wooden cart attached to it. The cart is covered in green grass and has two large wooden wheels. The cow is facing towards the right side of the image and appears to be pulling the cart. In the background, there are trees and hills covered in fog. The sky is orange and yellow, indicating that it is either sunrise or sunset. The image is taken from a low angle, looking up at the cow and the cart, creating a peaceful and serene atmosphere.",
+  "obxectos": [
+   "cart",
+   "cattle",
+   "wheel"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.021,
+    0.095
+   ],
+   "muros encalados (CLIP)": [
+    -0.004,
+    0.109
+   ],
+   "ciprés (CLIP)": [
+    0.003,
+    0.117
+   ],
+   "oliveiras (CLIP)": [
+    -0.048,
+    0.159
+   ],
+   "palmeiras (CLIP)": [
+    -0.02,
+    0.165
+   ],
+   "rodas de raios (CLIP)": [
+    -0.012,
+    0.279
+   ],
+   "paisaxe seca (CLIP)": [
+    0.064,
+    0.161
+   ],
+   "eucaliptos (CLIP)": [
+    0.052,
+    0.093
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.019,
+    0.069
+   ],
+   "luces de cidade (CLIP)": [
+    -0.024,
+    0.158
+   ],
+   "salón moderno (CLIP)": [
+    -0.041,
+    0.117
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.052,
+    0.109
+   ],
+   "casas británicas (CLIP)": [
+    -0.005,
+    0.078
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.015,
+    0.17
+   ],
+   "catedral inventada (CLIP)": [
+    -0.014,
+    0.119
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.07,
+    0.164
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.09,
+    0.187
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.022,
+    0.152
+   ],
+   "cadros na parede (CLIP)": [
+    -0.034,
+    0.189
+   ],
+   "farol victoriano (CLIP)": [
+    -0.057,
+    0.147
+   ],
+   "clave: ox cart": 8.6,
+   "clave_v5: ox cart": 0.132
+  },
+  "arquetipo": null,
+  "s_revision": 10.6
+ },
+ "carro-img2img_050-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0002,
+  "lume_quente": 0.0002,
+  "descricion": "The image shows an old wooden cart with a green cloth draped over it. The cart is parked on a grassy field with trees and bushes in the background. The cloth appears to be made of a textured material, possibly fabric or a similar material, and has multiple circular holes in it. On the left side of the cart, there is a small wooden ball hanging from a chain. In the background, there are other carts and a small village. The sky is blue and the overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "cart",
+   "wheel"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.011,
+    0.092
+   ],
+   "muros encalados (CLIP)": [
+    -0.033,
+    0.12
+   ],
+   "ciprés (CLIP)": [
+    -0.068,
+    0.163
+   ],
+   "oliveiras (CLIP)": [
+    -0.052,
+    0.194
+   ],
+   "palmeiras (CLIP)": [
+    -0.054,
+    0.18
+   ],
+   "rodas de raios (CLIP)": [
+    0.005,
+    0.241
+   ],
+   "paisaxe seca (CLIP)": [
+    0.016,
+    0.138
+   ],
+   "eucaliptos (CLIP)": [
+    -0.026,
+    0.117
+   ],
+   "luz eléctrica (CLIP)": [
+    0.012,
+    0.078
+   ],
+   "luces de cidade (CLIP)": [
+    -0.031,
+    0.132
+   ],
+   "salón moderno (CLIP)": [
+    -0.039,
+    0.133
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.051,
+    0.133
+   ],
+   "casas británicas (CLIP)": [
+    0.004,
+    0.089
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.016,
+    0.193
+   ],
+   "catedral inventada (CLIP)": [
+    -0.055,
+    0.12
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.061,
+    0.126
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.026,
+    0.148
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.007,
+    0.123
+   ],
+   "cadros na parede (CLIP)": [
+    -0.014,
+    0.173
+   ],
+   "farol victoriano (CLIP)": [
+    -0.054,
+    0.163
+   ],
+   "clave: ox cart": 7.5,
+   "clave_v5: ox cart": 0.063
+  },
+  "arquetipo": null,
+  "s_revision": 10.0
+ },
+ "carro-img2img_075-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0011,
+  "lume_quente": 0.0,
+  "descricion": "The image shows two white goats grazing on a grassy hillside with a wooden cart attached to it. The cart is made of wood and has four wheels. The goats are standing close together and appear to be contentedly munching on the grass. The hillside is covered in patches of green grass and there are rocks scattered around. In the background, there are tall pine trees and a foggy haze. The sky is blue and the sun is shining through the trees, creating a warm glow on the scene. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "cart",
+   "goat",
+   "wheel"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.018,
+    0.095
+   ],
+   "muros encalados (CLIP)": [
+    -0.018,
+    0.145
+   ],
+   "ciprés (CLIP)": [
+    0.028,
+    0.138
+   ],
+   "oliveiras (CLIP)": [
+    -0.057,
+    0.189
+   ],
+   "palmeiras (CLIP)": [
+    -0.024,
+    0.169
+   ],
+   "rodas de raios (CLIP)": [
+    -0.019,
+    0.238
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.001,
+    0.186
+   ],
+   "eucaliptos (CLIP)": [
+    -0.016,
+    0.127
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.023,
+    0.097
+   ],
+   "luces de cidade (CLIP)": [
+    -0.006,
+    0.155
+   ],
+   "salón moderno (CLIP)": [
+    -0.005,
+    0.124
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.084,
+    0.13
+   ],
+   "casas británicas (CLIP)": [
+    -0.019,
+    0.101
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.01,
+    0.173
+   ],
+   "catedral inventada (CLIP)": [
+    -0.061,
+    0.119
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.066,
+    0.189
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.075,
+    0.215
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.028,
+    0.158
+   ],
+   "cadros na parede (CLIP)": [
+    -0.028,
+    0.18
+   ],
+   "farol victoriano (CLIP)": [
+    -0.075,
+    0.169
+   ],
+   "clave: ox cart": 6.75,
+   "clave_v5: ox cart": 0.079
+  },
+  "arquetipo": null,
+  "s_revision": 10.7
+ },
+ "carro-profundidade_060-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0103,
+  "lume_quente": 0.0014,
+  "descricion": "The image shows a wooden cart with two large wooden wheels and a green moss-covered seat. The cart is parked on a rocky hillside with trees in the background. The sky is blue and the sun is shining through the trees, creating a warm glow on the scene. The grass is a vibrant green color and appears to be freshly mowed. The wheels of the cart are made of wood and have a rustic, weathered appearance. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "cart",
+   "wheel"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.009,
+    0.076
+   ],
+   "muros encalados (CLIP)": [
+    -0.017,
+    0.09
+   ],
+   "ciprés (CLIP)": [
+    -0.044,
+    0.146
+   ],
+   "oliveiras (CLIP)": [
+    -0.051,
+    0.191
+   ],
+   "palmeiras (CLIP)": [
+    -0.048,
+    0.178
+   ],
+   "rodas de raios (CLIP)": [
+    0.006,
+    0.252
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.013,
+    0.169
+   ],
+   "eucaliptos (CLIP)": [
+    -0.044,
+    0.139
+   ],
+   "luz eléctrica (CLIP)": [
+    0.006,
+    0.06
+   ],
+   "luces de cidade (CLIP)": [
+    -0.024,
+    0.14
+   ],
+   "salón moderno (CLIP)": [
+    0.008,
+    0.102
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.06,
+    0.108
+   ],
+   "casas británicas (CLIP)": [
+    0.007,
+    0.073
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.008,
+    0.162
+   ],
+   "catedral inventada (CLIP)": [
+    -0.05,
+    0.086
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.034,
+    0.128
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.039,
+    0.166
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.012,
+    0.125
+   ],
+   "cadros na parede (CLIP)": [
+    -0.013,
+    0.174
+   ],
+   "farol victoriano (CLIP)": [
+    -0.077,
+    0.183
+   ],
+   "clave: ox cart": 6.13,
+   "clave_v5: ox cart": 0.048
+  },
+  "arquetipo": null,
+  "s_revision": 9.9
+ },
+ "lareira-texto-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "falta: wooden bench (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 2,
+  "altas_luces": 0.0237,
+  "lume_quente": 0.0568,
+  "descricion": "The image shows an elderly woman sitting in front of a fireplace. She is wearing a long robe and a headscarf, and her hands are clasped together in prayer. The fireplace is lit by a warm orange glow, and there are several pieces of wood burning inside. The woman appears to be deep in thought, with her eyes closed and her head resting on her lap. The room is dimly lit, with a wooden floor and a wooden table in the background. The overall mood of the image is somber and contemplative.",
+  "obxectos": [
+   "fireplace",
+   "human face",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.007,
+    0.126
+   ],
+   "muros encalados (CLIP)": [
+    0.02,
+    0.091
+   ],
+   "ciprés (CLIP)": [
+    -0.023,
+    0.122
+   ],
+   "oliveiras (CLIP)": [
+    -0.019,
+    0.086
+   ],
+   "palmeiras (CLIP)": [
+    -0.023,
+    0.12
+   ],
+   "rodas de raios (CLIP)": [
+    0.026,
+    0.092
+   ],
+   "paisaxe seca (CLIP)": [
+    0.03,
+    0.086
+   ],
+   "eucaliptos (CLIP)": [
+    -0.008,
+    0.059
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.0,
+    0.088
+   ],
+   "luces de cidade (CLIP)": [
+    -0.037,
+    0.155
+   ],
+   "salón moderno (CLIP)": [
+    0.015,
+    0.197
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.008,
+    0.075
+   ],
+   "casas británicas (CLIP)": [
+    0.046,
+    0.138
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.032,
+    0.182
+   ],
+   "catedral inventada (CLIP)": [
+    -0.034,
+    0.084
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.036,
+    0.206
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.076,
+    0.199
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.046,
+    0.205
+   ],
+   "cadros na parede (CLIP)": [
+    -0.002,
+    0.174
+   ],
+   "farol victoriano (CLIP)": [
+    -0.025,
+    0.112
+   ],
+   "clave: wooden bench": 1.18,
+   "clave_v5: wooden bench": -0.009
+  },
+  "arquetipo": {
+   "etiqueta": "persoa á lareira",
+   "sim": 0.274
+  },
+  "s_revision": 10.7
+ },
+ "lareira-img2img_050-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "texto na imaxe"
+  ],
+  "mans": [],
+  "corpos": 2,
+  "altas_luces": 0.1498,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a woman sitting in a stone fireplace. She is wearing a long robe and has a hood covering her head. The woman is holding a book in her hands and appears to be engrossed in it. The fireplace is made of stone and there is a cloud of smoke coming out of the top of the fireplace. The walls of the room are made of concrete and there are a few pieces of wood scattered around the fireplace, suggesting that the woman is in the process of reading or writing. The overall mood of the image is peaceful and contemplative.",
+  "obxectos": [
+   "human face",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.01,
+    0.122
+   ],
+   "muros encalados (CLIP)": [
+    0.055,
+    0.157
+   ],
+   "ciprés (CLIP)": [
+    -0.047,
+    0.117
+   ],
+   "oliveiras (CLIP)": [
+    -0.004,
+    0.086
+   ],
+   "palmeiras (CLIP)": [
+    -0.027,
+    0.128
+   ],
+   "rodas de raios (CLIP)": [
+    0.027,
+    0.116
+   ],
+   "paisaxe seca (CLIP)": [
+    0.079,
+    0.099
+   ],
+   "eucaliptos (CLIP)": [
+    -0.015,
+    0.063
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.03,
+    0.099
+   ],
+   "luces de cidade (CLIP)": [
+    -0.041,
+    0.118
+   ],
+   "salón moderno (CLIP)": [
+    -0.071,
+    0.245
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.032,
+    0.126
+   ],
+   "casas británicas (CLIP)": [
+    0.008,
+    0.134
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.048,
+    0.216
+   ],
+   "catedral inventada (CLIP)": [
+    -0.058,
+    0.124
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.079,
+    0.218
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.13,
+    0.227
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.062,
+    0.18
+   ],
+   "cadros na parede (CLIP)": [
+    0.016,
+    0.186
+   ],
+   "farol victoriano (CLIP)": [
+    -0.015,
+    0.085
+   ],
+   "clave: wooden bench": 2.33,
+   "clave_v5: wooden bench": -0.026
+  },
+  "arquetipo": {
+   "etiqueta": "persoa á lareira",
+   "sim": 0.281
+  },
+  "s_revision": 11.0
+ },
+ "lareira-img2img_075-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno",
+   "muros encalados (CLIP)",
+   "casas británicas (CLIP)",
+   "falta: wooden bench (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.1379,
+  "lume_quente": 0.0049,
+  "descricion": "The image shows an elderly woman sitting in front of a fireplace. She is wearing a brown coat and a headscarf, and her hair is tied up in a bun. The fireplace is made of stone and has a wooden mantel. The woman is sitting on the floor with her legs crossed and her hands resting on her knees. The fire is burning brightly in the fireplace, and there is a wooden bench next to it. The room appears to be old and dilapidated, with peeling paint and crumbling walls. The overall mood of the image is peaceful and contemplative.",
+  "obxectos": [
+   "fireplace",
+   "human face",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.001,
+    0.119
+   ],
+   "muros encalados (CLIP)": [
+    0.077,
+    0.161
+   ],
+   "ciprés (CLIP)": [
+    -0.043,
+    0.122
+   ],
+   "oliveiras (CLIP)": [
+    -0.03,
+    0.091
+   ],
+   "palmeiras (CLIP)": [
+    -0.035,
+    0.125
+   ],
+   "rodas de raios (CLIP)": [
+    0.021,
+    0.122
+   ],
+   "paisaxe seca (CLIP)": [
+    0.042,
+    0.079
+   ],
+   "eucaliptos (CLIP)": [
+    0.02,
+    0.073
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.006,
+    0.062
+   ],
+   "luces de cidade (CLIP)": [
+    -0.025,
+    0.112
+   ],
+   "salón moderno (CLIP)": [
+    -0.028,
+    0.22
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.01,
+    0.091
+   ],
+   "casas británicas (CLIP)": [
+    0.028,
+    0.158
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.019,
+    0.21
+   ],
+   "catedral inventada (CLIP)": [
+    -0.054,
+    0.097
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.04,
+    0.192
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.071,
+    0.192
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.035,
+    0.19
+   ],
+   "cadros na parede (CLIP)": [
+    -0.014,
+    0.199
+   ],
+   "farol victoriano (CLIP)": [
+    -0.021,
+    0.123
+   ],
+   "clave: wooden bench": 0.54,
+   "clave_v5: wooden bench": -0.015
+  },
+  "arquetipo": {
+   "etiqueta": "persoa á lareira",
+   "sim": 0.305
+  },
+  "s_revision": 10.9
+ },
+ "lareira-profundidade_060-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "salón moderno (CLIP)",
+   "casas británicas (CLIP)",
+   "falta: wooden bench (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0089,
+  "lume_quente": 0.0113,
+  "descricion": "The image shows a fireplace with a stone wall on the left side and a fire burning inside. The fireplace is made of wood and has a black hearth with a metal grate on top. The hearth is open, revealing a small opening with a wooden log inside. On the right side of the hearth, there is a small statue of a person wearing a helmet and holding a fire. The fire is burning brightly and there are several wooden logs stacked on top of each other. The background is dark and the overall atmosphere of the image is cozy and warm.",
+  "obxectos": [
+   "fireplace"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.004,
+    0.12
+   ],
+   "muros encalados (CLIP)": [
+    0.029,
+    0.129
+   ],
+   "ciprés (CLIP)": [
+    -0.037,
+    0.116
+   ],
+   "oliveiras (CLIP)": [
+    -0.019,
+    0.088
+   ],
+   "palmeiras (CLIP)": [
+    -0.022,
+    0.128
+   ],
+   "rodas de raios (CLIP)": [
+    0.025,
+    0.095
+   ],
+   "paisaxe seca (CLIP)": [
+    0.045,
+    0.071
+   ],
+   "eucaliptos (CLIP)": [
+    -0.002,
+    0.06
+   ],
+   "luz eléctrica (CLIP)": [
+    0.004,
+    0.08
+   ],
+   "luces de cidade (CLIP)": [
+    -0.01,
+    0.135
+   ],
+   "salón moderno (CLIP)": [
+    0.032,
+    0.21
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.008,
+    0.088
+   ],
+   "casas británicas (CLIP)": [
+    0.045,
+    0.154
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.036,
+    0.23
+   ],
+   "catedral inventada (CLIP)": [
+    -0.053,
+    0.087
+   ],
+   "abrigo moderno (CLIP)": [
+    0.016,
+    0.116
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.029,
+    0.181
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.029,
+    0.157
+   ],
+   "cadros na parede (CLIP)": [
+    0.003,
+    0.195
+   ],
+   "farol victoriano (CLIP)": [
+    -0.005,
+    0.121
+   ],
+   "clave: wooden bench": 0.61,
+   "clave_v5: wooden bench": -0.036
+  },
+  "arquetipo": {
+   "etiqueta": "persoa á lareira",
+   "sim": 0.241
+  },
+  "s_revision": 10.3
+ },
+ "palloza-texto-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0077,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a person walking on a dirt path in a rural area. The person is wearing a long coat and a hat, and is carrying a basket on their shoulder. They are walking towards a small thatched-roofed hut with a wooden fence on the left side. In the background, there are mountains and a cloudy sky. The sun is setting, casting a warm glow over the scene. The ground is covered in dry grass and there are a few cows grazing in the distance. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "house",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.032,
+    0.15
+   ],
+   "muros encalados (CLIP)": [
+    -0.035,
+    0.176
+   ],
+   "ciprés (CLIP)": [
+    -0.001,
+    0.112
+   ],
+   "oliveiras (CLIP)": [
+    -0.026,
+    0.151
+   ],
+   "palmeiras (CLIP)": [
+    -0.008,
+    0.157
+   ],
+   "rodas de raios (CLIP)": [
+    -0.018,
+    0.156
+   ],
+   "paisaxe seca (CLIP)": [
+    0.038,
+    0.188
+   ],
+   "eucaliptos (CLIP)": [
+    0.027,
+    0.108
+   ],
+   "luz eléctrica (CLIP)": [
+    0.01,
+    0.102
+   ],
+   "luces de cidade (CLIP)": [
+    -0.042,
+    0.18
+   ],
+   "salón moderno (CLIP)": [
+    -0.023,
+    0.167
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.034,
+    0.085
+   ],
+   "casas británicas (CLIP)": [
+    -0.036,
+    0.133
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.005,
+    0.163
+   ],
+   "catedral inventada (CLIP)": [
+    -0.038,
+    0.113
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.028,
+    0.195
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.059,
+    0.227
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.029,
+    0.163
+   ],
+   "cadros na parede (CLIP)": [
+    -0.035,
+    0.209
+   ],
+   "farol victoriano (CLIP)": [
+    -0.06,
+    0.159
+   ],
+   "clave: thatched roof": 5.77,
+   "clave_v5: thatched roof": 0.042
+  },
+  "arquetipo": {
+   "etiqueta": "camiñantes de costas",
+   "sim": 0.206
+  },
+  "s_revision": 10.7
+ },
+ "palloza-img2img_050-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "paisaxe seca (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.2567,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a round stone building with a thatched roof. The building appears to be a traditional stone structure with a chimney on top. The roof is made of thatched tiles and has a small window on the right side. The walls of the building are made of small stones and there is a stone wall on the left side. In the background, there are trees and a hill. The sky is overcast and the ground is covered in grass. A dirt path leads up to the building.",
+  "obxectos": [
+   "house"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.019,
+    0.181
+   ],
+   "muros encalados (CLIP)": [
+    0.044,
+    0.156
+   ],
+   "ciprés (CLIP)": [
+    -0.022,
+    0.129
+   ],
+   "oliveiras (CLIP)": [
+    -0.019,
+    0.137
+   ],
+   "palmeiras (CLIP)": [
+    0.003,
+    0.139
+   ],
+   "rodas de raios (CLIP)": [
+    -0.044,
+    0.188
+   ],
+   "paisaxe seca (CLIP)": [
+    0.103,
+    0.152
+   ],
+   "eucaliptos (CLIP)": [
+    0.064,
+    0.108
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.009,
+    0.084
+   ],
+   "luces de cidade (CLIP)": [
+    -0.043,
+    0.137
+   ],
+   "salón moderno (CLIP)": [
+    -0.062,
+    0.216
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.033,
+    0.131
+   ],
+   "casas británicas (CLIP)": [
+    -0.052,
+    0.188
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.049,
+    0.192
+   ],
+   "catedral inventada (CLIP)": [
+    -0.086,
+    0.171
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.093,
+    0.152
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.078,
+    0.188
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.018,
+    0.164
+   ],
+   "cadros na parede (CLIP)": [
+    -0.04,
+    0.24
+   ],
+   "farol victoriano (CLIP)": [
+    -0.058,
+    0.11
+   ],
+   "clave: thatched roof": 8.06,
+   "clave_v5: thatched roof": 0.09
+  },
+  "arquetipo": null,
+  "s_revision": 10.1
+ },
+ "palloza-img2img_075-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "casas alleas"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.2539,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a small, round, thatched-roofed cottage with a pointed roof. The cottage is located in a hilly area with a stone wall surrounding it. The sky is overcast and the grass is green, indicating that it is a cloudy day. In front of the cottage, there is a person walking on a dirt path leading up to the entrance. The person is wearing a long coat and carrying a bag. There are trees and shrubs scattered around the cottage. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "house"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.002,
+    0.154
+   ],
+   "muros encalados (CLIP)": [
+    0.009,
+    0.164
+   ],
+   "ciprés (CLIP)": [
+    -0.009,
+    0.119
+   ],
+   "oliveiras (CLIP)": [
+    -0.04,
+    0.145
+   ],
+   "palmeiras (CLIP)": [
+    -0.016,
+    0.134
+   ],
+   "rodas de raios (CLIP)": [
+    -0.016,
+    0.133
+   ],
+   "paisaxe seca (CLIP)": [
+    0.068,
+    0.169
+   ],
+   "eucaliptos (CLIP)": [
+    0.039,
+    0.075
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.033,
+    0.094
+   ],
+   "luces de cidade (CLIP)": [
+    -0.062,
+    0.156
+   ],
+   "salón moderno (CLIP)": [
+    -0.049,
+    0.161
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.03,
+    0.103
+   ],
+   "casas británicas (CLIP)": [
+    -0.014,
+    0.174
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.04,
+    0.156
+   ],
+   "catedral inventada (CLIP)": [
+    -0.098,
+    0.147
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.096,
+    0.168
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.078,
+    0.198
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.056,
+    0.18
+   ],
+   "cadros na parede (CLIP)": [
+    -0.05,
+    0.225
+   ],
+   "farol victoriano (CLIP)": [
+    -0.047,
+    0.097
+   ],
+   "clave: thatched roof": 7.03,
+   "clave_v5: thatched roof": 0.092
+  },
+  "arquetipo": null,
+  "s_revision": 10.5
+ },
+ "palloza-profundidade_060-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a traditional stone house with a thatched roof. The house is located in a rural area with a stone wall in front of it. The sky is foggy and there is a tree on the right side of the image. The roof of the house is covered in a thick layer of fog, creating a hazy and misty atmosphere. There is a chimney visible in the top right corner of the photo, and a few people can be seen walking around the house. The image is taken from a low angle, looking up at the house from a distance.",
+  "obxectos": [
+   "house",
+   "window"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.008,
+    0.164
+   ],
+   "muros encalados (CLIP)": [
+    -0.03,
+    0.193
+   ],
+   "ciprés (CLIP)": [
+    -0.035,
+    0.131
+   ],
+   "oliveiras (CLIP)": [
+    -0.03,
+    0.157
+   ],
+   "palmeiras (CLIP)": [
+    -0.031,
+    0.142
+   ],
+   "rodas de raios (CLIP)": [
+    -0.031,
+    0.156
+   ],
+   "paisaxe seca (CLIP)": [
+    0.043,
+    0.156
+   ],
+   "eucaliptos (CLIP)": [
+    0.021,
+    0.081
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.018,
+    0.104
+   ],
+   "luces de cidade (CLIP)": [
+    -0.071,
+    0.171
+   ],
+   "salón moderno (CLIP)": [
+    -0.062,
+    0.181
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.046,
+    0.118
+   ],
+   "casas británicas (CLIP)": [
+    0.006,
+    0.184
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.01,
+    0.19
+   ],
+   "catedral inventada (CLIP)": [
+    -0.098,
+    0.149
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.106,
+    0.162
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.086,
+    0.198
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.019,
+    0.145
+   ],
+   "cadros na parede (CLIP)": [
+    -0.019,
+    0.238
+   ],
+   "farol victoriano (CLIP)": [
+    -0.056,
+    0.12
+   ],
+   "clave: thatched roof": 5.88,
+   "clave_v5: thatched roof": 0.082
+  },
+  "arquetipo": null,
+  "s_revision": 10.5
+ },
+ "queimada-texto-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0383,
+  "lume_quente": 0.1091,
+  "descricion": "The image shows a black frying pan on a fire. The pan is filled with orange and yellow flames, and a wooden spoon is resting on the side. The flames are bright orange and blue, and the pan is sitting on a wooden surface. The background is dark, making the colors of the flames stand out even more. The overall mood of the image is intense and dramatic.",
+  "obxectos": [
+   "bowl",
+   "spoon"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.004,
+    0.083
+   ],
+   "muros encalados (CLIP)": [
+    0.049,
+    0.075
+   ],
+   "ciprés (CLIP)": [
+    -0.05,
+    0.088
+   ],
+   "oliveiras (CLIP)": [
+    -0.009,
+    0.059
+   ],
+   "palmeiras (CLIP)": [
+    0.01,
+    0.104
+   ],
+   "rodas de raios (CLIP)": [
+    0.037,
+    0.086
+   ],
+   "paisaxe seca (CLIP)": [
+    0.036,
+    0.052
+   ],
+   "eucaliptos (CLIP)": [
+    0.013,
+    0.016
+   ],
+   "luz eléctrica (CLIP)": [
+    0.01,
+    0.084
+   ],
+   "luces de cidade (CLIP)": [
+    -0.024,
+    0.117
+   ],
+   "salón moderno (CLIP)": [
+    -0.039,
+    0.173
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.003,
+    0.064
+   ],
+   "casas británicas (CLIP)": [
+    0.003,
+    0.045
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.058,
+    0.272
+   ],
+   "catedral inventada (CLIP)": [
+    0.012,
+    0.043
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.007,
+    0.071
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.018,
+    0.104
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.008,
+    0.118
+   ],
+   "cadros na parede (CLIP)": [
+    0.011,
+    0.158
+   ],
+   "farol victoriano (CLIP)": [
+    0.019,
+    0.102
+   ],
+   "clave: blue flames": 6.63,
+   "clave_v5: blue flames": 0.083
+  },
+  "arquetipo": null,
+  "s_revision": 9.8
+ },
+ "queimada-img2img_050-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0002,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a wooden bowl filled with purple woolen cloth and a wooden spoon. The bowl is placed on a white tablecloth and there are several white bowls and spoons scattered around it. The background is blurred, but it appears to be a room with a white wall and a window. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "bowl",
+   "spoon"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.009,
+    0.068
+   ],
+   "muros encalados (CLIP)": [
+    0.015,
+    0.077
+   ],
+   "ciprés (CLIP)": [
+    -0.083,
+    0.135
+   ],
+   "oliveiras (CLIP)": [
+    -0.004,
+    0.088
+   ],
+   "palmeiras (CLIP)": [
+    -0.014,
+    0.12
+   ],
+   "rodas de raios (CLIP)": [
+    0.037,
+    0.147
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.012,
+    0.073
+   ],
+   "eucaliptos (CLIP)": [
+    -0.019,
+    0.067
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.002,
+    0.036
+   ],
+   "luces de cidade (CLIP)": [
+    0.0,
+    0.077
+   ],
+   "salón moderno (CLIP)": [
+    -0.02,
+    0.145
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.009,
+    0.083
+   ],
+   "casas británicas (CLIP)": [
+    0.012,
+    0.04
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.074,
+    0.228
+   ],
+   "catedral inventada (CLIP)": [
+    -0.012,
+    0.046
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.012,
+    0.114
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.014,
+    0.145
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.011,
+    0.161
+   ],
+   "cadros na parede (CLIP)": [
+    0.015,
+    0.125
+   ],
+   "farol victoriano (CLIP)": [
+    -0.043,
+    0.107
+   ],
+   "clave: blue flames": 3.22,
+   "clave_v5: blue flames": 0.016
+  },
+  "arquetipo": {
+   "etiqueta": "mans en primeiro plano",
+   "sim": 0.186
+  },
+  "s_revision": 10.3
+ },
+ "queimada-img2img_075-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0,
+  "lume_quente": 0.0056,
+  "descricion": "The image shows a black frying pan with a wooden spoon in it. The pan is filled with a dark blue liquid, which appears to be a type of fire or smoke. The liquid is flowing out of the pan and into the pan, creating a cloud-like effect. The spoon is resting on the edge of the bowl, and it is holding the spoon with both hands. The background is blurred, but it seems like the pan is placed on a bed of white smoke or steam. The overall mood of the image is dark and mysterious.",
+  "obxectos": [
+   "frying pan",
+   "spoon"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.023,
+    0.103
+   ],
+   "muros encalados (CLIP)": [
+    0.007,
+    0.087
+   ],
+   "ciprés (CLIP)": [
+    -0.065,
+    0.1
+   ],
+   "oliveiras (CLIP)": [
+    -0.029,
+    0.09
+   ],
+   "palmeiras (CLIP)": [
+    -0.004,
+    0.119
+   ],
+   "rodas de raios (CLIP)": [
+    0.033,
+    0.081
+   ],
+   "paisaxe seca (CLIP)": [
+    0.016,
+    0.074
+   ],
+   "eucaliptos (CLIP)": [
+    -0.043,
+    0.058
+   ],
+   "luz eléctrica (CLIP)": [
+    0.007,
+    0.062
+   ],
+   "luces de cidade (CLIP)": [
+    -0.023,
+    0.123
+   ],
+   "salón moderno (CLIP)": [
+    -0.062,
+    0.169
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.007,
+    0.031
+   ],
+   "casas británicas (CLIP)": [
+    0.005,
+    0.058
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.026,
+    0.229
+   ],
+   "catedral inventada (CLIP)": [
+    -0.011,
+    0.048
+   ],
+   "abrigo moderno (CLIP)": [
+    0.006,
+    0.066
+   ],
+   "chaqueta de tweed (CLIP)": [
+    0.006,
+    0.11
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.002,
+    0.137
+   ],
+   "cadros na parede (CLIP)": [
+    0.017,
+    0.148
+   ],
+   "farol victoriano (CLIP)": [
+    0.006,
+    0.107
+   ],
+   "clave: blue flames": 4.61,
+   "clave_v5: blue flames": 0.062
+  },
+  "arquetipo": null,
+  "s_revision": 10.2
+ },
+ "queimada-profundidade_060-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.031,
+  "lume_quente": 0.0356,
+  "descricion": "The image shows a close-up of a bowl of soup on a wooden table. The bowl is made of ceramic and has a light brown color. The soup is steaming, with a flame burning in the center of the bowl. A spoon is resting in the bowl, ready to be used to stir the soup. There are other bowls and plates around the table, and a wooden spoon is visible on the right side of the image. The background is blurred, but it appears to be a kitchen or dining area.",
+  "obxectos": [
+   "bowl",
+   "coffee cup",
+   "kitchen & dining room table",
+   "knife",
+   "saucer",
+   "spoon"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.008,
+    0.082
+   ],
+   "muros encalados (CLIP)": [
+    0.072,
+    0.119
+   ],
+   "ciprés (CLIP)": [
+    -0.053,
+    0.103
+   ],
+   "oliveiras (CLIP)": [
+    -0.011,
+    0.077
+   ],
+   "palmeiras (CLIP)": [
+    0.004,
+    0.092
+   ],
+   "rodas de raios (CLIP)": [
+    0.015,
+    0.101
+   ],
+   "paisaxe seca (CLIP)": [
+    0.06,
+    0.082
+   ],
+   "eucaliptos (CLIP)": [
+    0.017,
+    0.026
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.004,
+    0.077
+   ],
+   "luces de cidade (CLIP)": [
+    -0.015,
+    0.108
+   ],
+   "salón moderno (CLIP)": [
+    -0.021,
+    0.163
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.007,
+    0.044
+   ],
+   "casas británicas (CLIP)": [
+    0.038,
+    0.087
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.008,
+    0.193
+   ],
+   "catedral inventada (CLIP)": [
+    -0.025,
+    0.053
+   ],
+   "abrigo moderno (CLIP)": [
+    0.011,
+    0.063
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.004,
+    0.1
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.003,
+    0.109
+   ],
+   "cadros na parede (CLIP)": [
+    0.027,
+    0.141
+   ],
+   "farol victoriano (CLIP)": [
+    -0.008,
+    0.089
+   ],
+   "clave: blue flames": 2.99,
+   "clave_v5: blue flames": 0.043
+  },
+  "arquetipo": null,
+  "s_revision": 11.2
+ },
+ "horreo-texto-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.051,
+  "lume_quente": 0.0019,
+  "descricion": "The image shows a woman standing in a field with a thatched roof hut on the right side. She is wearing a long black dress and a headscarf, and is carrying a woven basket in her left hand. The hut is made of stone and has a sloping roof. The field is covered in tall grass and there are trees in the background. The sky is orange and the sun is setting, casting a warm glow over the scene. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.015,
+    0.104
+   ],
+   "muros encalados (CLIP)": [
+    0.005,
+    0.121
+   ],
+   "ciprés (CLIP)": [
+    -0.032,
+    0.128
+   ],
+   "oliveiras (CLIP)": [
+    -0.112,
+    0.167
+   ],
+   "palmeiras (CLIP)": [
+    -0.044,
+    0.146
+   ],
+   "rodas de raios (CLIP)": [
+    0.031,
+    0.134
+   ],
+   "paisaxe seca (CLIP)": [
+    0.063,
+    0.175
+   ],
+   "eucaliptos (CLIP)": [
+    -0.019,
+    0.043
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.009,
+    0.078
+   ],
+   "luces de cidade (CLIP)": [
+    -0.036,
+    0.157
+   ],
+   "salón moderno (CLIP)": [
+    -0.039,
+    0.172
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.031,
+    0.088
+   ],
+   "casas británicas (CLIP)": [
+    0.02,
+    0.101
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.026,
+    0.171
+   ],
+   "catedral inventada (CLIP)": [
+    -0.045,
+    0.094
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.072,
+    0.225
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.072,
+    0.196
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.044,
+    0.161
+   ],
+   "cadros na parede (CLIP)": [
+    -0.036,
+    0.209
+   ],
+   "farol victoriano (CLIP)": [
+    -0.045,
+    0.128
+   ],
+   "clave: granary on stone pillars": 1.85,
+   "clave_v5: granary on stone pillars": -0.003
+  },
+  "arquetipo": null,
+  "s_revision": 10.2
+ },
+ "horreo-img2img_050-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0991,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a sculpture of a stack of grey bricks on a wooden bench in a park. The bricks are arranged in a pyramid-like structure, with the topmost brick being the largest and the bottommost being the smallest. The bench is placed on a grassy lawn with trees in the background. A person wearing a white dress is standing next to the bench, looking at the stack of bricks. The image appears to be taken from a low angle, with a blurred background.",
+  "obxectos": [
+   "furniture",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.033,
+    0.081
+   ],
+   "muros encalados (CLIP)": [
+    -0.047,
+    0.105
+   ],
+   "ciprés (CLIP)": [
+    0.003,
+    0.129
+   ],
+   "oliveiras (CLIP)": [
+    -0.011,
+    0.119
+   ],
+   "palmeiras (CLIP)": [
+    0.014,
+    0.118
+   ],
+   "rodas de raios (CLIP)": [
+    0.003,
+    0.11
+   ],
+   "paisaxe seca (CLIP)": [
+    0.054,
+    0.118
+   ],
+   "eucaliptos (CLIP)": [
+    -0.014,
+    0.057
+   ],
+   "luz eléctrica (CLIP)": [
+    0.048,
+    0.041
+   ],
+   "luces de cidade (CLIP)": [
+    -0.026,
+    0.076
+   ],
+   "salón moderno (CLIP)": [
+    0.042,
+    0.108
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.056,
+    0.134
+   ],
+   "casas británicas (CLIP)": [
+    0.038,
+    0.114
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.004,
+    0.116
+   ],
+   "catedral inventada (CLIP)": [
+    -0.045,
+    0.147
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.003,
+    0.13
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.024,
+    0.17
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.055,
+    0.186
+   ],
+   "cadros na parede (CLIP)": [
+    -0.032,
+    0.189
+   ],
+   "farol victoriano (CLIP)": [
+    -0.007,
+    0.107
+   ],
+   "clave: granary on stone pillars": 4.42,
+   "clave_v5: granary on stone pillars": 0.074
+  },
+  "arquetipo": null,
+  "s_revision": 9.9
+ },
+ "horreo-img2img_075-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "falta: granary on stone pillars (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0727,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a woman walking in a park. She is wearing a long grey dress with a striped pattern and a headscarf. She has a basket on her back and is carrying a large woven basket in her left hand. The basket appears to be made of straw or a similar material and is filled with a light-colored material. The woman is walking on a grassy field with trees in the background. The image is taken from a low angle, looking down on the woman and the basket. The sky is blue and the sun is shining, creating a warm glow on the scene",
+  "obxectos": [
+   "footwear",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.004,
+    0.054
+   ],
+   "muros encalados (CLIP)": [
+    -0.019,
+    0.087
+   ],
+   "ciprés (CLIP)": [
+    -0.018,
+    0.126
+   ],
+   "oliveiras (CLIP)": [
+    -0.051,
+    0.141
+   ],
+   "palmeiras (CLIP)": [
+    -0.04,
+    0.125
+   ],
+   "rodas de raios (CLIP)": [
+    0.033,
+    0.138
+   ],
+   "paisaxe seca (CLIP)": [
+    0.074,
+    0.134
+   ],
+   "eucaliptos (CLIP)": [
+    0.012,
+    0.033
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.043,
+    0.067
+   ],
+   "luces de cidade (CLIP)": [
+    -0.05,
+    0.093
+   ],
+   "salón moderno (CLIP)": [
+    -0.047,
+    0.097
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.04,
+    0.064
+   ],
+   "casas británicas (CLIP)": [
+    0.076,
+    0.105
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.016,
+    0.12
+   ],
+   "catedral inventada (CLIP)": [
+    -0.076,
+    0.101
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.149,
+    0.249
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.104,
+    0.224
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.114,
+    0.211
+   ],
+   "cadros na parede (CLIP)": [
+    -0.022,
+    0.196
+   ],
+   "farol victoriano (CLIP)": [
+    -0.03,
+    0.112
+   ],
+   "clave: granary on stone pillars": 1.31,
+   "clave_v5: granary on stone pillars": 0.026
+  },
+  "arquetipo": null,
+  "s_revision": 10.4
+ },
+ "horreo-profundidade_060-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0005,
+  "lume_quente": 0.0001,
+  "descricion": "The image shows a statue of a woman sitting on a wooden bench in a park. The woman is wearing a long, flowing dress and a headscarf, and her hair is tied back in a bun. She is facing away from the camera, and the bench is made of wood and has a woven basket on top. The bench is supported by two columns on either side, and there is a stone wall on the left side of the image. The background is a grassy field with trees and bushes. The sun is shining through the columns, creating a warm glow on the scene.",
+  "obxectos": [
+   "furniture",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.026,
+    0.095
+   ],
+   "muros encalados (CLIP)": [
+    -0.025,
+    0.117
+   ],
+   "ciprés (CLIP)": [
+    -0.04,
+    0.149
+   ],
+   "oliveiras (CLIP)": [
+    -0.015,
+    0.143
+   ],
+   "palmeiras (CLIP)": [
+    -0.027,
+    0.15
+   ],
+   "rodas de raios (CLIP)": [
+    0.032,
+    0.162
+   ],
+   "paisaxe seca (CLIP)": [
+    0.042,
+    0.132
+   ],
+   "eucaliptos (CLIP)": [
+    -0.007,
+    0.094
+   ],
+   "luz eléctrica (CLIP)": [
+    0.001,
+    0.066
+   ],
+   "luces de cidade (CLIP)": [
+    -0.036,
+    0.105
+   ],
+   "salón moderno (CLIP)": [
+    -0.012,
+    0.134
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.048,
+    0.166
+   ],
+   "casas británicas (CLIP)": [
+    0.041,
+    0.12
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.026,
+    0.171
+   ],
+   "catedral inventada (CLIP)": [
+    -0.057,
+    0.148
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.063,
+    0.217
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.101,
+    0.238
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.055,
+    0.174
+   ],
+   "cadros na parede (CLIP)": [
+    -0.01,
+    0.193
+   ],
+   "farol victoriano (CLIP)": [
+    -0.045,
+    0.149
+   ],
+   "clave: granary on stone pillars": 3.93,
+   "clave_v5: granary on stone pillars": 0.058
+  },
+  "arquetipo": null,
+  "s_revision": 10.1
+ },
+ "horreos-texto-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "paisaxe seca (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a group of stone buildings with thatched roofs. The buildings are located in a grassy area with a dirt path leading up to them. In front of the buildings, there are several large, cylindrical structures made of stone. The structures appear to be ancient and weathered, with some of them having a rough texture. There are a few people standing in the courtyard, looking at the structures. The sky is blue and there are trees in the background. The overall atmosphere of the image is peaceful and serene.",
+  "obxectos": [
+   "house"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.014,
+    0.154
+   ],
+   "muros encalados (CLIP)": [
+    -0.01,
+    0.193
+   ],
+   "ciprés (CLIP)": [
+    -0.039,
+    0.156
+   ],
+   "oliveiras (CLIP)": [
+    -0.012,
+    0.133
+   ],
+   "palmeiras (CLIP)": [
+    -0.007,
+    0.151
+   ],
+   "rodas de raios (CLIP)": [
+    -0.027,
+    0.174
+   ],
+   "paisaxe seca (CLIP)": [
+    0.098,
+    0.172
+   ],
+   "eucaliptos (CLIP)": [
+    0.032,
+    0.06
+   ],
+   "luz eléctrica (CLIP)": [
+    0.016,
+    0.085
+   ],
+   "luces de cidade (CLIP)": [
+    -0.026,
+    0.114
+   ],
+   "salón moderno (CLIP)": [
+    -0.064,
+    0.193
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.018,
+    0.181
+   ],
+   "casas británicas (CLIP)": [
+    -0.047,
+    0.191
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.019,
+    0.158
+   ],
+   "catedral inventada (CLIP)": [
+    -0.094,
+    0.2
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.045,
+    0.168
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.085,
+    0.202
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.019,
+    0.152
+   ],
+   "cadros na parede (CLIP)": [
+    -0.072,
+    0.226
+   ],
+   "farol victoriano (CLIP)": [
+    -0.034,
+    0.097
+   ],
+   "clave: granary on stone pillars": 7.27,
+   "clave_v5: granary on stone pillars": 0.09
+  },
+  "arquetipo": null,
+  "s_revision": 10.1
+ },
+ "horreos-img2img_050-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0001,
+  "lume_quente": 0.0001,
+  "descricion": "The image shows an old, dilapidated building with a thatched roof. The building appears to be made of stone and has a small window on the right side. In front of the building, there is a wooden structure with a sloping roof and a wooden door. The structure is surrounded by a group of stone pillars and a fence. The ground is covered in grass and there are trees in the background. The sky is blue and the overall atmosphere of the image is peaceful and serene.",
+  "obxectos": [
+   "house"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.009,
+    0.172
+   ],
+   "muros encalados (CLIP)": [
+    0.003,
+    0.173
+   ],
+   "ciprés (CLIP)": [
+    -0.007,
+    0.135
+   ],
+   "oliveiras (CLIP)": [
+    -0.003,
+    0.141
+   ],
+   "palmeiras (CLIP)": [
+    -0.003,
+    0.155
+   ],
+   "rodas de raios (CLIP)": [
+    -0.037,
+    0.22
+   ],
+   "paisaxe seca (CLIP)": [
+    0.073,
+    0.141
+   ],
+   "eucaliptos (CLIP)": [
+    0.034,
+    0.086
+   ],
+   "luz eléctrica (CLIP)": [
+    0.013,
+    0.104
+   ],
+   "luces de cidade (CLIP)": [
+    -0.03,
+    0.106
+   ],
+   "salón moderno (CLIP)": [
+    -0.056,
+    0.137
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.003,
+    0.199
+   ],
+   "casas británicas (CLIP)": [
+    -0.071,
+    0.186
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.04,
+    0.154
+   ],
+   "catedral inventada (CLIP)": [
+    -0.07,
+    0.197
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.044,
+    0.129
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.08,
+    0.16
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.001,
+    0.112
+   ],
+   "cadros na parede (CLIP)": [
+    -0.039,
+    0.201
+   ],
+   "farol victoriano (CLIP)": [
+    -0.061,
+    0.18
+   ],
+   "clave: granary on stone pillars": 7.1,
+   "clave_v5: granary on stone pillars": 0.099
+  },
+  "arquetipo": null,
+  "s_revision": 10.2
+ },
+ "horreos-img2img_075-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0003,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a group of stone statues of people standing in front of a stone building with a thatched roof. The building appears to be old and weathered, with a stone wall and a chimney on the left side. The statues are arranged in a line, with some standing upright and others facing the right side of the image. The sky is blue and there are trees in the background. The ground is covered in grass and there is a small pond in the foreground.",
+  "obxectos": [
+   "house"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.01,
+    0.154
+   ],
+   "muros encalados (CLIP)": [
+    -0.014,
+    0.142
+   ],
+   "ciprés (CLIP)": [
+    0.036,
+    0.124
+   ],
+   "oliveiras (CLIP)": [
+    -0.006,
+    0.102
+   ],
+   "palmeiras (CLIP)": [
+    -0.004,
+    0.118
+   ],
+   "rodas de raios (CLIP)": [
+    -0.006,
+    0.139
+   ],
+   "paisaxe seca (CLIP)": [
+    0.101,
+    0.13
+   ],
+   "eucaliptos (CLIP)": [
+    0.056,
+    0.073
+   ],
+   "luz eléctrica (CLIP)": [
+    0.016,
+    0.073
+   ],
+   "luces de cidade (CLIP)": [
+    -0.019,
+    0.093
+   ],
+   "salón moderno (CLIP)": [
+    -0.058,
+    0.176
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.028,
+    0.167
+   ],
+   "casas británicas (CLIP)": [
+    -0.04,
+    0.19
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.036,
+    0.145
+   ],
+   "catedral inventada (CLIP)": [
+    -0.117,
+    0.215
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.032,
+    0.138
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.093,
+    0.18
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.036,
+    0.131
+   ],
+   "cadros na parede (CLIP)": [
+    -0.061,
+    0.222
+   ],
+   "farol victoriano (CLIP)": [
+    -0.016,
+    0.102
+   ],
+   "clave: granary on stone pillars": 5.51,
+   "clave_v5: granary on stone pillars": 0.084
+  },
+  "arquetipo": null,
+  "s_revision": 9.7
+ },
+ "horreos-profundidade_060-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0,
+  "lume_quente": 0.0001,
+  "descricion": "The image shows a miniature model of a small stone structure with a thatched roof. The structure appears to be made of stacked stones and is supported by wooden pillars. There is a small wooden door on the right side of the structure with an intricate carving on it. In the background, there are several other structures, including a building with a chimney and a stone wall. The sky is blue and there are a few clouds in the sky. A person is standing in front of one of the structures, possibly a worker or a worker. The ground is covered in grass and there is a",
+  "obxectos": [
+   "house",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.032,
+    0.148
+   ],
+   "muros encalados (CLIP)": [
+    -0.015,
+    0.172
+   ],
+   "ciprés (CLIP)": [
+    -0.029,
+    0.135
+   ],
+   "oliveiras (CLIP)": [
+    -0.005,
+    0.117
+   ],
+   "palmeiras (CLIP)": [
+    0.007,
+    0.139
+   ],
+   "rodas de raios (CLIP)": [
+    -0.028,
+    0.172
+   ],
+   "paisaxe seca (CLIP)": [
+    0.098,
+    0.148
+   ],
+   "eucaliptos (CLIP)": [
+    0.004,
+    0.042
+   ],
+   "luz eléctrica (CLIP)": [
+    0.021,
+    0.099
+   ],
+   "luces de cidade (CLIP)": [
+    -0.028,
+    0.124
+   ],
+   "salón moderno (CLIP)": [
+    -0.054,
+    0.192
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.076,
+    0.191
+   ],
+   "casas británicas (CLIP)": [
+    -0.057,
+    0.171
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.034,
+    0.175
+   ],
+   "catedral inventada (CLIP)": [
+    -0.101,
+    0.182
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.082,
+    0.152
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.088,
+    0.172
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.003,
+    0.128
+   ],
+   "cadros na parede (CLIP)": [
+    -0.022,
+    0.255
+   ],
+   "farol victoriano (CLIP)": [
+    -0.064,
+    0.126
+   ],
+   "clave: granary on stone pillars": 7.27,
+   "clave_v5: granary on stone pillars": 0.1
+  },
+  "arquetipo": null,
+  "s_revision": 11.2
+ }
+}

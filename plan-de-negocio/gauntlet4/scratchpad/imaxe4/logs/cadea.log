@@ -29,3 +29,73 @@ carga 12.1
 026-v2-lightning1024: 67.2 s
 == rc 0 04:39:01
 == 04:39:01 plan-de-negocio/gauntlet4/imaxe/scripts/biblia_proba.py xerar 33,37,48,84,92
+carga 16.6
+033-v1-lightning1024: 73.4 s
+033-v2-lightning1024: 68.8 s
+037-v1-lightning1024: 69.3 s
+037-v2-lightning1024: 67.2 s
+048-v1-lightning1024: 68.0 s
+048-v2-lightning1024: 70.4 s
+084-v1-lightning1024: 67.6 s
+084-v2-lightning1024: 67.3 s
+092-v1-lightning1024: 65.8 s
+092-v2-lightning1024: 67.4 s
+== rc 0 05:19:34
+== 05:19:34 plan-de-negocio/gauntlet4/imaxe/scripts/revisar_ab.py ab biblia
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1791004906.151174    8016 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791004906.174278    8017 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791004907.053436    8022 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791004907.090895    8023 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791004980.487757    8273 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+aldea-texto-lightning1024 ok 1.92
+aldea-img2img_050-lightning1024 ['interior moderno'] 1.86
+aldea-img2img_075-lightning1024 ok 2.2
+aldea-profundidade_060-lightning1024 ['tellados laranxas', 'cousas do século XX', 'casas británicas (CLIP)'] 3.67
+carro-texto-lightning1024 ok 8.6
+carro-img2img_050-lightning1024 ok 7.5
+carro-img2img_075-lightning1024 ok 6.75
+carro-profundidade_060-lightning1024 ok 6.13
+lareira-texto-lightning1024 ['falta: wooden bench (CLIP)'] 1.18
+lareira-img2img_050-lightning1024 ['texto na imaxe'] 2.33
+lareira-img2img_075-lightning1024 ['interior moderno', 'muros encalados (CLIP)', 'casas británicas (CLIP)', 'falta: wooden bench (CLIP)'] 0.54
+lareira-profundidade_060-lightning1024 ['salón moderno (CLIP)', 'casas británicas (CLIP)', 'falta: wooden bench (CLIP)'] 0.61
+palloza-texto-lightning1024 ok 5.77
+palloza-img2img_050-lightning1024 ['paisaxe seca (CLIP)'] 8.06
+palloza-img2img_075-lightning1024 ['casas alleas'] 7.03
+palloza-profundidade_060-lightning1024 ok 5.88
+queimada-texto-lightning1024 ok 6.63
+queimada-img2img_050-lightning1024 ok 3.22
+queimada-img2img_075-lightning1024 ok 4.61
+queimada-profundidade_060-lightning1024 ok 2.99
+horreo-texto-lightning1024 ok 1.85
+horreo-img2img_050-lightning1024 ok 4.42
+horreo-img2img_075-lightning1024 ['falta: granary on stone pillars (CLIP)'] 1.31
+horreo-profundidade_060-lightning1024 ok 3.93
+horreos-texto-lightning1024 ['paisaxe seca (CLIP)'] 7.27
+horreos-img2img_050-lightning1024 ok 7.1
+horreos-img2img_075-lightning1024 ok 5.51
+horreos-profundidade_060-lightning1024 ok 7.27
+008-v1-lightning1024 ['interior moderno', 'falta: leather shoes (CLIP)'] 1.04
+008-v2-lightning1024 ['chaqueta de tweed (CLIP)'] 6.08
+016-v1-lightning1024 ['interior moderno', 'texto na imaxe'] 5.87
+016-v2-lightning1024 ok 4.85
+019-v1-lightning1024 ['cousas do século XX'] 1.92
+019-v2-lightning1024 ['man sen corpo (2)'] 1.88
+020-v1-lightning1024 ['obxectos modernos', 'farol victoriano (CLIP)'] 2.7
+020-v2-lightning1024 ['farol victoriano (CLIP)'] 4.57
+026-v1-lightning1024 ['casas británicas (CLIP)'] 1.82
+026-v2-lightning1024 ok 3.41
+033-v1-lightning1024 ['interior moderno', 'luz eléctrica (CLIP)'] 1.68
+033-v2-lightning1024 ok 2.57
+037-v1-lightning1024 ['cousas do século XX'] 5.09
+037-v2-lightning1024 ['texto na imaxe', 'casas británicas (CLIP)'] 3.18
+048-v1-lightning1024 ['interior moderno'] 4.53
+048-v2-lightning1024 ['man sen corpo (1)'] 3.49
+084-v1-lightning1024 ['man sen corpo (2)', 'interior moderno'] 2.3
+084-v2-lightning1024 ['interior moderno', 'cousas do século XX', 'falta: stone mortar (CLIP)'] 1.41
+092-v1-lightning1024 ['obxectos modernos', 'cousas do século XX'] 2.55
+092-v2-lightning1024 ['cousas do século XX', 'falta: clay cups (CLIP)'] 0.67
+== rc 0 05:33:18
+== 05:33:18 plan-de-negocio/gauntlet4/imaxe/scripts/florence_ovd.py
