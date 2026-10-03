@@ -220,3 +220,16 @@ imaxe  68 intento 2 121.1s + revisión 10.6s ok
 imaxe  69 intento 0 123.7s + revisión 11.0s ok
 imaxe  70 intento 0 121.1s + revisión 10.7s ['obxectos modernos', 'catedral inventada (CLIP)']
 imaxe  70 intento 1 119.3s + revisión 11.0s ok
+imaxe  71 intento 0 120.2s + revisión  9.9s ['lume vivo ao durmir (3.6% de altas luces cor de chama)', 'interior moderno']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['lying beside the bowl']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['lying beside the bowl']
+imaxe  71 intento 1 120.1s + revisión 10.5s ['lume vivo ao durmir (4.1% de altas luces cor de chama)', 'interior moderno'] avisos ['arquetipo seguido: persoa á lareira (xa no plano 69)']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['lying beside the bowl']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['lying beside the bowl']
+imaxe  71 intento 2 122.8s + revisión  9.7s ['lume vivo ao durmir (2.0% de altas luces cor de chama)']
+imaxe  72 intento 0 120.1s + revisión 10.0s ['lume vivo ao durmir (4.2% de altas luces cor de chama)', 'texto na imaxe', 'negativo do plano: electric light (CLIP)']
+imaxe  72 intento 1 119.4s + revisión 10.4s ['lume vivo ao durmir (5.2% de altas luces cor de chama)']
+imaxe  72 intento 2 121.9s + revisión 10.7s ['lume vivo ao durmir (4.6% de altas luces cor de chama)', 'texto na imaxe']
+imaxe  73 intento 0 121.6s + revisión  9.7s ['animais en grupo']
+imaxe  73 intento 1 120.2s + revisión  9.7s ['obxectos modernos']
+imaxe  73 intento 2 122.7s + revisión 12.0s ['lume vivo ao durmir (2.0% de altas luces cor de chama)', 'obxectos modernos', 'animais en grupo']
