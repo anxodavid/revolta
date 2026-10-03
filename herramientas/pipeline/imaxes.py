@@ -82,6 +82,9 @@ def modelo(nome=None):
 M = modelo()
 MODELO, W, H, PASOS = M['nome'], M['W'], M['H'], M['pasos']       # compatibilidade co código anterior
 MAX_INTENTOS, INTENTO_PRUDENTE, RESERVAS = int(os.environ.get('IMG_MAX_INTENTOS', '5')), 2, int(os.environ.get('IMG_RESERVAS', '2'))
+# Gauntlet 4: intentos mínimos aínda que a porta aprobe o primeiro (a porta deixa pasar de máis e o axente que revisa
+# precisa onde escoller); 0 = parar no primeiro que pasa a porta, como sempre
+MIN_INTENTOS = int(os.environ.get('IMG_MIN_INTENTOS', '0'))
 
 
 def bf16_rapido():
@@ -486,7 +489,8 @@ def xerar(escenas, outdir, seed_base='sera', revisar=True, n_total=None):
                         it['problemas'] = novos
                         print(f"imaxe {i:3d} intento {it['intento']} revisado de novo: {novos or 'ok'}", flush=True)
             k = len(intentos)
-            while k < MAX_INTENTOS + RESERVAS and not any(not x['problemas'] for x in intentos):
+            while k < MAX_INTENTOS + RESERVAS and (k < min(MIN_INTENTOS, MAX_INTENTOS) or
+                                                   not any(not x['problemas'] for x in intentos)):
                 if k < MAX_INTENTOS and _teimudo(intentos):
                     k = MAX_INTENTOS
                 previos = [p for x in intentos for p in x['problemas']]
