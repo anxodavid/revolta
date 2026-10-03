@@ -10,5 +10,9 @@
  "4_escenas": {
   "parede_s": 97.5,
   "cpu_s": 77.8
+ },
+ "5_imaxes": {
+  "parede_s": 12526.3,
+  "cpu_s": 47541.5
  }
 }

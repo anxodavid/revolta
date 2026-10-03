@@ -233,3 +233,12 @@ imaxe  72 intento 2 121.9s + revisión 10.7s ['lume vivo ao durmir (4.6% de alta
 imaxe  73 intento 0 121.6s + revisión  9.7s ['animais en grupo']
 imaxe  73 intento 1 120.2s + revisión  9.7s ['obxectos modernos']
 imaxe  73 intento 2 122.7s + revisión 12.0s ['lume vivo ao durmir (2.0% de altas luces cor de chama)', 'obxectos modernos', 'animais en grupo']
+imaxe  74 intento 0 124.4s + revisión 10.5s ok
+imaxe  75 intento 0 121.4s + revisión  9.9s ['repetida (CLIP 0.93 co plano 9)']
+imaxe  75 intento 1 124.9s + revisión  9.5s ['interior moderno', 'casas británicas (CLIP)', 'repetida (CLIP 0.90 co plano 9)']
+imaxe  75 intento 3 121.4s + revisión  9.9s ok avisos ['arquetipo seguido: bosque con néboa (xa no plano 75)']
+imaxe  76 intento 0 120.9s + revisión 10.1s ok
+I0000 00:00:1791048300.871511     899 migration_state_tracking.cc:24] Migration not enabled - not starting notification watcher.
+so-imaxes: 77 planos con imaxe; sen pasar a porta: 24 [7, 12, 15, 18, 19, 21, 23, 26, 31, 32, 33, 37, 41, 47, 54, 56, 59, 62, 65, 67, 68, 72, 73, 74]
+rc 0 Sat Oct  3 17:25:47 UTC 2026
+saida 0 Sat Oct  3 17:25:47 UTC 2026
