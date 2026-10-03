@@ -99,3 +99,31 @@ imaxe  30 intento 2 122.7s + revisión 11.3s ['texto na imaxe', 'negativo do pla
 imaxe  31 intento 0 123.5s + revisión 10.3s ['texto na imaxe']
 imaxe  31 intento 1 121.8s + revisión 10.3s ['texto na imaxe']
 inicio intento 1 Sat Oct  3 13:54:09 UTC 2026
+== 1_texto
+curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+voz: todas as frases na caché
+== 4_escenas
+planos por sentido: 77 (cortes a metade de frase: 2, por Whisper: 2)
+== 5_imaxes
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1791035992.694327     903 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791035992.837384     903 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791035994.001799     907 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791035994.039152     907 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1791036172.487758     988 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe  31 intento 0 131.4s + revisión 12.9s ['texto na imaxe']
+imaxe  31 intento 1 123.5s + revisión 10.1s ['texto na imaxe']
+imaxe  31 intento 2 129.4s + revisión 11.2s ['texto na imaxe']
+imaxe  32 intento 0 121.0s + revisión 10.6s ['negativo do plano: modern yacht (CLIP)']
+imaxe  32 intento 1 123.7s + revisión 10.5s ['man sen corpo (2)', 'muros encalados (CLIP)']
+Token indices sequence length is longer than the specified maximum sequence length for this model (89 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['at night, hands hidden in the sleeves or out of frame']
+Token indices sequence length is longer than the specified maximum sequence length for this model (89 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['at night, hands hidden in the sleeves or out of frame']

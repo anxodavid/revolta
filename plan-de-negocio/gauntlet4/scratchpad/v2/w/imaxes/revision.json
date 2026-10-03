@@ -7752,5 +7752,365 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "031-8b458fe5": {
+  "ficheiro": "031-8b458fe5-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "031-8b458fe5-0.png",
+    "seed": 2541363240,
+    "s": 131.4,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a handwritten sheet of verses lying beside a wide clay bowl of blue flames on a wooden table, the bottom corner of the sheet torn away where a signature would be, blue light flickering on the paper, 1960s",
+    "modelo": "lightning",
+    "tokens": 62,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0068,
+    "lume_quente": 0.0219,
+    "descricion": "The image shows a wooden bowl filled with blue crystals on top of an open book. The bowl is placed on a wooden table with a blue cloth draped over it. The book appears to be a Torah scroll, with the pages of the Torah visible. The flames of the fire are burning brightly, creating a warm and inviting atmosphere. The background is dark, making the blue crystals stand out even more. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "book",
+     "tableware"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.005,
+      0.08
+     ],
+     "muros encalados (CLIP)": [
+      0.035,
+      0.066
+     ],
+     "ciprés (CLIP)": [
+      -0.063,
+      0.095
+     ],
+     "oliveiras (CLIP)": [
+      -0.013,
+      0.08
+     ],
+     "palmeiras (CLIP)": [
+      -0.005,
+      0.123
+     ],
+     "rodas de raios (CLIP)": [
+      0.016,
+      0.089
+     ],
+     "paisaxe seca (CLIP)": [
+      0.019,
+      0.056
+     ],
+     "eucaliptos (CLIP)": [
+      -0.026,
+      0.041
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.026,
+      0.066
+     ],
+     "luces de cidade (CLIP)": [
+      -0.009,
+      0.087
+     ],
+     "salón moderno (CLIP)": [
+      -0.026,
+      0.113
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.025,
+      0.054
+     ],
+     "casas británicas (CLIP)": [
+      0.013,
+      0.049
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.045,
+      0.208
+     ],
+     "catedral inventada (CLIP)": [
+      -0.03,
+      0.082
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.017,
+      0.07
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.053,
+      0.129
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.002,
+      0.098
+     ],
+     "cadros na parede (CLIP)": [
+      0.013,
+      0.165
+     ],
+     "farol victoriano (CLIP)": [
+      -0.028,
+      0.111
+     ],
+     "negativo: neon": -0.033,
+     "negativo: plastic": -0.02,
+     "negativo: television": -0.032,
+     "negativo: smartphone": -0.006,
+     "negativo: printed text": 0.03,
+     "negativo: typewriter": -0.02,
+     "clave: sheet of paper": 4.31,
+     "clave_v5: sheet of paper": 0.009
+    },
+    "arquetipo": null,
+    "s_revision": 12.9,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "031-8b458fe5-1.png",
+    "seed": 3200365203,
+    "s": 123.5,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a handwritten sheet of verses lying beside a wide clay bowl of blue flames on a wooden table, the bottom corner of the sheet torn away where a signature would be, blue light flickering on the paper, 1960s",
+    "modelo": "lightning",
+    "tokens": 62,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0061,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two small bowls with blue flames burning inside them. The bowls are placed on top of an open book with text written on it. The flames are bright blue and appear to be burning brightly. The book is resting on a wooden surface and the background is blurred, making the bowls the focal point of the image. The image is taken from a low angle, with the focus on the bowls and the flames.",
+    "obxectos": [
+     "candle"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.017,
+      0.067
+     ],
+     "muros encalados (CLIP)": [
+      0.063,
+      0.08
+     ],
+     "ciprés (CLIP)": [
+      -0.065,
+      0.104
+     ],
+     "oliveiras (CLIP)": [
+      -0.016,
+      0.064
+     ],
+     "palmeiras (CLIP)": [
+      0.01,
+      0.111
+     ],
+     "rodas de raios (CLIP)": [
+      0.027,
+      0.094
+     ],
+     "paisaxe seca (CLIP)": [
+      0.047,
+      0.059
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.045
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.025,
+      0.081
+     ],
+     "luces de cidade (CLIP)": [
+      -0.009,
+      0.09
+     ],
+     "salón moderno (CLIP)": [
+      -0.03,
+      0.108
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.019,
+      0.036
+     ],
+     "casas británicas (CLIP)": [
+      0.007,
+      0.031
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.052,
+      0.223
+     ],
+     "catedral inventada (CLIP)": [
+      0.003,
+      0.043
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.005,
+      0.053
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.037,
+      0.104
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.047,
+      0.108
+     ],
+     "cadros na parede (CLIP)": [
+      0.056,
+      0.161
+     ],
+     "farol victoriano (CLIP)": [
+      0.016,
+      0.086
+     ],
+     "negativo: neon": -0.027,
+     "negativo: plastic": -0.035,
+     "negativo: television": -0.05,
+     "negativo: smartphone": -0.013,
+     "negativo: printed text": 0.013,
+     "negativo: typewriter": -0.039,
+     "clave: sheet of paper": 3.66,
+     "clave_v5: sheet of paper": -0.011
+    },
+    "arquetipo": null,
+    "s_revision": 10.1,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "031-8b458fe5-2.png",
+    "seed": 513984567,
+    "s": 129.4,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a handwritten sheet of verses lying beside a wide clay bowl of blue flames on a wooden table, the bottom corner of the sheet torn away where a signature would be, blue light flickering on the paper, 1960s, plain surfaces",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0007,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows a wooden table with a bowl of blue flames on the left side and an open book on the right side. The book appears to be a religious text, possibly a prayer or a prayer book, with some text written on it. The bowl is made of wood and has a handle on one side. There is also a small bowl of dried herbs on the table next to the bowl. The background is dark and out of focus, making the blue flames stand out. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "book",
+     "bowl"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.015,
+      0.082
+     ],
+     "muros encalados (CLIP)": [
+      0.037,
+      0.078
+     ],
+     "ciprés (CLIP)": [
+      -0.071,
+      0.111
+     ],
+     "oliveiras (CLIP)": [
+      -0.029,
+      0.081
+     ],
+     "palmeiras (CLIP)": [
+      0.01,
+      0.123
+     ],
+     "rodas de raios (CLIP)": [
+      0.029,
+      0.12
+     ],
+     "paisaxe seca (CLIP)": [
+      0.022,
+      0.054
+     ],
+     "eucaliptos (CLIP)": [
+      -0.026,
+      0.053
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.019,
+      0.076
+     ],
+     "luces de cidade (CLIP)": [
+      -0.001,
+      0.094
+     ],
+     "salón moderno (CLIP)": [
+      -0.043,
+      0.139
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.022,
+      0.04
+     ],
+     "casas británicas (CLIP)": [
+      0.004,
+      0.045
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.029,
+      0.21
+     ],
+     "catedral inventada (CLIP)": [
+      -0.014,
+      0.074
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.03,
+      0.079
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.043,
+      0.115
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.027,
+      0.096
+     ],
+     "cadros na parede (CLIP)": [
+      0.025,
+      0.154
+     ],
+     "farol victoriano (CLIP)": [
+      -0.02,
+      0.115
+     ],
+     "negativo: neon": -0.031,
+     "negativo: plastic": -0.048,
+     "negativo: television": -0.034,
+     "negativo: smartphone": -0.01,
+     "negativo: printed text": 0.018,
+     "negativo: typewriter": -0.012,
+     "clave: sheet of paper": 4.56,
+     "clave_v5: sheet of paper": 0.009
+    },
+    "arquetipo": null,
+    "s_revision": 11.2,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
  }
 }
