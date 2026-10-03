@@ -1,6 +1,6 @@
 # Mapa de feitos do guion v2, rolda 1
 
-Guionista do Gauntlet 4 (axente Claude), 02-10-2026. Texto: [`guion-r1.txt`](guion-r1.txt) (1.602 palabras). Ficha:
+Guionista do Gauntlet 4 (axente Claude), 02-10-2026. Texto: [`guion-r1.txt`](guion-r1.txt) (1.603 palabras). Ficha:
 `herramientas/pipeline/temas/meigas-de-verdade-v2.yaml` (o dossier da v1 máis F052). Ningunha persoa o revisou.
 
 **Como ler.** S = frase, coa mesma numeración ca `pipeline.partir` e `frases.json` ("Boas noites." é S9, o resto do aviso S10 e a
@@ -30,7 +30,7 @@ excomuñón contra as dúas (p. 16), a confesión de María Cibreira despois do 
 | 6 | 14 | Nos papeis daqueles procesos hai moitas máis palabras | F128 |
 | 6 | 15 | Unha palabra trabucada que ninguén borrou en máis de catrocentos anos | F055 (a emenda segue no papel) e F006 (1617 → 2026) · bucle que se paga en S27-S30 |
 | 6 | 16 | Unha lista coas mulleres que uns veciños viron nunha fonte a noite de san Xoán | F050, F133 · bucle que se paga en S61-S66 |
-| 7 | 17 | Detrás desas palabras había mulleres de aldea | síntese de F006, F051, F085, F088, F129 · tecido |
+| 7 | 17 | Había mulleres de aldea detrás de todas esas palabras | síntese de F006, F051, F085, F088, F129 · tecido |
 | 7 | 18 | A meiga, moitas veces, non era a bruxa dos contos, senón a que curaba, axudaba nos partos e sabía de herbas | F048 ("moitas veces": "Non dicir" n.º 17) |
 | 7 | 19 | Promesa: imos buscalas no pouco que delas quedou escrito | tecido |
 
@@ -93,7 +93,7 @@ excomuñón contra as dúas (p. 16), a confesión de María Cibreira despois do 
 | 20 | 62 | Unha testemuña contou que, pola sospeita que tiñan delas, uns veciños foran espreitalas á fonte da Nogueira a noite de san Xoán do ano anterior | F131, F132 |
 | 20 | 63 | Alí viron e recoñeceron as mulleres, e apuntáronas nunha lista porque eran moitas | F133 (paga o bucle de S16) |
 | 21 | 64 | "Podemos pensar nunha noite curta de xuño, na auga fría da fonte e nuns ollos que miran desde a escuridade" | reconstrución explícita e xenérica (san Xoán é en xuño, F168) · tecido |
-| 21 | 65 | Do que falaban elas aquela noite, nestes papeis non queda nin unha palabra | tecido: o extracto do Arquivo (p. 7) só di que as viron, as recoñeceron e as apuntaron |
+| 21 | 65 | Do que elas falaban aquela noite, nestes papeis non queda nin unha palabra | tecido: o extracto do Arquivo (p. 7) só di que as viron, as recoñeceron e as apuntaron |
 | 21 | 66 | Queda a lista, escrita por outros | F133 · tecido |
 | 22 | 67 | A noite de san Xoán era costume ir ás fontes, porque se cría que a auga desa noite tiña virtudes especiais | F135 (costume e crenza) |
 | 22 | 68 | Na crenza popular, era tamén a noite en que as meigas andaban máis libres | F134 (crenza) |
