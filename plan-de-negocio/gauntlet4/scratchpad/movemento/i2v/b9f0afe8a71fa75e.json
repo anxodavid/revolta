@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/007-0ae28a3e-0.png",
+ "accion": "he jolts upright from the bench and flings his arms wide",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 497.9,
+ "s_pasos": [
+  61.5,
+  46.3,
+  55.6,
+  47.4,
+  45.1,
+  44.2,
+  42.9,
+  44.6
+ ],
+ "s_descodificar": 110.2,
+ "fotogramas": 73,
+ "pico_proceso_mb": 11616
+}

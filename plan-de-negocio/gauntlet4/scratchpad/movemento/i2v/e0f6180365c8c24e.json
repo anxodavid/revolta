@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/012-c1475796-2.png",
+ "accion": "her lips move slightly as she murmurs",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 474.0,
+ "s_pasos": [
+  52.1,
+  42.4,
+  52.3,
+  44.2,
+  43.2,
+  40.5,
+  41.6,
+  44.1
+ ],
+ "s_descodificar": 113.6,
+ "fotogramas": 73,
+ "pico_proceso_mb": 11616
+}

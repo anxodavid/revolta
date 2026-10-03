@@ -108,3 +108,6 @@ imaxe  71 intento 2 115.9s + revisión  9.9s ['lume vivo ao durmir (1.9% de alta
 imaxe  73 intento 0 116.2s + revisión  9.0s ok
 imaxe  76 intento 0 115.6s + revisión  9.8s ok
 I0000 00:00:1791065693.037824    6411 migration_state_tracking.cc:24] Migration not enabled - not starting notification watcher.
+so-imaxes: 77 planos con imaxe; sen pasar a porta: 23 [2, 12, 15, 19, 21, 23, 26, 31, 32, 33, 37, 39, 41, 42, 44, 47, 56, 59, 62, 64, 72, 73, 76]
+rc 0 Sat Oct  3 22:15:36 UTC 2026
+saida rexenerar 0 Sat Oct  3 22:15:36 UTC 2026
