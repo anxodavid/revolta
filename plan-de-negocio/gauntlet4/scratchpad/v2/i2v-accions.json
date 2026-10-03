@@ -59,14 +59,14 @@
  {
   "n": 23,
   "prioridade_i2v": 1,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/022-63a520b1-0.png",
   "accion": "the wind blows her scarf and the grass as she speaks softly, the cows graze behind her",
   "i2v": {}
  },
  {
   "n": 30,
   "prioridade_i2v": 1,
-  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/029-ffcab11f-1.png",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/029-ffcab11f-0.png",
   "accion": "the younger woman picks up the empty jug and looks into it",
   "i2v": {
    "F": 73
@@ -75,7 +75,7 @@
  {
   "n": 33,
   "prioridade_i2v": 1,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/032-5d0efc36-0.png",
   "accion": "the three men laugh and lean toward the flames as one stirs with the ladle",
   "i2v": {}
  },
@@ -212,7 +212,7 @@
  {
   "n": 3,
   "prioridade_i2v": 2,
-  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/002-53ec0878-2.png",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/002-53ec0878-1.png",
   "accion": "the man writes slowly, pauses and looks up from the notebook",
   "i2v": {}
  },
@@ -237,7 +237,7 @@
  {
   "n": 12,
   "prioridade_i2v": 2,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/011-53232142-1.png",
   "accion": "the scribe dips the quill in the inkpot and writes",
   "i2v": {}
  },
@@ -253,7 +253,7 @@
  {
   "n": 19,
   "prioridade_i2v": 2,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/018-768e74a5-0.png",
   "accion": "she slowly turns the old papers in the candlelight",
   "i2v": {}
  },
@@ -281,14 +281,14 @@
  {
   "n": 25,
   "prioridade_i2v": 2,
-  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/024-341e06d7-2.png",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/024-341e06d7-1.png",
   "accion": "the bearded man speaks slowly in profile, the candle flames flicker",
   "i2v": {}
  },
  {
   "n": 26,
   "prioridade_i2v": 2,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/025-a9288905-1.png",
   "accion": "the hand strikes through a word with the quill and writes on",
   "i2v": {
    "F": 73
@@ -327,7 +327,7 @@
  {
   "n": 37,
   "prioridade_i2v": 2,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/036-2831cd58-2.png",
   "accion": "the hand slowly signs the form",
   "i2v": {
    "F": 73
