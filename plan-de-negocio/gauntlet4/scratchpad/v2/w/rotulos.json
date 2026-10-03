@@ -1,0 +1,56 @@
+[
+ {
+  "t0": 47.035,
+  "t1": 53.133,
+  "texto": "As meigas de verdade",
+  "sub": "Cousas de Galiza para durmir",
+  "y": 0.46,
+  "tam": 60,
+  "fundido": 0.8
+ },
+ {
+  "t0": 99.2,
+  "t1": 104.177,
+  "texto": "Auga, digo, leite",
+  "sub": "Capítulo I",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 189.802,
+  "t1": 195.616,
+  "texto": "O conxuro do barco",
+  "sub": "Capítulo II",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 243.222,
+  "t1": 249.448,
+  "texto": "As respostas nas preguntas",
+  "sub": "Capítulo III",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 328.477,
+  "t1": 335.191,
+  "texto": "A lista da fonte",
+  "sub": "Capítulo IV",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ },
+ {
+  "t0": 493.54,
+  "t1": 501.157,
+  "texto": "Chove na lousa",
+  "sub": "Capítulo V",
+  "y": 0.46,
+  "tam": 64,
+  "fundido": 0.9
+ }
+]

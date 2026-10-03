@@ -1,0 +1,2662 @@
+[
+ {
+  "n": 17,
+  "version": "actual",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     122,
+     170,
+     161,
+     249
+    ]
+   ],
+   "radiator": [
+    [
+     898,
+     0,
+     1022,
+     525
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     641,
+     330,
+     772,
+     478
+    ]
+   ],
+   "faucet": [
+    [
+     643,
+     181,
+     770,
+     483
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ],
+    [
+     0,
+     0,
+     422,
+     499
+    ],
+    [
+     0,
+     0,
+     421,
+     499
+    ],
+    [
+     0,
+     404,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     118,
+     166,
+     165,
+     253
+    ]
+   ],
+   "wall lamp": [
+    [
+     118,
+     166,
+     165,
+     253
+    ]
+   ],
+   "framed picture": [
+    [
+     641,
+     181,
+     773,
+     488
+    ]
+   ]
+  },
+  "densa": [
+   "silhouette of woman in long coat with umbrella in foggy hallway",
+   "silhouetted man walking in dark room with light shining on him"
+  ],
+  "s": 20.0
+ },
+ {
+  "n": 82,
+  "version": "actual",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     581,
+     205,
+     621,
+     242
+    ]
+   ],
+   "radiator": [
+    [
+     856,
+     462,
+     1022,
+     500
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     515,
+     265,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     487,
+     257,
+     498,
+     266
+    ]
+   ],
+   "cast iron stove": [
+    [
+     387,
+     143,
+     561,
+     538
+    ]
+   ],
+   "street lamp": [
+    [
+     387,
+     141,
+     560,
+     537
+    ]
+   ],
+   "wall lamp": [
+    [
+     387,
+     141,
+     560,
+     537
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "silhouette of woman holding lantern in field at sunset"
+  ],
+  "s": 20.0
+ },
+ {
+  "n": 94,
+  "version": "actual",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     327,
+     269,
+     355,
+     310
+    ]
+   ],
+   "radiator": [
+    [
+     995,
+     370,
+     1022,
+     484
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     821,
+     389,
+     930,
+     504
+    ]
+   ],
+   "faucet": [
+    [
+     652,
+     242,
+     723,
+     271
+    ]
+   ],
+   "cast iron stove": [
+    [
+     450,
+     344,
+     840,
+     508
+    ]
+   ],
+   "street lamp": [
+    [
+     876,
+     37,
+     920,
+     132
+    ]
+   ],
+   "wall lamp": [
+    [
+     876,
+     37,
+     920,
+     132
+    ]
+   ],
+   "framed picture": [
+    [
+     547,
+     49,
+     655,
+     177
+    ]
+   ]
+  },
+  "densa": [
+   "wooden fireplace mantel with fire pit",
+   "terracotta pot with round body and narrow neck",
+   "vase",
+   "log",
+   "log",
+   "candle",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "log",
+   "candle"
+  ],
+  "s": 21.6
+ },
+ {
+  "n": 123,
+  "version": "actual",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     469,
+     310,
+     502,
+     332
+    ]
+   ],
+   "radiator": [
+    [
+     403,
+     367,
+     871,
+     457
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     763,
+     426,
+     798,
+     461
+    ]
+   ],
+   "faucet": [
+    [
+     594,
+     340,
+     649,
+     370
+    ]
+   ],
+   "cast iron stove": [
+    [
+     384,
+     366,
+     877,
+     459
+    ]
+   ],
+   "street lamp": [
+    [
+     465,
+     305,
+     503,
+     370
+    ]
+   ],
+   "wall lamp": [
+    [
+     465,
+     305,
+     503,
+     370
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [],
+  "s": 18.8
+ },
+ {
+  "n": 148,
+  "version": "actual",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     460,
+     165,
+     485,
+     192
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     254,
+     195,
+     504
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     253,
+     195,
+     506
+    ]
+   ],
+   "faucet": [
+    [
+     742,
+     248,
+     767,
+     303
+    ]
+   ],
+   "cast iron stove": [
+    [
+     159,
+     258,
+     268,
+     352
+    ]
+   ],
+   "street lamp": [
+    [
+     450,
+     31,
+     494,
+     203
+    ]
+   ],
+   "wall lamp": [
+    [
+     450,
+     31,
+     494,
+     203
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     125,
+     36,
+     246
+    ]
+   ]
+  },
+  "densa": [
+   "wooden table with candle on wooden table in dimly lit room",
+   "fireplace",
+   "chair",
+   "vase",
+   "bottle",
+   "vase",
+   "bottle",
+   "bottle",
+   "sink",
+   "candle",
+   "candle",
+   "candle",
+   "candle",
+   "candle",
+   "candle"
+  ],
+  "s": 21.5
+ },
+ {
+  "n": 31,
+  "version": "vella",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     397,
+     283,
+     449,
+     307
+    ]
+   ],
+   "radiator": [
+    [
+     104,
+     0,
+     272,
+     85
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     944,
+     0,
+     1022,
+     66
+    ]
+   ],
+   "faucet": [
+    [
+     718,
+     295,
+     774,
+     432
+    ]
+   ],
+   "cast iron stove": [
+    [
+     233,
+     420,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     359,
+     0,
+     456,
+     435
+    ]
+   ],
+   "wall lamp": [
+    [
+     359,
+     0,
+     456,
+     435
+    ]
+   ],
+   "framed picture": [
+    [
+     359,
+     217,
+     666,
+     449
+    ]
+   ]
+  },
+  "densa": [
+   "black cat silhouette on windowsill",
+   "pitcher",
+   "faucet",
+   "bowl",
+   "bottle",
+   "bowl"
+  ],
+  "s": 19.4
+ },
+ {
+  "n": 56,
+  "version": "vella",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     170,
+     301,
+     178,
+     306
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     314,
+     1022,
+     514
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     404,
+     348,
+     506,
+     540
+    ]
+   ],
+   "faucet": [
+    [
+     621,
+     369,
+     652,
+     387
+    ]
+   ],
+   "cast iron stove": [
+    [
+     117,
+     219,
+     311,
+     314
+    ]
+   ],
+   "street lamp": [
+    [
+     159,
+     297,
+     187,
+     357
+    ]
+   ],
+   "wall lamp": [
+    [
+     641,
+     0,
+     1004,
+     358
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "HMS Bounty steamship in foggy harbor",
+   "man with suitcase in fogy weather",
+   "suitcase",
+   "boat",
+   "black leather briefcase",
+   "hat",
+   "person"
+  ],
+  "s": 18.9
+ },
+ {
+  "n": 84,
+  "version": "vella",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     434,
+     94,
+     461,
+     136
+    ]
+   ],
+   "radiator": [
+    [
+     744,
+     310,
+     942,
+     461
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     934,
+     370,
+     1022,
+     478
+    ]
+   ],
+   "faucet": [
+    [
+     782,
+     406,
+     850,
+     443
+    ]
+   ],
+   "cast iron stove": [
+    [
+     236,
+     420,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     423,
+     0,
+     472,
+     143
+    ]
+   ],
+   "wall lamp": [
+    [
+     422,
+     0,
+     472,
+     143
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman cooking in kitchen with pottery and utensils",
+   "woman cooking with pot on stove in kitchen"
+  ],
+  "s": 19.8
+ },
+ {
+  "n": 91,
+  "version": "vella",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     0,
+     107,
+     5,
+     130
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     358,
+     201
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     929,
+     446,
+     1022,
+     533
+    ]
+   ],
+   "faucet": [
+    [
+     744,
+     258,
+     768,
+     297
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     318,
+     432,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     928,
+     0,
+     1018,
+     148
+    ]
+   ],
+   "wall lamp": [
+    [
+     927,
+     0,
+     1018,
+     149
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "kitchen & dining room table",
+   "wooden chair in dimly lit room",
+   "curtain",
+   "bowl",
+   "houseplant",
+   "houseplant",
+   "bowl",
+   "vase",
+   "bowl",
+   "bowl",
+   "vase",
+   "bowl",
+   "candle",
+   "vase",
+   "vase",
+   "bowl",
+   "vase",
+   "candle"
+  ],
+  "s": 20.9
+ },
+ {
+  "n": 1,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     436,
+     0,
+     1022,
+     348
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     142,
+     137,
+     1013,
+     575
+    ]
+   ],
+   "cast iron stove": [
+    [
+     142,
+     137,
+     1013,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     437,
+     0,
+     1022,
+     347
+    ]
+   ],
+   "wall lamp": [
+    [
+     436,
+     0,
+     1022,
+     347
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "wooden bowl with burning sticks in it",
+   "wooden spoon in fire bowl",
+   "wooden spoons in a bowl of fire"
+  ],
+  "s": 19.2
+ },
+ {
+  "n": 5,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     561,
+     352,
+     578,
+     379
+    ]
+   ],
+   "radiator": [
+    [
+     341,
+     298,
+     440,
+     489
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     341,
+     296,
+     441,
+     490
+    ],
+    [
+     552,
+     300,
+     587,
+     391
+    ]
+   ],
+   "faucet": [
+    [
+     342,
+     299,
+     439,
+     486
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     266,
+     1022,
+     575
+    ],
+    [
+     0,
+     266,
+     386,
+     575
+    ],
+    [
+     168,
+     131,
+     431,
+     237
+    ]
+   ],
+   "street lamp": [
+    [
+     554,
+     303,
+     585,
+     388
+    ]
+   ],
+   "wall lamp": [
+    [
+     554,
+     303,
+     586,
+     389
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman with lantern in field at sunset"
+  ],
+  "s": 19.1
+ },
+ {
+  "n": 12,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     492,
+     281,
+     550,
+     317
+    ]
+   ],
+   "radiator": [
+    [
+     67,
+     379,
+     210,
+     497
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     67,
+     379,
+     210,
+     499
+    ]
+   ],
+   "faucet": [
+    [
+     483,
+     308,
+     519,
+     348
+    ]
+   ],
+   "cast iron stove": [
+    [
+     66,
+     379,
+     219,
+     497
+    ]
+   ],
+   "street lamp": [
+    [
+     482,
+     276,
+     556,
+     459
+    ],
+    [
+     393,
+     295,
+     453,
+     457
+    ]
+   ],
+   "wall lamp": [
+    [
+     68,
+     3,
+     231,
+     497
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman in long dress with bonfire in dark room",
+   "woman in dress with fire in background",
+   "woman in black dress with flames in background",
+   "woman in dark dress with torches in front of bonfire"
+  ],
+  "s": 19.8
+ },
+ {
+  "n": 17,
+  "version": "actual",
+  "mala": true,
+  "ovd": {
+   "light bulb": [
+    [
+     122,
+     170,
+     161,
+     249
+    ]
+   ],
+   "radiator": [
+    [
+     898,
+     0,
+     1022,
+     525
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     641,
+     330,
+     772,
+     478
+    ]
+   ],
+   "faucet": [
+    [
+     643,
+     181,
+     770,
+     483
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ],
+    [
+     0,
+     0,
+     422,
+     499
+    ],
+    [
+     0,
+     0,
+     421,
+     499
+    ],
+    [
+     0,
+     404,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     118,
+     166,
+     165,
+     253
+    ]
+   ],
+   "wall lamp": [
+    [
+     118,
+     166,
+     165,
+     253
+    ]
+   ],
+   "framed picture": [
+    [
+     641,
+     181,
+     773,
+     488
+    ]
+   ]
+  },
+  "densa": [
+   "silhouette of woman in long coat with umbrella in foggy hallway",
+   "silhouetted man walking in dark room with light shining on him"
+  ],
+  "s": 19.6
+ },
+ {
+  "n": 22,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     495,
+     0,
+     540,
+     0
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     174,
+     159,
+     435
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     174,
+     159,
+     435
+    ]
+   ],
+   "faucet": [
+    [
+     429,
+     206,
+     568,
+     540
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     174,
+     160,
+     435
+    ]
+   ],
+   "street lamp": [
+    [
+     429,
+     206,
+     567,
+     539
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman in gray hooded cloak walking on dirt path in foggy landscape"
+  ],
+  "s": 18.9
+ },
+ {
+  "n": 30,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     613,
+     250,
+     624,
+     281
+    ]
+   ],
+   "radiator": [
+    [
+     529,
+     276,
+     651,
+     491
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     529,
+     276,
+     652,
+     491
+    ]
+   ],
+   "faucet": [
+    [
+     592,
+     281,
+     647,
+     296
+    ]
+   ],
+   "cast iron stove": [
+    [
+     528,
+     277,
+     651,
+     492
+    ]
+   ],
+   "street lamp": [
+    [
+     556,
+     75,
+     607,
+     196
+    ]
+   ],
+   "wall lamp": [
+    [
+     556,
+     75,
+     607,
+     196
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "nun in black robe with white collar and cuffs in church doorway",
+   "woman in black dress with white shirt and corset",
+   "nun"
+  ],
+  "s": 19.4
+ },
+ {
+  "n": 38,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     0,
+     0,
+     0,
+     2
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     205,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     404,
+     199,
+     472,
+     244
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     484,
+     25,
+     504
+    ]
+   ],
+   "cast iron stove": [
+    [
+     404,
+     143,
+     514,
+     244
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     205,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman petting brown cow in barn",
+   "woman peting brown cow on farm",
+   "human face"
+  ],
+  "s": 18.5
+ },
+ {
+  "n": 43,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     667,
+     55,
+     685,
+     78
+    ]
+   ],
+   "radiator": [
+    [
+     266,
+     364,
+     444,
+     484
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     265,
+     365,
+     444,
+     481
+    ]
+   ],
+   "faucet": [
+    [
+     266,
+     366,
+     442,
+     480
+    ]
+   ],
+   "cast iron stove": [
+    [
+     264,
+     363,
+     445,
+     486
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ],
+    [
+     264,
+     363,
+     444,
+     485
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "gray wolf in field"
+  ],
+  "s": 18.9
+ },
+ {
+  "n": 48,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     406,
+     329,
+     415,
+     337
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     391,
+     387,
+     709,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     0,
+     130,
+     275
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ],
+    [
+     0,
+     0,
+     748,
+     575
+    ],
+    [
+     200,
+     46,
+     711,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     131,
+     276
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     131,
+     276
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "man in green coat sitting on moss-covered rock wall",
+   "man in beige coat sitting in front of moss-filled wall",
+   "human face"
+  ],
+  "s": 20.0
+ },
+ {
+  "n": 52,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     839,
+     319,
+     890,
+     367
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     838,
+     319,
+     944,
+     386
+    ]
+   ],
+   "cast iron stove": [
+    [
+     838,
+     319,
+     945,
+     386
+    ]
+   ],
+   "street lamp": [
+    [
+     836,
+     316,
+     950,
+     406
+    ]
+   ],
+   "wall lamp": [
+    [
+     836,
+     316,
+     950,
+     406
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     572
+    ]
+   ]
+  },
+  "densa": [
+   "brown leather journal with brown ribbon"
+  ],
+  "s": 19.0
+ },
+ {
+  "n": 57,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     210,
+     219,
+     220,
+     224
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     349,
+     80,
+     434
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     495,
+     133,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     888,
+     368,
+     899,
+     382
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     495,
+     133,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     511,
+     0,
+     569,
+     183
+    ]
+   ],
+   "wall lamp": [
+    [
+     510,
+     0,
+     570,
+     184
+    ]
+   ],
+   "framed picture": [
+    [
+     10,
+     179,
+     46,
+     278
+    ]
+   ]
+  },
+  "densa": [
+   "kitchen & dining room table",
+   "wooden table with beige tablecloth and metal legs",
+   "wood dining table with white tablecloth in restaurant",
+   "wooden dining table",
+   "woman in pink pleated skirt in church",
+   "wooden tables",
+   "man in suit walking in church",
+   "wooden chairs with beaded tablecloth on wooden floor",
+   "woodworking table with wooden chairs and beige fabric",
+   "man in black suit at table with plate of food",
+   "woman in red dress at table in restaurant",
+   "wooden chair with beading in restaurant",
+   "wood table with black metal legs and beaded seatbelt",
+   "wooden folding chair with black seat and backrest",
+   "wood-framed tablecloth with beveled edges and wooden legs"
+  ],
+  "s": 21.2
+ },
+ {
+  "n": 61,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     51,
+     462,
+     74,
+     480
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     239
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     238
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     238
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     239
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [],
+  "s": 18.5
+ },
+ {
+  "n": 65,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     1020,
+     197,
+     1022,
+     204
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     730,
+     462,
+     737,
+     470
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [],
+  "s": 18.2
+ },
+ {
+  "n": 70,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     204,
+     0,
+     249,
+     23
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     572
+    ]
+   ]
+  },
+  "densa": [
+   "elderly hands holding each other",
+   "elderly hands holding each other"
+  ],
+  "s": 18.9
+ },
+ {
+  "n": 74,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     131,
+     0,
+     248,
+     132
+    ]
+   ],
+   "radiator": [
+    [
+     20,
+     0,
+     351,
+     215
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     550,
+     340,
+     692,
+     414
+    ]
+   ],
+   "cast iron stove": [
+    [
+     20,
+     37,
+     350,
+     213
+    ]
+   ],
+   "street lamp": [
+    [
+     20,
+     0,
+     352,
+     219
+    ]
+   ],
+   "wall lamp": [
+    [
+     20,
+     0,
+     352,
+     218
+    ]
+   ],
+   "framed picture": [
+    [
+     548,
+     336,
+     692,
+     417
+    ]
+   ]
+  },
+  "densa": [
+   "wooden playing card with black bird design on wooden table",
+   "black braided cord necklace with bird design",
+   "black leather bookmark with bird and flower design",
+   "candle holder",
+   "black bowl",
+   "candle",
+   "bird"
+  ],
+  "s": 19.1
+ },
+ {
+  "n": 83,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     531
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     417,
+     322,
+     518,
+     413
+    ]
+   ],
+   "faucet": [
+    [
+     526,
+     99,
+     553,
+     149
+    ]
+   ],
+   "cast iron stove": [
+    [
+     868,
+     441,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     408
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman in black abaya sitting on stone bench",
+   "nun in black dress with fur pom pom",
+   "human face"
+  ],
+  "s": 19.1
+ },
+ {
+  "n": 88,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     0,
+     0,
+     0,
+     2
+    ]
+   ],
+   "radiator": [
+    [
+     584,
+     272,
+     711,
+     333
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     283,
+     284,
+     329,
+     398
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     0,
+     572,
+     342
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     573,
+     344
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     574,
+     344
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     574,
+     344
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "woman in black dress in wheat field with basket"
+  ],
+  "s": 18.0
+ },
+ {
+  "n": 93,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     0,
+     0,
+     122,
+     80
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     242,
+     409
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     402,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     402,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     242,
+     410
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     242,
+     410
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "burning wood logs",
+   "burning wood log",
+   "burning wood"
+  ],
+  "s": 18.8
+ },
+ {
+  "n": 98,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     163,
+     425,
+     237,
+     493
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     485,
+     534,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     485,
+     534,
+     575
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     486,
+     534,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     398,
+     59,
+     493
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     247,
+     511
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "elderly woman in gray headscarf looking out window",
+   "human face",
+   "human eye",
+   "human eye"
+  ],
+  "s": 18.9
+ },
+ {
+  "n": 102,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     313,
+     219,
+     736,
+     410
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     33,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     0,
+     38,
+     736,
+     410
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     33,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     36,
+     738,
+     413
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [],
+  "s": 18.2
+ },
+ {
+  "n": 107,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     472,
+     0,
+     600,
+     565
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "dried herbs hanging from wooden beam",
+   "dried herb broomstick",
+   "dried lavender plant hanging from branch",
+   "dried flower bud hanging from string",
+   "dried green plant hanging on wooden pole",
+   "dried purple flower bud on wooden stick",
+   "dandelion seed pod hanging from tree branch"
+  ],
+  "s": 19.4
+ },
+ {
+  "n": 113,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     241,
+     162,
+     288,
+     208
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     362,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     362,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     647,
+     393,
+     657,
+     405
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     362,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     238,
+     159,
+     291,
+     213
+    ]
+   ],
+   "wall lamp": [
+    [
+     238,
+     159,
+     291,
+     213
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "purple heather field"
+  ],
+  "s": 18.1
+ },
+ {
+  "n": 118,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     508,
+     26,
+     554,
+     74
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     296,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     239,
+     195,
+     491,
+     459
+    ]
+   ],
+   "faucet": [
+    [
+     387,
+     197,
+     475,
+     212
+    ]
+   ],
+   "cast iron stove": [
+    [
+     238,
+     194,
+     492,
+     461
+    ],
+    [
+     496,
+     190,
+     754,
+     455
+    ]
+   ],
+   "street lamp": [
+    [
+     502,
+     21,
+     561,
+     85
+    ]
+   ],
+   "wall lamp": [
+    [
+     502,
+     21,
+     561,
+     85
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "brown cow in field with foggy background",
+   "brown cow with horns in field"
+  ],
+  "s": 18.4
+ },
+ {
+  "n": 124,
+  "version": "actual",
+  "mala": false,
+  "ovd": {
+   "light bulb": [
+    [
+     639,
+     414,
+     699,
+     480
+    ]
+   ],
+   "radiator": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "rolling suitcase": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "faucet": [
+    [
+     639,
+     414,
+     700,
+     480
+    ]
+   ],
+   "cast iron stove": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "street lamp": [
+    [
+     82,
+     15,
+     994,
+     421
+    ]
+   ],
+   "wall lamp": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ],
+   "framed picture": [
+    [
+     0,
+     0,
+     1022,
+     575
+    ]
+   ]
+  },
+  "densa": [
+   "driftwood branch floating in blue water",
+   "drift branch floating on blue water"
+  ],
+  "s": 18.6
+ }
+]

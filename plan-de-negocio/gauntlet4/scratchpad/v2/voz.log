@@ -1,3 +1,253 @@
 inicio Sat Oct  3 05:22:52 UTC 2026
 == 1_texto
 curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+Phoneme symbols:
+
+  0: X
+  1:  
+  2: $
+  3: M
+  4: ,
+  5: .
+  6: a
+  7: E
+  8: e
+  9: i
+ 10: j
+ 11: O
+ 12: o
+ 13: u
+ 14: w
+ 15: p
+ 16: b
+ 17: B
+ 18: t
+ 19: d
+ 20: D
+ 21: k
+ 22: g
+ 23: G
+ 24: f
+ 25: T
+ 26: s
+ 27: S
+ 28: m
+ 29: n
+ 30: J
+ 31: N
+ 32: l
+ 33: Z
+ 34: r
+ 35: R
+ 36: x
+ 37: C
+ 38: !
+ 39: "
+ 40: (
+ 41: )
+ 42: /
+ 43: :
+ 44: ;
+ 45: ?
+ 46: [
+ 47: ]
+ 48: {
+ 49: }
+ 50: ¡
+ 51: º
+ 52: ª
+ 53: `
+ 54: ¿
+ 55: K
+ 56: W
+ 57: á
+ 58: É
+ 59: é
+ 60: í
+ 61: j́
+ 62: Ó
+ 63: ó
+ 64: ú
+ 65: ẃ
+ 66: °
+ 67: ´
+ 68: '
+Grapheme symbols:
+
+  0:  
+  1: ,
+  2: .
+  3: a
+  4: e
+  5: i
+  6: o
+  7: u
+  8: p
+  9: b
+ 10: t
+ 11: d
+ 12: c
+ 13: g
+ 14: f
+ 15: z
+ 16: s
+ 17: x
+ 18: m
+ 19: n
+ 20: ñ
+ 21: nh
+ 22: l
+ 23: ll
+ 24: r
+ 25: rr
+ 26: j
+ 27: ch
+ 28: !
+ 29: "
+ 30: (
+ 31: )
+ 32: /
+ 33: :
+ 34: ;
+ 35: ?
+ 36: [
+ 37: ]
+ 38: {
+ 39: }
+ 40: ¡
+ 41: º
+ 42: ª
+ 43: `
+ 44: ¿
+ 45: ao
+ 46: tS
+ 47: á
+ 48: é
+ 49: í
+ 50: ó
+ 51: ú
+ 52: ps
+ 53: pn
+ 54: gu
+ 55: h
+ 56: k
+ 57: q
+ 58: qu
+ 59: v
+/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/tts/venv/lib/python3.11/site-packages/torch/nn/modules/rnn.py:990: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  super().__init__("LSTM", *args, **kwargs)
+voz   1   2.6s Mouchos, curuxas, sapos e bruxas.
+voz   2   5.1s Coas luces apagadas, alguén pronuncia o conxuro mentres ergu
+voz   3   1.7s Parece de hai séculos.
+voz   4   7.7s Pero ten autor coñecido e é de mil novecentos sesenta e sete
+voz   5   2.5s Vilalba, mil seiscentos dezasete.
+voz   6   6.6s Unha testemuña declara que a parteira Dorotea do Barro dixer
+voz   7   4.8s Abondaría con calzarlle ao home os zapatos da muller, dicind
+voz   8   3.0s E o home saltaría coma un poldro bravo.
+voz   9   1.4s Boas noites.
+voz  10   4.6s A voz que vas escoitar é sintética, e este texto preparouno 
+voz  11   2.3s Isto é Cousas de Galiza para durmir.
+voz  12   5.1s As palabras do conxuro parecen vellas e son novas, e hai un 
+voz  13   5.7s O que se contou de Dorotea é vello de verdade, e só o coñece
+voz  14   3.2s As palabras que ela sabía, esas non as coñecemos.
+voz  15   3.2s Nos papeis daqueles procesos hai moitas máis palabras.
+voz  16   4.0s Hai unha palabra trabucada que ninguén borrou en máis de cat
+voz  17   5.7s E hai mesmo noticia dunha lista coas mulleres que uns veciño
+voz  18   3.2s Había mulleres de aldea detrás de todas esas palabras.
+voz  19   6.1s A meiga, moitas veces, non era a bruxa dos contos, senón a q
+voz  20   6.2s Esta noite imos buscalas no pouco que delas quedou escrito, 
+voz  21   4.5s En Vilalba, a Real Audiencia xulgou tamén a María do Barro, 
+voz  22   6.0s Da filla dicían outra cousa: que era alcaiota, e que acollía
+voz  23   5.1s Unha testemuña oíu murmurar entre algúns veciños que María e
+voz  24   6.6s E contou que María, cando tiña o gando no monte, dicía unhas
+voz  25   4.2s Pensemos nela alí, co gando arredor e o vento levando a medi
+voz  26   7.4s E, entre elas, un desexo para o gando: que bebese auga de se
+voz  27   3.0s Eran palabras para o gando, non para un tribunal.
+voz  28   4.3s Pero do monte pasaron á boca da testemuña, e da boca ao pape
+voz  29   4.7s No papel quedou ata a emenda de quen escribía: que trouxese 
+voz  30   5.6s O papel gárdao o Arquivo do Reino de Galicia, con outros pro
+voz  31   4.8s Máis de catrocentos anos despois, a palabra trabucada segue 
+voz  32   4.9s Así nos chegan as palabras daquelas mulleres: na voz doutros
+voz  33   3.4s E as palabras tamén podían pechar portas.
+voz  34   7.0s O vicario xeral do bispado de Mondoñedo excomungou a nai e a
+voz  35   2.2s Auga de sete fontes para o gando.
+voz  36   2.4s E para elas, nin auga.
+voz  37   3.9s Aquel papel gardou ata o máis pequeno, unha palabra trabucad
+voz  38   6.1s Ao conxuro da queimada pasoulle ao revés: polo camiño quedou
+voz  39   6.5s Mariano Marcos Abalo xuntábase cos amigos a bordo do vello b
+voz  40   4.8s Contaba que escribira o conxuro para darlles un pouco de rit
+voz  41   5.7s E que houbo outros cinco ou seis conxuros daquela época, per
+voz  42   6.7s Unha empresa vendeu copias do conxuro sen o nome do autor, e
+voz  43   4.2s En dous mil un, o autor rexistrouno como propiedade intelect
+voz  44   4.9s Así, unhas palabras sen nome no papel acabaron parecendo de 
+voz  45   3.3s O conxuro naceu entre amigos, arredor dun pote.
+voz  46   4.2s As palabras dos procesos acabaron noutro sitio: nos tribunai
+voz  47   5.4s Tres xustizas podían xulgar a bruxería: a civil, a eclesiást
+voz  48   7.9s Para o investigador Diego Valor Bravo, coas meigas galegas a
+voz  49   3.0s Os xuíces civís foron moito máis duros.
+voz  50   4.8s E nos procesos civís da Real Audiencia, todas as acusadas er
+voz  51   5.8s Unha delas foi María Cibreira, procesada en mil seiscentos t
+voz  52   5.8s Despois de ser torturada, confesou que había uns doce anos q
+voz  53   2.4s Que llo ensinara a súa nai.
+voz  54   4.3s Que á nai acudía moita xente, e que ela lles facía curas e m
+voz  55   5.7s E que as noites de san Xoán as meigas ían ás xuntanzas do de
+voz  56   3.7s Diante dela, alguén preguntaba, e alguén escribía.
+voz  57   6.7s Rodrigo Pousa, historiador, explica que aquelas mulleres non
+voz  58   4.5s Ás veces, a voz era dunha muller, e as palabras, de quen pre
+voz  59   4.3s Unha noite de san Xoán aparece tamén nos papeis de Campo Lam
+voz  60   4.9s En mil seiscentos corenta e tres, a Real Audiencia procesou 
+voz  61   5.4s Uns veciños, rifados cunha delas, culpábana de lles facer mo
+voz  62   8.2s Unha testemuña contou que, pola sospeita que tiñan delas, un
+voz  63   5.9s Alí, dixo, viron e recoñeceron as mulleres, e apuntáronas nu
+voz  64   5.9s Pensemos nunha noite curta de xuño: a auga fría da fonte, e 
+voz  65   4.1s Do que elas dixesen aquela noite, non nos chegou nin unha pa
+voz  66   3.6s Só nos chegou a noticia da lista, na voz doutros.
+voz  67   6.5s A noite de san Xoán era costume ir ás fontes, porque se cría
+voz  68   5.0s E na crenza popular, era tamén a noite en que as meigas anda
+voz  69   4.0s A mesma fonte, a mesma noite, e dúas maneiras de mirala.
+voz  70   6.6s Moitas das acusadas eran parteiras e menciñeiras que aprende
+voz  71   5.7s Nos papeis, Pousa atopou esta expresión: maldita a nai que n
+voz  72   4.4s Moitas denuncias nacían de liortas entre veciños, coma en Ca
+voz  73   6.7s Ás veces había quen falaba de bruxería cando, en realidade, 
+voz  74   8.8s E, con todo, para Pousa aquelas mulleres eran necesarias, po
+voz  75   8.0s Xa no século dezaoito, frei Martín Sarmiento defendeu o sabe
+voz  76   6.3s No mesmo século, o frade Benito Xerónimo Feijoo escribiu con
+voz  77   5.6s Advertía que as fábulas de bruxería pasan do pobo aos libros
+voz  78   5.5s Así, para el, unha fábula nacida no recuncho dunha aldea che
+voz  79   6.7s E admitía que moitas veces o voo das bruxas era só soñado, a
+voz  80   3.1s E aquí deixamos os papeis.
+voz  81   5.0s Desde agora a historia vai máis amodo, e non tes que lembrar
+voz  82   6.5s É outra vez aquela noite de xuño, e esta vez ninguén espreit
+voz  83   7.8s Para facer o cacho, alguén colle auga de sete fontes, coma n
+voz  84   6.9s A talla queda fóra toda a noite, para que lle caia o orballo
+voz  85   7.8s Lonxe, cando a cacharela xa case se apaga, a xente salta as 
+voz  86   4.8s E ao saltar di unhas palabras que ninguén apunta nunha lista
+voz  87   5.4s Salto por riba do lume de san Xoán, para que non me morda ca
+voz  88   7.1s Ao amencer, a primeira auga da fonte chámase flor da auga, e
+voz  89  10.8s Coa auga das herbas, verde e recendente, lávase a cara; e na
+voz  90   7.1s Despois, os ramos de herbas colgan secos nalgún lugar da cas
+voz  91   5.7s Outra noite, nunha cociña de aldea, tras a cea, apáganse as 
+voz  92   6.9s No pote de barro van a augardente e o azucre, a casca de lim
+voz  93   5.0s Os comensais xúntanse arredor do pote, para animar os corazó
+voz  94   8.1s Un deles ergue cun cazo o líquido en chamas e déixao caer po
+voz  95   3.6s Mouchos, curuxas, sapos e bruxas.
+voz  96   7.6s Agora xa sabes quen escribiu estas palabras, que parecían de
+voz  97   7.1s E alguén di aquel dito tan coñecido: eu non creo nas meigas,
+voz  98   4.2s Ese si é de todos, porque ninguén lle coñece autor.
+voz  99   7.6s As lapas do alcohol van baixando amodo, ata que se esgota ca
+voz 100   7.6s Das meigas de verdade escoitamos esta noite poucas palabras,
+voz 101   8.2s A outra meiga, a dos contos, saíu das fábulas que van da ald
+voz 102   8.0s Agora chove sobre as lousas do tellado, unha chuvia miúda e 
+voz 103   8.9s Na corte, o gando dorme quente, e nalgún lugar da casa colga
+voz 104   8.6s Lonxe, as sete fontes seguen correndo na escuridade, e a aug
+voz 105   9.7s Ninguén apunta nomes, ninguén pregunta, e xa non fan falta p
+voz 106   5.1s A casa descansa baixo a chuvia, e xa non tes que lembrar nad
+voz 107   4.6s E agora, amodo, xa se pode apagar a candea.
+voz 108   1.8s Boas noites.
+== 4_escenas
+PENDENTE: escribir a lista de planos (78 planos) a partir de /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/planos.json en ESCENAS.json e volver lanzar o comando con --escenas
+rc 3 Sat Oct  3 05:41:02 UTC 2026
