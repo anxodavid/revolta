@@ -423,6 +423,8 @@ def main():
     ap.add_argument('--so-texto', action='store_true', help='só as portas de texto (para o Gauntlet do guion)')
     ap.add_argument('--so-planos', action='store_true',
                     help='só ata os planos: escribe escenas.json e planos.json (sen imaxes) para validar o corte')
+    ap.add_argument('--so-imaxes', action='store_true',
+                    help='para despois das imaxes e da súa porta (Gauntlet 4: revisar cada imaxe antes do movemento e da montaxe)')
     ap.add_argument('--ata-plano', type=int, default=None,
                     help='avance: monta só os planos 0..N (os que xa teñen imaxe) coa mesma curva, voz e son do episodio')
     a = ap.parse_args()
@@ -604,6 +606,10 @@ def main():
         kw = {'escenas': pl} if 'escenas' in inspect.signature(imaxes.graduar).parameters else {}
         imgs = imaxes.graduar(imgs, W / 'imaxes_graduadas', **kw)
     save_t()
+    if a.so_imaxes:
+        rexeitadas = [r['n'] if 'n' in r else i + 1 for i, r in enumerate(rex) if not r['ok']]
+        print(f'so-imaxes: {len(imgs)} planos con imaxe; sen pasar a porta: {len(rexeitadas)} {rexeitadas[:40]}', flush=True)
+        return
 
     # 5 son (decisións D13 e D14 do promotor): o son de cada escena (campo `son` de cada plano ou, se falta, palabras
     # do prompt) co catálogo de son.py, variado e con eventos cada vez máis escasos; voz limpa no resto. O nivel segue
