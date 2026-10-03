@@ -37,3 +37,21 @@ The following part of your input was truncated because CLIP can only handle sequ
 The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['with a short black beard in a coarse linen shirt watching, side light']
 imaxe   5 intento 2 118.2s + revisión 10.5s ok
 imaxe   6 intento 0 115.8s + revisión  9.9s ['man sen corpo (2)', 'roupa actual']
+imaxe   6 intento 1 118.4s + revisión  9.4s ['interior moderno']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['hidden in the sleeves or out of frame']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['hidden in the sleeves or out of frame']
+imaxe   6 intento 2 116.0s + revisión  9.4s ['interior moderno', 'negativo do plano: modern clothes (CLIP)']
+imaxe   7 intento 0 115.8s + revisión 10.5s ok
+imaxe   8 intento 0 115.0s + revisión  9.3s ok
+`torch_dtype` is deprecated! Use `dtype` instead!
+imaxe   9 intento 0 149.2s + revisión 11.2s ok
+imaxe  10 intento 0 113.9s + revisión 10.4s ok
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['century']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['century']
+imaxe  11 intento 0 119.3s + revisión  9.9s ['interior moderno', 'texto na imaxe']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century']
+imaxe  11 intento 1 116.1s + revisión 10.0s ['texto na imaxe']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century, plain surfaces']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century, plain surfaces']
+imaxe  11 intento 2 113.2s + revisión  9.4s ['man sen corpo (2)', 'texto na imaxe']
