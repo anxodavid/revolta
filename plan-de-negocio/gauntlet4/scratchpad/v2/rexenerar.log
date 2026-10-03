@@ -1,2 +1,20 @@
 lista de produción: 77 planos, 54 con axustes -> plan-de-negocio/gauntlet4/video/escenas-v2-produccion.json
 rexenerar intento 1 Sat Oct  3 19:10:05 UTC 2026
+== 1_texto
+curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+voz: todas as frases na caché
+== 4_escenas
+planos por sentido: 77 (cortes a metade de frase: 2, por Whisper: 2)
+== 5_imaxes
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1791055628.888415    1927 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791055628.904317    1927 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791055629.694014    1934 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791055629.730080    1935 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.

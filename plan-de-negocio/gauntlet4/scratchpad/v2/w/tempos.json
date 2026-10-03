@@ -1,11 +1,11 @@
 {
  "1_texto": {
-  "parede_s": 515.5,
+  "parede_s": 515.7,
   "cpu_s": 1416.3
  },
  "3_voz": {
-  "parede_s": 343.2,
-  "cpu_s": 830.2
+  "parede_s": 350.5,
+  "cpu_s": 830.6
  },
  "4_escenas": {
   "parede_s": 97.5,

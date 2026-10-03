@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/004-54589876-0.png",
+ "accion": "the bearded man writes slowly with the quill and looks up, the candle flames flicker",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 1002.3,
+ "s_pasos": [
+  485.2,
+  48.6,
+  46.6,
+  45.7,
+  44.6,
+  45.4,
+  44.8,
+  46.5
+ ],
+ "s_descodificar": 194.9,
+ "fotogramas": 73,
+ "pico_proceso_mb": 12697
+}
