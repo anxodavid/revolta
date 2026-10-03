@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/graduadas/016-02ec0d98-0.png",
+ "accion": "Seen from behind, a guard in a long wool cloak and a village woman in a long dress walk slowly side by side through the heavy stone doorway of a granite building toward the bright misty light outside. Their steps are slow and their clothes sway as they walk. The camera is static. Cinematic, realistic, natural walking motion.",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 470.2,
+ "s_pasos": [
+  54.1,
+  45.8,
+  42.7,
+  42.5,
+  42.6,
+  43.3,
+  42.2,
+  41.9
+ ],
+ "s_descodificar": 115.1,
+ "fotogramas": 73,
+ "pico_proceso_mb": 13512
+}
