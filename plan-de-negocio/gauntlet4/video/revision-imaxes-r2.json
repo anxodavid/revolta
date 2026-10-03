@@ -1,0 +1,158 @@
+{
+ "descricion": "Revisión r2 das imaxes rexeneradas da v2 (Gauntlet 4): 38 planos, feita por un axente Claude o 03-10-2026; ningunha persoa revisou estas imaxes. escollas: ficheiro escollido nos planos que valen ou con outro intento; rexenerar: prompt novo (sen o prefixo de estilo, <= 55 tokens CLIP), negativo completo (só o usa a porta) e referencia (null = sen semente); accions: acción I2V que casa coa imaxe (ou co prompt novo). Aplícase con video/scripts/produccion.py revision video/revision-imaxes-r2.json. Detalle en revision-imaxes-r2.md.",
+ "escollas": {
+  "7": "006-a661aa18-1.png",
+  "9": "008-6de276c1-0.png",
+  "17": "016-f7b99d50-1.png",
+  "20": "019-e8c491e2-1.png",
+  "22": "021-58ee4f0b-0.png",
+  "31": "030-547fa865-2.png",
+  "39": "038-e2e0f531-1.png",
+  "40": "039-11685f76-0.png",
+  "41": "040-197330a6-2.png",
+  "42": "041-da2d9672-2.png",
+  "44": "043-a910f44e-0.png",
+  "45": "044-23046b20-0.png",
+  "46": "045-1181e234-0.png",
+  "49": "048-c696dadc-2.png",
+  "51": "050-d1c16264-0.png",
+  "61": "060-fd7c8dbc-0.png",
+  "63": "062-f1cdc92c-0.png",
+  "64": "063-3f44e6e3-2.png",
+  "67": "066-0d22e2d7-0.png",
+  "68": "067-8567c92d-0.png",
+  "70": "069-2fef8b64-1.png",
+  "72": "071-91eed99a-0.png",
+  "74": "073-2ebb63ab-0.png",
+  "77": "076-ad9820bd-0.png"
+ },
+ "motivos": {
+  "7": "Mans calzando unha zapatilla parda de coiro brando; detrás, o zapato negro do home (pode lerse como o seu). O [0] é un vello axeonllado sen zapato nin pé.",
+  "9": "Vela de cera nun prato de ferro e dúas candeas finas en candeeiros de ferro, nunha mesa escura: a vela grande segue sendo de bloque, pero xa non parece foto de produto. Fondo escuro, sen granito.",
+  "17": "Dúas vellas de aldea sentadas no poio da porta, de saia longa e pano: casa co texto. Defectos menores: unha fiestra de vidro pequena na esquina superior dereita e a parede revocada. Non hai moza nin feixóns: cambia a acción I2V.",
+  "20": "María co pano vermello (e o vestido vermello) ante o xuíz de barba branca que a sinala coa pluma: a acción casa. A sala é grande e con columnas, pero sen lampadario; o [0] é unha dama vitoriana sen pano.",
+  "22": "Unha veciña con capucha e un vello de capa diante da porta dunha igrexa de pedra: murmuran sós. Faltan a segunda muller e a mirada de sospeita, e están separados: cambia a acción I2V.",
+  "31": "Os tres intentos teñen letra: o [0], gótica de imprenta e unha pseudopalabra («Keathing»); o [1], pseudopalabras inglesas na lente («baching men»). O [2] ten letra cursiva manuscrita, case ilexible, e o resto desenfocado: o menos malo.",
+  "39": "Cinco homes de camisa clara arredor dunha cunca grande de lume na cuberta dun barco, co porto detrás: «entre amigos, arredor dun pote». Lume laranxa claro, non azul. O [0] e o [2] son fogueiras grandes na cuberta (a porta rexeitou os tres por «bonfire»).",
+  "40": "Tribunal de clérigos de negro nunha sala grande de madeira con candelabros de velas (non de cristal) e fiestras altas. As tres xustizas non se distinguen (todos de negro), pero lese «tribunal». Paralaxe, prioridade 3; só houbo un intento.",
+  "41": "Frade vello de hábito negro sentado entre feixes de papeis e velas, cun libriño nas mans, sen lentes. O [0] (mellor encadre) leva lentes metálicas de patillas, que a r1 xa rexeitou; o [1] son dous monxes de barba longa, un con lentes. Cambia a acción I2V.",
+  "42": "Mulleres de negro diante de homes de barba e hábito negro arredor dunha mesa: lese «todas as acusadas eran mulleres». Fiestra de vidro e un lume sobre a mesa (menor). O [0] é un tribunal moderno con mulleres rubias de pelo solto. Cambia a acción I2V.",
+  "44": "A vella curandeira de pano branco dálle unha ola de barro a unha muller cun cesto, diante dun muro de granito. A «man sen corpo» da porta é un falso positivo. Sen neno: cambia a acción I2V. Pano branco (o elenco dicía negro), pero a nai só sae aquí.",
+  "45": "O xuíz de barba gris, inclinado sobre a mesa, pregunta á muller do pano gris (Cibreira) e ao fondo alguén escribe: casa co texto. Fiestras de vidro dunha sala oficial (aceptable). O [1], o da porta, non ten escribán. Cambia a acción I2V.",
+  "46": "Xuíz de barba branca e gorro negro e a muller do pano gris, de perfil, á luz das velas: bo primeiro plano, coherente co elenco de Cibreira (43, 45). Non hai papel: cambia a acción I2V.",
+  "49": "Tres veciños de chaleco pardo (coma no 50) agachados contra un muro de pedra de noite, co lume á dereita: non se ve a espreita, pero non contradí o texto. O [1] ten unha casa ardendo e o [0] unha fogueira grande. Cambia a acción I2V.",
+  "51": "Auga fría que cae entre pedras e fentos: unha fonte natural, sen estatuas nin billas. Non se ve o cano de pedra, pero vale para «a auga fría da fonte».",
+  "61": "Unha moza durmindo tranquila baixo unha manta de la: «só soñado». Non hai sombra de paxaro na parede: cambia a acción I2V.",
+  "63": "Pía de pedra con musgo baixo a lúa chea, de noite e sen ninguén. O [2], o da porta, ten unha brétema bonita pero dúas lúas; o [1] repite o 51.",
+  "64": "Unha talla de barro con auga e herbas ao pé dun muro, de noite, cun farol de vela: a idea do cacho. A talla brilla coma un lavabo (menor). O [1], o da porta, ten un boneco e un testo de flores modernos; o [0], unha billa metálica.",
+  "67": "Ramos de herbas secas colgados dunha vara e outro na mesa: calma e sen anacronismos. Fondo gris de estudo, sen o granito.",
+  "68": "A cunca de barro coas cuncas no bordo e unha man botando grans de café: a queimada antes do lume. Luz clara e bege, non de noite (defecto), pero sen o laranxa forte do intento vello. Non hai xerra: cambia a acción I2V.",
+  "70": "O barco vello no peirao de noite: o eco do plano 4 que pediu o crítico de planos (a porta rexeita por repetición). O [3], o da porta, é un bosque sen barco. Escollo o [1] (CLIP 0,94 co 4) e non o [0] (0,96).",
+  "72": "Cunca de barro sobre os papeis, cun fío de fume e unha lapa pequena ao fondo: o lume que se apaga. A porta rexeitou os tres por «lume vivo» (2,2 % de altas luces); é unha lapa pequena nunha imaxe calma. Falta o cordón vermello.",
+  "74": "Tres vacas pardas (xa non frisoas) deitadas na palla dunha corte de pedra: calma. Están espertas, non se ven as herbas e arriba á esquerda hai un brillo branco que pode lerse como un farol (menor).",
+  "77": "Lousas escuras molladas pola chuvia, con musgo, de noite: a última imaxe que pide o texto."
+ },
+ "rexenerar": {
+  "2": {
+   "prompt": "close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+   "negativo": "cauldron, iron pot, frying pan, knife, bonfire, neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
+   "motivo": "Os tres intentos dan lume laranxa grande nunha cunca negra ou nunha tixola (caldeiro, veto §8.5), e no [1] un coitelo no canto do cazo. Cando hai unha cara, SDXL pinta luz de lume laranxa; o azul saíu no 32, onde a cunca é o tema. Proposta: só a man, o cazo e a cunca, sen cara (o texto di «alguén»)."
+  },
+  "6": {
+   "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, leaded window, blood, nudity, hospital, metal bed, sofa",
+   "motivo": "Un só intento: dúas mulleres novas e sen pano (ningunha é Dorotea) ao pé dunha deitada sen barriga visible, sen o home, e unha fiestra de vidro emplomado á esquerda. Proposta: un xesto claro (a man da parteira na barriga) e sen o home, que xa sae no 7."
+  },
+  "10": {
+   "prompt": "wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars, wall lantern, grass roof, moss roof",
+   "referencia": {
+    "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
+    "modo": "profundidade",
+    "forza": 0.6,
+    "recorte": [
+     0.32,
+     0.2,
+     1.0,
+     1.0
+    ]
+   },
+   "motivo": "Co img2img 0,5 perdéronse os pés: o hórreo de granito queda no chan coma unha caseta, os tornarratos andan soltos polo eido e é de día. Proposta: a mesma semente e o mesmo recorte en profundidade 0,6 (no plano base conservou os pés), co prompt actual, que xa non leva o «moss» do tellado de herba."
+  },
+  "18": {
+   "prompt": "close-up of an old village healer in a dark blue wool shawl holding a steaming clay bowl of herb infusion to the lips of a sick young woman under a wool blanket, firelight on their faces, dark background",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, brick wall, witch hat, broom, warts, hooked nose, shelves of bottles",
+   "motivo": "O [1], o da porta, ten unha fiestra grande de vidro con cuarterós e parede de ladrillo, e falta a moza enferma; o [0] tamén ten fiestra. Proposta: primeiro plano das dúas co fondo escuro, sen arquitectura onde poñer fiestras."
+  },
+  "21": {
+   "prompt": "medium shot at night of a woman in a faded red wool headscarf holding up a horn lantern in the open doorway of a dark stone house, letting in a man in a dark wool cloak, 17th century",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood, balcony, whitewashed wall",
+   "referencia": null,
+   "motivo": "Coa semente da palloza en profundidade saen casas encaladas con balcóns de madeira e a xente desaparece: no [2], unha figuriña co farol pegado á parede; nos outros, ninguén. Proposta: plano medio na porta e sen semente (referencia: null), para que manden as persoas e non a casa."
+  },
+  "29": {
+   "prompt": "medium shot of a stern priest in a black cassock and black cape standing at the arched door of a small rustic granite chapel, reading aloud from an unrolled paper decree, overcast daylight, 17th century",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd, cardinal, red robe, wall lantern, wide-brimmed hat",
+   "motivo": "[1]: un cardeal de vermello e un home calvo, sen as mulleres (o «red» do pano de María pasa ao home); [0]: figuras de sombreiro de aire colonial, carros e un farol de parede. Proposta: só o vicario lendo o decreto na porta da capela; nai e filla xa saen soas no 30."
+  },
+  "38": {
+   "prompt": "wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
+   "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire, torches, hooded robes, ritual",
+   "motivo": "Un só intento: unha fogueira grande no chan e unha multitude cos brazos en alto e fachos azuis; lese como un rito ou unha queima (veto §8.5), coma na r1. Proposta: unha verbena con mesas e unha cunca de lume azul en cada mesa (a queimada xa de todos), sen fogueira."
+  },
+  "47": {
+   "prompt": "wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, lantern, string lights, candles, houses, cottage, statue, ornamental fountain, park, buildings",
+   "motivo": "[0]: lámpadas colgadas das árbores e velas no chan (aire de festa ou de rito); [1] e [2]: casas inglesas coas fiestras acesas. As luces viñeron de «the faint orange glow of a distant bonfire between the trunks». Proposta: o souto de noite, con lúa e brétema, sen fogueira nin casas."
+  },
+  "48": {
+   "prompt": "medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, tractor, turf roof, thatched cottage, sheep, felt hat",
+   "motivo": "Un só intento: dous homes tranquilos con ovellas diante dunha casa de tellado de herba (labregos irlandeses, coma na r1), un con sombreiro de feltro; sen becerra morta, sen leitóns e sen liorta. Proposta: dentro da corte, coa becerra morta e os veciños acusando; a muller queda fóra de cadro."
+  },
+  "52": {
+   "prompt": "wide shot of three village women in dark wool shawls sitting on a low granite wall beside a rustic stone spring at night, talking and laughing softly, moonlight, seen from far away through dark branches",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hooded robes, cloaks, ritual, bonfire, nun, wolf, arcade, columns",
+   "motivo": "Un só intento: catro mulleres con mantos e veos coma de monxa arredor dunha fogueira, unha de costas con capucha, e un can coma lobo: volve parecer un rito (veto §8.5), coma na r1. Proposta: sen lume, á luz da lúa, sentadas no muro da fonte."
+  },
+  "54": {
+   "prompt": "medium close-up at night by a rustic stone spring: an old woman in a black wool headscarf crossing herself and looking warily into the dark, behind her a young woman with a long dark braid smiling as she fills a clay jug",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, oil lamp, witch hat, broom, table, teapot, kitchen",
+   "motivo": "Un só intento: dúas mulleres rindo xuntas nun interior con xarras e, á dereita, un candil de vidro con forma de bombilla; sen fonte e sen o contraste (unha alegre e a outra con medo). Proposta: a vella en primeiro termo persignándose e a moza detrás enchendo a xerra."
+  },
+  "58": {
+   "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit, smiling as he studies a sprig of a medicinal herb in his fingers, a basket of wild herbs on his arm, monastery herb garden, 18th century",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, cathedral, skullcap, blue robe, hood",
+   "motivo": "Un só intento: un home vello e fraco de capucho azul (a cor do chal da curandeira) cun cesto de herbas; o frade e a muller fundíronse nunha persoa, que ademais se parece ao Feijoo do 59. Proposta: só Sarmiento, groso e de cara redonda, de hábito negro, estudando a herba."
+  },
+  "65": {
+   "prompt": "wide shot of an open dark meadow at night under a deep blue sky, far away on the grass a small low glow of dying red embers, three tiny silhouettes, one leaping over it, soft mist, calm",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fireworks, city lights, wildfire, big flames, houses, cottage, village, crowd",
+   "motivo": "[2], o da porta: casas inglesas coas fiestras acesas e varios lumes arredor delas (parece unha aldea ardendo); [0]: fogueira grande cunha multitude de sombreiro; [1]: casas e xente camiñando. «villagers» trae a aldea. Proposta: o prado aberto, sen casas, coas brasas pequenas e tres siluetas."
+  },
+  "69": {
+   "prompt": "medium shot of the dark silhouettes of an old man and an old woman at a wooden table at night, between them a wide clay bowl of pale blue flames, he lifts a clay ladle of blue fire above it, darkness all around",
+   "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, stove, window, daylight, candles, cauldron, orange fire",
+   "motivo": "Un só intento: lume laranxa alto ao lado da cunca (parece un fogón), unha fiestra con luz de día e sen a vella; no durmir, unha imaxe clara e viva. «faces lit blue» non chega: con caras, SDXL pinta luz laranxa. Proposta: as siluetas escuras e a cunca de lume azul como única luz (a receita do 32)."
+  }
+ },
+ "accions": {
+  "2": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+  "6": "the old midwife slowly moves her hand over the young woman's belly",
+  "17": "the two old women sit quietly and one slowly turns her head toward the other",
+  "18": "the healer slowly brings the steaming bowl to the young woman's lips",
+  "22": "the hooded woman slowly turns her head and whispers to the old man",
+  "29": "the priest slowly reads aloud from the decree and lowers the paper",
+  "41": "he slowly closes the small book in his hands and bows his head",
+  "42": "the women stand still and slowly lower their heads while the bearded judge speaks",
+  "44": "the old healer slowly hands the clay pot to the woman with the basket",
+  "45": "the judge leans over the table and speaks slowly while the woman lowers her eyes",
+  "46": "the judge leans closer and speaks softly, and the woman slowly nods in silence",
+  "48": "one man points at the dead calf while the other shouts toward the door",
+  "49": "the three men sit still in the dark and slowly turn their heads toward the firelight",
+  "52": "the women talk and laugh softly and one gestures with her hand",
+  "58": "the friar slowly turns the sprig in his fingers and smiles",
+  "61": "she sleeps peacefully, breathing slowly under the blanket",
+  "68": "the hand slowly lets a few coffee beans fall into the bowl"
+ }
+}

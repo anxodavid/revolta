@@ -36,3 +36,21 @@
 - **A reserva xenérica volveu pasar** (76: un bosque no plano da candea). Na rolda 1 pasou en 2 de 77 planos.
 - **Cifras da rolda:** a revisión deu 29 valen, 10 outro intento e 38 rexenerar sobre 77. A porta aprobou 53
   escollidas, das que 32 tiñan un problema, e en 12 dos 24 planos que rexeitou había un intento que vale.
+
+## Rolda 2, os 38 planos rexenerados (03-10-2026)
+
+- **Cifras:** 16 valen, 8 outro intento e 14 rexenerar outra vez (o gancho, 4 de 7). A porta aprobou 28: 14 valían, 3
+  tiñan outro intento mellor e 11 non valían; dos 10 que rexeitou, en 7 había un intento que vale. ≈ 30 min de
+  axente, con `video/scripts/follas_revision_r2.py` (le `intentos-r2.json`).
+- **Un só intento é o maior risco:** a pipeline para no primeiro intento sen problemas; 18 planos tiveron un só e 8
+  deles non valían. Para os planos importantes convén pedir 2-3 intentos sempre.
+- **O lume azul con persoas non sae:** «pale blue flames», «blue fire» e «faces lit blue» deron laranxa en 2, 39 e 69;
+  o azul só saíu cando a cunca é o tema (32). Proposta da r2: só man e cunca (2), siluetas (69) [S: sen probar].
+- **O lume arredor de mulleres de noite volve dar rito** (52) e unha festa con fogueira, multitude (38): quitar o lume
+  e poñer a lúa ou mesas de verbena.
+- **O negativo non protexe:** a porta non marcou «turf roof, sheep» (48), «hooded robes, ritual» (52) nin «orange fire,
+  fireplace» (69) aínda que estaban na imaxe; o que cambia o resultado é o prompt.
+- **Cores que viaxan:** o «red» do pano de María vestiu de cardeal ao cura (29) e o azul do chal da curandeira vestiu
+  ao frade (58). Con dúas persoas de cores distintas, mellor unha soa persoa no cadro.
+- **Sementes:** o hórreo de Muimenta en img2img 0,5 perdeu os pés (10) e a palloza en profundidade 0,6 comeu a xente
+  (21): para obxectos con forma, profundidade; para escenas con persoas, sen semente.
