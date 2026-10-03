@@ -29189,5 +29189,1156 @@
    "decision": "vale",
    "motivo": "Lousas escuras molladas pola chuvia, con musgo, de noite: a última imaxe que pide o texto."
   }
+ },
+ "001-d301efcc": {
+  "ficheiro": "001-d301efcc-1.png",
+  "escollida": 1,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "001-d301efcc-0.png",
+    "seed": 2226757556,
+    "s": 127.3,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: cauldron (CLIP)",
+     "negativo do plano: iron pot (CLIP)",
+     "negativo do plano: bonfire (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0618,
+    "lume_quente": 0.0551,
+    "descricion": "The image shows a small wooden bowl with a wooden spoon in it, placed on a fire. The bowl is filled with a blue-colored powdery substance, which appears to be a mixture of spices or herbs. The fire is burning brightly, with orange and yellow flames surrounding the bowl. The background is dark, making the bowl and the fire stand out even more. The overall mood of the image is warm and cozy, with a sense of warmth and comfort.",
+    "obxectos": [
+     "spoon"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.004,
+      0.057
+     ],
+     "muros encalados (CLIP)": [
+      0.048,
+      0.078
+     ],
+     "ciprés (CLIP)": [
+      -0.099,
+      0.091
+     ],
+     "oliveiras (CLIP)": [
+      0.034,
+      0.08
+     ],
+     "palmeiras (CLIP)": [
+      0.006,
+      0.104
+     ],
+     "rodas de raios (CLIP)": [
+      0.001,
+      0.1
+     ],
+     "paisaxe seca (CLIP)": [
+      0.037,
+      0.063
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.036
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.009,
+      0.079
+     ],
+     "luces de cidade (CLIP)": [
+      -0.001,
+      0.117
+     ],
+     "salón moderno (CLIP)": [
+      -0.078,
+      0.167
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.026,
+      0.06
+     ],
+     "casas británicas (CLIP)": [
+      -0.044,
+      0.044
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.005,
+      0.24
+     ],
+     "catedral inventada (CLIP)": [
+      -0.042,
+      0.074
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.035,
+      0.098
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.096,
+      0.154
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.004,
+      0.105
+     ],
+     "cadros na parede (CLIP)": [
+      -0.01,
+      0.166
+     ],
+     "farol victoriano (CLIP)": [
+      -0.022,
+      0.09
+     ],
+     "negativo: cauldron": 0.068,
+     "negativo: iron pot": 0.061,
+     "negativo: frying pan": 0.006,
+     "negativo: knife": -0.031,
+     "negativo: bonfire": 0.048,
+     "negativo: neon": -0.013,
+     "clave: blue flames": 4.23,
+     "clave_v5: blue flames": 0.065
+    },
+    "arquetipo": null,
+    "s_revision": 16.8,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "001-d301efcc-1.png",
+    "seed": 3318622359,
+    "s": 120.0,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: iron pot (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0012,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a hand holding a frying pan with a blue flame coming out of it. The pan is placed on a sandy surface and the flame is a bright blue color. The background is blurred, but it appears to be a wooden table or countertop. The hand is holding the pan with both hands and is about to pour the flame into the pan. The flame is creating a trail of blue smoke that is rising from the pan and into the water below. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "frying pan",
+     "human hand"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.013,
+      0.085
+     ],
+     "muros encalados (CLIP)": [
+      0.061,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.055,
+      0.073
+     ],
+     "oliveiras (CLIP)": [
+      0.024,
+      0.076
+     ],
+     "palmeiras (CLIP)": [
+      0.02,
+      0.103
+     ],
+     "rodas de raios (CLIP)": [
+      0.023,
+      0.07
+     ],
+     "paisaxe seca (CLIP)": [
+      0.069,
+      0.103
+     ],
+     "eucaliptos (CLIP)": [
+      0.013,
+      0.003
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.001,
+      0.061
+     ],
+     "luces de cidade (CLIP)": [
+      0.014,
+      0.101
+     ],
+     "salón moderno (CLIP)": [
+      -0.059,
+      0.167
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.028,
+      0.056
+     ],
+     "casas británicas (CLIP)": [
+      -0.018,
+      0.059
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.035,
+      0.222
+     ],
+     "catedral inventada (CLIP)": [
+      -0.025,
+      0.055
+     ],
+     "abrigo moderno (CLIP)": [
+      0.039,
+      0.086
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.039,
+      0.103
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.032,
+      0.135
+     ],
+     "cadros na parede (CLIP)": [
+      0.026,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      0.028,
+      0.087
+     ],
+     "negativo: cauldron": 0.029,
+     "negativo: iron pot": 0.044,
+     "negativo: frying pan": 0.024,
+     "negativo: knife": -0.019,
+     "negativo: bonfire": 0.022,
+     "negativo: neon": -0.008,
+     "clave: blue flames": 5.29,
+     "clave_v5: blue flames": 0.09
+    },
+    "arquetipo": null,
+    "s_revision": 9.9,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "001-d301efcc-2.png",
+    "seed": 3306160465,
+    "s": 115.8,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (2)",
+     "negativo do plano: cauldron (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.827,
+       0.243
+      ],
+      "confianza": 0.58,
+      "dist_corpo": 0.234,
+      "tamaño": 0.116
+     },
+     {
+      "pulso": [
+       0.748,
+       0.165
+      ],
+      "confianza": 0.82,
+      "dist_corpo": 0.151,
+      "tamaño": 0.097
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0268,
+    "lume_quente": 0.015,
+    "descricion": "The image shows a person's hands holding a small bowl of blue powder in front of a fire. The bowl is made of clay and is placed on a wooden surface. The fire is burning brightly with orange and yellow flames and blue smoke rising from it. The background is dark and out of focus, making the bowl and the fire stand out. The person's fingers are visible on the right side of the image, and they appear to be stirring the powder.",
+    "obxectos": [
+     "bowl",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.001,
+      0.064
+     ],
+     "muros encalados (CLIP)": [
+      0.049,
+      0.056
+     ],
+     "ciprés (CLIP)": [
+      -0.073,
+      0.068
+     ],
+     "oliveiras (CLIP)": [
+      -0.003,
+      0.049
+     ],
+     "palmeiras (CLIP)": [
+      0.025,
+      0.098
+     ],
+     "rodas de raios (CLIP)": [
+      0.012,
+      0.07
+     ],
+     "paisaxe seca (CLIP)": [
+      0.025,
+      0.055
+     ],
+     "eucaliptos (CLIP)": [
+      0.027,
+      0.003
+     ],
+     "luz eléctrica (CLIP)": [
+      0.004,
+      0.042
+     ],
+     "luces de cidade (CLIP)": [
+      0.018,
+      0.095
+     ],
+     "salón moderno (CLIP)": [
+      -0.047,
+      0.157
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.005,
+      0.046
+     ],
+     "casas británicas (CLIP)": [
+      -0.026,
+      0.035
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.042,
+      0.242
+     ],
+     "catedral inventada (CLIP)": [
+      -0.035,
+      0.039
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.029,
+      0.08
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.049,
+      0.117
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.025,
+      0.151
+     ],
+     "cadros na parede (CLIP)": [
+      0.017,
+      0.138
+     ],
+     "farol victoriano (CLIP)": [
+      -0.012,
+      0.068
+     ],
+     "negativo: cauldron": 0.056,
+     "negativo: iron pot": 0.035,
+     "negativo: frying pan": -0.003,
+     "negativo: knife": -0.032,
+     "negativo: bonfire": 0.026,
+     "negativo: neon": -0.027,
+     "clave: blue flames": 5.7,
+     "clave_v5: blue flames": 0.09
+    },
+    "arquetipo": null,
+    "s_revision": 10.1,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "gancho"
+ },
+ "005-35675b9d": {
+  "ficheiro": "005-35675b9d-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "005-35675b9d-0.png",
+    "seed": 4146026928,
+    "s": 126.5,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.681,
+       0.658
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.022,
+      "tamaño": 0.086
+     },
+     {
+      "pulso": [
+       0.489,
+       0.633
+      ],
+      "confianza": 0.92,
+      "dist_corpo": 0.131,
+      "tamaño": 0.049
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0116,
+    "lume_quente": 0.0343,
+    "descricion": "The image shows a woman sitting on a bed with a blanket draped over her body. She is wearing a headscarf and appears to be deep in thought. On the bed, there are several lit candles arranged in a row. The background is dark and the overall mood of the image is somber. The woman is looking down at the candles with a contemplative expression on her face.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.008,
+      0.082
+     ],
+     "muros encalados (CLIP)": [
+      0.001,
+      0.084
+     ],
+     "ciprés (CLIP)": [
+      -0.021,
+      0.111
+     ],
+     "oliveiras (CLIP)": [
+      -0.04,
+      0.096
+     ],
+     "palmeiras (CLIP)": [
+      -0.03,
+      0.13
+     ],
+     "rodas de raios (CLIP)": [
+      0.038,
+      0.107
+     ],
+     "paisaxe seca (CLIP)": [
+      0.016,
+      0.069
+     ],
+     "eucaliptos (CLIP)": [
+      -0.009,
+      0.079
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.02,
+      0.117
+     ],
+     "luces de cidade (CLIP)": [
+      -0.032,
+      0.153
+     ],
+     "salón moderno (CLIP)": [
+      0.014,
+      0.131
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.012,
+      0.072
+     ],
+     "casas británicas (CLIP)": [
+      0.045,
+      0.089
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.027,
+      0.171
+     ],
+     "catedral inventada (CLIP)": [
+      -0.025,
+      0.1
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.09,
+      0.205
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.124,
+      0.197
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.068,
+      0.191
+     ],
+     "cadros na parede (CLIP)": [
+      -0.011,
+      0.189
+     ],
+     "farol victoriano (CLIP)": [
+      -0.015,
+      0.1
+     ],
+     "negativo: electric light": 0.032,
+     "negativo: light bulb": 0.02,
+     "negativo: lamp": 0.022,
+     "negativo: glass window": -0.002,
+     "negativo: modern clothes": -0.019,
+     "negativo: street lamp": -0.015,
+     "clave: pregnant woman": 4.12,
+     "clave_v5: pregnant woman": 0.031
+    },
+    "arquetipo": null,
+    "s_revision": 10.5,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "005-35675b9d-1.png",
+    "seed": 3486897483,
+    "s": 119.9,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.532,
+       0.796
+      ],
+      "confianza": 0.91,
+      "dist_corpo": 0.025,
+      "tamaño": 0.107
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0222,
+    "lume_quente": 0.0107,
+    "descricion": "The image shows a mother and her young child sleeping on a bed. The mother is wearing a brown robe and a headscarf, and she is looking down at the child with a peaceful expression on her face. The child is wrapped in a brown blanket and is sleeping peacefully with their eyes closed. On the right side of the image, there is a small table with a candle on it. The background is dark, and there are several lit candles on the table. The overall mood of the scene is somber and intimate.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.016,
+      0.076
+     ],
+     "muros encalados (CLIP)": [
+      0.026,
+      0.097
+     ],
+     "ciprés (CLIP)": [
+      -0.045,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      -0.021,
+      0.112
+     ],
+     "palmeiras (CLIP)": [
+      -0.017,
+      0.154
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.096
+     ],
+     "paisaxe seca (CLIP)": [
+      0.044,
+      0.091
+     ],
+     "eucaliptos (CLIP)": [
+      -0.037,
+      0.074
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.02,
+      0.113
+     ],
+     "luces de cidade (CLIP)": [
+      -0.044,
+      0.134
+     ],
+     "salón moderno (CLIP)": [
+      -0.013,
+      0.123
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.029,
+      0.066
+     ],
+     "casas británicas (CLIP)": [
+      0.064,
+      0.096
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.018,
+      0.135
+     ],
+     "catedral inventada (CLIP)": [
+      -0.015,
+      0.079
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.104,
+      0.204
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.113,
+      0.201
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.073,
+      0.169
+     ],
+     "cadros na parede (CLIP)": [
+      0.001,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      -0.025,
+      0.092
+     ],
+     "negativo: electric light": 0.009,
+     "negativo: light bulb": 0.005,
+     "negativo: lamp": -0.001,
+     "negativo: glass window": -0.004,
+     "negativo: modern clothes": -0.009,
+     "negativo: street lamp": -0.01,
+     "clave: pregnant woman": 3.88,
+     "clave_v5: pregnant woman": 0.025
+    },
+    "arquetipo": null,
+    "s_revision": 11.0,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "005-35675b9d-2.png",
+    "seed": 1507465378,
+    "s": 123.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.527,
+       0.595
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.048,
+      "tamaño": 0.062
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0113,
+    "lume_quente": 0.0113,
+    "descricion": "The image shows a woman sitting on a bed with a blanket draped over her body. She is wearing a brown robe and a headscarf, and her hands are clasped together in front of her. The bed is covered with a white blanket, and there are three lit candles on the right side of the bed. The background is dark, and the overall mood of the image is somber and contemplative. The woman appears to be deep in thought, with a peaceful expression on her face.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.024,
+      0.061
+     ],
+     "muros encalados (CLIP)": [
+      0.043,
+      0.105
+     ],
+     "ciprés (CLIP)": [
+      -0.034,
+      0.084
+     ],
+     "oliveiras (CLIP)": [
+      -0.038,
+      0.091
+     ],
+     "palmeiras (CLIP)": [
+      -0.032,
+      0.107
+     ],
+     "rodas de raios (CLIP)": [
+      0.042,
+      0.085
+     ],
+     "paisaxe seca (CLIP)": [
+      0.057,
+      0.087
+     ],
+     "eucaliptos (CLIP)": [
+      -0.014,
+      0.015
+     ],
+     "luz eléctrica (CLIP)": [
+      0.008,
+      0.104
+     ],
+     "luces de cidade (CLIP)": [
+      -0.021,
+      0.129
+     ],
+     "salón moderno (CLIP)": [
+      -0.002,
+      0.102
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.032,
+      0.045
+     ],
+     "casas británicas (CLIP)": [
+      0.057,
+      0.068
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.005,
+      0.113
+     ],
+     "catedral inventada (CLIP)": [
+      -0.033,
+      0.092
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.102,
+      0.191
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.116,
+      0.19
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.106,
+      0.172
+     ],
+     "cadros na parede (CLIP)": [
+      0.015,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      -0.013,
+      0.081
+     ],
+     "negativo: electric light": 0.031,
+     "negativo: light bulb": 0.018,
+     "negativo: lamp": 0.014,
+     "negativo: glass window": -0.001,
+     "negativo: modern clothes": -0.023,
+     "negativo: street lamp": 0.0,
+     "clave: pregnant woman": 3.37,
+     "clave_v5: pregnant woman": 0.03
+    },
+    "arquetipo": null,
+    "s_revision": 10.5,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "gancho"
+ },
+ "009-c7aec42d": {
+  "ficheiro": "009-c7aec42d-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "009-c7aec42d-0.png",
+    "seed": 3300368796,
+    "s": 128.0,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
+     "modo": "profundidade",
+     "forza": 0.6
+    },
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0055,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows two small stone buildings with a thatched roof. The buildings appear to be old and weathered, with a rough texture. The roof is made of thatched tiles, and there is a small window on the right side of the building. The building on the left is a rectangular structure with a sloping roof and a small door on the front. It is supported by four stone pillars. The ground is covered in grass and there are a few rocks scattered around. The sky is overcast and the overall mood of the image is gloomy.",
+    "obxectos": [
+     "house"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.019,
+      0.179
+     ],
+     "muros encalados (CLIP)": [
+      -0.033,
+      0.209
+     ],
+     "ciprés (CLIP)": [
+      0.01,
+      0.119
+     ],
+     "oliveiras (CLIP)": [
+      -0.022,
+      0.128
+     ],
+     "palmeiras (CLIP)": [
+      -0.025,
+      0.138
+     ],
+     "rodas de raios (CLIP)": [
+      -0.016,
+      0.183
+     ],
+     "paisaxe seca (CLIP)": [
+      0.03,
+      0.14
+     ],
+     "eucaliptos (CLIP)": [
+      0.001,
+      0.096
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.0,
+      0.115
+     ],
+     "luces de cidade (CLIP)": [
+      -0.02,
+      0.13
+     ],
+     "salón moderno (CLIP)": [
+      -0.052,
+      0.176
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.044,
+      0.19
+     ],
+     "casas británicas (CLIP)": [
+      -0.031,
+      0.208
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.007,
+      0.187
+     ],
+     "catedral inventada (CLIP)": [
+      -0.102,
+      0.212
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.048,
+      0.149
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.078,
+      0.181
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.015,
+      0.121
+     ],
+     "cadros na parede (CLIP)": [
+      -0.025,
+      0.234
+     ],
+     "farol victoriano (CLIP)": [
+      -0.019,
+      0.147
+     ],
+     "negativo: electric light": 0.002,
+     "negativo: light bulb": -0.043,
+     "negativo: lamp": -0.008,
+     "negativo: glass window": 0.017,
+     "negativo: modern clothes": -0.018,
+     "negativo: street lamp": 0.008,
+     "clave: granary": 4.9,
+     "clave_v5: granary": 0.061
+    },
+    "arquetipo": null,
+    "s_revision": 14.9,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "009-c7aec42d-1.png",
+    "seed": 1716674785,
+    "s": 121.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [
+     "casas alleas"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
+     "modo": "profundidade",
+     "forza": 0.6
+    },
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a small stone building with a thatched roof and a wooden door. The building appears to be old and dilapidated, with peeling paint and crumbling walls. It is located in a rural area with a grassy field and trees in the background. The sky is foggy and the sun is shining through the trees, creating a hazy atmosphere. In front of the building, there is a wooden structure with columns and a small porch. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "house",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.027,
+      0.147
+     ],
+     "muros encalados (CLIP)": [
+      -0.037,
+      0.214
+     ],
+     "ciprés (CLIP)": [
+      -0.034,
+      0.13
+     ],
+     "oliveiras (CLIP)": [
+      -0.05,
+      0.145
+     ],
+     "palmeiras (CLIP)": [
+      -0.017,
+      0.156
+     ],
+     "rodas de raios (CLIP)": [
+      -0.006,
+      0.169
+     ],
+     "paisaxe seca (CLIP)": [
+      0.043,
+      0.144
+     ],
+     "eucaliptos (CLIP)": [
+      -0.029,
+      0.093
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.012,
+      0.127
+     ],
+     "luces de cidade (CLIP)": [
+      -0.032,
+      0.163
+     ],
+     "salón moderno (CLIP)": [
+      -0.042,
+      0.167
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.074,
+      0.197
+     ],
+     "casas británicas (CLIP)": [
+      -0.019,
+      0.172
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.008,
+      0.189
+     ],
+     "catedral inventada (CLIP)": [
+      -0.097,
+      0.18
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.074,
+      0.141
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.091,
+      0.179
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.001,
+      0.117
+     ],
+     "cadros na parede (CLIP)": [
+      -0.029,
+      0.224
+     ],
+     "farol victoriano (CLIP)": [
+      -0.034,
+      0.175
+     ],
+     "negativo: electric light": -0.001,
+     "negativo: light bulb": -0.041,
+     "negativo: lamp": -0.035,
+     "negativo: glass window": -0.006,
+     "negativo: modern clothes": -0.035,
+     "negativo: street lamp": -0.024,
+     "clave: granary": 4.69,
+     "clave_v5: granary": 0.061
+    },
+    "arquetipo": null,
+    "s_revision": 9.6,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "009-c7aec42d-2.png",
+    "seed": 772571642,
+    "s": 122.2,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
+     "modo": "profundidade",
+     "forza": 0.6
+    },
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0042,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two small stone buildings with a thatched roof. The buildings are made of light-colored stones and have a sloping roof. On the right side of the image, there is a small wooden door with a wooden frame. In front of the door, there are three stone pillars supporting the structure. The structure appears to be a temple or a shrine. The ground is covered in grass and there are a few rocks scattered around. The sky is overcast and the overall atmosphere is gloomy.",
+    "obxectos": [
+     "door",
+     "house",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.014,
+      0.153
+     ],
+     "muros encalados (CLIP)": [
+      -0.041,
+      0.187
+     ],
+     "ciprés (CLIP)": [
+      -0.018,
+      0.146
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.146
+     ],
+     "palmeiras (CLIP)": [
+      -0.046,
+      0.151
+     ],
+     "rodas de raios (CLIP)": [
+      -0.024,
+      0.178
+     ],
+     "paisaxe seca (CLIP)": [
+      0.048,
+      0.14
+     ],
+     "eucaliptos (CLIP)": [
+      -0.009,
+      0.085
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.011,
+      0.1
+     ],
+     "luces de cidade (CLIP)": [
+      -0.033,
+      0.137
+     ],
+     "salón moderno (CLIP)": [
+      -0.063,
+      0.185
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.087,
+      0.205
+     ],
+     "casas británicas (CLIP)": [
+      -0.009,
+      0.192
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.002,
+      0.182
+     ],
+     "catedral inventada (CLIP)": [
+      -0.131,
+      0.19
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.059,
+      0.129
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.084,
+      0.176
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.009,
+      0.117
+     ],
+     "cadros na parede (CLIP)": [
+      -0.041,
+      0.238
+     ],
+     "farol victoriano (CLIP)": [
+      -0.036,
+      0.164
+     ],
+     "negativo: electric light": -0.011,
+     "negativo: light bulb": -0.056,
+     "negativo: lamp": -0.046,
+     "negativo: glass window": -0.015,
+     "negativo: modern clothes": -0.034,
+     "negativo: street lamp": -0.046,
+     "clave: granary": 4.18,
+     "clave_v5: granary": 0.046
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "gancho"
  }
 }
