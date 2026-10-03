@@ -1,7 +1,7 @@
 # Estado da peza 1 (guion v2) · Gauntlet 4
 
 Ficheiro do construtor (guionista, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar desde
-aquí.** Última actualización: 02-10-2026, 23:40 UTC.
+aquí.** Última actualización: 03-10-2026, 03:56 UTC.
 
 ## Encargo vixente
 
@@ -25,7 +25,9 @@ aquí.** Última actualización: 02-10-2026, 23:40 UTC.
 
 ## En curso
 
-- Porta de texto completa (`scripts/porta-r1.sh`, longo.py --so-texto) lanzada ás 23:33 UTC con
+- **Reinicio do contedor (límite de uso ≈ 23:30 UTC; volta ás 03:53 UTC):** a porta que agardaba o candado morreu.
+  Relanzada ás 03:55 UTC (a CPU estaba libre). O orquestrador gardou os dous últimos cambios do guion (4fb50ec).
+- Porta de texto completa (`scripts/porta-r1.sh`, longo.py --so-texto) lanzada con
   `herramientas/gauntlet/candado.sh --prioridade`, sobre `$SCRATCH/guion/guion-r1-conxelado.txt`; rexistro en
   `$SCRATCH/guion/porta-r1.log`. Ao rematar: copiar `$SCRATCH/guion/w-r1/porta_texto.json` a `porta_texto-r1.json`,
   escribir `excepcions-r1.yaml` coas frases marcadas e volver pasala.
