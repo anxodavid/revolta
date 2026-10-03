@@ -1,0 +1,52 @@
+[
+ {
+  "n": 2,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/001-24f10d65-0.png",
+  "accion": "he slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 5,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/004-54589876-0.png",
+  "accion": "the man speaks, holding his hat to his chest, while the scribe writes",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 8,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/007-0ae28a3e-0.png",
+  "accion": "he jolts upright from the bench and flings his arms wide",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 13,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/012-c1475796-2.png",
+  "accion": "her lips move slightly as she murmurs, her eyes stay lowered",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 16,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/015-b27e8d07-0.png",
+  "accion": "she lifts her eyes from the jug and looks into the darkness as the water keeps pouring",
+  "i2v": {}
+ },
+ {
+  "n": 22,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/021-28aec4d3-0.png",
+  "accion": "they lean closer and whisper, and one woman glances sideways",
+  "i2v": {}
+ }
+]

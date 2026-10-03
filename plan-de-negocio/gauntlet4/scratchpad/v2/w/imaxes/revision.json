@@ -5229,5 +5229,993 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "021-28aec4d3": {
+  "ficheiro": "021-28aec4d3-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "021-28aec4d3-0.png",
+    "seed": 19210326,
+    "s": 124.4,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of two village women and an old man whispering together under the stone porch of a small granite country church after mass, one woman glancing sideways with suspicion, dark wool clothes and headscarves, overcast daylight",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0009,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two elderly men standing in front of a stone building with arched windows. The building appears to be old and weathered, with a stone facade and a wooden door. The men are wearing long black robes and hats, and one of them is wearing a white headscarf. They are facing each other and appear to be engaged in conversation. The sky is overcast and there are trees and bushes in the background. The ground is covered in grass and there is a dirt path leading up to the building.",
+    "obxectos": [
+     "building",
+     "footwear",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.057,
+      0.149
+     ],
+     "muros encalados (CLIP)": [
+      -0.065,
+      0.192
+     ],
+     "ciprés (CLIP)": [
+      0.035,
+      0.125
+     ],
+     "oliveiras (CLIP)": [
+      -0.026,
+      0.116
+     ],
+     "palmeiras (CLIP)": [
+      -0.037,
+      0.144
+     ],
+     "rodas de raios (CLIP)": [
+      0.034,
+      0.099
+     ],
+     "paisaxe seca (CLIP)": [
+      0.047,
+      0.121
+     ],
+     "eucaliptos (CLIP)": [
+      -0.007,
+      0.065
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.002,
+      0.064
+     ],
+     "luces de cidade (CLIP)": [
+      -0.073,
+      0.141
+     ],
+     "salón moderno (CLIP)": [
+      -0.022,
+      0.143
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.002,
+      0.13
+     ],
+     "casas británicas (CLIP)": [
+      -0.011,
+      0.152
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.008,
+      0.139
+     ],
+     "catedral inventada (CLIP)": [
+      -0.034,
+      0.188
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.012,
+      0.173
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.071,
+      0.182
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.016,
+      0.147
+     ],
+     "cadros na parede (CLIP)": [
+      -0.047,
+      0.276
+     ],
+     "farol victoriano (CLIP)": [
+      0.028,
+      0.11
+     ],
+     "negativo: electric light": -0.008,
+     "negativo: light bulb": -0.043,
+     "negativo: lamp": -0.039,
+     "negativo: glass window": 0.002,
+     "negativo: modern clothes": -0.016,
+     "negativo: street lamp": -0.038,
+     "clave: church": 2.9,
+     "clave_v5: church": 0.025
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "022-63a520b1": {
+  "ficheiro": "022-63a520b1-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "022-63a520b1-0.png",
+    "seed": 3274919268,
+    "s": 120.9,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing among brown cows on a windswept hillside of heather and gorse, murmuring words to them, her scarf and the long grass blown by the wind, overcast sky",
+    "modelo": "lightning",
+    "tokens": 67,
+    "truncado": "",
+    "problemas": [
+     "animais en grupo"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a young woman standing in a field with a herd of cows in the background. She is wearing a red scarf around her neck and a green dress with a brown belt. Her hair is styled in a bun and she is looking off to the side with a serious expression on her face. The sky is overcast and the field is covered in tall grass and shrubs. The cows are brown and appear to be grazing on the grass. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "cattle",
+     "human face",
+     "scarf",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.013,
+      0.064
+     ],
+     "muros encalados (CLIP)": [
+      -0.02,
+      0.117
+     ],
+     "ciprés (CLIP)": [
+      -0.031,
+      0.089
+     ],
+     "oliveiras (CLIP)": [
+      -0.091,
+      0.135
+     ],
+     "palmeiras (CLIP)": [
+      -0.034,
+      0.116
+     ],
+     "rodas de raios (CLIP)": [
+      -0.011,
+      0.071
+     ],
+     "paisaxe seca (CLIP)": [
+      0.029,
+      0.138
+     ],
+     "eucaliptos (CLIP)": [
+      0.031,
+      0.035
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.036,
+      0.069
+     ],
+     "luces de cidade (CLIP)": [
+      -0.074,
+      0.139
+     ],
+     "salón moderno (CLIP)": [
+      -0.018,
+      0.089
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.016,
+      0.034
+     ],
+     "casas británicas (CLIP)": [
+      0.042,
+      0.093
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.017,
+      0.091
+     ],
+     "catedral inventada (CLIP)": [
+      -0.022,
+      0.055
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.048,
+      0.203
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.041,
+      0.172
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.047,
+      0.166
+     ],
+     "cadros na parede (CLIP)": [
+      -0.022,
+      0.169
+     ],
+     "farol victoriano (CLIP)": [
+      -0.055,
+      0.108
+     ],
+     "negativo: electric light": -0.021,
+     "negativo: light bulb": -0.021,
+     "negativo: lamp": -0.025,
+     "negativo: glass window": 0.002,
+     "negativo: modern clothes": -0.002,
+     "negativo: street lamp": -0.034,
+     "clave: cows": 4.74,
+     "clave_v5: cows": 0.049
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "022-63a520b1-1.png",
+    "seed": 3676129538,
+    "s": 120.3,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing among brown cows on a windswept hillside of heather and gorse, murmuring words to them, her scarf and the long grass blown by the wind, overcast sky",
+    "modelo": "lightning",
+    "tokens": 67,
+    "truncado": "",
+    "problemas": [
+     "animais en grupo"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0112,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a young woman standing in a field with a herd of cows in the background. She is wearing a red scarf and a brown coat, and her hair is styled in loose curls. The woman is looking off to the side with a serious expression on her face. The field is covered in green grass and there are hills in the distance. The sky is overcast and the overall mood of the image is somber.",
+    "obxectos": [
+     "cattle",
+     "human face",
+     "scarf",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.018,
+      0.054
+     ],
+     "muros encalados (CLIP)": [
+      -0.013,
+      0.094
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.116
+     ],
+     "oliveiras (CLIP)": [
+      -0.067,
+      0.132
+     ],
+     "palmeiras (CLIP)": [
+      -0.038,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      -0.019,
+      0.092
+     ],
+     "paisaxe seca (CLIP)": [
+      0.018,
+      0.123
+     ],
+     "eucaliptos (CLIP)": [
+      -0.002,
+      0.048
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.038,
+      0.083
+     ],
+     "luces de cidade (CLIP)": [
+      -0.043,
+      0.123
+     ],
+     "salón moderno (CLIP)": [
+      -0.036,
+      0.083
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.003,
+      0.044
+     ],
+     "casas británicas (CLIP)": [
+      0.054,
+      0.075
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.012,
+      0.092
+     ],
+     "catedral inventada (CLIP)": [
+      -0.021,
+      0.055
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.047,
+      0.188
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.038,
+      0.167
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.054,
+      0.174
+     ],
+     "cadros na parede (CLIP)": [
+      -0.033,
+      0.16
+     ],
+     "farol victoriano (CLIP)": [
+      -0.049,
+      0.12
+     ],
+     "negativo: electric light": -0.019,
+     "negativo: light bulb": -0.028,
+     "negativo: lamp": -0.029,
+     "negativo: glass window": -0.013,
+     "negativo: modern clothes": -0.007,
+     "negativo: street lamp": -0.04,
+     "clave: cows": 5.31,
+     "clave_v5: cows": 0.062
+    },
+    "arquetipo": null,
+    "s_revision": 10.9,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "022-63a520b1-2.png",
+    "seed": 2658094597,
+    "s": 121.5,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing among brown cows on a windswept hillside of heather and gorse, murmuring words to them, her scarf and the long grass blown by the wind, overcast sky",
+    "modelo": "lightning",
+    "tokens": 67,
+    "truncado": "",
+    "problemas": [
+     "animais en grupo"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.001,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows a young woman standing in a field with a herd of cows in the background. She is wearing a red shawl over her head and a gray scarf around her neck. The woman is looking off to the side with a serious expression on her face. The field is covered in tall grass and there are hills in the distance. The sky is overcast and the overall mood of the image is somber.",
+    "obxectos": [
+     "cattle",
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.011,
+      0.035
+     ],
+     "muros encalados (CLIP)": [
+      -0.037,
+      0.121
+     ],
+     "ciprés (CLIP)": [
+      -0.033,
+      0.074
+     ],
+     "oliveiras (CLIP)": [
+      -0.036,
+      0.117
+     ],
+     "palmeiras (CLIP)": [
+      -0.037,
+      0.117
+     ],
+     "rodas de raios (CLIP)": [
+      -0.01,
+      0.069
+     ],
+     "paisaxe seca (CLIP)": [
+      0.005,
+      0.123
+     ],
+     "eucaliptos (CLIP)": [
+      0.028,
+      0.05
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.012,
+      0.059
+     ],
+     "luces de cidade (CLIP)": [
+      -0.059,
+      0.111
+     ],
+     "salón moderno (CLIP)": [
+      -0.026,
+      0.074
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.048,
+      0.058
+     ],
+     "casas británicas (CLIP)": [
+      0.033,
+      0.064
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.008,
+      0.079
+     ],
+     "catedral inventada (CLIP)": [
+      -0.029,
+      0.099
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.091,
+      0.221
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.081,
+      0.212
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.074,
+      0.168
+     ],
+     "cadros na parede (CLIP)": [
+      -0.019,
+      0.166
+     ],
+     "farol victoriano (CLIP)": [
+      -0.056,
+      0.124
+     ],
+     "negativo: electric light": -0.023,
+     "negativo: light bulb": -0.026,
+     "negativo: lamp": -0.03,
+     "negativo: glass window": 0.0,
+     "negativo: modern clothes": 0.01,
+     "negativo: street lamp": -0.024,
+     "clave: cows": 4.86,
+     "clave_v5: cows": 0.046
+    },
+    "arquetipo": null,
+    "s_revision": 10.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "023-2e94bcd6": {
+  "ficheiro": "023-2e94bcd6-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "023-2e94bcd6-0.png",
+    "seed": 695587368,
+    "s": 123.3,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of two brown cows lowering their heads to drink from a clear spring running over mossy stones on a green hillside, a woman of about thirty, dark braided hair under a faded red wool headscarf, watching them from behind, soft morning light",
+    "modelo": "lightning",
+    "tokens": 62,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0167,
+    "lume_quente": 0.0028,
+    "descricion": "The image shows two brown cows standing in a small stream in a mountainous landscape. The cows are facing each other and their horns are curved upwards. The stream is surrounded by green grass and rocks, and there are mountains in the background. The sky is overcast and the overall mood of the image is peaceful and serene. The image appears to be a digital illustration, giving it a realistic and lifelike quality.",
+    "obxectos": [
+     "cattle"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.042,
+      0.062
+     ],
+     "muros encalados (CLIP)": [
+      -0.021,
+      0.08
+     ],
+     "ciprés (CLIP)": [
+      -0.031,
+      0.109
+     ],
+     "oliveiras (CLIP)": [
+      -0.129,
+      0.181
+     ],
+     "palmeiras (CLIP)": [
+      -0.051,
+      0.147
+     ],
+     "rodas de raios (CLIP)": [
+      -0.066,
+      0.113
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.019,
+      0.148
+     ],
+     "eucaliptos (CLIP)": [
+      -0.069,
+      0.114
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.002,
+      0.029
+     ],
+     "luces de cidade (CLIP)": [
+      -0.021,
+      0.126
+     ],
+     "salón moderno (CLIP)": [
+      0.011,
+      0.069
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.043,
+      0.07
+     ],
+     "casas británicas (CLIP)": [
+      0.037,
+      0.06
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.029,
+      0.116
+     ],
+     "catedral inventada (CLIP)": [
+      0.001,
+      0.057
+     ],
+     "abrigo moderno (CLIP)": [
+      0.008,
+      0.082
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.036,
+      0.131
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.01,
+      0.105
+     ],
+     "cadros na parede (CLIP)": [
+      -0.012,
+      0.179
+     ],
+     "farol victoriano (CLIP)": [
+      -0.088,
+      0.141
+     ],
+     "negativo: electric light": -0.013,
+     "negativo: light bulb": -0.034,
+     "negativo: lamp": -0.026,
+     "negativo: glass window": -0.025,
+     "negativo: modern clothes": -0.051,
+     "negativo: street lamp": -0.07,
+     "clave: cows": 6.63,
+     "clave_v5: cows": 0.082
+    },
+    "arquetipo": null,
+    "s_revision": 9.9,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "024-341e06d7": {
+  "ficheiro": "024-341e06d7-2.png",
+  "escollida": 2,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "024-341e06d7-0.png",
+    "seed": 3716614784,
+    "s": 121.5,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a bearded peasant man in a coarse brown wool jacket speaking in profile, and behind him, in soft focus, a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing his words with a goose quill, candlelight, bare granite wall",
+    "modelo": "lightning",
+    "tokens": 73,
+    "truncado": "",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 3,
+    "altas_luces": 0.016,
+    "lume_quente": 0.0058,
+    "descricion": "The image is a close-up portrait of a man with a long white beard and mustache. He is wearing a brown coat with a fur collar and appears to be in a dimly lit room with a curtain in the background. The man is looking off to the side with a serious expression on his face. In front of him, there are three lit candles on a wooden stand. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.044,
+      0.057
+     ],
+     "muros encalados (CLIP)": [
+      -0.001,
+      0.053
+     ],
+     "ciprés (CLIP)": [
+      -0.071,
+      0.093
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.08
+     ],
+     "palmeiras (CLIP)": [
+      -0.031,
+      0.136
+     ],
+     "rodas de raios (CLIP)": [
+      0.017,
+      0.088
+     ],
+     "paisaxe seca (CLIP)": [
+      0.036,
+      0.056
+     ],
+     "eucaliptos (CLIP)": [
+      -0.079,
+      0.05
+     ],
+     "luz eléctrica (CLIP)": [
+      0.002,
+      0.089
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.126
+     ],
+     "salón moderno (CLIP)": [
+      -0.027,
+      0.121
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.024,
+      0.054
+     ],
+     "casas británicas (CLIP)": [
+      0.016,
+      0.031
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.022,
+      0.136
+     ],
+     "catedral inventada (CLIP)": [
+      -0.021,
+      0.092
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.04,
+      0.15
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.071,
+      0.224
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.035,
+      0.167
+     ],
+     "cadros na parede (CLIP)": [
+      0.003,
+      0.174
+     ],
+     "farol victoriano (CLIP)": [
+      -0.02,
+      0.11
+     ],
+     "negativo: electric light": 0.029,
+     "negativo: light bulb": 0.014,
+     "negativo: lamp": 0.015,
+     "negativo: glass window": -0.006,
+     "negativo: modern clothes": -0.004,
+     "negativo: street lamp": -0.012,
+     "clave: scribe": 2.88,
+     "clave_v5: scribe": 0.036
+    },
+    "arquetipo": null,
+    "s_revision": 9.9,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "024-341e06d7-1.png",
+    "seed": 2625617248,
+    "s": 122.8,
+    "prompt": "cinematic film still, period drama, photorealistic, thick granite walls, close-up of a bearded peasant man in a coarse brown wool jacket speaking in profile, and behind him, in soft focus, a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing his words with a goose quill, candlelight, bare granite wall",
+    "modelo": "lightning",
+    "tokens": 77,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.03,
+       0.985
+      ],
+      "confianza": 0.93,
+      "dist_corpo": 0.584,
+      "tamaño": 0.148
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0074,
+    "lume_quente": 0.0051,
+    "descricion": "The image is a close-up portrait of a man with a beard and mustache. He is wearing a brown coat and a white shirt. The man has curly hair and is looking off to the side with a serious expression on his face. The background is blurred, but it appears to be a room with a fireplace and a few candles. The lighting is soft and warm, creating a cozy atmosphere. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.052,
+      0.094
+     ],
+     "muros encalados (CLIP)": [
+      0.008,
+      0.047
+     ],
+     "ciprés (CLIP)": [
+      -0.069,
+      0.097
+     ],
+     "oliveiras (CLIP)": [
+      -0.061,
+      0.075
+     ],
+     "palmeiras (CLIP)": [
+      -0.003,
+      0.111
+     ],
+     "rodas de raios (CLIP)": [
+      0.047,
+      0.098
+     ],
+     "paisaxe seca (CLIP)": [
+      0.037,
+      0.052
+     ],
+     "eucaliptos (CLIP)": [
+      -0.021,
+      0.016
+     ],
+     "luz eléctrica (CLIP)": [
+      0.017,
+      0.09
+     ],
+     "luces de cidade (CLIP)": [
+      -0.024,
+      0.099
+     ],
+     "salón moderno (CLIP)": [
+      -0.04,
+      0.12
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.028,
+      0.038
+     ],
+     "casas británicas (CLIP)": [
+      0.035,
+      0.046
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.013,
+      0.117
+     ],
+     "catedral inventada (CLIP)": [
+      0.018,
+      0.072
+     ],
+     "abrigo moderno (CLIP)": [
+      0.007,
+      0.133
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.033,
+      0.2
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.006,
+      0.15
+     ],
+     "cadros na parede (CLIP)": [
+      0.032,
+      0.161
+     ],
+     "farol victoriano (CLIP)": [
+      0.023,
+      0.102
+     ],
+     "negativo: electric light": 0.013,
+     "negativo: light bulb": -0.007,
+     "negativo: lamp": -0.009,
+     "negativo: glass window": -0.023,
+     "negativo: modern clothes": -0.009,
+     "negativo: street lamp": -0.033,
+     "clave: scribe": 2.93,
+     "clave_v5: scribe": 0.011
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "024-341e06d7-2.png",
+    "seed": 218581053,
+    "s": 128.7,
+    "prompt": "cinematic film still, period drama, photorealistic, thick granite walls, close-up of a bearded peasant man in a coarse brown wool jacket speaking in profile, and behind him, in soft focus, a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing his words with a goose quill, candlelight, bare granite wall, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 87,
+    "truncado": ", hands hidden in the sleeves or out of frame",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0092,
+    "lume_quente": 0.0019,
+    "descricion": "The image shows two men sitting in a dimly lit room with a candelabra in the background. The man on the left is wearing a brown coat with a fur collar and has a long beard and mustache. He is looking off to the side with a serious expression on his face. The other man is holding a book in his hands and appears to be reading it. Both men have long hair and beards. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.039,
+      0.049
+     ],
+     "muros encalados (CLIP)": [
+      0.001,
+      0.063
+     ],
+     "ciprés (CLIP)": [
+      -0.079,
+      0.102
+     ],
+     "oliveiras (CLIP)": [
+      -0.046,
+      0.077
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.123
+     ],
+     "rodas de raios (CLIP)": [
+      0.033,
+      0.093
+     ],
+     "paisaxe seca (CLIP)": [
+      0.009,
+      0.021
+     ],
+     "eucaliptos (CLIP)": [
+      -0.064,
+      0.047
+     ],
+     "luz eléctrica (CLIP)": [
+      0.02,
+      0.088
+     ],
+     "luces de cidade (CLIP)": [
+      -0.009,
+      0.096
+     ],
+     "salón moderno (CLIP)": [
+      -0.023,
+      0.105
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.007,
+      0.039
+     ],
+     "casas británicas (CLIP)": [
+      0.014,
+      0.05
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.019,
+      0.114
+     ],
+     "catedral inventada (CLIP)": [
+      0.008,
+      0.095
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.042,
+      0.135
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.077,
+      0.189
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.032,
+      0.12
+     ],
+     "cadros na parede (CLIP)": [
+      -0.005,
+      0.171
+     ],
+     "farol victoriano (CLIP)": [
+      0.014,
+      0.089
+     ],
+     "negativo: electric light": 0.021,
+     "negativo: light bulb": 0.007,
+     "negativo: lamp": -0.003,
+     "negativo: glass window": -0.028,
+     "negativo: modern clothes": -0.003,
+     "negativo: street lamp": -0.028,
+     "clave: scribe": 3.27,
+     "clave_v5: scribe": 0.028
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
  }
 }
