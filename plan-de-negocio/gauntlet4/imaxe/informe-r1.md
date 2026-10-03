@@ -144,7 +144,33 @@ Carballeda de Avia 3» de José Antonio Gil Martínez (CC BY 2.0); «Pequena que
 
 ## 5. Biblia v2: proba de 10 prompts
 
-(pendente)
+Folla: [`biblia-v1-v2.jpg`](biblia-v1-v2.jpg) (esquerda o prompt da v1, dereita o reescrito por Claude segundo
+[`biblia-v2.md`](biblia-v2.md); mesmo modelo, mesma semente, 1024x576; `scripts/biblia_proba.py`). Planos 8, 16, 19,
+20, 26, 33, 37, 48, 84 e 92 da v1, escollidos entre os que o tribunal ou Claude viron desconectados ou baleiros.
+
+Xuízo de Claude mirando a folla (o crítico visual decide):
+
+| Plano (o que se oe) | v1 | v2 |
+|---|---|---|
+| 8 (calzarlle ao home os zapatos da muller) | dúas mulleres xunto ao lume; nin zapatos nin home | **o xesto: unha man calza un zapato**, pero o zapato é masculino e moderno e a imaxe sae case en branco e negro |
+| 16 (os xuíces foron moito máis duros) | xuíz con perruca e libro aberto | xuíz que mira cara abaixo coas mans sobre un pano vermello; segue o papel aberto e non sae o selo |
+| 19 (a que curaba, a que axudaba nos partos) | muller deitada e outra mirándoa; un cadro na parede | **primeiro plano das mans que ofrecen unha cunca de herbas**: di a frase |
+| 20 (os veciños espreitan a fonte) | dúas figuras ante un templo clásico inventado | o mesmo templo, agora con tres mulleres e un home que mira; unha luz que parece unha lámpada |
+| 26 (o gando bebe auga de sete fontes) | val baleiro | **moza con dúas vacas bebendo nun regato** |
+| 33 (estaba á porta debandando cando chegou Ana) | rúa "inglesa", muller de costas | anciá sentada na soleira, cara e manto vermello; sen o fío nin a segunda muller |
+| 37 (a Real Audiencia procesou a Marta) | igrexa nun prado, baleiro | un home de negro lendo un papel na rúa, **pero con casas inglesas e chemineas** |
+| 48 (as queimadas cos amigos nos anos 60) | dous homes sorrindo con cuncas | **catro amigos rindo arredor da cunca en chamas** |
+| 84 (a nai que ensina á filla) | mans moendo nun pote | **dúas mulleres traballando xuntas as herbas**, pero cun cadro e unha fiestra de cuarterolas |
+| 92 (a cociña onde se recibía e se falaba) | dous vellos á mesa cunha lámpada colgada | sala escura con xente arredor do lume do lar |
+
+- **Correlación:** a v2 amosa a acción do texto en 6 dos 10 (8, 19, 26, 48, 84, 92) e en parte noutros 2 (33, 37);
+  a v1, en 1-2. **Persoas facendo algo:** v2 en 9 de 10, v1 en 5 de 10.
+- **Atractivo:** máis caras e mans, acento de cor (manto vermello, lume na mesa dos amigos), primeiro termo (mans no
+  19 e no 8). A v2 non mellora a luz, que xa era boa na v1.
+- **O que segue saíndo mal:** anacronismos que a v2 non evita (zapato moderno, casas inglesas, cadros e fiestras de
+  cuarterolas cando hai "room" ou "street"), e os edificios inventados (o templo do 20). A porta v6 ten que mirar
+  estas 20 imaxes (§5.1) e a lista negativa da biblia v2 xa nomea eses casos.
+- Medida automática (CLIP-L fronte ao `texto_en`, mesmo banco): §5.1.
 
 ## 6. Configuración recomendada para a v2 (D18: ≈ 65 planos, ≈ 3-4 h de CPU)
 
