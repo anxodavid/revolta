@@ -1,1 +1,24 @@
 inicio intento 1 Sat Oct  3 09:47:51 UTC 2026
+== 1_texto
+curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+voz: todas as frases na caché
+== 4_escenas
+planos por sentido: 77 (cortes a metade de frase: 2, por Whisper: 2)
+== 5_imaxes
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1791021450.755012    5120 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791021450.771946    5120 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791021450.842143    5126 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791021450.875907    5126 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1791022157.380244    6168 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe   0 intento 0 126.1s + revisión 38.4s ['obxectos modernos']
+imaxe   0 intento 1 119.1s + revisión  9.9s ok
+imaxe   1 intento 0 120.9s + revisión 10.6s ok

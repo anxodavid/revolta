@@ -152,9 +152,9 @@
   "u": 0.0295,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "medium shot of a bearded peasant man in a coarse brown wool jacket, cap in his hands, testifying before a table where a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writes with a goose quill, bare granite room, candlelight, 17th century",
+  "prompt": "medium shot of a bearded peasant man in a coarse brown wool jacket, a felt hat held to his chest, testifying while a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writes with a goose quill, candlelight, bare granite walls",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, framed pictures, bookshelves",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, framed pictures, bookshelves, flat cap, baseball cap, cowboy hat",
   "son": "limpa",
   "clave": "bearded man",
   "animacion": {
@@ -163,7 +163,7 @@
    "efectos": [
     "candea"
    ],
-   "accion": "the man turns his cap in his hands as he speaks while the scribe writes"
+   "accion": "the man speaks, holding his hat to his chest, while the scribe writes"
   },
   "texto_en": "Vilalba, sixteen seventeen. A witness declares",
   "prioridade_i2v": 1
@@ -186,7 +186,7 @@
   "u": 0.0338,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "medium shot of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, laying her hand on the brow of a heavily pregnant young woman on a straw bed under a wool blanket, a worried bearded man beside the bed, warm side light",
+  "prompt": "medium shot of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, laying her hand on the brow of a heavily pregnant young woman in a straw bed, a burly man with a short black beard in a coarse linen shirt watching, side light",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed",
   "son": "limpa",
@@ -222,7 +222,7 @@
   "son": "limpa",
   "clave": "shoe",
   "animacion": {
-   "modo": "i2v",
+   "modo": "paralaxe",
    "camara": "baixa",
    "efectos": [
     "candea"
@@ -230,7 +230,7 @@
    "accion": "her hands slowly push the small shoe onto the man's foot"
   },
   "texto_en": "It would be enough to put the woman's shoes on the man, saying some words that she knew.",
-  "prioridade_i2v": 2
+  "prioridade_i2v": 3
  },
  {
   "n": 8,
@@ -248,7 +248,7 @@
   "u": 0.0565,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "full shot of a startled burly bearded peasant man in a coarse wool shirt leaping up from a low wooden bench, arms flung wide, small women's shoes on his feet, bare granite room lit from an open doorway, 17th century",
+  "prompt": "full shot of a burly man with a short black beard in a coarse linen shirt, startled, leaping up from a low wooden bench with his arms flung wide, small women's shoes on his feet, bare granite room lit from an open doorway, 17th century",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, horse",
   "son": "limpa",
@@ -257,7 +257,7 @@
    "modo": "i2v",
    "camara": "recua",
    "efectos": [],
-   "accion": "the man jumps up from the bench with his arms flung wide"
+   "accion": "he jolts upright from the bench and flings his arms wide"
   },
   "texto_en": "And the man would leap like a wild colt.",
   "prioridade_i2v": 1
@@ -353,7 +353,7 @@
   "u": 0.0756,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "medium shot of blue flames rising from a wide clay bowl on a dark wooden table, three people around it with their faces lost in shadow, only their hands lit as they raise small clay cups toward the flames, darkness all around, 20th century",
+  "prompt": "medium shot of a wide clay bowl of burning spirits glowing blue on a dark wooden table, three people around it with their faces lost in shadow, only their hands lit as they raise small clay cups toward the blue glow, darkness all around, 20th century",
   "tipo": "plano_medio",
   "negativo": "neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
   "son": "lume",
@@ -570,7 +570,7 @@
   "u": 0.1351,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "over-the-shoulder shot of an old village healer in a dark blue wool shawl handing a steaming clay bowl of herbal infusion to a sick young woman lying under a wool blanket, bunches of dried herbs hanging behind, warm light from the side, dignified and ordinary",
+  "prompt": "over-the-shoulder medium shot of an old village healer in a dark blue wool shawl handing a steaming clay bowl of herbal infusion to a sick young woman lying under a wool blanket, bunches of dried herbs hanging behind, warm light from the side, dignified and ordinary",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, warts, hooked nose",
   "son": "limpa",
@@ -600,7 +600,7 @@
   "u": 0.1499,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "medium shot of a woman in a dark wool shawl raising a candle to tall wooden shelves stacked with old bundles of papers tied with cords, searching among them in a dark archive at night, seen from the side, candlelight on her face and on the paper edges",
+  "prompt": "medium shot of a woman in a dark wool shawl holding up a candle in an iron holder to tall wooden shelves of old bundles of papers tied with cords, searching among them in a dark archive at night, candlelight on her face",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern books, computer",
   "son": "limpa",
@@ -632,7 +632,7 @@
   "u": 0.1615,
   "orixe": "sentido",
   "capitulo": "I. Auga, digo, leite",
-  "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing before a court table in a bare granite hall while a stern grey-bearded judge in a black gown with a stiff white golilla collar points his quill at her, light from a high opening",
+  "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing before a court table in a bare granite hall while a stern grey-bearded judge in a black gown with a stiff white collar points his quill at her, light from a high opening",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures",
   "son": "limpa",
@@ -725,7 +725,7 @@
   "u": 0.1929,
   "orixe": "sentido",
   "capitulo": "I. Auga, digo, leite",
-  "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing among brown cows on a windswept hillside of heather and gorse, murmuring words to them, her scarf and the long grass blown by the wind, low grey clouds",
+  "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing among brown cows on a windswept hillside of heather and gorse, murmuring words to them, her scarf and the long grass blown by the wind, overcast sky",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fence, wind turbines, power lines, road",
   "son": "vento",
@@ -888,7 +888,7 @@
   "u": 0.2715,
   "orixe": "sentido",
   "capitulo": "I. Auga, digo, leite",
-  "prompt": "medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing with a goose quill at a table in the foreground, and behind him, in shadow, a woman of about thirty, dark braided hair under a faded red wool headscarf, standing silent with her lips closed, candlelight",
+  "prompt": "medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing with a goose quill by candlelight in the foreground, and behind him in shadow a woman of about thirty in a faded red wool headscarf, standing silent, lips closed",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book",
   "son": "limpa",
@@ -921,7 +921,7 @@
   "u": 0.2813,
   "orixe": "sentido",
   "capitulo": "I. Auga, digo, leite",
-  "prompt": "wide shot of a stern priest in a black cassock and black cape reading a decree aloud on the steps of a small granite church, while an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, and a woman of about thirty, dark braided hair under a faded red wool headscarf, stand alone below him",
+  "prompt": "wide shot of a stern priest in a black cassock and black cape reading a decree aloud on the steps of a small granite church, below him two women stand alone, an old midwife in a dark brown wool headscarf and a woman of about thirty in a faded red wool headscarf, overcast light",
   "tipo": "xeral",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars",
   "son": "campas",
@@ -982,18 +982,19 @@
   "u": 0.3077,
   "orixe": "sentido",
   "capitulo": "II. O conxuro do barco",
-  "prompt": "still life of a single old bundle of trial papers tied with a faded red cord, resting on a dark wooden shelf, a narrow beam of light falling across it, dust in the air, deep shadows",
-  "tipo": "bodegon",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, printed books, plastic",
+  "prompt": "extreme close-up of an old magnifying glass resting on a yellowed 17th-century page, the round lens enlarging one small handwritten word struck through with a single line of ink, soft daylight in a quiet archive",
+  "tipo": "detalle",
+  "negativo": "hands, fingers, electric lamp, printed text, typewriter, plastic, computer",
   "son": "limpa",
-  "clave": "papers",
+  "clave": "magnifying glass",
   "animacion": {
    "modo": "paralaxe",
-   "camara": "sobe",
+   "camara": "avanza",
    "efectos": [
     "po"
    ]
   },
+  "epoca": "xx",
   "texto_en": "That paper kept even the smallest thing, a mistaken word.",
   "prioridade_i2v": 3
  },
@@ -1045,7 +1046,7 @@
   "u": 0.3262,
   "orixe": "sentido",
   "capitulo": "II. O conxuro do barco",
-  "prompt": "medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater, and two friends in white shirts and dark wool sweaters, laughing on coils of rope around a clay bowl of blue flames on the deck of an old wooden boat in a harbour at night",
+  "prompt": "medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater, and two friends in white shirts and dark wool sweaters, laughing on coils of rope around a clay bowl of burning spirits glowing blue on the deck of an old wooden boat in a harbour at night",
   "tipo": "plano_medio",
   "negativo": "neon, plastic, television, smartphone, modern yacht, street lamps",
   "son": "lume+mar",
@@ -1203,7 +1204,7 @@
   "u": 0.3771,
   "orixe": "sentido",
   "capitulo": "II. O conxuro do barco",
-  "prompt": "wide shot of a village festival at night, a crowd raising small clay cups toward a large clay bowl of blue flames on a stone table, faces softly blurred in the darkness, warm and blue light",
+  "prompt": "wide shot of a village festival at night seen from behind the crowd, dark silhouettes of people raising small clay cups toward a large clay bowl of burning spirits glowing blue on a stone table, the blue glow on their raised hands",
   "tipo": "xeral",
   "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights",
   "son": "xente",
@@ -1236,7 +1237,7 @@
   "u": 0.3857,
   "orixe": "sentido",
   "capitulo": "III. As respostas nas preguntas",
-  "prompt": "high-angle shot of a wide clay bowl of burning spirits glowing blue on the wooden deck of a boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+  "prompt": "overhead shot of a wide clay bowl of burning spirits glowing blue on the wooden deck of a boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
   "tipo": "xeral",
   "negativo": "neon, plastic, television, smartphone, light bulb",
   "son": "lume+mar",
@@ -1269,21 +1270,21 @@
   "u": 0.3907,
   "orixe": "sentido",
   "capitulo": "III. As respostas nas preguntas",
-  "prompt": "wide shot of a bare granite hall with three separate judges' tables, at each a different judge: a stern grey-bearded judge in a black gown with a stiff white golilla collar, signing a paper, a stern priest in a black cassock and black cape, and an elderly inquisitor in a white habit and black cape, light from a high opening, 17th century",
+  "prompt": "wide shot of three separate judges' tables in a bare granite hall: a stern grey-bearded judge in a black gown with a stiff white collar signing a paper, a priest in a black cassock and black cape, an elderly inquisitor in a white habit and black cape, light from a high opening",
   "tipo": "xeral",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, flags",
   "son": "limpa",
   "clave": "judge",
   "animacion": {
-   "modo": "i2v",
-   "camara": "avanza",
+   "modo": "paralaxe",
+   "camara": "pan_der",
    "efectos": [
     "po"
    ],
    "accion": "the judge in the black gown signs a paper while the others read"
   },
   "texto_en": "The words of the trials ended up somewhere else: in the courts. Three jurisdictions could judge witchcraft: the civil, the ecclesiastical and the Inquisition.",
-  "prioridade_i2v": 2
+  "prioridade_i2v": 3
  },
  {
   "n": 41,
@@ -1334,7 +1335,7 @@
   "u": 0.4183,
   "orixe": "sentido",
   "capitulo": "III. As respostas nas preguntas",
-  "prompt": "over-the-shoulder shot from behind a stern grey-bearded judge in a black gown with a stiff white golilla collar, looking down at three accused village women in dark headscarves seated on a wooden bench below him, cold light from a high opening, bare granite hall",
+  "prompt": "over-the-shoulder medium shot from behind a stern grey-bearded judge in a black gown with a stiff white collar, looking down at three accused village women in dark headscarves seated on a wooden bench below him, cold light from a high opening, bare granite hall",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chains",
   "son": "limpa",
@@ -1429,7 +1430,7 @@
   "u": 0.4638,
   "orixe": "sentido",
   "capitulo": "III. As respostas nas preguntas",
-  "prompt": "over-the-shoulder shot from behind a woman in a grey wool headscarf, facing a stern grey-bearded judge in a black gown with a stiff white golilla collar, who asks her a question while a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writes beside him with a goose quill, candlelight, bare stone room",
+  "prompt": "over-the-shoulder medium shot from behind a woman in a grey wool headscarf: a stern grey-bearded judge in a black gown with a stiff white collar asks her a question, and beside him a gaunt clean-shaven scribe in a black wool doublet writes with a goose quill, candlelight",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, devil, horns, demon, fire",
   "son": "limpa",
@@ -1462,7 +1463,7 @@
   "u": 0.4791,
   "orixe": "sentido",
   "capitulo": "III. As respostas nas preguntas",
-  "prompt": "close two-shot in profile of a stern grey-bearded judge in a black gown with a stiff white golilla collar, leaning toward a pale exhausted woman of about forty, dark hair under a grey wool headscarf, worn grey wool dress, reading a question from a paper while she nods in silence with her lips closed, candlelight",
+  "prompt": "close-up two-shot in profile: a stern grey-bearded judge in a black gown with a stiff white collar reads a question from a paper to a pale exhausted woman of about forty, dark hair under a grey wool headscarf, who nods in silence with her lips closed, candlelight",
   "tipo": "primeiro_plano",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book",
   "son": "limpa",
@@ -1555,7 +1556,7 @@
   "u": 0.5221,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "over-the-shoulder shot of two village men in sheepskin vests and wool breeches, crouching behind a mossy granite wall at night, peering at distant women gathered at a stone fountain lit by a small bonfire, deep shadows",
+  "prompt": "over-the-shoulder medium shot of two village men in sheepskin vests and wool breeches, crouching behind a mossy granite wall at night, peering at distant women gathered at a stone fountain lit by a small bonfire, deep shadows",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp",
   "son": "noite",
@@ -1712,7 +1713,7 @@
   "u": 0.5842,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "close two-shot of a young woman with a long dark braid, white linen blouse and dark shawl, smiling as she fills a clay jug at a granite fountain at night, and an old woman beside her making the sign of the cross and looking warily into the darkness, moonlight and the glow of a small bonfire",
+  "prompt": "close-up two-shot at a granite fountain at night: a young woman with a long dark braid, white linen blouse and dark shawl smiles as she fills a clay jug, and an old woman beside her makes the sign of the cross, looking warily into the darkness, moonlight",
   "tipo": "primeiro_plano",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom",
   "son": "fonte+noite",
@@ -1723,7 +1724,7 @@
    "efectos": [
     "auga"
    ],
-   "accion": "the old woman crosses herself while the young woman fills the jug"
+   "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug"
   },
   "texto_en": "And in popular belief, it was also the night when the meigas roamed most freely. The same fountain, the same night, and two ways of looking at it.",
   "prioridade_i2v": 1
@@ -1756,7 +1757,7 @@
    "efectos": [
     "lume"
    ],
-   "accion": "the mother's hands guide the girl's hands as they grind the herbs"
+   "accion": "the girl slowly grinds the herbs with the pestle while her mother's hand rests on hers"
   },
   "referencia": {
    "ficheiro": "06-cocina/03-reitoral-de-beiro-carballeda-de-avia-3.jpg",
@@ -1876,7 +1877,7 @@
   "u": 0.6677,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "medium shot of an elderly Benedictine monk with thin white hair and a lined face, in a black hooded habit, writing with a quill by candlelight at a desk piled with closed leather books in a stone monastery cell at night",
+  "prompt": "medium shot of an elderly Benedictine monk with thin white hair and a lined face, in a black hooded habit, writing with a quill at a tall wooden lectern in a bare stone monastery cell, a pile of closed leather books beside him, soft morning light from a small shuttered opening",
   "tipo": "plano_medio",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, open book with text, bookshelves",
   "son": "limpa",
@@ -1884,9 +1885,7 @@
   "animacion": {
    "modo": "i2v",
    "camara": "avanza",
-   "efectos": [
-    "candea"
-   ],
+   "efectos": [],
    "accion": "the monk writes, pauses and looks up thoughtfully"
   },
   "texto_en": "In the same century, the friar Benito Xerónimo Feijoo wrote against false beliefs and superstitions. He warned that witchcraft tales pass from the people to books, and from books back to the people.",
@@ -2000,7 +1999,7 @@
   "u": 0.723,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "close view of a moonlit granite fountain basin brimming with still water that reflects the moon, ferns and moss around its edge, a thin stream falling from the spout, soft mist, no one around",
+  "prompt": "high-angle close-up of the full moon reflected in the still water of a brimming granite fountain basin, ferns and moss around its edge, a thin stream falling from the spout, soft mist, no one around",
   "tipo": "detalle",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, plastic pipe",
   "son": "fonte+noite",
@@ -2066,21 +2065,22 @@
   "u": 0.7623,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "wide shot of a dark meadow at night where, far away, small silhouettes of villagers take turns leaping over the low glowing embers of a dying Saint John's bonfire, sparks drifting up into the dark, calm",
+  "prompt": "wide shot of a dark meadow at night where, far away, small silhouettes of villagers stand around the last dull red glow of a dying Saint John's bonfire, one of them caught in mid-leap over it, thin smoke rising, calm",
   "tipo": "xeral",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fireworks, city lights",
   "son": "lume+noite",
   "clave": "bonfire",
   "animacion": {
-   "modo": "i2v",
+   "modo": "paralaxe",
    "camara": "recua",
    "efectos": [
-    "lume"
+    "fume",
+    "bretema"
    ],
    "accion": "a small figure leaps over the embers and sparks rise slowly"
   },
   "texto_en": "Far away, when the bonfire is almost out, people jump over the last flames, always an odd number of times, at least three. And as they jump they say some words that no one writes on a list. I jump over Saint John's fire, so that no bitch or dog may bite me.",
-  "prioridade_i2v": 2
+  "prioridade_i2v": 3
  },
  {
   "n": 66,
@@ -2129,7 +2129,7 @@
   "u": 0.8188,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "close view of bunches of dried herbs and flowers hanging from a dark wooden beam beside the doorway of a granite farmhouse, dust floating in a soft sunbeam, quiet",
+  "prompt": "close-up of bunches of dried herbs and flowers hanging from a dark wooden beam beside the doorway of a granite farmhouse, dust floating in a soft sunbeam, quiet",
   "tipo": "detalle",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic, vase",
   "son": "limpa",
@@ -2161,7 +2161,7 @@
   "u": 0.8305,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "close-up of an earthenware jug held by an old woman's hand pouring clear spirits into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, in a dark room after supper, 20th century",
+  "prompt": "close-up of an earthenware jug held by an old woman's hand pouring clear spirits into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, in a dim room after supper, faint light from a small shuttered opening",
   "tipo": "detalle",
   "negativo": "neon, plastic, television, smartphone, glass bottle, modern kitchen, light bulb",
   "son": "limpa",
@@ -2198,9 +2198,9 @@
   "u": 0.8501,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "medium shot of an old man with white stubble in a dark wool waistcoat, lifting a clay ladle of blue fire and letting it fall slowly back into a wide clay bowl, an old woman in a black cardigan and dark headscarf, and a young man watching around the table, their faces lit blue in a dark room, 20th century",
+  "prompt": "medium shot of an old man with white stubble in a dark wool waistcoat lifting a clay ladle of pale blue flames and letting it fall slowly back into a wide clay bowl, an old woman in a black cardigan and dark headscarf watching, their faces lit blue in a dark room",
   "tipo": "plano_medio",
-  "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass",
+  "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, candles",
   "son": "lume",
   "clave": "clay bowl",
   "animacion": {
@@ -2266,7 +2266,7 @@
   "u": 0.8827,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "medium close-up of an old woman in a black cardigan and dark headscarf, smiling as she says something with a raised finger, and an old man with white stubble in a dark wool waistcoat, laughing softly beside her, both lit by a soft blue glow in a dark room, small clay cups in their hands, 20th century",
+  "prompt": "medium close-up in profile of an old woman in a black cardigan and dark headscarf, smiling and raising one finger as she speaks to an old man with white stubble in a dark wool waistcoat who laughs softly, small clay cups in their hands, soft blue glow in a dark room",
   "tipo": "plano_medio",
   "negativo": "neon, plastic, television, smartphone, light bulb, glass, witch hat",
   "son": "lume",
@@ -2298,7 +2298,7 @@
   "u": 0.898,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "close view of the last low blue tongues of burning spirits dying in a wide clay bowl on a wooden table, the dark room behind lit only by a dim red glow, an old bundle of papers tied with a faded red cord lying beside the bowl",
+  "prompt": "close-up of the last low blue tongues of burning spirits dying in a wide clay bowl on a wooden table, the dark room behind lit only by a dim red glow, an old bundle of papers tied with a faded red cord lying beside the bowl",
   "tipo": "detalle",
   "negativo": "neon, plastic, television, smartphone, light bulb, glass",
   "son": "lume",
@@ -2393,7 +2393,7 @@
   "u": 0.9601,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "wide view of a small stream running gently down between mossy stones and ferns at night under a fine rain, toward a misty river valley, faint moonlight on the wet stones, no one around",
+  "prompt": "wide shot of a small stream running gently down between mossy stones and ferns at night under a fine rain, toward a misty river valley, faint moonlight on the wet stones, no one around",
   "tipo": "paisaxe",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, bridge, road",
   "son": "choiva+fonte",
@@ -2427,7 +2427,7 @@
   "u": 0.9853,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "close view of a single candle burning on the deep stone sill of a small open wooden shutter in the thick granite wall of a dark house at night, fine rain falling past it from the slate eaves, calm",
+  "prompt": "close-up of a single candle burning on the deep stone sill of a small open wooden shutter in the thick granite wall of a dark house at night, fine rain falling past it from the slate eaves, calm",
   "tipo": "detalle",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass window, lantern, light bulb",
   "son": "choiva",
@@ -2460,7 +2460,7 @@
   "u": 0.9988,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "close view of fine rain falling on the dark wet slates of an old granite house roof at night, drops gathering and dripping from the edge, moss between the slates, deep blue darkness, calm",
+  "prompt": "close-up of fine rain falling on the dark wet slates of an old granite house roof at night, drops gathering and dripping from the edge, moss between the slates, deep blue darkness, calm",
   "tipo": "detalle",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, tiles, gutter, light bulb",
   "son": "choiva",

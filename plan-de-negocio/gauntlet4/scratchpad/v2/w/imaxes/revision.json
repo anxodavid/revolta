@@ -1,0 +1,367 @@
+{
+ "000-df6db929": {
+  "ficheiro": "000-df6db929-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "000-df6db929-0.png",
+    "seed": 343002024,
+    "s": 126.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of a little owl perched on a mossy granite wall at night, its round yellow eyes catching a faint blue glow from below, a small toad on the stone beside it, deep darkness behind",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0044,
+    "lume_quente": 0.006,
+    "descricion": "The image is a digital illustration of a small owl perched on a moss-covered rock. The owl is facing towards the right side of the image, with its head turned slightly to the left. It has a round face with large, round eyes and a bushy tail. Its feathers are a mix of brown and white, with some darker spots on its wings and tail. The background is blurred, but it appears to be a forest or a wooded area with trees and lanterns hanging from the trees. The sun is shining through the trees, creating a warm glow that illuminates",
+    "obxectos": [
+     "owl"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.023,
+      0.074
+     ],
+     "muros encalados (CLIP)": [
+      -0.01,
+      0.083
+     ],
+     "ciprés (CLIP)": [
+      -0.033,
+      0.116
+     ],
+     "oliveiras (CLIP)": [
+      -0.081,
+      0.122
+     ],
+     "palmeiras (CLIP)": [
+      -0.027,
+      0.136
+     ],
+     "rodas de raios (CLIP)": [
+      0.036,
+      0.072
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.004,
+      0.115
+     ],
+     "eucaliptos (CLIP)": [
+      -0.077,
+      0.119
+     ],
+     "luz eléctrica (CLIP)": [
+      0.002,
+      0.125
+     ],
+     "luces de cidade (CLIP)": [
+      -0.029,
+      0.164
+     ],
+     "salón moderno (CLIP)": [
+      0.019,
+      0.087
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.042,
+      0.064
+     ],
+     "casas británicas (CLIP)": [
+      0.025,
+      0.06
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.053,
+      0.189
+     ],
+     "catedral inventada (CLIP)": [
+      -0.0,
+      0.056
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.018,
+      0.111
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.072,
+      0.153
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.013,
+      0.118
+     ],
+     "cadros na parede (CLIP)": [
+      -0.02,
+      0.187
+     ],
+     "farol victoriano (CLIP)": [
+      -0.029,
+      0.135
+     ],
+     "negativo: electric light": 0.012,
+     "negativo: light bulb": -0.002,
+     "negativo: lamp": 0.008,
+     "negativo: glass window": -0.02,
+     "negativo: modern clothes": -0.044,
+     "negativo: street lamp": -0.007,
+     "clave: owl": 7.31,
+     "clave_v5: owl": 0.091
+    },
+    "arquetipo": null,
+    "s_revision": 38.4,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "000-df6db929-1.png",
+    "seed": 4072118108,
+    "s": 119.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of a little owl perched on a mossy granite wall at night, its round yellow eyes catching a faint blue glow from below, a small toad on the stone beside it, deep darkness behind",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0008,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows two owls perched on a moss-covered rock in a forest. The owls are facing the camera and appear to be looking directly at the camera. They have large, round, yellow eyes that are piercing and their feathers are a mix of brown and white. The rock is covered in green moss and there are trees in the background, creating a peaceful and serene atmosphere. The overall mood of the image is one of calmness and serenity.",
+    "obxectos": [
+     "owl"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.045,
+      0.099
+     ],
+     "muros encalados (CLIP)": [
+      -0.008,
+      0.102
+     ],
+     "ciprés (CLIP)": [
+      0.001,
+      0.122
+     ],
+     "oliveiras (CLIP)": [
+      -0.083,
+      0.135
+     ],
+     "palmeiras (CLIP)": [
+      -0.02,
+      0.148
+     ],
+     "rodas de raios (CLIP)": [
+      0.034,
+      0.063
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.021,
+      0.102
+     ],
+     "eucaliptos (CLIP)": [
+      -0.049,
+      0.087
+     ],
+     "luz eléctrica (CLIP)": [
+      0.018,
+      0.101
+     ],
+     "luces de cidade (CLIP)": [
+      -0.036,
+      0.169
+     ],
+     "salón moderno (CLIP)": [
+      0.062,
+      0.045
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.044,
+      0.038
+     ],
+     "casas británicas (CLIP)": [
+      0.012,
+      0.072
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.056,
+      0.12
+     ],
+     "catedral inventada (CLIP)": [
+      0.045,
+      0.092
+     ],
+     "abrigo moderno (CLIP)": [
+      0.012,
+      0.074
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.027,
+      0.108
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.009,
+      0.088
+     ],
+     "cadros na parede (CLIP)": [
+      0.021,
+      0.192
+     ],
+     "farol victoriano (CLIP)": [
+      -0.055,
+      0.13
+     ],
+     "negativo: electric light": 0.019,
+     "negativo: light bulb": 0.002,
+     "negativo: lamp": 0.007,
+     "negativo: glass window": -0.014,
+     "negativo: modern clothes": -0.03,
+     "negativo: street lamp": -0.009,
+     "clave: owl": 6.53,
+     "clave_v5: owl": 0.093
+    },
+    "arquetipo": null,
+    "s_revision": 9.9,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "gancho"
+ },
+ "001-24f10d65": {
+  "ficheiro": "001-24f10d65-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "001-24f10d65-0.png",
+    "seed": 515153489,
+    "s": 120.9,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of a man's face in the dark, lit from below by blue flames, his lips moving as he lifts a clay ladle of burning spirits above a wide clay bowl, a thin stream of blue fire falling back into it, black background",
+    "modelo": "lightning",
+    "tokens": 69,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0569,
+    "lume_quente": 0.0343,
+    "descricion": "The image shows a man sitting in front of a large frying pan on fire. He is holding a spatula in his right hand and appears to be stirring the contents of the pan. The pan is black and the flames are bright orange and yellow. The man is wearing a dark shirt and has a serious expression on his face. The background is dark and there is smoke rising from the pan, suggesting that he is in a kitchen or a restaurant. The overall mood of the image is intense and dramatic.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.022,
+      0.07
+     ],
+     "muros encalados (CLIP)": [
+      0.02,
+      0.053
+     ],
+     "ciprés (CLIP)": [
+      -0.051,
+      0.066
+     ],
+     "oliveiras (CLIP)": [
+      0.04,
+      0.061
+     ],
+     "palmeiras (CLIP)": [
+      0.009,
+      0.098
+     ],
+     "rodas de raios (CLIP)": [
+      0.01,
+      0.07
+     ],
+     "paisaxe seca (CLIP)": [
+      0.043,
+      0.048
+     ],
+     "eucaliptos (CLIP)": [
+      -0.05,
+      0.039
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.023,
+      0.074
+     ],
+     "luces de cidade (CLIP)": [
+      -0.036,
+      0.117
+     ],
+     "salón moderno (CLIP)": [
+      -0.091,
+      0.189
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.008,
+      0.056
+     ],
+     "casas británicas (CLIP)": [
+      -0.016,
+      0.043
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.022,
+      0.222
+     ],
+     "catedral inventada (CLIP)": [
+      -0.006,
+      0.053
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.036,
+      0.074
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.041,
+      0.149
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.002,
+      0.134
+     ],
+     "cadros na parede (CLIP)": [
+      -0.005,
+      0.14
+     ],
+     "farol victoriano (CLIP)": [
+      0.016,
+      0.059
+     ],
+     "negativo: neon": -0.003,
+     "negativo: plastic": -0.021,
+     "negativo: television": 0.001,
+     "negativo: smartphone": -0.002,
+     "negativo: light bulb": -0.013,
+     "negativo: lamp": -0.009,
+     "clave: blue flames": 4.16,
+     "clave_v5: blue flames": 0.08
+    },
+    "arquetipo": null,
+    "s_revision": 10.6,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "gancho"
+ }
+}
