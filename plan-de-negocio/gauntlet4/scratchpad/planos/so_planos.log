@@ -1,3 +1,14 @@
 inicio Sat Oct  3 09:11:42 UTC 2026
 == 1_texto
 curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+voz: todas as frases na caché
+== 4_escenas
+planos por sentido: 77 (cortes a metade de frase: 2, por Whisper: 2)
+so-planos: corte por sentido
+gancho: 19 planos, media 5.2 s (min 3.7, max 7.2; obxectivo 3-6 s; fóra: 9 (7.2 s), 12 (6.2 s), 16 (6.5 s), 18 (6.8 s), 19 (6.8 s))
+transicion: 19 planos, media 7.6 s (min 5.0, max 12.5; obxectivo 5-9 s; fóra: 23 (12.3 s), 27 (12.5 s), 29 (12.0 s))
+calma: 24 planos, media 10.4 s (min 6.8, max 15.4; obxectivo 8-14 s; fóra: 39 (7.3 s), 50 (7.8 s), 51 (6.8 s), 53 (7.5 s), 55 (15.4 s), 59 (14.2 s), 60 (6.8 s))
+durmir: 15 planos, media 17.2 s (min 9.4, max 27.1; obxectivo 12-20 s; fóra: 65 (22.7 s), 66 (20.7 s), 67 (9.4 s), 73 (10.9 s), 74 (21.2 s), 75 (22.4 s), 77 (27.1 s))
+rc 0 Sat Oct  3 09:19:23 UTC 2026

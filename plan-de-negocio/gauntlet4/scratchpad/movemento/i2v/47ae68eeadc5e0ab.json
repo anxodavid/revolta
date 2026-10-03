@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/graduadas/021-de4f25ff-0.png",
+ "accion": "A woman in a long dark wool skirt, a brown wool jacket and a headscarf walks slowly away from the camera along a narrow earthen path between mossy stone walls and old oak trees. Her steps are calm and steady, her arms swing gently and her skirt sways with each step. Soft morning mist drifts between the trees. The camera is static. Cinematic, realistic, natural walking motion.",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 97,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 657.7,
+ "s_pasos": [
+  73.1,
+  64.3,
+  65.6,
+  61.7,
+  62.6,
+  62.9,
+  61.5,
+  62.0
+ ],
+ "s_descodificar": 144.0,
+ "fotogramas": 97,
+ "pico_proceso_mb": 13512
+}
