@@ -1,0 +1,1 @@
+/home/user/revolta/plan-de-negocio/gauntlet4/movemento/scripts/lote_r1.sh: line 9:  5193 Killed                  bash $R/lanzar_i2v.sh xerar $P/i2v_probas1.json > $L/i2v1.log 2>&1
