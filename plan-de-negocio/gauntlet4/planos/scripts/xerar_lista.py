@@ -25,7 +25,7 @@ PERS = {
     'xuiz': 'a stern grey-bearded judge in a black gown with a stiff white golilla collar',
     'vicario': 'a stern priest in a black cassock and black cape',
     'inquisidor': 'an elderly inquisitor in a white habit and black cape',
-    'cibreira': 'a pale exhausted woman of about forty, dark hair under a grey wool headscarf',
+    'cibreira': 'a pale exhausted woman of about forty, dark hair under a grey wool headscarf, worn grey wool dress',
     'nai_cibreira': 'an old healer with white hair under a black wool headscarf',
     'curandeira': 'an old village healer in a dark blue wool shawl',
     'mariano': 'a dark-haired man of about forty in a white shirt and dark wool sweater',
