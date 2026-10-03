@@ -73,16 +73,31 @@ def montar():
     rot = [r for r in json.loads((G3 / 'rotulos.json').read_text()) if r['t0'] < dur]
     for r in rot:
         r['t1'] = min(r['t1'], dur)
-    planos = []
-    for e in esc:
+    import movemento
+    porta_f = SCR / 'video' / 'saida' / 'porta.json'
+    porta = json.loads(porta_f.read_text()) if porta_f.exists() else {}
+    planos, notas = [], {}
+    for e, g in zip(esc, grad):
         x = {'b0': e['b0'], 'b1': min(e['b1'], dur), 'movemento': e['movemento'], 'xf': e['xf'], 'n': e['n']}
         an = plan.get(str(e['n']))
         if an:
             an = dict(an)
             if an.get('modo') == 'i2v':
                 an.setdefault('i2v', None)
+                f = movemento.i2v_ficheiro(g, an['accion'], an['i2v'])
+                nome = None
+                if f.with_suffix('.json').exists():
+                    d = json.loads(f.with_suffix('.json').read_text())
+                    nome = f"i2v_p{e['n']:02d}_{d['W']}x{d['H']}_f{d['F']}_s{d['pasos']}"
+                r = porta.get(nome) if nome else None
+                if not f.exists() or (r is not None and not r.get('ok')):
+                    notas[e['n']] = 'sen clip' if not f.exists() else f"porta: {r.get('problemas')}"
+                    an = {'modo': 'paralaxe', 'camara': an.get('camara', 'avanza'), 'efectos': an.get('efectos', [])}
+                else:
+                    notas[e['n']] = 'i2v' + ('' if r else ' (sen porta)')
             x['animacion'] = an
         planos.append(x)
+    print('planos I2V:', json.dumps(notas, ensure_ascii=False), flush=True)
     out = AQUI / 'demo-gancho.mp4'
     tmp = W / 'demo-gancho.tmp.mp4'
     t0 = time.time()
@@ -97,7 +112,7 @@ def montar():
         raise SystemExit(f'{mb:.1f} MB: máis de 30 MB')
     os.replace(tmp, out)
     info = {'dur_s': dur, 'mb': round(mb, 1), 's_montaxe': round(t_render, 1),
-            's_por_segundo_de_video': round(t_render / dur, 2)}
+            's_por_segundo_de_video': round(t_render / dur, 2), 'planos_i2v': notas}
     (AQUI / 'probas' / 'medidas-demo.json').write_text(json.dumps(info, indent=1))
     print(json.dumps(info))
 
