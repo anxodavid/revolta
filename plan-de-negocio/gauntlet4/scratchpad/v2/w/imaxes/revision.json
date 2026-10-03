@@ -25408,5 +25408,1172 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "calma"
+ },
+ "047-391b42ba": {
+  "ficheiro": "047-391b42ba-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "047-391b42ba-0.png",
+    "seed": 1214130367,
+    "s": 118.5,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of two village men in sheepskin vests pointing and shouting at a village woman in a dark wool shawl at the door of a stone byre, a sick calf and two piglets lying still on the straw inside, overcast daylight, 17th century",
+    "modelo": "lightning",
+    "tokens": 67,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0035,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two men standing in front of a stone building with a thatched roof. The man on the left is wearing a brown coat and is holding a white goat in his hand. He is also wearing a hat and a brown vest. The other man is standing next to him with a brown bag slung over his shoulder. There are two other goats in the background, one white and one brown. The building appears to be old and weathered, with a stone wall and a wooden door. The sky is overcast and the grass is green.",
+    "obxectos": [
+     "human face",
+     "man",
+     "sheep"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.008,
+      0.062
+     ],
+     "muros encalados (CLIP)": [
+      0.013,
+      0.123
+     ],
+     "ciprés (CLIP)": [
+      -0.044,
+      0.122
+     ],
+     "oliveiras (CLIP)": [
+      -0.093,
+      0.144
+     ],
+     "palmeiras (CLIP)": [
+      -0.057,
+      0.137
+     ],
+     "rodas de raios (CLIP)": [
+      -0.014,
+      0.109
+     ],
+     "paisaxe seca (CLIP)": [
+      0.015,
+      0.116
+     ],
+     "eucaliptos (CLIP)": [
+      -0.008,
+      0.081
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.031,
+      0.06
+     ],
+     "luces de cidade (CLIP)": [
+      -0.065,
+      0.137
+     ],
+     "salón moderno (CLIP)": [
+      -0.063,
+      0.159
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.028,
+      0.068
+     ],
+     "casas británicas (CLIP)": [
+      0.02,
+      0.091
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.033,
+      0.139
+     ],
+     "catedral inventada (CLIP)": [
+      -0.064,
+      0.107
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.085,
+      0.189
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.108,
+      0.256
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.055,
+      0.166
+     ],
+     "cadros na parede (CLIP)": [
+      -0.041,
+      0.227
+     ],
+     "farol victoriano (CLIP)": [
+      -0.073,
+      0.123
+     ],
+     "negativo: electric light": -0.019,
+     "negativo: light bulb": -0.047,
+     "negativo: lamp": -0.026,
+     "negativo: glass window": -0.0,
+     "negativo: modern clothes": 0.001,
+     "negativo: street lamp": -0.055,
+     "clave: calf": 2.6,
+     "clave_v5: calf": 0.034
+    },
+    "arquetipo": null,
+    "s_revision": 11.1,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "048-c696dadc": {
+  "ficheiro": "048-c696dadc-2.png",
+  "escollida": 2,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "048-c696dadc-0.png",
+    "seed": 343577619,
+    "s": 115.7,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of over-the-shoulder shot of two village men in sheepskin vests crouching behind a mossy granite wall at night, peering over it at distant women gathered around a small bonfire by a rustic stone spring, deep shadows",
+    "modelo": "lightning",
+    "tokens": 63,
+    "truncado": "",
+    "problemas": [
+     "roupa actual"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 4,
+    "altas_luces": 0.0115,
+    "lume_quente": 0.0123,
+    "descricion": "The image shows two men sitting around a campfire in a field. They are both wearing backpacks and appear to be engaged in a conversation. The campfire is burning brightly and there is smoke rising from it. In the background, there is a stone structure that looks like a hut or a stone wall. The sky is dark and the grass is green, suggesting that the photo was taken at night. The men are sitting on a grassy field and the fire is burning in the center of the image.",
+    "obxectos": [
+     "footwear",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.016,
+      0.067
+     ],
+     "muros encalados (CLIP)": [
+      -0.027,
+      0.086
+     ],
+     "ciprés (CLIP)": [
+      -0.088,
+      0.137
+     ],
+     "oliveiras (CLIP)": [
+      -0.105,
+      0.125
+     ],
+     "palmeiras (CLIP)": [
+      -0.053,
+      0.152
+     ],
+     "rodas de raios (CLIP)": [
+      -0.002,
+      0.089
+     ],
+     "paisaxe seca (CLIP)": [
+      0.008,
+      0.102
+     ],
+     "eucaliptos (CLIP)": [
+      -0.07,
+      0.101
+     ],
+     "luz eléctrica (CLIP)": [
+      0.007,
+      0.092
+     ],
+     "luces de cidade (CLIP)": [
+      -0.042,
+      0.164
+     ],
+     "salón moderno (CLIP)": [
+      -0.039,
+      0.213
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.016,
+      0.086
+     ],
+     "casas británicas (CLIP)": [
+      0.002,
+      0.07
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.02,
+      0.217
+     ],
+     "catedral inventada (CLIP)": [
+      -0.021,
+      0.096
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.058,
+      0.12
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.074,
+      0.189
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.023,
+      0.122
+     ],
+     "cadros na parede (CLIP)": [
+      -0.009,
+      0.242
+     ],
+     "farol victoriano (CLIP)": [
+      -0.043,
+      0.114
+     ],
+     "negativo: electric light": -0.003,
+     "negativo: light bulb": -0.015,
+     "negativo: lamp": -0.032,
+     "negativo: glass window": -0.014,
+     "negativo: modern clothes": -0.005,
+     "negativo: street lamp": -0.046,
+     "clave: fountain": 0.24,
+     "clave_v5: fountain": -0.012
+    },
+    "arquetipo": null,
+    "s_revision": 9.6,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "048-c696dadc-1.png",
+    "seed": 3180588390,
+    "s": 114.7,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of over-the-shoulder shot of two village men in sheepskin vests crouching behind a mossy granite wall at night, peering over it at distant women gathered around a small bonfire by a rustic stone spring, deep shadows",
+    "modelo": "lightning",
+    "tokens": 63,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.4,
+       0.685
+      ],
+      "confianza": 0.96,
+      "dist_corpo": 9.0,
+      "tamaño": 0.039
+     }
+    ],
+    "corpos": 0,
+    "altas_luces": 0.0013,
+    "lume_quente": 0.0007,
+    "descricion": "The image shows three men sitting on a grassy hillside with a stone wall in front of them. They are all wearing traditional Viking clothing, with beige jackets and brown pants. The men are sitting close together, with their hands clasped together in prayer. In the background, there is a small hut with a chimney and a fire burning in the distance. The sky is overcast and the overall mood of the image is somber.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.007,
+      0.112
+     ],
+     "muros encalados (CLIP)": [
+      -0.042,
+      0.165
+     ],
+     "ciprés (CLIP)": [
+      -0.038,
+      0.115
+     ],
+     "oliveiras (CLIP)": [
+      -0.049,
+      0.14
+     ],
+     "palmeiras (CLIP)": [
+      -0.061,
+      0.149
+     ],
+     "rodas de raios (CLIP)": [
+      0.008,
+      0.106
+     ],
+     "paisaxe seca (CLIP)": [
+      0.017,
+      0.138
+     ],
+     "eucaliptos (CLIP)": [
+      -0.036,
+      0.107
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.012,
+      0.069
+     ],
+     "luces de cidade (CLIP)": [
+      -0.043,
+      0.131
+     ],
+     "salón moderno (CLIP)": [
+      -0.06,
+      0.203
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.03,
+      0.092
+     ],
+     "casas británicas (CLIP)": [
+      -0.048,
+      0.133
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.035,
+      0.178
+     ],
+     "catedral inventada (CLIP)": [
+      -0.082,
+      0.123
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.061,
+      0.129
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.076,
+      0.185
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.055,
+      0.138
+     ],
+     "cadros na parede (CLIP)": [
+      -0.007,
+      0.217
+     ],
+     "farol victoriano (CLIP)": [
+      -0.092,
+      0.127
+     ],
+     "negativo: electric light": -0.001,
+     "negativo: light bulb": -0.032,
+     "negativo: lamp": -0.041,
+     "negativo: glass window": -0.018,
+     "negativo: modern clothes": -0.008,
+     "negativo: street lamp": -0.063,
+     "clave: fountain": -0.38,
+     "clave_v5: fountain": -0.043
+    },
+    "arquetipo": null,
+    "s_revision": 9.8,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   },
+   {
+    "intento": 2,
+    "ficheiro": "048-c696dadc-2.png",
+    "seed": 572932930,
+    "s": 118.1,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of over-the-shoulder shot of two village men in sheepskin vests crouching behind a mossy granite wall at night, peering over it at distant women gathered around a small bonfire by a rustic stone spring, deep shadows, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 73,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.432,
+       0.68
+      ],
+      "confianza": 0.81,
+      "dist_corpo": 0.015,
+      "tamaño": 0.022
+     },
+     {
+      "pulso": [
+       0.565,
+       0.616
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.009,
+      "tamaño": 0.043
+     }
+    ],
+    "corpos": 3,
+    "altas_luces": 0.0195,
+    "lume_quente": 0.0095,
+    "descricion": "The image shows three men sitting around a campfire in a stone wall. They are all wearing brown jackets and appear to be engaged in a conversation. The fire is burning brightly on the right side of the image, with the flames reaching up towards the sky. The men are sitting on a rock, with one man on the left, one in the middle, and one on the far right. The background is dark and the lighting is dim, creating a moody atmosphere. The stone wall behind them is made up of small rocks and boulders, and there are trees and bushes in the",
+    "obxectos": [
+     "footwear",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.026,
+      0.051
+     ],
+     "muros encalados (CLIP)": [
+      -0.033,
+      0.103
+     ],
+     "ciprés (CLIP)": [
+      -0.078,
+      0.147
+     ],
+     "oliveiras (CLIP)": [
+      -0.058,
+      0.134
+     ],
+     "palmeiras (CLIP)": [
+      -0.064,
+      0.151
+     ],
+     "rodas de raios (CLIP)": [
+      0.001,
+      0.092
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.002,
+      0.11
+     ],
+     "eucaliptos (CLIP)": [
+      -0.049,
+      0.109
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.037,
+      0.125
+     ],
+     "luces de cidade (CLIP)": [
+      -0.036,
+      0.151
+     ],
+     "salón moderno (CLIP)": [
+      -0.056,
+      0.163
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.02,
+      0.092
+     ],
+     "casas británicas (CLIP)": [
+      0.016,
+      0.071
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.043,
+      0.185
+     ],
+     "catedral inventada (CLIP)": [
+      -0.046,
+      0.106
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.067,
+      0.138
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.064,
+      0.198
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.06,
+      0.145
+     ],
+     "cadros na parede (CLIP)": [
+      -0.023,
+      0.21
+     ],
+     "farol victoriano (CLIP)": [
+      -0.02,
+      0.116
+     ],
+     "negativo: electric light": 0.015,
+     "negativo: light bulb": -0.005,
+     "negativo: lamp": -0.005,
+     "negativo: glass window": -0.003,
+     "negativo: modern clothes": 0.008,
+     "negativo: street lamp": -0.022,
+     "clave: fountain": -0.03,
+     "clave_v5: fountain": -0.018
+    },
+    "arquetipo": null,
+    "s_revision": 10.6,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "050-d1c16264": {
+  "ficheiro": "050-d1c16264-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "050-d1c16264-0.png",
+    "seed": 2315300034,
+    "s": 118.9,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up of cold water pouring from a rough stone spout in a mossy granite wall into a stone trough on a short June night, moonlight on the water, dark leaves and ferns all around",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0029,
+    "lume_quente": 0.0,
+    "descricion": "The image is a close-up of a small waterfall cascading down a rocky cliff in a forest. The waterfall is surrounded by lush greenery, with tall ferns and other plants growing on either side. The rocks are dark grey and appear to be weathered and aged, with some of them having a rough texture. The water is flowing down the cliff, creating a small stream of water that is visible in the foreground. The background is blurred, but it appears to be a dense forest with trees and foliage. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "fountain"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.036,
+      0.096
+     ],
+     "muros encalados (CLIP)": [
+      -0.03,
+      0.1
+     ],
+     "ciprés (CLIP)": [
+      0.031,
+      0.148
+     ],
+     "oliveiras (CLIP)": [
+      -0.073,
+      0.146
+     ],
+     "palmeiras (CLIP)": [
+      -0.01,
+      0.161
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.108
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.115,
+      0.2
+     ],
+     "eucaliptos (CLIP)": [
+      -0.055,
+      0.132
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.026,
+      0.084
+     ],
+     "luces de cidade (CLIP)": [
+      -0.002,
+      0.147
+     ],
+     "salón moderno (CLIP)": [
+      0.035,
+      0.087
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.036,
+      0.165
+     ],
+     "casas británicas (CLIP)": [
+      0.007,
+      0.079
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.094,
+      0.194
+     ],
+     "catedral inventada (CLIP)": [
+      -0.056,
+      0.106
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.022,
+      0.068
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.027,
+      0.113
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.012,
+      0.105
+     ],
+     "cadros na parede (CLIP)": [
+      -0.006,
+      0.209
+     ],
+     "farol victoriano (CLIP)": [
+      -0.058,
+      0.162
+     ],
+     "negativo: electric light": -0.005,
+     "negativo: light bulb": -0.05,
+     "negativo: lamp": -0.038,
+     "negativo: glass window": -0.005,
+     "negativo: modern clothes": -0.045,
+     "negativo: street lamp": -0.048,
+     "clave: water": 4.01,
+     "clave_v5: water": 0.027
+    },
+    "arquetipo": null,
+    "s_revision": 10.3,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "051-898a87cf": {
+  "ficheiro": "051-898a87cf-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "051-898a87cf-0.png",
+    "seed": 3621847340,
+    "s": 115.8,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of three village women in dark wool shawls and headscarves talking and laughing softly around a rustic stone spring at night, lit by a small bonfire, seen from far away through dark branches",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0052,
+    "lume_quente": 0.0108,
+    "descricion": "The image shows a group of five women sitting around a campfire in a dark and eerie setting. The women are dressed in traditional clothing, with long robes and headscarves, and they are gathered around the fire. The fire is burning brightly, and there are several pieces of wood scattered around it. The background is dark, and the scene is lit by the warm glow of the fire, creating a cozy and intimate atmosphere. A dog can be seen sitting on the ground next to the fire pit, looking up at the women. The overall mood of the image is somber and contempl",
+    "obxectos": [
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.002,
+      0.066
+     ],
+     "muros encalados (CLIP)": [
+      0.016,
+      0.098
+     ],
+     "ciprés (CLIP)": [
+      -0.014,
+      0.109
+     ],
+     "oliveiras (CLIP)": [
+      -0.036,
+      0.123
+     ],
+     "palmeiras (CLIP)": [
+      -0.03,
+      0.13
+     ],
+     "rodas de raios (CLIP)": [
+      0.021,
+      0.11
+     ],
+     "paisaxe seca (CLIP)": [
+      0.039,
+      0.086
+     ],
+     "eucaliptos (CLIP)": [
+      -0.015,
+      0.053
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.006,
+      0.103
+     ],
+     "luces de cidade (CLIP)": [
+      -0.033,
+      0.152
+     ],
+     "salón moderno (CLIP)": [
+      -0.045,
+      0.17
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.013,
+      0.099
+     ],
+     "casas británicas (CLIP)": [
+      -0.019,
+      0.058
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.029,
+      0.177
+     ],
+     "catedral inventada (CLIP)": [
+      -0.054,
+      0.109
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.099,
+      0.194
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.153,
+      0.189
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.076,
+      0.144
+     ],
+     "cadros na parede (CLIP)": [
+      -0.015,
+      0.171
+     ],
+     "farol victoriano (CLIP)": [
+      -0.028,
+      0.087
+     ],
+     "negativo: electric light": 0.008,
+     "negativo: light bulb": -0.019,
+     "negativo: lamp": -0.024,
+     "negativo: glass window": -0.009,
+     "negativo: modern clothes": -0.003,
+     "negativo: street lamp": -0.031,
+     "clave: women": 2.96,
+     "clave_v5: women": 0.016
+    },
+    "arquetipo": null,
+    "s_revision": 10.1,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "053-5622c582": {
+  "ficheiro": "053-5622c582-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "053-5622c582-0.png",
+    "seed": 4120421235,
+    "s": 113.8,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, close-up two-shot at a rustic stone spring at night: a young woman with a long dark braid smiles as she fills a clay jug at the spout, beside her an old woman in a black wool headscarf crosses herself, looking warily into the dark",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.516,
+       0.7
+      ],
+      "confianza": 0.95,
+      "dist_corpo": 0.029,
+      "tamaño": 0.088
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0046,
+    "lume_quente": 0.0097,
+    "descricion": "The image shows two women sitting at a table in an old stone-walled room. They are both smiling and appear to be engaged in a conversation. The woman on the left is wearing a brown dress and has her hair tied up in a bun. She is holding a small pot in her hands and is looking at the other woman with a smile on her face. On the table, there are several large clay pots and a small vase with a lid. There is also a lamp with a flame on the right side of the table. The room is dimly lit, with a",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.046,
+      0.114
+     ],
+     "muros encalados (CLIP)": [
+      0.058,
+      0.152
+     ],
+     "ciprés (CLIP)": [
+      -0.034,
+      0.118
+     ],
+     "oliveiras (CLIP)": [
+      0.01,
+      0.111
+     ],
+     "palmeiras (CLIP)": [
+      -0.025,
+      0.147
+     ],
+     "rodas de raios (CLIP)": [
+      0.021,
+      0.128
+     ],
+     "paisaxe seca (CLIP)": [
+      0.059,
+      0.101
+     ],
+     "eucaliptos (CLIP)": [
+      -0.014,
+      0.07
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.019,
+      0.13
+     ],
+     "luces de cidade (CLIP)": [
+      -0.014,
+      0.136
+     ],
+     "salón moderno (CLIP)": [
+      -0.058,
+      0.185
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.02,
+      0.102
+     ],
+     "casas británicas (CLIP)": [
+      0.009,
+      0.086
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.024,
+      0.205
+     ],
+     "catedral inventada (CLIP)": [
+      -0.049,
+      0.118
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.134,
+      0.209
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.141,
+      0.186
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.063,
+      0.149
+     ],
+     "cadros na parede (CLIP)": [
+      -0.026,
+      0.174
+     ],
+     "farol victoriano (CLIP)": [
+      -0.022,
+      0.093
+     ],
+     "negativo: electric light": 0.03,
+     "negativo: light bulb": 0.029,
+     "negativo: lamp": 0.027,
+     "negativo: glass window": -0.005,
+     "negativo: modern clothes": 0.011,
+     "negativo: street lamp": 0.002,
+     "clave: fountain": -0.56,
+     "clave_v5: fountain": -0.02
+    },
+    "arquetipo": null,
+    "s_revision": 9.7,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "057-712c303d": {
+  "ficheiro": "057-712c303d-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "057-712c303d-0.png",
+    "seed": 596484686,
+    "s": 113.7,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a stout round-faced Benedictine friar of about fifty in a black habit holding a sprig of a medicinal herb that an old village woman in a dark blue wool shawl offers him from her basket, monastery herb garden, 18th century, soft rain, grey-blue dusk",
+    "modelo": "lightning",
+    "tokens": 75,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.398,
+       0.842
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.05,
+      "tamaño": 0.151
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0002,
+    "lume_quente": 0.0,
+    "descricion": "The image shows an elderly man wearing a blue hooded cloak, holding a woven basket filled with green plants. He appears to be in a garden or a wooded area, as there are trees and bushes in the background. The man is looking down at the basket with a serious expression on his face. He is holding the basket tightly with both hands and seems to be examining the plants closely. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "human face",
+     "man",
+     "picnic basket"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.006,
+      0.094
+     ],
+     "muros encalados (CLIP)": [
+      -0.051,
+      0.118
+     ],
+     "ciprés (CLIP)": [
+      -0.037,
+      0.148
+     ],
+     "oliveiras (CLIP)": [
+      -0.044,
+      0.161
+     ],
+     "palmeiras (CLIP)": [
+      -0.068,
+      0.165
+     ],
+     "rodas de raios (CLIP)": [
+      0.048,
+      0.153
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.065,
+      0.135
+     ],
+     "eucaliptos (CLIP)": [
+      -0.067,
+      0.114
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.059,
+      0.095
+     ],
+     "luces de cidade (CLIP)": [
+      -0.065,
+      0.123
+     ],
+     "salón moderno (CLIP)": [
+      -0.075,
+      0.159
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.002,
+      0.105
+     ],
+     "casas británicas (CLIP)": [
+      -0.001,
+      0.076
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.012,
+      0.18
+     ],
+     "catedral inventada (CLIP)": [
+      -0.028,
+      0.113
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.069,
+      0.18
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.116,
+      0.264
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.096,
+      0.193
+     ],
+     "cadros na parede (CLIP)": [
+      -0.019,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      -0.04,
+      0.119
+     ],
+     "negativo: electric light": -0.014,
+     "negativo: light bulb": -0.04,
+     "negativo: lamp": -0.029,
+     "negativo: glass window": -0.011,
+     "negativo: modern clothes": 0.002,
+     "negativo: street lamp": -0.041,
+     "clave: monk": 3.66,
+     "clave_v5: monk": 0.025
+    },
+    "arquetipo": null,
+    "s_revision": 9.5,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "060-fd7c8dbc": {
+  "ficheiro": "060-fd7c8dbc-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "060-fd7c8dbc-0.png",
+    "seed": 2004095268,
+    "s": 117.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a village woman asleep curled on her side under a wool blanket on a straw mattress in a dark granite room, her face calm, moonlight from a small opening, on the wall above her the soft shadow of a bird in flight",
+    "modelo": "lightning",
+    "tokens": 63,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0064,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a young woman sleeping on a beige blanket on a wooden floor. She is wrapped in a fluffy blanket and her head is resting on her hands. The blanket is draped over her body and she appears to be sleeping peacefully. On the right side of the image, there is a woven basket with a handle. The background is dark and the lighting is soft, creating a cozy atmosphere. The overall mood of the photo is peaceful and serene.",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.012,
+      0.097
+     ],
+     "muros encalados (CLIP)": [
+      0.015,
+      0.115
+     ],
+     "ciprés (CLIP)": [
+      -0.013,
+      0.107
+     ],
+     "oliveiras (CLIP)": [
+      -0.039,
+      0.105
+     ],
+     "palmeiras (CLIP)": [
+      0.012,
+      0.127
+     ],
+     "rodas de raios (CLIP)": [
+      0.02,
+      0.097
+     ],
+     "paisaxe seca (CLIP)": [
+      0.021,
+      0.106
+     ],
+     "eucaliptos (CLIP)": [
+      -0.004,
+      0.041
+     ],
+     "luz eléctrica (CLIP)": [
+      0.011,
+      0.074
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.138
+     ],
+     "salón moderno (CLIP)": [
+      0.029,
+      0.116
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.019,
+      0.041
+     ],
+     "casas británicas (CLIP)": [
+      0.015,
+      0.105
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.0,
+      0.112
+     ],
+     "catedral inventada (CLIP)": [
+      -0.044,
+      0.1
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.027,
+      0.139
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.028,
+      0.156
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.063,
+      0.171
+     ],
+     "cadros na parede (CLIP)": [
+      -0.003,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      -0.068,
+      0.125
+     ],
+     "negativo: electric light": 0.008,
+     "negativo: light bulb": -0.006,
+     "negativo: lamp": -0.011,
+     "negativo: glass window": -0.013,
+     "negativo: modern clothes": -0.01,
+     "negativo: street lamp": -0.035,
+     "clave: sleeping woman": 6.35,
+     "clave_v5: sleeping woman": 0.058
+    },
+    "arquetipo": null,
+    "s_revision": 9.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
  }
 }

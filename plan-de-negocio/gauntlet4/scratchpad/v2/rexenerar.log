@@ -78,3 +78,13 @@ imaxe  45 intento 0 119.4s + revisión  9.6s ok
 imaxe  46 intento 0 117.0s + revisión 10.2s ['luces de cidade (CLIP)']
 imaxe  46 intento 1 122.5s + revisión 10.1s ['obxectos modernos', 'casas británicas (CLIP)'] avisos ['falta: fountain (CLIP)']
 imaxe  46 intento 2 115.4s + revisión  9.9s ['casas alleas', 'salón moderno (CLIP)', 'casas británicas (CLIP)']
+imaxe  47 intento 0 118.5s + revisión 11.1s ok
+imaxe  48 intento 0 115.7s + revisión  9.6s ['roupa actual'] avisos ['falta: fountain (CLIP)']
+imaxe  48 intento 1 114.7s + revisión  9.8s ['man sen corpo (1)'] avisos ['falta: fountain (CLIP)']
+imaxe  48 intento 2 118.1s + revisión 10.6s ok avisos ['falta: fountain (CLIP)']
+imaxe  50 intento 0 118.9s + revisión 10.3s ok
+imaxe  51 intento 0 115.8s + revisión 10.1s ok
+imaxe  53 intento 0 113.8s + revisión  9.7s ok avisos ['falta: fountain (CLIP)']
+imaxe  57 intento 0 113.7s + revisión  9.5s ok
+imaxe  60 intento 0 117.2s + revisión  9.8s ok
+imaxe  62 intento 0 115.7s + revisión  9.4s ['interior moderno']
