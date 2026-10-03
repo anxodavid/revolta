@@ -32,19 +32,23 @@ aviso: "Boas noites. A voz que vas escoitar é sintética, e este texto preparou
 capitulo_inicial: "Un conxuro e unha parteira"
 # Capítulos que abren a transición, a calma e o durmir (longo.py fixa alí os nós da curva do embude; commit 562ed3c).
 curva_capitulos: ["Auga, digo, leite", "As respostas nas preguntas", "Chove na lousa"]
+# Créditos das fotografías semente usadas ({sementes} nos créditos; longo.py descricion)
+referencias_creditos: plan-de-negocio/gauntlet4/imaxe/referencias.json
 autoria:
   guion: "Claude (Anthropic), con axentes no Gauntlet 4 (v2, de 12 min): un axente construtor escribe e críticos independentes revisan, un deles a cegas fronte á v1. Non é unha execución desatendida nin un LLM por API. Ningunha persoa o revisou."
   dossier: "Claude (Anthropic), axente constructor do dossier: escolleu as fontes, redactou os feitos en galego e comprobou por código que cada cita está literalmente na súa fonte. Ningunha persoa o revisou."
-  escenas: "Claude (Anthropic), un axente escribe un prompt por plano."
-  automatico: "voz (Nós StyleTTS2), imaxes e a súa porta de revisión, son, montaxe e controis automáticos"
+  escenas: "Claude (Anthropic), con axentes no Gauntlet 4: un fixo a lista de planos por sentido (prompt, acción e son de cada plano) e un crítico revisouna; outro axente mirou cada imaxe e escolleu ou mandou rexenerar as que non valían. Ningunha persoa as revisou."
+  automatico: "voz (Nós StyleTTS2), imaxes e a súa porta de revisión, movemento (clips de vídeo e paralaxe) e a súa porta, son, montaxe e controis automáticos"
 descricion: |
   Quen eran de verdade as meigas galegas? Neste episodio para durmir seguimos as poucas palabras que quedaron delas nos procesos por bruxería que o Arquivo do Reino de Galicia mostrou en 2020: o que unha testemuña lle atribuíu a unha parteira de Vilalba, as palabras dunha muller ao seu gando coa emenda de quen as escribiu, a confesión que María Cibreira fixo despois do tormento e a noticia dunha lista de mulleres vistas nunha fonte a noite de san Xoán, en Campo Lameiro. Tamén por que o conxuro da queimada, escrito en Vigo en 1967, parece de ninguén. Despois, amodo, a noite de san Xoán e unha queimada coas luces apagadas, ata que chove na lousa.
   Eu non creo nas meigas, mais habelas, hainas: as lendas cóntanse como lendas, e os datos levan fonte.
-  As imaxes están xeradas con intelixencia artificial e representan lugares reais: son contido sintético.
+  As imaxes e o seu movemento están xerados por máquina, con intelixencia artificial: son contido sintético, recreacións e non fotografías nin filmacións.
 creditos:
   - "Voz sintética: modelo Nos_StyleTTS2-Brais-GL do Proxecto Nós (Universidade de Santiago de Compostela), licenza Apache-2.0."
   - "Texto e dossier de fontes preparados con intelixencia artificial (Claude, de Anthropic) a partir das fontes citadas. Ningunha persoa os revisou."
-  - "Imaxes xeradas con intelixencia artificial (SDXL base 1.0 + SDXL-Lightning, licenza CreativeML Open RAIL++-M) e revisadas só por unha porta automática: {imaxes}. Contido sintético, non son fotografías."
+  - "Imaxes xeradas con intelixencia artificial (SDXL base 1.0 + SDXL-Lightning, licenza CreativeML Open RAIL++-M): {imaxes}. Contido sintético, non son fotografías."
+  - "Fotografías libres usadas como semente dalgunhas imaxes, que a intelixencia artificial transformou: {sementes}."
+  - "Movemento xerado por máquina a partir das imaxes: clips de vídeo con LTX-Video 2B 0.9.8 destilado (Lightricks, LTXV Open Weights License), cámara 2,5D coa profundidade de Depth-Anything-V2-Small (Apache-2.0), máscaras con CLIPSeg (Apache-2.0) e cámara lenta con RIFE (MIT). Contido sintético, non son filmacións."
   - "Son ambiente sintetizado por código segundo a escena ({ambientes}); o murmurio da xente faise coa mesma voz sintética."
   - "Conxuro da queimada: primeiro verso, de Mariano Marcos Abalo (1967), obra rexistrada."
 

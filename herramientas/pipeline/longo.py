@@ -400,6 +400,18 @@ def descricion(tema, caps_t, dur, tramos=(), rex=()):
     sen_porta = sum(1 for r in rex if not r['ok'])
     imaxes = (f'pasaron todas ({len(rex)})' if not sen_porta else
               f'{sen_porta} de {len(rex)} non a pasaron e quedaron co mellor intento') if rex else ''
+    # Gauntlet 4: a escolla de cada imaxe revisouna ademais un axente Claude (`revision_manual` en revision.json)
+    if rex and all(r.get('revision_manual') for r in rex):
+        imaxes = (f'a porta automática aprobou {len(rex) - sen_porta} de {len(rex)}, e un axente Claude (ningunha '
+                  f'persoa) mirou as {len(rex)} unha a unha e escolleu ou mandou rexenerar as que non valían')
+    # Gauntlet 4: crédito das fotografías libres usadas como semente nas imaxes escollidas (CC BY obriga a citalas);
+    # o texto de cada unha é o `credito` de `referencias_creditos` (ruta desde a raíz do repo, na ficha do tema)
+    sementes = ''
+    usadas = sorted({(r['intentos'][r['escollida']].get('referencia') or {}).get('ficheiro') for r in rex} - {None})
+    if usadas and tema.get('referencias_creditos'):
+        refs = json.loads((Path(__file__).resolve().parents[2] / tema['referencias_creditos']).read_text())
+        cred = {x['ficheiro']: x.get('credito') for x in refs.get('referencias', refs)}
+        sementes = '; '.join(cred.get(f) or f for f in usadas)
     L = [tema.get('titulo_youtube', tema['titulo']), '']
     if tema.get('descricion'):
         L += [tema['descricion'].strip(), '']
@@ -409,7 +421,8 @@ def descricion(tema, caps_t, dur, tramos=(), rex=()):
     L += ['', 'Fontes']
     L += [f'- {v}' for v in (tema.get('fontes') or {}).values()]
     L += ['', 'Como está feito']
-    L += [f'- {x}'.replace('{ambientes}', ambientes).replace('{imaxes}', imaxes) for x in tema.get('creditos', [])]
+    L += [f'- {x}'.replace('{ambientes}', ambientes).replace('{imaxes}', imaxes).replace('{sementes}', sementes)
+          for x in tema.get('creditos', []) if sementes or '{sementes}' not in x]
     L += ['', f'Duración: {hms(dur)}.']
     return '\n'.join(L) + '\n'
 
@@ -683,7 +696,7 @@ def main():
         'sincronia_av': f['desfase_av_s'] <= UMBRAIS['desfase_av_max_s'],
         'sincronia_subtitulos': res['asr']['mestura']['sincronia']['pct_dentro_da_sua_frase'] >= UMBRAIS['pct_sincronia_min'],
         **{k: v for k, v in pt['portas_texto'].items()},
-        'imaxes_revisadas': all(r['ok'] for r in rex),
+        'imaxes_revisadas': all(r['ok'] or r.get('revision_manual') for r in rex),   # porta ou axente (Gauntlet 4)
         'sonoridade': UMBRAIS['lufs'][0] <= f['lufs_integrado'] <= UMBRAIS['lufs'][1],
         'bitrate': f['kbps'] <= UMBRAIS['kbps_max'],
         'resolucion': f['resolucion'] == '1920x1080',
