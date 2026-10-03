@@ -1,0 +1,137 @@
+{
+ "5": {
+  "accion": "the bearded man writes slowly with the quill and looks up, the candle flames flicker",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "13": {
+  "accion": "her lips move slightly as she murmurs",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "16": {
+  "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "19": {
+  "accion": "she slowly turns the old papers in the candlelight",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "23": {
+  "accion": "the wind blows her scarf and the grass as she speaks softly, the cows graze behind her",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "25": {
+  "accion": "the bearded man speaks slowly in profile, the candle flames flicker",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "28": {
+  "accion": "the scribe writes slowly while the man behind him watches in silence",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "2": {
+  "prompt": "close-up of a man's face in the dark lit from below by pale blue flames, he lifts a wooden ladle of burning liquid above a wide brown earthenware bowl of blue flames, blue fire dripping back into it, black background",
+  "negativo": "cauldron, iron pot, frying pan, neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Lume laranxa nunha pota ou tixola negra de ferro: lese como caldeiro (veto §8.5) e falta a clave (lapas azuis, cunca de barro). Só houbo un intento e a porta aprobouno."
+ },
+ "6": {
+  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling beside a heavily pregnant young woman lying on a straw mattress, stroking her brow, a burly bearded man watching from the dark doorway, candlelight, rough granite walls, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Non hai muller preñada nin home: unha vella sentada nunha cama e outra axeonllada diante, que se le como unha enferma. Os tres intentos fallan igual, e no [1] e [2] o prompt truncouse e perdeu o home."
+ },
+ "7": {
+  "prompt": "close-up of an old midwife in a dark brown wool headscarf kneeling on a rough wooden floor, pushing a small worn soft leather slipper onto a bearded man's large bare foot, candlelight, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, sneaker, high heel, shoelaces, boots",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos levan zapatos modernos de cordóns (a porta acerta ao rexeitalos, aínda que dea outro motivo). Prompt máis curto, cunha chinela de coiro brando como a do plano 8."
+ },
+ "9": {
+  "prompt": "close-up of a single thin beeswax taper candle just lit in a simple wrought-iron holder on a rough dark oak table, a thin curl of smoke rising, rough granite wall behind in deep shadow, calm night",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass jar, pillar candle, fruit",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Vela de bloque moderna nun prato negro, cunha bóla escura sen sentido ao lado e sen parede de granito: parece foto de produto actual, e é o plano do aviso."
+ },
+ "10": {
+  "prompt": "wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars, wall lantern, grass roof",
+  "referencia": {
+   "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
+   "modo": "img2img",
+   "forza": 0.5,
+   "recorte": [
+    0.32,
+    0.2,
+    1.0,
+    1.0
+   ]
+  },
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): O hórreo sae con tellado de herba e, á dereita, unha caseta cun farol de parede aceso que parece eléctrico. Mesma semente (Muimenta) en img2img 0,5, que segundo o informe de imaxe §4 conserva o hórreo e os tornarratos."
+ },
+ "17": {
+  "prompt": "medium shot of an old village woman sitting on a granite doorstep shelling beans into her lap, a young woman in a dark wool headscarf standing in the dark open doorway beside her, long dark wool skirts, soft evening light, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, flowerpots, broom, white cap",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Fiestras de vidro grandes, unha vasoira (veto §8.5), cofias brancas e mandís de tirantes de aspecto holandés, e marcas vermellas na parede. A porta aprobouno."
+ },
+ "18": {
+  "prompt": "medium shot of an old village healer in a dark blue wool shawl handing a steaming clay bowl of herb infusion to a sick young woman lying under a wool blanket on a straw bed, dried herbs hanging from dark beams, firelight, smoke-blackened granite walls",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, warts, hooked nose, shelves of bottles",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen luz eléctrica ou fiestra de vidro: o [0], unha bombilla acesa no teito; o [1] e o [2], fiestras de cristais. Ademais, o [0] non ten a enferma. Plano clave (a meiga que cura)."
+ },
+ "20": {
+  "prompt": "medium shot of a woman of about thirty in a faded red wool headscarf standing before a plain wooden table where a stern grey-bearded judge in a black gown points his quill at her, bare granite walls, a narrow shaft of daylight",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chandelier, arched windows, red cloak",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Salón palaciano con lampadario de cristal, ventás altas de vidro en arco e moita xente; María vai cun capuchón vermello de Carapuchiña. A porta aprobouno."
+ },
+ "21": {
+  "prompt": "wide shot of a woman in a faded red wool headscarf holding a horn lantern at the heavy wooden door of a thatched granite house at dusk, letting in a man in a dark wool cloak, 17th century Galicia",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood",
+  "referencia": {
+   "ficheiro": "03-palloza-casa/10-palloza-cantexeira.jpg",
+   "modo": "profundidade",
+   "forza": 0.6,
+   "recorte": [
+    0.0,
+    0.3,
+    0.54,
+    0.7
+   ]
+  },
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen casas inglesas con cheminea e unha muller con capa vermella de Carapuchiña (a porta acerta). Proposta con semente: a palloza (CC BY 3.0), recortada sen a cheminea metálica, en profundidade 0,6."
+ },
+ "22": {
+  "prompt": "medium shot of two village women in dark wool headscarves and an old man whispering together beside the round-arched stone doorway of a small Romanesque granite church, one woman glancing sideways with suspicion, overcast daylight, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cars, cathedral, drainpipe, gutter",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Edificio de pedra con soportais, fiestras de vidro e baixante de canlón: non se le como igrexa de aldea. Dúas persoas separadas, sen murmurio. A porta aprobouno."
+ },
+ "29": {
+  "prompt": "wide shot of a stern priest in a black cassock reading a decree aloud at the door of a small rustic granite chapel, below him two women stand alone, an old one in a dark brown wool headscarf and a younger one in a faded red wool headscarf",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Edificio monumental de columnas e ventás góticas (catedral, que estaba no negativo), tres mulleres e o cura de costas: non é a capela de aldea nin as dúas excomungadas soas. A porta aprobouno."
+ },
+ "31": {
+  "prompt": "close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive",
+  "negativo": "hands, fingers, electric lamp, printed text, typewriter, plastic, computer",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen unha lupa deformada (dous aros) e letra de imprenta ou pseudopalabras lexibles dentro da lente."
+ },
+ "38": {
+  "prompt": "wide shot of a village festival at night seen from behind the crowd, dark silhouettes raising small clay cups toward a wide clay bowl of pale blue flames on a stone table, the blue glow on their raised hands, 1980s",
+  "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Gran fogueira laranxa cunha multitude cos brazos en alto: lembra unha queima (veto de autos de fe) e falta a cunca da queimada. A porta aprobouno."
+ },
+ "39": {
+  "prompt": "overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+  "negativo": "neon, plastic, television, smartphone, light bulb, bonfire, burning boat",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): O barco arde: lume enorme na cuberta con cinco homes diante e sen pote (lapas sobre persoas). A porta aprobouno."
+ },
+ "40": {
+  "prompt": "wide shot of three judges seated side by side at a long wooden table in a bare granite hall: a grey-bearded judge in a black gown, a priest in a black cassock, an elderly friar in a white habit and black cape, light from a high opening",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, flags, chandelier, crowd",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Salón palaciano con lampadario de cristal, cadros e fiestra de vidro, todos de negro: non se ven as tres xustizas (falta o inquisidor de hábito branco). A porta aprobouno."
+ },
+ "41": {
+  "prompt": "medium shot of a lean elderly friar with a grey tonsure, in a white habit and black cape, closing a thick bundle of trial papers tied with cord and laying it on a tall pile of bundles, single candle, bare stone room, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hood, pointed hat, fire, crowd, glasses, bookshelves",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos: ancián con lentes modernas e as bandas brancas dun xuíz inglés, vestido de negro e non co hábito branco do inquisidor."
+ },
+ "42": {
+  "prompt": "over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chains, park bench, trees",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Dúas figuras de negro nun banco de parque ao aire libre: non hai xuíz, nin sala, nin as tres acusadas. A porta aprobouno."
+ }
+}

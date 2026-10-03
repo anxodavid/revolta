@@ -63,6 +63,8 @@ def lista():
         an = e.get('animacion')
         if an and a.get('modo'):         # p. ex. paralaxe cando o clip I2V non pasa a porta
             an['modo'] = a['modo']
+        if an and a.get('accion'):       # a acción I2V que casa coa imaxe aceptada (revisión das imaxes)
+            an['accion'] = a['accion']
         if an and an.get('modo') == 'i2v':
             i2v = dict(an.get('i2v') or {})
             if dur.get(e['n'], 99) < CURTO_S:
@@ -84,12 +86,13 @@ def corre_longo():
     return subprocess.run(['pgrep', '-f', 'longo.py'], capture_output=True).returncode == 0
 
 
-def revision(fich, quen):
-    if corre_longo():
+def revision(fich, quen, so_axustes=False):
+    """so_axustes: só as rexeneracións (axustes e lista), sen tocar revision.json: pódese facer con longo.py en marcha."""
+    if not so_axustes and corre_longo():
         sys.exit('longo.py está a correr: agarda a que remate (gardaría revision.json por riba das escollas)')
     R = ler(fich); revf = W / 'imaxes' / 'revision.json'; rev = ler(revf)
     motivos = R.get('motivos', {})
-    for n, f in R.get('escollas', {}).items():
+    for n, f in ({} if so_axustes else R.get('escollas', {})).items():
         k = f.rsplit('-', 1)[0]
         r = rev[k]
         idx = [x['ficheiro'] for x in r['intentos']].index(f)
@@ -101,8 +104,11 @@ def revision(fich, quen):
         x = ax.setdefault(str(n), {})
         x.update({k: v for k, v in a.items() if k in ('prompt', 'negativo', 'referencia', 'clave')})
         x['motivo'] = f"rexenerar ({quen}): {a.get('motivo', '')}"
-    gardar(revf, rev); gardar(AXUSTES, ax)
-    print(f"revisión aplicada: {len(R.get('escollas', {}))} escollas, {len(R.get('rexenerar', {}))} planos a rexenerar")
+    if not so_axustes:
+        gardar(revf, rev)
+    gardar(AXUSTES, ax)
+    print(f"revisión aplicada: {0 if so_axustes else len(R.get('escollas', {}))} escollas, "
+          f"{len(R.get('rexenerar', {}))} planos a rexenerar")
     lista()
 
 
@@ -181,11 +187,12 @@ def main():
     ap.add_argument('--fases', default='')
     ap.add_argument('--accions', action='store_true', help='tamén os planos sen imaxe aprobada (para os embeddings)')
     ap.add_argument('--aplicar', action='store_true')
+    ap.add_argument('--so-axustes', action='store_true', help='revision: só as rexeneracións, sen tocar revision.json')
     a = ap.parse_args()
     if a.orde == 'lista':
         lista()
     elif a.orde == 'revision':
-        revision(a.ficheiro, a.quen)
+        revision(a.ficheiro, a.quen, a.so_axustes)
     elif a.orde == 'i2v':
         i2v(a.ficheiro, [int(x) for x in a.prioridade.split(',') if x], [x for x in a.fases.split(',') if x],
             a.accions)

@@ -115,9 +115,9 @@
    ],
    "texto": "Coas luces apagadas, alguén pronuncia o conxuro mentres ergue cun cazo o líquido en chamas.",
    "texto_en": "With the lights out, someone recites the spell while lifting the burning liquid with a ladle.",
-   "prompt": "close-up of a man's face in the dark, lit from below by blue flames, his lips moving as he lifts a clay ladle of burning spirits above a wide clay bowl, a thin stream of blue fire falling back into it, black background",
+   "prompt": "close-up of a man's face in the dark lit from below by pale blue flames, he lifts a wooden ladle of burning liquid above a wide brown earthenware bowl of blue flames, blue fire dripping back into it, black background",
    "clave": "blue flames",
-   "negativo": "neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
+   "negativo": "cauldron, iron pot, frying pan, neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
    "tipo": "primeiro_plano",
    "son": "lume",
    "animacion": {
@@ -134,7 +134,8 @@
    "prioridade_i2v": 1,
    "epoca": "xx",
    "persoas": "fan",
-   "arquetipo_previsto": "retrato"
+   "arquetipo_previsto": "retrato",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Lume laranxa nunha pota ou tixola negra de ferro: lese como caldeiro (veto §8.5) e falta a clave (lapas azuis, cunca de barro). Só houbo un intento e a porta aprobouno."
   },
   {
    "n": 3,
@@ -209,13 +210,14 @@
     "efectos": [
      "candea"
     ],
-    "accion": "the man speaks, holding his hat to his chest, while the scribe writes",
+    "accion": "the bearded man writes slowly with the quill and looks up, the candle flames flicker",
     "i2v": {
      "F": 73
     }
    },
    "prioridade_i2v": 1,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 6,
@@ -225,9 +227,9 @@
    "desde": "que a parteira Dorotea do Barro",
    "texto": "que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.",
    "texto_en": "that the midwife Dorotea do Barro had said she could take away a woman's labour pains and pass them on to a man.",
-   "prompt": "medium shot of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, laying her hand on the brow of a heavily pregnant young woman in a straw bed, a burly man with a short black beard in a coarse linen shirt watching, side light",
+   "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling beside a heavily pregnant young woman lying on a straw mattress, stroking her brow, a burly bearded man watching from the dark doorway, candlelight, rough granite walls, 17th century",
    "clave": "pregnant woman",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa",
    "tipo": "plano_medio",
    "son": "limpa",
    "animacion": {
@@ -240,7 +242,8 @@
     }
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Non hai muller preñada nin home: unha vella sentada nunha cama e outra axeonllada diante, que se le como unha enferma. Os tres intentos fallan igual, e no [1] e [2] o prompt truncouse e perdeu o home."
   },
   {
    "n": 7,
@@ -249,9 +252,9 @@
    ],
    "texto": "Abondaría con calzarlle ao home os zapatos da muller, dicindo unhas palabras que ela sabía.",
    "texto_en": "It would be enough to put the woman's shoes on the man, saying some words that she knew.",
-   "prompt": "close-up of an old midwife's weathered hands slipping a small worn woman's leather shoe onto a man's large bare foot, her lined face murmuring above under a dark brown wool headscarf, warm candlelight, rough wooden floor, 17th century",
+   "prompt": "close-up of an old midwife in a dark brown wool headscarf kneeling on a rough wooden floor, pushing a small worn soft leather slipper onto a bearded man's large bare foot, candlelight, 17th century",
    "clave": "shoe",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, sneaker, high heel, shoelaces",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, sneaker, high heel, shoelaces, boots",
    "tipo": "detalle",
    "son": "limpa",
    "animacion": {
@@ -264,7 +267,8 @@
    },
    "prioridade_i2v": 3,
    "persoas": "mans",
-   "arquetipo_previsto": "mans"
+   "arquetipo_previsto": "mans",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos levan zapatos modernos de cordóns (a porta acerta ao rexeitalos, aínda que dea outro motivo). Prompt máis curto, cunha chinela de coiro brando como a do plano 8."
   },
   {
    "n": 8,
@@ -298,9 +302,9 @@
    ],
    "texto": "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
    "texto_en": "Good night. The voice you are about to hear is synthetic, and this text was prepared by an automatic process.",
-   "prompt": "close-up of a single beeswax candle just lit in a simple iron holder on a dark wooden table, a thin curl of smoke rising, rough granite wall behind in deep shadow, calm night",
+   "prompt": "close-up of a single thin beeswax taper candle just lit in a simple wrought-iron holder on a rough dark oak table, a thin curl of smoke rising, rough granite wall behind in deep shadow, calm night",
    "clave": "candle",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass jar",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass jar, pillar candle, fruit",
    "tipo": "detalle",
    "son": "limpa",
    "animacion": {
@@ -311,7 +315,8 @@
     ]
    },
    "prioridade_i2v": 3,
-   "persoas": "non"
+   "persoas": "non",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Vela de bloque moderna nun prato negro, cunha bóla escura sen sentido ao lado e sen parede de granito: parece foto de produto actual, e é o plano do aviso."
   },
   {
    "n": 10,
@@ -320,15 +325,15 @@
    ],
    "texto": "Isto é Cousas de Galiza para durmir.",
    "texto_en": "This is Cousas de Galiza para durmir (Things of Galicia for falling asleep).",
-   "prompt": "wide shot of two old Galician granaries raised on stone pillars with mushroom-shaped staddle stones, one of granite and one of wood, in a misty village yard at night, moonlight on wet stone and moss, deep blue darkness, calm",
+   "prompt": "wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
    "clave": "granary",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars, wall lantern, grass roof",
    "tipo": "xeral",
    "son": "noite",
    "referencia": {
     "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
-    "modo": "profundidade",
-    "forza": 0.6,
+    "modo": "img2img",
+    "forza": 0.5,
     "recorte": [
      0.32,
      0.2,
@@ -345,7 +350,8 @@
     ]
    },
    "prioridade_i2v": 3,
-   "persoas": "non"
+   "persoas": "non",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): O hórreo sae con tellado de herba e, á dereita, unha caseta cun farol de parede aceso que parece eléctrico. Mesma semente (Muimenta) en img2img 0,5, que segundo o informe de imaxe §4 conserva o hórreo e os tornarratos."
   },
   {
    "n": 11,
@@ -413,14 +419,15 @@
     "modo": "i2v",
     "camara": "avanza",
     "efectos": [],
-    "accion": "her lips move slightly as she murmurs, her eyes stay lowered",
+    "accion": "her lips move slightly as she murmurs",
     "i2v": {
      "F": 73
     }
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
-   "arquetipo_previsto": "retrato"
+   "arquetipo_previsto": "retrato",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 14,
@@ -482,10 +489,11 @@
     "efectos": [
      "auga"
     ],
-    "accion": "she lifts her eyes from the jug and looks into the darkness as the water keeps pouring"
+    "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers"
    },
    "prioridade_i2v": 1,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 17,
@@ -494,9 +502,9 @@
    ],
    "texto": "Había mulleres de aldea detrás de todas esas palabras.",
    "texto_en": "There were village women behind all those words.",
-   "prompt": "medium shot of two village women at the dark doorway of a granite farmhouse, an old one sitting and shelling beans into her apron and a young one leaning on the stone doorframe, long dark wool skirts and headscarves, faces lit from the side by soft evening light",
+   "prompt": "medium shot of an old village woman sitting on a granite doorstep shelling beans into her lap, a young woman in a dark wool headscarf standing in the dark open doorway beside her, long dark wool skirts, soft evening light, 17th century",
    "clave": "women",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, flowerpots",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, flowerpots, broom, white cap",
    "tipo": "plano_medio",
    "son": "aldea",
    "animacion": {
@@ -509,7 +517,8 @@
     }
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Fiestras de vidro grandes, unha vasoira (veto §8.5), cofias brancas e mandís de tirantes de aspecto holandés, e marcas vermellas na parede. A porta aprobouno."
   },
   {
    "n": 18,
@@ -518,9 +527,9 @@
    ],
    "texto": "A meiga, moitas veces, non era a bruxa dos contos, senón a que curaba, a que axudaba nos partos, a que sabía de herbas.",
    "texto_en": "The meiga, many times, was not the witch of tales, but the one who healed, who helped in childbirth, who knew about herbs.",
-   "prompt": "over-the-shoulder medium shot of an old village healer in a dark blue wool shawl handing a steaming clay bowl of herbal infusion to a sick young woman lying under a wool blanket, bunches of dried herbs hanging behind, warm light from the side, dignified and ordinary",
+   "prompt": "medium shot of an old village healer in a dark blue wool shawl handing a steaming clay bowl of herb infusion to a sick young woman lying under a wool blanket on a straw bed, dried herbs hanging from dark beams, firelight, smoke-blackened granite walls",
    "clave": "clay bowl",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, warts, hooked nose",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, warts, hooked nose, shelves of bottles",
    "tipo": "plano_medio",
    "son": "limpa",
    "animacion": {
@@ -530,7 +539,8 @@
     "accion": "the healer slowly hands over the steaming bowl and the young woman takes it"
    },
    "prioridade_i2v": 1,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen luz eléctrica ou fiestra de vidro: o [0], unha bombilla acesa no teito; o [1] e o [2], fiestras de cristais. Ademais, o [0] non ten a enferma. Plano clave (a meiga que cura)."
   },
   {
    "n": 19,
@@ -550,10 +560,11 @@
     "efectos": [
      "candea"
     ],
-    "accion": "she slowly moves the candle along the shelf, looking at the bundles"
+    "accion": "she slowly turns the old papers in the candlelight"
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 20,
@@ -562,9 +573,9 @@
    ],
    "texto": "En Vilalba, a Real Audiencia xulgou tamén a María do Barro, a filla de Dorotea.",
    "texto_en": "In Vilalba, the Royal Court also tried María do Barro, Dorotea's daughter.",
-   "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing before a court table in a bare granite hall while a stern grey-bearded judge in a black gown with a stiff white collar points his quill at her, light from a high opening",
+   "prompt": "medium shot of a woman of about thirty in a faded red wool headscarf standing before a plain wooden table where a stern grey-bearded judge in a black gown points his quill at her, bare granite walls, a narrow shaft of daylight",
    "clave": "judge",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chandelier, arched windows, red cloak",
    "tipo": "plano_medio",
    "son": "limpa",
    "animacion": {
@@ -574,7 +585,8 @@
     "accion": "the judge points his quill at her and she lowers her eyes"
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Salón palaciano con lampadario de cristal, ventás altas de vidro en arco e moita xente; María vai cun capuchón vermello de Carapuchiña. A porta aprobouno."
   },
   {
    "n": 21,
@@ -583,9 +595,9 @@
    ],
    "texto": "Da filla dicían outra cousa: que era alcaiota, e que acollía na súa casa homes casados e mulleres solteiras.",
    "texto_en": "Of the daughter they said something else: that she was a go-between, and that she took married men and unmarried women into her house.",
-   "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, holding a horn lantern at the heavy oak door of a granite house at dusk, letting in a man in a dark wool cloak, seen from behind a mossy wall across the path",
+   "prompt": "wide shot of a woman in a faded red wool headscarf holding a horn lantern at the heavy wooden door of a thatched granite house at dusk, letting in a man in a dark wool cloak, 17th century Galicia",
    "clave": "door",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood",
    "tipo": "plano_medio",
    "son": "aldea",
    "animacion": {
@@ -597,7 +609,19 @@
     "accion": "she opens the heavy door wider and the cloaked man steps inside"
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "referencia": {
+    "ficheiro": "03-palloza-casa/10-palloza-cantexeira.jpg",
+    "modo": "profundidade",
+    "forza": 0.6,
+    "recorte": [
+     0.0,
+     0.3,
+     0.54,
+     0.7
+    ]
+   },
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen casas inglesas con cheminea e unha muller con capa vermella de Carapuchiña (a porta acerta). Proposta con semente: a palloza (CC BY 3.0), recortada sen a cheminea metálica, en profundidade 0,6."
   },
   {
    "n": 22,
@@ -606,9 +630,9 @@
    ],
    "texto": "Unha testemuña oíu murmurar entre algúns veciños que María era meiga, e que non era boa cristiá.",
    "texto_en": "A witness heard some neighbours murmuring that María was a meiga, and that she was not a good Christian.",
-   "prompt": "medium shot of two village women and an old man whispering together under the stone porch of a small granite country church after mass, one woman glancing sideways with suspicion, dark wool clothes and headscarves, overcast daylight",
+   "prompt": "medium shot of two village women in dark wool headscarves and an old man whispering together beside the round-arched stone doorway of a small Romanesque granite church, one woman glancing sideways with suspicion, overcast daylight, 17th century",
    "clave": "church",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cars, cathedral",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cars, cathedral, drainpipe, gutter",
    "tipo": "plano_medio",
    "son": "campas",
    "animacion": {
@@ -619,7 +643,8 @@
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
-   "arquetipo_previsto": "grupo de pé"
+   "arquetipo_previsto": "grupo de pé",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Edificio de pedra con soportais, fiestras de vidro e baixante de canlón: non se le como igrexa de aldea. Dúas persoas separadas, sen murmurio. A porta aprobouno."
   },
   {
    "n": 23,
@@ -640,10 +665,11 @@
     "efectos": [
      "ceo"
     ],
-    "accion": "the wind blows her scarf and the grass as she speaks softly and touches a cow's neck"
+    "accion": "the wind blows her scarf and the grass as she speaks softly, the cows graze behind her"
    },
    "prioridade_i2v": 1,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 24,
@@ -687,11 +713,12 @@
     "efectos": [
      "candea"
     ],
-    "accion": "the man speaks while the scribe writes behind him"
+    "accion": "the bearded man speaks slowly in profile, the candle flames flicker"
    },
    "prioridade_i2v": 2,
    "persoas": "fan",
-   "arquetipo_previsto": "retrato"
+   "arquetipo_previsto": "retrato",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 26,
@@ -763,13 +790,14 @@
     "efectos": [
      "candea"
     ],
-    "accion": "the scribe writes while the woman behind him stands still and lowers her eyes",
+    "accion": "the scribe writes slowly while the man behind him watches in silence",
     "i2v": {
      "F": 73
     }
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
   },
   {
    "n": 29,
@@ -779,9 +807,9 @@
    ],
    "texto": "E as palabras tamén podían pechar portas. O vicario xeral do bispado de Mondoñedo excomungou a nai e a filla, e mandou que ninguén lles dese pan, sal, auga nin lume.",
    "texto_en": "And words could also close doors. The vicar general of the bishopric of Mondoñedo excommunicated the mother and the daughter, and ordered that no one give them bread, salt, water or fire.",
-   "prompt": "wide shot of a stern priest in a black cassock and black cape reading a decree aloud on the steps of a small granite church, below him two women stand alone, an old midwife in a dark brown wool headscarf and a woman of about thirty in a faded red wool headscarf, overcast light",
+   "prompt": "wide shot of a stern priest in a black cassock reading a decree aloud at the door of a small rustic granite chapel, below him two women stand alone, an old one in a dark brown wool headscarf and a younger one in a faded red wool headscarf",
    "clave": "priest",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd",
    "tipo": "xeral",
    "son": "campas",
    "animacion": {
@@ -791,7 +819,8 @@
     "accion": "the priest reads from the paper while the two women lower their heads"
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Edificio monumental de columnas e ventás góticas (catedral, que estaba no negativo), tres mulleres e o cura de costas: non é a capela de aldea nin as dúas excomungadas soas. A porta aprobouno."
   },
   {
    "n": 30,
@@ -825,7 +854,7 @@
    ],
    "texto": "Aquel papel gardou ata o máis pequeno, unha palabra trabucada.",
    "texto_en": "That paper kept even the smallest thing, a mistaken word.",
-   "prompt": "extreme close-up of an old magnifying glass resting on a yellowed 17th-century page, the round lens enlarging one small handwritten word struck through with a single line of ink, soft daylight in a quiet archive",
+   "prompt": "close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive",
    "clave": "magnifying glass",
    "negativo": "hands, fingers, electric lamp, printed text, typewriter, plastic, computer",
    "tipo": "detalle",
@@ -840,7 +869,8 @@
    "prioridade_i2v": 3,
    "persoas": "non",
    "epoca": "xx",
-   "arquetipo_previsto": ""
+   "arquetipo_previsto": "",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen unha lupa deformada (dous aros) e letra de imprenta ou pseudopalabras lexibles dentro da lente."
   },
   {
    "n": 32,
@@ -992,9 +1022,9 @@
    ],
    "texto": "Así, unhas palabras sen nome no papel acabaron parecendo de todos, e de sempre.",
    "texto_en": "So some nameless words on paper ended up seeming to belong to everyone, and to have always existed.",
-   "prompt": "wide shot of a village festival at night seen from behind the crowd, dark silhouettes of people raising small clay cups toward a large clay bowl of burning spirits glowing blue on a stone table, the blue glow on their raised hands",
+   "prompt": "wide shot of a village festival at night seen from behind the crowd, dark silhouettes raising small clay cups toward a wide clay bowl of pale blue flames on a stone table, the blue glow on their raised hands, 1980s",
    "clave": "clay bowl",
-   "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights",
+   "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire",
    "tipo": "xeral",
    "son": "xente",
    "animacion": {
@@ -1010,7 +1040,8 @@
    },
    "prioridade_i2v": 2,
    "epoca": "xx",
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Gran fogueira laranxa cunha multitude cos brazos en alto: lembra unha queima (veto de autos de fe) e falta a cunca da queimada. A porta aprobouno."
   },
   {
    "n": 39,
@@ -1019,9 +1050,9 @@
    ],
    "texto": "O conxuro naceu entre amigos, arredor dun pote.",
    "texto_en": "The spell was born among friends, around a pot.",
-   "prompt": "overhead shot of a wide clay bowl of burning spirits glowing blue on the wooden deck of a boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+   "prompt": "overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
    "clave": "clay bowl",
-   "negativo": "neon, plastic, television, smartphone, light bulb",
+   "negativo": "neon, plastic, television, smartphone, light bulb, bonfire, burning boat",
    "tipo": "xeral",
    "son": "lume+mar",
    "animacion": {
@@ -1033,7 +1064,8 @@
    },
    "prioridade_i2v": 3,
    "epoca": "xx",
-   "persoas": "estan"
+   "persoas": "estan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): O barco arde: lume enorme na cuberta con cinco homes diante e sen pote (lapas sobre persoas). A porta aprobouno."
   },
   {
    "n": 40,
@@ -1043,9 +1075,9 @@
    ],
    "texto": "As palabras dos procesos acabaron noutro sitio: nos tribunais. Tres xustizas podían xulgar a bruxería: a civil, a eclesiástica e a Inquisición.",
    "texto_en": "The words of the trials ended up somewhere else: in the courts. Three jurisdictions could judge witchcraft: the civil, the ecclesiastical and the Inquisition.",
-   "prompt": "wide shot of three separate judges' tables in a bare granite hall: a stern grey-bearded judge in a black gown with a stiff white collar signing a paper, a priest in a black cassock and black cape, an elderly inquisitor in a white habit and black cape, light from a high opening",
+   "prompt": "wide shot of three judges seated side by side at a long wooden table in a bare granite hall: a grey-bearded judge in a black gown, a priest in a black cassock, an elderly friar in a white habit and black cape, light from a high opening",
    "clave": "judge",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, flags",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, flags, chandelier, crowd",
    "tipo": "xeral",
    "son": "limpa",
    "animacion": {
@@ -1057,7 +1089,8 @@
     "accion": "the judge in the black gown signs a paper while the others read"
    },
    "prioridade_i2v": 3,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Salón palaciano con lampadario de cristal, cadros e fiestra de vidro, todos de negro: non se ven as tres xustizas (falta o inquisidor de hábito branco). A porta aprobouno."
   },
   {
    "n": 41,
@@ -1066,9 +1099,9 @@
    ],
    "texto": "Para o investigador Diego Valor Bravo, coas meigas galegas a temida Inquisición foi branda: en tres séculos só condenou a morte unha meiga.",
    "texto_en": "For the researcher Diego Valor Bravo, the feared Inquisition was lenient with Galician meigas: in three centuries it sentenced only one meiga to death.",
-   "prompt": "medium shot of an elderly inquisitor in a white habit and black cape, calmly closing a thick case file and laying it on a tall pile of closed files on his desk, a single candle, bare stone room, quiet expression",
+   "prompt": "medium shot of a lean elderly friar with a grey tonsure, in a white habit and black cape, closing a thick bundle of trial papers tied with cord and laying it on a tall pile of bundles, single candle, bare stone room, 17th century",
    "clave": "papers",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hood, pointed hat, fire, crowd",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hood, pointed hat, fire, crowd, glasses, bookshelves",
    "tipo": "plano_medio",
    "son": "limpa",
    "animacion": {
@@ -1080,7 +1113,8 @@
     "accion": "he closes the file and sets it on the pile"
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos: ancián con lentes modernas e as bandas brancas dun xuíz inglés, vestido de negro e non co hábito branco do inquisidor."
   },
   {
    "n": 42,
@@ -1090,9 +1124,9 @@
    ],
    "texto": "Os xuíces civís foron moito máis duros. E nos procesos civís da Real Audiencia, todas as acusadas eran mulleres.",
    "texto_en": "The civil judges were much harsher. And in the civil trials of the Royal Court, all the accused were women.",
-   "prompt": "over-the-shoulder medium shot from behind a stern grey-bearded judge in a black gown with a stiff white collar, looking down at three accused village women in dark headscarves seated on a wooden bench below him, cold light from a high opening, bare granite hall",
+   "prompt": "over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
    "clave": "judge",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chains",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chains, park bench, trees",
    "tipo": "plano_medio",
    "son": "limpa",
    "animacion": {
@@ -1102,7 +1136,8 @@
     "accion": "the judge leans forward and the women lower their heads"
    },
    "prioridade_i2v": 2,
-   "persoas": "fan"
+   "persoas": "fan",
+   "axuste_produccion": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Dúas figuras de negro nun banco de parque ao aire libre: non hai xuíz, nin sala, nin as tres acusadas. A porta aprobouno."
   },
   {
    "n": 43,
