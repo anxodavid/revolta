@@ -16,3 +16,7 @@
 - **PR abertos doutras sesións:** antes de lanzar axentes que tocan o pipeline, fusionar os PR pendentes que tocan os
   mesmos ficheiros (o PR #5 cambiaba `revisor.py`, `imaxes.py`, `son.py` e `longo.py`); con axentes traballando, a
   fusión faise nunha copia aparte (`git worktree`) e despois trese á rama cando a árbore de traballo está limpa.
+- **Cota:** tres axentes en paralelo máis o orquestrador esgotaron o límite de uso da sesión en ≈ 1 h (22:34 →
+  ≈ 23:30 UTC), e a cota non volveu ata as 03:10. Para avanzar máis por cada xanela de cota: menos axentes á vez, que non
+  relean ficheiros grandes, que agarden os traballos longos cunha soa espera en segundo plano (sen consultas
+  frecuentes) e axentes novos e curtos para os críticos. A rutina horaria retomou o traballo ao volver a cota.

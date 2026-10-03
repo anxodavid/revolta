@@ -1,7 +1,7 @@
 # Estado do Gauntlet 4 e como relanzalo
 
 Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a sesión se corta, retomar desde aquí.**
-Última actualización: 02-10-2026, 23:06 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
+Última actualización: 03-10-2026, 03:58 UTC (retomado despois do corte por cota e do reinicio). **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
 
 ## Que hai en marcha
 
@@ -17,6 +17,13 @@ Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a s
 Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador copia a v1, que é
 `gauntlet3/guion/guion-r3.txt`, e a v2 a `$SCRATCH/cego/guion-rN/A.txt` e `B.txt` ao chou, coa clave en
 `clave.txt`) e `encargos/critico-guion-B-lingua-veracidade.md`.
+
+## Cortes
+
+- **02-10-2026 ≈ 23:30 UTC: límite de uso da sesión** (os tres construtores e o orquestrador; volveu a cota ás 03:10)
+  e **reinicio do contedor** (03:53). Morreron a porta de texto do guion r1 e os lotes de paralaxe e I2V de
+  MOVEMENTO; o feito estaba en git (últimos commits d86e250, f5eddf7 e bf5f0d4). Ás 03:55 retomáronse os tres axentes
+  co seu contexto (SendMessage) e relanzouse a instantánea.
 
 ## Procesos de fondo desta sesión
 
