@@ -99,7 +99,26 @@ Contra as etiquetas de Claude (2 = ilustra o que se oe: 91 planos; 1 = ambiente:
 
 ## 4. Sementes: texto só, img2img e ControlNet de profundidade
 
-(pendente)
+Folla: [`ab-sementes.jpg`](ab-sementes.jpg) (a primeira columna é a semente, todas CC BY ou CC0; script
+`scripts/sementes_ab.py`, o mesmo código ca produción: campo `referencia` de `imaxes.py`). Mesmo prompt e mesma
+semente en cada fila; SDXL-Lightning 4 pasos a 1024x576 (a configuración da produción da v1 nesta CPU sen bf16).
+
+**Tempo por imaxe** (CPU de 4 núcleos, co candado): texto só 82-91 s (122 s a primeira, en frío); img2img 0,5
+(2 pasos) 66-94 s; img2img 0,75 (3 pasos) 77-105 s; ControlNet de profundidade small a 0,6: 84-100 s, **só ≈ 3-5 %
+máis ca o texto** (o ControlNet small engade pouco), e 1,4-2,4 s de mapa de profundidade.
+
+Primeiras catro filas (xuízo de Claude mirando a folla; o crítico visual decide):
+- **Lareira:** con texto só sae unha cheminea de salón á altura da cintura (o erro de sempre); **img2img 0,75 dá
+  a lareira galega da semente (lar ao nivel do chan, campá de granito) cunha anciá sentada ao lume: a mellor
+  imaxe da folla.** Con 0,5 a muller sae medio transparente; a profundidade 0,6 debuxou unha cara xigante na campá.
+- **Carro:** con texto só, rodas de raios (como sempre). Con img2img 0,5 a roda maciza da semente consérvase, pero a
+  caixa do carro enche de buratos redondos; con 0,75 e coa profundidade volven as rodas de raios.
+- **Palloza:** img2img 0,5 copia a palloza da semente (planta redonda, colmo, muro de pedra)... incluído o tubo
+  metálico de cheminea e a casa de corredor do lado: a semente ten que estar limpa ou recortada.
+- **Aldea (vista desde a fiestra):** img2img mantén o marco de granito, os tellados e a torre da igrexa, pero tamén a
+  vila moderna do fondo do val; con texto só sae unha rúa de granito verosímil coa figura de costas de sempre.
+
+(continúa cando rematen queimada, hórreo e hórreos)
 
 ## 5. Biblia v2: proba de 10 prompts
 
