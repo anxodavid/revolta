@@ -65,3 +65,12 @@ imaxe  14 intento 2 117.7s + revisión 10.1s ['texto na imaxe']
 imaxe  15 intento 0 118.9s + revisión 10.4s ok
 imaxe  16 intento 0 119.3s + revisión 10.2s ok
 imaxe  17 intento 0 117.1s + revisión 10.7s ['interior moderno']
+imaxe  17 intento 1 119.1s + revisión 10.5s ['interior moderno']
+imaxe  17 intento 2 119.2s + revisión 11.2s ['interior moderno']
+imaxe  18 intento 0 118.3s + revisión 10.6s ['texto na imaxe']
+imaxe  18 intento 1 119.4s + revisión 10.2s ['texto na imaxe']
+imaxe  18 intento 2 119.4s + revisión 10.5s ['interior moderno']
+imaxe  19 intento 0 120.1s + revisión 11.1s ok
+imaxe  20 intento 0 117.2s + revisión  9.8s ['casas británicas (CLIP)']
+imaxe  20 intento 1 121.8s + revisión 10.9s ['obxectos modernos', 'casas alleas']
+imaxe  20 intento 2 121.9s + revisión 12.2s ['obxectos modernos', 'casas alleas']
