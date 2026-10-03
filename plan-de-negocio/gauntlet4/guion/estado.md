@@ -1,7 +1,7 @@
 # Estado da peza 1 (guion v2) · Gauntlet 4
 
 Ficheiro do construtor (guionista, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar desde
-aquí.** Última actualización: 03-10-2026, 04:30 UTC.
+aquí.** Última actualización: 03-10-2026, 05:25 UTC.
 
 ## Encargo vixente
 
@@ -25,13 +25,14 @@ aquí.** Última actualización: 03-10-2026, 04:30 UTC.
 
 ## En curso
 
-- Nada: **rolda 1 entregada** (04:30 UTC). Portas de texto en verde no segundo intento (lingua 0, H1 100 %, estilo
-  correcto, veracidade 5 marcadas e xustificadas). Agarda os críticos A (a cegas) e B.
+- Nada: **rolda 2 entregada** (05:25 UTC): `guion-r2.txt` (1.628 palabras), `feitos-r2.md`, `excepcions-r2.yaml`,
+  `notas-r2.md` (táboa B1-B15 e A1-A10) e `porta_texto-r2.json` (todo en verde). A r1 gañou (crítico A a cegas: 31
+  fronte a 18; crítico B: GAÑA coas 15 substitucións, aplicadas literais por `scripts/aplicar_r2.py`). Agarda un novo
+  crítico B que revise só as frases cambiadas.
 
 ## Falta
 
-- Rolda 2 se os críticos o piden: aplicar as substitucións do crítico B e as melloras do A, e volver pasar a porta
-  coas mesmas ordes (`guion-r2.txt`, `excepcions-r2.yaml`, `porta_texto-r2.json`).
+- Se o novo crítico B pide cambios: aplicalos a `guion-r2.txt` e volver pasar `scripts/porta-r2.sh` (mesmas ordes, r2).
 
 ## Como retomar (ordes exactas)
 
