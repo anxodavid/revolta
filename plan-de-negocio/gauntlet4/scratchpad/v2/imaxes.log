@@ -204,3 +204,19 @@ imaxe  64 intento 2 115.4s + revisión 10.6s ['lume vivo ao durmir (5.0% de alta
 imaxe  65 intento 0 119.2s + revisión 10.5s ok avisos ['falta: clay basin (CLIP)']
 imaxe  66 intento 0 120.4s + revisión 10.1s ['casas británicas (CLIP)']
 imaxe  66 intento 1 119.4s + revisión 11.5s ['interior moderno', 'paisaxe seca (CLIP)', 'casas británicas (CLIP)', 'negativo do plano: glass window (CLIP)']
+imaxe  66 intento 2 123.0s + revisión 11.2s ['interior moderno', 'casas británicas (CLIP)']
+imaxe  67 intento 0 100.8s + revisión 10.2s ['man sen corpo (1)', 'lume vivo ao durmir (4.4% de altas luces cor de chama)', 'tellados laranxas (CLIP)', 'muros encalados (CLIP)']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['small shuttered opening']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['small shuttered opening']
+imaxe  67 intento 1  82.5s + revisión  9.8s ['lume vivo ao durmir (2.9% de altas luces cor de chama)']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['small shuttered opening, hands hidden in the sleeves or out of frame']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['small shuttered opening, hands hidden in the sleeves or out of frame']
+imaxe  67 intento 2  81.7s + revisión 10.5s ['lume vivo ao durmir (3.7% de altas luces cor de chama)', 'tellados laranxas (CLIP)', 'muros encalados (CLIP)']
+imaxe  68 intento 0 122.1s + revisión 10.9s ['negativo do plano: modern kitchen (CLIP)']
+imaxe  68 intento 1 122.6s + revisión 11.2s ['interior moderno']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['headscarf watching, their faces lit blue in a dark room']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['headscarf watching, their faces lit blue in a dark room']
+imaxe  68 intento 2 121.1s + revisión 10.6s ok
+imaxe  69 intento 0 123.7s + revisión 11.0s ok
+imaxe  70 intento 0 121.1s + revisión 10.7s ['obxectos modernos', 'catedral inventada (CLIP)']
+imaxe  70 intento 1 119.3s + revisión 11.0s ok

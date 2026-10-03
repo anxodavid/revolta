@@ -16395,5 +16395,1592 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "durmir"
+ },
+ "066-a9e77ab3": {
+  "ficheiro": "066-a9e77ab3-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "066-a9e77ab3-0.png",
+    "seed": 2371753106,
+    "s": 120.4,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, close-up of bunches of dried herbs and flowers hanging from a dark wooden beam beside the doorway of a granite farmhouse, dust floating in a soft sunbeam, quiet",
+    "modelo": "lightning",
+    "tokens": 50,
+    "truncado": "",
+    "problemas": [
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0386,
+    "lume_quente": 0.0002,
+    "descricion": "The image shows a window sill with a bunch of dried flowers hanging on it. The flowers are in various shades of pink, white, and green, and they are arranged in a way that creates a beautiful and delicate display. The window sill is made of wood and is attached to the wall with a wooden railing. The background is blurred, but it appears to be a room with a view of trees and greenery outside. The sunlight is shining through the window, creating a warm and inviting atmosphere.",
+    "obxectos": [
+     "flower",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.016,
+      0.124
+     ],
+     "muros encalados (CLIP)": [
+      0.022,
+      0.135
+     ],
+     "ciprés (CLIP)": [
+      0.028,
+      0.14
+     ],
+     "oliveiras (CLIP)": [
+      -0.018,
+      0.146
+     ],
+     "palmeiras (CLIP)": [
+      -0.018,
+      0.162
+     ],
+     "rodas de raios (CLIP)": [
+      0.042,
+      0.116
+     ],
+     "paisaxe seca (CLIP)": [
+      0.028,
+      0.153
+     ],
+     "eucaliptos (CLIP)": [
+      -0.013,
+      0.082
+     ],
+     "luz eléctrica (CLIP)": [
+      0.008,
+      0.063
+     ],
+     "luces de cidade (CLIP)": [
+      -0.013,
+      0.133
+     ],
+     "salón moderno (CLIP)": [
+      0.033,
+      0.141
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.062,
+      0.13
+     ],
+     "casas británicas (CLIP)": [
+      0.048,
+      0.154
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.01,
+      0.16
+     ],
+     "catedral inventada (CLIP)": [
+      -0.041,
+      0.145
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.032,
+      0.103
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.021,
+      0.121
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.037,
+      0.128
+     ],
+     "cadros na parede (CLIP)": [
+      0.004,
+      0.198
+     ],
+     "farol victoriano (CLIP)": [
+      -0.024,
+      0.138
+     ],
+     "negativo: electric light": 0.002,
+     "negativo: light bulb": -0.026,
+     "negativo: lamp": -0.008,
+     "negativo: glass window": 0.03,
+     "negativo: modern clothes": -0.028,
+     "negativo: street lamp": -0.031,
+     "clave: dried herbs": 5.89,
+     "clave_v5: dried herbs": 0.055
+    },
+    "arquetipo": null,
+    "s_revision": 10.1,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "066-a9e77ab3-1.png",
+    "seed": 2269265911,
+    "s": 119.4,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, thick granite walls, small shuttered window, close-up of bunches of dried herbs and flowers hanging from a dark wooden beam beside the doorway of a granite farmhouse, dust floating in a soft sunbeam, quiet",
+    "modelo": "lightning",
+    "tokens": 59,
+    "truncado": "",
+    "problemas": [
+     "interior moderno",
+     "paisaxe seca (CLIP)",
+     "casas británicas (CLIP)",
+     "negativo do plano: glass window (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0004,
+    "descricion": "The image shows a window with wooden shutters on a stone wall. The window is open and the shutters are closed, allowing natural light to enter the room. On the window sill, there are several potted plants with colorful flowers in them. The plants are arranged in a way that creates a natural and rustic look. The wall is made up of large, irregularly shaped stones, and the overall color scheme of the wall is gray and brown. The overall atmosphere of the image is peaceful and serene.",
+    "obxectos": [
+     "flower",
+     "flowerpot"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.018,
+      0.154
+     ],
+     "muros encalados (CLIP)": [
+      0.021,
+      0.188
+     ],
+     "ciprés (CLIP)": [
+      -0.008,
+      0.122
+     ],
+     "oliveiras (CLIP)": [
+      -0.008,
+      0.143
+     ],
+     "palmeiras (CLIP)": [
+      -0.026,
+      0.145
+     ],
+     "rodas de raios (CLIP)": [
+      0.011,
+      0.117
+     ],
+     "paisaxe seca (CLIP)": [
+      0.076,
+      0.175
+     ],
+     "eucaliptos (CLIP)": [
+      0.006,
+      0.034
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.026,
+      0.065
+     ],
+     "luces de cidade (CLIP)": [
+      -0.05,
+      0.134
+     ],
+     "salón moderno (CLIP)": [
+      -0.067,
+      0.208
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.024,
+      0.127
+     ],
+     "casas británicas (CLIP)": [
+      0.02,
+      0.182
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.032,
+      0.191
+     ],
+     "catedral inventada (CLIP)": [
+      -0.091,
+      0.151
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.056,
+      0.109
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.069,
+      0.141
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.016,
+      0.112
+     ],
+     "cadros na parede (CLIP)": [
+      -0.032,
+      0.254
+     ],
+     "farol victoriano (CLIP)": [
+      -0.061,
+      0.149
+     ],
+     "negativo: electric light": -0.019,
+     "negativo: light bulb": -0.05,
+     "negativo: lamp": -0.046,
+     "negativo: glass window": 0.047,
+     "negativo: modern clothes": -0.039,
+     "negativo: street lamp": -0.064,
+     "clave: dried herbs": 3.53,
+     "clave_v5: dried herbs": 0.031
+    },
+    "arquetipo": null,
+    "s_revision": 11.5,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "066-a9e77ab3-2.png",
+    "seed": 1321669,
+    "s": 123.0,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, thick granite walls, small shuttered window, smoke-blackened granite walls, open stone hearth at floor level, close-up of bunches of dried herbs and flowers hanging from a dark wooden beam beside the doorway of a granite farmhouse, dust floating in a soft sunbeam, quiet",
+    "modelo": "lightning",
+    "tokens": 74,
+    "truncado": "",
+    "problemas": [
+     "interior moderno",
+     "casas británicas (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.03,
+    "lume_quente": 0.0006,
+    "descricion": "The image shows an old, dilapidated room with a wooden bench on the right side. On the bench, there is a vase with orange flowers and a few other decorative items. The room has a large window on the left side, which is covered with a white curtain. The walls are made of stone and the floor is made of concrete. The sunlight is shining through the window, creating a warm glow on the scene. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "door",
+     "flower",
+     "flowerpot",
+     "house",
+     "houseplant",
+     "vase",
+     "window"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.011,
+      0.163
+     ],
+     "muros encalados (CLIP)": [
+      0.026,
+      0.149
+     ],
+     "ciprés (CLIP)": [
+      -0.01,
+      0.142
+     ],
+     "oliveiras (CLIP)": [
+      -0.029,
+      0.145
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.163
+     ],
+     "rodas de raios (CLIP)": [
+      0.031,
+      0.137
+     ],
+     "paisaxe seca (CLIP)": [
+      0.052,
+      0.148
+     ],
+     "eucaliptos (CLIP)": [
+      0.015,
+      0.063
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.017,
+      0.092
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.148
+     ],
+     "salón moderno (CLIP)": [
+      -0.027,
+      0.181
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.068,
+      0.141
+     ],
+     "casas británicas (CLIP)": [
+      0.025,
+      0.157
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.028,
+      0.199
+     ],
+     "catedral inventada (CLIP)": [
+      -0.052,
+      0.132
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.001,
+      0.151
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.027,
+      0.171
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.026,
+      0.117
+     ],
+     "cadros na parede (CLIP)": [
+      -0.006,
+      0.21
+     ],
+     "farol victoriano (CLIP)": [
+      -0.038,
+      0.136
+     ],
+     "negativo: electric light": 0.008,
+     "negativo: light bulb": -0.015,
+     "negativo: lamp": -0.006,
+     "negativo: glass window": 0.021,
+     "negativo: modern clothes": -0.023,
+     "negativo: street lamp": -0.035,
+     "clave: dried herbs": 2.56,
+     "clave_v5: dried herbs": 0.003
+    },
+    "arquetipo": null,
+    "s_revision": 11.2,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "durmir"
+ },
+ "067-e99150e5": {
+  "ficheiro": "067-e99150e5-1.png",
+  "escollida": 1,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "067-e99150e5-0.png",
+    "seed": 3946431490,
+    "s": 100.8,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, close-up of an earthenware jug held by an old woman's hand pouring clear spirits into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, in a dim room after supper, faint light from a small shuttered opening",
+    "modelo": "lightning",
+    "tokens": 72,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)",
+     "lume vivo ao durmir (4.4% de altas luces cor de chama)",
+     "tellados laranxas (CLIP)",
+     "muros encalados (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "07-queimada/02-camino-de-santiago-may-2008.jpg",
+     "modo": "img2img",
+     "forza": 0.5
+    },
+    "mans": [
+     {
+      "pulso": [
+       0.727,
+       0.567
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.741,
+      "tamaño": 0.039
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.1868,
+    "lume_quente": 0.0437,
+    "descricion": "The image shows a person's hands holding a clay pot with a wooden spoon in it. The pot is made of terracotta and has a brownish-orange color. There are six small cups around the pot, each with a handle on one side. The cups are arranged in a circular pattern around the bowl. The person is using the spoon to stir the clay into the pot. The background is blurred, but it appears to be a kitchen countertop with a white cloth.",
+    "obxectos": [
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.106,
+      0.159
+     ],
+     "muros encalados (CLIP)": [
+      0.074,
+      0.152
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.114
+     ],
+     "oliveiras (CLIP)": [
+      0.012,
+      0.089
+     ],
+     "palmeiras (CLIP)": [
+      -0.001,
+      0.109
+     ],
+     "rodas de raios (CLIP)": [
+      0.006,
+      0.163
+     ],
+     "paisaxe seca (CLIP)": [
+      0.065,
+      0.102
+     ],
+     "eucaliptos (CLIP)": [
+      0.031,
+      0.062
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.027,
+      0.051
+     ],
+     "luces de cidade (CLIP)": [
+      -0.017,
+      0.092
+     ],
+     "salón moderno (CLIP)": [
+      -0.046,
+      0.141
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.035,
+      0.101
+     ],
+     "casas británicas (CLIP)": [
+      0.019,
+      0.076
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.007,
+      0.182
+     ],
+     "catedral inventada (CLIP)": [
+      -0.025,
+      0.092
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.064,
+      0.126
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.077,
+      0.161
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.013,
+      0.13
+     ],
+     "cadros na parede (CLIP)": [
+      0.002,
+      0.153
+     ],
+     "farol victoriano (CLIP)": [
+      -0.024,
+      0.08
+     ],
+     "negativo: neon": -0.07,
+     "negativo: plastic": -0.029,
+     "negativo: television": -0.027,
+     "negativo: smartphone": 0.004,
+     "negativo: glass bottle": -0.049,
+     "negativo: modern kitchen": 0.02,
+     "clave: clay bowl": 4.81,
+     "clave_v5: clay bowl": 0.092
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.213
+    },
+    "s_revision": 10.2,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "067-e99150e5-1.png",
+    "seed": 1314334217,
+    "s": 82.5,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, thick granite walls, small shuttered window, close-up of an earthenware jug held by an old woman's hand pouring clear spirits into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, in a dim room after supper, faint light from a small shuttered opening",
+    "modelo": "lightning",
+    "tokens": 81,
+    "truncado": "small shuttered opening",
+    "problemas": [
+     "lume vivo ao durmir (2.9% de altas luces cor de chama)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "07-queimada/02-camino-de-santiago-may-2008.jpg",
+     "modo": "img2img",
+     "forza": 0.5
+    },
+    "mans": [],
+    "corpos": 3,
+    "altas_luces": 0.1843,
+    "lume_quente": 0.0286,
+    "descricion": "The image shows a small clay pot with a wooden spoon in it. The pot is placed on a beige cloth-covered table. Inside the pot, there are six small cups of coffee beans. The cups are arranged in a pyramid-like shape, with the largest cup at the bottom and the smallest at the top. The spoon is resting on the edge of the pot. The background is blurred, but it appears to be an indoor setting.",
+    "obxectos": [
+     "tableware"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.089,
+      0.149
+     ],
+     "muros encalados (CLIP)": [
+      0.051,
+      0.132
+     ],
+     "ciprés (CLIP)": [
+      -0.046,
+      0.132
+     ],
+     "oliveiras (CLIP)": [
+      0.07,
+      0.124
+     ],
+     "palmeiras (CLIP)": [
+      -0.014,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      0.02,
+      0.158
+     ],
+     "paisaxe seca (CLIP)": [
+      0.052,
+      0.065
+     ],
+     "eucaliptos (CLIP)": [
+      0.063,
+      0.071
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.024,
+      0.084
+     ],
+     "luces de cidade (CLIP)": [
+      -0.013,
+      0.104
+     ],
+     "salón moderno (CLIP)": [
+      -0.056,
+      0.135
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.018,
+      0.096
+     ],
+     "casas británicas (CLIP)": [
+      0.024,
+      0.065
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.0,
+      0.187
+     ],
+     "catedral inventada (CLIP)": [
+      -0.023,
+      0.085
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.023,
+      0.103
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.061,
+      0.153
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.014,
+      0.141
+     ],
+     "cadros na parede (CLIP)": [
+      0.013,
+      0.149
+     ],
+     "farol victoriano (CLIP)": [
+      -0.019,
+      0.085
+     ],
+     "negativo: neon": -0.051,
+     "negativo: plastic": -0.027,
+     "negativo: television": -0.029,
+     "negativo: smartphone": -0.005,
+     "negativo: glass bottle": -0.039,
+     "negativo: modern kitchen": -0.005,
+     "clave: clay bowl": 3.77,
+     "clave_v5: clay bowl": 0.072
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.203
+    },
+    "s_revision": 9.8,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "067-e99150e5-2.png",
+    "seed": 3953191489,
+    "s": 81.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, thick granite walls, small shuttered window, close-up of an earthenware jug held by an old woman's hand pouring clear spirits into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, in a dim room after supper, faint light from a small shuttered opening, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 91,
+    "truncado": "small shuttered opening, hands hidden in the sleeves or out of frame",
+    "problemas": [
+     "lume vivo ao durmir (3.7% de altas luces cor de chama)",
+     "tellados laranxas (CLIP)",
+     "muros encalados (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "referencia": {
+     "ficheiro": "07-queimada/02-camino-de-santiago-may-2008.jpg",
+     "modo": "img2img",
+     "forza": 0.5
+    },
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.1842,
+    "lume_quente": 0.0367,
+    "descricion": "The image shows a person's hand holding a wooden spoon over a clay pot. The pot is made of terracotta and has a round shape with a handle on one side. The lid of the pot is open, revealing a brown liquid inside. There are several small cups around the pot, some of which are filled with the same liquid. The person is using the spoon to stir the liquid in the pot. In the background, there is a white cloth and a wooden chair. The image appears to be taken in a workshop or studio setting.",
+    "obxectos": [
+     "tableware"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.119,
+      0.199
+     ],
+     "muros encalados (CLIP)": [
+      0.077,
+      0.165
+     ],
+     "ciprés (CLIP)": [
+      -0.042,
+      0.107
+     ],
+     "oliveiras (CLIP)": [
+      0.041,
+      0.107
+     ],
+     "palmeiras (CLIP)": [
+      0.001,
+      0.121
+     ],
+     "rodas de raios (CLIP)": [
+      0.015,
+      0.192
+     ],
+     "paisaxe seca (CLIP)": [
+      0.086,
+      0.097
+     ],
+     "eucaliptos (CLIP)": [
+      0.041,
+      0.083
+     ],
+     "luz eléctrica (CLIP)": [
+      0.006,
+      0.09
+     ],
+     "luces de cidade (CLIP)": [
+      -0.008,
+      0.101
+     ],
+     "salón moderno (CLIP)": [
+      -0.086,
+      0.157
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.031,
+      0.132
+     ],
+     "casas británicas (CLIP)": [
+      0.001,
+      0.062
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.015,
+      0.218
+     ],
+     "catedral inventada (CLIP)": [
+      0.011,
+      0.086
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.022,
+      0.111
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.082,
+      0.157
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.021,
+      0.141
+     ],
+     "cadros na parede (CLIP)": [
+      0.009,
+      0.154
+     ],
+     "farol victoriano (CLIP)": [
+      -0.018,
+      0.116
+     ],
+     "negativo: neon": -0.056,
+     "negativo: plastic": -0.026,
+     "negativo: television": -0.022,
+     "negativo: smartphone": -0.009,
+     "negativo: glass bottle": -0.031,
+     "negativo: modern kitchen": 0.009,
+     "clave: clay bowl": 3.96,
+     "clave_v5: clay bowl": 0.091
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.203
+    },
+    "s_revision": 10.5,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "durmir"
+ },
+ "068-4f4efe5e": {
+  "ficheiro": "068-4f4efe5e-2.png",
+  "escollida": 2,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "068-4f4efe5e-0.png",
+    "seed": 3984164412,
+    "s": 122.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, medium shot of an old man with white stubble in a dark wool waistcoat lifting a clay ladle of pale blue flames and letting it fall slowly back into a wide clay bowl, an old woman in a black cardigan and dark headscarf watching, their faces lit blue in a dark room",
+    "modelo": "lightning",
+    "tokens": 74,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: modern kitchen (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.523,
+       0.69
+      ],
+      "confianza": 0.97,
+      "dist_corpo": 0.024,
+      "tamaño": 0.109
+     },
+     {
+      "pulso": [
+       0.325,
+       0.781
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.019,
+      "tamaño": 0.1
+     },
+     {
+      "pulso": [
+       0.948,
+       0.869
+      ],
+      "confianza": 0.8,
+      "dist_corpo": 0.017,
+      "tamaño": 0.065
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0175,
+    "lume_quente": 0.0079,
+    "descricion": "The image shows an elderly couple in a workshop. The man is on the left side of the image, wearing a white beard and glasses, and is holding a wooden spoon in his right hand. He is standing in front of a large clay pot with a fire burning inside. The woman is standing next to him, also holding a spoon. They are both looking at the pot and appear to be engaged in a conversation. The background is dark and there is a bookshelf on the right side. The image appears to be taken from a low angle, with the focus on the two people",
+    "obxectos": [
+     "human face",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.008,
+      0.099
+     ],
+     "muros encalados (CLIP)": [
+      0.032,
+      0.117
+     ],
+     "ciprés (CLIP)": [
+      -0.056,
+      0.109
+     ],
+     "oliveiras (CLIP)": [
+      -0.035,
+      0.093
+     ],
+     "palmeiras (CLIP)": [
+      -0.031,
+      0.126
+     ],
+     "rodas de raios (CLIP)": [
+      0.05,
+      0.132
+     ],
+     "paisaxe seca (CLIP)": [
+      0.034,
+      0.06
+     ],
+     "eucaliptos (CLIP)": [
+      0.003,
+      0.05
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.003,
+      0.087
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.124
+     ],
+     "salón moderno (CLIP)": [
+      -0.013,
+      0.196
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.005,
+      0.064
+     ],
+     "casas británicas (CLIP)": [
+      0.042,
+      0.108
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.003,
+      0.21
+     ],
+     "catedral inventada (CLIP)": [
+      -0.004,
+      0.067
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.032,
+      0.161
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.016,
+      0.166
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.02,
+      0.141
+     ],
+     "cadros na parede (CLIP)": [
+      0.022,
+      0.16
+     ],
+     "farol victoriano (CLIP)": [
+      -0.003,
+      0.114
+     ],
+     "negativo: neon": -0.003,
+     "negativo: plastic": -0.018,
+     "negativo: television": 0.001,
+     "negativo: smartphone": 0.013,
+     "negativo: light bulb": 0.028,
+     "negativo: modern kitchen": 0.042,
+     "clave: clay bowl": 3.03,
+     "clave_v5: clay bowl": 0.026
+    },
+    "arquetipo": null,
+    "s_revision": 10.9,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "068-4f4efe5e-1.png",
+    "seed": 3105663284,
+    "s": 122.6,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, medium shot of an old man with white stubble in a dark wool waistcoat lifting a clay ladle of pale blue flames and letting it fall slowly back into a wide clay bowl, an old woman in a black cardigan and dark headscarf watching, their faces lit blue in a dark room",
+    "modelo": "lightning",
+    "tokens": 74,
+    "truncado": "",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.555,
+       0.661
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.059,
+      "tamaño": 0.062
+     },
+     {
+      "pulso": [
+       0.305,
+       0.83
+      ],
+      "confianza": 0.65,
+      "dist_corpo": 0.034,
+      "tamaño": 0.094
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0102,
+    "lume_quente": 0.0086,
+    "descricion": "The image shows an elderly man with a white beard and a white turban on his head, standing in a kitchen. He is holding a wooden spoon and appears to be in the process of stirring something in a large clay pot. There are several lit candles on the table in front of him, and a woman in an apron is standing behind him, looking at him attentively. The kitchen is decorated with various items, including a bookshelf and a painting hanging on the wall. The overall mood of the image is one of concentration and focus.",
+    "obxectos": [
+     "bowl",
+     "candle",
+     "human face",
+     "man",
+     "picture frame"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.039,
+      0.135
+     ],
+     "muros encalados (CLIP)": [
+      0.026,
+      0.113
+     ],
+     "ciprés (CLIP)": [
+      -0.084,
+      0.108
+     ],
+     "oliveiras (CLIP)": [
+      -0.029,
+      0.084
+     ],
+     "palmeiras (CLIP)": [
+      -0.046,
+      0.116
+     ],
+     "rodas de raios (CLIP)": [
+      0.016,
+      0.112
+     ],
+     "paisaxe seca (CLIP)": [
+      0.01,
+      0.05
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.032
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.006,
+      0.074
+     ],
+     "luces de cidade (CLIP)": [
+      -0.035,
+      0.094
+     ],
+     "salón moderno (CLIP)": [
+      -0.086,
+      0.213
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.016,
+      0.091
+     ],
+     "casas británicas (CLIP)": [
+      0.019,
+      0.111
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.066,
+      0.212
+     ],
+     "catedral inventada (CLIP)": [
+      0.005,
+      0.048
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.063,
+      0.132
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.044,
+      0.177
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.061,
+      0.184
+     ],
+     "cadros na parede (CLIP)": [
+      0.005,
+      0.154
+     ],
+     "farol victoriano (CLIP)": [
+      0.018,
+      0.089
+     ],
+     "negativo: neon": -0.038,
+     "negativo: plastic": -0.03,
+     "negativo: television": 0.006,
+     "negativo: smartphone": 0.009,
+     "negativo: light bulb": 0.006,
+     "negativo: modern kitchen": 0.038,
+     "clave: clay bowl": 2.51,
+     "clave_v5: clay bowl": 0.054
+    },
+    "arquetipo": null,
+    "s_revision": 11.2,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "068-4f4efe5e-2.png",
+    "seed": 362507168,
+    "s": 121.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, smoke-blackened granite walls, open stone hearth at floor level, medium shot of an old man with white stubble in a dark wool waistcoat lifting a clay ladle of pale blue flames and letting it fall slowly back into a wide clay bowl, an old woman in a black cardigan and dark headscarf watching, their faces lit blue in a dark room",
+    "modelo": "lightning",
+    "tokens": 89,
+    "truncado": "headscarf watching, their faces lit blue in a dark room",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.536,
+       0.6
+      ],
+      "confianza": 0.7,
+      "dist_corpo": 0.013,
+      "tamaño": 0.023
+     },
+     {
+      "pulso": [
+       0.592,
+       0.602
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.005,
+      "tamaño": 0.055
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0148,
+    "lume_quente": 0.0102,
+    "descricion": "The image shows an elderly man with a white beard and a blue shirt, kneeling on the ground in a workshop. He is holding a wooden spoon and appears to be in the process of stirring a large pot with a fire. The pot is on a pedestal and there is smoke rising from it. The workshop is filled with various tools and equipment, including a window, a shelf with bottles, and a painting on the wall. The floor is covered in dirt and there are a few pieces of wood scattered around. The overall mood of the image is one of concentration and focus.",
+    "obxectos": [
+     "footwear",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.001,
+      0.112
+     ],
+     "muros encalados (CLIP)": [
+      0.039,
+      0.129
+     ],
+     "ciprés (CLIP)": [
+      -0.051,
+      0.121
+     ],
+     "oliveiras (CLIP)": [
+      0.001,
+      0.116
+     ],
+     "palmeiras (CLIP)": [
+      -0.035,
+      0.151
+     ],
+     "rodas de raios (CLIP)": [
+      0.02,
+      0.128
+     ],
+     "paisaxe seca (CLIP)": [
+      0.039,
+      0.079
+     ],
+     "eucaliptos (CLIP)": [
+      -0.005,
+      0.058
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.02,
+      0.093
+     ],
+     "luces de cidade (CLIP)": [
+      -0.031,
+      0.135
+     ],
+     "salón moderno (CLIP)": [
+      -0.089,
+      0.208
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.034,
+      0.086
+     ],
+     "casas británicas (CLIP)": [
+      0.005,
+      0.109
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.022,
+      0.235
+     ],
+     "catedral inventada (CLIP)": [
+      -0.043,
+      0.09
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.039,
+      0.135
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.069,
+      0.193
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.028,
+      0.161
+     ],
+     "cadros na parede (CLIP)": [
+      -0.005,
+      0.164
+     ],
+     "farol victoriano (CLIP)": [
+      0.008,
+      0.107
+     ],
+     "negativo: neon": -0.022,
+     "negativo: plastic": -0.029,
+     "negativo: television": -0.014,
+     "negativo: smartphone": 0.014,
+     "negativo: light bulb": 0.024,
+     "negativo: modern kitchen": 0.031,
+     "clave: clay bowl": 3.05,
+     "clave_v5: clay bowl": 0.081
+    },
+    "arquetipo": {
+     "etiqueta": "persoa á lareira",
+     "sim": 0.241
+    },
+    "s_revision": 10.6,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "durmir"
+ },
+ "069-ef743d55": {
+  "ficheiro": "069-ef743d55-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "069-ef743d55-0.png",
+    "seed": 1541170561,
+    "s": 123.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, wide calm view of a misty harbour at night, the dark silhouette of an old wooden sailing boat moored at a granite quay far away, a tiny blue glow and three small seated figures on its deck, still water, 1960s",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0029,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two tall ships sailing on a calm body of water. The sky is dark and cloudy, with a full moon visible in the background. The ships are silhouetted against the sky, and the water is calm and still. On the right side of the image, there is a city skyline with buildings and cranes visible. The image is taken from a low angle, looking up at the ships.",
+    "obxectos": [
+     "boat"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.088,
+      0.136
+     ],
+     "muros encalados (CLIP)": [
+      -0.054,
+      0.154
+     ],
+     "ciprés (CLIP)": [
+      0.006,
+      0.126
+     ],
+     "oliveiras (CLIP)": [
+      -0.057,
+      0.102
+     ],
+     "palmeiras (CLIP)": [
+      -0.021,
+      0.146
+     ],
+     "rodas de raios (CLIP)": [
+      0.026,
+      0.113
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.065,
+      0.116
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.083
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.004,
+      0.124
+     ],
+     "luces de cidade (CLIP)": [
+      -0.063,
+      0.172
+     ],
+     "salón moderno (CLIP)": [
+      0.007,
+      0.076
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.017,
+      0.066
+     ],
+     "casas británicas (CLIP)": [
+      0.005,
+      0.077
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.029,
+      0.148
+     ],
+     "catedral inventada (CLIP)": [
+      0.028,
+      0.117
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.013,
+      0.114
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.059,
+      0.155
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.013,
+      0.118
+     ],
+     "cadros na parede (CLIP)": [
+      -0.006,
+      0.166
+     ],
+     "farol victoriano (CLIP)": [
+      0.008,
+      0.138
+     ],
+     "negativo: neon": -0.036,
+     "negativo: plastic": -0.032,
+     "negativo: television": -0.033,
+     "negativo: smartphone": -0.004,
+     "negativo: street lamps": -0.013,
+     "negativo: modern yacht": 0.007,
+     "clave: boat": 4.14,
+     "clave_v5: boat": 0.026
+    },
+    "arquetipo": null,
+    "s_revision": 11.0,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "durmir"
+ },
+ "070-bad0884c": {
+  "ficheiro": "070-bad0884c-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "070-bad0884c-0.png",
+    "seed": 932170380,
+    "s": 121.1,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, medium close-up in profile of an old woman in a black cardigan and dark headscarf, smiling and raising one finger as she speaks to an old man with white stubble in a dark wool waistcoat who laughs softly, small clay cups in their hands, soft blue glow in a dark room",
+    "modelo": "lightning",
+    "tokens": 75,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos",
+     "catedral inventada (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.24,
+       0.916
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.065,
+      "tamaño": 0.126
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0,
+    "lume_quente": 0.0008,
+    "descricion": "The image shows two elderly women sitting side by side and smiling at the camera. The woman on the left is wearing a black vest and a blue headscarf, while the woman in the middle is wearing an older woman with white hair. They are both wearing blue scarves on their heads and appear to be in a room with green walls and a painting hanging on the wall behind them. Both women are pointing their fingers towards the camera with their fingers, as if they are making a peace sign. The image appears to be a still from a movie or TV show.",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.011,
+      0.088
+     ],
+     "muros encalados (CLIP)": [
+      0.013,
+      0.099
+     ],
+     "ciprés (CLIP)": [
+      -0.035,
+      0.108
+     ],
+     "oliveiras (CLIP)": [
+      -0.02,
+      0.088
+     ],
+     "palmeiras (CLIP)": [
+      -0.031,
+      0.097
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.078
+     ],
+     "paisaxe seca (CLIP)": [
+      0.031,
+      0.066
+     ],
+     "eucaliptos (CLIP)": [
+      -0.002,
+      0.025
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.001,
+      0.066
+     ],
+     "luces de cidade (CLIP)": [
+      -0.043,
+      0.095
+     ],
+     "salón moderno (CLIP)": [
+      0.007,
+      0.116
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.018,
+      0.045
+     ],
+     "casas británicas (CLIP)": [
+      0.043,
+      0.099
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.021,
+      0.09
+     ],
+     "catedral inventada (CLIP)": [
+      0.058,
+      0.069
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.024,
+      0.177
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.028,
+      0.164
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.071,
+      0.212
+     ],
+     "cadros na parede (CLIP)": [
+      0.016,
+      0.165
+     ],
+     "farol victoriano (CLIP)": [
+      -0.012,
+      0.09
+     ],
+     "negativo: neon": -0.019,
+     "negativo: plastic": -0.017,
+     "negativo: television": 0.001,
+     "negativo: smartphone": 0.006,
+     "negativo: light bulb": -0.003,
+     "negativo: glass": -0.012,
+     "clave: old woman": 5.21,
+     "clave_v5: old woman": 0.068
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "070-bad0884c-1.png",
+    "seed": 16041394,
+    "s": 119.3,
+    "prompt": "cinematic film still, period drama, photorealistic, dim and quiet, medium close-up in profile of an old woman in a black cardigan and dark headscarf, smiling and raising one finger as she speaks to an old man with white stubble in a dark wool waistcoat who laughs softly, small clay cups in their hands, soft blue glow in a dark room",
+    "modelo": "lightning",
+    "tokens": 75,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.437,
+       0.972
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 9.0,
+      "tamaño": 0.133
+     }
+    ],
+    "corpos": 0,
+    "altas_luces": 0.0135,
+    "lume_quente": 0.0032,
+    "descricion": "The image shows two elderly women standing in a room with a candlelight vigil in front of them. They are both smiling and holding lit candles in their hands. The woman on the left is wearing a black headscarf and a gray sweater, while the woman in the middle has her hair styled in an updo. The background is blurred, but it appears to be a dimly lit room with ornate decorations and a painting hanging on the wall. The overall mood of the image is happy and romantic.",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.032,
+      0.101
+     ],
+     "muros encalados (CLIP)": [
+      0.015,
+      0.105
+     ],
+     "ciprés (CLIP)": [
+      -0.007,
+      0.094
+     ],
+     "oliveiras (CLIP)": [
+      0.001,
+      0.084
+     ],
+     "palmeiras (CLIP)": [
+      -0.035,
+      0.105
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.067
+     ],
+     "paisaxe seca (CLIP)": [
+      0.03,
+      0.06
+     ],
+     "eucaliptos (CLIP)": [
+      -0.02,
+      0.032
+     ],
+     "luz eléctrica (CLIP)": [
+      0.036,
+      0.115
+     ],
+     "luces de cidade (CLIP)": [
+      -0.009,
+      0.129
+     ],
+     "salón moderno (CLIP)": [
+      0.049,
+      0.123
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.011,
+      0.077
+     ],
+     "casas británicas (CLIP)": [
+      0.045,
+      0.114
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.015,
+      0.121
+     ],
+     "catedral inventada (CLIP)": [
+      0.023,
+      0.081
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.033,
+      0.177
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.002,
+      0.149
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.103,
+      0.205
+     ],
+     "cadros na parede (CLIP)": [
+      0.004,
+      0.155
+     ],
+     "farol victoriano (CLIP)": [
+      -0.009,
+      0.093
+     ],
+     "negativo: neon": -0.012,
+     "negativo: plastic": -0.028,
+     "negativo: television": 0.004,
+     "negativo: smartphone": 0.015,
+     "negativo: light bulb": 0.03,
+     "negativo: glass": -0.004,
+     "clave: old woman": 5.55,
+     "clave_v5: old woman": 0.053
+    },
+    "arquetipo": null,
+    "s_revision": 11.0,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "durmir"
  }
 }
