@@ -23033,5 +23033,1252 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "038-e2e0f531": {
+  "ficheiro": "038-e2e0f531-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "038-e2e0f531-0.png",
+    "seed": 3309760661,
+    "s": 115.1,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: bonfire (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0364,
+    "lume_quente": 0.0093,
+    "descricion": "The image shows three men standing on a wooden deck overlooking a large fire. The fire is burning brightly, with orange and yellow flames and smoke rising up into the air. The men are wearing hats and are standing close together, facing away from the camera. The deck is made of wood and has a railing on either side. The background is dark, with a hint of blue sky. The overall mood of the image is dramatic and dramatic.",
+    "obxectos": [
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.016,
+      0.071
+     ],
+     "muros encalados (CLIP)": [
+      0.04,
+      0.092
+     ],
+     "ciprés (CLIP)": [
+      0.003,
+      0.106
+     ],
+     "oliveiras (CLIP)": [
+      -0.06,
+      0.088
+     ],
+     "palmeiras (CLIP)": [
+      -0.015,
+      0.125
+     ],
+     "rodas de raios (CLIP)": [
+      0.013,
+      0.077
+     ],
+     "paisaxe seca (CLIP)": [
+      0.015,
+      0.086
+     ],
+     "eucaliptos (CLIP)": [
+      0.013,
+      0.05
+     ],
+     "luz eléctrica (CLIP)": [
+      0.022,
+      0.109
+     ],
+     "luces de cidade (CLIP)": [
+      0.001,
+      0.132
+     ],
+     "salón moderno (CLIP)": [
+      -0.016,
+      0.109
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.021,
+      0.073
+     ],
+     "casas británicas (CLIP)": [
+      0.036,
+      0.053
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.006,
+      0.169
+     ],
+     "catedral inventada (CLIP)": [
+      0.04,
+      0.057
+     ],
+     "abrigo moderno (CLIP)": [
+      0.03,
+      0.064
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.054,
+      0.145
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.063,
+      0.167
+     ],
+     "cadros na parede (CLIP)": [
+      0.041,
+      0.143
+     ],
+     "farol victoriano (CLIP)": [
+      0.0,
+      0.12
+     ],
+     "negativo: neon": -0.023,
+     "negativo: plastic": -0.048,
+     "negativo: television": 0.009,
+     "negativo: smartphone": -0.006,
+     "negativo: light bulb": -0.01,
+     "negativo: bonfire": 0.07,
+     "clave: clay bowl": 0.88,
+     "clave_v5: clay bowl": -0.024
+    },
+    "arquetipo": null,
+    "s_revision": 9.6,
+    "avisos": [
+     "falta: clay bowl (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "038-e2e0f531-1.png",
+    "seed": 1118885333,
+    "s": 119.4,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: bonfire (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0324,
+    "lume_quente": 0.0126,
+    "descricion": "The image shows a group of six men standing around a large fire pit on a wooden deck overlooking a lake at night. The fire pit is made of wood and is filled with water and rocks. The men are wearing beige jackets and hats, and they are standing in a line, facing the fire pit. The sky is dark and the water is calm, with trees and buildings visible in the background. There is a hint of smoke rising from the fire, indicating that it is burning. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.034,
+      0.054
+     ],
+     "muros encalados (CLIP)": [
+      0.009,
+      0.068
+     ],
+     "ciprés (CLIP)": [
+      -0.066,
+      0.128
+     ],
+     "oliveiras (CLIP)": [
+      -0.047,
+      0.084
+     ],
+     "palmeiras (CLIP)": [
+      -0.009,
+      0.105
+     ],
+     "rodas de raios (CLIP)": [
+      -0.003,
+      0.107
+     ],
+     "paisaxe seca (CLIP)": [
+      0.013,
+      0.069
+     ],
+     "eucaliptos (CLIP)": [
+      -0.007,
+      0.018
+     ],
+     "luz eléctrica (CLIP)": [
+      0.02,
+      0.062
+     ],
+     "luces de cidade (CLIP)": [
+      -0.031,
+      0.108
+     ],
+     "salón moderno (CLIP)": [
+      -0.01,
+      0.126
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.027,
+      0.104
+     ],
+     "casas británicas (CLIP)": [
+      0.035,
+      0.035
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.011,
+      0.204
+     ],
+     "catedral inventada (CLIP)": [
+      -0.034,
+      0.029
+     ],
+     "abrigo moderno (CLIP)": [
+      0.019,
+      0.042
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.034,
+      0.138
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.01,
+      0.137
+     ],
+     "cadros na parede (CLIP)": [
+      0.033,
+      0.14
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.094
+     ],
+     "negativo: neon": -0.023,
+     "negativo: plastic": -0.026,
+     "negativo: television": 0.036,
+     "negativo: smartphone": -0.001,
+     "negativo: light bulb": -0.005,
+     "negativo: bonfire": 0.084,
+     "clave: clay bowl": 4.48,
+     "clave_v5: clay bowl": 0.086
+    },
+    "arquetipo": null,
+    "s_revision": 11.3,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "038-e2e0f531-2.png",
+    "seed": 2543533078,
+    "s": 120.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [
+     "negativo do plano: bonfire (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0224,
+    "lume_quente": 0.0057,
+    "descricion": "The image shows two men standing on the deck of a wooden boat, facing a large fire. The boat is on the water, and the men are wearing blue shirts and hats. The fire is burning brightly, with orange and yellow flames and smoke rising up into the sky. The water is calm and there are a few other boats visible in the background. The sky is dark and the overall mood of the image is dramatic and dramatic.",
+    "obxectos": [
+     "boat",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.019,
+      0.051
+     ],
+     "muros encalados (CLIP)": [
+      0.039,
+      0.073
+     ],
+     "ciprés (CLIP)": [
+      -0.014,
+      0.102
+     ],
+     "oliveiras (CLIP)": [
+      -0.028,
+      0.069
+     ],
+     "palmeiras (CLIP)": [
+      0.001,
+      0.12
+     ],
+     "rodas de raios (CLIP)": [
+      -0.006,
+      0.112
+     ],
+     "paisaxe seca (CLIP)": [
+      0.056,
+      0.075
+     ],
+     "eucaliptos (CLIP)": [
+      0.018,
+      0.038
+     ],
+     "luz eléctrica (CLIP)": [
+      0.017,
+      0.088
+     ],
+     "luces de cidade (CLIP)": [
+      -0.03,
+      0.132
+     ],
+     "salón moderno (CLIP)": [
+      -0.017,
+      0.083
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.026,
+      0.05
+     ],
+     "casas británicas (CLIP)": [
+      0.028,
+      0.024
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.008,
+      0.135
+     ],
+     "catedral inventada (CLIP)": [
+      0.02,
+      0.053
+     ],
+     "abrigo moderno (CLIP)": [
+      0.021,
+      0.044
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.013,
+      0.099
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.099,
+      0.169
+     ],
+     "cadros na parede (CLIP)": [
+      0.037,
+      0.15
+     ],
+     "farol victoriano (CLIP)": [
+      -0.024,
+      0.113
+     ],
+     "negativo: neon": -0.011,
+     "negativo: plastic": -0.029,
+     "negativo: television": -0.009,
+     "negativo: smartphone": -0.005,
+     "negativo: light bulb": -0.021,
+     "negativo: bonfire": 0.046,
+     "clave: clay bowl": 1.71,
+     "clave_v5: clay bowl": -0.019
+    },
+    "arquetipo": null,
+    "s_revision": 9.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "039-11685f76": {
+  "ficheiro": "039-11685f76-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "039-11685f76-0.png",
+    "seed": 3258422077,
+    "s": 120.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of three judges seated side by side at a long wooden table in a bare granite hall: a grey-bearded judge in a black gown, a priest in a black cassock, an elderly friar in a white habit and black cape, light from a high opening",
+    "modelo": "lightning",
+    "tokens": 70,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0258,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a group of men standing in a large room with high ceilings and ornate decorations. The room appears to be a church or cathedral, as there are large windows on the left side of the image and a chandelier hanging from the ceiling. The men are dressed in black robes and are gathered around a long wooden table. They are all looking towards the altar, which is covered with a white cloth. The table is set with plates, bowls, and other religious items. The overall atmosphere of the room is solemn and contemplative.",
+    "obxectos": [
+     "man",
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.046,
+      0.07
+     ],
+     "muros encalados (CLIP)": [
+      0.026,
+      0.068
+     ],
+     "ciprés (CLIP)": [
+      -0.035,
+      0.084
+     ],
+     "oliveiras (CLIP)": [
+      -0.042,
+      0.091
+     ],
+     "palmeiras (CLIP)": [
+      -0.038,
+      0.111
+     ],
+     "rodas de raios (CLIP)": [
+      0.024,
+      0.073
+     ],
+     "paisaxe seca (CLIP)": [
+      0.03,
+      0.066
+     ],
+     "eucaliptos (CLIP)": [
+      -0.058,
+      0.064
+     ],
+     "luz eléctrica (CLIP)": [
+      0.019,
+      0.052
+     ],
+     "luces de cidade (CLIP)": [
+      -0.047,
+      0.099
+     ],
+     "salón moderno (CLIP)": [
+      -0.012,
+      0.098
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.031,
+      0.042
+     ],
+     "casas británicas (CLIP)": [
+      -0.024,
+      0.032
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.022,
+      0.092
+     ],
+     "catedral inventada (CLIP)": [
+      -0.001,
+      0.132
+     ],
+     "abrigo moderno (CLIP)": [
+      0.006,
+      0.102
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.112,
+      0.177
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.033,
+      0.115
+     ],
+     "cadros na parede (CLIP)": [
+      0.008,
+      0.15
+     ],
+     "farol victoriano (CLIP)": [
+      -0.049,
+      0.075
+     ],
+     "negativo: electric light": 0.014,
+     "negativo: light bulb": -0.017,
+     "negativo: lamp": -0.038,
+     "negativo: glass window": -0.021,
+     "negativo: modern clothes": -0.029,
+     "negativo: street lamp": -0.047,
+     "clave: judge": 3.35,
+     "clave_v5: judge": 0.035
+    },
+    "arquetipo": null,
+    "s_revision": 11.2,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "040-197330a6": {
+  "ficheiro": "040-197330a6-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "040-197330a6-0.png",
+    "seed": 3568155956,
+    "s": 121.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a lean elderly friar with a grey tonsure, in a white habit and black cape, closing a thick bundle of trial papers tied with cord and laying it on a tall pile of bundles, single candle, bare stone room, 17th century",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [
+     "cousas do século XX"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.509,
+       0.758
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.023,
+      "tamaño": 0.104
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0312,
+    "lume_quente": 0.0031,
+    "descricion": "The image shows an elderly man sitting at a table with a stack of books in front of him. He is wearing a brown robe and glasses and appears to be deep in thought. The table is covered with several books of different sizes and colors, and there are several lit candles on the table. The background is blurred, but it seems to be a room with a window and a bookshelf. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.01,
+      0.081
+     ],
+     "muros encalados (CLIP)": [
+      0.016,
+      0.108
+     ],
+     "ciprés (CLIP)": [
+      -0.029,
+      0.113
+     ],
+     "oliveiras (CLIP)": [
+      0.011,
+      0.102
+     ],
+     "palmeiras (CLIP)": [
+      -0.043,
+      0.137
+     ],
+     "rodas de raios (CLIP)": [
+      0.034,
+      0.12
+     ],
+     "paisaxe seca (CLIP)": [
+      0.027,
+      0.057
+     ],
+     "eucaliptos (CLIP)": [
+      0.009,
+      0.046
+     ],
+     "luz eléctrica (CLIP)": [
+      0.007,
+      0.106
+     ],
+     "luces de cidade (CLIP)": [
+      -0.019,
+      0.115
+     ],
+     "salón moderno (CLIP)": [
+      0.018,
+      0.13
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.02,
+      0.072
+     ],
+     "casas británicas (CLIP)": [
+      0.031,
+      0.087
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.013,
+      0.134
+     ],
+     "catedral inventada (CLIP)": [
+      -0.015,
+      0.118
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.041,
+      0.134
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.027,
+      0.213
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.054,
+      0.166
+     ],
+     "cadros na parede (CLIP)": [
+      0.005,
+      0.162
+     ],
+     "farol victoriano (CLIP)": [
+      -0.005,
+      0.127
+     ],
+     "negativo: electric light": 0.015,
+     "negativo: light bulb": 0.002,
+     "negativo: lamp": 0.012,
+     "negativo: glass window": -0.023,
+     "negativo: modern clothes": -0.015,
+     "negativo: street lamp": -0.024,
+     "clave: papers": 3.99,
+     "clave_v5: papers": 0.043
+    },
+    "arquetipo": null,
+    "s_revision": 10.1,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "040-197330a6-1.png",
+    "seed": 4035953017,
+    "s": 117.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of a lean elderly friar with a grey tonsure, in a white habit and black cape, closing a thick bundle of trial papers tied with cord and laying it on a tall pile of bundles, single candle, bare stone room, 17th century",
+    "modelo": "lightning",
+    "tokens": 68,
+    "truncado": "",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.73,
+       0.695
+      ],
+      "confianza": 0.98,
+      "dist_corpo": 0.031,
+      "tamaño": 0.079
+     },
+     {
+      "pulso": [
+       0.441,
+       0.821
+      ],
+      "confianza": 0.92,
+      "dist_corpo": 0.084,
+      "tamaño": 0.06
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0452,
+    "lume_quente": 0.0104,
+    "descricion": "The image shows two elderly men sitting at a table in a church. They are both wearing black robes and have long white beards. The man on the left is holding a lit candle and appears to be reading from a book. The other man is looking at the book with a serious expression on his face. The table is covered with a stack of papers and there are several lit candles on it. The background shows a large window with white curtains and a chandelier hanging from the ceiling. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.02,
+      0.089
+     ],
+     "muros encalados (CLIP)": [
+      0.006,
+      0.103
+     ],
+     "ciprés (CLIP)": [
+      -0.025,
+      0.092
+     ],
+     "oliveiras (CLIP)": [
+      -0.058,
+      0.103
+     ],
+     "palmeiras (CLIP)": [
+      -0.042,
+      0.138
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.094
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.004,
+      0.063
+     ],
+     "eucaliptos (CLIP)": [
+      -0.043,
+      0.059
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.012,
+      0.091
+     ],
+     "luces de cidade (CLIP)": [
+      -0.043,
+      0.129
+     ],
+     "salón moderno (CLIP)": [
+      -0.025,
+      0.136
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.009,
+      0.036
+     ],
+     "casas británicas (CLIP)": [
+      0.0,
+      0.067
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.017,
+      0.13
+     ],
+     "catedral inventada (CLIP)": [
+      -0.002,
+      0.116
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.068,
+      0.118
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.131,
+      0.178
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.062,
+      0.133
+     ],
+     "cadros na parede (CLIP)": [
+      0.036,
+      0.174
+     ],
+     "farol victoriano (CLIP)": [
+      -0.035,
+      0.077
+     ],
+     "negativo: electric light": 0.022,
+     "negativo: light bulb": -0.004,
+     "negativo: lamp": -0.004,
+     "negativo: glass window": -0.011,
+     "negativo: modern clothes": -0.013,
+     "negativo: street lamp": -0.038,
+     "clave: papers": 4.14,
+     "clave_v5: papers": 0.032
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "040-197330a6-2.png",
+    "seed": 3783012310,
+    "s": 125.1,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, smoke-blackened granite walls, open stone hearth at floor level, medium shot of a lean elderly friar with a grey tonsure, in a white habit and black cape, closing a thick bundle of trial papers tied with cord and laying it on a tall pile of bundles, single candle, bare stone room, 17th century",
+    "modelo": "lightning",
+    "tokens": 83,
+    "truncado": "room, 1 7 th century",
+    "problemas": [
+     "cruces portadas"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0087,
+    "lume_quente": 0.0087,
+    "descricion": "The image shows an elderly man sitting on the floor in a dimly lit room with stacks of books and lit candles. He is wearing a black robe and a gold necklace with a cross pendant. The man appears to be deep in thought, with his hands clasped together in front of him and his eyes closed. The room has a stone wall and a window on the left side, and the floor is made of concrete. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.031,
+      0.105
+     ],
+     "muros encalados (CLIP)": [
+      0.009,
+      0.082
+     ],
+     "ciprés (CLIP)": [
+      -0.002,
+      0.083
+     ],
+     "oliveiras (CLIP)": [
+      -0.038,
+      0.094
+     ],
+     "palmeiras (CLIP)": [
+      -0.051,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      0.017,
+      0.108
+     ],
+     "paisaxe seca (CLIP)": [
+      0.007,
+      0.071
+     ],
+     "eucaliptos (CLIP)": [
+      -0.055,
+      0.085
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.033,
+      0.111
+     ],
+     "luces de cidade (CLIP)": [
+      -0.051,
+      0.143
+     ],
+     "salón moderno (CLIP)": [
+      -0.03,
+      0.136
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.013,
+      0.055
+     ],
+     "casas británicas (CLIP)": [
+      -0.022,
+      0.07
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.001,
+      0.129
+     ],
+     "catedral inventada (CLIP)": [
+      -0.042,
+      0.141
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.074,
+      0.134
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.134,
+      0.199
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.065,
+      0.143
+     ],
+     "cadros na parede (CLIP)": [
+      0.013,
+      0.203
+     ],
+     "farol victoriano (CLIP)": [
+      -0.03,
+      0.096
+     ],
+     "negativo: electric light": 0.013,
+     "negativo: light bulb": -0.004,
+     "negativo: lamp": -0.009,
+     "negativo: glass window": -0.013,
+     "negativo: modern clothes": -0.009,
+     "negativo: street lamp": -0.038,
+     "clave: papers": 4.14,
+     "clave_v5: papers": 0.021
+    },
+    "arquetipo": null,
+    "s_revision": 10.8,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "041-da2d9672": {
+  "ficheiro": "041-da2d9672-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "041-da2d9672-0.png",
+    "seed": 728393538,
+    "s": 121.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
+    "modelo": "lightning",
+    "tokens": 71,
+    "truncado": "",
+    "problemas": [
+     "cousas do século XX"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0089,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a group of people standing in a courtroom. There are six people in the image, all wearing black robes and headscarves. They are standing in front of a wooden bench and appear to be listening attentively to a man who is standing behind them. The man is bald and has a serious expression on his face. Behind them, there are several other people sitting in the courtroom, some of whom are also wearing robes. The walls are painted in a light color and there are two framed portraits hanging on the wall. The overall mood of the image is somber and contempl",
+    "obxectos": [
+     "furniture",
+     "human face",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.038,
+      0.085
+     ],
+     "muros encalados (CLIP)": [
+      -0.011,
+      0.069
+     ],
+     "ciprés (CLIP)": [
+      -0.021,
+      0.095
+     ],
+     "oliveiras (CLIP)": [
+      -0.04,
+      0.098
+     ],
+     "palmeiras (CLIP)": [
+      -0.038,
+      0.12
+     ],
+     "rodas de raios (CLIP)": [
+      0.073,
+      0.105
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.006,
+      0.067
+     ],
+     "eucaliptos (CLIP)": [
+      -0.052,
+      0.067
+     ],
+     "luz eléctrica (CLIP)": [
+      0.013,
+      0.052
+     ],
+     "luces de cidade (CLIP)": [
+      -0.052,
+      0.107
+     ],
+     "salón moderno (CLIP)": [
+      0.026,
+      0.088
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.06,
+      0.051
+     ],
+     "casas británicas (CLIP)": [
+      0.014,
+      0.047
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.054,
+      0.103
+     ],
+     "catedral inventada (CLIP)": [
+      0.023,
+      0.08
+     ],
+     "abrigo moderno (CLIP)": [
+      0.042,
+      0.141
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.038,
+      0.151
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.035,
+      0.128
+     ],
+     "cadros na parede (CLIP)": [
+      0.033,
+      0.152
+     ],
+     "farol victoriano (CLIP)": [
+      -0.012,
+      0.091
+     ],
+     "negativo: electric light": 0.017,
+     "negativo: light bulb": -0.016,
+     "negativo: lamp": -0.021,
+     "negativo: glass window": -0.01,
+     "negativo: modern clothes": -0.02,
+     "negativo: street lamp": -0.032,
+     "clave: judge": 4.71,
+     "clave_v5: judge": 0.075
+    },
+    "arquetipo": null,
+    "s_revision": 11.6,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "041-da2d9672-1.png",
+    "seed": 1810783134,
+    "s": 122.3,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot of over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
+    "modelo": "lightning",
+    "tokens": 71,
+    "truncado": "",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.006,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a group of five people standing in a church. They are all dressed in black robes and hats, and appear to be engaged in a conversation. The church has wooden pews and a chandelier hanging from the ceiling. The walls are decorated with ornate decorations, and there is a large window on the left side of the image. The overall atmosphere of the church is solemn and contemplative.",
+    "obxectos": [
+     "human face",
+     "man",
+     "table",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.058,
+      0.116
+     ],
+     "muros encalados (CLIP)": [
+      0.033,
+      0.115
+     ],
+     "ciprés (CLIP)": [
+      -0.018,
+      0.105
+     ],
+     "oliveiras (CLIP)": [
+      -0.0,
+      0.08
+     ],
+     "palmeiras (CLIP)": [
+      -0.038,
+      0.116
+     ],
+     "rodas de raios (CLIP)": [
+      0.041,
+      0.092
+     ],
+     "paisaxe seca (CLIP)": [
+      0.03,
+      0.041
+     ],
+     "eucaliptos (CLIP)": [
+      -0.022,
+      0.049
+     ],
+     "luz eléctrica (CLIP)": [
+      0.012,
+      0.059
+     ],
+     "luces de cidade (CLIP)": [
+      -0.053,
+      0.096
+     ],
+     "salón moderno (CLIP)": [
+      -0.013,
+      0.131
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.029,
+      0.06
+     ],
+     "casas británicas (CLIP)": [
+      -0.002,
+      0.07
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.016,
+      0.107
+     ],
+     "catedral inventada (CLIP)": [
+      0.0,
+      0.1
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.041,
+      0.148
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.08,
+      0.163
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.02,
+      0.134
+     ],
+     "cadros na parede (CLIP)": [
+      -0.006,
+      0.147
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.097
+     ],
+     "negativo: electric light": 0.023,
+     "negativo: light bulb": -0.004,
+     "negativo: lamp": -0.021,
+     "negativo: glass window": -0.009,
+     "negativo: modern clothes": -0.006,
+     "negativo: street lamp": -0.027,
+     "clave: judge": 3.84,
+     "clave_v5: judge": 0.028
+    },
+    "arquetipo": null,
+    "s_revision": 10.9,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "041-da2d9672-2.png",
+    "seed": 584226566,
+    "s": 120.5,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, smoke-blackened granite walls, open stone hearth at floor level, medium shot of over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
+    "modelo": "lightning",
+    "tokens": 86,
+    "truncado": "light from a high opening, bare granite hall",
+    "problemas": [
+     "interior moderno"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0215,
+    "lume_quente": 0.001,
+    "descricion": "The image shows a group of five people sitting around a wooden table in a room with a fireplace in the background. The table is set with plates, bowls, and candles, and there are several people standing around it. The people are dressed in medieval-style clothing, with long robes and headscarves. They appear to be engaged in a conversation, with one person holding a book and another holding a candle. The room has a high ceiling with arches and a large window on the right side, and a bookshelf on the left side. The overall atmosphere of the image is",
+    "obxectos": [
+     "man",
+     "table",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.046,
+      0.119
+     ],
+     "muros encalados (CLIP)": [
+      0.01,
+      0.134
+     ],
+     "ciprés (CLIP)": [
+      -0.025,
+      0.103
+     ],
+     "oliveiras (CLIP)": [
+      -0.029,
+      0.115
+     ],
+     "palmeiras (CLIP)": [
+      -0.039,
+      0.133
+     ],
+     "rodas de raios (CLIP)": [
+      0.023,
+      0.1
+     ],
+     "paisaxe seca (CLIP)": [
+      0.04,
+      0.083
+     ],
+     "eucaliptos (CLIP)": [
+      -0.037,
+      0.064
+     ],
+     "luz eléctrica (CLIP)": [
+      0.003,
+      0.064
+     ],
+     "luces de cidade (CLIP)": [
+      -0.052,
+      0.133
+     ],
+     "salón moderno (CLIP)": [
+      -0.058,
+      0.2
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.001,
+      0.072
+     ],
+     "casas británicas (CLIP)": [
+      -0.017,
+      0.091
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.008,
+      0.153
+     ],
+     "catedral inventada (CLIP)": [
+      -0.054,
+      0.128
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.096,
+      0.172
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.144,
+      0.207
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.07,
+      0.14
+     ],
+     "cadros na parede (CLIP)": [
+      -0.007,
+      0.158
+     ],
+     "farol victoriano (CLIP)": [
+      -0.034,
+      0.08
+     ],
+     "negativo: electric light": 0.015,
+     "negativo: light bulb": -0.009,
+     "negativo: lamp": -0.032,
+     "negativo: glass window": -0.016,
+     "negativo: modern clothes": -0.014,
+     "negativo: street lamp": -0.056,
+     "clave: judge": 1.31,
+     "clave_v5: judge": -0.016
+    },
+    "arquetipo": null,
+    "s_revision": 11.1,
+    "avisos": [
+     "falta: judge (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
  }
 }
