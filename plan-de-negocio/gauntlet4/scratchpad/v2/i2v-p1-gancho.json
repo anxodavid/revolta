@@ -1,0 +1,68 @@
+[
+ {
+  "n": 5,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/004-54589876-0.png",
+  "accion": "the bearded man writes slowly with the quill and looks up, the candle flames flicker",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 8,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/007-0ae28a3e-0.png",
+  "accion": "he jolts upright from the bench and flings his arms wide",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 13,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/012-c1475796-2.png",
+  "accion": "her lips move slightly as she murmurs",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 16,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/015-b27e8d07-0.png",
+  "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers",
+  "i2v": {}
+ },
+ {
+  "n": 23,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/022-63a520b1-0.png",
+  "accion": "the wind blows her scarf and the grass as she speaks softly, the cows graze behind her",
+  "i2v": {}
+ },
+ {
+  "n": 30,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/029-ffcab11f-0.png",
+  "accion": "the younger woman picks up the empty jug and looks into it",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 33,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/032-5d0efc36-0.png",
+  "accion": "the three men laugh and lean toward the flames as one stirs with the ladle",
+  "i2v": {}
+ },
+ {
+  "n": 34,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/033-e502ad3e-0.png",
+  "accion": "he reads aloud with a solemn face and slowly raises one hand",
+  "i2v": {
+   "F": 73
+  }
+ }
+]
