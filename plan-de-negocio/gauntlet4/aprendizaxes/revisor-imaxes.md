@@ -20,3 +20,19 @@
   flames» [S: sen probar].
 - **Palabras que chaman a SDXL a sitios alleos:** «court/hall» → salón de palacio con lampadario; «granite house at
   dusk» → casas inglesas; «church» → catedral; «red headscarf» + capa → Carapuchiña.
+
+## Rolda 1, segunda pasada, planos 43-77 (03-10-2026)
+
+- **«fountain» dá fontes de xardín ou de parque** (pía de pé, estatua, billa metálica, farolas) en 5 dos 7 planos que a pedían (47, 51, 52, 63, 66),
+  e nos outros dous non saíu fonte (49, 54). Para
+  a fonte de aldea, describila: «a simple rustic spring: water pouring from a stone spout set in a mossy granite wall
+  into a stone trough» [S: sen probar].
+- **Outros atallos de SDXL:** un tribunal con muller dá unha dama vitoriana (45, 46); «village men» dá labregos
+  irlandeses con tellados de herba (48, 57); «cows» nunha corte dá vacas frisoas (74); «slate roof of a house» dá unha
+  bufarda inglesa con fiestras acesas (77).
+- **A porta no durmir:** «lume vivo» salta co barro laranxa da cunca (68) e coa lareira do fondo (73), mentres deixa
+  pasar lume laranxa grande se ocupa pouca área (69). Unha semente de foto de día en img2img 0,5 trae a luz de día ao
+  plano nocturno (68): para escurecer, profundidade.
+- **A reserva xenérica volveu pasar** (76: un bosque no plano da candea). Na rolda 1 pasou en 2 de 77 planos.
+- **Cifras da rolda:** a revisión deu 29 valen, 10 outro intento e 38 rexenerar sobre 77. A porta aprobou 53
+  escollidas, das que 32 tiñan un problema, e en 12 dos 24 planos que rexeitou había un intento que vale.

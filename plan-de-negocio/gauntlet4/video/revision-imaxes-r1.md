@@ -1,14 +1,22 @@
-# Revisión das imaxes escollidas da v2 · rolda 1 · planos 1-42 (Gauntlet 4)
+# Revisión das imaxes escollidas da v2 · rolda 1 · planos 1-77 (Gauntlet 4)
 
-**Quen:** un axente Claude (revisor de imaxes), o 03-10-2026 entre as 14:55 e as 15:30 UTC. **Ningunha persoa revisou
-estas imaxes.** Primeira pasada (planos 1-42). Os planos 43-77 van nunha segunda pasada cando remate o proceso de
-imaxes, nos mesmos ficheiros.
+**Quen:** un axente Claude (revisor de imaxes), o 03-10-2026, en dúas pasadas: planos 1-42 entre as 14:55 e as 15:30
+UTC (o orquestrador xa a aplicou) e planos 43-77 entre as 17:55 e as 19:15 UTC. **Ningunha persoa revisou estas
+imaxes.**
 
 **Saídas:** este documento; [`revision-imaxes-r1.json`](revision-imaxes-r1.json) (`escollas`, `motivos` e
 `rexenerar`, para `video/scripts/produccion.py revision`); e as follas que mirei, en
 [`follas-revision/`](follas-revision/).
 
-## Contas (planos 1-42)
+## Contas
+
+| Decisión | Planos 1-42 | Planos 43-77 | **Total 1-77** |
+|---|---|---|---|
+| Vale | 18 | 11 | **29** |
+| Outro intento | 7 | 3 | **10** |
+| Rexenerar | 17 | 21 | **38** |
+
+**Primeira pasada (planos 1-42):**
 
 | Decisión | Planos | Cantos |
 |---|---|---|
@@ -16,7 +24,15 @@ imaxes, nos mesmos ficheiros.
 | **Outro intento** | 3 → [1], 25 → [1], 26 → [1]\*, 30 → [0], 32 → [2]\*, 35 → [1], 37 → [2]\* | **7** (3 cun intento que a porta rexeitara\*) |
 | **Rexenerar** | 2, 6, 7, 9, 10, 17, 18, 20, 21, 22, 29, 31, 38, 39, 40, 41, 42 | **17** (2 con semente: 10 e 21) |
 
-Os problemas máis repetidos:
+**Segunda pasada (planos 43-77):**
+
+| Decisión | Planos | Cantos |
+|---|---|---|
+| **Vale** | 43, 50, 53, 55, 56\*, 57, 59\*, 60, 62\*, 66, 75 | **11** (3 contra a porta\*) |
+| **Outro intento** | 71 → [0]\*, 73 → [2]\*, 76 → [0]\* | **3** (os tres cun intento que a porta rexeitara\*) |
+| **Rexenerar** | 44, 45, 46, 47, 48, 49, 51, 52, 54, 58, 61, 63, 64, 65, 67, 68, 69, 70, 72, 74, 77 | **21** (2 con semente: 68 e 70) |
+
+Os problemas máis repetidos na primeira pasada (1-42):
 
 1. **Arquitectura e interiores alleos** (10 planos): salóns palacianos con lampadario de cristal e ventás altas (20,
    40), fiestras de vidro en casas de aldea (17, 18, 22 e, pequena, no 8), casas inglesas (21), catedral (29), banco
@@ -35,6 +51,22 @@ Non vin mans nin caras deformes graves nas escollidas, nin pseudotexto lexible f
 `gauntlet3/contexto.md` §8.5: vasoira no 17, caldeiro (de feito) no 2 e lume con multitude no 38-39; ningún
 sombreiro de pico, nariz ganchuda nin verruga.
 
+Na segunda pasada (43-77):
+
+1. **Fontes de xardín e de parque** no canto da fonte de aldea (47, 51, 63 e, pequena, no 66), e ningunha fonte onde
+   facía falta (49, 54). Os prompts novos piden en todos a mesma fonte rústica: un cano de pedra nun muro de granito
+   con musgo e unha pía.
+2. **Lume:** a queimada laranxa (69; no 72, nunha pota negra de ferro), un incendio no canto das brasas da cacharela
+   (65) e luz de día cando o texto di «apáganse as luces» (68).
+3. **Xente doutro tempo ou doutro sitio:** damas e xuíces do XIX (45, e o 46 cunha viñeta branca de retrato
+   antigo), labregos irlandeses con tellados de herba (48 e, ao fondo, o 57), paredes encaladas mediterráneas (44) e
+   un rito de túnicas con capucha arredor dun lume (52, que lembra os vetos).
+4. **Falta a clave ou a idea:** sen talla (64), sen a herba nin a curandeira de Sarmiento (58), sen o soño do voo e
+   cunha muller tendida coma amortallada (61), ninguén espreitando (49).
+5. **Anacronismos:** vacas frisoas e lámpadas de parede (74), fiestras de vidro (67), unha bufarda inglesa con
+   fiestras acesas na última imaxe (77) e un vaso que parece de papel (44). No 76 a porta volveu aprobar a reserva
+   xenérica (un bosque) sen a candea.
+
 ## Como o fixen
 
 - **Datos:** `revision.json` do proceso de imaxes, copiado ás 14:55 UTC (só lido; non o modifiquei) e
@@ -52,6 +84,10 @@ sombreiro de pico, nariz ganchuda nin verruga.
   walls, open stone hearth at floor level», «hands hidden in the sleeves...»), que no 6 e no 40 truncaron o final
   do prompt (no 6 perdeuse o home). O `negativo` vai completo (substitúe o do plano) e só o usa a porta (CLIP), xa
   que coa produción en `IMG_CFG_REINTENTO=0` non hai intentos guiados. Sen `semente`, como pide o orquestrador.
+- **Segunda pasada:** `revision.json` copiado ás 17:53 UTC (77 entradas; só lido), coas mesmas follas
+  (`follas-planos-43-48.jpg` … `follas-planos-73-77.jpg`) e detalles (`detalles-43-44-50-59`, `detalles-44-62`,
+  `detalles-68-71-73-76`). O JSON leva agora os planos 1-77. As entradas dos planos 1-42 non cambiaron: se xa están
+  aplicadas, abonda coas dos planos 43-77, e aplicar o JSON enteiro repite as mesmas escollas e os mesmos prompts.
 
 ## Plano a plano
 
@@ -101,6 +137,41 @@ sombreiro de pico, nariz ganchuda nin verruga.
 | 40 | rexenerar | — | Salón palaciano con lampadario de cristal, cadros e fiestra de vidro, todos de negro: non se ven as tres xustizas (falta o inquisidor de hábito branco). A porta aprobouno. |
 | 41 | rexenerar | — | Os tres intentos: ancián con lentes modernas e as bandas brancas dun xuíz inglés, vestido de negro e non co hábito branco do inquisidor. |
 | 42 | rexenerar | — | Dúas figuras de negro nun banco de parque ao aire libre: non hai xuíz, nin sala, nin as tres acusadas. A porta aprobouno. |
+| 43 | vale | `042-8f6f62a0-0.png` | María Cibreira co pano gris, sentada, e as outras veciñas agardando detrás: é o que se oe. As luces da parede son candeas; sen anacronismos. |
+| 44 | rexenerar | — | Paredes encaladas e talladas grandes de aspecto mediterráneo, e a visitante leva unha cunca que parece un vaso de papel con tapa. Non hai pote de unguento nin neno, e a curandeira non leva o pano negro. Os outros dous intentos tamén son mediterráneos. |
+| 45 | rexenerar | — | Os tres intentos: unha dama vitoriana con vestido negro e pendentes diante dun xuíz do XIX entre candelabros. Non é María Cibreira (no 43, campesiña de pano gris) e falta o escribán. |
+| 46 | rexenerar | — | Retrato de tres caras con marco branco esvaído (viñeta) e roupa do XIX; sen papel nin pregunta, e a muller non é a Cibreira do 43. A porta aprobouno. |
+| 47 | rexenerar | — | Os tres intentos: fonte ornamental nun parque urbano, con farolas eléctricas e un edificio coas fiestras acesas (a porta acerta). |
+| 48 | rexenerar | — | Tres homes do XIX discutindo diante de casas de tellado de herba de aspecto irlandés, cun animal que parece unha ovella; falta a muller acusada. A porta aprobouno. |
+| 49 | rexenerar | — | Dous vellos de pé diante dun muro cun lume nun oco: ninguén espreita, e non hai fonte nin mulleres (a porta só avisou de que faltaba a fonte). |
+| 50 | vale | `049-36108886-1.png` | Dous veciños agachados ao pé dun muro de noite, cun papel e candeas no chan: apuntan a lista. Mans correctas; chalecos de la, coherentes cos outros veciños. |
+| 51 | rexenerar | — | Fonte de xardín con pía de pé e un cano metálico coma unha billa: non é unha fonte de aldea. Os ollos na escuridade non saíron e quítoos do prompt (risco de monstro); a escuridade das follas abonda. |
+| 52 | rexenerar | — | Tres figuras con túnicas e capuchas vermellas arredor dun lume dentro dunha pía, cunha arcada e unha luz eléctrica ao fondo: parece un rito sectario, non tres veciñas rindo. A porta aprobouno. |
+| 53 | vale | `052-d27a5209-0.png` | Dúas mozas camiñan cara á cámara cos caldeiros da auga ao serán: é o que se oe. Os caldeiros metálicos no canto de cántaros de barro son verosímiles; a casa do fondo é pequena e está desenfocada. |
+| 54 | rexenerar | — | Os tres intentos son dúas mulleres nunha mesa dentro da casa, sen fonte nin noite, e a vella sorrí en vez de mirar con receo: perdeuse a idea das dúas maneiras de mirar a mesma fonte. |
+| 55 | vale | `054-e88400da-0.png` | Nai e filla axeonlladas á lareira de granito (semente da lareira), co lume pequeno e as olas: ilustra o oficio que pasa de nai a filla. Non se ve o morteiro; aceptable. |
+| 56 | vale (contra a porta) | `055-a569b84c-0.png` | Un vello coas ovellas xunto a un muro de pedra no outono: a porta rexeita por animais en grupo, pero as ovellas son o asunto. Non se ve a viña nin a liorta entre dous; aceptable. |
+| 57 | vale | `056-71584a1c-0.png` | A curandeira do chal azul (a mesma do 18) e un labrego axeonllados xunto a un becerro deitado: a saúde e o gando, xusto o que se oe. Defecto menor: ao fondo, casas con tellado de herba. |
+| 58 | rexenerar | — | Monxe vello e fraco lendo un libro nun xardín: non aparecen a herba nin a curandeira que defendía Sarmiento. Ademais, Sarmiento é robusto e de cara redonda, e este confúndese co Feijoo do 59. |
+| 59 | vale (contra a porta) | `058-4344e708-2.png` | Dous monxes beneditinos escribindo á luz dunha vela (Feijoo co capucho): encaixa. A fiestra de vidro é verosímil nun mosteiro do XVIII e o libro non ten texto lexible; a porta rexeitouno por texto, de máis. |
+| 60 | vale | `059-7bd4a5fa-0.png` | Un mozo murmura á orella dunha muller pensativa contra un muro con musgo: le como o rumor que corre. Os papeis están invertidos con respecto ao prompt; aceptable. |
+| 61 | rexenerar | — | Muller tendida de costas, ríxida e cos brazos estirados sobre unha esteira: semella un corpo amortallado, e non hai a sombra do paxaro do soño. |
+| 62 | vale (contra a porta) | `061-b0307b2c-1.png` | Feixes e rolos de papeis con cordón vermello e dúas velas: pecha os papeis. A folla aberta ten letra miúda ilexible; a porta rexeitouno por repetición co 26, un eco aceptable. |
+| 63 | rexenerar | — | Fonte ornamental redonda con remate de estatua e luz de día gris: nin noite, nin lúa, nin fonte de aldea. Rexenérase coa mesma fonte rústica do 47 e do 51. |
+| 64 | rexenerar | — | Non hai talla nin auga: unha planta nun recanto de muros que parecen de formigón. A porta aprobouno sen a clave. |
+| 65 | rexenerar | — | Os tres intentos: unha fila de siluetas diante dun incendio enorme que ocupa o horizonte. Non son as brasas da cacharela (a porta acerta: lume vivo ao durmir). |
+| 66 | vale | `065-00feb3af-0.png` | A moza da trenza e a blusa branca (a mesma do 16) nunha pía de pedra coa primeira luz e unha cunca verde: ilustra a flor da auga. Defecto menor: unha fonte ornamental á esquerda. |
+| 67 | rexenerar | — | Os tres intentos levan fiestras de vidro modernas, contraventás con macetas ou portas de cristal (a porta acerta, aínda que diga casas británicas). |
+| 68 | rexenerar | — | A cunca coas cuncas no bordo e os grans de café está ben (semente 07-01), pero os tres intentos teñen luz de día forte e o texto di «apáganse as luces». A porta rexeitou por lume vivo (é o barro laranxa). Proposta: a mesma semente en profundidade 0,6, que mantén a forma e deixa escurecer. Se volve fallar, o [0] (a xerra vertendo) vale. |
+| 69 | rexenerar | — | Lume laranxa grande nunha cunca no chan e un só vello: o crítico pedira lapas azul pálido para o durmir, e faltan os comensais. |
+| 70 | rexenerar | — | Dous veleiros grandes de tres mastros e unha cidade ao fondo: perdeuse o eco buscado co plano 4 (o barco vello e pequeno no peirao). Proposta: a mesma semente do 4. Se a porta rexeita por repetición co 4, escollelo a man, como dixo o crítico de planos. |
+| 71 | outro intento (contra a porta) | `070-bad0884c-0.png` | O [1] ten dúas vellas sorrindo, sen o xesto. O [0]: a vella do pano escuro e o chaleco negro ergue o dedo ao dicir o dito, e a outra ri. Os cadros da parede son verosímiles no XX; a porta viu obxectos modernos e unha catedral que non hai. |
+| 72 | rexenerar | — | Os tres intentos teñen lapas laranxas grandes; o escollido, ademais, unha pota negra de ferro (veto do caldeiro) e unha lareira acesa. O texto pide as últimas lapas azuis, que se apagan. |
+| 73 | outro intento (contra a porta) | `072-94d8ba76-2.png` | O [1] ten dúas vellas lendo. O [2] ten a avoa e unha nena co libro: é o conto que pasa do libro á aldea. A lareira do fondo dá lume vivo (4,6 %), pero é ambiente; aceptable. |
+| 74 | rexenerar | — | Vacas frisoas brancas e negras (raza leiteira moderna) e faroles de parede; os outros intentos teñen lámpadas eléctricas. Rexenérase con dúas vacas pardas. |
+| 75 | vale | `074-c548270e-0.png` | Regato con musgo entre a brétema do bosque: é o que se oe, calmo para durmir. |
+| 76 | outro intento (contra a porta) | `075-066ce0c5-0.png` | O [3], que pasou a porta, é a reserva xenérica: un bosque con brétema, que repite o 75 e non ten candea. O [0]: velas no peitoril de pedra dun muro groso. A porta rexeitouno por repetición co 9, pero é o eco buscado (a candea do principio e a do final). |
+| 77 | rexenerar | — | Tellado de lousa con musgo, pero cunha bufarda de fiestras de vidro acesas e cheminea de aspecto inglés; é a última imaxe do vídeo. Encadre pechado nas lousas, sen casa. |
 
 ## Planos a rexenerar: que cambia no prompt
 
@@ -125,29 +196,67 @@ Os prompts completos e os negativos están no JSON (`rexenerar`). Resumo dos cam
 | 40 | tres xuíces sentados xuntos: xuíz de toga negra, cura de sotana, frade de hábito branco e capa negra | chandelier, crowd | non |
 | 41 | frade ancián de tonsura, hábito branco e capa negra (o inquisidor do elenco), sen lentes | glasses, bookshelves | non |
 | 42 | contraplano por detrás do xuíz na súa mesa alta, tres acusadas nun banco tosco | park bench, trees | non |
+| 44 | casa de granito rústica, pote pequeno de unguento e muller cun neno; a curandeira co pano negro do elenco | plastered walls, amphora, olive trees, paper cup | non |
+| 45 | de costas, a campesiña de pano gris (a Cibreira do 43); o xuíz e o escribán do elenco | chandelier, ball gown, earrings | non |
+| 46 | dous perfís: o xuíz le a pregunta e a Cibreira asente calada | vignette, white frame, bonnet | non |
+| 47 | fonte de aldea: cano de pedra nun muro de granito con musgo e pía, castiñeiros e o brillo lonxano da fogueira | statue, ornamental fountain, park, buildings | non |
+| 48 | a porta da corte (sen casas á vista), a muller acusada e os animais mortos na palla | turf roof, thatched cottage, sheep | non |
+| 49 | os dous veciños agachados tras o muro, mirando as mulleres na fonte | ornamental fountain, houses | non |
+| 51 | cano de pedra e pía de noite, entre follas escuras; sen os ollos | metal tap, ornamental fountain | non |
+| 52 | tres veciñas con mantón e pano rindo arredor da fonte, vistas de lonxe entre ramas | hooded robes, cloaks, ritual, arcade, columns | non |
+| 54 | na fonte de noite: a moza enche o cántaro e a vella de pano negro persígnase mirando á escuridade | table, teapot | non |
+| 58 | Sarmiento robusto e de cara redonda (elenco), coa curandeira do chal azul (a do 18 e do 57) e a herba | skullcap | non |
+| 61 | durmindo de lado baixo unha manta, coa sombra do paxaro na parede | corpse, coffin | non |
+| 63 | a lúa na auga da pía da mesma fonte rústica, de noite | statue, ornamental fountain, daylight | non |
+| 64 | a talla de barro ao principio do prompt, enriba do muro, de noite | concrete | non |
+| 65 | un anel baixo de brasas case apagadas e siluetas pequenas | wildfire, big flames | non |
+| 67 | só a trabe afumada e o muro de granito, sen porta nin fiestra | flowerpots, shutters | non |
+| 68 | o mesmo prompt, de noite | daylight | **07-01** («Camino de Santiago, May 2008», CC BY 2.0), profundidade 0,6 (antes img2img 0,5) |
+| 69 | lapas azul pálido no cazo e na cunca, o vello e a vella xuntos | orange fire, cauldron | non |
+| 70 | barco vello e pequeno no peirao, brillo azul e tres figuras | tall ship | **11-01** (dorna de Rianxo, CC BY 2.0), img2img 0,5: a mesma do 4 |
+| 72 | cunca de barro parda coas últimas lapas azuis e o brillo vermello das brasas | cauldron, iron pot, fireplace, orange flames | non |
+| 74 | dúas vacas pardas, corte de pedra escura e unha lanterna pequena | black and white cows, wall lamp | non |
+| 77 | encadre pechado nas lousas molladas, sen casa | window, dormer, chimney | non |
 
 Créditos das sementes propostas (CC BY pide crédito): «Hórreos de Muimenta, Carballeda de Avia» de José Antonio Gil
-Martínez (CC BY 2.0) e «Palloza Cantexeira» de FCPB (CC BY 3.0), vía Wikimedia Commons (URL en
+Martínez (CC BY 2.0), «Palloza Cantexeira» de FCPB (CC BY 3.0), «Camino de Santiago, May 2008» de Alex Chang (CC BY
+2.0) e «Dorna a vela. Rianxo de noite» de Xoan Anton (CC BY 2.0), vía Wikimedia Commons (URL en
 `imaxe/referencias.json`). Para a palloza mirei a foto cunha grade antes de escoller o recorte; a foto non vai ao
 repo (material de terceiros).
 
-## Que fai a porta v6 nestes 42 planos
+## Que fai a porta v6 (planos 1-77)
 
-- **Aprobou 29 escollidas; destas, 12 hai que rexeneralas** (2, 6, 9, 10, 17, 20, 22, 29, 38, 39, 40, 42) e **en 4
-  había un intento mellor** (3, 25, 30 e o 35, onde aprobou a reserva xenérica sen a clave). Non ve: lampadarios e
-  salóns de palacio, fiestras de vidro en casas de aldea, baixantes, bancos de parque, faroles de parede, vasoiras,
-  a queimada convertida en caldeiro ou fogueira e a ausencia da clave («falta: ...» só avisa).
-- **Rexeitou os tres intentos en 13 planos; en 8 deles había un intento que vale** (12, 15, 19, 23, 33 o escollido;
-  26, 32, 37 outro). Rexeita de máis por *texto na imaxe* nos planos de escritura (o problema era a letra lexible ou
-  de imprenta, non o texto), por *animais en grupo* cando o texto pide o gando (23), por un *iate moderno* que non hai
-  (33) e por *mans* que non vin (25 [1], 30 [0]). Nos outros 5 acertou: zapatos modernos (7, aínda que dixo
-  «interior moderno»), bombilla e fiestras (18), casas inglesas (21), lentes (41) e pseudotexto (31).
-- **Balance: rexeita de máis nos planos de texto e de gando, e deixa pasar de máis os anacronismos de arquitectura e
-  de lume.** Nestas escollidas, o segundo pesa máis: 16 das 29 aprobadas tiñan un problema, fronte a 8 dos 13
-  rexeitados que valían. Ideas para a peza IMAXE (non as probei): que «texto na imaxe» só avise cando a clave é de
-  escritura (papers, page, quill, document, sheet); que «animais en grupo» só avise cando a clave é o gando; sondas
-  CLIP para «crystal chandelier», «palace hall», «park bench», «drainpipe», «broom» e «bonfire»; e non aceptar sen
-  revisión un intento con `reserva: true`.
+| | Planos 1-42 | Planos 43-77 | Total |
+|---|---|---|---|
+| Escollidas que aprobou | 29 | 24 | 53 |
+| … destas, a rexenerar | 12 | 14 | 26 |
+| … destas, cun intento mellor | 4 | 2 | 6 |
+| Planos onde rexeitou todos os intentos | 13 | 11 | 24 |
+| … destes, cun intento que vale | 8 | 4 | 12 |
+
+- **Deixa pasar de máis, e é o que máis pesa:** 32 das 53 escollidas que aprobou tiñan un problema. Non ve
+  lampadarios nin salóns de palacio, fiestras de vidro en casas de aldea, baixantes, bancos de parque, faroles de
+  parede, vasoiras, fontes de xardín, roupa do XIX, tellados de herba, paredes encaladas, ritos de capucha, bufardas
+  nin vacas frisoas, nin a queimada convertida en caldeiro ou fogueira. Tampouco bloquea cando falta a clave («falta:
+  ...» só avisa), e aproba as reservas xenéricas (35 [3] e 76 [3]), que non teñen nada do que se oe.
+- **Rexeita de máis:** en 12 dos 24 planos que rexeitou había un intento que vale.
+  - Por *texto na imaxe* nos planos de escritura (12, 15, 19, 26, 32, 37 e 59). O problema era a letra lexible ou de
+    imprenta, non o texto.
+  - Por *animais en grupo* cando o texto pide o gando ou as ovellas (23, 56).
+  - Por *repetición* nos ecos buscados (62 co 26; tamén o intento [0] do 76 co 9).
+  - Por un *iate moderno* que non hai (33) e por *mans* que non vin (25 [1], 30 [0]).
+  - Por *lume vivo ao durmir* cando era unha lareira ao fondo (73) ou o barro laranxa da cunca (68, que si hai que
+    rexenerar, pero pola luz de día).
+- **Acerta ao rexeitar** en 12 planos, ás veces polo motivo equivocado: zapatos modernos (7, dixo «interior
+  moderno»), bombilla e fiestras (18, 67), casas inglesas (21), lentes (41), pseudotexto (31), farolas (47), sen fonte
+  (54), incendio (65), luz de día (68, dixo «lume vivo»), caldeiro (72) e lámpadas (74).
+- **Ideas para a peza IMAXE** (non as probei):
+  - Que «texto na imaxe» só avise cando a clave é de escritura (papers, page, quill, document, sheet), e «animais en
+    grupo» cando a clave é o gando.
+  - Sondas CLIP para «crystal chandelier», «palace hall», «park bench», «drainpipe», «broom», «bonfire», «ornamental
+    fountain», «turf roof» e «Holstein cow».
+  - Que «lume vivo ao durmir» mida só as lapas e non o barro.
+  - Non aceptar sen revisión un intento con `reserva: true`.
 
 ## Notas para MOVEMENTO (acción I2V das imaxes aceptadas)
 
@@ -163,6 +272,21 @@ repo (material de terceiros).
 - **28:** detrás hai un home, non a muller. Proposta: «the scribe writes slowly while the man behind him watches in
   silence».
 - **8:** o I2V do salto é o máis fráxil (xa o dixo o crítico de planos); se deforma, paralaxe.
+- **53:** levan caldeiros metálicos, non cántaros. Proposta: «the women walk slowly toward the camera carrying their
+  water pails».
+- **55:** non hai morteiro. Proposta: «the mother slowly crushes herbs between her hands while the girl watches the
+  small fire».
+- **56 ([0]):** hai un só home. Proposta: «the sheep graze slowly while the old man watches them».
+- **57:** o becerro está deitado. Proposta: «the healer slowly moves her hands over the calf and the calf lifts its
+  head».
+- **60:** é un mozo quen murmura. Proposta: «the young man whispers into her ear and she slowly raises her eyes».
+- **66:** ten unha cunca na man. Proposta: «she slowly lowers the bowl and brings the herb water to her face».
+- **71 ([0]):** son dúas vellas. Proposta: «she wags her raised finger as she speaks and the other old woman laughs
+  softly».
+- **73 ([2]):** a nena está esperta lendo. Proposta: «the grandmother turns a page and speaks softly while the child
+  leans against her».
+- **76 ([0]):** hai dúas velas. Proposta: «the two candle flames tremble and slowly go out, leaving thin threads of
+  smoke».
 
 ## Personaxes recorrentes
 
@@ -171,11 +295,21 @@ repo (material de terceiros).
 - **María:** a cor vermella mantense (23, 30 [0]); no 20 e no 21 saía de Carapuchiña e rexenéranse.
 - **Escribán:** no 5 é un home con barba e chapeu; no 12 e no 28, un mozo barbeado (é a figura «quen escribía»;
   aceptable). O 12 e o 28 parécense (escribán novo con candeas), pero son o mesmo papel e están a ≈ 2 min.
-- **Mariano e os amigos** (3 [1], 33, 34): camisa branca e sen o xersei escuro, coherentes entre si.
+- **Mariano e os amigos** (3 [1], 33, 34): camisa branca e sen o xersei escuro, coherentes entre si. O barco do 70
+  rexenérase coa semente do 4, para o eco buscado.
+- **María Cibreira:** no 43 leva o pano gris do elenco; no 45 e no 46 saía unha dama do XIX, e rexenéranse co pano
+  gris. A súa nai (44) rexenérase co pano negro e o pelo branco do elenco.
+- **A curandeira do chal azul:** o 57 é coherente co 18, que se rexenera co mesmo chal; o 58 rexenérase con ela.
+- **A moza da trenza:** o 16 e o 66 son coherentes (blusa branca e trenza longa); o 54 rexenérase con ela.
+- **Os veciños de Campo Lameiro:** no 50 levan chalecos de la parda; o 48 e o 49 rexenéranse cos de pel de ovella do
+  elenco (diferenza pequena).
+- **Feijoo e Sarmiento:** o 59 [2] ten dous monxes vellos (Feijoo, co capucho); o 58 rexenérase cun Sarmiento robusto
+  e de cara redonda, para non confundilos.
+- **Os vellos da queimada:** o 71 [0] ten dúas vellas e non o vello; o 69 rexenérase coa parella.
 
 ## Pendente
 
-- Segunda pasada: planos 43-77, cando remate o proceso de imaxes (mirar primeiro 45, 46, 54, 65, 69 e 70, como pide o
-  crítico de planos).
-- Mirar os 17 rexenerados cando saian: nos de escritura (31) a porta volverá rexeitar por texto, e nos de semente
-  (10, 21) hai que ver se a foto arrastra algo do presente.
+- Mirar os 38 rexenerados cando saian (17 da primeira pasada e 21 da segunda). Nos de escritura (31) a porta volverá
+  rexeitar por texto. Nos de semente (10, 21, 68 e 70), ver se a foto arrastra algo do presente. Se a porta rexeita o
+  70 por repetición co 4, escollelo a man. Se o 68 volve saír de día, vale o [0].
+- Levar á lista de produción as accións I2V da segunda pasada (sección de MOVEMENTO).
