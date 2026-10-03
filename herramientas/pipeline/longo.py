@@ -285,6 +285,16 @@ def main():
         for f in frases:
             f['pal0'] = pal; pal += len(f['texto'].split())
         tot = pal
+        if tema.get('curva_capitulos'):
+            # episodio curto (Gauntlet 4): os nós da curva son os comezos dos capítulos que nomea a ficha (fin do gancho,
+            # da transición e da calma), en vez dos nós absolutos de curva.py, pensados para 30 min
+            pal_cap = {c['titulo']: next(f['pal0'] for f in frases if f['par'] == c['par0']) for c in caps
+                       if any(f['par'] == c['par0'] for f in frases)}
+            faltan = [t for t in tema['curva_capitulos'] if t not in pal_cap]
+            if faltan or len(tema['curva_capitulos']) != 3:
+                raise SystemExit(f'curva_capitulos: cómpren 3 títulos de capítulo do guion; non atopados: {faltan}')
+            curva.NOS_FIXOS = [0] + [pal_cap[t] for t in tema['curva_capitulos']] + [tot]
+            print('curva: nós fixos polos capítulos', curva.NOS_FIXOS, flush=True)
         exc = yaml.safe_load(open(a.excepcions)) if a.excepcions and Path(a.excepcions).exists() else []
         # caché: co mesmo guion, tema, excepcións e código das portas non se volven cargar LanguageTool nin o NLI
         # (cada reintento tras un OOM deixaba o proceso pai con 1,3-1,8 GB e menos marxe para as imaxes)

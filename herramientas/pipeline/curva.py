@@ -48,8 +48,16 @@ VOZ = ('estilo', 'f0_rango', 'f0_media', 'enerxia', 'beta', 'embedding_scale')  
 FASES = ('gancho', 'transicion', 'calma', 'durmir')
 
 
+# Nós fixos [0, fin do gancho, fin da transición, fin da calma, total] en palabras. Os episodios curtos (Gauntlet 4,
+# ≈ 12 min e ≈ 1.600 palabras) non caben nos nós absolutos de arriba, pensados para 30 min: longo.py fíxaos aquí a
+# partir dos capítulos que nomea a ficha do tema (`curva_capitulos`). Se é None, a curva de sempre.
+NOS_FIXOS = None
+
+
 def nos(total):
     """Posicións (palabras) dos nós para un guion de `total` palabras."""
+    if NOS_FIXOS and NOS_FIXOS[-1] == total:
+        return list(NOS_FIXOS)
     total = max(total, TRANSICION + 200)
     metade = max(TRANSICION + 100, total // 2)
     return [0, GANCHO, TRANSICION, metade, total]
