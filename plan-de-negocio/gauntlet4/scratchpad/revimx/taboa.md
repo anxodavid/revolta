@@ -1,0 +1,42 @@
+| 1 | vale | `000-df6db929-1.png` | Dous mouchos sobre pedra con musgo, de noite no bosque: ilustra o que se oe. O sapo non saíu; non fai falta. |
+| 2 | rexenerar | — | Lume laranxa nunha pota ou tixola negra de ferro: lese como caldeiro (veto §8.5) e falta a clave (lapas azuis, cunca de barro). Só houbo un intento e a porta aprobouno. |
+| 3 | outro intento (contra a porta) | `002-53ec0878-1.png` | No [2] escollido sostén na outra man unha pluma ou un misto acendido (artefacto). O [1] é limpo: escribe nun caderno, con candeas e o porto de noite; o texto non se le (a porta rexeitouno por texto, de máis). |
+| 4 | vale | `003-495417ae-0.png` | Barco vello amarrado a un peirao de granito de noite (semente da dorna): correcto. Non se ven os tres homes; non fai falta. |
+| 5 | vale | `004-54589876-0.png` | Home con barba e chapeu que escribe con pluma á luz das candeas, con xente detrás: lese como unha declaración ante o tribunal. Para MOVEMENTO: o home escribe e leva o chapeu posto, así que hai que cambiar a acción I2V. |
+| 6 | rexenerar | — | Non hai muller preñada nin home: unha vella sentada nunha cama e outra axeonllada diante, que se le como unha enferma. Os tres intentos fallan igual, e no [1] e [2] o prompt truncouse e perdeu o home. |
+| 7 | rexenerar | — | Os tres intentos levan zapatos modernos de cordóns (a porta acerta ao rexeitalos, aínda que dea outro motivo). Prompt máis curto, cunha chinela de coiro brando como a do plano 8. |
+| 8 | vale | `007-0ae28a3e-0.png` | Home dobrado sobre o banco, coma se lle petase a dor, con zapatos brandos: conta a historia. Defecto menor: ao fondo, noutro cuarto, unha fiestra de vidro pequena e desenfocada. O I2V do salto é fráxil; se deforma, paralaxe. |
+| 9 | rexenerar | — | Vela de bloque moderna nun prato negro, cunha bóla escura sen sentido ao lado e sen parede de granito: parece foto de produto actual, e é o plano do aviso. |
+| 10 | rexenerar | — | O hórreo sae con tellado de herba e, á dereita, unha caseta cun farol de parede aceso que parece eléctrico. Mesma semente (Muimenta) en img2img 0,5, que segundo o informe de imaxe §4 conserva o hórreo e os tornarratos. |
+| 11 | vale | `010-64e96403-0.png` | Tres mozos arredor dunha cunca de barro con lume: unha queimada no século XX, encaixa. Defectos menores: lapa laranxa, contas azuis dentro da cunca e caras ben iluminadas (o prompt quería anonimato). |
+| 12 | vale (contra a porta) | `011-53232142-1.png` | Escribán con pluma e candeas, papel sen texto lexible. A porta rexeitouno por texto na imaxe, que nun plano de escritura sobra. Lazo de encaixe ao pescozo algo tardío, aceptable. |
+| 13 | vale | `012-c1475796-2.png` | Primeiro plano da parteira: boa calidade e sen artefactos. O pano é claro, non marrón escuro, e mira á cámara. |
+| 14 | vale | `013-42727703-0.png` | Pilas de papeis vellos: ilustra o que se oe. Ao fondo hai unha fiestra de vidro desenfocada, crible nun arquivo ou tribunal. |
+| 15 | vale (contra a porta) | `014-edb2132a-0.png` | Letra cursiva antiga ilexible, con riscos: vale para un plano de escritura (a porta rexeita por texto). O [1] ten pseudopalabras góticas case lexibles e o [2] parece libro impreso. |
+| 16 | vale | `015-b27e8d07-0.png` | A moza da trenza nunha pía de pedra de noite, con lume ao lado e xente que mira desde o fondo: encaixa coa lista e coa noite de san Xoán. Non hai cántaro; as mans están ben. |
+| 17 | rexenerar | — | Fiestras de vidro grandes, unha vasoira (veto §8.5), cofias brancas e mandís de tirantes de aspecto holandés, e marcas vermellas na parede. A porta aprobouno. |
+| 18 | rexenerar | — | Os tres intentos teñen luz eléctrica ou fiestra de vidro: o [0], unha bombilla acesa no teito; o [1] e o [2], fiestras de cristais. Ademais, o [0] non ten a enferma. Plano clave (a meiga que cura). |
+| 19 | vale (contra a porta) | `018-768e74a5-0.png` | Muller que busca entre papeis cunha vela nun arquivo escuro: ilustra o «imos buscalas». Moitas candeas e libros encadernados, sen anacronismos; o texto non se le (a porta rexeitouno por texto). |
+| 20 | rexenerar | — | Salón palaciano con lampadario de cristal, ventás altas de vidro en arco e moita xente; María vai cun capuchón vermello de Carapuchiña. A porta aprobouno. |
+| 21 | rexenerar | — | Os tres intentos teñen casas inglesas con cheminea e unha muller con capa vermella de Carapuchiña (a porta acerta). Proposta con semente: a palloza (CC BY 3.0), recortada sen a cheminea metálica, en profundidade 0,6. |
+| 22 | rexenerar | — | Edificio de pedra con soportais, fiestras de vidro e baixante de canlón: non se le como igrexa de aldea. Dúas persoas separadas, sen murmurio. A porta aprobouno. |
+| 23 | vale (contra a porta) | `022-63a520b1-0.png` | María (pano e bufanda vermellos) entre as vacas no monte, co vento: é xusto o que se oe. A porta rexeita por animais en grupo, pero o texto pide o gando arredor. |
+| 24 | vale | `023-2e94bcd6-0.png` | Dúas vacas de cornos longos nun regato do monte: ilustra o desexo das sete fontes. Sen a muller, que era opcional. |
+| 25 | outro intento (contra a porta) | `024-341e06d7-1.png` | O [2] escollido ten un segundo home de chaleco e gravata do século XIX e ninguén escribe. O [1] é a testemuña de perfil, con barba e roupa de la parda, á luz das candeas; a man sen corpo que viu a porta non se ve. |
+| 26 | outro intento (contra a porta) | `025-a9288905-1.png` | O [0] ten dous instrumentos de escribir, un en cada man. O [1]: unha soa man con pluma e puño branco sobre a páxina, e o texto non se le. |
+| 27 | vale | `026-7184d1ed-1.png` | Arquiveiro con luvas brancas entre feixes de papeis: encaixa. Viste chaleco e lazo de aspecto antigo; aceptable. |
+| 28 | vale | `027-70e923a8-0.png` | Escribán novo con pluma e candeas e, detrás, un home (non a muller): lese como «na voz doutros, e na man de quen escribía». Para MOVEMENTO: non hai muller detrás, así que hai que cambiar a acción I2V. |
+| 29 | rexenerar | — | Edificio monumental de columnas e ventás góticas (catedral, que estaba no negativo), tres mulleres e o cura de costas: non é a capela de aldea nin as dúas excomungadas soas. A porta aprobouno. |
+| 30 | outro intento (contra a porta) | `029-ffcab11f-0.png` | O [1] escollido non ten a cunca (falta a clave) e ten unha fiestra de vidro. O [0] ten a cunca de barro entre as dúas mulleres no limiar, e as mans están ben (a porta viu mans de máis). |
+| 31 | rexenerar | — | Os tres intentos teñen unha lupa deformada (dous aros) e letra de imprenta ou pseudopalabras lexibles dentro da lente. |
+| 32 | outro intento (contra a porta) | `031-8b458fe5-2.png` | O [0] ten lume laranxa sobre contas azuis. O [2] ten lapas azuis na cunca de barro e unha folla de versos ilexible (en 1967, mecanografada, é verosímil). |
+| 33 | vale (contra a porta) | `032-5d0efc36-0.png` | Tres amigos rindo no barco de noite, co porto ao fondo: é o que se oe. A porta viu un iate moderno que non hai. Defecto menor: o lume é laranxa. |
+| 34 | vale | `033-e502ad3e-0.png` | Dous homes len unha folla de noite no porto, coas mans correctas. Falta o brillo azul; aceptable. |
+| 35 | outro intento (contra a porta) | `034-440f5505-1.png` | O [3], que a porta aprobou, é a reserva xenérica: un labrego con boina nun prado, nada que ver co que se oe. O [1]: follas de versos espalladas, farol e vela, e texto ilexible. |
+| 36 | vale | `035-7e6df055-1.png` | Tenda con mostrador, papeis e cartóns: ilustra «unha empresa vendeu copias». Roupa de mediados do século XX; aceptable. |
+| 37 | outro intento (contra a porta) | `036-2831cd58-2.png` | O [0] ten dúas mans de persoas distintas con dúas plumas. O [2]: a man dun home maior asinando un formulario (2001), cunha soa pluma e texto ilexible. |
+| 38 | rexenerar | — | Gran fogueira laranxa cunha multitude cos brazos en alto: lembra unha queima (veto de autos de fe) e falta a cunca da queimada. A porta aprobouno. |
+| 39 | rexenerar | — | O barco arde: lume enorme na cuberta con cinco homes diante e sen pote (lapas sobre persoas). A porta aprobouno. |
+| 40 | rexenerar | — | Salón palaciano con lampadario de cristal, cadros e fiestra de vidro, todos de negro: non se ven as tres xustizas (falta o inquisidor de hábito branco). A porta aprobouno. |
+| 41 | rexenerar | — | Os tres intentos: ancián con lentes modernas e as bandas brancas dun xuíz inglés, vestido de negro e non co hábito branco do inquisidor. |
+| 42 | rexenerar | — | Dúas figuras de negro nun banco de parque ao aire libre: non hai xuíz, nin sala, nin as tres acusadas. A porta aprobouno. |

@@ -158,3 +158,16 @@ The following part of your input was truncated because CLIP can only handle sequ
 imaxe  44 intento 2 129.3s + revisión 11.9s ok
 imaxe  45 intento 0 128.2s + revisión 11.2s ok
 imaxe  46 intento 0 126.5s + revisión 10.7s ['obxectos modernos', 'luz eléctrica (CLIP)', 'luces de cidade (CLIP)']
+imaxe  46 intento 1 151.6s + revisión 11.0s ['luz eléctrica (CLIP)']
+imaxe  46 intento 2 131.7s + revisión 11.1s ['obxectos modernos', 'luz eléctrica (CLIP)']
+imaxe  47 intento 0 121.9s + revisión 10.6s ['casas alleas', 'casas británicas (CLIP)']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['6 4 3']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['6 4 3']
+imaxe  47 intento 1 121.5s + revisión 10.4s ['casas alleas']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['6 4 3']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['6 4 3']
+imaxe  47 intento 2 118.0s + revisión 10.8s ok
+imaxe  48 intento 0 115.5s + revisión  9.9s ok avisos ['falta: fountain (CLIP)']
+imaxe  49 intento 0 117.4s + revisión 10.0s ['texto na imaxe']
+imaxe  49 intento 1 118.5s + revisión 11.0s ok avisos ['falta: paper (CLIP)']
+imaxe  50 intento 0 120.3s + revisión  9.7s ok
