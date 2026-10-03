@@ -241,7 +241,10 @@ def planos_por_sentido(lista, frases, tempos, dur, inicio_cap, tot, vdir, W):
         if not fr or fr != list(range(fr[0], fr[-1] + 1)) or any(i not in fr_i for i in fr):
             erros.append(f"plano {x['n']}: frases {fr} (teñen que ser consecutivas e existir)")
             continue
-        prev = int(lista[k - 1]['frases'][-1]) if k else 0
+        prev = int(lista[k - 1]['frases'][-1]) if k and lista[k - 1]['frases'] else 0
+        for i in fr[1:]:
+            if i in inicio_cap:
+                erros.append(f"plano {x['n']}: a frase {i} abre capítulo e ten que empezar un plano (co rótulo)")
         if x.get('desde'):
             if fr[0] != prev:
                 erros.append(f"plano {x['n']}: con `desde` ten que empezar na última frase do anterior ({prev})")

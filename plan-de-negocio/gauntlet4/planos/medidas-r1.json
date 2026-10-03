@@ -1,0 +1,362 @@
+{
+ "planos": 77,
+ "por_fase": {
+  "gancho": {
+   "planos": 19,
+   "media_s": 5.2,
+   "min_s": 3.7,
+   "max_s": 7.2,
+   "obxectivo_s": [
+    3,
+    6
+   ],
+   "fora": [
+    9,
+    12,
+    16,
+    18,
+    19
+   ]
+  },
+  "transicion": {
+   "planos": 19,
+   "media_s": 7.6,
+   "min_s": 5.0,
+   "max_s": 12.5,
+   "obxectivo_s": [
+    5,
+    9
+   ],
+   "fora": [
+    23,
+    27,
+    29
+   ]
+  },
+  "calma": {
+   "planos": 24,
+   "media_s": 10.4,
+   "min_s": 6.8,
+   "max_s": 15.4,
+   "obxectivo_s": [
+    8,
+    14
+   ],
+   "fora": [
+    39,
+    50,
+    51,
+    53,
+    55,
+    59,
+    60
+   ]
+  },
+  "durmir": {
+   "planos": 15,
+   "media_s": 17.2,
+   "min_s": 9.4,
+   "max_s": 27.1,
+   "obxectivo_s": [
+    12,
+    20
+   ],
+   "fora": [
+    65,
+    66,
+    67,
+    73,
+    74,
+    75,
+    77
+   ]
+  }
+ },
+ "parte_esperta": {
+  "planos": 62,
+  "persoas": {
+   "non": 10,
+   "fan": 44,
+   "estan": 5,
+   "mans": 3
+  },
+  "pct_persoas_facendo_algo": 71.0,
+  "pct_con_mans_que_fan": 75.8
+ },
+ "durmir_persoas": {
+  "non": 8,
+  "fan": 5,
+  "mans": 1,
+  "estan": 1
+ },
+ "desde": {
+  "4": {
+   "t0": 15.873,
+   "metodo": "whisper"
+  },
+  "6": {
+   "t0": 25.186,
+   "metodo": "whisper"
+  }
+ },
+ "arquetipos_previstos": {
+  "retrato": {
+   "planos": [
+    2,
+    13,
+    25,
+    60
+   ],
+   "separacion_min": 11
+  },
+  "mans": {
+   "planos": [
+    7,
+    26,
+    37,
+    68
+   ],
+   "separacion_min": 11
+  },
+  "grupo de pé": {
+   "planos": [
+    22,
+    52
+   ],
+   "separacion_min": 30
+  },
+  "persoa á lareira": {
+   "planos": [
+    55
+   ],
+   "separacion_min": null
+  }
+ },
+ "sementes": {
+  "4": "16-dorna-a-vela-rianxo-de-noite.jpg (img2img 0.5)",
+  "10": "16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg (profundidade 0.6)",
+  "55": "03-reitoral-de-beiro-carballeda-de-avia-3.jpg (img2img 0.75)",
+  "68": "02-camino-de-santiago-may-2008.jpg (img2img 0.5)"
+ },
+ "animacion": {
+  "i2v": 57,
+  "paralaxe": 20
+ },
+ "i2v_por_prioridade": {
+  "1": [
+   2,
+   5,
+   8,
+   13,
+   16,
+   18,
+   22,
+   23,
+   30,
+   33,
+   34,
+   43,
+   44,
+   48,
+   49,
+   50,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   60,
+   66,
+   69,
+   71
+  ],
+  "2": [
+   1,
+   3,
+   6,
+   7,
+   11,
+   12,
+   17,
+   19,
+   20,
+   21,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   36,
+   37,
+   38,
+   40,
+   41,
+   42,
+   45,
+   46,
+   59,
+   61,
+   65,
+   68,
+   73,
+   76
+  ]
+ },
+ "camaras": {
+  "avanza": 34,
+  "pan_der": 9,
+  "baixa": 7,
+  "recua": 11,
+  "xira_esq": 4,
+  "xira_der": 4,
+  "pan_esq": 6,
+  "sobe": 2
+ },
+ "efectos": {
+  "lume": 10,
+  "candea": 20,
+  "auga": 11,
+  "bretema": 5,
+  "ceo": 2,
+  "po": 5,
+  "choiva": 3
+ },
+ "son": {
+  "noite": 6,
+  "lume": 9,
+  "mar": 4,
+  "limpa": 28,
+  "fonte+noite": 6,
+  "aldea": 9,
+  "campas": 2,
+  "vento": 2,
+  "fonte": 2,
+  "lume+mar": 2,
+  "xente": 2,
+  "lume+noite": 1,
+  "choiva": 3,
+  "choiva+fonte": 1
+ },
+ "epoca_xx": [
+  2,
+  3,
+  4,
+  11,
+  27,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  68,
+  69,
+  70,
+  71,
+  72
+ ],
+ "personaxes": {
+  "dorotea": [
+   6,
+   13,
+   29,
+   30
+  ],
+  "maria": [
+   20,
+   21,
+   23,
+   24,
+   28,
+   29,
+   30
+  ],
+  "escriban": [
+   5,
+   12,
+   25,
+   28,
+   45
+  ],
+  "testemuna": [
+   5,
+   25
+  ],
+  "xuiz": [
+   20,
+   40,
+   42,
+   45,
+   46
+  ],
+  "vicario": [
+   29,
+   40
+  ],
+  "inquisidor": [
+   40,
+   41
+  ],
+  "cibreira": [
+   43,
+   46
+  ],
+  "nai_cibreira": [
+   44
+  ],
+  "curandeira": [
+   18,
+   57
+  ],
+  "mariano": [
+   3,
+   33,
+   34
+  ],
+  "amigos": [
+   33
+  ],
+  "vecinos": [
+   48,
+   49,
+   50
+  ],
+  "moza": [
+   16,
+   54,
+   66
+  ],
+  "feijoo": [
+   59
+  ],
+  "sarmiento": [
+   58
+  ],
+  "vella_q": [
+   69,
+   71
+  ],
+  "vello_q": [
+   69,
+   71
+  ]
+ },
+ "prompt_palabras": {
+  "media": 42.8,
+  "max": 62,
+  "mais_de_55": [
+   28,
+   29,
+   40,
+   45,
+   54,
+   69,
+   71
+  ]
+ }
+}

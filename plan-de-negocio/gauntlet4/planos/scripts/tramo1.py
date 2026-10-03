@@ -57,7 +57,7 @@ pl([9, 10], 'Good night. The voice you are about to hear is synthetic, and this 
 pl([11], 'This is Cousas de Galiza para durmir (Things of Galicia for falling asleep).', 'xeral',
    'wide shot of two old Galician granaries raised on stone pillars with mushroom-shaped staddle stones, one of granite '
    'and one of wood, in a misty village yard at night, moonlight on wet stone and moss, deep blue darkness, calm',
-   'granary', 'noite', ('paralaxe', 'avanza', ['bretema', 'ceo'], None), 3, 'non',
+   'granary', 'noite', ('paralaxe', 'pan_der', ['bretema', 'ceo'], None), 3, 'non',
    ref={'ficheiro': '01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg', 'modo': 'profundidade',
         'forza': 0.6, 'recorte': [0.32, 0.2, 1.0, 1.0]},
    neg='modern house, brick chimney, cars')
@@ -82,7 +82,7 @@ pl([14], 'The words she knew, those we do not know.', 'primeiro_plano',
 pl([15], 'In the papers of those trials there are many more words.', 'bodegon',
    'still life of tall stacks of yellowed 17th-century trial papers tied with faded cords on a long dark wooden table, '
    'dust floating in a shaft of light from a small shuttered opening, deep shadows',
-   'papers', 'limpa', ('paralaxe', 'avanza', ['po'], None), 3, 'non', neg='printed books, modern office')
+   'papers', 'limpa', ('paralaxe', 'xira_der', ['po'], None), 3, 'non', neg='printed books, modern office')
 pl([16], 'There is a mistaken word that no one has erased in more than four hundred years.', 'detalle',
    'extreme close-up of faded brown handwriting on a yellowed 17th-century page, one word struck through with a single '
    'line of ink, soft raking light showing the texture of the old paper',
@@ -143,7 +143,7 @@ pl([24, 25], 'And he said that María, when she had the cattle up on the hill, s
 pl([26], 'And, among them, a wish for the cattle: that they drink water from seven springs and bring milk from seven '
          'byres and seven hills.', 'plano_medio',
    'medium shot of two brown cows lowering their heads to drink from a clear spring running over mossy stones on a '
-   'green hillside, a woman in a faded red wool headscarf watching them from behind, soft morning light',
+   'green hillside, {maria}, watching them from behind, soft morning light',
    'cows', 'fonte', ('i2v', 'pan_der', ['auga'], 'the cows drink from the stream and the water ripples around their '
                                                 'muzzles'), 2, 'estan', neg='fence, road, power lines')
 pl([27, 28], "They were words for the cattle, not for a court. But from the hill they passed into the witness's mouth, "
@@ -168,7 +168,7 @@ pl([30, 31], 'The paper is kept by the Archive of the Kingdom of Galicia, with o
 pl([32], 'This is how the words of those women reach us: in the voice of others, and in the hand of the one who wrote.',
    'plano_medio',
    'medium shot of {escriban} writing with a goose quill at a table in the foreground, and behind him, in shadow, '
-   'a woman in a faded red wool headscarf standing silent with her lips closed, candlelight',
+   '{maria}, standing silent with her lips closed, candlelight',
    'scribe', 'limpa', ('i2v', 'avanza', ['candea'], 'the scribe writes while the woman behind him stands still and '
                                                    'lowers her eyes'), 2, 'fan', neg='glasses, printed book')
 pl([33, 34], 'And words could also close doors. The vicar general of the bishopric of Mondoñedo excommunicated the '
@@ -186,7 +186,7 @@ pl([35, 36], 'Water from seven springs for the cattle. And for them, not even wa
 pl([37], 'That paper kept even the smallest thing, a mistaken word.', 'bodegon',
    'still life of a single old bundle of trial papers tied with a faded red cord, resting on a dark wooden shelf, a '
    'narrow beam of light falling across it, dust in the air, deep shadows',
-   'papers', 'limpa', ('paralaxe', 'avanza', ['po'], None), 3, 'non', neg='printed books, plastic')
+   'papers', 'limpa', ('paralaxe', 'sobe', ['po'], None), 3, 'non', neg='printed books, plastic')
 pl([38], 'With the queimada spell the opposite happened: along the way it was left without the most important thing, '
          'the name of the one who wrote it.', 'detalle',
    'close-up of a handwritten sheet of verses lying beside a wide clay bowl of blue flames on a wooden table, the bottom '
@@ -212,12 +212,12 @@ pl([41], 'And that there were five or six other spells from that time, but none 
    neg='printed text, typewriter, light bulb')
 pl([42], "A company sold copies of the spell without the author's name, and so many people thought it was a popular, "
          'anonymous text.', 'plano_medio',
-   'medium shot of two tourists in 1980s clothes reading a printed card with a poem and a small drawing of a clay '
+   'medium shot of two tourists in late-20th-century clothes reading a printed card with a poem and a small drawing of a clay '
    'bowl, at the wooden counter of a souvenir shop where stacks of the same printed cards lie for sale, warm shop light',
    'printed card', 'xente', ('i2v', 'avanza', [], 'they read the card together and one points at the poem'), 2, 'fan',
    epoca='xx', neg='computer')
 pl([43], 'In two thousand and one, the author registered it as intellectual property.', 'detalle',
-   "close-up of an old man's hand signing an official registration form with a fountain pen on an office desk, a "
+   "close-up of an older man's hand signing an official registration form with a fountain pen on an office desk, a "
    'rubber stamp and a printed copy of a poem beside it, daylight, 2001',
    'document', 'limpa', ('i2v', 'baixa', [], 'the hand slowly signs the form'), 2, 'mans', epoca='xx',
    neg='laptop', arq='mans')

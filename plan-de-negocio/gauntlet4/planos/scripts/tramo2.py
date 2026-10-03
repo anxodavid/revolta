@@ -9,9 +9,9 @@ pl([45], 'The spell was born among friends, around a pot.', 'xeral',
    'clay bowl', 'lume+mar', ('paralaxe', 'baixa', ['lume'], None), 3, 'estan', epoca='xx', neg='light bulb')
 pl([46, 47], 'The words of the trials ended up somewhere else: in the courts. Three jurisdictions could judge '
              'witchcraft: the civil, the ecclesiastical and the Inquisition.', 'xeral',
-   'wide shot of three judges behind a long dark table in a bare granite hall: {xuiz}, signing a paper, {vicario}, and '
-   '{inquisidor}, light from a high opening, 17th century',
-   'judge', 'limpa', ('i2v', 'avanza', ['po'], 'the judge in the black gown signs a paper while the other two watch'), 2,
+   'wide shot of a bare granite hall with three separate judges\' tables, at each a different judge: {xuiz}, signing '
+   'a paper, {vicario}, and {inquisidor}, light from a high opening, 17th century',
+   'judge', 'limpa', ('i2v', 'avanza', ['po'], 'the judge in the black gown signs a paper while the others read'), 2,
    'fan', neg='framed pictures, flags')
 pl([48], 'For the researcher Diego Valor Bravo, the feared Inquisition was lenient with Galician meigas: in three '
          'centuries it sentenced only one meiga to death.', 'plano_medio',
@@ -55,7 +55,7 @@ pl([57, 58], 'Rodrigo Pousa, historian, explains that those women did not know w
 pl([59], "A Saint John's night also appears in the papers of Campo Lameiro.", 'xeral',
    "wide shot of an old granite fountain with a stone basin among chestnut trees at night, the orange glow of a distant "
    "Saint John's bonfire between the trunks, water running from the spout, moonlight",
-   'fountain', 'fonte+noite', ('paralaxe', 'avanza', ['auga', 'bretema'], None), 3, 'non', neg='houses')
+   'fountain', 'fonte+noite', ('paralaxe', 'pan_esq', ['auga', 'bretema'], None), 3, 'non', neg='houses')
 pl([60, 61], 'In sixteen forty-three, the Royal Court tried several women there. Some neighbours, quarrelling with one '
              'of them, blamed her for making their calves and piglets die.', 'plano_medio',
    'medium shot of {vecinos}, pointing and shouting at a village woman in a dark shawl at the gate of a stone byre, a '
@@ -159,7 +159,7 @@ pl([83, 84], "To make the 'cacho', someone takes water from seven springs, as in
              'according to belief, gave the herbs their virtues.', 'plano_medio',
    'medium shot of a wide clay basin of water full of sprigs of fennel, ferns and wild flowers, left on top of a granite '
    'wall outside at night, dew forming on the leaves, moonlight, calm',
-   'clay basin', 'noite', ('paralaxe', 'avanza', ['auga'], None), 3, 'non', neg='plastic, glass vase')
+   'clay basin', 'noite', ('paralaxe', 'xira_esq', ['auga'], None), 3, 'non', neg='plastic, glass vase')
 pl([85, 86, 87], 'Far away, when the bonfire is almost out, people jump over the last flames, always an odd number of '
                  'times, at least three. And as they jump they say some words that no one writes on a list. I jump '
                  "over Saint John's fire, so that no bitch or dog may bite me.", 'xeral',
@@ -196,7 +196,7 @@ pl([95, 96], 'Owls, barn owls, toads and witches. Now you know who wrote these w
              'a man on a boat, among friends.', 'xeral',
    'wide calm view of a misty harbour at night, the dark silhouette of an old wooden sailing boat moored at a granite '
    'quay far away, a tiny blue glow and three small seated figures on its deck, still water, 1960s',
-   'boat', 'mar', ('paralaxe', 'avanza', ['auga', 'bretema'], None), 3, 'estan', epoca='xx',
+   'boat', 'mar', ('paralaxe', 'pan_der', ['auga', 'bretema'], None), 3, 'estan', epoca='xx',
    neg='street lamps, modern yacht, city lights')
 pl([97, 98], "And someone says that well-known saying: I don't believe in meigas, but they exist, they do. That one "
              'does belong to everyone, because no one knows its author.', 'plano_medio',
@@ -221,7 +221,7 @@ pl([102, 103], 'Now it rains on the slates of the roof, a fine, gentle rain, lik
                'which still smell of the hills.', 'plano_medio',
    'medium shot of two cows asleep on straw in a stone byre at night, bunches of dried herbs hanging from the wooden '
    'beam above them, and through the open half-door fine rain falling from the slate eaves, faint lantern glow, calm',
-   'cows', 'choiva', ('paralaxe', 'avanza', ['candea'], None), 3, 'non', neg='metal stalls, light bulb')
+   'cows', 'choiva', ('paralaxe', 'pan_esq', ['candea'], None), 3, 'non', neg='metal stalls, light bulb')
 pl([104, 105], 'Far away, the seven springs keep running in the darkness, and the water flows gently down to the river, '
                'with no one spying on it. No one writes down names, no one asks, and words are no longer needed: only '
                'the rain on the slate, always the same, always gentle.', 'paisaxe',

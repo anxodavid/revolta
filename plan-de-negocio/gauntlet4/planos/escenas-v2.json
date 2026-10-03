@@ -315,7 +315,7 @@
    },
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "pan_der",
     "efectos": [
      "bretema",
      "ceo"
@@ -407,7 +407,7 @@
    "son": "limpa",
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "xira_der",
     "efectos": [
      "po"
     ]
@@ -620,7 +620,7 @@
    ],
    "texto": "E, entre elas, un desexo para o gando: que bebese auga de sete fontes e trouxese leite de sete cortes e de sete montes.",
    "texto_en": "And, among them, a wish for the cattle: that they drink water from seven springs and bring milk from seven byres and seven hills.",
-   "prompt": "medium shot of two brown cows lowering their heads to drink from a clear spring running over mossy stones on a green hillside, a woman in a faded red wool headscarf watching them from behind, soft morning light",
+   "prompt": "medium shot of two brown cows lowering their heads to drink from a clear spring running over mossy stones on a green hillside, a woman of about thirty, dark braided hair under a faded red wool headscarf, watching them from behind, soft morning light",
    "clave": "cows",
    "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fence, road, power lines",
    "tipo": "plano_medio",
@@ -717,7 +717,7 @@
    ],
    "texto": "Así nos chegan as palabras daquelas mulleres: na voz doutros, e na man de quen escribía.",
    "texto_en": "This is how the words of those women reach us: in the voice of others, and in the hand of the one who wrote.",
-   "prompt": "medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing with a goose quill at a table in the foreground, and behind him, in shadow, a woman in a faded red wool headscarf standing silent with her lips closed, candlelight",
+   "prompt": "medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing with a goose quill at a table in the foreground, and behind him, in shadow, a woman of about thirty, dark braided hair under a faded red wool headscarf, standing silent with her lips closed, candlelight",
    "clave": "scribe",
    "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book",
    "tipo": "plano_medio",
@@ -791,7 +791,7 @@
    "son": "limpa",
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "sobe",
     "efectos": [
      "po"
     ]
@@ -898,7 +898,7 @@
    ],
    "texto": "Unha empresa vendeu copias do conxuro sen o nome do autor, e por iso moita xente pensou que era un texto popular e anónimo.",
    "texto_en": "A company sold copies of the spell without the author's name, and so many people thought it was a popular, anonymous text.",
-   "prompt": "medium shot of two tourists in 1980s clothes reading a printed card with a poem and a small drawing of a clay bowl, at the wooden counter of a souvenir shop where stacks of the same printed cards lie for sale, warm shop light",
+   "prompt": "medium shot of two tourists in late-20th-century clothes reading a printed card with a poem and a small drawing of a clay bowl, at the wooden counter of a souvenir shop where stacks of the same printed cards lie for sale, warm shop light",
    "clave": "printed card",
    "negativo": "neon, plastic, television, smartphone, computer",
    "tipo": "plano_medio",
@@ -920,7 +920,7 @@
    ],
    "texto": "En dous mil un, o autor rexistrouno como propiedade intelectual.",
    "texto_en": "In two thousand and one, the author registered it as intellectual property.",
-   "prompt": "close-up of an old man's hand signing an official registration form with a fountain pen on an office desk, a rubber stamp and a printed copy of a poem beside it, daylight, 2001",
+   "prompt": "close-up of an older man's hand signing an official registration form with a fountain pen on an office desk, a rubber stamp and a printed copy of a poem beside it, daylight, 2001",
    "clave": "document",
    "negativo": "neon, plastic, television, smartphone, laptop",
    "tipo": "detalle",
@@ -991,7 +991,7 @@
    ],
    "texto": "As palabras dos procesos acabaron noutro sitio: nos tribunais. Tres xustizas podían xulgar a bruxería: a civil, a eclesiástica e a Inquisición.",
    "texto_en": "The words of the trials ended up somewhere else: in the courts. Three jurisdictions could judge witchcraft: the civil, the ecclesiastical and the Inquisition.",
-   "prompt": "wide shot of three judges behind a long dark table in a bare granite hall: a stern grey-bearded judge in a black gown with a stiff white golilla collar, signing a paper, a stern priest in a black cassock and black cape, and an elderly inquisitor in a white habit and black cape, light from a high opening, 17th century",
+   "prompt": "wide shot of a bare granite hall with three separate judges' tables, at each a different judge: a stern grey-bearded judge in a black gown with a stiff white golilla collar, signing a paper, a stern priest in a black cassock and black cape, and an elderly inquisitor in a white habit and black cape, light from a high opening, 17th century",
    "clave": "judge",
    "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, flags",
    "tipo": "xeral",
@@ -1002,7 +1002,7 @@
     "efectos": [
      "po"
     ],
-    "accion": "the judge in the black gown signs a paper while the other two watch"
+    "accion": "the judge in the black gown signs a paper while the others read"
    },
    "prioridade_i2v": 2,
    "persoas": "fan"
@@ -1158,7 +1158,7 @@
    "son": "fonte+noite",
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "pan_esq",
     "efectos": [
      "auga",
      "bretema"
@@ -1549,7 +1549,7 @@
    "son": "noite",
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "xira_esq",
     "efectos": [
      "auga"
     ]
@@ -1695,7 +1695,7 @@
    "son": "mar",
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "pan_der",
     "efectos": [
      "auga",
      "bretema"
@@ -1788,7 +1788,7 @@
    "son": "choiva",
    "animacion": {
     "modo": "paralaxe",
-    "camara": "avanza",
+    "camara": "pan_esq",
     "efectos": [
      "candea"
     ]
