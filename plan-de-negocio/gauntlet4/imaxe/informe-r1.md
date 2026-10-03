@@ -63,11 +63,21 @@ coas descricións que gardou a produción (Florence-2-base); o `negativo` de cad
 **O que segue escapando:** a bombilla e o radiador do plano 84 e as rodas da maleta do 56 (os dous bloqueantes que
 faltan), o lume encima dunha mesa (20), o abrigo de pelo de camelo (78), o sombreiro vaqueiro (85) e a anciá coa
 chama nas mans (7). Os pares de CLIP para obxectos pequenos (bombilla, radiador, maleta de rodas, billa, cociña de
-ferro) **non separan** nin con recortes pequenos (AUC 0,6-0,9 cun só exemplo e moitos falsos): non se usan. Proba con
-Florence-2-base `<OPEN_VOCABULARY_DETECTION>`: §2.1 (pendente).
+ferro) **non separan** nin con recortes pequenos (AUC 0,6-0,9 cun só exemplo e moitos falsos): non se usan. **Florence-2-base
+`<OPEN_VOCABULARY_DETECTION>` tampouco serve**: preguntado por "light bulb", "radiator", "rolling suitcase",
+"faucet", "cast iron stove", "street lamp", "wall lamp" e "framed picture", devolve unha caixa en 33 de 33 imaxes
+(10 malas e 23 limpas): sempre atopa o que se lle pide (`scripts/florence_ovd.py`, ≈ 19 s por imaxe).
 
-**Custo:** a revisión pasa de ≈ 9 s (mediana da produción da v1) a ≈ 14 s por imaxe [S: medido o CLIP de 9
-recortes, ≈ 7 s por imaxe na calibración].
+**Custo:** 10,5 s por imaxe (mediana de 48 revisións coa v6: MediaPipe, Florence-2-base e CLIP-L con 9
+recortes); a produción da v1 medía 9,0 s coa VERSION 8.
+
+**Coas imaxes novas** (as 28 da folla A/B e as 20 da biblia, `scripts/revisar_ab.py`): marca 6 dos 10 prompts da v1 e
+7 dos 10 da v2; nas da v2 colle o que Claude viu mal (o zapato e o pantalón actuais do 8 como "tweed", as casas
+inglesas do 37, o cadro e a fiestra do 84, a luz como de farola do 20) e deixa pasar as tres boas (16, 26, 33).
+Falsos ou discutibles: "man sen corpo" nos primeiros planos de mans (19 e 48 da v2), "interior moderno" na vista desde
+unha fiestra (aldea) e "muros encalados" na campá encalada da lareira da semente. A `clave` non distingue un hórreo
+dunha cabana nin de pedras con forma de cogomelo (z alto en imaxes sen hórreo): para a iconografía, a garantía é a
+semente e a mirada do axente, non a porta.
 
 **Con D18 (≈ 65 planos) a porta non abonda:** a rolda de arranxos xa viu dous aprobados anacrónicos. Un axente
 mira cada imaxe escollida antes de montar.

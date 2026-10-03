@@ -1,0 +1,2219 @@
+{
+ "008-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno",
+   "falta: leather shoes (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 2,
+  "altas_luces": 0.1367,
+  "lume_quente": 0.011,
+  "descricion": "The image shows two young women sitting on the floor in front of a fireplace. They are both wearing long dresses and appear to be engaged in a conversation. The woman on the left is holding a small object, possibly a candle, and is looking at it intently. The fireplace is lit, and there is a vase and other decorative items on the mantelpiece. The room is dimly lit, with a window visible in the background. The overall mood of the image is peaceful and contemplative.",
+  "obxectos": [
+   "human face",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.001,
+    0.069
+   ],
+   "muros encalados (CLIP)": [
+    0.007,
+    0.084
+   ],
+   "ciprés (CLIP)": [
+    -0.056,
+    0.127
+   ],
+   "oliveiras (CLIP)": [
+    -0.077,
+    0.103
+   ],
+   "palmeiras (CLIP)": [
+    -0.011,
+    0.139
+   ],
+   "rodas de raios (CLIP)": [
+    0.04,
+    0.11
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.009,
+    0.067
+   ],
+   "eucaliptos (CLIP)": [
+    -0.026,
+    0.051
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.002,
+    0.088
+   ],
+   "luces de cidade (CLIP)": [
+    -0.03,
+    0.131
+   ],
+   "salón moderno (CLIP)": [
+    0.001,
+    0.171
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.002,
+    0.066
+   ],
+   "casas británicas (CLIP)": [
+    0.045,
+    0.105
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.01,
+    0.19
+   ],
+   "catedral inventada (CLIP)": [
+    -0.02,
+    0.059
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.075,
+    0.206
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.095,
+    0.171
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.054,
+    0.164
+   ],
+   "cadros na parede (CLIP)": [
+    0.033,
+    0.196
+   ],
+   "farol victoriano (CLIP)": [
+    -0.029,
+    0.127
+   ],
+   "clave: leather shoes": 1.04,
+   "clave_v5: leather shoes": -0.003
+  },
+  "arquetipo": null,
+  "s_revision": 10.7
+ },
+ "008-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "chaqueta de tweed (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0349,
+  "lume_quente": 0.0,
+  "descricion": "The image is a black and white photograph of a person's feet and feet. The person is sitting on a wooden floor with their legs crossed. They are wearing a pair of black shoes with laces. The shoes appear to be made of leather and have a lace-up design. The background is blurred, but it appears to be a room with a window and a plant. The focus of the image is on the person's hands and feet, which are holding a small black object. The image is taken from a low angle, looking down on the shoes.",
+  "obxectos": [
+   "footwear",
+   "human hand",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.048,
+    0.115
+   ],
+   "muros encalados (CLIP)": [
+    -0.018,
+    0.108
+   ],
+   "ciprés (CLIP)": [
+    -0.022,
+    0.11
+   ],
+   "oliveiras (CLIP)": [
+    0.002,
+    0.073
+   ],
+   "palmeiras (CLIP)": [
+    -0.021,
+    0.118
+   ],
+   "rodas de raios (CLIP)": [
+    0.04,
+    0.088
+   ],
+   "paisaxe seca (CLIP)": [
+    0.013,
+    0.055
+   ],
+   "eucaliptos (CLIP)": [
+    -0.01,
+    0.058
+   ],
+   "luz eléctrica (CLIP)": [
+    0.01,
+    0.066
+   ],
+   "luces de cidade (CLIP)": [
+    -0.02,
+    0.112
+   ],
+   "salón moderno (CLIP)": [
+    0.004,
+    0.097
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.027,
+    0.037
+   ],
+   "casas británicas (CLIP)": [
+    0.049,
+    0.112
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.023,
+    0.105
+   ],
+   "catedral inventada (CLIP)": [
+    -0.03,
+    0.096
+   ],
+   "abrigo moderno (CLIP)": [
+    0.02,
+    0.11
+   ],
+   "chaqueta de tweed (CLIP)": [
+    0.055,
+    0.157
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.006,
+    0.137
+   ],
+   "cadros na parede (CLIP)": [
+    0.054,
+    0.16
+   ],
+   "farol victoriano (CLIP)": [
+    -0.001,
+    0.112
+   ],
+   "clave: leather shoes": 6.08,
+   "clave_v5: leather shoes": 0.075
+  },
+  "arquetipo": null,
+  "s_revision": 10.3
+ },
+ "016-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno",
+   "texto na imaxe"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.737,
+     0.788
+    ],
+    "confianza": 0.97,
+    "dist_corpo": 0.058,
+    "tamaño": 0.113
+   }
+  ],
+  "corpos": 1,
+  "altas_luces": 0.0224,
+  "lume_quente": 0.0012,
+  "descricion": "The image shows an elderly man sitting at a wooden table with an open book in front of him. He is wearing a black robe and has white hair and a serious expression on his face. The table is in a dimly lit room with a large window in the background. On either side of the table, there are two candelabras with lit candles. The overall mood of the image is somber and contemplative.",
+  "obxectos": [
+   "book",
+   "human face",
+   "man",
+   "table"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.026,
+    0.068
+   ],
+   "muros encalados (CLIP)": [
+    0.01,
+    0.062
+   ],
+   "ciprés (CLIP)": [
+    -0.089,
+    0.126
+   ],
+   "oliveiras (CLIP)": [
+    -0.054,
+    0.102
+   ],
+   "palmeiras (CLIP)": [
+    -0.049,
+    0.149
+   ],
+   "rodas de raios (CLIP)": [
+    0.044,
+    0.076
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.001,
+    0.036
+   ],
+   "eucaliptos (CLIP)": [
+    -0.093,
+    0.06
+   ],
+   "luz eléctrica (CLIP)": [
+    0.017,
+    0.07
+   ],
+   "luces de cidade (CLIP)": [
+    -0.063,
+    0.13
+   ],
+   "salón moderno (CLIP)": [
+    0.015,
+    0.079
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.015,
+    0.029
+   ],
+   "casas británicas (CLIP)": [
+    0.018,
+    0.057
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.061,
+    0.129
+   ],
+   "catedral inventada (CLIP)": [
+    0.031,
+    0.076
+   ],
+   "abrigo moderno (CLIP)": [
+    0.006,
+    0.085
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.062,
+    0.152
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.02,
+    0.11
+   ],
+   "cadros na parede (CLIP)": [
+    0.028,
+    0.153
+   ],
+   "farol victoriano (CLIP)": [
+    0.0,
+    0.086
+   ],
+   "clave: judge": 5.87,
+   "clave_v5: judge": 0.076
+  },
+  "arquetipo": null,
+  "s_revision": 10.4
+ },
+ "016-v2-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [
+   {
+    "pulso": [
+     0.37,
+     0.699
+    ],
+    "confianza": 0.98,
+    "dist_corpo": 0.027,
+    "tamaño": 0.105
+   },
+   {
+    "pulso": [
+     0.646,
+     0.698
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.016,
+    "tamaño": 0.151
+   }
+  ],
+  "corpos": 1,
+  "altas_luces": 0.0163,
+  "lume_quente": 0.0132,
+  "descricion": "The image shows a man sitting at a wooden table with a red tablecloth. He is wearing a black robe and has a serious expression on his face. On either side of the table, there are two candlesticks with lit candles. The man is holding a book in his hands and appears to be engrossed in reading it. The background is dark and the overall mood of the image is somber.",
+  "obxectos": [
+   "candle",
+   "human face",
+   "man",
+   "table"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.014,
+    0.051
+   ],
+   "muros encalados (CLIP)": [
+    0.001,
+    0.051
+   ],
+   "ciprés (CLIP)": [
+    -0.093,
+    0.109
+   ],
+   "oliveiras (CLIP)": [
+    -0.051,
+    0.087
+   ],
+   "palmeiras (CLIP)": [
+    -0.043,
+    0.132
+   ],
+   "rodas de raios (CLIP)": [
+    0.047,
+    0.067
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.008,
+    0.034
+   ],
+   "eucaliptos (CLIP)": [
+    -0.106,
+    0.054
+   ],
+   "luz eléctrica (CLIP)": [
+    0.007,
+    0.082
+   ],
+   "luces de cidade (CLIP)": [
+    -0.064,
+    0.13
+   ],
+   "salón moderno (CLIP)": [
+    0.021,
+    0.076
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.007,
+    0.027
+   ],
+   "casas británicas (CLIP)": [
+    0.037,
+    0.068
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.048,
+    0.114
+   ],
+   "catedral inventada (CLIP)": [
+    0.024,
+    0.058
+   ],
+   "abrigo moderno (CLIP)": [
+    0.022,
+    0.088
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.049,
+    0.148
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.014,
+    0.111
+   ],
+   "cadros na parede (CLIP)": [
+    0.018,
+    0.144
+   ],
+   "farol victoriano (CLIP)": [
+    0.029,
+    0.092
+   ],
+   "clave: judge": 4.85,
+   "clave_v5: judge": 0.053
+  },
+  "arquetipo": null,
+  "s_revision": 10.5
+ },
+ "019-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "cousas do século XX"
+  ],
+  "mans": [],
+  "corpos": 3,
+  "altas_luces": 0.0016,
+  "lume_quente": 0.001,
+  "descricion": "The image shows a young woman lying on a bed with her eyes closed and her head resting on a blanket. She appears to be sleeping or resting. The woman is wearing a dark robe and has her hair tied up in a bun. She is looking at the woman with a peaceful expression on her face. In the background, there is a fireplace with a candle burning on it and a framed picture hanging on the wall. The room is dimly lit, creating a cozy atmosphere. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "human face",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.002,
+    0.118
+   ],
+   "muros encalados (CLIP)": [
+    -0.001,
+    0.088
+   ],
+   "ciprés (CLIP)": [
+    -0.008,
+    0.112
+   ],
+   "oliveiras (CLIP)": [
+    -0.032,
+    0.101
+   ],
+   "palmeiras (CLIP)": [
+    -0.024,
+    0.13
+   ],
+   "rodas de raios (CLIP)": [
+    0.025,
+    0.098
+   ],
+   "paisaxe seca (CLIP)": [
+    0.022,
+    0.073
+   ],
+   "eucaliptos (CLIP)": [
+    -0.029,
+    0.071
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.018,
+    0.119
+   ],
+   "luces de cidade (CLIP)": [
+    -0.029,
+    0.139
+   ],
+   "salón moderno (CLIP)": [
+    -0.011,
+    0.152
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.011,
+    0.088
+   ],
+   "casas británicas (CLIP)": [
+    0.039,
+    0.122
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.028,
+    0.168
+   ],
+   "catedral inventada (CLIP)": [
+    -0.014,
+    0.08
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.07,
+    0.197
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.066,
+    0.197
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.045,
+    0.166
+   ],
+   "cadros na parede (CLIP)": [
+    0.018,
+    0.177
+   ],
+   "farol victoriano (CLIP)": [
+    -0.016,
+    0.109
+   ],
+   "clave: old woman": 1.92,
+   "clave_v5: old woman": 0.021
+  },
+  "arquetipo": null,
+  "s_revision": 11.3
+ },
+ "019-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "man sen corpo (2)"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.223,
+     0.52
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.245,
+    "tamaño": 0.265
+   },
+   {
+    "pulso": [
+     0.729,
+     0.387
+    ],
+    "confianza": 0.94,
+    "dist_corpo": 0.793,
+    "tamaño": 0.218
+   }
+  ],
+  "corpos": 1,
+  "altas_luces": 0.0097,
+  "lume_quente": 0.0092,
+  "descricion": "The image shows two people sitting on a bed, holding a small bowl of green tea. The person on the left is wearing a brown sweater and is holding the bowl with both hands. The bowl is filled with the tea and the person in the middle is holding it with their hands. In the background, there is a fireplace with a warm glow. The image is taken from a low angle, with the focus on the hands and the bowl. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "human hand",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.018,
+    0.087
+   ],
+   "muros encalados (CLIP)": [
+    -0.017,
+    0.101
+   ],
+   "ciprés (CLIP)": [
+    -0.016,
+    0.123
+   ],
+   "oliveiras (CLIP)": [
+    -0.035,
+    0.138
+   ],
+   "palmeiras (CLIP)": [
+    -0.031,
+    0.145
+   ],
+   "rodas de raios (CLIP)": [
+    0.033,
+    0.127
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.046,
+    0.148
+   ],
+   "eucaliptos (CLIP)": [
+    -0.053,
+    0.081
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.031,
+    0.055
+   ],
+   "luces de cidade (CLIP)": [
+    -0.031,
+    0.099
+   ],
+   "salón moderno (CLIP)": [
+    -0.066,
+    0.16
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.019,
+    0.078
+   ],
+   "casas británicas (CLIP)": [
+    0.015,
+    0.089
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.017,
+    0.187
+   ],
+   "catedral inventada (CLIP)": [
+    -0.056,
+    0.109
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.079,
+    0.172
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.097,
+    0.202
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.053,
+    0.16
+   ],
+   "cadros na parede (CLIP)": [
+    -0.006,
+    0.153
+   ],
+   "farol victoriano (CLIP)": [
+    -0.059,
+    0.097
+   ],
+   "clave: old woman": 1.88,
+   "clave_v5: old woman": 0.007
+  },
+  "arquetipo": {
+   "etiqueta": "mans en primeiro plano",
+   "sim": 0.185
+  },
+  "s_revision": 13.6
+ },
+ "020-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "obxectos modernos",
+   "farol victoriano (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0012,
+  "lume_quente": 0.0002,
+  "descricion": "The image shows two men standing in a park at night, facing each other. They are both wearing long robes and appear to be engaged in a conversation. The park is lit up with street lamps, creating a warm glow. In the background, there is a large stone archway with intricate carvings and a statue of a man sitting on a bench. The sky is dark and the moon is visible in the top left corner of the image. The overall mood of the scene is peaceful and contemplative.",
+  "obxectos": [
+   "man",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.049,
+    0.111
+   ],
+   "muros encalados (CLIP)": [
+    -0.054,
+    0.132
+   ],
+   "ciprés (CLIP)": [
+    0.002,
+    0.146
+   ],
+   "oliveiras (CLIP)": [
+    -0.04,
+    0.116
+   ],
+   "palmeiras (CLIP)": [
+    -0.034,
+    0.146
+   ],
+   "rodas de raios (CLIP)": [
+    0.049,
+    0.085
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.007,
+    0.097
+   ],
+   "eucaliptos (CLIP)": [
+    -0.012,
+    0.075
+   ],
+   "luz eléctrica (CLIP)": [
+    0.011,
+    0.176
+   ],
+   "luces de cidade (CLIP)": [
+    -0.018,
+    0.192
+   ],
+   "salón moderno (CLIP)": [
+    0.019,
+    0.102
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.038,
+    0.17
+   ],
+   "casas británicas (CLIP)": [
+    0.043,
+    0.142
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.07,
+    0.156
+   ],
+   "catedral inventada (CLIP)": [
+    -0.007,
+    0.133
+   ],
+   "abrigo moderno (CLIP)": [
+    0.03,
+    0.141
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.01,
+    0.172
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.019,
+    0.125
+   ],
+   "cadros na parede (CLIP)": [
+    -0.01,
+    0.188
+   ],
+   "farol victoriano (CLIP)": [
+    0.083,
+    0.195
+   ],
+   "clave: fountain": 2.7,
+   "clave_v5: fountain": 0.009
+  },
+  "arquetipo": null,
+  "s_revision": 9.8
+ },
+ "020-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "farol victoriano (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0023,
+  "lume_quente": 0.0002,
+  "descricion": "The image shows a group of five people standing in a line in a park at night. They are all dressed in medieval-style clothing and appear to be engaged in a conversation. The person on the left is holding a book and appears to be reading, while the person in the middle is looking at it intently. The background is dark and there is a full moon visible in the sky. On the right side of the image, there is an ancient stone archway with columns and a fountain in front of it. The archway is surrounded by trees and shrubs, and the ground",
+  "obxectos": [
+   "man",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.019,
+    0.099
+   ],
+   "muros encalados (CLIP)": [
+    -0.041,
+    0.127
+   ],
+   "ciprés (CLIP)": [
+    0.008,
+    0.12
+   ],
+   "oliveiras (CLIP)": [
+    -0.037,
+    0.13
+   ],
+   "palmeiras (CLIP)": [
+    -0.022,
+    0.144
+   ],
+   "rodas de raios (CLIP)": [
+    0.035,
+    0.102
+   ],
+   "paisaxe seca (CLIP)": [
+    0.005,
+    0.116
+   ],
+   "eucaliptos (CLIP)": [
+    -0.02,
+    0.085
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.001,
+    0.153
+   ],
+   "luces de cidade (CLIP)": [
+    -0.017,
+    0.175
+   ],
+   "salón moderno (CLIP)": [
+    -0.025,
+    0.102
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.008,
+    0.156
+   ],
+   "casas británicas (CLIP)": [
+    0.018,
+    0.113
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.054,
+    0.167
+   ],
+   "catedral inventada (CLIP)": [
+    -0.032,
+    0.142
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.015,
+    0.16
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.069,
+    0.185
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.01,
+    0.137
+   ],
+   "cadros na parede (CLIP)": [
+    -0.027,
+    0.188
+   ],
+   "farol victoriano (CLIP)": [
+    0.075,
+    0.168
+   ],
+   "clave: fountain": 4.57,
+   "clave_v5: fountain": 0.03
+  },
+  "arquetipo": {
+   "etiqueta": "camiñantes de costas",
+   "sim": 0.203
+  },
+  "s_revision": 11.1
+ },
+ "026-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "casas británicas (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 0,
+  "altas_luces": 0.0567,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a dirt road winding through a green field with rolling hills in the background. The sky is cloudy and the sun is shining brightly, casting a warm glow over the scene. The field is covered in lush green grass and there is a stone wall on one side of the road. The road appears to be in a rural area, as there are no people visible in the image. The overall mood of the image is peaceful and serene.",
+  "obxectos": [
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.013,
+    0.136
+   ],
+   "muros encalados (CLIP)": [
+    -0.013,
+    0.135
+   ],
+   "ciprés (CLIP)": [
+    0.002,
+    0.131
+   ],
+   "oliveiras (CLIP)": [
+    -0.065,
+    0.189
+   ],
+   "palmeiras (CLIP)": [
+    -0.035,
+    0.157
+   ],
+   "rodas de raios (CLIP)": [
+    0.008,
+    0.104
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.003,
+    0.19
+   ],
+   "eucaliptos (CLIP)": [
+    0.017,
+    0.095
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.023,
+    0.13
+   ],
+   "luces de cidade (CLIP)": [
+    -0.031,
+    0.17
+   ],
+   "salón moderno (CLIP)": [
+    0.006,
+    0.076
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.013,
+    0.069
+   ],
+   "casas británicas (CLIP)": [
+    0.061,
+    0.175
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.014,
+    0.106
+   ],
+   "catedral inventada (CLIP)": [
+    -0.017,
+    0.09
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.041,
+    0.124
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.011,
+    0.165
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.014,
+    0.145
+   ],
+   "cadros na parede (CLIP)": [
+    -0.06,
+    0.229
+   ],
+   "farol victoriano (CLIP)": [
+    -0.049,
+    0.169
+   ],
+   "clave: stream": 1.82,
+   "clave_v5: stream": 0.011
+  },
+  "arquetipo": null,
+  "s_revision": 10.7
+ },
+ "026-v2-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0648,
+  "lume_quente": 0.0027,
+  "descricion": "The image shows a woman standing in a small stream in a green field with two cows. The woman is wearing a green dress and a cap, and is holding a phone in her hand. She appears to be looking at the cows with a curious expression. The cows are brown and appear to be grazing on the grass. In the background, there are mountains and trees, and the sky is blue and the sun is shining, creating a warm glow on the scene. The water in the stream is calm and reflects the colors of the sky.",
+  "obxectos": [
+   "cattle",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.051,
+    0.096
+   ],
+   "muros encalados (CLIP)": [
+    -0.021,
+    0.101
+   ],
+   "ciprés (CLIP)": [
+    -0.005,
+    0.108
+   ],
+   "oliveiras (CLIP)": [
+    -0.11,
+    0.183
+   ],
+   "palmeiras (CLIP)": [
+    -0.054,
+    0.148
+   ],
+   "rodas de raios (CLIP)": [
+    -0.047,
+    0.148
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.025,
+    0.162
+   ],
+   "eucaliptos (CLIP)": [
+    -0.038,
+    0.095
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.028,
+    0.069
+   ],
+   "luces de cidade (CLIP)": [
+    -0.01,
+    0.133
+   ],
+   "salón moderno (CLIP)": [
+    -0.017,
+    0.089
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.081,
+    0.112
+   ],
+   "casas británicas (CLIP)": [
+    0.052,
+    0.086
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.019,
+    0.133
+   ],
+   "catedral inventada (CLIP)": [
+    -0.01,
+    0.07
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.042,
+    0.174
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.039,
+    0.171
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.016,
+    0.154
+   ],
+   "cadros na parede (CLIP)": [
+    -0.001,
+    0.165
+   ],
+   "farol victoriano (CLIP)": [
+    -0.042,
+    0.154
+   ],
+   "clave: stream": 3.41,
+   "clave_v5: stream": 0.039
+  },
+  "arquetipo": null,
+  "s_revision": 10.5
+ },
+ "033-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno",
+   "luz eléctrica (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0374,
+  "lume_quente": 0.0001,
+  "descricion": "The image shows an elderly woman walking down a cobblestone street in a medieval town. She is wearing a red skirt and a white blouse, and is carrying a basket on her back. The street is lined with stone buildings on both sides, and there are potted plants on the left and right sides of the street. The buildings have arched windows and doors, and the street is narrow and narrow. The sky is blue and the sun is shining, casting a warm glow on the scene. The overall atmosphere of the image is peaceful and serene.",
+  "obxectos": [
+   "building",
+   "fancy dress",
+   "footwear",
+   "houseplant",
+   "window",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.021,
+    0.145
+   ],
+   "muros encalados (CLIP)": [
+    0.019,
+    0.175
+   ],
+   "ciprés (CLIP)": [
+    0.029,
+    0.142
+   ],
+   "oliveiras (CLIP)": [
+    -0.031,
+    0.136
+   ],
+   "palmeiras (CLIP)": [
+    -0.031,
+    0.146
+   ],
+   "rodas de raios (CLIP)": [
+    0.019,
+    0.119
+   ],
+   "paisaxe seca (CLIP)": [
+    0.056,
+    0.148
+   ],
+   "eucaliptos (CLIP)": [
+    -0.017,
+    0.074
+   ],
+   "luz eléctrica (CLIP)": [
+    0.023,
+    0.154
+   ],
+   "luces de cidade (CLIP)": [
+    -0.015,
+    0.126
+   ],
+   "salón moderno (CLIP)": [
+    0.012,
+    0.144
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.021,
+    0.16
+   ],
+   "casas británicas (CLIP)": [
+    -0.009,
+    0.163
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.01,
+    0.152
+   ],
+   "catedral inventada (CLIP)": [
+    -0.045,
+    0.122
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.067,
+    0.184
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.071,
+    0.183
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.064,
+    0.171
+   ],
+   "cadros na parede (CLIP)": [
+    -0.038,
+    0.222
+   ],
+   "farol victoriano (CLIP)": [
+    -0.001,
+    0.11
+   ],
+   "clave: two women": 1.68,
+   "clave_v5: two women": -0.01
+  },
+  "arquetipo": null,
+  "s_revision": 11.3
+ },
+ "033-v2-lightning1024": {
+  "ok": true,
+  "problemas": [],
+  "mans": [
+   {
+    "pulso": [
+     0.38,
+     0.543
+    ],
+    "confianza": 0.93,
+    "dist_corpo": 0.035,
+    "tamaño": 0.031
+   }
+  ],
+  "corpos": 1,
+  "altas_luces": 0.0118,
+  "lume_quente": 0.0,
+  "descricion": "The image shows an elderly woman sitting on the steps of an old stone building. She is wearing a long orange robe and a blue headscarf. She has a serious expression on her face and is looking off to the side. There are two large woven baskets on either side of her, one on the ground and the other on the right side of the image. The building appears to be made of stone and has a wooden door in the background. The overall atmosphere of the scene is peaceful and contemplative.",
+  "obxectos": [
+   "footwear",
+   "human face",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.046,
+    0.149
+   ],
+   "muros encalados (CLIP)": [
+    0.019,
+    0.131
+   ],
+   "ciprés (CLIP)": [
+    -0.024,
+    0.115
+   ],
+   "oliveiras (CLIP)": [
+    -0.035,
+    0.114
+   ],
+   "palmeiras (CLIP)": [
+    -0.013,
+    0.135
+   ],
+   "rodas de raios (CLIP)": [
+    0.023,
+    0.161
+   ],
+   "paisaxe seca (CLIP)": [
+    0.042,
+    0.12
+   ],
+   "eucaliptos (CLIP)": [
+    -0.038,
+    0.064
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.017,
+    0.099
+   ],
+   "luces de cidade (CLIP)": [
+    -0.041,
+    0.117
+   ],
+   "salón moderno (CLIP)": [
+    -0.026,
+    0.155
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.022,
+    0.134
+   ],
+   "casas británicas (CLIP)": [
+    -0.038,
+    0.11
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.014,
+    0.181
+   ],
+   "catedral inventada (CLIP)": [
+    -0.065,
+    0.152
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.078,
+    0.222
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.14,
+    0.226
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.053,
+    0.175
+   ],
+   "cadros na parede (CLIP)": [
+    -0.029,
+    0.204
+   ],
+   "farol victoriano (CLIP)": [
+    -0.082,
+    0.151
+   ],
+   "clave: two women": 2.57,
+   "clave_v5: two women": 0.023
+  },
+  "arquetipo": null,
+  "s_revision": 10.7
+ },
+ "037-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "cousas do século XX"
+  ],
+  "mans": [],
+  "corpos": 1,
+  "altas_luces": 0.0014,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a small stone church with a steeple and a clock tower in the center. The church is located in a grassy field with a dirt path leading up to it. The sky is overcast and there are trees in the background. The grass is green and there is a fence surrounding the church. There is a small shed on the right side of the image and a few people can be seen walking on the path. The overall atmosphere is peaceful and serene.",
+  "obxectos": [
+   "building"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.046,
+    0.153
+   ],
+   "muros encalados (CLIP)": [
+    -0.075,
+    0.174
+   ],
+   "ciprés (CLIP)": [
+    0.006,
+    0.179
+   ],
+   "oliveiras (CLIP)": [
+    -0.077,
+    0.208
+   ],
+   "palmeiras (CLIP)": [
+    -0.071,
+    0.182
+   ],
+   "rodas de raios (CLIP)": [
+    0.018,
+    0.115
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.014,
+    0.18
+   ],
+   "eucaliptos (CLIP)": [
+    -0.005,
+    0.139
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.01,
+    0.106
+   ],
+   "luces de cidade (CLIP)": [
+    -0.051,
+    0.14
+   ],
+   "salón moderno (CLIP)": [
+    -0.021,
+    0.131
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.052,
+    0.164
+   ],
+   "casas británicas (CLIP)": [
+    0.004,
+    0.17
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.005,
+    0.115
+   ],
+   "catedral inventada (CLIP)": [
+    -0.077,
+    0.237
+   ],
+   "abrigo moderno (CLIP)": [
+    0.013,
+    0.135
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.009,
+    0.148
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.011,
+    0.139
+   ],
+   "cadros na parede (CLIP)": [
+    -0.043,
+    0.192
+   ],
+   "farol victoriano (CLIP)": [
+    0.023,
+    0.132
+   ],
+   "clave: church": 5.09,
+   "clave_v5: church": 0.049
+  },
+  "arquetipo": null,
+  "s_revision": 10.1
+ },
+ "037-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "texto na imaxe",
+   "casas británicas (CLIP)"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.33,
+     0.604
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.008,
+    "tamaño": 0.056
+   }
+  ],
+  "corpos": 1,
+  "altas_luces": 0.0131,
+  "lume_quente": 0.0,
+  "descricion": "The image shows a man standing on a cobblestone street in an old town. He is wearing a black robe and a black hat, and is holding a piece of paper in his hands. He appears to be reading or writing something intently. Behind him, there are two other men dressed in black robes, one of whom is standing in front of a stone building with a chimney. The street is lined with old stone buildings, and there are trees and bushes on either side. The sky is overcast and the overall mood of the image is somber.",
+  "obxectos": [
+   "house",
+   "human face",
+   "man",
+   "window"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.044,
+    0.162
+   ],
+   "muros encalados (CLIP)": [
+    -0.019,
+    0.173
+   ],
+   "ciprés (CLIP)": [
+    0.007,
+    0.103
+   ],
+   "oliveiras (CLIP)": [
+    -0.059,
+    0.12
+   ],
+   "palmeiras (CLIP)": [
+    -0.032,
+    0.119
+   ],
+   "rodas de raios (CLIP)": [
+    0.034,
+    0.112
+   ],
+   "paisaxe seca (CLIP)": [
+    0.008,
+    0.103
+   ],
+   "eucaliptos (CLIP)": [
+    0.01,
+    0.054
+   ],
+   "luz eléctrica (CLIP)": [
+    0.009,
+    0.141
+   ],
+   "luces de cidade (CLIP)": [
+    -0.045,
+    0.121
+   ],
+   "salón moderno (CLIP)": [
+    -0.028,
+    0.145
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.019,
+    0.125
+   ],
+   "casas británicas (CLIP)": [
+    0.019,
+    0.182
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.003,
+    0.129
+   ],
+   "catedral inventada (CLIP)": [
+    -0.026,
+    0.104
+   ],
+   "abrigo moderno (CLIP)": [
+    0.003,
+    0.183
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.047,
+    0.206
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.021,
+    0.177
+   ],
+   "cadros na parede (CLIP)": [
+    -0.023,
+    0.22
+   ],
+   "farol victoriano (CLIP)": [
+    0.029,
+    0.141
+   ],
+   "clave: church": 3.18,
+   "clave_v5: church": 0.037
+  },
+  "arquetipo": null,
+  "s_revision": 11.7
+ },
+ "048-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.671,
+     0.84
+    ],
+    "confianza": 1.0,
+    "dist_corpo": 0.029,
+    "tamaño": 0.103
+   }
+  ],
+  "corpos": 1,
+  "altas_luces": 0.033,
+  "lume_quente": 0.0,
+  "descricion": "The image shows two men sitting at a wooden table in a cozy kitchen. They are both wearing beige sweaters and have long beards. The man on the left has a beard and is holding a white mug in his hand. He is looking at the other man with a smile on his face. The background shows a window with curtains and a plant. The overall mood of the image is happy and relaxed.",
+  "obxectos": [
+   "human face",
+   "man",
+   "table"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.007,
+    0.103
+   ],
+   "muros encalados (CLIP)": [
+    0.01,
+    0.112
+   ],
+   "ciprés (CLIP)": [
+    -0.019,
+    0.114
+   ],
+   "oliveiras (CLIP)": [
+    -0.045,
+    0.113
+   ],
+   "palmeiras (CLIP)": [
+    -0.003,
+    0.126
+   ],
+   "rodas de raios (CLIP)": [
+    0.013,
+    0.093
+   ],
+   "paisaxe seca (CLIP)": [
+    0.017,
+    0.093
+   ],
+   "eucaliptos (CLIP)": [
+    0.006,
+    0.055
+   ],
+   "luz eléctrica (CLIP)": [
+    0.016,
+    0.057
+   ],
+   "luces de cidade (CLIP)": [
+    -0.041,
+    0.119
+   ],
+   "salón moderno (CLIP)": [
+    0.015,
+    0.134
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.03,
+    0.069
+   ],
+   "casas británicas (CLIP)": [
+    0.018,
+    0.103
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.0,
+    0.132
+   ],
+   "catedral inventada (CLIP)": [
+    -0.013,
+    0.058
+   ],
+   "abrigo moderno (CLIP)": [
+    0.009,
+    0.092
+   ],
+   "chaqueta de tweed (CLIP)": [
+    0.028,
+    0.174
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.063,
+    0.189
+   ],
+   "cadros na parede (CLIP)": [
+    0.02,
+    0.168
+   ],
+   "farol victoriano (CLIP)": [
+    -0.079,
+    0.143
+   ],
+   "clave: clay cup": 4.53,
+   "clave_v5: clay cup": 0.038
+  },
+  "arquetipo": null,
+  "s_revision": 10.0
+ },
+ "048-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "man sen corpo (1)"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.312,
+     0.782
+    ],
+    "confianza": 0.95,
+    "dist_corpo": 0.389,
+    "tamaño": 0.091
+   },
+   {
+    "pulso": [
+     0.779,
+     0.767
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.11,
+    "tamaño": 0.084
+   }
+  ],
+  "corpos": 2,
+  "altas_luces": 0.0065,
+  "lume_quente": 0.0085,
+  "descricion": "The image shows four young people sitting around a wooden table in a dimly lit room. They are all smiling and appear to be enjoying a meal together. In the center of the table, there is a large bowl of fire with a flame burning brightly. The bowl is filled with orange flames and there are two cups and a plate on the table. The people are holding spoons and are laughing, suggesting that they are having a good time. The room has wooden walls and a chandelier hanging from the ceiling.",
+  "obxectos": [
+   "human face",
+   "man",
+   "table",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.025,
+    0.122
+   ],
+   "muros encalados (CLIP)": [
+    0.03,
+    0.106
+   ],
+   "ciprés (CLIP)": [
+    -0.048,
+    0.102
+   ],
+   "oliveiras (CLIP)": [
+    -0.026,
+    0.073
+   ],
+   "palmeiras (CLIP)": [
+    -0.004,
+    0.108
+   ],
+   "rodas de raios (CLIP)": [
+    0.022,
+    0.109
+   ],
+   "paisaxe seca (CLIP)": [
+    0.043,
+    0.082
+   ],
+   "eucaliptos (CLIP)": [
+    0.003,
+    0.033
+   ],
+   "luz eléctrica (CLIP)": [
+    0.01,
+    0.086
+   ],
+   "luces de cidade (CLIP)": [
+    -0.021,
+    0.119
+   ],
+   "salón moderno (CLIP)": [
+    -0.068,
+    0.19
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.022,
+    0.107
+   ],
+   "casas británicas (CLIP)": [
+    -0.015,
+    0.084
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.008,
+    0.19
+   ],
+   "catedral inventada (CLIP)": [
+    -0.022,
+    0.063
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.018,
+    0.091
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.005,
+    0.113
+   ],
+   "sombreiro moderno (CLIP)": [
+    0.011,
+    0.136
+   ],
+   "cadros na parede (CLIP)": [
+    0.027,
+    0.158
+   ],
+   "farol victoriano (CLIP)": [
+    -0.036,
+    0.14
+   ],
+   "clave: clay cup": 3.49,
+   "clave_v5: clay cup": 0.034
+  },
+  "arquetipo": null,
+  "s_revision": 10.7
+ },
+ "084-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "man sen corpo (2)",
+   "interior moderno"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.221,
+     0.409
+    ],
+    "confianza": 1.0,
+    "dist_corpo": 0.484,
+    "tamaño": 0.197
+   },
+   {
+    "pulso": [
+     0.751,
+     0.312
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.304,
+    "tamaño": 0.229
+   }
+  ],
+  "corpos": 2,
+  "altas_luces": 0.0186,
+  "lume_quente": 0.0028,
+  "descricion": "The image shows two hands reaching for a small clay pot on a wooden table. The pot is filled with a dark brown substance, which appears to be a mixture of spices or herbs. The hands are positioned in a way that suggests they are about to pour the mixture into the pot. On the table, there are also some dried herbs and a small bowl of green herbs. In the background, there is a fireplace with a warm glow. The overall mood of the image is cozy and inviting.",
+  "obxectos": [
+   "flowerpot",
+   "houseplant",
+   "person"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.019,
+    0.1
+   ],
+   "muros encalados (CLIP)": [
+    -0.001,
+    0.099
+   ],
+   "ciprés (CLIP)": [
+    -0.036,
+    0.127
+   ],
+   "oliveiras (CLIP)": [
+    -0.042,
+    0.105
+   ],
+   "palmeiras (CLIP)": [
+    -0.031,
+    0.122
+   ],
+   "rodas de raios (CLIP)": [
+    0.033,
+    0.12
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.014,
+    0.087
+   ],
+   "eucaliptos (CLIP)": [
+    -0.066,
+    0.072
+   ],
+   "luz eléctrica (CLIP)": [
+    -0.024,
+    0.057
+   ],
+   "luces de cidade (CLIP)": [
+    -0.019,
+    0.099
+   ],
+   "salón moderno (CLIP)": [
+    -0.076,
+    0.186
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.01,
+    0.064
+   ],
+   "casas británicas (CLIP)": [
+    0.023,
+    0.105
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.039,
+    0.192
+   ],
+   "catedral inventada (CLIP)": [
+    -0.049,
+    0.082
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.081,
+    0.131
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.075,
+    0.167
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.049,
+    0.147
+   ],
+   "cadros na parede (CLIP)": [
+    -0.016,
+    0.152
+   ],
+   "farol victoriano (CLIP)": [
+    -0.033,
+    0.089
+   ],
+   "clave: stone mortar": 2.3,
+   "clave_v5: stone mortar": 0.04
+  },
+  "arquetipo": null,
+  "s_revision": 11.1
+ },
+ "084-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "interior moderno",
+   "cousas do século XX",
+   "falta: stone mortar (CLIP)"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.468,
+     0.74
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.024,
+    "tamaño": 0.078
+   },
+   {
+    "pulso": [
+     0.753,
+     0.797
+    ],
+    "confianza": 0.97,
+    "dist_corpo": 0.001,
+    "tamaño": 0.097
+   }
+  ],
+  "corpos": 2,
+  "altas_luces": 0.0452,
+  "lume_quente": 0.0,
+  "descricion": "The image shows two young women in a kitchen, wearing aprons and working together on a wooden table. They are both smiling and appear to be focused on their work. On the table, there are several pots and a bowl of flour, as well as some green herbs. The kitchen has large windows that let in natural light, and there is a painting hanging on the wall in the background. The women are working together to create a beautiful and intricate design.",
+  "obxectos": [
+   "bowl",
+   "flowerpot",
+   "houseplant",
+   "human face",
+   "table",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.016,
+    0.115
+   ],
+   "muros encalados (CLIP)": [
+    0.006,
+    0.116
+   ],
+   "ciprés (CLIP)": [
+    -0.037,
+    0.133
+   ],
+   "oliveiras (CLIP)": [
+    -0.073,
+    0.146
+   ],
+   "palmeiras (CLIP)": [
+    -0.029,
+    0.143
+   ],
+   "rodas de raios (CLIP)": [
+    0.057,
+    0.129
+   ],
+   "paisaxe seca (CLIP)": [
+    -0.005,
+    0.099
+   ],
+   "eucaliptos (CLIP)": [
+    -0.003,
+    0.045
+   ],
+   "luz eléctrica (CLIP)": [
+    0.007,
+    0.084
+   ],
+   "luces de cidade (CLIP)": [
+    -0.033,
+    0.113
+   ],
+   "salón moderno (CLIP)": [
+    -0.072,
+    0.176
+   ],
+   "patio mediterráneo (CLIP)": [
+    0.023,
+    0.086
+   ],
+   "casas británicas (CLIP)": [
+    0.031,
+    0.147
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.038,
+    0.147
+   ],
+   "catedral inventada (CLIP)": [
+    -0.035,
+    0.068
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.044,
+    0.159
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.022,
+    0.124
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.059,
+    0.153
+   ],
+   "cadros na parede (CLIP)": [
+    -0.0,
+    0.179
+   ],
+   "farol victoriano (CLIP)": [
+    -0.007,
+    0.103
+   ],
+   "clave: stone mortar": 1.41,
+   "clave_v5: stone mortar": 0.015
+  },
+  "arquetipo": null,
+  "s_revision": 10.3
+ },
+ "092-v1-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "obxectos modernos",
+   "cousas do século XX"
+  ],
+  "mans": [
+   {
+    "pulso": [
+     0.227,
+     0.767
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.019,
+    "tamaño": 0.113
+   },
+   {
+    "pulso": [
+     0.638,
+     0.807
+    ],
+    "confianza": 0.99,
+    "dist_corpo": 0.033,
+    "tamaño": 0.11
+   },
+   {
+    "pulso": [
+     0.471,
+     0.739
+    ],
+    "confianza": 0.97,
+    "dist_corpo": 0.03,
+    "tamaño": 0.076
+   }
+  ],
+  "corpos": 2,
+  "altas_luces": 0.0027,
+  "lume_quente": 0.0087,
+  "descricion": "The image shows two older men sitting at a wooden table in a dimly lit room. They are both wearing casual clothes and appear to be engaged in a conversation. The man on the left is wearing a brown vest and a white shirt, while the man in the middle is wearing glasses and a gray sweater. On the table, there is a small bowl of food and a glass of red wine. In the background, there are shelves with bottles of wine and a light fixture hanging from the ceiling. The overall mood of the image is somber and contemplative.",
+  "obxectos": [
+   "human face",
+   "man",
+   "table"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    0.013,
+    0.084
+   ],
+   "muros encalados (CLIP)": [
+    0.031,
+    0.088
+   ],
+   "ciprés (CLIP)": [
+    -0.058,
+    0.111
+   ],
+   "oliveiras (CLIP)": [
+    0.013,
+    0.089
+   ],
+   "palmeiras (CLIP)": [
+    -0.017,
+    0.109
+   ],
+   "rodas de raios (CLIP)": [
+    0.01,
+    0.093
+   ],
+   "paisaxe seca (CLIP)": [
+    0.05,
+    0.084
+   ],
+   "eucaliptos (CLIP)": [
+    -0.042,
+    0.035
+   ],
+   "luz eléctrica (CLIP)": [
+    0.012,
+    0.095
+   ],
+   "luces de cidade (CLIP)": [
+    -0.031,
+    0.13
+   ],
+   "salón moderno (CLIP)": [
+    -0.023,
+    0.135
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.006,
+    0.065
+   ],
+   "casas británicas (CLIP)": [
+    0.03,
+    0.076
+   ],
+   "caldeiro de meiga (CLIP)": [
+    0.013,
+    0.12
+   ],
+   "catedral inventada (CLIP)": [
+    -0.004,
+    0.049
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.024,
+    0.104
+   ],
+   "chaqueta de tweed (CLIP)": [
+    0.027,
+    0.157
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.04,
+    0.151
+   ],
+   "cadros na parede (CLIP)": [
+    0.023,
+    0.144
+   ],
+   "farol victoriano (CLIP)": [
+    -0.047,
+    0.124
+   ],
+   "clave: clay cups": 2.55,
+   "clave_v5: clay cups": 0.026
+  },
+  "arquetipo": null,
+  "s_revision": 11.7
+ },
+ "092-v2-lightning1024": {
+  "ok": false,
+  "problemas": [
+   "cousas do século XX",
+   "falta: clay cups (CLIP)"
+  ],
+  "mans": [],
+  "corpos": 2,
+  "altas_luces": 0.0044,
+  "lume_quente": 0.0096,
+  "descricion": "The image shows a group of five elderly men sitting around a fire in a living room. The room is dimly lit with a warm glow from the fire. The men are dressed in traditional clothing, with some wearing robes and others wearing robes. They are sitting on the floor in front of the fireplace, which is made of wood and has a small wooden pot on top. The fireplace is lit with orange and yellow flames, creating a cozy atmosphere. On the left side of the image, there is a small table with a lamp and other decorative items. The walls are decorated with framed pictures",
+  "obxectos": [
+   "furniture",
+   "human face",
+   "man",
+   "woman"
+  ],
+  "iconografia": {
+   "tellados laranxas (CLIP)": [
+    -0.002,
+    0.103
+   ],
+   "muros encalados (CLIP)": [
+    0.025,
+    0.141
+   ],
+   "ciprés (CLIP)": [
+    -0.042,
+    0.123
+   ],
+   "oliveiras (CLIP)": [
+    -0.032,
+    0.121
+   ],
+   "palmeiras (CLIP)": [
+    -0.041,
+    0.147
+   ],
+   "rodas de raios (CLIP)": [
+    0.02,
+    0.115
+   ],
+   "paisaxe seca (CLIP)": [
+    0.027,
+    0.091
+   ],
+   "eucaliptos (CLIP)": [
+    -0.032,
+    0.074
+   ],
+   "luz eléctrica (CLIP)": [
+    0.002,
+    0.101
+   ],
+   "luces de cidade (CLIP)": [
+    -0.026,
+    0.142
+   ],
+   "salón moderno (CLIP)": [
+    -0.02,
+    0.207
+   ],
+   "patio mediterráneo (CLIP)": [
+    -0.003,
+    0.075
+   ],
+   "casas británicas (CLIP)": [
+    0.014,
+    0.113
+   ],
+   "caldeiro de meiga (CLIP)": [
+    -0.032,
+    0.212
+   ],
+   "catedral inventada (CLIP)": [
+    -0.049,
+    0.113
+   ],
+   "abrigo moderno (CLIP)": [
+    -0.112,
+    0.163
+   ],
+   "chaqueta de tweed (CLIP)": [
+    -0.142,
+    0.211
+   ],
+   "sombreiro moderno (CLIP)": [
+    -0.062,
+    0.127
+   ],
+   "cadros na parede (CLIP)": [
+    -0.001,
+    0.181
+   ],
+   "farol victoriano (CLIP)": [
+    -0.019,
+    0.104
+   ],
+   "clave: clay cups": 0.67,
+   "clave_v5: clay cups": -0.025
+  },
+  "arquetipo": {
+   "etiqueta": "persoa á lareira",
+   "sim": 0.249
+  },
+  "s_revision": 11.8
+ }
+}
