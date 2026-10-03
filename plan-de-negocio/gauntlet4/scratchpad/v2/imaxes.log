@@ -148,3 +148,13 @@ imaxe  40 intento 1 125.0s + revisión 10.1s ['cousas do século XX', 'texto na 
 imaxe  40 intento 2 119.9s + revisión 10.9s ['cousas do século XX']
 imaxe  41 intento 0 123.2s + revisión 10.2s ok
 imaxe  42 intento 0 116.4s + revisión 11.8s ok
+imaxe  43 intento 0 126.9s + revisión 11.5s ['oliveiras (CLIP)', 'paisaxe seca (CLIP)']
+imaxe  43 intento 1 132.7s + revisión 11.9s ['roupa actual']
+imaxe  43 intento 2 126.8s + revisión 11.2s ok
+imaxe  44 intento 0 125.7s + revisión 13.5s ['man sen corpo (1)', 'texto na imaxe']
+imaxe  44 intento 1 134.4s + revisión 12.5s ['man sen corpo (1)', 'texto na imaxe']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', hands hidden in the sleeves or out of frame']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', hands hidden in the sleeves or out of frame']
+imaxe  44 intento 2 129.3s + revisión 11.9s ok
+imaxe  45 intento 0 128.2s + revisión 11.2s ok
+imaxe  46 intento 0 126.5s + revisión 10.7s ['obxectos modernos', 'luz eléctrica (CLIP)', 'luces de cidade (CLIP)']
