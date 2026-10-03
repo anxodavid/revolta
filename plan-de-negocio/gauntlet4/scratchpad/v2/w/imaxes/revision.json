@@ -6217,5 +6217,1179 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "025-a9288905": {
+  "ficheiro": "025-a9288905-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "025-a9288905-0.png",
+    "seed": 3787724370,
+    "s": 123.4,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a scribe's hand with a goose quill striking through a word on a page of trial notes and writing the next one, black wool sleeve with a white cuff, fresh ink glistening, candlelight",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0067,
+    "lume_quente": 0.0141,
+    "descricion": "The image shows a person's hands holding a black pen and writing on an open book. The book appears to be a legal document, as there are several pages visible on the pages. The person is wearing a white shirt and is sitting at a wooden table with a candle holder on the left side of the image. The background is dark, and the focus is on the hands and the book.",
+    "obxectos": [
+     "book",
+     "candle",
+     "human hand",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.024,
+      0.096
+     ],
+     "muros encalados (CLIP)": [
+      0.002,
+      0.1
+     ],
+     "ciprés (CLIP)": [
+      -0.009,
+      0.107
+     ],
+     "oliveiras (CLIP)": [
+      -0.001,
+      0.082
+     ],
+     "palmeiras (CLIP)": [
+      -0.016,
+      0.122
+     ],
+     "rodas de raios (CLIP)": [
+      0.036,
+      0.094
+     ],
+     "paisaxe seca (CLIP)": [
+      0.027,
+      0.088
+     ],
+     "eucaliptos (CLIP)": [
+      -0.008,
+      0.058
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.009,
+      0.093
+     ],
+     "luces de cidade (CLIP)": [
+      -0.02,
+      0.129
+     ],
+     "salón moderno (CLIP)": [
+      0.004,
+      0.087
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.009,
+      0.053
+     ],
+     "casas británicas (CLIP)": [
+      0.057,
+      0.109
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.021,
+      0.136
+     ],
+     "catedral inventada (CLIP)": [
+      -0.01,
+      0.1
+     ],
+     "abrigo moderno (CLIP)": [
+      0.014,
+      0.118
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.004,
+      0.15
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.005,
+      0.126
+     ],
+     "cadros na parede (CLIP)": [
+      0.024,
+      0.146
+     ],
+     "farol victoriano (CLIP)": [
+      0.001,
+      0.119
+     ],
+     "negativo: electric light": 0.001,
+     "negativo: light bulb": -0.015,
+     "negativo: lamp": -0.005,
+     "negativo: glass window": -0.026,
+     "negativo: modern clothes": -0.035,
+     "negativo: street lamp": -0.023,
+     "clave: quill": 3.8,
+     "clave_v5: quill": 0.001
+    },
+    "arquetipo": null,
+    "s_revision": 10.0,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "025-a9288905-1.png",
+    "seed": 2862068281,
+    "s": 125.8,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a scribe's hand with a goose quill striking through a word on a page of trial notes and writing the next one, black wool sleeve with a white cuff, fresh ink glistening, candlelight",
+    "modelo": "lightning",
+    "tokens": 54,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.004,
+    "lume_quente": 0.0002,
+    "descricion": "The image shows a person's hand holding a pen and writing on an open document. The document appears to be a legal document, as there is text visible on the page. The person is wearing a white suit and is sitting at a wooden table with a candle in the background. The image is taken from a low angle, so the focus is on the hand and the pen. The lighting is dim, creating a moody atmosphere.",
+    "obxectos": [
+     "book",
+     "human hand",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.017,
+      0.076
+     ],
+     "muros encalados (CLIP)": [
+      0.023,
+      0.096
+     ],
+     "ciprés (CLIP)": [
+      -0.006,
+      0.092
+     ],
+     "oliveiras (CLIP)": [
+      0.027,
+      0.083
+     ],
+     "palmeiras (CLIP)": [
+      0.012,
+      0.102
+     ],
+     "rodas de raios (CLIP)": [
+      0.036,
+      0.088
+     ],
+     "paisaxe seca (CLIP)": [
+      0.043,
+      0.085
+     ],
+     "eucaliptos (CLIP)": [
+      0.008,
+      0.02
+     ],
+     "luz eléctrica (CLIP)": [
+      0.001,
+      0.07
+     ],
+     "luces de cidade (CLIP)": [
+      -0.013,
+      0.102
+     ],
+     "salón moderno (CLIP)": [
+      0.002,
+      0.066
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.028,
+      0.045
+     ],
+     "casas británicas (CLIP)": [
+      0.06,
+      0.098
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.0,
+      0.095
+     ],
+     "catedral inventada (CLIP)": [
+      -0.015,
+      0.113
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.001,
+      0.114
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.0,
+      0.155
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.015,
+      0.14
+     ],
+     "cadros na parede (CLIP)": [
+      0.019,
+      0.173
+     ],
+     "farol victoriano (CLIP)": [
+      -0.026,
+      0.114
+     ],
+     "negativo: electric light": -0.008,
+     "negativo: light bulb": -0.022,
+     "negativo: lamp": -0.024,
+     "negativo: glass window": -0.028,
+     "negativo: modern clothes": -0.027,
+     "negativo: street lamp": -0.036,
+     "clave: quill": 2.9,
+     "clave_v5: quill": -0.013
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.182
+    },
+    "s_revision": 10.1,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "025-a9288905-2.png",
+    "seed": 4214411193,
+    "s": 120.0,
+    "prompt": "cinematic film still, period drama, photorealistic, close-up of a scribe's hand with a goose quill striking through a word on a page of trial notes and writing the next one, black wool sleeve with a white cuff, fresh ink glistening, candlelight, plain surfaces",
+    "modelo": "lightning",
+    "tokens": 57,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.27,
+       0.71
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 9.0,
+      "tamaño": 0.276
+     }
+    ],
+    "corpos": 0,
+    "altas_luces": 0.0012,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a person's hands holding a fountain pen and writing on an open book. The book appears to be a legal document, as there is text visible on the pages. The person is wearing a white shirt and is sitting at a wooden table with a glass of water and a pen holder in the background. The image is taken from a low angle, so the focus is on the hands and the book.",
+    "obxectos": [
+     "book",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.012,
+      0.083
+     ],
+     "muros encalados (CLIP)": [
+      0.007,
+      0.088
+     ],
+     "ciprés (CLIP)": [
+      -0.012,
+      0.112
+     ],
+     "oliveiras (CLIP)": [
+      -0.013,
+      0.097
+     ],
+     "palmeiras (CLIP)": [
+      -0.003,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      0.035,
+      0.105
+     ],
+     "paisaxe seca (CLIP)": [
+      0.024,
+      0.099
+     ],
+     "eucaliptos (CLIP)": [
+      -0.021,
+      0.066
+     ],
+     "luz eléctrica (CLIP)": [
+      0.002,
+      0.075
+     ],
+     "luces de cidade (CLIP)": [
+      -0.018,
+      0.107
+     ],
+     "salón moderno (CLIP)": [
+      0.019,
+      0.079
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.009,
+      0.04
+     ],
+     "casas británicas (CLIP)": [
+      0.055,
+      0.099
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.004,
+      0.101
+     ],
+     "catedral inventada (CLIP)": [
+      -0.007,
+      0.098
+     ],
+     "abrigo moderno (CLIP)": [
+      0.012,
+      0.095
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.011,
+      0.127
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.004,
+      0.118
+     ],
+     "cadros na parede (CLIP)": [
+      0.017,
+      0.138
+     ],
+     "farol victoriano (CLIP)": [
+      -0.006,
+      0.108
+     ],
+     "negativo: electric light": -0.009,
+     "negativo: light bulb": -0.025,
+     "negativo: lamp": -0.023,
+     "negativo: glass window": -0.028,
+     "negativo: modern clothes": -0.033,
+     "negativo: street lamp": -0.042,
+     "clave: quill": 5.34,
+     "clave_v5: quill": -0.007
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.19
+    },
+    "s_revision": 9.3,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "026-7184d1ed": {
+  "ficheiro": "026-7184d1ed-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "026-7184d1ed-0.png",
+    "seed": 2901643007,
+    "s": 118.4,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of an archivist in white cotton gloves carefully opening an old bundle of 17th-century trial papers on a grey table between tall shelves of bound bundles, one page with a struck-through word catching the soft daylight, quiet archive",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0001,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a young man sitting at a long table in a library. He is wearing a white shirt and glasses and is holding a pen in his right hand. He appears to be writing or drawing on a piece of paper. The table is covered with several books and there are stacks of books on either side of the table. The books are arranged in rows and the shelves are filled with more books. The image is in sepia tone, giving it a vintage and old-fashioned feel. The overall mood of the image is one of concentration and focus.",
+    "obxectos": [
+     "book",
+     "bookcase",
+     "glasses",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.041,
+      0.076
+     ],
+     "muros encalados (CLIP)": [
+      0.059,
+      0.106
+     ],
+     "ciprés (CLIP)": [
+      -0.062,
+      0.076
+     ],
+     "oliveiras (CLIP)": [
+      -0.026,
+      0.056
+     ],
+     "palmeiras (CLIP)": [
+      -0.027,
+      0.112
+     ],
+     "rodas de raios (CLIP)": [
+      0.039,
+      0.1
+     ],
+     "paisaxe seca (CLIP)": [
+      0.034,
+      0.062
+     ],
+     "eucaliptos (CLIP)": [
+      -0.016,
+      0.045
+     ],
+     "luz eléctrica (CLIP)": [
+      0.019,
+      0.065
+     ],
+     "luces de cidade (CLIP)": [
+      -0.032,
+      0.091
+     ],
+     "salón moderno (CLIP)": [
+      0.057,
+      0.077
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.07,
+      0.023
+     ],
+     "casas británicas (CLIP)": [
+      0.007,
+      0.014
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.007,
+      0.063
+     ],
+     "catedral inventada (CLIP)": [
+      0.005,
+      0.05
+     ],
+     "abrigo moderno (CLIP)": [
+      0.043,
+      0.091
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.012,
+      0.12
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.011,
+      0.134
+     ],
+     "cadros na parede (CLIP)": [
+      0.044,
+      0.153
+     ],
+     "farol victoriano (CLIP)": [
+      -0.038,
+      0.058
+     ],
+     "negativo: neon": -0.087,
+     "negativo: plastic": -0.04,
+     "negativo: television": -0.04,
+     "negativo: smartphone": -0.021,
+     "negativo: computer": -0.014,
+     "negativo: plastic folders": -0.003,
+     "clave: papers": 3.65,
+     "clave_v5: papers": 0.027
+    },
+    "arquetipo": null,
+    "s_revision": 11.5,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "026-7184d1ed-1.png",
+    "seed": 2783940626,
+    "s": 121.0,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of an archivist in white cotton gloves carefully opening an old bundle of 17th-century trial papers on a grey table between tall shelves of bound bundles, one page with a struck-through word catching the soft daylight, quiet archive",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0026,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a man in a library, standing in front of a large wooden shelf filled with books. He is wearing a white shirt, a vest, and a bow tie, and is holding a stack of papers in his hands. The man appears to be sorting through the papers, as there are several stacks of papers scattered on the table in front him. The shelves are filled with stacks of books of different sizes and colors, and the overall atmosphere of the image is one of concentration and focus. The image is in sepia tone, giving it a vintage feel.",
+    "obxectos": [
+     "book",
+     "bookcase",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.021,
+      0.059
+     ],
+     "muros encalados (CLIP)": [
+      0.026,
+      0.098
+     ],
+     "ciprés (CLIP)": [
+      -0.05,
+      0.094
+     ],
+     "oliveiras (CLIP)": [
+      -0.027,
+      0.058
+     ],
+     "palmeiras (CLIP)": [
+      -0.014,
+      0.103
+     ],
+     "rodas de raios (CLIP)": [
+      0.046,
+      0.11
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.002,
+      0.039
+     ],
+     "eucaliptos (CLIP)": [
+      -0.015,
+      0.049
+     ],
+     "luz eléctrica (CLIP)": [
+      0.001,
+      0.061
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.077
+     ],
+     "salón moderno (CLIP)": [
+      0.027,
+      0.046
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.042,
+      0.021
+     ],
+     "casas británicas (CLIP)": [
+      0.021,
+      0.06
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.009,
+      0.057
+     ],
+     "catedral inventada (CLIP)": [
+      -0.017,
+      0.062
+     ],
+     "abrigo moderno (CLIP)": [
+      0.018,
+      0.088
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.01,
+      0.134
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.003,
+      0.125
+     ],
+     "cadros na parede (CLIP)": [
+      0.025,
+      0.147
+     ],
+     "farol victoriano (CLIP)": [
+      0.016,
+      0.058
+     ],
+     "negativo: neon": -0.063,
+     "negativo: plastic": -0.037,
+     "negativo: television": -0.044,
+     "negativo: smartphone": -0.011,
+     "negativo: computer": 0.0,
+     "negativo: plastic folders": 0.017,
+     "clave: papers": 4.71,
+     "clave_v5: papers": 0.041
+    },
+    "arquetipo": null,
+    "s_revision": 11.1,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "027-70e923a8": {
+  "ficheiro": "027-70e923a8-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "027-70e923a8-0.png",
+    "seed": 4227071982,
+    "s": 117.2,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing with a goose quill by candlelight in the foreground, and behind him in shadow a woman of about thirty in a faded red wool headscarf, standing silent, lips closed",
+    "modelo": "lightning",
+    "tokens": 70,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.65,
+       0.847
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.008,
+      "tamaño": 0.125
+     },
+     {
+      "pulso": [
+       0.446,
+       0.822
+      ],
+      "confianza": 0.96,
+      "dist_corpo": 0.028,
+      "tamaño": 0.094
+     }
+    ],
+    "corpos": 2,
+    "altas_luces": 0.0129,
+    "lume_quente": 0.0095,
+    "descricion": "The image shows a young man sitting at a table with a pen in his hand. He is wearing a white shirt and a black vest with a red collar. He has short, dark hair and is looking down at the pen with a serious expression on his face. On the table in front of him, there is a candle holder with six lit candles. In the background, there are two other men, one of whom is standing and looking at the man in the vest. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "candle",
+     "human face",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.014,
+      0.029
+     ],
+     "muros encalados (CLIP)": [
+      0.018,
+      0.049
+     ],
+     "ciprés (CLIP)": [
+      -0.106,
+      0.117
+     ],
+     "oliveiras (CLIP)": [
+      -0.046,
+      0.045
+     ],
+     "palmeiras (CLIP)": [
+      -0.02,
+      0.109
+     ],
+     "rodas de raios (CLIP)": [
+      0.051,
+      0.072
+     ],
+     "paisaxe seca (CLIP)": [
+      0.012,
+      0.025
+     ],
+     "eucaliptos (CLIP)": [
+      -0.095,
+      0.021
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.008,
+      0.095
+     ],
+     "luces de cidade (CLIP)": [
+      -0.049,
+      0.105
+     ],
+     "salón moderno (CLIP)": [
+      0.013,
+      0.076
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.033,
+      0.036
+     ],
+     "casas británicas (CLIP)": [
+      0.062,
+      0.062
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.029,
+      0.095
+     ],
+     "catedral inventada (CLIP)": [
+      0.022,
+      0.055
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.0,
+      0.09
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.031,
+      0.142
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.003,
+      0.102
+     ],
+     "cadros na parede (CLIP)": [
+      0.04,
+      0.147
+     ],
+     "farol victoriano (CLIP)": [
+      0.012,
+      0.079
+     ],
+     "negativo: electric light": 0.032,
+     "negativo: light bulb": 0.011,
+     "negativo: lamp": 0.01,
+     "negativo: glass window": -0.026,
+     "negativo: modern clothes": -0.009,
+     "negativo: street lamp": -0.027,
+     "clave: scribe": 3.16,
+     "clave_v5: scribe": 0.012
+    },
+    "arquetipo": null,
+    "s_revision": 11.3,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "028-b358d9b1": {
+  "ficheiro": "028-b358d9b1-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "028-b358d9b1-0.png",
+    "seed": 2981825947,
+    "s": 116.9,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a stern priest in a black cassock and black cape reading a decree aloud on the steps of a small granite church, below him two women stand alone, an old midwife in a dark brown wool headscarf and a woman of about thirty in a faded red wool headscarf, overcast light",
+    "modelo": "lightning",
+    "tokens": 72,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0111,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a group of five people standing on the steps of a large, ornate building with columns and arched windows. The building appears to be a church or cathedral, with a large wooden door on the left side of the image. The people are dressed in traditional robes, with the person in the center wearing a black robe and holding a book. The person on the right side is standing with their back to the camera, looking at the camera. They are all holding books in their hands and appear to be engaged in a conversation. The sky is overcast and the ground is",
+    "obxectos": [
+     "building",
+     "man",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.065,
+      0.1
+     ],
+     "muros encalados (CLIP)": [
+      -0.053,
+      0.111
+     ],
+     "ciprés (CLIP)": [
+      0.011,
+      0.113
+     ],
+     "oliveiras (CLIP)": [
+      -0.042,
+      0.101
+     ],
+     "palmeiras (CLIP)": [
+      -0.017,
+      0.122
+     ],
+     "rodas de raios (CLIP)": [
+      0.046,
+      0.096
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.006,
+      0.068
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.048
+     ],
+     "luz eléctrica (CLIP)": [
+      0.03,
+      0.084
+     ],
+     "luces de cidade (CLIP)": [
+      -0.049,
+      0.119
+     ],
+     "salón moderno (CLIP)": [
+      -0.004,
+      0.094
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.075,
+      0.125
+     ],
+     "casas británicas (CLIP)": [
+      -0.027,
+      0.071
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.056,
+      0.089
+     ],
+     "catedral inventada (CLIP)": [
+      -0.007,
+      0.143
+     ],
+     "abrigo moderno (CLIP)": [
+      0.036,
+      0.142
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.104,
+      0.18
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.037,
+      0.139
+     ],
+     "cadros na parede (CLIP)": [
+      -0.012,
+      0.161
+     ],
+     "farol victoriano (CLIP)": [
+      -0.029,
+      0.094
+     ],
+     "negativo: electric light": -0.009,
+     "negativo: light bulb": -0.035,
+     "negativo: lamp": -0.053,
+     "negativo: glass window": -0.003,
+     "negativo: modern clothes": -0.005,
+     "negativo: street lamp": -0.023,
+     "clave: priest": 3.89,
+     "clave_v5: priest": 0.031
+    },
+    "arquetipo": null,
+    "s_revision": 10.3,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "029-ffcab11f": {
+  "ficheiro": "029-ffcab11f-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "029-ffcab11f-0.png",
+    "seed": 1801537690,
+    "s": 118.3,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, and a woman of about thirty, dark braided hair under a faded red wool headscarf, sitting on a stone doorstep at dusk, an empty clay jug on its side between them",
+    "modelo": "lightning",
+    "tokens": 70,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)",
+     "3 mans para 1 corpos"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.653,
+       0.716
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.014,
+      "tamaño": 0.056
+     },
+     {
+      "pulso": [
+       0.409,
+       0.63
+      ],
+      "confianza": 0.97,
+      "dist_corpo": 0.424,
+      "tamaño": 0.073
+     },
+     {
+      "pulso": [
+       0.743,
+       0.74
+      ],
+      "confianza": 1.0,
+      "dist_corpo": 0.011,
+      "tamaño": 0.066
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.002,
+    "lume_quente": 0.004,
+    "descricion": "The image shows two elderly women sitting on a stone bench in an old building. They are both wearing traditional red robes and headscarves, with one woman wearing a gray cardigan and the other wearing a red dress. The woman on the left is looking off to the side with a serious expression on her face, while the other woman is looking away from the camera. There is a large clay pot on the bench next to them. The building appears to be old and dilapidated, with peeling paint and crumbling walls. The background is blurred, but it seems to be an outdoor",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.005,
+      0.108
+     ],
+     "muros encalados (CLIP)": [
+      0.023,
+      0.117
+     ],
+     "ciprés (CLIP)": [
+      0.006,
+      0.115
+     ],
+     "oliveiras (CLIP)": [
+      -0.0,
+      0.103
+     ],
+     "palmeiras (CLIP)": [
+      -0.017,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      0.044,
+      0.109
+     ],
+     "paisaxe seca (CLIP)": [
+      0.086,
+      0.108
+     ],
+     "eucaliptos (CLIP)": [
+      -0.016,
+      0.03
+     ],
+     "luz eléctrica (CLIP)": [
+      0.005,
+      0.081
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.099
+     ],
+     "salón moderno (CLIP)": [
+      -0.018,
+      0.138
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.009,
+      0.097
+     ],
+     "casas británicas (CLIP)": [
+      -0.033,
+      0.095
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.009,
+      0.117
+     ],
+     "catedral inventada (CLIP)": [
+      -0.028,
+      0.112
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.03,
+      0.205
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.064,
+      0.177
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.058,
+      0.18
+     ],
+     "cadros na parede (CLIP)": [
+      -0.029,
+      0.181
+     ],
+     "farol victoriano (CLIP)": [
+      -0.031,
+      0.12
+     ],
+     "negativo: electric light": -0.009,
+     "negativo: light bulb": -0.035,
+     "negativo: lamp": -0.022,
+     "negativo: glass window": -0.001,
+     "negativo: modern clothes": 0.013,
+     "negativo: street lamp": 0.007,
+     "clave: clay jug": 1.02,
+     "clave_v5: clay jug": -0.008
+    },
+    "arquetipo": null,
+    "s_revision": 10.9,
+    "avisos": [
+     "falta: clay jug (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "029-ffcab11f-1.png",
+    "seed": 4227927223,
+    "s": 121.7,
+    "prompt": "cinematic film still, period drama, photorealistic, medium shot of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, and a woman of about thirty, dark braided hair under a faded red wool headscarf, sitting on a stone doorstep at dusk, an empty clay jug on its side between them",
+    "modelo": "lightning",
+    "tokens": 70,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.001,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two elderly women sitting on the steps of an old stone building. The woman on the left is wearing a red blouse and a brown skirt, while the woman in the middle is wearing an orange blouse. They are both looking at each other and appear to be engaged in a conversation. The building has a wooden door and a window on the right side. There is a woven basket on the ground next to the door. The ground is covered in cobblestones and there is a large rock in the foreground. The overall mood of the image is somber and contemplative",
+    "obxectos": [
+     "footwear",
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.029,
+      0.11
+     ],
+     "muros encalados (CLIP)": [
+      0.029,
+      0.119
+     ],
+     "ciprés (CLIP)": [
+      -0.027,
+      0.108
+     ],
+     "oliveiras (CLIP)": [
+      -0.013,
+      0.112
+     ],
+     "palmeiras (CLIP)": [
+      -0.04,
+      0.117
+     ],
+     "rodas de raios (CLIP)": [
+      0.042,
+      0.131
+     ],
+     "paisaxe seca (CLIP)": [
+      0.078,
+      0.121
+     ],
+     "eucaliptos (CLIP)": [
+      -0.015,
+      0.053
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.011,
+      0.077
+     ],
+     "luces de cidade (CLIP)": [
+      -0.043,
+      0.122
+     ],
+     "salón moderno (CLIP)": [
+      -0.041,
+      0.148
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.002,
+      0.078
+     ],
+     "casas británicas (CLIP)": [
+      0.008,
+      0.09
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.032,
+      0.15
+     ],
+     "catedral inventada (CLIP)": [
+      -0.007,
+      0.08
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.098,
+      0.207
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.112,
+      0.176
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.054,
+      0.143
+     ],
+     "cadros na parede (CLIP)": [
+      -0.018,
+      0.237
+     ],
+     "farol victoriano (CLIP)": [
+      -0.049,
+      0.126
+     ],
+     "negativo: electric light": -0.005,
+     "negativo: light bulb": -0.029,
+     "negativo: lamp": -0.026,
+     "negativo: glass window": 0.003,
+     "negativo: modern clothes": 0.006,
+     "negativo: street lamp": -0.019,
+     "clave: clay jug": 0.86,
+     "clave_v5: clay jug": 0.007
+    },
+    "arquetipo": null,
+    "s_revision": 11.0,
+    "avisos": [
+     "falta: clay jug (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
  }
 }
