@@ -195,3 +195,12 @@ imaxe  59 intento 0 125.9s + revisión 10.9s ok
 imaxe  60 intento 0 127.6s + revisión 10.4s ok
 imaxe  61 intento 0 119.3s + revisión 10.5s ['texto na imaxe', 'repetida (CLIP 0.93 co plano 26)']
 imaxe  61 intento 1 124.0s + revisión 10.9s ['repetida (CLIP 0.93 co plano 26)']
+imaxe  61 intento 3 123.4s + revisión 10.6s ['negativo do plano: electric light (CLIP)']
+imaxe  62 intento 0 120.0s + revisión 10.4s ok
+imaxe  63 intento 0 118.9s + revisión 11.1s ok
+imaxe  64 intento 0 117.8s + revisión 11.1s ['lume vivo ao durmir (3.4% de altas luces cor de chama)']
+imaxe  64 intento 1 117.4s + revisión 10.1s ['lume vivo ao durmir (6.1% de altas luces cor de chama)']
+imaxe  64 intento 2 115.4s + revisión 10.6s ['lume vivo ao durmir (5.0% de altas luces cor de chama)']
+imaxe  65 intento 0 119.2s + revisión 10.5s ok avisos ['falta: clay basin (CLIP)']
+imaxe  66 intento 0 120.4s + revisión 10.1s ['casas británicas (CLIP)']
+imaxe  66 intento 1 119.4s + revisión 11.5s ['interior moderno', 'paisaxe seca (CLIP)', 'casas británicas (CLIP)', 'negativo do plano: glass window (CLIP)']
