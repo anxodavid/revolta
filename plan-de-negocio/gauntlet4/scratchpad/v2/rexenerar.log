@@ -97,3 +97,14 @@ imaxe  64 intento 0 117.6s + revisión 10.9s ['luz eléctrica (CLIP)', 'sombreir
 imaxe  64 intento 1 119.7s + revisión 10.5s ['luz eléctrica (Florence)']
 imaxe  64 intento 2 121.1s + revisión 10.9s ok
 imaxe  66 intento 0 122.3s + revisión 10.1s ok
+imaxe  67 intento 0 126.1s + revisión  9.5s ok
+imaxe  68 intento 0 112.8s + revisión  9.7s ok
+imaxe  69 intento 0  94.4s + revisión  9.8s ['repetida (CLIP 0.96 co plano 4)']
+imaxe  69 intento 1  78.1s + revisión 10.0s ['repetida (CLIP 0.94 co plano 4)']
+imaxe  69 intento 3 115.0s + revisión 10.3s ok
+imaxe  71 intento 0 114.4s + revisión  9.7s ['lume vivo ao durmir (2.2% de altas luces cor de chama)']
+imaxe  71 intento 1 113.8s + revisión  9.8s ['lume vivo ao durmir (2.2% de altas luces cor de chama)']
+imaxe  71 intento 2 115.9s + revisión  9.9s ['lume vivo ao durmir (1.9% de altas luces cor de chama)', 'texto na imaxe']
+imaxe  73 intento 0 116.2s + revisión  9.0s ok
+imaxe  76 intento 0 115.6s + revisión  9.8s ok
+I0000 00:00:1791065693.037824    6411 migration_state_tracking.cc:24] Migration not enabled - not starting notification watcher.
