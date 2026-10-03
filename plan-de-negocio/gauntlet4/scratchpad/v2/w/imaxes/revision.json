@@ -31476,5 +31476,1103 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "037-3ab544ff": {
+  "ficheiro": "037-3ab544ff-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "037-3ab544ff-0.png",
+    "seed": 3620231083,
+    "s": 112.3,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0256,
+    "lume_quente": 0.0284,
+    "descricion": "The image shows a large group of people gathered around a bonfire at night. The bonfire is burning brightly and is surrounded by tables with plates, glasses, and other food items. The people are sitting at the tables and are engaged in conversation. The background shows a cityscape with buildings and string lights hanging from the ceiling. The sky is dark and the overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "human face",
+     "man",
+     "person",
+     "table"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.001,
+      0.052
+     ],
+     "muros encalados (CLIP)": [
+      0.001,
+      0.067
+     ],
+     "ciprés (CLIP)": [
+      -0.053,
+      0.115
+     ],
+     "oliveiras (CLIP)": [
+      -0.043,
+      0.092
+     ],
+     "palmeiras (CLIP)": [
+      -0.038,
+      0.133
+     ],
+     "rodas de raios (CLIP)": [
+      0.016,
+      0.055
+     ],
+     "paisaxe seca (CLIP)": [
+      0.022,
+      0.052
+     ],
+     "eucaliptos (CLIP)": [
+      0.024,
+      0.045
+     ],
+     "luz eléctrica (CLIP)": [
+      0.056,
+      0.132
+     ],
+     "luces de cidade (CLIP)": [
+      -0.03,
+      0.125
+     ],
+     "salón moderno (CLIP)": [
+      0.012,
+      0.102
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.048,
+      0.101
+     ],
+     "casas británicas (CLIP)": [
+      0.039,
+      0.048
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.021,
+      0.135
+     ],
+     "catedral inventada (CLIP)": [
+      -0.012,
+      0.047
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.049,
+      0.071
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.034,
+      0.118
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.036,
+      0.096
+     ],
+     "cadros na parede (CLIP)": [
+      0.018,
+      0.131
+     ],
+     "farol victoriano (CLIP)": [
+      -0.011,
+      0.108
+     ],
+     "negativo: neon": -0.048,
+     "negativo: plastic": -0.039,
+     "negativo: television": -0.008,
+     "negativo: smartphone": -0.008,
+     "negativo: plastic cups": -0.008,
+     "negativo: stage lights": -0.021,
+     "clave: clay bowl": 2.08,
+     "clave_v5: clay bowl": -0.024
+    },
+    "arquetipo": null,
+    "s_revision": 9.6,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "037-3ab544ff-1.png",
+    "seed": 3194784793,
+    "s": 113.3,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0307,
+    "lume_quente": 0.0136,
+    "descricion": "The image shows a large group of people gathered around a table with fire burning in the center. The table is set up in a field at night, with a crowd of people visible in the background. The people are sitting at the tables and are holding plates, bowls, and other items in their hands. The fire is burning brightly, creating a warm and inviting atmosphere. The sky is dark, indicating that it is either night or early morning. The overall mood of the image is one of celebration and joy.",
+    "obxectos": [
+     "human face",
+     "man",
+     "table",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.004,
+      0.041
+     ],
+     "muros encalados (CLIP)": [
+      0.028,
+      0.067
+     ],
+     "ciprés (CLIP)": [
+      -0.048,
+      0.116
+     ],
+     "oliveiras (CLIP)": [
+      -0.031,
+      0.116
+     ],
+     "palmeiras (CLIP)": [
+      -0.043,
+      0.141
+     ],
+     "rodas de raios (CLIP)": [
+      0.017,
+      0.068
+     ],
+     "paisaxe seca (CLIP)": [
+      0.013,
+      0.058
+     ],
+     "eucaliptos (CLIP)": [
+      0.023,
+      0.053
+     ],
+     "luz eléctrica (CLIP)": [
+      0.031,
+      0.121
+     ],
+     "luces de cidade (CLIP)": [
+      -0.031,
+      0.135
+     ],
+     "salón moderno (CLIP)": [
+      -0.043,
+      0.113
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.017,
+      0.067
+     ],
+     "casas británicas (CLIP)": [
+      0.034,
+      0.023
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.011,
+      0.149
+     ],
+     "catedral inventada (CLIP)": [
+      0.013,
+      0.037
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.089,
+      0.115
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.062,
+      0.158
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.065,
+      0.118
+     ],
+     "cadros na parede (CLIP)": [
+      0.006,
+      0.147
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.104
+     ],
+     "negativo: neon": -0.054,
+     "negativo: plastic": -0.041,
+     "negativo: television": -0.013,
+     "negativo: smartphone": -0.009,
+     "negativo: plastic cups": -0.006,
+     "negativo: stage lights": -0.014,
+     "clave: clay bowl": 4.08,
+     "clave_v5: clay bowl": -0.022
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "037-3ab544ff-2.png",
+    "seed": 1772522712,
+    "s": 114.5,
+    "prompt": "cinematic film still, period drama, photorealistic, wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s, only one or two people",
+    "modelo": "lightning",
+    "tokens": 61,
+    "truncado": "",
+    "problemas": [
+     "multitude"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.02,
+    "lume_quente": 0.0232,
+    "descricion": "The image shows a large group of people sitting at long wooden tables, enjoying a meal together. The tables are set up in a dimly lit room with a large number of lit candles in the background. The people are dressed in casual clothing and appear to be engaged in conversation. The room is filled with people, some of whom are sitting at the tables while others are standing. The sky is dark and the overall mood of the image is peaceful and serene. The candles are lit, creating a warm and inviting atmosphere.",
+    "obxectos": [
+     "human face",
+     "man",
+     "person",
+     "table",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.002,
+      0.045
+     ],
+     "muros encalados (CLIP)": [
+      0.03,
+      0.073
+     ],
+     "ciprés (CLIP)": [
+      -0.054,
+      0.107
+     ],
+     "oliveiras (CLIP)": [
+      -0.009,
+      0.096
+     ],
+     "palmeiras (CLIP)": [
+      -0.06,
+      0.139
+     ],
+     "rodas de raios (CLIP)": [
+      0.004,
+      0.076
+     ],
+     "paisaxe seca (CLIP)": [
+      0.041,
+      0.071
+     ],
+     "eucaliptos (CLIP)": [
+      0.024,
+      0.065
+     ],
+     "luz eléctrica (CLIP)": [
+      0.041,
+      0.113
+     ],
+     "luces de cidade (CLIP)": [
+      -0.028,
+      0.119
+     ],
+     "salón moderno (CLIP)": [
+      -0.028,
+      0.104
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.041,
+      0.063
+     ],
+     "casas británicas (CLIP)": [
+      0.019,
+      0.01
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.005,
+      0.127
+     ],
+     "catedral inventada (CLIP)": [
+      -0.027,
+      0.053
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.064,
+      0.086
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.052,
+      0.145
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.056,
+      0.107
+     ],
+     "cadros na parede (CLIP)": [
+      0.017,
+      0.126
+     ],
+     "farol victoriano (CLIP)": [
+      -0.021,
+      0.093
+     ],
+     "negativo: neon": -0.048,
+     "negativo: plastic": -0.043,
+     "negativo: television": -0.01,
+     "negativo: smartphone": -0.01,
+     "negativo: plastic cups": -0.0,
+     "negativo: stage lights": -0.009,
+     "clave: clay bowl": 2.57,
+     "clave_v5: clay bowl": -0.009
+    },
+    "arquetipo": null,
+    "s_revision": 11.4,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
+ },
+ "046-ecc98768": {
+  "ficheiro": "046-ecc98768-0.png",
+  "escollida": 0,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "046-ecc98768-0.png",
+    "seed": 2682285692,
+    "s": 112.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0007,
+    "lume_quente": 0.0003,
+    "descricion": "The image shows a foggy forest with tall trees on either side. The trees have thick trunks and their branches are covered in a thick layer of fog. In the center of the image, there is a circular fire pit with a fire burning inside. The ground is covered in red soil and there are a few rocks scattered around. The sky is dark and the moon is visible in the background, casting a soft glow over the scene. The overall mood of the scene is eerie and mysterious.",
+    "obxectos": [
+     "candle"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.01,
+      0.065
+     ],
+     "muros encalados (CLIP)": [
+      -0.033,
+      0.083
+     ],
+     "ciprés (CLIP)": [
+      -0.027,
+      0.179
+     ],
+     "oliveiras (CLIP)": [
+      -0.049,
+      0.169
+     ],
+     "palmeiras (CLIP)": [
+      -0.075,
+      0.191
+     ],
+     "rodas de raios (CLIP)": [
+      0.027,
+      0.114
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.02,
+      0.138
+     ],
+     "eucaliptos (CLIP)": [
+      -0.067,
+      0.182
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.015,
+      0.164
+     ],
+     "luces de cidade (CLIP)": [
+      -0.022,
+      0.197
+     ],
+     "salón moderno (CLIP)": [
+      -0.0,
+      0.141
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.003,
+      0.1
+     ],
+     "casas británicas (CLIP)": [
+      0.011,
+      0.057
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.026,
+      0.219
+     ],
+     "catedral inventada (CLIP)": [
+      -0.036,
+      0.097
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.008,
+      0.098
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.039,
+      0.152
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.002,
+      0.123
+     ],
+     "cadros na parede (CLIP)": [
+      -0.033,
+      0.177
+     ],
+     "farol victoriano (CLIP)": [
+      -0.017,
+      0.151
+     ],
+     "negativo: electric light": 0.017,
+     "negativo: light bulb": -0.012,
+     "negativo: lamp": -0.007,
+     "negativo: glass window": -0.049,
+     "negativo: modern clothes": -0.051,
+     "negativo: street lamp": -0.027,
+     "clave: fountain": 1.39,
+     "clave_v5: fountain": -0.039
+    },
+    "arquetipo": {
+     "etiqueta": "bosque con néboa",
+     "sim": 0.246
+    },
+    "s_revision": 9.3,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   },
+   {
+    "intento": 1,
+    "ficheiro": "046-ecc98768-1.png",
+    "seed": 3425976062,
+    "s": 115.4,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0004,
+    "lume_quente": 0.0003,
+    "descricion": "The image is a photograph of a large tree in a foggy forest. The tree has a thick trunk and branches that are covered in yellow leaves. The leaves are spread out in all directions, creating a canopy over the tree. The ground is covered in fallen leaves and there are several large rocks scattered around the base of the tree, some of which are also covered in leaves. In the background, there are more trees with their branches reaching up towards the sky. The sky is dark and the overall mood of the image is eerie and mysterious. The image is taken from a low angle,",
+    "obxectos": [],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.01,
+      0.08
+     ],
+     "muros encalados (CLIP)": [
+      -0.043,
+      0.118
+     ],
+     "ciprés (CLIP)": [
+      -0.038,
+      0.216
+     ],
+     "oliveiras (CLIP)": [
+      -0.065,
+      0.21
+     ],
+     "palmeiras (CLIP)": [
+      -0.102,
+      0.245
+     ],
+     "rodas de raios (CLIP)": [
+      0.017,
+      0.111
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.033,
+      0.156
+     ],
+     "eucaliptos (CLIP)": [
+      -0.073,
+      0.212
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.01,
+      0.171
+     ],
+     "luces de cidade (CLIP)": [
+      -0.024,
+      0.196
+     ],
+     "salón moderno (CLIP)": [
+      0.021,
+      0.08
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.013,
+      0.115
+     ],
+     "casas británicas (CLIP)": [
+      0.007,
+      0.085
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.061,
+      0.179
+     ],
+     "catedral inventada (CLIP)": [
+      -0.053,
+      0.139
+     ],
+     "abrigo moderno (CLIP)": [
+      0.007,
+      0.109
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.051,
+      0.164
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.0,
+      0.109
+     ],
+     "cadros na parede (CLIP)": [
+      -0.033,
+      0.211
+     ],
+     "farol victoriano (CLIP)": [
+      -0.033,
+      0.169
+     ],
+     "negativo: electric light": 0.02,
+     "negativo: light bulb": -0.007,
+     "negativo: lamp": -0.014,
+     "negativo: glass window": -0.036,
+     "negativo: modern clothes": -0.044,
+     "negativo: street lamp": -0.014,
+     "clave: fountain": -0.96,
+     "clave_v5: fountain": -0.061
+    },
+    "arquetipo": {
+     "etiqueta": "bosque con néboa",
+     "sim": 0.228
+    },
+    "s_revision": 10.1,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   },
+   {
+    "intento": 2,
+    "ficheiro": "046-ecc98768-2.png",
+    "seed": 2373512999,
+    "s": 115.6,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+    "modelo": "lightning",
+    "tokens": 55,
+    "truncado": "",
+    "problemas": [
+     "obxectos modernos"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0012,
+    "lume_quente": 0.0,
+    "descricion": "The image is a photograph of a large tree in the middle of a foggy forest. The tree has a thick trunk and branches that are covered in a thick layer of fog. The trunk is twisted and gnarled, and the branches are reaching up towards the sky. The ground is covered in fallen leaves and there are a few rocks scattered around the base of the tree. In the background, there are other trees with bare branches, and a street lamp can be seen on the right side of the image. The overall mood of the photograph is eerie and mysterious.",
+    "obxectos": [
+     "street light"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.004,
+      0.08
+     ],
+     "muros encalados (CLIP)": [
+      -0.021,
+      0.079
+     ],
+     "ciprés (CLIP)": [
+      -0.023,
+      0.203
+     ],
+     "oliveiras (CLIP)": [
+      -0.084,
+      0.191
+     ],
+     "palmeiras (CLIP)": [
+      -0.1,
+      0.229
+     ],
+     "rodas de raios (CLIP)": [
+      0.049,
+      0.117
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.057,
+      0.156
+     ],
+     "eucaliptos (CLIP)": [
+      -0.067,
+      0.21
+     ],
+     "luz eléctrica (CLIP)": [
+      0.001,
+      0.156
+     ],
+     "luces de cidade (CLIP)": [
+      -0.034,
+      0.184
+     ],
+     "salón moderno (CLIP)": [
+      0.038,
+      0.105
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.043,
+      0.105
+     ],
+     "casas británicas (CLIP)": [
+      0.032,
+      0.072
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.057,
+      0.171
+     ],
+     "catedral inventada (CLIP)": [
+      -0.012,
+      0.095
+     ],
+     "abrigo moderno (CLIP)": [
+      0.016,
+      0.111
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.034,
+      0.162
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.009,
+      0.124
+     ],
+     "cadros na parede (CLIP)": [
+      -0.02,
+      0.176
+     ],
+     "farol victoriano (CLIP)": [
+      -0.003,
+      0.171
+     ],
+     "negativo: electric light": 0.021,
+     "negativo: light bulb": -0.006,
+     "negativo: lamp": -0.003,
+     "negativo: glass window": -0.039,
+     "negativo: modern clothes": -0.052,
+     "negativo: street lamp": -0.008,
+     "clave: fountain": 0.2,
+     "clave_v5: fountain": -0.051
+    },
+    "arquetipo": {
+     "etiqueta": "bosque con néboa",
+     "sim": 0.24
+    },
+    "s_revision": 9.8,
+    "avisos": [
+     "falta: fountain (CLIP)"
+    ]
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
+ },
+ "047-187c2db0": {
+  "ficheiro": "047-187c2db0-0.png",
+  "escollida": 0,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "047-187c2db0-0.png",
+    "seed": 573905342,
+    "s": 113.5,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century, blue hour twilight, first stars",
+    "modelo": "lightning",
+    "tokens": 66,
+    "truncado": "",
+    "problemas": [
+     "casas alleas"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0064,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a man standing in front of a small stone cottage with a thatched roof. The cottage has a wooden door and a wooden fence on the left side. The man is wearing a white shirt and brown pants and is holding a camera in his hand. He appears to be looking at the camera with a serious expression on his face. In front of the cottage, there are two white sheep lying on the ground. The background shows a grassy field and a mountain range. The sky is overcast and the overall mood of the image is somber.",
+    "obxectos": [
+     "human face",
+     "man",
+     "sheep"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.001,
+      0.072
+     ],
+     "muros encalados (CLIP)": [
+      0.023,
+      0.131
+     ],
+     "ciprés (CLIP)": [
+      -0.022,
+      0.107
+     ],
+     "oliveiras (CLIP)": [
+      -0.08,
+      0.123
+     ],
+     "palmeiras (CLIP)": [
+      -0.018,
+      0.108
+     ],
+     "rodas de raios (CLIP)": [
+      -0.01,
+      0.088
+     ],
+     "paisaxe seca (CLIP)": [
+      0.027,
+      0.12
+     ],
+     "eucaliptos (CLIP)": [
+      0.016,
+      0.059
+     ],
+     "luz eléctrica (CLIP)": [
+      0.019,
+      0.039
+     ],
+     "luces de cidade (CLIP)": [
+      -0.056,
+      0.107
+     ],
+     "salón moderno (CLIP)": [
+      -0.004,
+      0.113
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.036,
+      0.056
+     ],
+     "casas británicas (CLIP)": [
+      0.05,
+      0.127
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.049,
+      0.118
+     ],
+     "catedral inventada (CLIP)": [
+      -0.037,
+      0.076
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.056,
+      0.145
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.068,
+      0.216
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.073,
+      0.172
+     ],
+     "cadros na parede (CLIP)": [
+      -0.02,
+      0.214
+     ],
+     "farol victoriano (CLIP)": [
+      -0.07,
+      0.119
+     ],
+     "negativo: electric light": 0.005,
+     "negativo: light bulb": -0.018,
+     "negativo: lamp": -0.034,
+     "negativo: glass window": -0.001,
+     "negativo: modern clothes": -0.023,
+     "negativo: street lamp": -0.071,
+     "clave: calf": 2.79,
+     "clave_v5: calf": 0.027
+    },
+    "arquetipo": null,
+    "s_revision": 10.4,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "047-187c2db0-1.png",
+    "seed": 4246449562,
+    "s": 115.2,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century, blue hour twilight, first stars",
+    "modelo": "lightning",
+    "tokens": 66,
+    "truncado": "",
+    "problemas": [
+     "animais en grupo"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 2,
+    "altas_luces": 0.0224,
+    "lume_quente": 0.0,
+    "descricion": "The image shows two elderly men kneeling down next to a small stone building with a thatched roof. The building appears to be a shepherd's hut or a stable, with a stone wall on the left side and a wooden door on the right side. The men are wearing blue vests and are looking at a sheep lying on the ground in front of them. The sheep is lying on its side with its head resting on its front legs. In the background, there is a field with a herd of sheep grazing on the grass and a tree in the distance. The sky is blue and the",
+    "obxectos": [
+     "human face",
+     "man",
+     "sheep"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.018,
+      0.044
+     ],
+     "muros encalados (CLIP)": [
+      0.036,
+      0.097
+     ],
+     "ciprés (CLIP)": [
+      -0.071,
+      0.101
+     ],
+     "oliveiras (CLIP)": [
+      -0.077,
+      0.124
+     ],
+     "palmeiras (CLIP)": [
+      -0.053,
+      0.1
+     ],
+     "rodas de raios (CLIP)": [
+      -0.023,
+      0.112
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.009,
+      0.094
+     ],
+     "eucaliptos (CLIP)": [
+      -0.045,
+      0.043
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.017,
+      0.048
+     ],
+     "luces de cidade (CLIP)": [
+      -0.046,
+      0.097
+     ],
+     "salón moderno (CLIP)": [
+      -0.038,
+      0.136
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.034,
+      0.064
+     ],
+     "casas británicas (CLIP)": [
+      0.056,
+      0.1
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.046,
+      0.128
+     ],
+     "catedral inventada (CLIP)": [
+      -0.018,
+      0.069
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.042,
+      0.121
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.047,
+      0.178
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.054,
+      0.14
+     ],
+     "cadros na parede (CLIP)": [
+      -0.023,
+      0.212
+     ],
+     "farol victoriano (CLIP)": [
+      -0.05,
+      0.107
+     ],
+     "negativo: electric light": 0.002,
+     "negativo: light bulb": -0.018,
+     "negativo: lamp": -0.021,
+     "negativo: glass window": -0.008,
+     "negativo: modern clothes": -0.01,
+     "negativo: street lamp": -0.059,
+     "clave: calf": 2.55,
+     "clave_v5: calf": 0.031
+    },
+    "arquetipo": null,
+    "s_revision": 10.6,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "047-187c2db0-2.png",
+    "seed": 3548258588,
+    "s": 115.1,
+    "prompt": "cinematic film still, period drama, photorealistic, soft light, medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century, blue hour twilight, first stars",
+    "modelo": "lightning",
+    "tokens": 66,
+    "truncado": "",
+    "problemas": [
+     "casas alleas"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 1,
+    "altas_luces": 0.0057,
+    "lume_quente": 0.0001,
+    "descricion": "The image shows three men sitting on a pile of hay in front of a stone building with a thatched roof. The men are wearing traditional Scottish clothing, with one man wearing a black vest and the other two wearing white shirts and black pants. They are all smiling and appear to be engaged in a conversation. In front of the men, there is a brown cow lying on the hay. The cow is resting its head on the ground and appears to be sleeping. The background shows a grassy field and trees.",
+    "obxectos": [
+     "animal",
+     "man"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.01,
+      0.053
+     ],
+     "muros encalados (CLIP)": [
+      0.007,
+      0.087
+     ],
+     "ciprés (CLIP)": [
+      -0.064,
+      0.11
+     ],
+     "oliveiras (CLIP)": [
+      -0.109,
+      0.139
+     ],
+     "palmeiras (CLIP)": [
+      -0.055,
+      0.114
+     ],
+     "rodas de raios (CLIP)": [
+      -0.031,
+      0.121
+     ],
+     "paisaxe seca (CLIP)": [
+      -0.002,
+      0.099
+     ],
+     "eucaliptos (CLIP)": [
+      -0.027,
+      0.065
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.027,
+      0.048
+     ],
+     "luces de cidade (CLIP)": [
+      -0.048,
+      0.098
+     ],
+     "salón moderno (CLIP)": [
+      -0.051,
+      0.145
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.043,
+      0.068
+     ],
+     "casas británicas (CLIP)": [
+      0.026,
+      0.092
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.042,
+      0.139
+     ],
+     "catedral inventada (CLIP)": [
+      -0.049,
+      0.067
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.048,
+      0.117
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.058,
+      0.186
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.038,
+      0.137
+     ],
+     "cadros na parede (CLIP)": [
+      -0.023,
+      0.184
+     ],
+     "farol victoriano (CLIP)": [
+      -0.064,
+      0.111
+     ],
+     "negativo: electric light": -0.001,
+     "negativo: light bulb": -0.022,
+     "negativo: lamp": -0.02,
+     "negativo: glass window": -0.018,
+     "negativo: modern clothes": -0.019,
+     "negativo: street lamp": -0.063,
+     "clave: calf": 3.4,
+     "clave_v5: calf": 0.079
+    },
+    "arquetipo": null,
+    "s_revision": 10.3,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "calma"
  }
 }
