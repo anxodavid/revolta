@@ -1,7 +1,7 @@
 # Estado do Gauntlet 4 e como relanzalo
 
 Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a sesión se corta, retomar desde aquí.**
-Última actualización: 03-10-2026, 09:50 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
+Última actualización: 03-10-2026, 12:20 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
 
 ## Que hai en marcha
 
@@ -9,14 +9,34 @@ Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a s
 |---|---|---|---|---|
 | 0 Contorno | Instalado (6 min); verificación en curso | operador | `$SCRATCH/logs/instalar-*.log`, `verificar.log` | `bash herramientas/pipeline/instalar.sh` e `… verificar` |
 | 1 Guion v2 | **PECHADA: GAÑOU.** r1: A a cegas elixe a v2 (31/35 fronte a 18); B gaña con 15 substitucións. r2 (B + melloras de A): B r2 gaña sen substitucións. **Texto final: `guion/guion-r2.txt`** (1.628 palabras, ≈ 12 min; portas en verde; 5 excepcións aceptadas en `excepcions-r2.yaml`) | — | `gauntlet4/guion/`, `veredictos/guion-r*.md` | — |
-| 2 Movemento | Rolda 1: medindo I2V (LTX-Video 2B destilado, T5 en fp8) | enxeñeiro VFX | `gauntlet4/movemento/` e `herramientas/pipeline/movemento.py` | `encargos/construtor-movemento-r1.md` |
+| 2 Movemento | **Rolda 1 pechada** (71adae5, `movemento/informe-r1.md`): LTX-Video 2B destilado en CPU (470 s por clip de 3 s, 660 s por clip de 4 s), paralaxe 2,5D con 8 cámaras e 8 efectos, cámara lenta RIFE, porta de vídeo recalibrada (os 3 clips que rexeitaba na demo eran bos) e integración en `montaxe.py` (`animacion`). Orzamento A: ≈ 40 clips, ≈ 9 h. **Sen crítico propio: o movemento xúlgao o tribunal no vídeo** | — | `gauntlet4/movemento/` | — |
 | 3 Imaxe | **Rolda 1 pechada** (fd68860, `imaxe/informe-r1.md`): 29 sementes permitidas; as sementes arranxan a forma en 5 de 7 escenas; a biblia v2 ilustra o que se oe en 6-8 de 10 (antes 1-2; z 0,55 → 1,52); porta v6 (VERSION 9): 25/29 molestas e 2/4 bloqueantes, sen ver bombilla, radiador nin maleta. Configuración para a produción no §6 (≈ 3,4 h, 3 intentos, revisión dun axente de cada imaxe). **Sen crítico visual propio para aforrar cota: as imaxes xúlgaas o tribunal final no vídeo** | — | `gauntlet4/imaxe/` | — |
 | 4 Planos v2 | **PECHADA: GAÑOU** co parche pechado do crítico (`veredictos/planos-r1.md` §4, aplicado en 6f4c1f8): 77 planos, correlación prevista ≥ 4 en 77/77 (media 4,5; atractivo 3,8), 71 % da parte esperta con persoas facendo algo, prompts ≤ 77 tokens | — | `gauntlet4/planos/escenas-v2.json` | — |
-| 5 Vídeo v2 | **Imaxes en produción** desde as 09:48 UTC: `$SCRATCH/v2/imaxes.sh` (log `$SCRATCH/v2/imaxes.log`; `longo.py --so-imaxes`, Lightning 1344x768, 3 intentos, porta v6, `REVISOR_LUME_DURMIR=0.015`, Florence-2-base; reintenta e usa a caché). Despois: revisión dun axente de cada imaxe (mirar antes 2, 8, 40, 45, 46, 54, 65, 69 e 70), movemento, son, montaxe, QA e tribunal | orquestrador | `$SCRATCH/v2/w/imaxes/` | relanzar `$SCRATCH/v2/imaxes.sh` (o script está en `gauntlet4/scratchpad/v2/`) |
+| 5 Vídeo v2 | **Imaxes en produción** desde as 09:48 UTC (`$SCRATCH/v2/imaxes.sh`, log `imaxes.log`; fin ≈ 15:20): 1,9 intentos por plano e ≈ 4 min por plano; 6 dos 23 primeiros sen pasar a porta. Na folla dos rexeitados (orquestrador) a porta acerta (zapatos modernos no 7, casas inglesas no 21, ventás de vidro) e rexeita de máis cando o asunto é escritura (15, 19). **T5 en cola** (`video/scripts/t5.sh`, log `t5.log`: agarda ás imaxes). Despois: ver o plan de produción | orquestrador | `$SCRATCH/v2/w/imaxes/`, `gauntlet4/video/` | ver o plan de produción |
 
 Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador copia a v1, que é
 `gauntlet3/guion/guion-r3.txt`, e a v2 a `$SCRATCH/cego/guion-rN/A.txt` e `B.txt` ao chou, coa clave en
 `clave.txt`) e `encargos/critico-guion-B-lingua-veracidade.md`.
+
+## Plan de produción da v2 (peza 5)
+
+Scripts en `gauntlet4/video/scripts/` (relanzables; a caché salta o feito):
+
+1. **Imaxes** (`$SCRATCH/v2/imaxes.sh`, en marcha). Non aplicar escollas mentres corre: garda `revision.json` cada plano.
+2. **Revisión de cada imaxe por un axente Claude** (`encargos/revisor-imaxes-r1.md`): planos 1-≈50 cando estean, o resto
+   ao rematar as imaxes (mesmo axente, SendMessage). Saída `video/revision-imaxes-r1.json` →
+   `produccion.py revision video/revision-imaxes-r1.json` (escollas a `revision.json` con `escolla_manual` e
+   `revision_manual`; rexeneracións a `video/axustes-produccion.json` e á lista `video/escenas-v2-produccion.json`).
+3. **T5** (`t5.sh`): baixa o T5 fp8, embeddings das 54 accións e bórrao (≈ 10 min).
+4. **Rexenerar** (`rexenerar.sh`, candado de prioridade, `IMG_MAX_INTENTOS=4`) e segunda ollada do axente aos novos.
+5. **I2V** (`movemento.sh`, sen envolver en `candado.sh`): tramos p1 gancho+transición, p1 calma+durmir, p2 gancho+transición,
+   p2 calma+durmir; 73 fotogramas nos planos de menos de 6 s e 97 no resto; porta de vídeo despois de cada tramo
+   (`video/porta-i2v.json`, tiras en `$SCRATCH/v2/tiras`). Clips que non pasan: mirar a tira; `produccion.py porta
+   --aplicar` dá outra semente (43) e, se volve fallar, paralaxe. Relanzar `movemento.sh` despois de cada rexeneración.
+6. **Execución completa** (`completo.sh`, `IMG_MAX_INTENTOS=4` coma en rexenerar): movemento, son, montaxe e QA. Créditos:
+   aviso de contido xerado por máquina (cláusula (e) de LTXV), `{sementes}` coas fotos CC BY e `{imaxes}` coa revisión
+   do axente (sen dicir que é humana).
+7. **Tribunal a cegas** v1 fronte a v2 e páxina para o promotor.
 
 ## Cortes
 
