@@ -1,14 +1,14 @@
 # Estado do Gauntlet 4 e como relanzalo
 
 Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a sesión se corta, retomar desde aquí.**
-Última actualización: 03-10-2026, 04:30 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
+Última actualización: 03-10-2026, 05:10 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
 
 ## Que hai en marcha
 
 | Peza | Estado | Axente | Onde deixa o traballo | Encargo para relanzar |
 |---|---|---|---|---|
 | 0 Contorno | Instalado (6 min); verificación en curso | operador | `$SCRATCH/logs/instalar-*.log`, `verificar.log` | `bash herramientas/pipeline/instalar.sh` e `… verificar` |
-| 1 Guion v2 | Rolda 1 entregada (c50120a): 1.602 palabras, ≈ 11:50, portas en verde (5 frases de tecido xustificadas). Críticos A (a cegas: A = v2, B = v1; clave en `$SCRATCH/cego/guion-r1/`) e B traballando | guionista (rematou) | `gauntlet4/guion/` | `encargos/construtor-guion-r1.md`; críticos: `encargos/critico-guion-*.md` con `{RN}` = r1 |
+| 1 Guion v2 | **Rolda 1 GAÑOU**: A a cegas elixe a v2 (31/35 fronte a 18; unidade 5, literaria 4); B gaña con 15 substitucións. **Rolda 2 en curso** (mesmo guionista): substitucións de B + melloras de A sen feitos novos, `curva_capitulos` na ficha. Despois, un crítico B novo só sobre as frases cambiadas | guionista | `gauntlet4/guion/`, `veredictos/guion-r1-*.md` | `encargos/construtor-guion-r1.md` + a mensaxe da rolda 2 (abaixo) |
 | 2 Movemento | Rolda 1: medindo I2V (LTX-Video 2B destilado, T5 en fp8) | enxeñeiro VFX | `gauntlet4/movemento/` e `herramientas/pipeline/movemento.py` | `encargos/construtor-movemento-r1.md` |
 | 3 Imaxe | Rolda 1: referencias baixadas; porta v6 e sementes | director de arte | `gauntlet4/imaxe/` | `encargos/construtor-imaxe-r1.md` |
 | 4 Planos v2 | Pendente (precisa o guion gañador e a voz) | — | `gauntlet4/planos/` | (por escribir) |
@@ -52,7 +52,15 @@ Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador 
 - PR #5 (rolda de arranxos da v1) fusionado en main e na rama (c4fcc72): a v1 de referencia é a arranxada.
 - PR #4 (prospección de temas) sen fusionar: non é necesario para a v2; queda para o promotor.
 - D18 (23:05 UTC): v2 de ≈ 12 min (≈ 1.500-1.700 palabras, ≈ 60-75 planos), calidade por riba de cobertura e custo.
-- Pendente para a peza 5: escalar os nós de `curva.py` (280 e 950 palabras) para un guion de ≈ 1.600 (proposta en
-  `guion/notas-r1.md` §5). Para o dossier, dous feitos do PDF que aínda non están (a excomuñón prohibía tamén falar
+- Curva do embude para 12 min: feito (commit 562ed3c, `curva_capitulos` na ficha; a v1 queda igual). Para o dossier, dous feitos do PDF que aínda non están (a excomuñón prohibía tamén falar
   con elas; Inés da Maquieira responde en galego): non se usaron.
 - Pendente do promotor: GPU alugada para o movemento (requiriría unha clave e unha sesión nova) e sementes CC BY-SA.
+
+## Mensaxe da rolda 2 do guion (03-10-2026, 05:08 UTC; para relanzala)
+
+Aplicar exacta a lista pechada do §7 de `veredictos/guion-r1-lingua-veracidade.md`; aplicar as melloras do crítico A
+sen feitos novos (polo menos: Sarmiento fundido co argumento de que eran necesarias e a viraxe nun parágrafo propio; a
+tese do gancho "só as coñecemos"; fóra "podemos pensar" e "cómpre pensala"; un só nome para cada xustiza); ≈ 1.600
+palabras; `curva_capitulos` na ficha v2; gardar `guion-r2.txt`, `feitos-r2.md`, `excepcions-r2.yaml`, `notas-r2.md`
+(táboa B1-B15 e A1-A10) e `porta_texto-r2.json` (portas con `candado.sh --prioridade`).
+
