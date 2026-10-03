@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/graduadas/017-b95f657f-1.png",
+ "accion": "Close-up of an old woman's weathered hands kneading pale rye dough in a wooden trough, slowly pressing, folding and pushing the dough with her palms and fingers. Flour dusts her wool sleeves. Warm firelight flickers on her hands. The camera is static. Cinematic, realistic, natural hand motion.",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 81,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 520.2,
+ "s_pasos": [
+  70.4,
+  50.7,
+  46.6,
+  47.3,
+  47.3,
+  47.2,
+  46.2,
+  45.1
+ ],
+ "s_descodificar": 119.4,
+ "fotogramas": 81,
+ "pico_proceso_mb": 11861
+}
