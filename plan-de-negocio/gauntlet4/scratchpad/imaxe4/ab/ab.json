@@ -194,5 +194,47 @@
   "s_xeracion": 73.3,
   "s_preparacion": 0.1,
   "carga_pipe_s": 15.9
+ },
+ "palloza-img2img_075-lightning1024": {
+  "concepto": "palloza",
+  "tecnica": "img2img_075",
+  "modelo": "lightning1024",
+  "W": 1024,
+  "H": 576,
+  "semente": 1104,
+  "prompt": "cinematic film still, period drama, photorealistic, wide shot of a round palloza house of dry-stone walls with a steep conical thatched rye straw roof in the misty mountains of Os Ancares, a woman in a dark wool shawl carrying firewood to the low wooden door, grey morning light",
+  "clave": "thatched roof",
+  "referencia": "03-palloza-casa/10-palloza-cantexeira.jpg",
+  "s_xeracion": 79.5,
+  "s_preparacion": 0.4,
+  "carga_pipe_s": 576.1
+ },
+ "palloza-profundidade_060-lightning1024": {
+  "concepto": "palloza",
+  "tecnica": "profundidade_060",
+  "modelo": "lightning1024",
+  "W": 1024,
+  "H": 576,
+  "semente": 1104,
+  "prompt": "cinematic film still, period drama, photorealistic, wide shot of a round palloza house of dry-stone walls with a steep conical thatched rye straw roof in the misty mountains of Os Ancares, a woman in a dark wool shawl carrying firewood to the low wooden door, grey morning light",
+  "clave": "thatched roof",
+  "referencia": "03-palloza-casa/10-palloza-cantexeira.jpg",
+  "s_xeracion": 102.1,
+  "s_preparacion": 10.9,
+  "carga_pipe_s": 576.1
+ },
+ "queimada-texto-lightning1024": {
+  "concepto": "queimada",
+  "tecnica": "texto",
+  "modelo": "lightning1024",
+  "W": 1024,
+  "H": 576,
+  "semente": 1106,
+  "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, extreme close-up of a wide clay bowl of burning spirits, translucent blue flames, a wooden ladle lifting fire above the bowl, small clay cups on the rim, darkness around",
+  "clave": "blue flames",
+  "referencia": null,
+  "s_xeracion": 70.9,
+  "s_preparacion": 0.0,
+  "carga_pipe_s": 576.1
  }
 }
