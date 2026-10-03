@@ -64,7 +64,35 @@ co relevo); `choiva` e `po`, ao fotograma.
 
 ## 6. Cámara lenta e escala
 
+Os clips I2V duran 2-4 s e os planos 3-20 s. Como se enche un plano (`movemento.Clip`):
+
+1. **Cámara lenta interpolada**: se o plano é máis longo ca o clip, RIFE v4 (MIT) mete un fotograma intermedio
+   entre cada par (x2) ou tres (x4, se o plano dura máis do dobre); calcúlase unha vez antes da montaxe
+   (`movemento.preparar`) e gárdase na caché xunto ao clip. Tope: metade de velocidade (`lento_min` = 0,5); máis
+   lento, a xente camiña "baixo a auga".
+2. **Se aínda sobra plano**, o último fotograma queda e segue o zoom lento do plano (non hai salto: o clip xa
+   acaba case quieto).
+3. **Escala a 1080p**: Lanczos desde 800x448 (x2,4) e **transferencia de detalle**: o fluxo óptico (DIS, OpenCV)
+   de cada fotograma ao primeiro deforma a imaxe orixinal (1024x576 graduada, a mesma coa que se condicionou o
+   clip) ata a postura dese fotograma e súmaselle ao clip o seu detalle fino (paso alto) só onde coinciden a baixa
+   frecuencia; onde o clip trae contido novo (unha perna que avanza) queda o clip escalado. Real-ESRGAN descartouse
+   polo custo (≈ 1-2 s por fotograma en CPU a esta escala [S]) e porque inventa textura.
+4. `minterpolate` de ffmpeg non se usa: en movementos de persoas dá deformacións ("bolboretas") que RIFE non dá [S].
+
 ## 7. Porta de vídeo
+
+`movemento.porta_video(mp4)`, automática, para cada clip I2V:
+
+| Medida | Como | Bloquea se |
+|---|---|---|
+| Deriva da escena | CLIP ViT-L/14: coseno entre o primeiro fotograma e cada mostra | < 0,80 |
+| Parpadeo de luz | luminancia media de cada fotograma fronte á súa media móbil de 9 | > 3,0 (0-255) |
+| Cantidade de movemento | fluxo óptico Farneback medio (px/fotograma, a 800 px de ancho) | < 0,12 (quieto) ou > 4,5 (caótico) |
+| Desorde do movemento | desviación local do fluxo fronte á súa media en 15x15 | > 0,85 (aviso) |
+| Corpos | MediaPipe pose en 16 mostras: salto mediano dos puntos entre mostras (en torsos) e variación das proporcións brazo/perna/torso | salto > 0,45; CV > 0,30 |
+| Mans | MediaPipe mans: mans lonxe de calquera pulso | aviso se > 1 mostra |
+
+(calibración coas probas: §3)
 
 ## 8. Orzamento para un episodio de 12 min (D18)
 
@@ -94,4 +122,17 @@ descrición debería dicir que imaxes e vídeo están xerados por IA (proposta p
 | fal.ai, LTX-2 fast I2V | 0,04 $/s a 1080p (clips de 6 a 20 s) | https://fal.ai/models/fal-ai/ltx-2/image-to-video/fast |
 | Hugging Face Inference Providers | o mesmo prezo ca o provedor, sen marxe (`docs/APRENDIZAJES.md`) | https://huggingface.co/docs/inference-providers/pricing |
 
-(custo dun episodio: ver §8)
+**Custo dun episodio de 12 min con GPU alugada** (≈ 65 planos; supón 45 planos con persoas en I2V e dous intentos
+de media por plano para escoller co ollo ou coa porta):
+
+| Opción | Cálculo | Custo |
+|---|---|---|
+| Replicate `wan-2.2-i2v-fast` 720p (5 s por clip) | 90 clips x 0,11 $ | ≈ 10 $ |
+| Replicate `wan-2.2-i2v-fast` 480p | 90 x 0,05 $ | ≈ 4,5 $ |
+| fal Wan 2.2 A14B 720p | 90 x 5 s x 0,08 $/s | ≈ 36 $ |
+| fal LTX-Video 13B 0.9.8 destilado | 90 x 5 s x 0,02 $/s | ≈ 9 $ |
+| fal LTX-2 fast 1080p (mínimo 6 s) | 90 x 6 s x 0,04 $/s | ≈ 22 $ |
+
+Os tempos de GPU son de minutos para todo o episodio (fronte ás horas de CPU de §8) e a calidade de Wan 2.2 A14B
+ou LTX 13B/LTX-2 é outra liga ca a de LTX 2B. Fai falta unha clave de API (só chega a unha sesión nova) e decidir
+se se acepta un servizo de pago (D5/D6: o canal quería ser local e sen suscricións). [S] os 2 intentos por plano.
