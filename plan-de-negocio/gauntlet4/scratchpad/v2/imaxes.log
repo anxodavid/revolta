@@ -22,3 +22,18 @@ The following generation flags are not valid and may be ignored: ['early_stoppin
 imaxe   0 intento 0 126.1s + revisión 38.4s ['obxectos modernos']
 imaxe   0 intento 1 119.1s + revisión  9.9s ok
 imaxe   1 intento 0 120.9s + revisión 10.6s ok
+imaxe   2 intento 0 119.1s + revisión 10.0s ['texto na imaxe']
+imaxe   2 intento 1 122.9s + revisión 10.3s ['texto na imaxe']
+imaxe   2 intento 2 116.8s + revisión  9.6s ok
+imaxe   3 intento 0 102.0s + revisión 10.4s ok
+imaxe   4 intento 0 118.2s + revisión 11.1s ok
+imaxe   5 intento 0 118.2s + revisión 10.7s ['interior moderno']
+Token indices sequence length is longer than the specified maximum sequence length for this model (92 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['with a short black beard in a coarse linen shirt watching, side light']
+Token indices sequence length is longer than the specified maximum sequence length for this model (92 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['with a short black beard in a coarse linen shirt watching, side light']
+imaxe   5 intento 1 120.3s + revisión 10.5s ['interior moderno']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['with a short black beard in a coarse linen shirt watching, side light']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['with a short black beard in a coarse linen shirt watching, side light']
+imaxe   5 intento 2 118.2s + revisión 10.5s ok
+imaxe   6 intento 0 115.8s + revisión  9.9s ['man sen corpo (2)', 'roupa actual']
