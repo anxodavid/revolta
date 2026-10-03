@@ -32,3 +32,35 @@ de Claude mirando as imaxes, non dunha persoa. Detalle e cifras en `gauntlet4/im
   ninguén).
 - A roupa e os obxectos do XX dependen da época do plano (a taberna dos anos 50 da v1 caía por un "glass jar"): campo
   `epoca` novo.
+
+## Sementes (7 escenas x 4 técnicas, `imaxe/ab-sementes.jpg`)
+
+- **A semente arranxa a forma** que SDXL-Lightning non sabe (roda maciza, hórreo, palloza, lareira ao nivel do chan):
+  o texto só non deu ningún hórreo nin ningunha roda maciza. Pero a forza depende do que se pide: 0,5 conserva o
+  obxecto, 0,75 deixa meter xente nun espazo, a profundidade (ControlNet small a 0,6) recompón e ás veces inventa
+  (unha cara na campá, rodas de raios).
+- **A semente arrastra o presente da foto** (tubo de cheminea, vila moderna no val, mesa de restaurante): recortala.
+  O encadre dunha semente vertical con bandas desenfocadas fallou (o modelo pinta as bandas).
+- **Non encarece:** img2img 0,5 fai 2 dos 4 pasos e sae ≈ 20 % máis barato ca o texto só.
+
+## Tempos nesta CPU sen bf16 (`calibracion/perfil-tempos.json`)
+
+- 1024x576: UNet 4 pasos 48 s, VAE 22 s, texto 1,4 s. 1344x768: 74,5 + 39 + 1,3 s. O VAE é un terzo do tempo.
+- Despois do reinicio do 03-10 a máquina foi ≈ 20 % máis rápida (mesmo modelo de CPU): os tempos varían por máquina.
+- Tras un reinicio, a primeira carga tarda ≈ 10 min (disco frío, presión de E/S ≈ 89 %), como no Gauntlet 3.
+
+## Porta e medida
+
+- Florence-2 `<OPEN_VOCABULARY_DETECTION>` atopa sempre o que se lle pregunta (33 de 33 imaxes con "light bulb"): non
+  serve para detectar obxectos pequenos. Os pares de CLIP para obxectos pequenos tampouco (AUC 0,6-0,9 con moitos
+  falsos).
+- A `clave` por z fronte a 73 distractores non dá falsas alarmas na v1 (0/144) pero non distingue un hórreo dunha
+  cabana: para a iconografía, a garantía é a semente e a mirada dun axente.
+- CLIP-L fronte á tradución inglesa do texto separa ben os planos que ilustran dos desconectados (AUC 0,90 na v1) e
+  premia a coincidencia literal (calquera muller "casa" cunha frase sobre mulleres).
+
+## Entorno
+
+- Un candado aniñado (un `flock` por fóra dun script que colle o mesmo candado por dentro) bloqueou a CPU 30 min:
+  `/proc/locks` amosa quen o ten e quen agarda. Agora `herramientas/gauntlet/candado.sh`.
+- Commons dá 429 aos orixinais: miniaturas de tamaño estándar.

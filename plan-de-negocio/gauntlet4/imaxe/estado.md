@@ -1,6 +1,6 @@
 # Peza IMAXE (Gauntlet 4, rolda 1): estado
 
-Director de arte: axente Claude. Actualízase en cada fito. Última actualización: 02-10-2026, 23:55 UTC.
+Director de arte: axente Claude. Actualízase en cada fito. Última actualización: 03-10-2026, 09:10 UTC.
 
 ## Feito
 
@@ -18,20 +18,14 @@ Director de arte: axente Claude. Actualízase en cada fito. Última actualizaci�
 - Modelos novos na caché principal: Florence-2-base, ControlNet depth SDXL small (fp16), Depth-Anything-V2-Small.
   **Borrado Florence-2-large** (orde do orquestrador).
 
-## En curso (á espera do candado de CPU)
+## Rolda 1 pechada (03-10-2026, orde do orquestrador)
 
-- `scripts/sementes_ab.py xerar aldea,carro,lareira` (log `$SCRATCH/imaxe4/logs/ab1.log`) e
-  `palloza,queimada,horreo` (`ab2.log`).
-- `scripts/florence_ovd.py`: ¿ve Florence-2-base a bombilla, o radiador e a maleta de rodas? (`florence_ovd.log`).
+Feito ademais do anterior: folla A/B das sementes (`ab-sementes.jpg`, 7 escenas x 4 técnicas), proba da biblia v2
+(`biblia-v1-v2.jpg`), porta v6 sobre as 48 imaxes novas, perfil de tempos, Florence OVD (non serve) e correlación
+v1/v2 da biblia (`calibracion/`). Informe: `informe-r1.md` (§6, configuración recomendada para D18).
 
-## Falta
-
-1. Folla A/B das sementes (`ab-sementes.jpg`) e xuízo; proba da biblia v2 (`scripts/biblia_proba.py`, 20 imaxes) e
-   a folla `biblia-v1-v2.jpg`; tempo a 1344x768.
-2. Revisar coa porta v6 as imaxes A/B e da biblia (clave e anacronismos).
-3. `informe-r1.md` e pechar `../aprendizaxes/imaxe.md`.
-
-Non se farán nesta rolda (falta de disco, orde do orquestrador): SDXL fotorrealista afinado e IP-Adapter.
+Sen facer (por cota e por orde de non lanzar máis experimentos): refinado a 1344 (`scripts/refinar_proba.py`, listo),
+TAESD-XL, SDXL afinado e IP-Adapter (disco). Para a rolda 2, o que diga o crítico visual.
 
 ## Como retomar
 
@@ -48,15 +42,15 @@ python3 $I/catalogo_refs.py > $SCRATCH/imaxe4/catalogo_refs.json
 python3 $I/licenzas_commons.py $SCRATCH/imaxe4/catalogo_refs.json > $SCRATCH/imaxe4/licenzas.json
 python3 $I/escoller_refs.py $SCRATCH/imaxe4/catalogo_refs.json $SCRATCH/imaxe4/licenzas.json > plan-de-negocio/gauntlet4/imaxe/referencias.json
 # 4) calibración da porta (CLIP-L ≈ 25 min con candado) e avaliación (lixeira)
-flock "$CPU_LOCK" $PY $I/calibrar_clip.py calcular && $PY $I/calibrar_clip.py analizar
+herramientas/gauntlet/candado.sh $PY $I/calibrar_clip.py calcular && $PY $I/calibrar_clip.py analizar
 git show c4fcc72:herramientas/pipeline/revisor.py > $SCRATCH/imaxe4/revisor_v8_arranxos.py
 $PY $I/avaliar_porta.py $SCRATCH/imaxe4/revisor_v8_arranxos.py
 # 5) A/B de sementes e biblia (SDXL, ≈ 20 min por tanda, con candado)
 export IMG_MODEL=lightning1024
-flock "$CPU_LOCK" $PY $I/sementes_ab.py xerar aldea,carro,lareira
-flock "$CPU_LOCK" $PY $I/sementes_ab.py xerar palloza,queimada,horreo
+bash $I/cadea_r1.sh   # sementes (as 7 escenas), biblia, porta nas imaxes novas e Florence OVD, cada paso co candado
 $PY $I/sementes_ab.py folla
-flock "$CPU_LOCK" $PY $I/biblia_proba.py xerar && $PY $I/biblia_proba.py folla
+$PY $I/biblia_proba.py folla
+herramientas/gauntlet/candado.sh $PY $I/correlacion_biblia.py; herramientas/gauntlet/candado.sh $PY $I/perfil_tempos.py
 ```
 
 Antes de `avaliar_porta.py`: `python3 $I/florence_gardado.py` (as descricións de Florence-2-base que gardou a

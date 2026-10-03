@@ -13,7 +13,7 @@ xulga as follas un crítico visual.
 | Porta v6 | Nas 173 imaxes etiquetadas da v1: molestas 25/29 (antes 14/29), bloqueantes 2/4 (igual), boas marcadas 1/35 (antes 4/35); `clave` 8/18 ausencias con **0/144 falsas alarmas** (antes 14/18 con 25/144) |
 | Correlación imaxe-texto | CLIP-L fronte ao texto en inglés: AUC 0,90 entre planos que ilustran e desconectados. Liña de base da v1: z medio 1,29; o 59 % dos planos "ilustran" (z ≥ 1); no gancho só o 29 % |
 | Sementes | 7 escenas x 4 técnicas: a semente arranxa a forma (roda maciza, hórreo, palloza, lareira) en 5 de 7; img2img 0,5 para obxectos, 0,75 para espazos con xente, profundidade para recompoñer; **non encarece** (53-94 s fronte a 66-91 s) |
-| Biblia v2 | [`biblia-v2.md`](biblia-v2.md); proba en §5 (pendente) |
+| Biblia v2 | 10 prompts reescritos (mesmo modelo e semente): ilustran o que se oe 6-8 de 10 (v1: 1-2); persoas facendo algo 9 de 10 (v1: 5); z de correlación 0,55 → 1,52. Seguen anacronismos (zapato, casas inglesas, cadros) que a porta v6 marca |
 
 ## 1. Referencias
 
@@ -180,11 +180,32 @@ Xuízo de Claude mirando a folla (o crítico visual decide):
 - **O que segue saíndo mal:** anacronismos que a v2 non evita (zapato moderno, casas inglesas, cadros e fiestras de
   cuarterolas cando hai "room" ou "street"), e os edificios inventados (o templo do 20). A porta v6 ten que mirar
   estas 20 imaxes (§5.1) e a lista negativa da biblia v2 xa nomea eses casos.
-- Medida automática (CLIP-L fronte ao `texto_en`, mesmo banco): §5.1.
+- **Medida automática** (CLIP-L fronte ao `texto_en`, banco dos 140 textos da v1; `calibracion/correlacion-biblia.json`):
+  **z medio 0,55 → 1,52; ilustran (z ≥ 1) 4 → 7 de 10; desconectados (z < 0,5) 4 → 2.** Coincide co xuízo de Claude
+  salvo no 33 e no 37, que a medida dá por desconectados nas dúas versións.
+- **Porta v6:** marca 10 de 10 imaxes da v1 e 7 de 10 da v2 (§2); as tres da v2 que pasan (16, 26, 33) son das boas.
 
 ## 6. Configuración recomendada para a v2 (D18: ≈ 65 planos, ≈ 3-4 h de CPU)
 
-(pendente)
+**Custos medidos nesta CPU** (Xeon 2,8 GHz, 4 núcleos, sen bf16; `calibracion/perfil-tempos.json`): a 1024x576,
+texto 1,4 s + UNet 4 pasos 48 s + VAE 22 s ≈ **72 s**; a 1344x768, 1,3 + 74,5 + 39 ≈ **115 s** (1,6x); img2img 0,5
+≈ 20 % menos ca o texto; profundidade small +3-10 %; porta v6 10,5 s por intento; carga do modelo 12-32 s (≈ 10 min
+co disco frío tras un reinicio).
+
+| Elemento | Recomendación | Por que |
+|---|---|---|
+| Modelo | SDXL base + UNet Lightning 4 pasos (o da v1) | 8 pasos custa 1,7x e ten os mesmos fallos (Gauntlet 3); o afinado fotorrealista e o IP-Adapter quedan sen probar (disco) |
+| Resolución | **1344x768** na parte esperta (gancho, transición, calma: caras, mans, xente); **1024x576** ao durmir (escuro, pouco detalle) | D18 pide calidade; a 1344 é máis nítida (comparativa do Gauntlet 3) e a montaxe leva todo a 1920x1080 |
+| Intentos | ata **3** por plano, parando no primeiro que pasa a porta | ≈ 40 planos espertos x 1,8 x (115 + 11) s + ≈ 25 de durmir x 1,5 x (72 + 11) s ≈ **3,4 h** [S: 1,8 e 1,5 intentos de media son supostos; a v1 medía 2,38 coa porta anterior, máis estrita] |
+| Prompts | biblia v2: a frase visual (quen, que fai, con que), composición, sen as palabras trampa; `texto_en` en cada plano | proba §5 |
+| Sementes | en **todos** os planos de iconografía galega, só `semente` de `referencias.json`, limpas (recorte sen cables nin tubos): **img2img 0,5** para un obxecto que ten que saír igual (carro, hórreo, palloza); **img2img 0,75** para un espazo con xente (lareira); **profundidade 0,6** para recompoñer cun personaxe novo (hórreos con alguén traballando, a cunca da queimada); a lapa da queimada, sen semente | §4; non encarecen |
+| Porta | v6 (`revisor.py` VERSION 9) con `IMG_RESERVAS=0`, `epoca: "xx"` nos planos do século XX | §2 |
+| Revisión dun axente | **todas as imaxes escollidas**, en follas de 12 a 960 px antes de montar, e os planos que esgotan os 3 intentos: escolle outro intento (`escolla_manual`) ou reescribe o prompt | a porta non ve a bombilla, o radiador, a maleta de rodas nin un hórreo falso; ≈ 30-40 min de axente [S] |
+| Correlación | `correlacion.py` sobre a v2 e a v1 co mesmo banco, como medida para os críticos | §3 |
+
+**Sen probar e pendente:** refinar a 1344x768 unha imaxe xerada a 1024 (`scripts/refinar_proba.py`, preparado) e un
+descodificador TAESD-XL (≈ 10 MB, MIT) para os intentos: o VAE é o 31-34 % do tempo, así que daría ≈ 1 intento máis
+por plano co mesmo custo [S].
 
 ## 7. Decisións que lle tocan ao promotor
 
