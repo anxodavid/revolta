@@ -1,7 +1,7 @@
 # Estado do Gauntlet 4 e como relanzalo
 
 Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a sesión se corta, retomar desde aquí.**
-Última actualización: 03-10-2026, 06:16 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
+Última actualización: 03-10-2026, 08:58 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
 
 ## Que hai en marcha
 
@@ -24,6 +24,10 @@ Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador 
   e **reinicio do contedor** (03:53). Morreron a porta de texto do guion r1 e os lotes de paralaxe e I2V de
   MOVEMENTO; o feito estaba en git (últimos commits d86e250, f5eddf7 e bf5f0d4). Ás 03:55 retomáronse os tres axentes
   co seu contexto (SendMessage) e relanzouse a instantánea.
+- **03-10-2026 ≈ 06:30 UTC: segundo límite de uso** (planos, movemento e imaxe en paralelo, ≈ 2,5 h despois do
+  anterior; volveu a cota ás 08:50) e **reinicio do contedor** (08:53). Retomáronse os tres co seu contexto ás 08:55,
+  con tarefas acoutadas: PLANOS (camiño crítico) garda a lista por tramos; MOVEMENTO pecha con 2-3 clips I2V máis, a
+  integración en `montaxe.py` e o informe; IMAXE pecha o informe sen experimentos novos.
 
 ## Procesos de fondo desta sesión
 
