@@ -818,14 +818,27 @@ def interpolar(frames, veces=2):
     return (x.permute(0, 2, 3, 1).numpy() * 255 + 0.5).astype(np.uint8)
 
 
+def gardar_mp4(frames, f, fps=FPS, crf=12):
+    """Fotogramas uint8 (N, h, w, 3) a MP4 case sen perdas (x264 crf 12, yuv444p), en temporal + renomear."""
+    import imageio_ffmpeg
+    h, w = frames.shape[1:3]
+    tmp = str(f) + '.tmp.mp4'
+    p = subprocess.Popen([imageio_ffmpeg.get_ffmpeg_exe(), '-y', '-loglevel', 'error', '-f', 'rawvideo',
+                          '-pix_fmt', 'rgb24', '-s', f'{w}x{h}', '-r', str(fps), '-i', '-', '-c:v', 'libx264',
+                          '-preset', 'medium', '-crf', str(crf), '-pix_fmt', 'yuv444p', tmp], stdin=subprocess.PIPE)
+    p.stdin.write(np.ascontiguousarray(frames).tobytes()); p.stdin.close(); p.wait()
+    os.replace(tmp, f)
+
+
 def clip_lento(mp4, veces=2):
-    """Clip interpolado (caché xunto ao clip): para a cámara lenta dos planos máis longos ca o clip."""
-    f = Path(mp4).with_name(Path(mp4).stem + f'_x{veces}.npy')
+    """Clip interpolado (caché xunto ao clip, en MP4: en .npy eran 207 MB por clip): para a cámara lenta dos
+    planos máis longos ca o clip."""
+    f = Path(mp4).with_name(Path(mp4).stem + f'_x{veces}.mp4')
     if f.exists():
-        return np.load(f, mmap_mode='r')
+        return ler_video(f)
     fr = interpolar(ler_video(mp4), veces)
-    tmp = f.with_suffix('.tmp.npy'); np.save(tmp, fr); os.replace(tmp, f)
-    return np.load(f, mmap_mode='r')
+    gardar_mp4(fr, f)
+    return fr
 
 
 class Clip:
@@ -963,8 +976,13 @@ PORTA = {
     'fluxo_max': 4.5,          # px/fotograma de media: por riba, movemento caótico ou cámara tola
     'incoherencia_max': 0.85,  # desorde local do fluxo (0 = ríxido, 1 = ruído)
     'salto_max': 0.45,         # salto dos puntos do corpo entre mostras seguidas, en tamaños de torso
-    'proporcion_cv_max': 0.30, # variación (CV) da lonxitude dos brazos e pernas respecto do torso
+    'proporcion_cv_max': 0.30, # variación (CV) da lonxitude dos brazos e pernas respecto do torso (só aviso)
+    'deteccion_min': 0.6,      # as medidas do corpo só contan se MediaPipe ve o corpo en ≥ 60 % das mostras
 }
+# Calibración (rolda 1, 6 clips bos mirados a ollo e 4 malos sintéticos): con MediaPipe inestable (siluetas a
+# contraluz, primeiros planos de mans) o "salto" compara detección soltas e daba falsos positivos (planos 17 e 18);
+# a variación das proporcións sobe tamén cun brazo que se move en profundidade (escorzo: plano 3, CV 0,49) e queda
+# como aviso.
 
 
 def _mediapipe():
@@ -1041,7 +1059,7 @@ def porta_video(mp4, mostras=16, clip=None):
         res['clip_erro'] = str(ex)[:120]
     # (4) MediaPipe
     saltos, props, ncorp, orfas = [], [], [], 0
-    prev = None
+    prev = None                                                     # corpos da mostra anterior (só a inmediata)
     for i in idx:
         cs, mans = _corpos(fr[i])
         ncorp.append(len(cs))
@@ -1063,8 +1081,12 @@ def porta_video(mp4, mostras=16, clip=None):
         for m in mans:
             d = min((np.linalg.norm(m - q) for q in pulsos), default=9.0)
             orfas += d > 0.14 and len(cs) > 0
-        prev = cs if cs else prev
+        prev = cs
     res['corpos'] = ncorp
+    fiable = np.mean([c > 0 for c in ncorp]) >= PORTA['deteccion_min']
+    res['corpo_fiable'] = bool(fiable)
+    if not fiable:
+        saltos, props = [], []
     # salto entre mostras: normalízase a mostras cada ~3 fotogramas
     paso = max(1, (N - 1) / max(1, len(idx) - 1))
     res['salto_max'] = round(max(saltos) * 3 / paso, 3) if saltos else None
@@ -1088,7 +1110,7 @@ def porta_video(mp4, mostras=16, clip=None):
     if res.get('salto_max') and res['salto_max'] > PORTA['salto_max']:
         pr.append(f"salto do corpo ({res['salto_max']} torsos)")
     if res.get('proporcion_cv') and res['proporcion_cv'] > PORTA['proporcion_cv_max']:
-        pr.append(f"corpo que se deforma (CV {res['proporcion_cv']})")
+        av.append(f"proporcións do corpo que cambian (CV {res['proporcion_cv']})")
     if orfas > 1:
         av.append(f'mans sen corpo en {orfas} mostras')
     if len(set(ncorp)) > 2:

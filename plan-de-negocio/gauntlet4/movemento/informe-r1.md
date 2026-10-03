@@ -17,7 +17,37 @@ axente viu os clips en movemento.
 
 ## 3. Imaxe a vídeo (I2V)
 
-(táboa de medidas e calidade por clip)
+**Modelo escollido: LTX-Video 2B 0.9.8 destilado** (Lightricks), transformer e VAE con pesos en bf16 e cálculo en
+fp32 capa a capa (o truco de `imaxes.bf16_rapido`), 8 pasos da táboa do propio modelo, sen CFG, condicionado na
+imaxe da v1 xa graduada; T5-XXL noutro proceso (fp8, cálculo fp32). Todo a 800x448 (16:9, múltiplo de 32) e 24 fps.
+Código: `herramientas/pipeline/movemento_i2v.py`; probas: `scripts/ltx_proba.py`, `scripts/lote_r*.sh`.
+
+| Plano da v1 (o que pide) | Fotog. (s) | s por clip | s por paso (1.º) | descodificar | pico proceso / cgroup | Calidade na tira (a ollo, axente Claude) | Porta |
+|---|---|---|---|---|---|---|---|
+| 22 muller de costas nun camiño (JPEG sen graduar) | 49 (2,0) | **470** | 42 (71) | 103 s | 11,4 / 9,0 GB | **camiña de verdade**: pés que alternan, saia que abanea, a cámara acompaña; sen deformacións (`probas/ltx_p22_*`) | OK |
+| 3 home que remexe unha cunca (mans) | 73 (3,0) | 872 (*) | 41,5 (390 *) | 192 s | 10,0 / 10,2 GB | move a man en círculos co pau mentres mira a cunca; cara estable; natural | ver §7 |
+| 18 mans amasando (primeiro plano) | 81 (3,4) | **520** | 47 (70) | 119 s | 11,9 / 10,4 GB | as mans empuxan e dobran a masa; o brazo do fondo medra e encolle (escorzo) e o último fotograma ten algo de arrastre; sen dedos de máis á vista | ver §7 |
+| 14 rostro dunha muller que vixía | 97 (4,0) | 938 (*) | 64 (342 *) | 143 s | 13,5 / 11,0 GB | **xira a cabeza e os ollos cara á dereita**; a mesma cara do principio á fin; o pano cambia algo de forma | OK |
+| 22 (imaxe graduada) | 97 (4,0) | **658** | 62,5 (73) | 144 s | 13,5 / 11,0 GB | camiña (visto na demo, 1:52) | OK |
+| 17 garda e muller que saen por unha porta (siluetas) | 73 (3,0) | **470** | 42,7 (54) | 115 s | 13,5 / 11,0 GB | **as dúas siluetas camiñan** cara á luz, pernas alternas, sombras que as seguen | ver §7 |
+
+(*) primeiro clip despois dun reinicio do contedor: o primeiro paso le os 6,3 GB de pesos do disco en frío (+ ≈ 300 s).
+
+- **Custo en quente**: ≈ 8 pasos x (42 s a 49-73 fotogramas, 47 s a 81, 62 s a 97) + descodificar 105-145 s + 30
+  s: **470 s (2-3 s de clip) a 660 s (4 s de clip)**. ≈ 11-12 ms por token latente e paso.
+- **Memoria**: 97 fotogramas a 800x448 é o máximo prudente (11,0 GB de memoria anónima en todo o cgroup, de 13,36).
+  Un lote morreu ("Killed") ao empezar o segundo clip o 03-10 ás 05:08; o reinicio levou o `dmesg`, así que non se
+  pode confirmar que fose o OOM [S].
+- **Calidade**: nos 6 clips mirados, movemento natural e sen deformacións graves á escala das tiras (8 fotogramas
+  por clip, 480 px de ancho). Iso **non** é ver o vídeo: o parpadeo fino, as mans de preto e a textura da pel a
+  1080p só os ve quen o mire en movemento. A 800x448 escalado a 1080p o clip é máis brando ca a imaxe fixa; a
+  transferencia de detalle (§6) recupera boa parte (fotogramas da demo ás 1:03 e 1:08).
+- **Wan2.2-TI2V-5B / FastWan (3 pasos) non se probou**: o transformer son 10 GB en bf16, o VAE 2,8 GB en fp32 e o
+  umT5 11,4 GB; nin convertendo ao vol a fp8 (≈ 12 GB entre os tres) cabe xunto a LTX no orzamento de ≈ 13 GB de
+  disco da peza, co disco ao 96 % e a produción pedindo ≈ 8 GB libres. Estimación [S]: 2,5 veces os parámetros de
+  LTX 2B e o dobre de tokens (VAE 16x16x4) dan ≈ 5 veces máis cálculo por paso; con 3 pasos en vez de 8, ≈ 2 veces o
+  custo de LTX por clip (≈ 15-20 min) e a 704x1280 nativos, horas. SVD-XT 1.1 (opcional) tampouco: o repo pide
+  aceptar a licenza con conta (non hai token) e é Stability Community License.
 
 ## 4. Paralaxe 2,5D
 
@@ -95,6 +125,37 @@ Os clips I2V duran 2-4 s e os planos 3-20 s. Como se enche un plano (`movemento.
 (calibración coas probas: §3)
 
 ## 8. Orzamento para un episodio de 12 min (D18)
+
+Custos medidos nesta máquina (4 núcleos, sen bf16), co candado:
+
+| Paso | Custo medido | Fonte |
+|---|---|---|
+| Clip I2V 800x448, 73 fotogramas (3 s), 8 pasos | 470 s | planos 17 e 22 (49 fot.) |
+| Clip I2V 800x448, 97 fotogramas (4 s), 8 pasos | 660 s | plano 22 graduado |
+| Primeiro clip tras un reinicio (disco frío) | + 300 s | planos 3 e 14 |
+| Embeddings de T5 (fp8), por acción | ≈ 21 s (menos en lote) + 6 s de carga | `t5_emb.py` |
+| Porta de vídeo por clip (CLIP + MediaPipe + fluxo) | ver §7 | `porta_probas.py` |
+| Paralaxe + efectos a 1080p, un proceso | 0,31-0,41 s por fotograma | `probas/medidas-paralaxe-plx1.json` |
+| Montaxe con movemento (4 procesos, con profundidade, máscaras e RIFE) | 4,0 s por segundo de vídeo só paralaxe (demo de durmir); 6,2 s/s co gancho (2 planos I2V e 20 de paralaxe) | `demo-durmir.mp4`, `probas/medidas-demo.json` |
+| Montaxe Ken Burns da v1 (referencia) | ≈ 2,2 s por segundo de vídeo (70 min para 31 min) | README do pipeline |
+
+**Episodio de 12 min (720 s), ≈ 65 planos**, con persoas facendo algo en ≈ 40 (o 60 % da parte esperta que pide a
+peza 4) e paralaxe con efectos nos ≈ 25 restantes:
+
+| Configuración | I2V (40 clips + 20 % de repeticións pola porta) | Montaxe (≈ 6,2 s/s) | Total |
+|---|---|---|---|
+| **A. Recomendada**: 800x448, 97 fotog. nos planos ≥ 6 s e 73 nos curtos (20 + 20), 8 pasos, RIFE x2 e transferencia de detalle | (20 x 660 + 20 x 470) x 1,2 = **7,5 h** | **1,25 h** | **≈ 8,8 h** (+ 0,5 h de primeira carga, T5 e porta) |
+| B. Todo a 97 fotogramas | 40 x 660 x 1,2 = 8,8 h | 1,25 h | ≈ 10,5 h |
+| C. 1024x576, 97 fotog. (sen medir: ≈ 1,7 veces o custo por clip [S]) | ≈ 15 h | 1,3 h | non cabe |
+| D. Menos I2V (só gancho e momentos clave: 15 clips) | 2,8 h | 1,2 h | ≈ 4,5 h |
+
+A (≈ 9 h) cabe na noite de ≈ 10-12 h co que pediu o promotor en D18 (calidade por riba do custo). B tamén, xusto.
+Mellor calidade que cabe = **A**; se a rolda 2 mostra que 800x448 se ve brando de máis a 1080p, a seguinte palanca
+é 1024x576 só nos planos de rostro e mans (≈ 10 planos) [S].
+
+**Disco para producir**: LTX 2B (6,3 GB) e o venv de vídeo (1,8 GB) quedan; o T5 fp8 (4,9 GB) báixase só para
+calcular os embeddings de todas as accións do episodio nun lote (≈ 5 min) e bórrase despois; clips e cámara lenta
+en MP4 (≈ 1,5 + 3 MB por plano); profundidade e máscaras ≈ 2 MB por imaxe. Total temporal ≈ 13 GB; despois ≈ 8,5 GB.
 
 ## 9. Licenzas
 
