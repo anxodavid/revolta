@@ -7391,5 +7391,366 @@
   "version_revisor": 9,
   "modelo": "lightning",
   "fase": "transicion"
+ },
+ "030-a3ec08db": {
+  "ficheiro": "030-a3ec08db-1.png",
+  "escollida": 1,
+  "ok": false,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "030-a3ec08db-0.png",
+    "seed": 4162790064,
+    "s": 118.6,
+    "prompt": "cinematic film still, period drama, photorealistic, extreme close-up of an old magnifying glass resting on a yellowed 17th-century page, the round lens enlarging one small handwritten word struck through with a single line of ink, soft daylight in a quiet archive",
+    "modelo": "lightning",
+    "tokens": 58,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe",
+     "repetida (CLIP 0.91 co plano 26)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0033,
+    "lume_quente": 0.0008,
+    "descricion": "The image shows a pair of magnifying glasses resting on top of an open book. The book appears to be old and worn, with some text visible on the pages. The glasses are black and have a round frame with a thin metal handle. The pen is silver and has a pointed tip. The background is blurred, but it seems to be a desk or table. The focus of the image is on the glasses and the book.",
+    "obxectos": [
+     "book",
+     "penguin"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.012,
+      0.09
+     ],
+     "muros encalados (CLIP)": [
+      -0.002,
+      0.095
+     ],
+     "ciprés (CLIP)": [
+      -0.023,
+      0.113
+     ],
+     "oliveiras (CLIP)": [
+      0.002,
+      0.091
+     ],
+     "palmeiras (CLIP)": [
+      -0.014,
+      0.119
+     ],
+     "rodas de raios (CLIP)": [
+      0.032,
+      0.111
+     ],
+     "paisaxe seca (CLIP)": [
+      0.014,
+      0.098
+     ],
+     "eucaliptos (CLIP)": [
+      -0.026,
+      0.068
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.02,
+      0.069
+     ],
+     "luces de cidade (CLIP)": [
+      -0.025,
+      0.101
+     ],
+     "salón moderno (CLIP)": [
+      0.0,
+      0.062
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.029,
+      0.047
+     ],
+     "casas británicas (CLIP)": [
+      0.042,
+      0.094
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.005,
+      0.105
+     ],
+     "catedral inventada (CLIP)": [
+      -0.01,
+      0.122
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.014,
+      0.108
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.017,
+      0.146
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.02,
+      0.13
+     ],
+     "cadros na parede (CLIP)": [
+      0.006,
+      0.139
+     ],
+     "farol victoriano (CLIP)": [
+      -0.007,
+      0.124
+     ],
+     "negativo: hands": -0.016,
+     "negativo: fingers": -0.012,
+     "negativo: electric lamp": -0.001,
+     "negativo: printed text": 0.03,
+     "negativo: typewriter": -0.01,
+     "negativo: plastic": -0.047,
+     "clave: magnifying glass": 9.0,
+     "clave_v5: magnifying glass": 0.082
+    },
+    "arquetipo": null,
+    "s_revision": 10.2,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "030-a3ec08db-1.png",
+    "seed": 1956508482,
+    "s": 122.9,
+    "prompt": "cinematic film still, period drama, photorealistic, extreme close-up of an old magnifying glass resting on a yellowed 17th-century page, the round lens enlarging one small handwritten word struck through with a single line of ink, soft daylight in a quiet archive",
+    "modelo": "lightning",
+    "tokens": 58,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0291,
+    "lume_quente": 0.0616,
+    "descricion": "The image shows a magnifying glass resting on top of an open book. The book appears to be old and worn, with some text visible on the pages. The magnifying lens is round and has a black handle. The text on the book is written in a cursive font and is in black ink. The background is blurred, but it seems to be a wooden table or desk. The overall mood of the image is somber and contemplative.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.009,
+      0.097
+     ],
+     "muros encalados (CLIP)": [
+      -0.012,
+      0.097
+     ],
+     "ciprés (CLIP)": [
+      -0.027,
+      0.109
+     ],
+     "oliveiras (CLIP)": [
+      -0.014,
+      0.091
+     ],
+     "palmeiras (CLIP)": [
+      -0.011,
+      0.117
+     ],
+     "rodas de raios (CLIP)": [
+      0.039,
+      0.118
+     ],
+     "paisaxe seca (CLIP)": [
+      0.024,
+      0.092
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.062
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.02,
+      0.06
+     ],
+     "luces de cidade (CLIP)": [
+      -0.026,
+      0.108
+     ],
+     "salón moderno (CLIP)": [
+      0.012,
+      0.073
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.017,
+      0.043
+     ],
+     "casas británicas (CLIP)": [
+      0.038,
+      0.097
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.01,
+      0.12
+     ],
+     "catedral inventada (CLIP)": [
+      -0.004,
+      0.123
+     ],
+     "abrigo moderno (CLIP)": [
+      0.004,
+      0.111
+     ],
+     "chaqueta de tweed (CLIP)": [
+      0.005,
+      0.149
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.005,
+      0.12
+     ],
+     "cadros na parede (CLIP)": [
+      0.028,
+      0.145
+     ],
+     "farol victoriano (CLIP)": [
+      0.0,
+      0.119
+     ],
+     "negativo: hands": -0.012,
+     "negativo: fingers": -0.006,
+     "negativo: electric lamp": 0.002,
+     "negativo: printed text": 0.033,
+     "negativo: typewriter": -0.005,
+     "negativo: plastic": -0.049,
+     "clave: magnifying glass": 8.75,
+     "clave_v5: magnifying glass": 0.092
+    },
+    "arquetipo": null,
+    "s_revision": 9.8,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "030-a3ec08db-2.png",
+    "seed": 4085766676,
+    "s": 122.7,
+    "prompt": "cinematic film still, period drama, photorealistic, extreme close-up of an old magnifying glass resting on a yellowed 17th-century page, the round lens enlarging one small handwritten word struck through with a single line of ink, soft daylight in a quiet archive, seen from a low angle",
+    "modelo": "lightning",
+    "tokens": 64,
+    "truncado": "",
+    "problemas": [
+     "texto na imaxe",
+     "negativo do plano: printed text (CLIP)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0061,
+    "lume_quente": 0.002,
+    "descricion": "The image shows a magnifying glass resting on top of an old book. The book appears to be a medieval manuscript with text written in black ink. The text is written in a cursive font and is centered on the page. The magnifying lens is round and has a handle on one side. The background of the image is blurred, but it seems to be an old, worn book with some creases and wrinkles. The image is taken from a top-down perspective, looking down on the book.",
+    "obxectos": [
+     "book"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.019,
+      0.094
+     ],
+     "muros encalados (CLIP)": [
+      -0.005,
+      0.106
+     ],
+     "ciprés (CLIP)": [
+      -0.03,
+      0.124
+     ],
+     "oliveiras (CLIP)": [
+      -0.008,
+      0.092
+     ],
+     "palmeiras (CLIP)": [
+      -0.022,
+      0.115
+     ],
+     "rodas de raios (CLIP)": [
+      0.04,
+      0.11
+     ],
+     "paisaxe seca (CLIP)": [
+      0.007,
+      0.085
+     ],
+     "eucaliptos (CLIP)": [
+      -0.029,
+      0.076
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.031,
+      0.088
+     ],
+     "luces de cidade (CLIP)": [
+      -0.035,
+      0.123
+     ],
+     "salón moderno (CLIP)": [
+      -0.013,
+      0.075
+     ],
+     "patio mediterráneo (CLIP)": [
+      0.006,
+      0.039
+     ],
+     "casas británicas (CLIP)": [
+      0.036,
+      0.108
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.005,
+      0.137
+     ],
+     "catedral inventada (CLIP)": [
+      -0.013,
+      0.098
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.015,
+      0.112
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.011,
+      0.15
+     ],
+     "sombreiro moderno (CLIP)": [
+      0.023,
+      0.116
+     ],
+     "cadros na parede (CLIP)": [
+      0.048,
+      0.149
+     ],
+     "farol victoriano (CLIP)": [
+      -0.001,
+      0.115
+     ],
+     "negativo: hands": -0.005,
+     "negativo: fingers": -0.002,
+     "negativo: electric lamp": -0.001,
+     "negativo: printed text": 0.053,
+     "negativo: typewriter": 0.001,
+     "negativo: plastic": -0.045,
+     "clave: magnifying glass": 8.55,
+     "clave_v5: magnifying glass": 0.091
+    },
+    "arquetipo": null,
+    "s_revision": 11.3,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "transicion"
  }
 }
