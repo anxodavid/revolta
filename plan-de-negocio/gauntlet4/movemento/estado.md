@@ -3,44 +3,25 @@
 Ficheiro do construtor (enxeñeiro de VFX, axente Claude). Actualízase en cada fito. **Se a sesión se corta, retomar
 desde aquí** (non repetir medidas que xa estean en `probas/medidas-*.json`).
 
-Última actualización: 03-10-2026, 03:58 UTC.
+Última actualización: 03-10-2026, 11:35 UTC (rolda 1 pechada).
 
-## Feito
+## Feito (rolda 1 pechada)
 
-- Contorno de vídeo aparte (`$SCRATCH/video/venv`, 1,8 GB): torch 2.14.1+cpu, diffusers 0.40.0, transformers
-  5.18.0, accelerate 1.15.0, opencv-python-headless 5.0.0.93, imageio-ffmpeg 0.6.0 (lista enteira:
-  `scripts/requisitos-video.txt`).
-- Modelos baixados (en `$SCRATCH/video/hf`, `HF_HOME` propio para poder borralos sen tocar o contorno principal):
-  - `Lightricks/LTX-Video`: `ltxv-2b-0.9.8-distilled.safetensors` (6,34 GB, transformer e VAE en bf16) e os
-    `json`/`tokenizer` do repo. Licenza: **LTXV Open Weights License 0.X** (ver informe).
-  - `comfyanonymous/flux_text_encoders`: `t5xxl_fp8_e4m3fn.safetensors` (4,89 GB, Apache-2.0): o T5-XXL que usa LTX.
-- Embeddings de T5 para 14 accións (`scripts/accions.json`) en `$SCRATCH/video/emb/` (`scripts/t5_emb.py`: pesos
-  en fp8, cálculo en fp32; 6 s de carga, ≈ 21 s por texto, pico 6,4 GB). O T5 só fai falta para accións novas.
-
-- Primeira medida de I2V (LTX 2B, plano 22, 800x448, 49 fotogramas, 8 pasos): 470 s; camiña de verdade
-  (`probas/ltx_p22_*`, `probas/medidas-ltx.json`).
-- Código: `herramientas/pipeline/movemento.py` (paralaxe 2,5D, efectos, encaixe de clips I2V con cámara lenta
-  RIFE e transferencia de detalle, porta de vídeo), `movemento_i2v.py` (T5 por lotes e LTX con caché por hash, no
-  venv de vídeo; colle o candado el mesmo: non envolvelo en `flock`), integración en `montaxe.py` (planos con
-  `animacion`; sen ela, Ken Burns coma na v1) e `longo.py` (pasa `animacion`).
-- Imaxes da v1 graduadas coma na montaxe da v1 en `$SCRATCH/video/demo/graduadas/` (`scripts/demo_gancho.py
-  preparar`): os clips I2V da demo condiciónanse nelas.
-
-## En curso (03-10-2026, 03:58 UTC, despois do reinicio do contedor)
-
-- `scripts/lote_r1.sh` (desacoplado, log en `$SCRATCH/video/logs/lote_r1.log`): (1) segunda proba da paralaxe
-  (recortes nos bordos e compatibilidade coa v1), (2) 9 clips I2V de LTX 2B a 800x448 (planos 3, 7, 22, 1, 14, 18,
-  17, 5 e 2; serven tamén para a demo), (3) porta de vídeo e tiras de cada clip en `probas/`, (4) proba da
-  transferencia de detalle no plano 22. Remata con `LOTE_FIN`. Se o contedor se reinicia, volver lanzalo: os clips
-  feitos quedan na caché (`$SCRATCH/movemento/i2v/`) e non se repiten.
-- Borrado para liberar disco: o T5 fp8 (4,9 GB; os 14 embeddings xa están en `$SCRATCH/video/emb/`; para accións
-  novas, volver baixalo: 100 s) e as imaxes intermedias da demo. Wan2.2-TI2V-5B non se proba: non cabe no disco
-  (ver informe §3).
+- Código: `herramientas/pipeline/movemento.py` (paralaxe 2,5D, 8 cámaras, 8 efectos, clips I2V con cámara lenta
+  RIFE en MP4 e transferencia de detalle, porta de vídeo recalibrada), `movemento_i2v.py` (T5 fp8 por lotes, LTX 2B
+  con caché por hash; colle o candado cooperativo el mesmo: **non envolvelo en `candado.sh`**, interbloquéase),
+  integración en `montaxe.py` (planos con `animacion`; sen ela, fotogramas idénticos aos da v1) e `longo.py`.
+- Medidas e tiras en `probas/`: 6 clips I2V (470-660 s por clip), paralaxe e efectos, porta.
+- Demos: `demo-gancho.mp4` (I2V nos planos 14 e 22) e `demo-durmir.mp4`. Informe: `informe-r1.md`.
+- Caché en `$SCRATCH/movemento/` (`i2v/`: 6 clips + cámara lenta; `prof/`, `masc/`). Embeddings das 14 accións de
+  proba en `$SCRATCH/video/emb/`. O T5 fp8 está borrado (volver baixalo para accións novas).
 
 ## Falta
 
-Mirar as tiras, decidir que planos van con I2V, montar a demo (`demo_gancho.py montar`) e, se dá tempo, a de
-durmir (`demo_gancho.py durmir`), informe e aprendizaxes.
+- Pasar a porta cos 4 malos sintéticos e remontar a demo cos 5 clips (3, 14, 17, 18, 22): `bash
+  plan-de-negocio/gauntlet4/movemento/scripts/lote_r3.sh` (≈ 20 min de CPU co candado). Cancelouse o 03-10 ás 11:30
+  UTC porque a produción da v2 tiña o candado.
+- Rolda 2 (se o crítico o pide): máis clips para calibrar a porta, 1024x576 só en rostros e mans, Wan non probado.
 
 ## Como reconstruír o contorno de vídeo nunha sesión nova
 

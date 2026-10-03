@@ -1,12 +1,27 @@
 # MOVEMENTO, rolda 1: que movemento é posible en CPU e a que custo
 
-Construtor: enxeñeiro de VFX (axente Claude), 02-10-2026. **Borrador en curso**: as táboas énchense segundo saen as
-medidas (`probas/medidas-*.json`). Todo o que se di da calidade sae de mirar tiras de fotogramas (JPEG): ningún
-axente viu os clips en movemento.
+Construtor: enxeñeiro de VFX (axente Claude), 02-03/10-2026. Medidas en `probas/medidas-*.json`. Todo o que se di da
+calidade sae de mirar tiras de fotogramas (JPEG): **ningún axente viu os clips en movemento**.
 
 ## 1. Resumo
 
-(por escribir ao final)
+- **Ningún plano fixo é posible en CPU** con tres modos por plano (campo `animacion` da lista de planos, §6.1 do
+  contexto), xa integrados en `montaxe.py` e `longo.py`; os planos sen `animacion` saen exactamente coma na v1
+  (fotogramas idénticos, diferenza 0).
+- **I2V (xente que se move): LTX-Video 2B 0.9.8 destilado**, 800x448 a 24 fps, 8 pasos: **470 s por clip de 2-3 s
+  e 660 s por clip de 4 s**, 11 GB de memoria. Nas tiras dos 6 clips de proba o movemento é natural: unha muller que
+  camiña de verdade, dúas siluetas que saen por unha porta, mans que remexen e amasan, un rostro que xira a cabeza;
+  sen deformacións graves á vista. A 1080p o clip é máis brando ca a imaxe fixa: a transferencia de detalle desde a
+  imaxe orixinal (guiada polo fluxo óptico) recupera boa parte.
+- **Paralaxe 2,5D** (profundidade de Depth-Anything-V2-Small, z-buffer e recheo do fondo destapado) con 8 cámaras e
+  **8 microanimacións** (lume, candea, choiva, brétema, fume, auga, ceo, po): 0,3-0,4 s por fotograma a 1080p.
+- **Orzamento dun episodio de 12 min (≈ 65 planos)**: ≈ 40 clips I2V + 25 planos en paralaxe ≈ **9 h de CPU**:
+  cabe nunha noite (§8). Con GPU alugada, **≈ 4,5-10 $ por episodio** (Wan 2.2 I2V en Replicate) e calidade doutra
+  liga; precisa clave de API e decisión do promotor (§10).
+- **Demo**: `demo-gancho.mp4` (o gancho da v1, 1:55, mesmas imaxes e audio, I2V nos planos 14 e 22 e paralaxe con
+  efectos nos outros 20) e `demo-durmir.mp4` (60 s da zona de durmir, sen son).
+- **Límites honestos**: só tiras, ninguén o viu en movemento; a porta de vídeo rexeitou tres clips bos e hai que
+  recalibrala con máis clips (§7); Wan2.2-TI2V-5B non se probou por disco (§3).
 
 ## 2. Máquina e método
 
@@ -122,7 +137,16 @@ Os clips I2V duran 2-4 s e os planos 3-20 s. Como se enche un plano (`movemento.
 | Corpos | MediaPipe pose en 16 mostras: salto mediano dos puntos entre mostras (en torsos) e variación das proporcións brazo/perna/torso | salto > 0,45; CV > 0,30 |
 | Mans | MediaPipe mans: mans lonxe de calquera pulso | aviso se > 1 mostra |
 
-(calibración coas probas: §3)
+**Calibración (rolda 1).** Cos limiares de partida, a porta rexeitou **3 dos 6 clips bos** (planos 3, 17 e 18,
+que se ven ben nas tiras): MediaPipe é inestable nas siluetas a contraluz (17: corpo en 3 de 16 mostras) e nos
+primeiros planos de mans (18: 0-2 "corpos" ao chou), e o "salto" comparaba deteccións soltas; no plano 3, a
+variación das proporcións saía alta (CV 0,49) polo escorzo do brazo que remexe cara á cámara. Arranxo no código:
+as medidas do corpo só contan se MediaPipe ve o corpo en ≥ 60 % das mostras, os saltos só entre mostras seguidas e a
+variación das proporcións pasa a aviso. Recalculado coas medidas gardadas (`probas/medidas-porta.json`, sen volver
+pasar a porta): **6 de 6 OK**. Os 4 clips malos sintéticos (quieto, caótico, parpadeo, deriva de escena;
+`scripts/porta_negativos.py`) non se chegaron a pasar: o candado estaba coa produción da v2. Mentres non se probe
+con clips malos de verdade, a porta é unha rede contra fallos grosos, non un xuíz da calidade. Custo: 45-50 s por
+clip (135 s o primeiro, coa carga de CLIP).
 
 ## 8. Orzamento para un episodio de 12 min (D18)
 
@@ -197,3 +221,16 @@ de media por plano para escoller co ollo ou coa porta):
 Os tempos de GPU son de minutos para todo o episodio (fronte ás horas de CPU de §8) e a calidade de Wan 2.2 A14B
 ou LTX 13B/LTX-2 é outra liga ca a de LTX 2B. Fai falta unha clave de API (só chega a unha sesión nova) e decidir
 se se acepta un servizo de pago (D5/D6: o canal quería ser local e sen suscricións). [S] os 2 intentos por plano.
+
+## 11. Demo para o promotor e o crítico
+
+- `demo-gancho.mp4` (1080p, 1:55, 25,4 MB, validada con ffmpeg, escrita en temporal + renomear): os planos 1-22 de
+  `gauntlet3/video/escenas-montadas.json`, coas mesmas imaxes da v1 (e a súa gradación) e o audio dos primeiros 115 s
+  do avance da v1. I2V nos planos 14 (rostro que xira a cabeza) e 22 (muller que camiña); paralaxe con efectos nos
+  outros 20 (lume na queimada e na lareira, candeas, choiva no plano do cabalo, brétema no carballal, auga na xerra,
+  po). Os clips dos planos 3, 17 e 18 existen pero quedaron fóra porque a primeira porta os rexeitou (falsos
+  positivos, §7). Montaxe: 717 s (6,2 s por segundo de vídeo). Plan por plano: `demo-gancho-planos.json`.
+- `demo-durmir.mp4` (60 s, 10,1 MB, sen son): planos 151, 153, 157 e 160 da v1 con fume, choiva e auga, brétema.
+- Para remontar a demo cos 5 clips (≈ 12 min de CPU): `bash scripts/lote_r3.sh` (porta con malos sintéticos e
+  demo).
+

@@ -53,3 +53,20 @@ dun axente Claude mirando tiras de fotogramas: ninguén viu os clips en movement
 - **O OOM das 22:46 UTC** (dmesg: uptime 1.435 s, `proba_entorno.py` con 10,5 GB de memoria anónima) foi antes de
   lanzar a primeira proba de LTX (22:56); nese momento desta peza só corrían o `pip install` do venv de vídeo e a
   descarga de modelos (sen modelos cargados). Igualmente, desde entón todo vai co candado, tamén as probas curtas.
+
+## I2V, porta e montaxe (03-10-2026, rolda 1 pechada)
+
+- **LTX 2B en quente: 470 s por clip de 3 s e 660 s por clip de 4 s a 800x448** (paso 42-63 s, descodificar
+  105-145 s). Despois dun reinicio do contedor o primeiro clip paga +300 s (os 6,3 GB de pesos lense do disco en
+  frío). 97 fotogramas a 800x448 xa son 11 GB de memoria anónima: máis resolución ou máis fotogramas arrisca o OOM.
+- **As tiras dos 6 clips vense naturais** (camiñar, mans, rostro, dúas siluetas): LTX 2B destilado anima ben
+  imaxes de SDXL cando o prompt describe un só movemento lento ("walks slowly away", "turns her head").
+- **A porta de vídeo con MediaPipe dá falsos positivos** en siluetas, primeiros planos de mans e escorzos: as
+  medidas do corpo só valen se o corpo se detecta de forma estable (≥ 60 % das mostras). Sen clips malos de verdade
+  non hai calibración seria; fan falta exemplos malos (sintéticos ou xerados) antes de confiar nela.
+- **A cámara lenta de RIFE en `.npy` ocupaba 207 MB por clip**: en MP4 case sen perdas, ≈ 3 MB.
+- **Compatibilidade coa v1: comparar fotogramas en memoria**, non MP4: dúas codificacións x264 do mesmo vídeo
+  difiren (diferenza máxima 40 de 255) aínda que os fotogramas sexan idénticos.
+- **Cota e reinicios**: a sesión chegou dúas veces ao límite de uso e o contedor reiniciouse, matando os lotes.
+  Funcionou: lotes en serie nun `.sh` desacoplado que se poden relanzar (a caché por hash salta o feito), unha soa
+  espera en segundo plano e commits tras cada paso.
