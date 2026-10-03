@@ -26,4 +26,8 @@
   segundo plano (`run_in_background`) pode durar 2 h: usala como garda mentres corre un traballo longo (un bucle que
   remata cando remata o traballo) e volver armala en cada espertar. A cota sóese esgotar ≈ 3,5 h despois de volver se
   hai axentes traballando; sen eles, aforrar avisos de progreso (cada aviso é unha volta enteira do orquestrador).
+- **`pgrep -f` atópase a si mesmo** se o patrón está na liña de ordes do shell que o chama (`bash -c "… pgrep -f
+  v2/imaxes.sh …"`): a garda do 03-10-2026 non rematou ao acabar as imaxes (17:25), chegou ao seu límite de 2 h ás
+  17:53 sen avisar e, coa cota esgotada, o contedor reciclouse e matou o T5 (24 de 54 embeddings). Usar
+  `pgrep -f "[v]2/imaxes.sh"` (a clase de caracteres non casa co propio texto do patrón).
 
