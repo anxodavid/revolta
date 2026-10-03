@@ -16,3 +16,16 @@ horreos-img2img_075-lightning1024: 64.3 s (+0.1 s de preparación)
 horreos-profundidade_060-lightning1024: 67.7 s (+1.0 s de preparación)
 == rc 0 04:25:13
 == 04:25:13 plan-de-negocio/gauntlet4/imaxe/scripts/biblia_proba.py xerar 8,16,19,20,26
+carga 12.1
+008-v1-lightning1024: 74.1 s
+008-v2-lightning1024: 73.3 s
+016-v1-lightning1024: 65.3 s
+016-v2-lightning1024: 67.2 s
+019-v1-lightning1024: 67.9 s
+019-v2-lightning1024: 68.0 s
+020-v1-lightning1024: 66.3 s
+020-v2-lightning1024: 66.8 s
+026-v1-lightning1024: 69.8 s
+026-v2-lightning1024: 67.2 s
+== rc 0 04:39:01
+== 04:39:01 plan-de-negocio/gauntlet4/imaxe/scripts/biblia_proba.py xerar 33,37,48,84,92

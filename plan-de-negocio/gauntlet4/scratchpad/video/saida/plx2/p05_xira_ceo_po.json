@@ -1,0 +1,22 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/graduadas/004-6c78d74f-0.png",
+ "animacion": {
+  "modo": "paralaxe",
+  "camara": "xira_esq",
+  "efectos": [
+   "ceo",
+   "po"
+  ]
+ },
+ "dur": 6.0,
+ "fotogramas": 144,
+ "s_preparar": 53.68,
+ "s_iniciar": 1.0,
+ "s_por_fotograma": 0.231,
+ "s_por_fotograma_p95": 0.231,
+ "zoom_k": 1.0,
+ "efectos_activos": [
+  "Fluxo",
+  "Po"
+ ]
+}

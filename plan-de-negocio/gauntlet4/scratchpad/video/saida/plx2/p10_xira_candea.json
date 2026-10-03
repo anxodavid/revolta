@@ -1,0 +1,20 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/graduadas/009-7d019425-1.png",
+ "animacion": {
+  "modo": "paralaxe",
+  "camara": "xira_der",
+  "efectos": [
+   "candea"
+  ]
+ },
+ "dur": 6.0,
+ "fotogramas": 144,
+ "s_preparar": 10.46,
+ "s_iniciar": 0.41,
+ "s_por_fotograma": 0.188,
+ "s_por_fotograma_p95": 0.189,
+ "zoom_k": 1.0,
+ "efectos_activos": [
+  "Lume"
+ ]
+}

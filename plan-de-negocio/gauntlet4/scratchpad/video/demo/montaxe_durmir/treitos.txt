@@ -1,0 +1,4 @@
+file '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/montaxe_durmir/treito_0.mp4'
+file '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/montaxe_durmir/treito_1.mp4'
+file '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/montaxe_durmir/treito_2.mp4'
+file '/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/video/demo/montaxe_durmir/treito_3.mp4'

@@ -1,0 +1,13 @@
+{
+ "carga_s": 31.7,
+ "lightning1024": {
+  "texto_s": 1.4,
+  "unet_4_pasos_s": 48.1,
+  "vae_decode_s": 22.2
+ },
+ "lightning": {
+  "texto_s": 1.3,
+  "unet_4_pasos_s": 74.5,
+  "vae_decode_s": 39.0
+ }
+}
