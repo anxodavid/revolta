@@ -1,0 +1,408 @@
+[
+ {
+  "n": 2,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "he slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 5,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/004-54589876-0.png",
+  "accion": "the bearded man writes slowly with the quill and looks up, the candle flames flicker",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 8,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/007-0ae28a3e-0.png",
+  "accion": "he jolts upright from the bench and flings his arms wide",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 13,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/012-c1475796-2.png",
+  "accion": "her lips move slightly as she murmurs",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 16,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/015-b27e8d07-0.png",
+  "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers",
+  "i2v": {}
+ },
+ {
+  "n": 18,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "the healer slowly hands over the steaming bowl and the young woman takes it",
+  "i2v": {}
+ },
+ {
+  "n": 22,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "they lean closer and whisper, and one woman glances sideways",
+  "i2v": {}
+ },
+ {
+  "n": 23,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "the wind blows her scarf and the grass as she speaks softly, the cows graze behind her",
+  "i2v": {}
+ },
+ {
+  "n": 30,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/029-ffcab11f-1.png",
+  "accion": "the younger woman picks up the empty jug and looks into it",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 33,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "the three men laugh and lean toward the flames as one stirs with the ladle",
+  "i2v": {}
+ },
+ {
+  "n": 34,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/033-e502ad3e-0.png",
+  "accion": "he reads aloud with a solemn face and slowly raises one hand",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 43,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/042-8f6f62a0-0.png",
+  "accion": "she speaks slowly with her eyes down, her hands trembling in her lap",
+  "i2v": {}
+ },
+ {
+  "n": 44,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/043-4b69fa16-2.png",
+  "accion": "the old healer hands over the pot and touches the child's head",
+  "i2v": {}
+ },
+ {
+  "n": 48,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/047-6f00deb4-2.png",
+  "accion": "the men point and shout and the woman steps back",
+  "i2v": {}
+ },
+ {
+  "n": 49,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/048-81e3eeee-0.png",
+  "accion": "the two men slowly raise their heads above the wall to look",
+  "i2v": {}
+ },
+ {
+  "n": 50,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/049-36108886-1.png",
+  "accion": "he writes a name, glances up toward the fountain and writes again",
+  "i2v": {}
+ },
+ {
+  "n": 52,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/051-e973a75e-0.png",
+  "accion": "the women talk and gesture softly as the small fire flickers",
+  "i2v": {}
+ },
+ {
+  "n": 53,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/052-d27a5209-0.png",
+  "accion": "the women walk slowly toward the camera carrying their jugs",
+  "i2v": {}
+ },
+ {
+  "n": 54,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug",
+  "i2v": {}
+ },
+ {
+  "n": 55,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/054-e88400da-0.png",
+  "accion": "the girl slowly grinds the herbs with the pestle while her mother's hand rests on hers",
+  "i2v": {}
+ },
+ {
+  "n": 56,
+  "prioridade_i2v": 1,
+  "imaxe": "-",
+  "accion": "the two men argue and gesture while the sheep keep eating",
+  "i2v": {}
+ },
+ {
+  "n": 57,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/056-71584a1c-0.png",
+  "accion": "she rubs the cow's leg gently and the cow turns its head",
+  "i2v": {}
+ },
+ {
+  "n": 58,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/057-9bb95889-0.png",
+  "accion": "the friar turns the sprig in his fingers and nods as the old woman speaks",
+  "i2v": {}
+ },
+ {
+  "n": 60,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/059-7bd4a5fa-0.png",
+  "accion": "the old woman whispers and the young woman's eyes widen",
+  "i2v": {}
+ },
+ {
+  "n": 66,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/065-00feb3af-0.png",
+  "accion": "she cups the water in her hands and slowly lifts it to her face",
+  "i2v": {}
+ },
+ {
+  "n": 69,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/068-4f4efe5e-2.png",
+  "accion": "he lifts the ladle and pours a slow stream of blue fire back into the bowl",
+  "i2v": {}
+ },
+ {
+  "n": 71,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/070-bad0884c-1.png",
+  "accion": "she smiles and raises a finger as she speaks and he laughs softly",
+  "i2v": {}
+ },
+ {
+  "n": 1,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/000-df6db929-1.png",
+  "accion": "the owl slowly turns its head and blinks",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 3,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/002-53ec0878-2.png",
+  "accion": "the man writes slowly, pauses and looks up from the notebook",
+  "i2v": {}
+ },
+ {
+  "n": 6,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the old midwife gently strokes the young woman's brow while the man shifts his weight",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 11,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/010-64e96403-0.png",
+  "accion": "the people slowly raise their small cups toward the flames",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 12,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the scribe dips the quill in the inkpot and writes",
+  "i2v": {}
+ },
+ {
+  "n": 17,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the old woman shells beans while the young woman turns her head toward her",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 19,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "she slowly turns the old papers in the candlelight",
+  "i2v": {}
+ },
+ {
+  "n": 20,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the judge points his quill at her and she lowers her eyes",
+  "i2v": {}
+ },
+ {
+  "n": 21,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "she opens the heavy door wider and the cloaked man steps inside",
+  "i2v": {}
+ },
+ {
+  "n": 24,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/023-2e94bcd6-0.png",
+  "accion": "the cows drink from the stream and the water ripples around their muzzles",
+  "i2v": {}
+ },
+ {
+  "n": 25,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/024-341e06d7-2.png",
+  "accion": "the bearded man speaks slowly in profile, the candle flames flicker",
+  "i2v": {}
+ },
+ {
+  "n": 26,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the hand strikes through a word with the quill and writes on",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 27,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/026-7184d1ed-1.png",
+  "accion": "the archivist gently unfolds the bundle and smooths the page",
+  "i2v": {}
+ },
+ {
+  "n": 28,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/027-70e923a8-0.png",
+  "accion": "the scribe writes slowly while the man behind him watches in silence",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 29,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the priest reads from the paper while the two women lower their heads",
+  "i2v": {}
+ },
+ {
+  "n": 36,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/035-7e6df055-1.png",
+  "accion": "they read the card together and one points at the poem",
+  "i2v": {}
+ },
+ {
+  "n": 37,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the hand slowly signs the form",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 38,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "people raise their cups and the blue flames flicker",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
+  "n": 41,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "he closes the file and sets it on the pile",
+  "i2v": {}
+ },
+ {
+  "n": 42,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the judge leans forward and the women lower their heads",
+  "i2v": {}
+ },
+ {
+  "n": 45,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/044-62d7294b-2.png",
+  "accion": "the judge leans forward and asks while the scribe writes",
+  "i2v": {}
+ },
+ {
+  "n": 46,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/045-9b9c24e2-0.png",
+  "accion": "the judge reads the question and the woman slowly nods without speaking",
+  "i2v": {}
+ },
+ {
+  "n": 59,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the monk writes, pauses and looks up thoughtfully",
+  "i2v": {}
+ },
+ {
+  "n": 61,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/060-435398fa-0.png",
+  "accion": "the shadow of the bird drifts slowly across the wall while the woman sleeps",
+  "i2v": {}
+ },
+ {
+  "n": 68,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the jug slowly pours the spirits into the bowl",
+  "i2v": {}
+ },
+ {
+  "n": 73,
+  "prioridade_i2v": 2,
+  "imaxe": "-",
+  "accion": "the grandmother speaks softly and the child's eyes slowly close",
+  "i2v": {}
+ },
+ {
+  "n": 76,
+  "prioridade_i2v": 2,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/075-066ce0c5-3.png",
+  "accion": "the candle flame trembles and slowly goes out, leaving a thin thread of smoke",
+  "i2v": {}
+ }
+]

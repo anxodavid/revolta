@@ -237,7 +237,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Dous mouchos sobre pedra con musgo, de noite no bosque: ilustra o que se oe. O sapo non saíu; non fai falta."
+  }
  },
  "001-24f10d65": {
   "ficheiro": "001-24f10d65-0.png",
@@ -365,8 +371,8 @@
   "fase": "gancho"
  },
  "002-53ec0878": {
-  "ficheiro": "002-53ec0878-2.png",
-  "escollida": 2,
+  "ficheiro": "002-53ec0878-1.png",
+  "escollida": 1,
   "ok": true,
   "intentos": [
    {
@@ -762,7 +768,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "No [2] escollido sostén na outra man unha pluma ou un misto acendido (artefacto). O [1] é limpo: escribe nun caderno, con candeas e o porto de noite; o texto non se le (a porta rexeitouno por texto, de máis)."
+  }
  },
  "003-495417ae": {
   "ficheiro": "003-495417ae-0.png",
@@ -891,7 +903,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Barco vello amarrado a un peirao de granito de noite (semente da dorna): correcto. Non se ven os tres homes; non fai falta."
+  }
  },
  "004-54589876": {
   "ficheiro": "004-54589876-0.png",
@@ -1028,7 +1046,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Home con barba e chapeu que escribe con pluma á luz das candeas, con xente detrás: lese como unha declaración ante o tribunal. Para MOVEMENTO: o home escribe e leva o chapeu posto, así que hai que cambiar a acción I2V."
+  }
  },
  "005-8c98d5e0": {
   "ficheiro": "005-8c98d5e0-2.png",
@@ -1989,7 +2013,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Home dobrado sobre o banco, coma se lle petase a dor, con zapatos brandos: conta a historia. Defecto menor: ao fondo, noutro cuarto, unha fiestra de vidro pequena e desenfocada. O I2V do salto é fráxil; se deforma, paralaxe."
+  }
  },
  "008-326f5a48": {
   "ficheiro": "008-326f5a48-0.png",
@@ -2389,7 +2419,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Tres mozos arredor dunha cunca de barro con lume: unha queimada no século XX, encaixa. Defectos menores: lapa laranxa, contas azuis dentro da cunca e caras ben iluminadas (o prompt quería anonimato)."
+  }
  },
  "011-53232142": {
   "ficheiro": "011-53232142-1.png",
@@ -2813,7 +2849,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Escribán con pluma e candeas, papel sen texto lexible. A porta rexeitouno por texto na imaxe, que nun plano de escritura sobra. Lazo de encaixe ao pescozo algo tardío, aceptable."
+  }
  },
  "012-c1475796": {
   "ficheiro": "012-c1475796-2.png",
@@ -3188,7 +3230,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Primeiro plano da parteira: boa calidade e sen artefactos. O pano é claro, non marrón escuro, e mira á cámara."
+  }
  },
  "013-42727703": {
   "ficheiro": "013-42727703-0.png",
@@ -3312,7 +3360,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Pilas de papeis vellos: ilustra o que se oe. Ao fondo hai unha fiestra de vidro desenfocada, crible nun arquivo ou tribunal."
+  }
  },
  "014-edb2132a": {
   "ficheiro": "014-edb2132a-0.png",
@@ -3670,7 +3724,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Letra cursiva antiga ilexible, con riscos: vale para un plano de escritura (a porta rexeita por texto). O [1] ten pseudopalabras góticas case lexibles e o [2] parece libro impreso."
+  }
  },
  "015-b27e8d07": {
   "ficheiro": "015-b27e8d07-0.png",
@@ -3796,7 +3856,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "A moza da trenza nunha pía de pedra de noite, con lume ao lado e xente que mira desde o fondo: encaixa coa lista e coa noite de san Xoán. Non hai cántaro; as mans están ben."
+  }
  },
  "016-7b78110d": {
   "ficheiro": "016-7b78110d-0.png",
@@ -4730,7 +4796,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "gancho"
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Muller que busca entre papeis cunha vela nun arquivo escuro: ilustra o «imos buscalas». Moitas candeas e libros encadernados, sen anacronismos; o texto non se le (a porta rexeitouno por texto)."
+  }
  },
  "019-41bbac9d": {
   "ficheiro": "019-41bbac9d-0.png",
@@ -5721,7 +5793,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "María (pano e bufanda vermellos) entre as vacas no monte, co vento: é xusto o que se oe. A porta rexeita por animais en grupo, pero o texto pide o gando arredor."
+  }
  },
  "023-2e94bcd6": {
   "ficheiro": "023-2e94bcd6-0.png",
@@ -5845,11 +5923,17 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Dúas vacas de cornos longos nun regato do monte: ilustra o desexo das sete fontes. Sen a muller, que era opcional."
+  }
  },
  "024-341e06d7": {
-  "ficheiro": "024-341e06d7-2.png",
-  "escollida": 2,
+  "ficheiro": "024-341e06d7-1.png",
+  "escollida": 1,
   "ok": true,
   "intentos": [
    {
@@ -6216,11 +6300,17 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "O [2] escollido ten un segundo home de chaleco e gravata do século XIX e ninguén escribe. O [1] é a testemuña de perfil, con barba e roupa de la parda, á luz das candeas; a man sen corpo que viu a porta non se ve."
+  }
  },
  "025-a9288905": {
-  "ficheiro": "025-a9288905-0.png",
-  "escollida": 0,
+  "ficheiro": "025-a9288905-1.png",
+  "escollida": 1,
   "ok": false,
   "intentos": [
    {
@@ -6596,7 +6686,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "O [0] ten dous instrumentos de escribir, un en cada man. O [1]: unha soa man con pluma e puño branco sobre a páxina, e o texto non se le."
+  }
  },
  "026-7184d1ed": {
   "ficheiro": "026-7184d1ed-1.png",
@@ -6843,7 +6939,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Arquiveiro con luvas brancas entre feixes de papeis: encaixa. Viste chaleco e lazo de aspecto antigo; aceptable."
+  }
  },
  "027-70e923a8": {
   "ficheiro": "027-70e923a8-0.png",
@@ -6988,7 +7090,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Escribán novo con pluma e candeas e, detrás, un home (non a muller): lese como «na voz doutros, e na man de quen escribía». Para MOVEMENTO: non hai muller detrás, así que hai que cambiar a acción I2V."
+  }
  },
  "028-b358d9b1": {
   "ficheiro": "028-b358d9b1-0.png",
@@ -7117,8 +7225,8 @@
   "fase": "transicion"
  },
  "029-ffcab11f": {
-  "ficheiro": "029-ffcab11f-1.png",
-  "escollida": 1,
+  "ficheiro": "029-ffcab11f-0.png",
+  "escollida": 0,
   "ok": true,
   "intentos": [
    {
@@ -7390,7 +7498,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "O [1] escollido non ten a cunca (falta a clave) e ten unha fiestra de vidro. O [0] ten a cunca de barro entre as dúas mulleres no limiar, e as mans están ben (a porta viu mans de máis)."
+  }
  },
  "030-a3ec08db": {
   "ficheiro": "030-a3ec08db-1.png",
@@ -7754,8 +7868,8 @@
   "fase": "transicion"
  },
  "031-8b458fe5": {
-  "ficheiro": "031-8b458fe5-0.png",
-  "escollida": 0,
+  "ficheiro": "031-8b458fe5-2.png",
+  "escollida": 2,
   "ok": false,
   "intentos": [
    {
@@ -8111,7 +8225,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "O [0] ten lume laranxa sobre contas azuis. O [2] ten lapas azuis na cunca de barro e unha folla de versos ilexible (en 1967, mecanografada, é verosímil)."
+  }
  },
  "032-5d0efc36": {
   "ficheiro": "032-5d0efc36-0.png",
@@ -8595,7 +8715,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Tres amigos rindo no barco de noite, co porto ao fondo: é o que se oe. A porta viu un iate moderno que non hai. Defecto menor: o lume é laranxa."
+  }
  },
  "033-e502ad3e": {
   "ficheiro": "033-e502ad3e-0.png",
@@ -8740,11 +8866,17 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Dous homes len unha folla de noite no porto, coas mans correctas. Falta o brillo azul; aceptable."
+  }
  },
  "034-440f5505": {
-  "ficheiro": "034-440f5505-3.png",
-  "escollida": 2,
+  "ficheiro": "034-440f5505-1.png",
+  "escollida": 1,
   "ok": true,
   "intentos": [
    {
@@ -9122,7 +9254,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "O [3], que a porta aprobou, é a reserva xenérica: un labrego con boina nun prado, nada que ver co que se oe. O [1]: follas de versos espalladas, farol e vela, e texto ilexible."
+  }
  },
  "035-7e6df055": {
   "ficheiro": "035-7e6df055-1.png",
@@ -9399,11 +9537,17 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "vale",
+   "motivo": "Tenda con mostrador, papeis e cartóns: ilustra «unha empresa vendeu copias». Roupa de mediados do século XX; aceptable."
+  }
  },
  "036-2831cd58": {
-  "ficheiro": "036-2831cd58-0.png",
-  "escollida": 0,
+  "ficheiro": "036-2831cd58-2.png",
+  "escollida": 2,
   "ok": false,
   "intentos": [
    {
@@ -9778,7 +9922,13 @@
   ],
   "version_revisor": 9,
   "modelo": "lightning",
-  "fase": "transicion"
+  "fase": "transicion",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "axente Claude (revisión r1 das imaxes da v2)",
+   "decision": "outro intento",
+   "motivo": "O [0] ten dúas mans de persoas distintas con dúas plumas. O [2]: a man dun home maior asinando un formulario (2001), cunha soa pluma e texto ilexible."
+  }
  },
  "037-cdbbb99a": {
   "ficheiro": "037-cdbbb99a-0.png",
