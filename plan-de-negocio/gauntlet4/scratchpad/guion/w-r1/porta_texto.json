@@ -1,45 +1,14 @@
 {
- "lingua": [
-  {
-   "regra": "GENERAL_VERB_AGREEMENT_ERRORS",
-   "mensaxe": "Posíbel erro de concordancia verbal.",
-   "contexto": "..., a noite de san Xoán.  Detrás de todas esas palabras había mulleres de aldea. A meiga, moitas vece...",
-   "palabra": "esas palabras había",
-   "hunspell": false,
-   "suxestions": [
-    "esas palabras habían"
-   ]
-  },
-  {
-   "regra": "GENERAL_VERB_AGREEMENT_ERRORS",
-   "mensaxe": "Posíbel erro de concordancia verbal.",
-   "contexto": "...o levando a medias o que dicía. E entre elas había un desexo para o gando: que bebese auga...",
-   "palabra": "elas había",
-   "hunspell": false,
-   "suxestions": [
-    "elas habían"
-   ]
-  },
-  {
-   "regra": "GENERAL_VERB_AGREEMENT_ERRORS",
-   "mensaxe": "Posíbel erro de concordancia verbal.",
-   "contexto": "...iran desde a escuridade. Do que falaban elas aquela noite, nestes papeis non queda nin unha...",
-   "palabra": "elas aquela",
-   "hunspell": false,
-   "suxestions": [
-    "elas aquelan"
-   ]
-  }
- ],
+ "lingua": [],
  "h1_ancoraxe": {
   "items": 55,
   "non_ancorados": [],
   "pct_ancorado": 100.0
  },
  "estilo": {
-  "palabras": 1603,
+  "palabras": 1602,
   "palabras_obxectivo": 1600,
-  "desvio_palabras_pct": 0.2,
+  "desvio_palabras_pct": 0.1,
   "cifras": [],
   "signos_prohibidos": [],
   "preguntas": 0,
@@ -141,10 +110,10 @@
    },
    {
     "i": 17,
-    "frase": "Detrás de todas esas palabras había mulleres de aldea.",
+    "frase": "Había mulleres de aldea detrás de todas esas palabras.",
     "modo": "gancho",
     "motivo": "afirmación sen apoio no dossier",
-    "E": 0.007,
+    "E": 0.002,
     "cobertura": 0.6,
     "apoio": [
      10,
@@ -169,13 +138,13 @@
   "sen_xustificar": []
  },
  "portas_texto": {
-  "lingua_lt": false,
+  "lingua_lt": true,
   "h1_ancoraxe": true,
   "veracidade": true,
   "estilo": true
  },
- "clave": "458bed61bf3d76a9",
- "palabras": 1603,
+ "clave": "746cdd9bc758a26e",
+ "palabras": 1602,
  "capitulos": [
   {
    "titulo": "Auga, digo, leite",
