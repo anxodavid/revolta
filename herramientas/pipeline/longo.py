@@ -14,6 +14,13 @@ montaxe e QA. Cambia o que é propio dun episodio longo:
 - A lista de planos tamén vén de fóra: se falta --escenas, o pipeline escribe <traballo>/planos.json (o texto que
   se escoita en cada plano, a súa duración, capítulo e fase) e sae co código 3; un axente escribe un prompt por
   plano nun JSON [{"n": 1, "prompt": "..."}, ...] e vólvese lanzar o mesmo comando.
+- Corte por sentido (Gauntlet 4): se cada plano da lista trae `frases` (os índices `i` de frases.json que cobre) e,
+  se empeza a metade dunha frase, `desde` (as palabras exactas onde empeza), os tempos dos planos saen dos tempos
+  reais da voz e non da curva: cada plano empeza 0,25 s antes da súa primeira frase (o de capítulo, co rótulo), e un
+  `desde` empeza na marca de tempo desa palabra (Whisper por palabras sobre o wav da frase, con caché; se non a
+  atopa, a parte proporcional da frase polos caracteres). A curva segue dando fase, fundido e luz. Sen `frases` na
+  lista, o corte por tempo de sempre (a v1 sae igual). `--so-planos` monta só os planos (escenas.json e planos.json)
+  e sae, para validar o corte sen imaxes.
 - Son (decisións D13 e D14 do promotor): nada de ambiente continuo. Cada plano pode levar `son` na lista de planos:
   un tipo do catálogo de son.py (choiva, lume, mar, vento, fonte, xente, noite, aldea, campas), dous unidos con '+'
   ('lume+noite') ou 'limpa' (voz limpa); se falta, dedúcese das palabras do prompt (SON_PALABRAS). Regra e niveis en
@@ -161,6 +168,150 @@ def planos(frases, tempos, dur, inicio_cap, tot):
     return fin
 
 
+LEAD_FRASE, LEAD_DESDE = 0.25, 0.12   # a imaxe chega un pouco antes ca as palabras que ilustra
+# duración orientativa de cada plano por fase no corte por sentido (encargo da peza PLANOS do Gauntlet 4): só avisa
+DUR_FASE = {'gancho': (3, 6), 'transicion': (5, 9), 'calma': (8, 14), 'durmir': (12, 20)}
+
+
+def ler_lista(path):
+    d = json.loads(Path(path).read_text())
+    return d.get('escenas', d) if isinstance(d, dict) else d
+
+
+def _pos_desde(texto, desde):
+    """Posición en caracteres de `desde` no texto da frase (sen contar maiúsculas nin puntuación), ou None."""
+    m = re.search(r'\W+'.join(map(re.escape, desde.split())), texto, re.I)
+    return m.start() if m else None
+
+
+def marcas_desde(pedidos, vdir, cache_path, whisper_dir):
+    """Inicio (s, relativo ao wav da frase) da palabra onde empeza cada `desde`. pedidos: [(frase, desde)].
+    Whisper (faster-whisper, o modelo do QA) con marcas por palabra sobre o wav da frase; as palabras aliñanse coas
+    do texto (difflib) e tómase o inicio da palabra de referencia. Caché en `cache_path` por wav e texto. Devolve
+    {(i, desde): (segundos, metodo)}; metodo 'whisper' ou, se a palabra non aparece aliñada, 'caracteres'."""
+    import difflib
+    import qa
+    cache = json.loads(Path(cache_path).read_text()) if Path(cache_path).exists() else {}
+    faltan = [f for f, _ in pedidos if f['wav'] not in cache]
+    if faltan:
+        import soundfile as sf_
+        from scipy.signal import resample_poly
+        from faster_whisper import WhisperModel
+        m = WhisperModel(whisper_dir, device='cpu', compute_type='int8', cpu_threads=4)
+        for f in {x['wav']: x for x in faltan}.values():
+            x, sr = sf_.read(vdir / f['wav'], dtype='float32')
+            x = x.mean(1) if x.ndim > 1 else x
+            segs, _ = m.transcribe(resample_poly(x, 16000, sr).astype(np.float32), language='gl', beam_size=5,
+                                   word_timestamps=True, vad_filter=False, condition_on_previous_text=False)
+            cache[f['wav']] = [[w.word, round(w.start, 3), round(w.end, 3)] for sg in segs for w in (sg.words or [])]
+        del m
+        Path(cache_path).write_text(json.dumps(cache, ensure_ascii=False, indent=1))
+    res = {}
+    for f, desde in pedidos:
+        t0, t1 = f['_t']
+        pos = _pos_desde(f['texto'], desde)
+        k = len(qa.norm(f['texto'][:pos]).split())                     # índice da palabra onde empeza o desde
+        ref = qa.norm(f['texto']).split()
+        hip = [(qa.norm(w), a) for w, a, _ in cache.get(f['wav'], [])]
+        hip = [(w, a) for w, a in hip if w]
+        sm = difflib.SequenceMatcher(None, ref, [w for w, _ in hip], autojunk=False)
+        mapa = {}
+        for bl in sm.get_matching_blocks():
+            for j in range(bl.size):
+                mapa[bl.a + j] = hip[bl.b + j][1]
+        if k in mapa and 0 < mapa[k] < t1 - t0:
+            res[(f['i'], desde)] = (mapa[k], 'whisper')
+        else:
+            res[(f['i'], desde)] = ((t1 - t0) * pos / max(1, len(f['texto'])), 'caracteres')
+    return res
+
+
+def planos_por_sentido(lista, frases, tempos, dur, inicio_cap, tot, vdir, W):
+    """Planos da lista escrita por sentido (cada un trae `frases` e, se empeza a metade dunha frase, `desde`). Os
+    tempos saen da voz: o plano empeza LEAD_FRASE s antes da súa primeira frase, co rótulo se abre capítulo, ou na
+    palabra do `desde` (LEAD_DESDE s antes). Comproba que cada frase está nun plano, na orde do guion, e que cada
+    capítulo abre plano."""
+    fr_i = {f['i']: f for f in frases}
+    lista = sorted(lista, key=lambda x: int(x['n']))
+    erros = []
+    for k, x in enumerate(lista):
+        fr = [int(i) for i in x['frases']]
+        if int(x['n']) != k + 1:
+            erros.append(f"plano {x['n']}: os n teñen que ir de 1 a {len(lista)} sen ocos")
+        if not fr or fr != list(range(fr[0], fr[-1] + 1)) or any(i not in fr_i for i in fr):
+            erros.append(f"plano {x['n']}: frases {fr} (teñen que ser consecutivas e existir)")
+            continue
+        prev = int(lista[k - 1]['frases'][-1]) if k else 0
+        if x.get('desde'):
+            if fr[0] != prev:
+                erros.append(f"plano {x['n']}: con `desde` ten que empezar na última frase do anterior ({prev})")
+            if _pos_desde(fr_i[fr[0]]['texto'], x['desde']) in (None, 0):
+                erros.append(f"plano {x['n']}: `desde` {x['desde']!r} non está (ou é o comezo) na frase {fr[0]}")
+            if fr[0] in inicio_cap:
+                erros.append(f"plano {x['n']}: a frase {fr[0]} abre capítulo e non se pode partir")
+        elif fr[0] != prev + 1:
+            erros.append(f"plano {x['n']}: empeza na frase {fr[0]} e o anterior acaba na {prev}")
+    if lista and int(lista[-1]['frases'][-1]) != frases[-1]['i']:
+        erros.append(f"a lista acaba na frase {lista[-1]['frases'][-1]} e o guion na {frases[-1]['i']}")
+    if erros:
+        raise SystemExit('Lista de planos por sentido con erros:\n  ' + '\n  '.join(erros))
+    for f in frases:
+        f['_t'] = tempos[f['i']]
+    pedidos = [(fr_i[int(x['frases'][0])], x['desde']) for x in lista if x.get('desde')]
+    marcas = marcas_desde(pedidos, vdir, W / 'marcas_desde.json', P.CFG['whisper_dir']) if pedidos else {}
+    for f in frases:
+        f.pop('_t', None)
+    movs = ['zoom_in', 'pan_right', 'zoom_out', 'pan_left', 'zoom_in', 'pan_up']
+    out = []
+    for k, x in enumerate(lista):
+        fr = [int(i) for i in x['frases']]
+        f0 = fr_i[fr[0]]
+        t0, t1 = tempos[fr[0]]
+        p = {'n': k + 1, 'frases': fr, 'pal0': f0['pal0']}
+        if x.get('desde'):
+            pos = _pos_desde(f0['texto'], x['desde'])
+            dt, metodo = marcas[(fr[0], x['desde'])]
+            p.update(desde=x['desde'], t0=round(t0 + dt, 3), metodo_desde=metodo,
+                     pal0=f0['pal0'] + len(f0['texto'][:pos].split()))
+            b0 = t0 + dt - LEAD_DESDE
+        elif k == 0:
+            p['t0'], b0 = t0, 0.0
+        elif fr[0] in inicio_cap:
+            p['t0'] = b0 = inicio_cap[fr[0]]
+        else:
+            p['t0'], b0 = t0, t0 - LEAD_FRASE
+        p['b0'] = round(max(b0, out[-1]['b0'] + 0.5 if out else 0.0), 3)
+        partes = []
+        for i in fr:
+            a_, b_ = 0, len(fr_i[i]['texto'])
+            if i == fr[0] and x.get('desde'):
+                a_ = _pos_desde(fr_i[i]['texto'], x['desde'])
+            if i == fr[-1] and k + 1 < len(lista) and lista[k + 1].get('desde'):
+                b_ = _pos_desde(fr_i[i]['texto'], lista[k + 1]['desde'])
+            partes.append(fr_i[i]['texto'][a_:b_].strip())
+        p['texto'] = ' '.join(partes)
+        out.append(p)
+    for k, p in enumerate(out):
+        p['b1'] = out[k + 1]['b0'] if k + 1 < len(out) else dur
+        c = curva.en(p['pal0'], tot)
+        p.update(movemento=movs[k % len(movs)], xf=round(c['fundido_s'], 2), fase=c['fase'], u=c['u'], orixe='sentido')
+    return out
+
+
+def resumo_planos(pl):
+    """Planos por fase e duracións (para --so-planos e o informe da peza PLANOS)."""
+    L = []
+    for fase in curva.FASES:
+        ds = [p['b1'] - p['b0'] for p in pl if p['fase'] == fase]
+        if ds:
+            lo, hi = DUR_FASE.get(fase, (0, 1e9))
+            fora = [f"{p['n']} ({p['b1'] - p['b0']:.1f} s)" for p in pl if p['fase'] == fase
+                    and not lo <= p['b1'] - p['b0'] <= hi]
+            L.append(f'{fase}: {len(ds)} planos, media {np.mean(ds):.1f} s (min {min(ds):.1f}, max {max(ds):.1f}; '
+                     f'obxectivo {lo}-{hi} s; fóra: {", ".join(fora) or "ningún"})')
+    return L
+
+
 # Son dun plano a partir das palabras (en inglés) do seu prompt, se a lista de planos non trae `son`. A orde é a
 # prioridade: gaña o primeiro tipo que apareza. Os tipos de exterior (aldea, vento) non se poñen nun interior; a
 # noite engádese como segunda capa a lume, fonte ou mar se o plano é de noite e de exterior.
@@ -222,7 +373,10 @@ def ler_escenas(path, pl):
     for p in pl:
         x = por_n[p['n']]
         p['prompt'] = re.sub(r'[*_#`]+', '', str(x['prompt'])).strip().strip('"')
-        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son', 'clave', 'animacion'):   # animacion: Gauntlet 4
+        # Gauntlet 4: animacion (movemento.py), referencia e epoca (imaxes.py e a porta), texto_en (correlacion.py)
+        # e prioridade_i2v (orzamento do movemento)
+        for k in ('movemento', 'luz', 'tipo', 'negativo', 'son', 'clave', 'animacion', 'referencia', 'epoca',
+                  'texto_en', 'prioridade_i2v'):
             if x.get(k):
                 p[k] = x[k]
     return pl
@@ -264,6 +418,8 @@ def main():
     ap.add_argument('--traballo', required=True); ap.add_argument('--escenas', default=None)
     ap.add_argument('--excepcions', default=None, help='YAML [{frase, xustificacion}] para as frases que marca a veracidade')
     ap.add_argument('--so-texto', action='store_true', help='só as portas de texto (para o Gauntlet do guion)')
+    ap.add_argument('--so-planos', action='store_true',
+                    help='só ata os planos: escribe escenas.json e planos.json (sen imaxes) para validar o corte')
     ap.add_argument('--ata-plano', type=int, default=None,
                     help='avance: monta só os planos 0..N (os que xa teñen imaxe) coa mesma curva, voz e son do episodio')
     a = ap.parse_args()
@@ -343,7 +499,10 @@ def main():
         if tema.get('ref_wav_calma') or os.environ.get('REF_WAV_CALMO'):
             env['REF_WAV_CALMO'] = os.environ.get('REF_WAV_CALMO') or tema['ref_wav_calma']
         vdir = W / 'voz'
-        subprocess.run([P.CFG['python_tts'], str(HERE / 'voz_st2.py'), str(fj), str(vdir)], env=env, check=True)
+        if all((vdir / f['wav']).exists() for f in frases):
+            print('voz: todas as frases na caché', flush=True)     # sen cargar StyleTTS2 (p. ex. con --so-planos)
+        else:
+            subprocess.run([P.CFG['python_tts'], str(HERE / 'voz_st2.py'), str(fj), str(vdir)], env=env, check=True)
         sr = 24000; parts = []; tempos = {}; t = OFFSET; inicio_cap = {}; rot = []
         for k, f in enumerate(frases):
             w, _ = sf.read(vdir / f['wav'])
@@ -382,7 +541,17 @@ def main():
 
     # 3 planos e lista de planos (escrita fóra)
     with P.Etapa('4_escenas'):
-        pl = planos(frases, tempos, dur, inicio_cap, tot)
+        lista = ler_lista(a.escenas) if a.escenas and Path(a.escenas).exists() else None
+        por_sentido = bool(lista) and any('frases' in x for x in lista)
+        if por_sentido:
+            if not all('frases' in x for x in lista):
+                raise SystemExit(f'{a.escenas}: uns planos traen `frases` e outros non')
+            pl = planos_por_sentido(lista, frases, tempos, dur, inicio_cap, tot, vdir, W)
+            print(f'planos por sentido: {len(pl)} (cortes a metade de frase: '
+                  f"{sum(1 for p in pl if p.get('desde'))}, por Whisper: "
+                  f"{sum(1 for p in pl if p.get('metodo_desde') == 'whisper')})", flush=True)
+        else:
+            pl = planos(frases, tempos, dur, inicio_cap, tot)
         titulo_de = {}
         for c in caps_t:
             titulo_de[c['t0']] = f"{c['num']}. {c['titulo']}"
@@ -393,7 +562,9 @@ def main():
                     cap_actual = titulo_de[t0c]
             p['capitulo'] = cap_actual
         export = [{'n': p['n'], 'b0': round(p['b0'], 1), 'dur_s': round(p['b1'] - p['b0'], 1), 'fase': p['fase'],
-                   'u': p['u'], 'capitulo': p['capitulo'], 'parte': p.get('parte'), 'texto': p['texto']} for p in pl]
+                   'u': p['u'], 'capitulo': p['capitulo'], 'parte': p.get('parte'), 'texto': p['texto'],
+                   **({k: p[k] for k in ('frases', 'desde', 't0', 'metodo_desde') if k in p} if por_sentido else {})}
+                  for p in pl]
         (W / 'planos.json').write_text(json.dumps(export, ensure_ascii=False, indent=1))
         if not a.escenas or not Path(a.escenas).exists():
             save_t()
@@ -414,6 +585,10 @@ def main():
         P.srt(frases, tempos, W / 'subtitulos.srt')
         (W / 'escenas.json').write_text(json.dumps(pl, ensure_ascii=False, indent=1))
     save_t()
+    if a.so_planos:
+        print('\n'.join(['so-planos: ' + ('corte por sentido' if por_sentido else 'corte por tempo (curva)')]
+                        + resumo_planos(pl)), flush=True)
+        return
 
     # 4 imaxes + porta de revisión
     with P.Etapa('5_imaxes'):
