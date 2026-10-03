@@ -20713,7 +20713,7 @@
   "fase": "gancho",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Mans calzando unha zapatilla parda de coiro brando; detrás, o zapato negro do home (pode lerse como o seu). O [0] é un vello axeonllado sen zapato nin pé."
   }
@@ -20843,7 +20843,7 @@
   "fase": "gancho",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Vela de cera nun prato de ferro e dúas candeas finas en candeeiros de ferro, nunha mesa escura: a vela grande segue sendo de bloque, pero xa non parece foto de produto. Fondo escuro, sen granito."
   }
@@ -21241,7 +21241,7 @@
   "fase": "gancho",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Dúas vellas de aldea sentadas no poio da porta, de saia longa e pano: casa co texto. Defectos menores: unha fiestra de vidro pequena na esquina superior dereita e a parede revocada. Non hai moza nin feixóns: cambia a acción I2V."
   }
@@ -21807,7 +21807,7 @@
   "fase": "transicion",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "María co pano vermello (e o vestido vermello) ante o xuíz de barba branca que a sinala coa pluma: a acción casa. A sala é grande e con columnas, pero sen lampadario; o [0] é unha dama vitoriana sen pano."
   }
@@ -22325,7 +22325,7 @@
   "fase": "transicion",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Unha veciña con capucha e un vello de capa diante da porta dunha igrexa de pedra: murmuran sós. Faltan a segunda muller e a mirada de sospeita, e están separados: cambia a acción I2V."
   }
@@ -22940,7 +22940,7 @@
   "fase": "transicion",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "Os tres intentos teñen letra: o [0], gótica de imprenta e unha pseudopalabra («Keathing»); o [1], pseudopalabras inglesas na lente («baching men»). O [2] ten letra cursiva manuscrita, case ilexible, e o resto desenfocado: o menos malo."
   }
@@ -23433,7 +23433,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "Cinco homes de camisa clara arredor dunha cunca grande de lume na cuberta dun barco, co porto detrás: «entre amigos, arredor dun pote». Lume laranxa claro, non azul. O [0] e o [2] son fogueiras grandes na cuberta (a porta rexeitou os tres por «bonfire»)."
   }
@@ -23564,7 +23564,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Tribunal de clérigos de negro nunha sala grande de madeira con candelabros de velas (non de cristal) e fiestras altas. As tres xustizas non se distinguen (todos de negro), pero lese «tribunal». Paralaxe, prioridade 3; só houbo un intento."
   }
@@ -23962,7 +23962,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "Frade vello de hábito negro sentado entre feixes de papeis e velas, cun libriño nas mans, sen lentes. O [0] (mellor encadre) leva lentes metálicas de patillas, que a r1 xa rexeitou; o [1] son dous monxes de barba longa, un con lentes. Cambia a acción I2V."
   }
@@ -24336,7 +24336,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "Mulleres de negro diante de homes de barba e hábito negro arredor dunha mesa: lese «todas as acusadas eran mulleres». Fiestra de vidro e un lume sobre a mesa (menor). O [0] é un tribunal moderno con mulleres rubias de pelo solto. Cambia a acción I2V."
   }
@@ -24726,7 +24726,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "A vella curandeira de pano branco dálle unha ola de barro a unha muller cun cesto, diante dun muro de granito. A «man sen corpo» da porta é un falso positivo. Sen neno: cambia a acción I2V. Pano branco (o elenco dicía negro), pero a nai só sae aquí."
   }
@@ -24987,7 +24987,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "O xuíz de barba gris, inclinado sobre a mesa, pregunta á muller do pano gris (Cibreira) e ao fondo alguén escribe: casa co texto. Fiestras de vidro dunha sala oficial (aceptable). O [1], o da porta, non ten escribán. Cambia a acción I2V."
   }
@@ -25119,7 +25119,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Xuíz de barba branca e gorro negro e a muller do pano gris, de perfil, á luz das velas: bo primeiro plano, coherente co elenco de Cibreira (43, 45). Non hai papel: cambia a acción I2V."
   }
@@ -26009,7 +26009,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Tres veciños de chaleco pardo (coma no 50) agachados contra un muro de pedra de noite, co lume á dereita: non se ve a espreita, pero non contradí o texto. O [1] ten unha casa ardendo e o [0] unha fogueira grande. Cambia a acción I2V."
   }
@@ -26139,7 +26139,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Auga fría que cae entre pedras e fentos: unha fonte natural, sen estatuas nin billas. Non se ve o cano de pedra, pero vale para «a auga fría da fonte»."
   }
@@ -26667,7 +26667,7 @@
   "fase": "calma",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Unha moza durmindo tranquila baixo unha manta de la: «só soñado». Non hai sombra de paxaro na parede: cambia a acción I2V."
   }
@@ -27032,7 +27032,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "Pía de pedra con musgo baixo a lúa chea, de noite e sen ninguén. O [2], o da porta, ten unha brétema bonita pero dúas lúas; o [1] repite o 51."
   }
@@ -27401,7 +27401,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "Unha talla de barro con auga e herbas ao pé dun muro, de noite, cun farol de vela: a idea do cacho. A talla brilla coma un lavabo (menor). O [1], o da porta, ten un boneco e un testo de flores modernos; o [0], unha billa metálica."
   }
@@ -27895,7 +27895,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Ramos de herbas secas colgados dunha vara e outro na mesa: calma e sen anacronismos. Fondo gris de estudo, sen o granito."
   }
@@ -28033,7 +28033,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "A cunca de barro coas cuncas no bordo e unha man botando grans de café: a queimada antes do lume. Luz clara e bege, non de noite (defecto), pero sen o laranxa forte do intento vello. Non hai xerra: cambia a acción I2V."
   }
@@ -28548,7 +28548,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "outro intento",
    "motivo": "O barco vello no peirao de noite: o eco do plano 4 que pediu o crítico de planos (a porta rexeita por repetición). O [3], o da porta, é un bosque sen barco. Escollo o [1] (CLIP 0,94 co 4) e non o [0] (0,96)."
   }
@@ -28925,7 +28925,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Cunca de barro sobre os papeis, cun fío de fume e unha lapa pequena ao fondo: o lume que se apaga. A porta rexeitou os tres por «lume vivo» (2,2 % de altas luces); é unha lapa pequena nunha imaxe calma. Falta o cordón vermello."
   }
@@ -29055,7 +29055,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Tres vacas pardas (xa non frisoas) deitadas na palla dunha corte de pedra: calma. Están espertas, non se ven as herbas e arriba á esquerda hai un brillo branco que pode lerse como un farol (menor)."
   }
@@ -29185,7 +29185,7 @@
   "fase": "durmir",
   "escolla_manual": true,
   "revision_manual": {
-   "quen": "axente Claude (revisión r2 das imaxes da v2)",
+   "quen": "axente Claude (revisión r2, proba)",
    "decision": "vale",
    "motivo": "Lousas escuras molladas pola chuvia, con musgo, de noite: a última imaxe que pide o texto."
   }

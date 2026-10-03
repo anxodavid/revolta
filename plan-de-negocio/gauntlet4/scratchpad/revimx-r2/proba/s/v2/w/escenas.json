@@ -48,9 +48,9 @@
   "u": 0.0031,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+  "prompt": "close-up of a man's face in the dark lit from below by pale blue flames, he lifts a wooden ladle of burning liquid above a wide brown earthenware bowl of blue flames, blue fire dripping back into it, black background",
   "tipo": "primeiro_plano",
-  "negativo": "cauldron, iron pot, frying pan, knife, bonfire, neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
+  "negativo": "cauldron, iron pot, frying pan, neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
   "son": "lume",
   "clave": "blue flames",
   "animacion": {
@@ -59,7 +59,7 @@
    "efectos": [
     "lume"
    ],
-   "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+   "accion": "he slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
    "i2v": {
     "F": 73
    }
@@ -195,16 +195,16 @@
   "u": 0.0338,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling beside a heavily pregnant young woman lying on a straw mattress, stroking her brow, a burly bearded man watching from the dark doorway, candlelight, rough granite walls, 17th century",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, leaded window, blood, nudity, hospital, metal bed, sofa",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa",
   "son": "limpa",
   "clave": "pregnant woman",
   "animacion": {
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the old midwife slowly moves her hand over the young woman's belly",
+   "accion": "the old midwife gently strokes the young woman's brow while the man shifts his weight",
    "i2v": {
     "F": 73
    }
@@ -327,7 +327,7 @@
   "capitulo": "Comezo",
   "prompt": "wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
   "tipo": "xeral",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars, wall lantern, grass roof, moss roof",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars, wall lantern, grass roof",
   "son": "noite",
   "clave": "granary",
   "animacion": {
@@ -340,8 +340,8 @@
   },
   "referencia": {
    "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
-   "modo": "profundidade",
-   "forza": 0.6,
+   "modo": "img2img",
+   "forza": 0.5,
    "recorte": [
     0.32,
     0.2,
@@ -570,7 +570,7 @@
    "modo": "i2v",
    "camara": "pan_esq",
    "efectos": [],
-   "accion": "the two old women sit quietly and one slowly turns her head toward the other",
+   "accion": "the old woman shells beans while the young woman turns her head toward her",
    "i2v": {
     "F": 73
    }
@@ -594,16 +594,16 @@
   "u": 0.1351,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "close-up of an old village healer in a dark blue wool shawl holding a steaming clay bowl of herb infusion to the lips of a sick young woman under a wool blanket, firelight on their faces, dark background",
+  "prompt": "medium shot of an old village healer in a dark blue wool shawl handing a steaming clay bowl of herb infusion to a sick young woman lying under a wool blanket on a straw bed, dried herbs hanging from dark beams, firelight, smoke-blackened granite walls",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, brick wall, witch hat, broom, warts, hooked nose, shelves of bottles",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, warts, hooked nose, shelves of bottles",
   "son": "limpa",
   "clave": "clay bowl",
   "animacion": {
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the healer slowly brings the steaming bowl to the young woman's lips"
+   "accion": "the healer slowly hands over the steaming bowl and the young woman takes it"
   },
   "texto_en": "The meiga, many times, was not the witch of tales, but the one who healed, who helped in childbirth, who knew about herbs.",
   "prioridade_i2v": 1
@@ -686,9 +686,9 @@
   "u": 0.1708,
   "orixe": "sentido",
   "capitulo": "I. Auga, digo, leite",
-  "prompt": "medium shot at night of a woman in a faded red wool headscarf holding up a horn lantern in the open doorway of a dark stone house, letting in a man in a dark wool cloak, 17th century",
+  "prompt": "wide shot of a woman in a faded red wool headscarf holding a horn lantern at the heavy wooden door of a thatched granite house at dusk, letting in a man in a dark wool cloak, 17th century Galicia",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood, balcony, whitewashed wall",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood",
   "son": "aldea",
   "clave": "door",
   "animacion": {
@@ -698,6 +698,17 @@
     "candea"
    ],
    "accion": "she opens the heavy door wider and the cloaked man steps inside"
+  },
+  "referencia": {
+   "ficheiro": "03-palloza-casa/10-palloza-cantexeira.jpg",
+   "modo": "profundidade",
+   "forza": 0.6,
+   "recorte": [
+    0.0,
+    0.3,
+    0.54,
+    0.7
+   ]
   },
   "texto_en": "Of the daughter they said something else: that she was a go-between, and that she took married men and unmarried women into her house.",
   "prioridade_i2v": 2
@@ -727,7 +738,7 @@
    "modo": "i2v",
    "camara": "pan_esq",
    "efectos": [],
-   "accion": "the hooded woman slowly turns her head and whispers to the old man"
+   "accion": "they lean closer and whisper, and one woman glances sideways"
   },
   "texto_en": "A witness heard some neighbours murmuring that María was a meiga, and that she was not a good Christian.",
   "prioridade_i2v": 1
@@ -951,16 +962,16 @@
   "u": 0.2813,
   "orixe": "sentido",
   "capitulo": "I. Auga, digo, leite",
-  "prompt": "medium shot of a stern priest in a black cassock and black cape standing at the arched door of a small rustic granite chapel, reading aloud from an unrolled paper decree, overcast daylight, 17th century",
+  "prompt": "wide shot of a stern priest in a black cassock reading a decree aloud at the door of a small rustic granite chapel, below him two women stand alone, an old one in a dark brown wool headscarf and a younger one in a faded red wool headscarf",
   "tipo": "xeral",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd, cardinal, red robe, wall lantern, wide-brimmed hat",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd",
   "son": "campas",
   "clave": "priest",
   "animacion": {
    "modo": "i2v",
    "camara": "pan_esq",
    "efectos": [],
-   "accion": "the priest slowly reads aloud from the decree and lowers the paper"
+   "accion": "the priest reads from the paper while the two women lower their heads"
   },
   "texto_en": "And words could also close doors. The vicar general of the bishopric of Mondoñedo excommunicated the mother and the daughter, and ordered that no one give them bread, salt, water or fire.",
   "prioridade_i2v": 2
@@ -1243,9 +1254,9 @@
   "u": 0.3771,
   "orixe": "sentido",
   "capitulo": "II. O conxuro do barco",
-  "prompt": "wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
+  "prompt": "wide shot of a village festival at night seen from behind the crowd, dark silhouettes raising small clay cups toward a wide clay bowl of pale blue flames on a stone table, the blue glow on their raised hands, 1980s",
   "tipo": "xeral",
-  "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire, torches, hooded robes, ritual",
+  "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire",
   "son": "xente",
   "clave": "clay bowl",
   "animacion": {
@@ -1355,7 +1366,7 @@
    "efectos": [
     "candea"
    ],
-   "accion": "he slowly closes the small book in his hands and bows his head"
+   "accion": "he closes the file and sets it on the pile"
   },
   "texto_en": "For the researcher Diego Valor Bravo, the feared Inquisition was lenient with Galician meigas: in three centuries it sentenced only one meiga to death.",
   "prioridade_i2v": 2
@@ -1386,7 +1397,7 @@
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the women stand still and slowly lower their heads while the bearded judge speaks"
+   "accion": "the judge leans forward and the women lower their heads"
   },
   "texto_en": "The civil judges were much harsher. And in the civil trials of the Royal Court, all the accused were women.",
   "prioridade_i2v": 2
@@ -1450,7 +1461,7 @@
    "modo": "i2v",
    "camara": "pan_der",
    "efectos": [],
-   "accion": "the old healer slowly hands the clay pot to the woman with the basket"
+   "accion": "the old healer hands over the pot and touches the child's head"
   },
   "texto_en": "That her mother had taught her. That many people came to her mother, and that she gave them cures and remedies.",
   "prioridade_i2v": 1
@@ -1483,7 +1494,7 @@
    "efectos": [
     "candea"
    ],
-   "accion": "the judge leans over the table and speaks slowly while the woman lowers her eyes"
+   "accion": "the judge leans forward and asks while the scribe writes"
   },
   "texto_en": "And that on Saint John's nights the meigas went to gatherings with the devil, on the sands of Seville. Before her, someone asked, and someone wrote.",
   "prioridade_i2v": 2
@@ -1514,7 +1525,7 @@
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the judge leans closer and speaks softly, and the woman slowly nods in silence"
+   "accion": "the judge reads the question and the woman slowly nods without speaking"
   },
   "texto_en": "Rodrigo Pousa, historian, explains that those women did not know what to declare: the answers were already in the questions. Sometimes the voice was a woman's, and the words, the questioner's.",
   "prioridade_i2v": 2
@@ -1535,9 +1546,9 @@
   "u": 0.4975,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+  "prompt": "wide shot of a simple rustic spring at night: water pouring from a stone spout set in a mossy granite wall into a stone trough, among chestnut trees, the faint orange glow of a distant bonfire between the trunks, moonlight",
   "tipo": "xeral",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, lantern, string lights, candles, houses, cottage, statue, ornamental fountain, park, buildings",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, statue, ornamental fountain, park, buildings",
   "son": "fonte+noite",
   "clave": "fountain",
   "animacion": {
@@ -1568,16 +1579,16 @@
   "u": 0.5049,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century",
+  "prompt": "medium shot of two village men in sheepskin vests pointing and shouting at a village woman in a dark wool shawl at the door of a stone byre, a sick calf and two piglets lying still on the straw inside, overcast daylight, 17th century",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, tractor, turf roof, thatched cottage, sheep, felt hat",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, tractor, turf roof, thatched cottage, sheep",
   "son": "aldea",
   "clave": "calf",
   "animacion": {
    "modo": "i2v",
    "camara": "pan_esq",
    "efectos": [],
-   "accion": "one man points at the dead calf while the other shouts toward the door"
+   "accion": "the men point and shout and the woman steps back"
   },
   "texto_en": "In sixteen forty-three, the Royal Court tried several women there. Some neighbours, quarrelling with one of them, blamed her for making their calves and piglets die.",
   "prioridade_i2v": 1
@@ -1607,7 +1618,7 @@
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the three men sit still in the dark and slowly turn their heads toward the firelight"
+   "accion": "the two men slowly raise their heads above the wall to look"
   },
   "texto_en": "A witness said that, because of the suspicion they had of them, some neighbours had gone to spy on them at the Nogueira fountain, on Saint John's night the year before.",
   "prioridade_i2v": 1
@@ -1692,9 +1703,9 @@
   "u": 0.5577,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "wide shot of three village women in dark wool shawls sitting on a low granite wall beside a rustic stone spring at night, talking and laughing softly, moonlight, seen from far away through dark branches",
+  "prompt": "wide shot of three village women in dark wool shawls and headscarves talking and laughing softly around a rustic stone spring at night, lit by a small bonfire, seen from far away through dark branches",
   "tipo": "xeral",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hooded robes, cloaks, ritual, bonfire, nun, wolf, arcade, columns",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hooded robes, cloaks, ritual, arcade, columns",
   "son": "fonte+noite",
   "clave": "women",
   "animacion": {
@@ -1703,7 +1714,7 @@
    "efectos": [
     "auga"
    ],
-   "accion": "the women talk and laugh softly and one gestures with her hand"
+   "accion": "the women talk and gesture softly as the small fire flickers"
   },
   "texto_en": "Of whatever they said that night, not a single word has reached us. Only the news of the list reached us, in the voice of others.",
   "prioridade_i2v": 1
@@ -1755,9 +1766,9 @@
   "u": 0.5842,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "medium close-up at night by a rustic stone spring: an old woman in a black wool headscarf crossing herself and looking warily into the dark, behind her a young woman with a long dark braid smiling as she fills a clay jug",
+  "prompt": "close-up two-shot at a rustic stone spring at night: a young woman with a long dark braid smiles as she fills a clay jug at the spout, beside her an old woman in a black wool headscarf crosses herself, looking warily into the dark",
   "tipo": "primeiro_plano",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, oil lamp, witch hat, broom, table, teapot, kitchen",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, table, teapot",
   "son": "fonte+noite",
   "clave": "fountain",
   "animacion": {
@@ -1888,16 +1899,16 @@
   "u": 0.6548,
   "orixe": "sentido",
   "capitulo": "IV. A lista da fonte",
-  "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit, smiling as he studies a sprig of a medicinal herb in his fingers, a basket of wild herbs on his arm, monastery herb garden, 18th century",
+  "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit holding a sprig of a medicinal herb that an old village woman in a dark blue wool shawl offers him from her basket, monastery herb garden, 18th century",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, cathedral, skullcap, blue robe, hood",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, cathedral, skullcap",
   "son": "aldea",
   "clave": "monk",
   "animacion": {
    "modo": "i2v",
    "camara": "xira_der",
    "efectos": [],
-   "accion": "the friar slowly turns the sprig in his fingers and smiles"
+   "accion": "the friar turns the sprig in his fingers and nods as the old woman speaks"
   },
   "texto_en": "Already in the eighteenth century, Friar Martín Sarmiento defended the knowledge of the healers, the meigas, as that of true doctors and botanists.",
   "prioridade_i2v": 1
@@ -1988,7 +1999,7 @@
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "she sleeps peacefully, breathing slowly under the blanket"
+   "accion": "the shadow of the bird drifts slowly across the wall while the woman sleeps"
   },
   "texto_en": "And he admitted that the witches' flight was often only dreamed, although he did not deny that witches existed.",
   "prioridade_i2v": 2
@@ -2107,9 +2118,9 @@
   "u": 0.7623,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "wide shot of an open dark meadow at night under a deep blue sky, far away on the grass a small low glow of dying red embers, three tiny silhouettes, one leaping over it, soft mist, calm",
+  "prompt": "wide shot of a dark misty meadow at night, far away a low ring of dull red embers almost burnt out on the ground, small dark silhouettes of villagers around it, one leaping over the embers, deep blue darkness, calm",
   "tipo": "xeral",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fireworks, city lights, wildfire, big flames, houses, cottage, village, crowd",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fireworks, city lights, wildfire, big flames",
   "son": "lume+noite",
   "clave": "bonfire",
   "animacion": {
@@ -2212,7 +2223,7 @@
    "modo": "i2v",
    "camara": "baixa",
    "efectos": [],
-   "accion": "the hand slowly lets a few coffee beans fall into the bowl"
+   "accion": "the jug slowly pours the spirits into the bowl"
   },
   "referencia": {
    "ficheiro": "07-queimada/02-camino-de-santiago-may-2008.jpg",
@@ -2240,9 +2251,9 @@
   "u": 0.8501,
   "orixe": "sentido",
   "capitulo": "V. Chove na lousa",
-  "prompt": "medium shot of the dark silhouettes of an old man and an old woman at a wooden table at night, between them a wide clay bowl of pale blue flames, he lifts a clay ladle of blue fire above it, darkness all around",
+  "prompt": "medium shot of an old man with white stubble in a dark wool waistcoat lifting a clay ladle of pale blue flames over a wide clay bowl of blue flames, an old woman in a dark headscarf beside him, faces lit blue in a dark kitchen",
   "tipo": "plano_medio",
-  "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, stove, window, daylight, candles, cauldron, orange fire",
+  "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, candles, cauldron, orange fire",
   "son": "lume",
   "clave": "clay bowl",
   "animacion": {

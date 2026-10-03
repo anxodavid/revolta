@@ -1,0 +1,1117 @@
+[
+ {
+  "n": 1,
+  "b0": 0.0,
+  "dur_s": 4.3,
+  "fase": "gancho",
+  "u": 0.0,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Mouchos, curuxas, sapos e bruxas.",
+  "frases": [
+   1
+  ],
+  "t0": 1.5
+ },
+ {
+  "n": 2,
+  "b0": 4.3,
+  "dur_s": 5.5,
+  "fase": "gancho",
+  "u": 0.0031,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Coas luces apagadas, alguén pronuncia o conxuro mentres ergue cun cazo o líquido en chamas.",
+  "frases": [
+   2
+  ],
+  "t0": 4.568
+ },
+ {
+  "n": 3,
+  "b0": 9.8,
+  "dur_s": 6.0,
+  "fase": "gancho",
+  "u": 0.0123,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Parece de hai séculos. Pero ten autor coñecido e é de mil novecentos sesenta e sete:",
+  "frases": [
+   3,
+   4
+  ],
+  "t0": 10.018
+ },
+ {
+  "n": 4,
+  "b0": 15.8,
+  "dur_s": 4.8,
+  "fase": "gancho",
+  "u": 0.0221,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "escribiuno Mariano Marcos Abalo nun vello barco amarrado no porto de Vigo.",
+  "frases": [
+   4
+  ],
+  "desde": "escribiuno Mariano Marcos Abalo",
+  "t0": 15.873,
+  "metodo_desde": "whisper"
+ },
+ {
+  "n": 5,
+  "b0": 20.5,
+  "dur_s": 4.6,
+  "fase": "gancho",
+  "u": 0.0295,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Vilalba, mil seiscentos dezasete. Unha testemuña declara",
+  "frases": [
+   5,
+   6
+  ],
+  "t0": 20.764
+ },
+ {
+  "n": 6,
+  "b0": 25.1,
+  "dur_s": 5.7,
+  "fase": "gancho",
+  "u": 0.0338,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.",
+  "frases": [
+   6
+  ],
+  "desde": "que a parteira Dorotea do Barro",
+  "t0": 25.186,
+  "metodo_desde": "whisper"
+ },
+ {
+  "n": 7,
+  "b0": 30.8,
+  "dur_s": 5.2,
+  "fase": "gancho",
+  "u": 0.0473,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Abondaría con calzarlle ao home os zapatos da muller, dicindo unhas palabras que ela sabía.",
+  "frases": [
+   7
+  ],
+  "t0": 31.038
+ },
+ {
+  "n": 8,
+  "b0": 36.0,
+  "dur_s": 3.8,
+  "fase": "gancho",
+  "u": 0.0565,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "E o home saltaría coma un poldro bravo.",
+  "frases": [
+   8
+  ],
+  "t0": 36.22
+ },
+ {
+  "n": 9,
+  "b0": 39.7,
+  "dur_s": 7.2,
+  "fase": "gancho",
+  "u": 0.0614,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
+  "frases": [
+   9,
+   10
+  ],
+  "t0": 39.988
+ },
+ {
+  "n": 10,
+  "b0": 47.0,
+  "dur_s": 3.9,
+  "fase": "gancho",
+  "u": 0.0713,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Isto é Cousas de Galiza para durmir.",
+  "frases": [
+   11
+  ],
+  "t0": 47.235
+ },
+ {
+  "n": 11,
+  "b0": 50.9,
+  "dur_s": 5.7,
+  "fase": "gancho",
+  "u": 0.0756,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "As palabras do conxuro parecen vellas e son novas, e hai un motivo polo que semellan de ninguén.",
+  "frases": [
+   12
+  ],
+  "t0": 51.101
+ },
+ {
+  "n": 12,
+  "b0": 56.6,
+  "dur_s": 6.2,
+  "fase": "gancho",
+  "u": 0.0866,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "O que se contou de Dorotea é vello de verdade, e só o coñecemos porque alguén o escribiu nun proceso por bruxería.",
+  "frases": [
+   13
+  ],
+  "t0": 56.831
+ },
+ {
+  "n": 13,
+  "b0": 62.7,
+  "dur_s": 4.0,
+  "fase": "gancho",
+  "u": 0.1001,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "As palabras que ela sabía, esas non as coñecemos.",
+  "frases": [
+   14
+  ],
+  "t0": 62.982
+ },
+ {
+  "n": 14,
+  "b0": 66.7,
+  "dur_s": 3.7,
+  "fase": "gancho",
+  "u": 0.1057,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Nos papeis daqueles procesos hai moitas máis palabras.",
+  "frases": [
+   15
+  ],
+  "t0": 66.959
+ },
+ {
+  "n": 15,
+  "b0": 70.4,
+  "dur_s": 4.6,
+  "fase": "gancho",
+  "u": 0.1106,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Hai unha palabra trabucada que ninguén borrou en máis de catrocentos anos.",
+  "frases": [
+   16
+  ],
+  "t0": 70.682
+ },
+ {
+  "n": 16,
+  "b0": 75.1,
+  "dur_s": 6.5,
+  "fase": "gancho",
+  "u": 0.1179,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "E hai mesmo noticia dunha lista coas mulleres que uns veciños viron nunha fonte, a noite de san Xoán.",
+  "frases": [
+   17
+  ],
+  "t0": 75.324
+ },
+ {
+  "n": 17,
+  "b0": 81.6,
+  "dur_s": 4.0,
+  "fase": "gancho",
+  "u": 0.1296,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Había mulleres de aldea detrás de todas esas palabras.",
+  "frases": [
+   18
+  ],
+  "t0": 81.843
+ },
+ {
+  "n": 18,
+  "b0": 85.6,
+  "dur_s": 6.8,
+  "fase": "gancho",
+  "u": 0.1351,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "A meiga, moitas veces, non era a bruxa dos contos, senón a que curaba, a que axudaba nos partos, a que sabía de herbas.",
+  "frases": [
+   19
+  ],
+  "t0": 85.821
+ },
+ {
+  "n": 19,
+  "b0": 92.4,
+  "dur_s": 6.8,
+  "fase": "gancho",
+  "u": 0.1499,
+  "capitulo": "Comezo",
+  "parte": null,
+  "texto": "Esta noite imos buscalas no pouco que delas quedou escrito, e preguntarnos de quen son, de verdade, esas palabras.",
+  "frases": [
+   20
+  ],
+  "t0": 92.602
+ },
+ {
+  "n": 20,
+  "b0": 99.2,
+  "dur_s": 7.2,
+  "fase": "transicion",
+  "u": 0.1615,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "En Vilalba, a Real Audiencia xulgou tamén a María do Barro, a filla de Dorotea.",
+  "frases": [
+   21
+  ],
+  "t0": 99.2
+ },
+ {
+  "n": 21,
+  "b0": 106.4,
+  "dur_s": 6.6,
+  "fase": "transicion",
+  "u": 0.1708,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "Da filla dicían outra cousa: que era alcaiota, e que acollía na súa casa homes casados e mulleres solteiras.",
+  "frases": [
+   22
+  ],
+  "t0": 106.625
+ },
+ {
+  "n": 22,
+  "b0": 113.0,
+  "dur_s": 6.3,
+  "fase": "transicion",
+  "u": 0.1824,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "Unha testemuña oíu murmurar entre algúns veciños que María era meiga, e que non era boa cristiá.",
+  "frases": [
+   23
+  ],
+  "t0": 113.245
+ },
+ {
+  "n": 23,
+  "b0": 119.3,
+  "dur_s": 12.3,
+  "fase": "transicion",
+  "u": 0.1929,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "E contou que María, cando tiña o gando no monte, dicía unhas palabras: unhas en voz baixa, e outras que se oían. Pensemos nela alí, co gando arredor e o vento levando a medias o que dicía.",
+  "frases": [
+   24,
+   25
+  ],
+  "t0": 119.534
+ },
+ {
+  "n": 24,
+  "b0": 131.6,
+  "dur_s": 8.5,
+  "fase": "transicion",
+  "u": 0.2156,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "E, entre elas, un desexo para o gando: que bebese auga de sete fontes e trouxese leite de sete cortes e de sete montes.",
+  "frases": [
+   26
+  ],
+  "t0": 131.827
+ },
+ {
+  "n": 25,
+  "b0": 140.0,
+  "dur_s": 8.6,
+  "fase": "transicion",
+  "u": 0.2303,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "Eran palabras para o gando, non para un tribunal. Pero do monte pasaron á boca da testemuña, e da boca ao papel.",
+  "frases": [
+   27,
+   28
+  ],
+  "t0": 140.294
+ },
+ {
+  "n": 26,
+  "b0": 148.7,
+  "dur_s": 5.4,
+  "fase": "transicion",
+  "u": 0.2439,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "No papel quedou ata a emenda de quen escribía: que trouxese auga, digo, leite.",
+  "frases": [
+   29
+  ],
+  "t0": 148.912
+ },
+ {
+  "n": 27,
+  "b0": 154.1,
+  "dur_s": 12.5,
+  "fase": "transicion",
+  "u": 0.2525,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "O papel gárdao o Arquivo do Reino de Galicia, con outros procesos por bruxería da Real Audiencia. Máis de catrocentos anos despois, a palabra trabucada segue alí, xusto antes da boa.",
+  "frases": [
+   30,
+   31
+  ],
+  "t0": 154.305
+ },
+ {
+  "n": 28,
+  "b0": 166.5,
+  "dur_s": 5.5,
+  "fase": "transicion",
+  "u": 0.2715,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "Así nos chegan as palabras daquelas mulleres: na voz doutros, e na man de quen escribía.",
+  "frases": [
+   32
+  ],
+  "t0": 166.758
+ },
+ {
+  "n": 29,
+  "b0": 172.0,
+  "dur_s": 12.0,
+  "fase": "transicion",
+  "u": 0.2813,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "E as palabras tamén podían pechar portas. O vicario xeral do bispado de Mondoñedo excomungou a nai e a filla, e mandou que ninguén lles dese pan, sal, auga nin lume.",
+  "frases": [
+   33,
+   34
+  ],
+  "t0": 172.263
+ },
+ {
+  "n": 30,
+  "b0": 184.0,
+  "dur_s": 5.8,
+  "fase": "transicion",
+  "u": 0.3004,
+  "capitulo": "I. Auga, digo, leite",
+  "parte": null,
+  "texto": "Auga de sete fontes para o gando. E para elas, nin auga.",
+  "frases": [
+   35,
+   36
+  ],
+  "t0": 184.22
+ },
+ {
+  "n": 31,
+  "b0": 189.8,
+  "dur_s": 7.6,
+  "fase": "transicion",
+  "u": 0.3077,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "Aquel papel gardou ata o máis pequeno, unha palabra trabucada.",
+  "frases": [
+   37
+  ],
+  "t0": 189.802
+ },
+ {
+  "n": 32,
+  "b0": 197.4,
+  "dur_s": 7.6,
+  "fase": "transicion",
+  "u": 0.3139,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "Ao conxuro da queimada pasoulle ao revés: polo camiño quedou sen o máis importante, o nome de quen o escribiu.",
+  "frases": [
+   38
+  ],
+  "t0": 197.604
+ },
+ {
+  "n": 33,
+  "b0": 204.9,
+  "dur_s": 7.3,
+  "fase": "transicion",
+  "u": 0.3262,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "Mariano Marcos Abalo xuntábase cos amigos a bordo do vello barco, amarrado no porto, e alí facían queimadas.",
+  "frases": [
+   39
+  ],
+  "t0": 205.165
+ },
+ {
+  "n": 34,
+  "b0": 212.2,
+  "dur_s": 5.6,
+  "fase": "transicion",
+  "u": 0.3372,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "Contaba que escribira o conxuro para darlles un pouco de ritual a aquelas queimadas.",
+  "frases": [
+   40
+  ],
+  "t0": 212.458
+ },
+ {
+  "n": 35,
+  "b0": 217.9,
+  "dur_s": 7.4,
+  "fase": "transicion",
+  "u": 0.3458,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "E que houbo outros cinco ou seis conxuros daquela época, pero ningún tivo a saída do seu.",
+  "frases": [
+   41
+  ],
+  "t0": 218.101
+ },
+ {
+  "n": 36,
+  "b0": 225.3,
+  "dur_s": 7.4,
+  "fase": "transicion",
+  "u": 0.3563,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "Unha empresa vendeu copias do conxuro sen o nome do autor, e por iso moita xente pensou que era un texto popular e anónimo.",
+  "frases": [
+   42
+  ],
+  "t0": 225.517
+ },
+ {
+  "n": 37,
+  "b0": 232.7,
+  "dur_s": 5.0,
+  "fase": "transicion",
+  "u": 0.371,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "En dous mil un, o autor rexistrouno como propiedade intelectual.",
+  "frases": [
+   43
+  ],
+  "t0": 232.921
+ },
+ {
+  "n": 38,
+  "b0": 237.7,
+  "dur_s": 5.5,
+  "fase": "transicion",
+  "u": 0.3771,
+  "capitulo": "II. O conxuro do barco",
+  "parte": null,
+  "texto": "Así, unhas palabras sen nome no papel acabaron parecendo de todos, e de sempre.",
+  "frases": [
+   44
+  ],
+  "t0": 237.924
+ },
+ {
+  "n": 39,
+  "b0": 243.2,
+  "dur_s": 7.3,
+  "fase": "calma",
+  "u": 0.3857,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "O conxuro naceu entre amigos, arredor dun pote.",
+  "frases": [
+   45
+  ],
+  "t0": 243.222
+ },
+ {
+  "n": 40,
+  "b0": 250.5,
+  "dur_s": 12.2,
+  "fase": "calma",
+  "u": 0.3907,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "As palabras dos procesos acabaron noutro sitio: nos tribunais. Tres xustizas podían xulgar a bruxería: a civil, a eclesiástica e a Inquisición.",
+  "frases": [
+   46,
+   47
+  ],
+  "t0": 250.746
+ },
+ {
+  "n": 41,
+  "b0": 262.7,
+  "dur_s": 8.6,
+  "fase": "calma",
+  "u": 0.4042,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "Para o investigador Diego Valor Bravo, coas meigas galegas a temida Inquisición foi branda: en tres séculos só condenou a morte unha meiga.",
+  "frases": [
+   48
+  ],
+  "t0": 262.973
+ },
+ {
+  "n": 42,
+  "b0": 271.3,
+  "dur_s": 10.4,
+  "fase": "calma",
+  "u": 0.4183,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "Os xuíces civís foron moito máis duros. E nos procesos civís da Real Audiencia, todas as acusadas eran mulleres.",
+  "frases": [
+   49,
+   50
+  ],
+  "t0": 271.597
+ },
+ {
+  "n": 43,
+  "b0": 281.7,
+  "dur_s": 13.3,
+  "fase": "calma",
+  "u": 0.43,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "Unha delas foi María Cibreira, procesada en mil seiscentos trinta e nove con outras veciñas de Boborás. Despois de ser torturada, confesou que había uns doce anos que exercía o oficio de bruxa e feiticeira.",
+  "frases": [
+   51,
+   52
+  ],
+  "t0": 281.977
+ },
+ {
+  "n": 44,
+  "b0": 295.0,
+  "dur_s": 8.7,
+  "fase": "calma",
+  "u": 0.4515,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "Que llo ensinara a súa nai. Que á nai acudía moita xente, e que ela lles facía curas e menciñas.",
+  "frases": [
+   53,
+   54
+  ],
+  "t0": 295.266
+ },
+ {
+  "n": 45,
+  "b0": 303.7,
+  "dur_s": 12.0,
+  "fase": "calma",
+  "u": 0.4638,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "E que as noites de san Xoán as meigas ían ás xuntanzas do demo, nas areas de Sevilla. Diante dela, alguén preguntaba, e alguén escribía.",
+  "frases": [
+   55,
+   56
+  ],
+  "t0": 303.962
+ },
+ {
+  "n": 46,
+  "b0": 315.7,
+  "dur_s": 12.7,
+  "fase": "calma",
+  "u": 0.4791,
+  "capitulo": "III. As respostas nas preguntas",
+  "parte": null,
+  "texto": "Rodrigo Pousa, historiador, explica que aquelas mulleres non sabían que declarar: as respostas xa ían nas preguntas. Ás veces, a voz era dunha muller, e as palabras, de quen preguntaba.",
+  "frases": [
+   57,
+   58
+  ],
+  "t0": 315.993
+ },
+ {
+  "n": 47,
+  "b0": 328.5,
+  "dur_s": 8.9,
+  "fase": "calma",
+  "u": 0.4975,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Unha noite de san Xoán aparece tamén nos papeis de Campo Lameiro.",
+  "frases": [
+   59
+  ],
+  "t0": 328.477
+ },
+ {
+  "n": 48,
+  "b0": 337.4,
+  "dur_s": 13.3,
+  "fase": "calma",
+  "u": 0.5049,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "En mil seiscentos corenta e tres, a Real Audiencia procesou alí varias mulleres. Uns veciños, rifados cunha delas, culpábana de lles facer morrer as becerras e os leitóns.",
+  "frases": [
+   60,
+   61
+  ],
+  "t0": 337.643
+ },
+ {
+  "n": 49,
+  "b0": 350.7,
+  "dur_s": 9.2,
+  "fase": "calma",
+  "u": 0.5221,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Unha testemuña contou que, pola sospeita que tiñan delas, uns veciños foran espreitalas á fonte da Nogueira, a noite de san Xoán do ano anterior.",
+  "frases": [
+   62
+  ],
+  "t0": 350.967
+ },
+ {
+  "n": 50,
+  "b0": 359.9,
+  "dur_s": 7.8,
+  "fase": "calma",
+  "u": 0.5375,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Alí, dixo, viron e recoñeceron as mulleres, e apuntáronas nunha lista porque eran moitas.",
+  "frases": [
+   63
+  ],
+  "t0": 360.136
+ },
+ {
+  "n": 51,
+  "b0": 367.7,
+  "dur_s": 6.8,
+  "fase": "calma",
+  "u": 0.5461,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Pensemos nunha noite curta de xuño: a auga fría da fonte, e uns ollos que miran desde a escuridade.",
+  "frases": [
+   64
+  ],
+  "t0": 367.957
+ },
+ {
+  "n": 52,
+  "b0": 374.5,
+  "dur_s": 10.7,
+  "fase": "calma",
+  "u": 0.5577,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Do que elas dixesen aquela noite, non nos chegou nin unha palabra. Só nos chegou a noticia da lista, na voz doutros.",
+  "frases": [
+   65,
+   66
+  ],
+  "t0": 374.782
+ },
+ {
+  "n": 53,
+  "b0": 385.2,
+  "dur_s": 7.5,
+  "fase": "calma",
+  "u": 0.5713,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "A noite de san Xoán era costume ir ás fontes, porque se cría que a auga desa noite tiña virtudes especiais.",
+  "frases": [
+   67
+  ],
+  "t0": 385.484
+ },
+ {
+  "n": 54,
+  "b0": 392.8,
+  "dur_s": 12.1,
+  "fase": "calma",
+  "u": 0.5842,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "E na crenza popular, era tamén a noite en que as meigas andaban máis libres. A mesma fonte, a mesma noite, e dúas maneiras de mirala.",
+  "frases": [
+   68,
+   69
+  ],
+  "t0": 393.017
+ },
+ {
+  "n": 55,
+  "b0": 404.8,
+  "dur_s": 15.4,
+  "fase": "calma",
+  "u": 0.6001,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Moitas das acusadas eran parteiras e menciñeiras que aprenderan o oficio doutras mulleres, a miúdo das súas nais. Nos papeis, Pousa atopou esta expresión: maldita a nai que non ensina a súa filla a meigar.",
+  "frases": [
+   70,
+   71
+  ],
+  "t0": 405.098
+ },
+ {
+  "n": 56,
+  "b0": 420.2,
+  "dur_s": 13.5,
+  "fase": "calma",
+  "u": 0.6216,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Moitas denuncias nacían de liortas entre veciños, coma en Campo Lameiro. Ás veces había quen falaba de bruxería cando, en realidade, as ovellas dun veciño lle comeran a viña ao outro.",
+  "frases": [
+   72,
+   73
+  ],
+  "t0": 420.477
+ },
+ {
+  "n": 57,
+  "b0": 433.7,
+  "dur_s": 10.1,
+  "fase": "calma",
+  "u": 0.6407,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "E, con todo, para Pousa aquelas mulleres eran necesarias, porque resolvían os problemas de cada día: a saúde, as colleitas e o gando.",
+  "frases": [
+   74
+  ],
+  "t0": 433.973
+ },
+ {
+  "n": 58,
+  "b0": 443.8,
+  "dur_s": 10.1,
+  "fase": "calma",
+  "u": 0.6548,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Xa no século dezaoito, frei Martín Sarmiento defendeu o saber das curandeiras, as meigas, como o de auténticos médicos e botánicos.",
+  "frases": [
+   75
+  ],
+  "t0": 444.038
+ },
+ {
+  "n": 59,
+  "b0": 453.9,
+  "dur_s": 14.2,
+  "fase": "calma",
+  "u": 0.6677,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "No mesmo século, o frade Benito Xerónimo Feijoo escribiu contra as falsas crenzas e as supersticións. Advertía que as fábulas de bruxería pasan do pobo aos libros, e dos libros outra vez ao pobo.",
+  "frases": [
+   76,
+   77
+  ],
+  "t0": 454.115
+ },
+ {
+  "n": 60,
+  "b0": 468.1,
+  "dur_s": 6.8,
+  "fase": "calma",
+  "u": 0.6886,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "Así, para el, unha fábula nacida no recuncho dunha aldea chega a encher o mundo enteiro.",
+  "frases": [
+   78
+  ],
+  "t0": 468.341
+ },
+ {
+  "n": 61,
+  "b0": 474.9,
+  "dur_s": 8.7,
+  "fase": "calma",
+  "u": 0.6984,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "E admitía que moitas veces o voo das bruxas era só soñado, aínda que non negaba que as houbese.",
+  "frases": [
+   79
+  ],
+  "t0": 475.108
+ },
+ {
+  "n": 62,
+  "b0": 483.6,
+  "dur_s": 10.0,
+  "fase": "calma",
+  "u": 0.7101,
+  "capitulo": "IV. A lista da fonte",
+  "parte": null,
+  "texto": "E aquí deixamos os papeis. Desde agora a historia vai máis amodo, e non tes que lembrar nada do que escoites.",
+  "frases": [
+   80,
+   81
+  ],
+  "t0": 483.816
+ },
+ {
+  "n": 63,
+  "b0": 493.5,
+  "dur_s": 12.4,
+  "fase": "durmir",
+  "u": 0.723,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "É outra vez aquela noite de xuño, e esta vez ninguén espreita na escuridade nin apunta nomes nunha lista.",
+  "frases": [
+   82
+  ],
+  "t0": 493.54
+ },
+ {
+  "n": 64,
+  "b0": 506.0,
+  "dur_s": 18.5,
+  "fase": "durmir",
+  "u": 0.7346,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Para facer o cacho, alguén colle auga de sete fontes, coma naquelas palabras do monte, e deixa nela as herbas da véspera. A talla queda fóra toda a noite, para que lle caia o orballo, que segundo a crenza daba ás herbas as súas virtudes.",
+  "frases": [
+   83,
+   84
+  ],
+  "t0": 506.215
+ },
+ {
+  "n": 65,
+  "b0": 524.5,
+  "dur_s": 22.7,
+  "fase": "durmir",
+  "u": 0.7623,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Lonxe, cando a cacharela xa case se apaga, a xente salta as últimas lapas, sempre un número impar de veces, polo menos tres. E ao saltar di unhas palabras que ninguén apunta nunha lista. Salto por riba do lume de san Xoán, para que non me morda cadela nin can.",
+  "frases": [
+   85,
+   86,
+   87
+  ],
+  "t0": 524.706
+ },
+ {
+  "n": 66,
+  "b0": 547.2,
+  "dur_s": 20.7,
+  "fase": "durmir",
+  "u": 0.793,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Ao amencer, a primeira auga da fonte chámase flor da auga, e crese que dá saúde e beleza. Coa auga das herbas, verde e recendente, lávase a cara; e nalgunhas zonas lávase mirando ao oriente, para recibir as primeiras raiolas do sol.",
+  "frases": [
+   88,
+   89
+  ],
+  "t0": 547.438
+ },
+ {
+  "n": 67,
+  "b0": 567.8,
+  "dur_s": 9.4,
+  "fase": "durmir",
+  "u": 0.8188,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Despois, os ramos de herbas colgan secos nalgún lugar da casa, para que a protexan o resto do ano.",
+  "frases": [
+   90
+  ],
+  "t0": 568.095
+ },
+ {
+  "n": 68,
+  "b0": 577.2,
+  "dur_s": 15.2,
+  "fase": "durmir",
+  "u": 0.8305,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Outra noite, nunha cociña de aldea, tras a cea, apáganse as luces. No pote de barro van a augardente e o azucre, a casca de limón e uns poucos grans de café.",
+  "frases": [
+   91,
+   92
+  ],
+  "t0": 577.469
+ },
+ {
+  "n": 69,
+  "b0": 592.5,
+  "dur_s": 16.8,
+  "fase": "durmir",
+  "u": 0.8501,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Os comensais xúntanse arredor do pote, para animar os corazóns. Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro.",
+  "frases": [
+   93,
+   94
+  ],
+  "t0": 592.705
+ },
+ {
+  "n": 70,
+  "b0": 609.2,
+  "dur_s": 13.9,
+  "fase": "durmir",
+  "u": 0.8692,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Mouchos, curuxas, sapos e bruxas. Agora xa sabes quen escribiu estas palabras, que parecían de ninguén: un home nun barco, entre amigos.",
+  "frases": [
+   95,
+   96
+  ],
+  "t0": 609.495
+ },
+ {
+  "n": 71,
+  "b0": 623.1,
+  "dur_s": 15.2,
+  "fase": "durmir",
+  "u": 0.8827,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "E alguén di aquel dito tan coñecido: eu non creo nas meigas, mais habelas, hainas. Ese si é de todos, porque ninguén lle coñece autor.",
+  "frases": [
+   97,
+   98
+  ],
+  "t0": 623.363
+ },
+ {
+  "n": 72,
+  "b0": 638.3,
+  "dur_s": 18.0,
+  "fase": "durmir",
+  "u": 0.898,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "As lapas do alcohol van baixando amodo, ata que se esgota case todo, e a cociña queda á luz das brasas. Das meigas de verdade escoitamos esta noite poucas palabras, e todas quedaron escritas por outra man.",
+  "frases": [
+   99,
+   100
+  ],
+  "t0": 638.523
+ },
+ {
+  "n": 73,
+  "b0": 656.3,
+  "dur_s": 10.9,
+  "fase": "durmir",
+  "u": 0.9208,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "A outra meiga, a dos contos, saíu das fábulas que van da aldea aos libros, e dos libros outra vez á aldea.",
+  "frases": [
+   101
+  ],
+  "t0": 656.571
+ },
+ {
+  "n": 74,
+  "b0": 667.2,
+  "dur_s": 21.2,
+  "fase": "durmir",
+  "u": 0.9343,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Agora chove sobre as lousas do tellado, unha chuvia miúda e mansa, coma o orballo que caía sobre as herbas. Na corte, o gando dorme quente, e nalgún lugar da casa colgan as herbas secas da véspera, que aínda cheiran a monte.",
+  "frases": [
+   102,
+   103
+  ],
+  "t0": 667.457
+ },
+ {
+  "n": 75,
+  "b0": 688.4,
+  "dur_s": 22.4,
+  "fase": "durmir",
+  "u": 0.9601,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Lonxe, as sete fontes seguen correndo na escuridade, e a auga baixa mansa cara ao río, sen que ninguén a espreite. Ninguén apunta nomes, ninguén pregunta, e xa non fan falta palabras: só a chuvia na lousa, sempre igual, sempre mansa.",
+  "frases": [
+   104,
+   105
+  ],
+  "t0": 688.613
+ },
+ {
+  "n": 76,
+  "b0": 710.7,
+  "dur_s": 13.5,
+  "fase": "durmir",
+  "u": 0.9853,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "A casa descansa baixo a chuvia, e xa non tes que lembrar nada. E agora, amodo, xa se pode apagar a candea.",
+  "frases": [
+   106,
+   107
+  ],
+  "t0": 710.994
+ },
+ {
+  "n": 77,
+  "b0": 724.3,
+  "dur_s": 27.1,
+  "fase": "durmir",
+  "u": 0.9988,
+  "capitulo": "V. Chove na lousa",
+  "parte": null,
+  "texto": "Boas noites.",
+  "frases": [
+   108
+  ],
+  "t0": 724.538
+ }
+]

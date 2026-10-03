@@ -1,0 +1,32 @@
+lista de produción: 77 planos, 54 con axustes -> plan-de-negocio/gauntlet4/video/escenas-v2-produccion.json
+54 traballos I2V -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/i2v-accions.json
+r3 inicio Sat Oct  3 22:43:02 UTC 2026
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+textos 8/26: 7.8 s por texto
+textos 16/26: 7.3 s por texto
+textos 24/26: 7.2 s por texto
+textos 26/26: 10.7 s por texto
+{"he slowly closes the small book in his hands and bows his head": 7.7, "one man points at the dead calf while the other shouts toward the door": 7.7, "she sleeps peacefully, breathing slowly under the blanket": 7.7, "she slowly lowers the bowl and brings the herb water to her face": 7.7, "she wags her raised finger as she speaks and the other old woman laughs softly": 7.8, "the friar slowly turns the sprig in his fingers and smiles": 7.8, "the grandmother turns a page and speaks softly while the child leans against her": 7.8, "the hand slowly lets a few coffee beans fall into the bowl": 7.8, "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl": 7.2, "the healer slowly brings the steaming bowl to the young woman's lips": 7.2, "the healer slowly moves her hands over the calf and the calf lifts its head": 7.2, "the hooded woman slowly turns her head and whispers to the old man": 7.2, "the judge leans closer and speaks softly, and the woman slowly nods in silence": 7.3, "the judge leans over the table and speaks slowly while the woman lowers her eyes": 7.3, "the mother slowly crushes herbs between her hands while the girl watches the small fire": 7.3, "the old healer slowly hands the clay pot to the woman with the basket": 7.3, "the old midwife slowly moves her hand over the young woman's belly": 7.2, "the priest slowly reads aloud from the decree and lowers the paper": 7.2, "the sheep graze slowly while the old man watches them": 7.2, "the three men sit still in the dark and slowly turn their heads toward the firelight": 7.2, "the two candle flames tremble and slowly go out, leaving thin threads of smoke": 7.2, "the two old women sit quietly and one slowly turns her head toward the other": 7.2, "the women stand still and slowly lower their heads while the bearded judge speaks": 7.2, "the women talk and laugh softly and one gestures with her hand": 7.2, "the women walk slowly toward the camera carrying their water pails": 10.7, "the young man whispers into her ear and she slowly raises her eyes": 10.7}
+t5 feito Sat Oct  3 22:48:45 UTC 2026
+== 1_texto
+curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+voz: todas as frases na caché
+== 4_escenas
+planos por sentido: 77 (cortes a metade de frase: 2, por Whisper: 2)
+== 5_imaxes
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1791067746.198391    8574 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791067746.220127    8573 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791067747.084524    8579 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791067747.105848    8580 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1791067959.244890    8629 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe   1 intento 0 127.3s + revisión 16.8s ['negativo do plano: cauldron (CLIP)', 'negativo do plano: iron pot (CLIP)', 'negativo do plano: bonfire (CLIP)']
+imaxe   1 intento 1 120.0s + revisión  9.9s ['negativo do plano: iron pot (CLIP)']
