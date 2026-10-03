@@ -9,6 +9,7 @@ Uso (python3 do sistema, sen dependencias, desde calquera sitio):
                                              # traballos para movemento_i2v.py, por prioridade e orde do plano
     produccion.py porta [--aplicar]          # clips que non pasan a porta de vídeo: outra semente unha vez, logo paralaxe
     produccion.py estado                     # por plano: imaxe escollida, quen a aprobou, clip I2V e porta
+    produccion.py intentos SAIDA.json        # os intentos novos dos planos rexenerados (segunda ollada)
 
 A clave da caché de imaxes dun plano é a de imaxes.xerar: índice + sha256(prompt + modelo + fase + referencia). Un
 prompt novo nos axustes dá unha clave nova (intentos novos, sementes novas); a escolla feita na revisión queda en
@@ -107,11 +108,16 @@ def revision(fich, quen, so_axustes=False):
         x = ax.setdefault(str(n), {})
         x.update({k: v for k, v in a.items() if k in ('prompt', 'negativo', 'referencia', 'clave')})
         x['motivo'] = f"rexenerar ({quen}): {a.get('motivo', '')}"
+    for n, acc in R.get('accions', {}).items():      # acción I2V que casa coa imaxe aceptada
+        x = ax.setdefault(str(n), {})
+        x['accion'] = acc
+        m = f'acción I2V que casa coa imaxe aceptada ({quen})'
+        x['motivo'] = f"{x['motivo']} | {m}" if x.get('motivo') and m not in x['motivo'] else (x.get('motivo') or m)
     if not so_axustes:
         gardar(revf, rev)
     gardar(AXUSTES, ax)
     print(f"revisión aplicada: {0 if so_axustes else len(R.get('escollas', {}))} escollas, "
-          f"{len(R.get('rexenerar', {}))} planos a rexenerar")
+          f"{len(R.get('rexenerar', {}))} planos a rexenerar, {len(R.get('accions', {}))} accións I2V")
     lista()
 
 
@@ -168,6 +174,24 @@ def porta(aplicar):
         print('(sen aplicar: engade --aplicar)')
 
 
+def intentos(saida):
+    """Para cada plano que a revisión mandou rexenerar: a clave nova, os seus intentos (ficheiro e problemas da porta)
+    e o escollido pola porta; para a segunda ollada do axente."""
+    prod = ler(PROD)['escenas']; rev = ler(W / 'imaxes' / 'revision.json', {}); fs = fases(); ax = ler(AXUSTES, {})
+    out = {}
+    for e in prod:
+        if not str(ax.get(str(e['n']), {}).get('motivo', '')).startswith('rexenerar'):
+            continue
+        k = clave(e, fs.get(e['n'])); r = rev.get(k)
+        out[str(e['n'])] = {'clave': k, 'prompt': e['prompt'], 'texto': e['texto'],
+                            'animacion': e.get('animacion'),
+                            'escollido_pola_porta': r and r['ficheiro'],
+                            'intentos': r and [{'ficheiro': x['ficheiro'], 'problemas': x['problemas']}
+                                               for x in r['intentos']]}
+    gardar(saida, out)
+    print(f'{len(out)} planos rexenerados -> {saida}; sen intentos: {[n for n, v in out.items() if not v["intentos"]]}')
+
+
 def estado():
     prod = ler(PROD) or ler(BASE)
     rev = ler(W / 'imaxes' / 'revision.json', {}); fs = fases(); pt = ler(PORTA, {})
@@ -185,7 +209,7 @@ def estado():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('orde', choices=['lista', 'revision', 'i2v', 'porta', 'estado'])
+    ap.add_argument('orde', choices=['lista', 'revision', 'i2v', 'porta', 'estado', 'intentos'])
     ap.add_argument('ficheiro', nargs='?')
     ap.add_argument('--quen', default='axente Claude (revisión r1 das imaxes da v2)')
     ap.add_argument('--prioridade', default='')
@@ -204,6 +228,8 @@ def main():
             a.accions, a.so_revisadas)
     elif a.orde == 'porta':
         porta(a.aplicar)
+    elif a.orde == 'intentos':
+        intentos(a.ficheiro)
     else:
         estado()
 
