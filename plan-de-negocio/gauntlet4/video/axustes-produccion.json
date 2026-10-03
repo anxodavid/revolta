@@ -133,5 +133,156 @@
   "prompt": "over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chains, park bench, trees",
   "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Dúas figuras de negro nun banco de parque ao aire libre: non hai xuíz, nin sala, nin as tres acusadas. A porta aprobouno."
+ },
+ "44": {
+  "prompt": "medium shot of an old healer with white hair under a black wool headscarf at the door of her rough granite house, handing a small clay pot of ointment to a peasant woman holding a child, villagers waiting behind, soft morning light, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, modern door, plastered walls, amphora, olive trees, paper cup",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Paredes encaladas e talladas grandes de aspecto mediterráneo, e a visitante leva unha cunca que parece un vaso de papel con tapa. Non hai pote de unguento nin neno, e a curandeira non leva o pano negro. Os outros dous intentos tamén son mediterráneos."
+ },
+ "45": {
+  "prompt": "over-the-shoulder shot from behind a peasant woman in a grey wool headscarf on a stool: a stern grey-bearded judge in a black gown questions her while a gaunt clean-shaven scribe beside him writes with a quill, bare stone room, candlelight",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, devil, horns, demon, fire, chandelier, ball gown, earrings",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos: unha dama vitoriana con vestido negro e pendentes diante dun xuíz do XIX entre candelabros. Non é María Cibreira (no 43, campesiña de pano gris) e falta o escribán."
+ },
+ "46": {
+  "prompt": "close-up two-shot in profile: a stern grey-bearded judge in a black gown reads a question from a paper to a pale exhausted peasant woman in a grey wool headscarf, who nods in silence with her lips closed, candlelight",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book, vignette, white frame, bonnet",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Retrato de tres caras con marco branco esvaído (viñeta) e roupa do XIX; sen papel nin pregunta, e a muller non é a Cibreira do 43. A porta aprobouno."
+ },
+ "47": {
+  "prompt": "wide shot of a simple rustic spring at night: water pouring from a stone spout set in a mossy granite wall into a stone trough, among chestnut trees, the faint orange glow of a distant bonfire between the trunks, moonlight",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, statue, ornamental fountain, park, buildings",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos: fonte ornamental nun parque urbano, con farolas eléctricas e un edificio coas fiestras acesas (a porta acerta)."
+ },
+ "48": {
+  "prompt": "medium shot of two village men in sheepskin vests pointing and shouting at a village woman in a dark wool shawl at the door of a stone byre, a sick calf and two piglets lying still on the straw inside, overcast daylight, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, tractor, turf roof, thatched cottage, sheep",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Tres homes do XIX discutindo diante de casas de tellado de herba de aspecto irlandés, cun animal que parece unha ovella; falta a muller acusada. A porta aprobouno."
+ },
+ "49": {
+  "prompt": "over-the-shoulder shot of two village men in sheepskin vests crouching behind a mossy granite wall at night, peering over it at distant women gathered around a small bonfire by a rustic stone spring, deep shadows",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, ornamental fountain, houses",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Dous vellos de pé diante dun muro cun lume nun oco: ninguén espreita, e non hai fonte nin mulleres (a porta só avisou de que faltaba a fonte)."
+ },
+ "51": {
+  "prompt": "close-up of cold water pouring from a rough stone spout in a mossy granite wall into a stone trough on a short June night, moonlight on the water, dark leaves and ferns all around",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, monster, animal eyes, plastic pipe, metal tap, ornamental fountain",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Fonte de xardín con pía de pé e un cano metálico coma unha billa: non é unha fonte de aldea. Os ollos na escuridade non saíron e quítoos do prompt (risco de monstro); a escuridade das follas abonda."
+ },
+ "52": {
+  "prompt": "wide shot of three village women in dark wool shawls and headscarves talking and laughing softly around a rustic stone spring at night, lit by a small bonfire, seen from far away through dark branches",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hooded robes, cloaks, ritual, arcade, columns",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Tres figuras con túnicas e capuchas vermellas arredor dun lume dentro dunha pía, cunha arcada e unha luz eléctrica ao fondo: parece un rito sectario, non tres veciñas rindo. A porta aprobouno."
+ },
+ "54": {
+  "prompt": "close-up two-shot at a rustic stone spring at night: a young woman with a long dark braid smiles as she fills a clay jug at the spout, beside her an old woman in a black wool headscarf crosses herself, looking warily into the dark",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, table, teapot",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos son dúas mulleres nunha mesa dentro da casa, sen fonte nin noite, e a vella sorrí en vez de mirar con receo: perdeuse a idea das dúas maneiras de mirar a mesma fonte."
+ },
+ "58": {
+  "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit holding a sprig of a medicinal herb that an old village woman in a dark blue wool shawl offers him from her basket, monastery herb garden, 18th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, cathedral, skullcap",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Monxe vello e fraco lendo un libro nun xardín: non aparecen a herba nin a curandeira que defendía Sarmiento. Ademais, Sarmiento é robusto e de cara redonda, e este confúndese co Feijoo do 59."
+ },
+ "61": {
+  "prompt": "medium shot of a village woman asleep curled on her side under a wool blanket on a straw mattress in a dark granite room, her face calm, moonlight from a small opening, on the wall above her the soft shadow of a bird in flight",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, broom, witch, demon, corpse, coffin",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Muller tendida de costas, ríxida e cos brazos estirados sobre unha esteira: semella un corpo amortallado, e non hai a sombra do paxaro do soño."
+ },
+ "63": {
+  "prompt": "high-angle close-up of the full moon reflected in the still dark water of a stone trough under a rustic spring spout, ferns and moss around its edge, a thin stream falling, soft mist, night, no one around",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, plastic pipe, statue, ornamental fountain, daylight",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Fonte ornamental redonda con remate de estatua e luz de día gris: nin noite, nin lúa, nin fonte de aldea. Rexenérase coa mesma fonte rústica do 47 e do 51."
+ },
+ "64": {
+  "prompt": "a wide brown earthenware basin full of water with floating sprigs of fennel, ferns and wild flowers, resting on top of a mossy granite wall outside at night, dew drops on the leaves, moonlight, calm",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic, glass vase, concrete",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Non hai talla nin auga: unha planta nun recanto de muros que parecen de formigón. A porta aprobouno sen a clave."
+ },
+ "65": {
+  "prompt": "wide shot of a dark misty meadow at night, far away a low ring of dull red embers almost burnt out on the ground, small dark silhouettes of villagers around it, one leaping over the embers, deep blue darkness, calm",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fireworks, city lights, wildfire, big flames",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos: unha fila de siluetas diante dun incendio enorme que ocupa o horizonte. Non son as brasas da cacharela (a porta acerta: lume vivo ao durmir)."
+ },
+ "67": {
+  "prompt": "close-up of bunches of dried herbs and wild flowers hanging from a dark smoke-blackened wooden beam against a rough granite wall, dust floating in a thin beam of light, dim and quiet",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic, vase, flowerpots, shutters",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos levan fiestras de vidro modernas, contraventás con macetas ou portas de cristal (a porta acerta, aínda que diga casas británicas)."
+ },
+ "68": {
+  "prompt": "close-up of an old woman's hand pouring clear spirits from an earthenware jug into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, dim room at night, faint warm light",
+  "negativo": "neon, plastic, television, smartphone, glass bottle, modern kitchen, light bulb, daylight",
+  "referencia": {
+   "ficheiro": "07-queimada/02-camino-de-santiago-may-2008.jpg",
+   "modo": "profundidade",
+   "forza": 0.6
+  },
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): A cunca coas cuncas no bordo e os grans de café está ben (semente 07-01), pero os tres intentos teñen luz de día forte e o texto di «apáganse as luces». A porta rexeitou por lume vivo (é o barro laranxa). Proposta: a mesma semente en profundidade 0,6, que mantén a forma e deixa escurecer. Se volve fallar, o [0] (a xerra vertendo) vale."
+ },
+ "69": {
+  "prompt": "medium shot of an old man with white stubble in a dark wool waistcoat lifting a clay ladle of pale blue flames over a wide clay bowl of blue flames, an old woman in a dark headscarf beside him, faces lit blue in a dark kitchen",
+  "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, candles, cauldron, orange fire",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Lume laranxa grande nunha cunca no chan e un só vello: o crítico pedira lapas azul pálido para o durmir, e faltan os comensais."
+ },
+ "70": {
+  "prompt": "wide calm view of a misty harbour at night, a small old wooden sailing boat moored at a granite quay, a faint blue glow and three small seated figures on its deck, still dark water, 1960s",
+  "negativo": "neon, plastic, television, smartphone, street lamps, modern yacht, city lights, tall ship",
+  "referencia": {
+   "ficheiro": "11-barcos-costa/16-dorna-a-vela-rianxo-de-noite.jpg",
+   "modo": "img2img",
+   "forza": 0.5
+  },
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Dous veleiros grandes de tres mastros e unha cidade ao fondo: perdeuse o eco buscado co plano 4 (o barco vello e pequeno no peirao). Proposta: a mesma semente do 4. Se a porta rexeita por repetición co 4, escollelo a man, como dixo o crítico de planos."
+ },
+ "72": {
+  "prompt": "close-up of a wide brown earthenware bowl on a wooden table with a few faint low blue flames dying on its surface, the dark kitchen lit only by a dim red glow of embers, an old bundle of papers tied with a faded red cord beside it",
+  "negativo": "neon, plastic, television, smartphone, light bulb, glass, cauldron, iron pot, fireplace, orange flames",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Os tres intentos teñen lapas laranxas grandes; o escollido, ademais, unha pota negra de ferro (veto do caldeiro) e unha lareira acesa. O texto pide as últimas lapas azuis, que se apagan."
+ },
+ "74": {
+  "prompt": "medium shot of two brown cows asleep on straw in a dark stone byre at night, bunches of dried herbs hanging from the wooden beam above them, fine rain falling outside the open half-door, the faint glow of a small horn lantern, calm",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, metal stalls, black and white cows, wall lamp",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Vacas frisoas brancas e negras (raza leiteira moderna) e faroles de parede; os outros intentos teñen lámpadas eléctricas. Rexenérase con dúas vacas pardas."
+ },
+ "77": {
+  "prompt": "close-up of fine rain falling on dark wet stone slates of an old roof at night, drops gathering and dripping from the edge, moss between the slates, deep blue darkness, calm",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, tiles, gutter, window, dormer, chimney",
+  "motivo": "rexenerar (axente Claude (revisión r1 das imaxes da v2)): Tellado de lousa con musgo, pero cunha bufarda de fiestras de vidro acesas e cheminea de aspecto inglés; é a última imaxe do vídeo. Encadre pechado nas lousas, sen casa."
+ },
+ "53": {
+  "accion": "the women walk slowly toward the camera carrying their water pails",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "55": {
+  "accion": "the mother slowly crushes herbs between her hands while the girl watches the small fire",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "56": {
+  "accion": "the sheep graze slowly while the old man watches them",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "57": {
+  "accion": "the healer slowly moves her hands over the calf and the calf lifts its head",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "60": {
+  "accion": "the young man whispers into her ear and she slowly raises her eyes",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "66": {
+  "accion": "she slowly lowers the bowl and brings the herb water to her face",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "71": {
+  "accion": "she wags her raised finger as she speaks and the other old woman laughs softly",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "73": {
+  "accion": "the grandmother turns a page and speaks softly while the child leans against her",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
+ },
+ "76": {
+  "accion": "the two candle flames tremble and slowly go out, leaving thin threads of smoke",
+  "motivo": "acción I2V que casa coa imaxe aceptada (revisión r1 das imaxes, axente Claude)"
  }
 }
