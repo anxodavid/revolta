@@ -1,7 +1,7 @@
 # Estado do Gauntlet 4 e como relanzalo
 
 Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a sesión se corta, retomar desde aquí.**
-Última actualización: 03-10-2026, 06:05 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
+Última actualización: 03-10-2026, 06:16 UTC. **D18: a v2 dura ≈ 12 min e a calidade manda** (contexto §8).
 
 ## Que hai en marcha
 
@@ -11,7 +11,7 @@ Ficheiro do orquestrador (Claude). Actualízase en cada cambio de fase. **Se a s
 | 1 Guion v2 | **PECHADA: GAÑOU.** r1: A a cegas elixe a v2 (31/35 fronte a 18); B gaña con 15 substitucións. r2 (B + melloras de A): B r2 gaña sen substitucións. **Texto final: `guion/guion-r2.txt`** (1.628 palabras, ≈ 12 min; portas en verde; 5 excepcións aceptadas en `excepcions-r2.yaml`) | — | `gauntlet4/guion/`, `veredictos/guion-r*.md` | — |
 | 2 Movemento | Rolda 1: medindo I2V (LTX-Video 2B destilado, T5 en fp8) | enxeñeiro VFX | `gauntlet4/movemento/` e `herramientas/pipeline/movemento.py` | `encargos/construtor-movemento-r1.md` |
 | 3 Imaxe | Rolda 1: referencias baixadas; porta v6 e sementes | director de arte | `gauntlet4/imaxe/` | `encargos/construtor-imaxe-r1.md` |
-| 4 Planos v2 | Seguinte: a voz da v2 está en curso (`$SCRATCH/v2/voz.sh`, log `$SCRATCH/v2/voz.log`; sae co código 3 e deixa `frases.json`, `tempos_frases.json` e `planos.json` en `$SCRATCH/v2/w`); despois o montador escribe `planos/escenas-v2.json` | — | `gauntlet4/planos/` | (por escribir) |
+| 4 Planos v2 | Rolda 1: construtor traballando. Voz da v2 feita (108 frases, narración de 726,4 s = 12:06; `$SCRATCH/v2/w/`: `frases.json`, `tempos_frases.json`, `planos.json` de referencia con 78 planos) | montador | `gauntlet4/planos/` e o corte por sentido en `longo.py` | `encargos/construtor-planos-r1.md` |
 | 5 Vídeo v2 | Pendente | — | `gauntlet4/video/` | (por escribir) |
 
 Críticos do guion: `encargos/critico-guion-A-cego.md` (a cegas: o orquestrador copia a v1, que é
