@@ -216,3 +216,13 @@ Sen feitos novos: cando unha mellora precisa un dato, vai como pregunta para o d
 Quedan fóra da lista, por menores: o "ela" de María Cibreira (pregunta: quen facía as curas, a nai ou ela?), "o
 cacho" (pregunta: é a auga coas herbas ou o recipiente?) e os clixés "a temida Inquisición" e "estreitar os lazos
 de amizade".
+
+## Destape
+
+Engadido despois de subir o veredicto a cegas (commit `39ed063`). Clave: **A = v2**
+(`gauntlet4/guion/guion-r1.txt`) e **B = v1** (`gauntlet3/guion/guion-r3.txt`).
+
+A v2 gaña (31 fronte a 18 sobre 35) e ten 5/5 en unidade e 4/5 en calidade literaria: **a v2 gaña o criterio A**.
+Para chegar a 5 en calidade literaria fáltanlle as melloras 2, 3, 7 e 9 (a tese do gancho, a fórmula de imaxinar, a
+ponte cara ao conxuro e o peche que arrole). A carencia que lle vin á v1 a cegas (sen pregunta central e cunha
+segunda metade de inventario) coincide coa queixa do público, e a v2 corríxea.
