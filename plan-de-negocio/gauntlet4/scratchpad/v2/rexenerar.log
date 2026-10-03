@@ -28,3 +28,16 @@ imaxe   6 intento 0 123.2s + revisión 10.8s ['man sen corpo (1)']
 imaxe   6 intento 1 121.7s + revisión 10.5s ok
 imaxe   8 intento 0 117.9s + revisión  9.6s ok
 imaxe   9 intento 0  98.2s + revisión 10.0s ok
+imaxe  16 intento 0 120.5s + revisión 11.8s ['interior moderno']
+Token indices sequence length is longer than the specified maximum sequence length for this model (82 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century']
+Token indices sequence length is longer than the specified maximum sequence length for this model (82 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', 1 7 th century']
+imaxe  16 intento 1 118.3s + revisión 10.2s ok
+imaxe  17 intento 0 115.7s + revisión 10.3s ['cousas do século XX', 'negativo do plano: electric light (CLIP)'] avisos ['falta: clay bowl (CLIP)']
+imaxe  17 intento 1 115.2s + revisión 10.5s ok avisos ['falta: clay bowl (CLIP)']
+imaxe  19 intento 0 116.3s + revisión 11.0s ['texto na imaxe']
+imaxe  19 intento 1 116.3s + revisión 10.6s ok
+`torch_dtype` is deprecated! Use `dtype` instead!
+imaxe  20 intento 0 151.5s + revisión 10.3s ['balcóns', 'casas alleas', 'interior moderno', 'iconografía mediterránea']
+imaxe  20 intento 1 123.7s + revisión 10.7s ['balcóns', 'casas británicas (CLIP)']
