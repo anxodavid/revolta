@@ -1,3 +1,34 @@
 lista de produción: 77 planos, 54 con axustes -> plan-de-negocio/gauntlet4/video/escenas-v2-produccion.json
 54 traballos I2V -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/i2v-accions.json
 r3 inicio Sun Oct  4 00:33:43 UTC 2026
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+textos 8/10: 7.5 s por texto
+textos 10/10: 10.8 s por texto
+{"people talk softly at the long tables and the small flames flicker": 7.5, "she raises the small lantern and the cloaked man slowly steps toward the door": 7.5, "the friar smiles and slowly lifts the basket of herbs to look at them": 7.5, "the healer slowly stirs the herbs in the small bowl while the candle flame flickers": 7.5, "the men kneel over the dead calf and one slowly shakes his head": 7.5, "the old couple sit quietly at the table while the small blue flame flickers": 7.5, "the old hands slowly move over the round belly while the candlelight flickers": 7.5, "the old woman holding the jug slowly turns her head toward the dark woods": 7.5, "the priest slowly lowers the paper in front of the closed church door": 10.8, "the two seated women talk softly and one slowly turns toward the other": 10.8}
+t5 feito Sun Oct  4 00:40:19 UTC 2026
+== 1_texto
+curva: nós fixos polos capítulos [0, 263, 628, 1177, 1628]
+portas de texto: da caché
+portas de texto: {'lingua_lt': True, 'h1_ancoraxe': True, 'veracidade': True, 'estilo': True} | palabras: 1628 | frases marcadas pola veracidade: 5 | sen xustificar: 0
+== 3_voz
+voz: todas as frases na caché
+== 4_escenas
+planos por sentido: 77 (cortes a metade de frase: 2, por Whisper: 2)
+== 5_imaxes
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: Logging before InitGoogle() is written to STDERR
+W0000 00:00:1791074453.513678   11618 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791074453.532433   11618 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791074453.596661   11623 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1791074453.628733   11624 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+W0000 00:00:1791074605.899600   11675 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+imaxe   5 intento 0 129.4s + revisión 11.8s ['man sen corpo (1)']
+imaxe   5 intento 1 128.3s + revisión 10.2s ok
+imaxe   5 intento 2 121.7s + revisión 10.7s ['man sen corpo (2)']
+so-imaxes: 77 planos con imaxe; sen pasar a porta: 26 [2, 7, 12, 15, 19, 23, 26, 31, 32, 33, 37, 38, 39, 41, 42, 44, 48, 56, 59, 62, 64, 65, 70, 72, 73, 76]
+rc 0 Sun Oct  4 00:53:50 UTC 2026
+r3 fin Sun Oct  4 00:53:50 UTC 2026

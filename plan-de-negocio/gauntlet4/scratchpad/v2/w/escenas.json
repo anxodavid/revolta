@@ -195,16 +195,16 @@
   "u": 0.0338,
   "orixe": "sentido",
   "capitulo": "Comezo",
-  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+  "prompt": "close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century",
   "tipo": "plano_medio",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, leaded window, blood, nudity, hospital, metal bed, sofa",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa, white lace, studio backdrop",
   "son": "limpa",
   "clave": "pregnant woman",
   "animacion": {
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the old midwife slowly moves her hand over the young woman's belly",
+   "accion": "the old hands slowly move over the round belly while the candlelight flickers",
    "i2v": {
     "F": 73
    }
@@ -603,7 +603,7 @@
    "modo": "i2v",
    "camara": "avanza",
    "efectos": [],
-   "accion": "the healer slowly brings the steaming bowl to the young woman's lips"
+   "accion": "the healer slowly stirs the herbs in the small bowl while the candle flame flickers"
   },
   "texto_en": "The meiga, many times, was not the witch of tales, but the one who healed, who helped in childbirth, who knew about herbs.",
   "prioridade_i2v": 1
@@ -697,7 +697,7 @@
    "efectos": [
     "candea"
    ],
-   "accion": "she opens the heavy door wider and the cloaked man steps inside"
+   "accion": "she raises the small lantern and the cloaked man slowly steps toward the door"
   },
   "texto_en": "Of the daughter they said something else: that she was a go-between, and that she took married men and unmarried women into her house.",
   "prioridade_i2v": 2
@@ -960,7 +960,7 @@
    "modo": "i2v",
    "camara": "pan_esq",
    "efectos": [],
-   "accion": "the priest slowly reads aloud from the decree and lowers the paper"
+   "accion": "the priest slowly lowers the paper in front of the closed church door"
   },
   "texto_en": "And words could also close doors. The vicar general of the bishopric of Mondoñedo excommunicated the mother and the daughter, and ordered that no one give them bread, salt, water or fire.",
   "prioridade_i2v": 2
@@ -1254,7 +1254,7 @@
    "efectos": [
     "lume"
    ],
-   "accion": "people raise their cups and the blue flames flicker",
+   "accion": "people talk softly at the long tables and the small flames flicker",
    "i2v": {
     "F": 73
    }
@@ -1577,7 +1577,7 @@
    "modo": "i2v",
    "camara": "pan_esq",
    "efectos": [],
-   "accion": "one man points at the dead calf while the other shouts toward the door"
+   "accion": "the men kneel over the dead calf and one slowly shakes his head"
   },
   "texto_en": "In sixteen forty-three, the Royal Court tried several women there. Some neighbours, quarrelling with one of them, blamed her for making their calves and piglets die.",
   "prioridade_i2v": 1
@@ -1703,7 +1703,7 @@
    "efectos": [
     "auga"
    ],
-   "accion": "the women talk and laugh softly and one gestures with her hand"
+   "accion": "the two seated women talk softly and one slowly turns toward the other"
   },
   "texto_en": "Of whatever they said that night, not a single word has reached us. Only the news of the list reached us, in the voice of others.",
   "prioridade_i2v": 1
@@ -1766,7 +1766,7 @@
    "efectos": [
     "auga"
    ],
-   "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug"
+   "accion": "the old woman holding the jug slowly turns her head toward the dark woods"
   },
   "texto_en": "And in popular belief, it was also the night when the meigas roamed most freely. The same fountain, the same night, and two ways of looking at it.",
   "prioridade_i2v": 1
@@ -1897,7 +1897,7 @@
    "modo": "i2v",
    "camara": "xira_der",
    "efectos": [],
-   "accion": "the friar slowly turns the sprig in his fingers and smiles"
+   "accion": "the friar smiles and slowly lifts the basket of herbs to look at them"
   },
   "texto_en": "Already in the eighteenth century, Friar Martín Sarmiento defended the knowledge of the healers, the meigas, as that of true doctors and botanists.",
   "prioridade_i2v": 1
@@ -2251,7 +2251,7 @@
    "efectos": [
     "lume"
    ],
-   "accion": "he lifts the ladle and pours a slow stream of blue fire back into the bowl"
+   "accion": "the old couple sit quietly at the table while the small blue flame flickers"
   },
   "epoca": "xx",
   "texto_en": "The guests gather around the pot, to cheer their hearts. One of them lifts the burning liquid with a ladle and lets it fall little by little into the pot, while reciting the spell.",

@@ -4,15 +4,15 @@
   "cpu_s": 1416.3
  },
  "3_voz": {
-  "parede_s": 354.5,
-  "cpu_s": 831.9
+  "parede_s": 354.8,
+  "cpu_s": 832.2
  },
  "4_escenas": {
   "parede_s": 97.5,
   "cpu_s": 77.8
  },
  "5_imaxes": {
-  "parede_s": 28598.4,
-  "cpu_s": 105658.9
+  "parede_s": 29408.4,
+  "cpu_s": 108572.3
  }
 }

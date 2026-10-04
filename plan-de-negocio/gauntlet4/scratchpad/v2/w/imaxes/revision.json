@@ -34580,5 +34580,405 @@
    "decision": "outro intento",
    "motivo": "O vello e a vella sentados á mesa á luz das velas, cunha lapa azul pequena á dereita: calmo e escuro, como pide o durmir, pero sen a cunca nin o cazo. O [0] (porta) ten a cunca e o cazo, pero o vello de barba branca longa e as lapas azuis soltas parecen un mago e un feitizo; o [1], unha pota con lume laranxa."
   }
+ },
+ "005-c0eb85dc": {
+  "ficheiro": "005-c0eb85dc-1.png",
+  "escollida": 1,
+  "ok": true,
+  "intentos": [
+   {
+    "intento": 0,
+    "ficheiro": "005-c0eb85dc-0.png",
+    "seed": 819541104,
+    "s": 129.4,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (1)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.445,
+       0.419
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.315,
+      "tamaño": 0.342
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.0007,
+    "lume_quente": 0.001,
+    "descricion": "The image shows a close-up of a person's hands resting on a bed. The hands are positioned in a way that they are resting on the edge of the bed, with their fingers slightly curled. The person is wearing a beige sweater, and the background is dark, with a few lit candles visible in the distance. The overall mood of the image is peaceful and serene.",
+    "obxectos": [
+     "human hand",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.007,
+      0.092
+     ],
+     "muros encalados (CLIP)": [
+      0.013,
+      0.118
+     ],
+     "ciprés (CLIP)": [
+      -0.021,
+      0.135
+     ],
+     "oliveiras (CLIP)": [
+      -0.021,
+      0.105
+     ],
+     "palmeiras (CLIP)": [
+      -0.018,
+      0.145
+     ],
+     "rodas de raios (CLIP)": [
+      0.037,
+      0.107
+     ],
+     "paisaxe seca (CLIP)": [
+      0.035,
+      0.101
+     ],
+     "eucaliptos (CLIP)": [
+      -0.003,
+      0.088
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.013,
+      0.088
+     ],
+     "luces de cidade (CLIP)": [
+      -0.02,
+      0.139
+     ],
+     "salón moderno (CLIP)": [
+      0.04,
+      0.125
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.025,
+      0.067
+     ],
+     "casas británicas (CLIP)": [
+      0.054,
+      0.1
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.009,
+      0.12
+     ],
+     "catedral inventada (CLIP)": [
+      -0.019,
+      0.106
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.001,
+      0.135
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.036,
+      0.18
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.055,
+      0.172
+     ],
+     "cadros na parede (CLIP)": [
+      -0.023,
+      0.163
+     ],
+     "farol victoriano (CLIP)": [
+      -0.06,
+      0.149
+     ],
+     "negativo: electric light": 0.007,
+     "negativo: light bulb": -0.014,
+     "negativo: lamp": -0.02,
+     "negativo: glass window": -0.014,
+     "negativo: modern clothes": -0.012,
+     "negativo: street lamp": -0.042,
+     "clave: pregnant woman": 2.0,
+     "clave_v5: pregnant woman": -0.005
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.199
+    },
+    "s_revision": 11.8,
+    "avisos": []
+   },
+   {
+    "intento": 1,
+    "ficheiro": "005-c0eb85dc-1.png",
+    "seed": 4106198066,
+    "s": 128.3,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century",
+    "modelo": "lightning",
+    "tokens": 65,
+    "truncado": "",
+    "problemas": [],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [],
+    "corpos": 0,
+    "altas_luces": 0.0042,
+    "lume_quente": 0.0,
+    "descricion": "The image shows a close-up of a person's hands resting on a beige blanket. The hands appear to be wrinkled and wrinkled, with the fingers slightly curled. The blanket is draped over the person's body, covering their hands and feet. The background is dark, making the hands the focal point of the image. The image is taken from a low angle, so the focus is on the hands and the blanket.",
+    "obxectos": [
+     "human hand",
+     "person"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      -0.022,
+      0.104
+     ],
+     "muros encalados (CLIP)": [
+      -0.012,
+      0.109
+     ],
+     "ciprés (CLIP)": [
+      -0.032,
+      0.124
+     ],
+     "oliveiras (CLIP)": [
+      -0.016,
+      0.103
+     ],
+     "palmeiras (CLIP)": [
+      -0.012,
+      0.132
+     ],
+     "rodas de raios (CLIP)": [
+      0.036,
+      0.093
+     ],
+     "paisaxe seca (CLIP)": [
+      0.013,
+      0.088
+     ],
+     "eucaliptos (CLIP)": [
+      -0.028,
+      0.084
+     ],
+     "luz eléctrica (CLIP)": [
+      -0.021,
+      0.095
+     ],
+     "luces de cidade (CLIP)": [
+      -0.027,
+      0.148
+     ],
+     "salón moderno (CLIP)": [
+      0.034,
+      0.101
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.016,
+      0.057
+     ],
+     "casas británicas (CLIP)": [
+      0.021,
+      0.085
+     ],
+     "caldeiro de meiga (CLIP)": [
+      0.014,
+      0.117
+     ],
+     "catedral inventada (CLIP)": [
+      -0.015,
+      0.09
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.022,
+      0.125
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.047,
+      0.158
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.063,
+      0.154
+     ],
+     "cadros na parede (CLIP)": [
+      -0.023,
+      0.17
+     ],
+     "farol victoriano (CLIP)": [
+      -0.076,
+      0.131
+     ],
+     "negativo: electric light": 0.008,
+     "negativo: light bulb": -0.013,
+     "negativo: lamp": -0.023,
+     "negativo: glass window": -0.021,
+     "negativo: modern clothes": -0.036,
+     "negativo: street lamp": -0.048,
+     "clave: pregnant woman": 1.6,
+     "clave_v5: pregnant woman": -0.017
+    },
+    "arquetipo": {
+     "etiqueta": "mans en primeiro plano",
+     "sim": 0.195
+    },
+    "s_revision": 10.2,
+    "avisos": []
+   },
+   {
+    "intento": 2,
+    "ficheiro": "005-c0eb85dc-2.png",
+    "seed": 3029954787,
+    "s": 121.7,
+    "prompt": "cinematic film still, period drama, photorealistic, dramatic chiaroscuro, close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century, hands hidden in the sleeves or out of frame",
+    "modelo": "lightning",
+    "tokens": 75,
+    "truncado": "",
+    "problemas": [
+     "man sen corpo (2)"
+    ],
+    "reserva": false,
+    "negativo_guiado": null,
+    "mans": [
+     {
+      "pulso": [
+       0.586,
+       0.371
+      ],
+      "confianza": 0.8,
+      "dist_corpo": 0.24,
+      "tamaño": 0.16
+     },
+     {
+      "pulso": [
+       0.45,
+       0.702
+      ],
+      "confianza": 0.99,
+      "dist_corpo": 0.156,
+      "tamaño": 0.146
+     }
+    ],
+    "corpos": 1,
+    "altas_luces": 0.007,
+    "lume_quente": 0.0025,
+    "descricion": "The image shows a mother and daughter sleeping together on a bed. The mother is lying on her side with her head resting on the daughter's chest. The daughter is wrapped in a beige blanket and is sleeping with her eyes closed. The background is dark and the overall mood of the image is peaceful and serene. The image is taken from a low angle, with the mother's head resting and the daughter lying next to her. The lighting is soft and warm, creating a cozy and intimate atmosphere.",
+    "obxectos": [
+     "human face",
+     "woman"
+    ],
+    "iconografia": {
+     "tellados laranxas (CLIP)": [
+      0.005,
+      0.018
+     ],
+     "muros encalados (CLIP)": [
+      0.012,
+      0.062
+     ],
+     "ciprés (CLIP)": [
+      -0.053,
+      0.088
+     ],
+     "oliveiras (CLIP)": [
+      -0.056,
+      0.062
+     ],
+     "palmeiras (CLIP)": [
+      -0.006,
+      0.108
+     ],
+     "rodas de raios (CLIP)": [
+      0.038,
+      0.051
+     ],
+     "paisaxe seca (CLIP)": [
+      0.01,
+      0.046
+     ],
+     "eucaliptos (CLIP)": [
+      -0.034,
+      0.026
+     ],
+     "luz eléctrica (CLIP)": [
+      0.008,
+      0.054
+     ],
+     "luces de cidade (CLIP)": [
+      -0.041,
+      0.099
+     ],
+     "salón moderno (CLIP)": [
+      0.021,
+      0.077
+     ],
+     "patio mediterráneo (CLIP)": [
+      -0.013,
+      0.021
+     ],
+     "casas británicas (CLIP)": [
+      0.054,
+      0.053
+     ],
+     "caldeiro de meiga (CLIP)": [
+      -0.016,
+      0.091
+     ],
+     "catedral inventada (CLIP)": [
+      0.019,
+      0.044
+     ],
+     "abrigo moderno (CLIP)": [
+      -0.03,
+      0.128
+     ],
+     "chaqueta de tweed (CLIP)": [
+      -0.054,
+      0.14
+     ],
+     "sombreiro moderno (CLIP)": [
+      -0.052,
+      0.129
+     ],
+     "cadros na parede (CLIP)": [
+      -0.014,
+      0.16
+     ],
+     "farol victoriano (CLIP)": [
+      -0.024,
+      0.062
+     ],
+     "negativo: electric light": 0.008,
+     "negativo: light bulb": -0.015,
+     "negativo: lamp": -0.016,
+     "negativo: glass window": -0.035,
+     "negativo: modern clothes": -0.034,
+     "negativo: street lamp": -0.044,
+     "clave: pregnant woman": 3.22,
+     "clave_v5: pregnant woman": 0.019
+    },
+    "arquetipo": null,
+    "s_revision": 10.7,
+    "avisos": []
+   }
+  ],
+  "version_revisor": 9,
+  "modelo": "lightning",
+  "fase": "gancho",
+  "escolla_manual": true,
+  "revision_manual": {
+   "quen": "Claude (orquestrador, revisión r4 do plano 6)",
+   "decision": "vale",
+   "motivo": "Mans vellas dunha parteira sobre a barriga dunha muller encinta baixo o liño, á luz da candea: ilustra as dores do parto mellor que a reserva (a parteira xunto á cama, sen embarazo visible); pasou a porta e casa coa acción I2V (as mans móvense amodo sobre a barriga). Os intentos 0 (mans novas, sen barriga) e 2 (unha moza deitada e outra inclinada) non valen."
+  }
  }
 }

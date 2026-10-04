@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/021-58ee4f0b-0.png",
+ "accion": "the hooded woman slowly turns her head and whispers to the old man",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 97,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 738.3,
+ "s_pasos": [
+  96.2,
+  69.7,
+  71.1,
+  70.6,
+  75.3,
+  70.0,
+  68.8,
+  63.9
+ ],
+ "s_descodificar": 152.7,
+ "fotogramas": 97,
+ "pico_proceso_mb": 11547
+}

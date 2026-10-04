@@ -1,5 +1,14 @@
 [
  {
+  "n": 2,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/001-d301efcc-1.png",
+  "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+  "i2v": {
+   "F": 73
+  }
+ },
+ {
   "n": 5,
   "prioridade_i2v": 1,
   "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/004-54589876-0.png",
@@ -31,6 +40,13 @@
   "prioridade_i2v": 1,
   "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/015-b27e8d07-0.png",
   "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers",
+  "i2v": {}
+ },
+ {
+  "n": 18,
+  "prioridade_i2v": 1,
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/017-7a519b46-1.png",
+  "accion": "the healer slowly stirs the herbs in the small bowl while the candle flame flickers",
   "i2v": {}
  },
  {
