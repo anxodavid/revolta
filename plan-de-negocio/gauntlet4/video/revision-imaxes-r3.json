@@ -1,0 +1,54 @@
+{
+ "descricion": "Revisión r3 (última rolda de imaxes) dos 14 planos rexenerados na r2, feita por un axente Claude o 04-10-2026; ningunha persoa revisou estas imaxes. escollas: o intento que vale de cada plano (o 6 é a reserva, porque se propón rexeneralo); rexenerar: só o 6 (gancho), cun prompt novo de <= 55 tokens CLIP; accions: acción I2V que casa coa imaxe escollida (no 6, co prompt novo). Aplícase con video/scripts/produccion.py revision video/revision-imaxes-r3.json. Detalle en revision-imaxes-r3.md.",
+ "escollas": {
+  "2": "001-d301efcc-1.png",
+  "6": "005-35675b9d-0.png",
+  "10": "009-c7aec42d-0.png",
+  "18": "017-7a519b46-1.png",
+  "21": "020-25e4c055-2.png",
+  "29": "028-cf91664e-2.png",
+  "38": "037-3ab544ff-2.png",
+  "47": "046-ecc98768-1.png",
+  "48": "047-187c2db0-2.png",
+  "52": "051-eb6300ef-2.png",
+  "54": "053-924ca526-0.png",
+  "58": "057-9b8f8a5a-1.png",
+  "65": "064-9ed6a1a7-0.png",
+  "69": "068-d57394b4-2.png"
+ },
+ "motivos": {
+  "2": "A man inclina un cazo de ferro e verte lume azul nunha cunca de barro chea de lapas azuis: por fin a clave. O cazo é de ferro e non de barro, e o fondo é bege e non negro (menor). O [0] e o [2] teñen lume laranxa arredor da cunca. A porta marcou «iron pot» polo cazo.",
+  "6": "Reserva se non se rexenera: a parteira de pano marrón (coherente co elenco de Dorotea) axeonllada á beira da cama, á luz das velas, coas mans xunto á cara da deitada. Non se ve a barriga: lese «parteira que coida», non «parto». O [1] son dúas mulleres deitadas xuntas nunha cama de almofadas brancas; o [2], unha muller nova sen pano.",
+  "10": "Agora si: dous hórreos sobre pés con tornarratos, tellados de tella e luz de solpor (a profundidade conservou a forma). As táboas do de madeira saen grises e lisas, case como chapa (menor). O [1] ten casas alleas e o [2] é coma o [0] con menos luz.",
+  "18": "A curandeira de pano azul escuro e pelo gris prepara unha cunca de herbas á luz dunha vela, co fondo escuro e sen fiestras: «a que sabía de herbas», coherente coa do 57. A vela pequena de abaixo parece unha candea de té (menor). O [2] ten un curandeiro de cara de home e unha cunca con lume; o [0], mans raras.",
+  "21": "A muller de capa vermella con capucha e o home da capa parda á porta, de noite, cun farol de parede: a escena do texto. A capa con capucha lembra a Carapuchiña, pero é coherente coa María de vermello do 20 e do 23; os tres intentos levan capa vermella e non hai outro mellor.",
+  "29": "O vicario, de costas, cun papel na man diante da porta pechada dunha igrexa de pedra: «as palabras tamén podían pechar portas». O [1] (porta) é unha capela máis grande co cura de costas na porta aberta; o [0], un cura de lado.",
+  "38": "Verbena de noite con mesas longas cheas de xente e lapas pequenas en cuncas sobre as mesas: festa e non rito. As lapas son laranxas, non azuis. O [0] (porta) ten unha lapa grande na mesa de diante e o [1] fachos altos. A porta rexeitou os tres por «multitude».",
+  "47": "Carballo grande de noite, con lúa e brétema, sen ninguén e sen anacronismos. O [0] (porta) ten unha pía redonda cun lumiño dentro, que parece unha fogueira de rito; o [2], luces coma faroles entre as árbores.",
+  "48": "Tres veciños de chaleco axeonllados arredor dunha becerra morta na palla, diante da corte de pedra: a acusación xa se entende. Non berran. O [1] ten unha ovella e o [0] (porta) ovellas vivas e un vello na porta. A porta rexeitou os tres.",
+  "52": "Dúas mulleres sentadas nun muro de pedra de noite, baixo unha árbore, e outra de pé, vistas de lonxe: sen lume nin rito. Hai un farol de parede á dereita (menor). O [0] (porta) ten dous faroles grandes coma lámpadas modernas no medio; o [1], velas sobre o muro.",
+  "54": "Dúas vellas de pano negro cunha xerra de barro, ao serán no souto, cada unha mirando para un lado: dúas maneiras de mirar, aínda que sen a moza da trenza nin a fonte. Ningún dos tres ten a moza; o [2] son dúas vellas rindo e o [1] ten obxectos modernos.",
+  "58": "Sarmiento groso e de cara redonda, sorrindo cun cesto de herbas no horto do mosteiro, de hábito escuro: distinto do Feijoo do 59. Leva un solidéu negro (menor). O [0] ten barba branca longa e o [2] lentes.",
+  "65": "Prado aberto ao solpor, cunha poza e dúas figuriñas lonxe: moi calmo para o durmir, pero sen as brasas da cacharela. A porta rexeitou os tres por «lume vivo» (o ceo vermello). O [1] e o [2] son parellas de silueta, o [2] cun sombreiro moderno.",
+  "69": "O vello e a vella sentados á mesa á luz das velas, cunha lapa azul pequena á dereita: calmo e escuro, como pide o durmir, pero sen a cunca nin o cazo. O [0] (porta) ten a cunca e o cazo, pero o vello de barba branca longa e as lapas azuis soltas parecen un mago e un feitizo; o [1], unha pota con lume laranxa."
+ },
+ "rexenerar": {
+  "6": {
+   "prompt": "close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa, white lace, studio backdrop",
+   "motivo": "Os tres intentos da r3 e os das roldas anteriores perden a barriga: a parteira coida a alguén na cama, pero non se le «parto». Proposta: o motivo de foto moi común das mans sobre a barriga da preñada, coas mans vellas e as mangas marróns de Dorotea. Se os novos non valen, queda o [0] da r3 (005-35675b9d-0.png), que xa vai en escollas."
+  }
+ },
+ "accions": {
+  "6": "the old hands slowly move over the round belly while the candlelight flickers",
+  "18": "the healer slowly stirs the herbs in the small bowl while the candle flame flickers",
+  "21": "she raises the small lantern and the cloaked man slowly steps toward the door",
+  "29": "the priest slowly lowers the paper in front of the closed church door",
+  "38": "people talk softly at the long tables and the small flames flicker",
+  "48": "the men kneel over the dead calf and one slowly shakes his head",
+  "52": "the two seated women talk softly and one slowly turns toward the other",
+  "54": "the old woman holding the jug slowly turns her head toward the dark woods",
+  "58": "the friar smiles and slowly lifts the basket of herbs to look at them",
+  "69": "the old couple sit quietly at the table while the small blue flame flickers"
+ }
+}

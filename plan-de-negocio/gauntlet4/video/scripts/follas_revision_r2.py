@@ -6,6 +6,7 @@ INTENTOS.json é a saída de `produccion.py intentos`. Cada plano: o intento que
 intentos a 320 px ao lado, e debaixo o número, o tipo, o texto que se oe, o prompt novo, a acción I2V e o que dixo a
 porta en cada intento. revision.json só se le (para saber se a porta aprobou). Escribe JPEG <= 400 KB; con
 VISTAS_DIR garda tamén recortes de 2 planos (para miralos sen reducir). ETIQUETAS={n: decisión} engade a decisión.
+RONDA (r2 por defecto; r3 na terceira ollada) vai no título, na etiqueta e no nome das follas.
 """
 import json, os, sys, textwrap
 from pathlib import Path
@@ -18,7 +19,8 @@ PROD = Path(__file__).resolve().parents[1] / 'escenas-v2-produccion.json'
 F = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 FB = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 f13, fb17 = ImageFont.truetype(F, 13), ImageFont.truetype(FB, 17)
-_E = Path(os.environ.get('ETIQUETAS', SCR / 'revimx-r2' / 'etiquetas.json'))
+RONDA = os.environ.get('RONDA', 'r2')
+_E = Path(os.environ.get('ETIQUETAS', SCR / f'revimx-{RONDA}' / 'etiquetas.json'))
 ETIQ = json.loads(_E.read_text()) if _E.exists() else {}
 W_MAIN, H_MAIN, W_ALT, H_ALT, GAP = 640, 366, 320, 183, 6
 W_BLOCK = W_MAIN + GAP + W_ALT
@@ -44,7 +46,7 @@ def main():
         H = 34 + len(grupo) * H_BLOCK
         folla = Image.new('RGB', (W_BLOCK + 16, H), (24, 24, 24))
         d = ImageDraw.Draw(folla)
-        d.text((8, 8), f'Revisión de imaxes r2 (axente Claude) · planos rexenerados {grupo[0]}-{grupo[-1]} · grande = '
+        d.text((8, 8), f'Revisión de imaxes {RONDA} (axente Claude) · planos rexenerados {grupo[0]}-{grupo[-1]} · grande = '
                        'escollida pola porta; pequenas = outros intentos', font=f13, fill=(200, 200, 200))
         for j, n in enumerate(grupo):
             r, e = intentos[str(n)], esc[n]
@@ -68,9 +70,9 @@ def main():
             et = ETIQ.get(str(n))
             if et:
                 cr = (120, 230, 120) if et.startswith('VALE') else (255, 210, 90) if et.startswith('OUTRO') else (255, 110, 110)
-                tw = d.textlength('Revisión r2: ' + et, font=fb17)
+                tw = d.textlength(f'Revisión {RONDA}: ' + et, font=fb17)
                 d.rectangle((8 + W_MAIN - tw - 12, y + H_MAIN - 24, 8 + W_MAIN, y + H_MAIN), fill=(0, 0, 0))
-                d.text((8 + W_MAIN - tw - 6, y + H_MAIN - 21), 'Revisión r2: ' + et, font=fb17, fill=cr)
+                d.text((8 + W_MAIN - tw - 6, y + H_MAIN - 21), f'Revisión {RONDA}: ' + et, font=fb17, fill=cr)
             an = r.get('animacion') or {}
             yt = y + H_MAIN + 4
             info = (f"#{n} · {e['tipo']} · persoas: {e['persoas']} · i2v: {e['prioridade_i2v']} ({an.get('modo')}, "
@@ -86,7 +88,7 @@ def main():
             porta = ' | '.join(f"[{idx[x['ficheiro']]}] " + (', '.join(curto(p) for p in x['problemas']) or 'ok')
                                for x in r['intentos'])
             d.text((8, yy), ('Porta: ' + porta)[:130], font=f13, fill=(255, 200, 140))
-        nome = saida / f'r2-planos-{grupo[0]:02d}-{grupo[-1]:02d}.jpg'
+        nome = saida / f'{RONDA}-planos-{grupo[0]:02d}-{grupo[-1]:02d}.jpg'
         for q in (78, 72, 66, 60, 55):
             folla.save(nome, 'JPEG', quality=q, optimize=True, progressive=True)
             if nome.stat().st_size <= 400_000:
