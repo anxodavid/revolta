@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/033-e502ad3e-0.png",
+ "accion": "he reads aloud with a solemn face and slowly raises one hand",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 436.9,
+ "s_pasos": [
+  49.2,
+  40.0,
+  40.2,
+  39.6,
+  39.8,
+  39.6,
+  40.6,
+  40.7
+ ],
+ "s_descodificar": 107.2,
+ "fotogramas": 73,
+ "pico_proceso_mb": 11843
+}

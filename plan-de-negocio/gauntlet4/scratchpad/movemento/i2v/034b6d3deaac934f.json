@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/032-5d0efc36-0.png",
+ "accion": "the three men laugh and lean toward the flames as one stirs with the ladle",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 97,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 623.8,
+ "s_pasos": [
+  70.2,
+  61.5,
+  56.8,
+  57.1,
+  58.5,
+  59.2,
+  59.9,
+  59.0
+ ],
+ "s_descodificar": 141.5,
+ "fotogramas": 97,
+ "pico_proceso_mb": 11843
+}
