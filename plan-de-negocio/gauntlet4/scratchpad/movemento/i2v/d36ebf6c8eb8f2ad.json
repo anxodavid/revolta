@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/001-d301efcc-1.png",
+ "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 480.4,
+ "s_pasos": [
+  69.2,
+  45.8,
+  42.8,
+  43.6,
+  41.9,
+  41.0,
+  41.7,
+  43.2
+ ],
+ "s_descodificar": 111.0,
+ "fotogramas": 73,
+ "pico_proceso_mb": 11489
+}
