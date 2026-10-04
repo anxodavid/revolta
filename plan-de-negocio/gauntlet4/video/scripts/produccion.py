@@ -93,8 +93,19 @@ def revision(fich, quen, so_axustes=False):
         sys.exit('longo.py está a correr: agarda a que remate (gardaría revision.json por riba das escollas)')
     R = ler(fich); revf = W / 'imaxes' / 'revision.json'; rev = ler(revf)
     motivos = R.get('motivos', {})
+    prod = {str(e['n']): e for e in ler(PROD)['escenas']}; fs = fases()
     for n, f in ({} if so_axustes else R.get('escollas', {})).items():
         k = f.rsplit('-', 1)[0]
+        # un intento dunha rolda anterior (outro prompt, outra clave): pásase á clave do prompt actual, que é a que
+        # usa longo.py, como un intento máis
+        cur = clave(prod[str(n)], fs.get(int(n)))
+        if k != cur:
+            vello = next(x for x in rev[k]['intentos'] if x['ficheiro'] == f)
+            if cur not in rev:
+                rev[cur] = dict(rev[k], intentos=[])
+            if f not in [x['ficheiro'] for x in rev[cur]['intentos']]:
+                rev[cur]['intentos'].append(dict(vello, de_rolda_anterior=k))
+            k = cur
         r = rev[k]
         idx = [x['ficheiro'] for x in r['intentos']].index(f)
         # a escolla da porta é a de imaxes.xerar (menos problemas, e o primeiro intento en caso de empate):
