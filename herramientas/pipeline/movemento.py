@@ -1071,7 +1071,7 @@ def porta_video(mp4, mostras=16, clip=None):
             membros = [(11, 13), (13, 15), (12, 14), (14, 16), (23, 25), (25, 27), (24, 26), (26, 28)]
             props.append([np.linalg.norm(c[a, :2] - c[b, :2]) / torso if vis[a] and vis[b] else np.nan
                           for a, b in membros])
-            if prev is not None:
+            if prev:                                                # sen corpos na mostra anterior, nada que comparar
                 cen = (c[11, :2] + c[24, :2]) / 2
                 pc = min(prev, key=lambda q: np.linalg.norm((q[11, :2] + q[24, :2]) / 2 - cen))
                 v2 = vis & (pc[:, 2] > 0.5)
