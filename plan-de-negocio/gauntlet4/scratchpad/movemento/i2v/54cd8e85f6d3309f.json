@@ -1,0 +1,25 @@
+{
+ "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/029-ffcab11f-0.png",
+ "accion": "the younger woman picks up the empty jug and looks into it",
+ "modelo": "ltxv-2b-0.9.8-distilled",
+ "W": 800,
+ "H": 448,
+ "F": 73,
+ "pasos": 8,
+ "semente": 42,
+ "ruido_cond": 0.15,
+ "s_total": 435.6,
+ "s_pasos": [
+  49.6,
+  40.3,
+  40.4,
+  40.1,
+  39.4,
+  39.8,
+  40.2,
+  40.1
+ ],
+ "s_descodificar": 105.6,
+ "fotogramas": 73,
+ "pico_proceso_mb": 11756
+}
