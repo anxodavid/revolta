@@ -227,23 +227,23 @@
    "desde": "que a parteira Dorotea do Barro",
    "texto": "que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.",
    "texto_en": "that the midwife Dorotea do Barro had said she could take away a woman's labour pains and pass them on to a man.",
-   "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+   "prompt": "close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century",
    "clave": "pregnant woman",
-   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, leaded window, blood, nudity, hospital, metal bed, sofa",
+   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa, white lace, studio backdrop",
    "tipo": "plano_medio",
    "son": "limpa",
    "animacion": {
     "modo": "i2v",
     "camara": "avanza",
     "efectos": [],
-    "accion": "the old midwife slowly moves her hand over the young woman's belly",
+    "accion": "the old hands slowly move over the round belly while the candlelight flickers",
     "i2v": {
      "F": 73
     }
    },
    "prioridade_i2v": 2,
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dúas mulleres novas e sen pano (ningunha é Dorotea) ao pé dunha deitada sen barriga visible, sen o home, e unha fiestra de vidro emplomado á esquerda. Proposta: un xesto claro (a man da parteira na barriga) e sen o home, que xa sae no 7. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))"
+   "axuste_produccion": "rexenerar (axente Claude (revisión r3 das imaxes da v2)): Os tres intentos da r3 e os das roldas anteriores perden a barriga: a parteira coida a alguén na cama, pero non se le «parto». Proposta: o motivo de foto moi común das mans sobre a barriga da preñada, coas mans vellas e as mangas marróns de Dorotea. Se os novos non valen, queda o [0] da r3 (005-35675b9d-0.png), que xa vai en escollas. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 7,
@@ -536,11 +536,11 @@
     "modo": "i2v",
     "camara": "avanza",
     "efectos": [],
-    "accion": "the healer slowly brings the steaming bowl to the young woman's lips"
+    "accion": "the healer slowly stirs the herbs in the small bowl while the candle flame flickers"
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): O [1], o da porta, ten unha fiestra grande de vidro con cuarterós e parede de ladrillo, e falta a moza enferma; o [0] tamén ten fiestra. Proposta: primeiro plano das dúas co fondo escuro, sen arquitectura onde poñer fiestras. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))"
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): O [1], o da porta, ten unha fiestra grande de vidro con cuarterós e parede de ladrillo, e falta a moza enferma; o [0] tamén ten fiestra. Proposta: primeiro plano das dúas co fondo escuro, sen arquitectura onde poñer fiestras. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 19,
@@ -606,12 +606,12 @@
     "efectos": [
      "candea"
     ],
-    "accion": "she opens the heavy door wider and the cloaked man steps inside"
+    "accion": "she raises the small lantern and the cloaked man slowly steps toward the door"
    },
    "prioridade_i2v": 2,
    "persoas": "fan",
    "referencia": null,
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Coa semente da palloza en profundidade saen casas encaladas con balcóns de madeira e a xente desaparece: no [2], unha figuriña co farol pegado á parede; nos outros, ninguén. Proposta: plano medio na porta e sen semente (referencia: null), para que manden as persoas e non a casa."
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Coa semente da palloza en profundidade saen casas encaladas con balcóns de madeira e a xente desaparece: no [2], unha figuriña co farol pegado á parede; nos outros, ninguén. Proposta: plano medio na porta e sen semente (referencia: null), para que manden as persoas e non a casa. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 22,
@@ -806,11 +806,11 @@
     "modo": "i2v",
     "camara": "pan_esq",
     "efectos": [],
-    "accion": "the priest slowly reads aloud from the decree and lowers the paper"
+    "accion": "the priest slowly lowers the paper in front of the closed church door"
    },
    "prioridade_i2v": 2,
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): [1]: un cardeal de vermello e un home calvo, sen as mulleres (o «red» do pano de María pasa ao home); [0]: figuras de sombreiro de aire colonial, carros e un farol de parede. Proposta: só o vicario lendo o decreto na porta da capela; nai e filla xa saen soas no 30. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))"
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): [1]: un cardeal de vermello e un home calvo, sen as mulleres (o «red» do pano de María pasa ao home); [0]: figuras de sombreiro de aire colonial, carros e un farol de parede. Proposta: só o vicario lendo o decreto na porta da capela; nai e filla xa saen soas no 30. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 30,
@@ -1023,7 +1023,7 @@
     "efectos": [
      "lume"
     ],
-    "accion": "people raise their cups and the blue flames flicker",
+    "accion": "people talk softly at the long tables and the small flames flicker",
     "i2v": {
      "F": 73
     }
@@ -1031,7 +1031,7 @@
    "prioridade_i2v": 2,
    "epoca": "xx",
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: unha fogueira grande no chan e unha multitude cos brazos en alto e fachos azuis; lese como un rito ou unha queima (veto §8.5), coma na r1. Proposta: unha verbena con mesas e unha cunca de lume azul en cada mesa (a queimada xa de todos), sen fogueira."
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: unha fogueira grande no chan e unha multitude cos brazos en alto e fachos azuis; lese como un rito ou unha queima (veto §8.5), coma na r1. Proposta: unha verbena con mesas e unha cunca de lume azul en cada mesa (a queimada xa de todos), sen fogueira. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 39,
@@ -1265,11 +1265,11 @@
     "modo": "i2v",
     "camara": "pan_esq",
     "efectos": [],
-    "accion": "one man points at the dead calf while the other shouts toward the door"
+    "accion": "the men kneel over the dead calf and one slowly shakes his head"
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dous homes tranquilos con ovellas diante dunha casa de tellado de herba (labregos irlandeses, coma na r1), un con sombreiro de feltro; sen becerra morta, sen leitóns e sen liorta. Proposta: dentro da corte, coa becerra morta e os veciños acusando; a muller queda fóra de cadro. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))"
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dous homes tranquilos con ovellas diante dunha casa de tellado de herba (labregos irlandeses, coma na r1), un con sombreiro de feltro; sen becerra morta, sen leitóns e sen liorta. Proposta: dentro da corte, coa becerra morta e os veciños acusando; a muller queda fóra de cadro. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 49,
@@ -1358,12 +1358,12 @@
     "efectos": [
      "auga"
     ],
-    "accion": "the women talk and laugh softly and one gestures with her hand"
+    "accion": "the two seated women talk softly and one slowly turns toward the other"
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
    "arquetipo_previsto": "grupo de pé",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: catro mulleres con mantos e veos coma de monxa arredor dunha fogueira, unha de costas con capucha, e un can coma lobo: volve parecer un rito (veto §8.5), coma na r1. Proposta: sen lume, á luz da lúa, sentadas no muro da fonte. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))"
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: catro mulleres con mantos e veos coma de monxa arredor dunha fogueira, unha de costas con capucha, e un can coma lobo: volve parecer un rito (veto §8.5), coma na r1. Proposta: sen lume, á luz da lúa, sentadas no muro da fonte. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 53,
@@ -1406,11 +1406,11 @@
     "efectos": [
      "auga"
     ],
-    "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug"
+    "accion": "the old woman holding the jug slowly turns her head toward the dark woods"
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dúas mulleres rindo xuntas nun interior con xarras e, á dereita, un candil de vidro con forma de bombilla; sen fonte e sen o contraste (unha alegre e a outra con medo). Proposta: a vella en primeiro termo persignándose e a moza detrás enchendo a xerra."
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dúas mulleres rindo xuntas nun interior con xarras e, á dereita, un candil de vidro con forma de bombilla; sen fonte e sen o contraste (unha alegre e a outra con medo). Proposta: a vella en primeiro termo persignándose e a moza detrás enchendo a xerra. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 55,
@@ -1506,11 +1506,11 @@
     "modo": "i2v",
     "camara": "xira_der",
     "efectos": [],
-    "accion": "the friar slowly turns the sprig in his fingers and smiles"
+    "accion": "the friar smiles and slowly lifts the basket of herbs to look at them"
    },
    "prioridade_i2v": 1,
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: un home vello e fraco de capucho azul (a cor do chal da curandeira) cun cesto de herbas; o frade e a muller fundíronse nunha persoa, que ademais se parece ao Feijoo do 59. Proposta: só Sarmiento, groso e de cara redonda, de hábito negro, estudando a herba. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))"
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: un home vello e fraco de capucho azul (a cor do chal da curandeira) cun cesto de herbas; o frade e a muller fundíronse nunha persoa, que ademais se parece ao Feijoo do 59. Proposta: só Sarmiento, groso e de cara redonda, de hábito negro, estudando a herba. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 59,
@@ -1772,12 +1772,12 @@
     "efectos": [
      "lume"
     ],
-    "accion": "he lifts the ladle and pours a slow stream of blue fire back into the bowl"
+    "accion": "the old couple sit quietly at the table while the small blue flame flickers"
    },
    "prioridade_i2v": 1,
    "epoca": "xx",
    "persoas": "fan",
-   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: lume laranxa alto ao lado da cunca (parece un fogón), unha fiestra con luz de día e sen a vella; no durmir, unha imaxe clara e viva. «faces lit blue» non chega: con caras, SDXL pinta luz laranxa. Proposta: as siluetas escuras e a cunca de lume azul como única luz (a receita do 32)."
+   "axuste_produccion": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: lume laranxa alto ao lado da cunca (parece un fogón), unha fiestra con luz de día e sen a vella; no durmir, unha imaxe clara e viva. «faces lit blue» non chega: con caras, SDXL pinta luz laranxa. Proposta: as siluetas escuras e a cunca de lume azul como única luz (a receita do 32). | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))"
   },
   {
    "n": 70,

@@ -34,10 +34,10 @@
   "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl"
  },
  "6": {
-  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
-  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, leaded window, blood, nudity, hospital, metal bed, sofa",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dúas mulleres novas e sen pano (ningunha é Dorotea) ao pé dunha deitada sen barriga visible, sen o home, e unha fiestra de vidro emplomado á esquerda. Proposta: un xesto claro (a man da parteira na barriga) e sen o home, que xa sae no 7. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))",
-  "accion": "the old midwife slowly moves her hand over the young woman's belly"
+  "prompt": "close-up of an old midwife's wrinkled hands in dark brown wool sleeves resting on the big round belly of a heavily pregnant woman lying on a straw bed, coarse linen shift, candlelight, dark room, 17th century",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, nudity, hospital, metal bed, sofa, white lace, studio backdrop",
+  "motivo": "rexenerar (axente Claude (revisión r3 das imaxes da v2)): Os tres intentos da r3 e os das roldas anteriores perden a barriga: a parteira coida a alguén na cama, pero non se le «parto». Proposta: o motivo de foto moi común das mans sobre a barriga da preñada, coas mans vellas e as mangas marróns de Dorotea. Se os novos non valen, queda o [0] da r3 (005-35675b9d-0.png), que xa vai en escollas. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the old hands slowly move over the round belly while the candlelight flickers"
  },
  "7": {
   "prompt": "close-up of an old midwife in a dark brown wool headscarf kneeling on a rough wooden floor, pushing a small worn soft leather slipper onto a bearded man's large bare foot, candlelight, 17th century",
@@ -74,8 +74,8 @@
  "18": {
   "prompt": "close-up of an old village healer in a dark blue wool shawl holding a steaming clay bowl of herb infusion to the lips of a sick young woman under a wool blanket, firelight on their faces, dark background",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, brick wall, witch hat, broom, warts, hooked nose, shelves of bottles",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): O [1], o da porta, ten unha fiestra grande de vidro con cuarterós e parede de ladrillo, e falta a moza enferma; o [0] tamén ten fiestra. Proposta: primeiro plano das dúas co fondo escuro, sen arquitectura onde poñer fiestras. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))",
-  "accion": "the healer slowly brings the steaming bowl to the young woman's lips"
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): O [1], o da porta, ten unha fiestra grande de vidro con cuarterós e parede de ladrillo, e falta a moza enferma; o [0] tamén ten fiestra. Proposta: primeiro plano das dúas co fondo escuro, sen arquitectura onde poñer fiestras. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the healer slowly stirs the herbs in the small bowl while the candle flame flickers"
  },
  "20": {
   "prompt": "medium shot of a woman of about thirty in a faded red wool headscarf standing before a plain wooden table where a stern grey-bearded judge in a black gown points his quill at her, bare granite walls, a narrow shaft of daylight",
@@ -86,7 +86,8 @@
   "prompt": "medium shot at night of a woman in a faded red wool headscarf holding up a horn lantern in the open doorway of a dark stone house, letting in a man in a dark wool cloak, 17th century",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood, balcony, whitewashed wall",
   "referencia": null,
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Coa semente da palloza en profundidade saen casas encaladas con balcóns de madeira e a xente desaparece: no [2], unha figuriña co farol pegado á parede; nos outros, ninguén. Proposta: plano medio na porta e sen semente (referencia: null), para que manden as persoas e non a casa."
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Coa semente da palloza en profundidade saen casas encaladas con balcóns de madeira e a xente desaparece: no [2], unha figuriña co farol pegado á parede; nos outros, ninguén. Proposta: plano medio na porta e sen semente (referencia: null), para que manden as persoas e non a casa. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "she raises the small lantern and the cloaked man slowly steps toward the door"
  },
  "22": {
   "prompt": "medium shot of two village women in dark wool headscarves and an old man whispering together beside the round-arched stone doorway of a small Romanesque granite church, one woman glancing sideways with suspicion, overcast daylight, 17th century",
@@ -97,8 +98,8 @@
  "29": {
   "prompt": "medium shot of a stern priest in a black cassock and black cape standing at the arched door of a small rustic granite chapel, reading aloud from an unrolled paper decree, overcast daylight, 17th century",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd, cardinal, red robe, wall lantern, wide-brimmed hat",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): [1]: un cardeal de vermello e un home calvo, sen as mulleres (o «red» do pano de María pasa ao home); [0]: figuras de sombreiro de aire colonial, carros e un farol de parede. Proposta: só o vicario lendo o decreto na porta da capela; nai e filla xa saen soas no 30. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))",
-  "accion": "the priest slowly reads aloud from the decree and lowers the paper"
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): [1]: un cardeal de vermello e un home calvo, sen as mulleres (o «red» do pano de María pasa ao home); [0]: figuras de sombreiro de aire colonial, carros e un farol de parede. Proposta: só o vicario lendo o decreto na porta da capela; nai e filla xa saen soas no 30. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the priest slowly lowers the paper in front of the closed church door"
  },
  "31": {
   "prompt": "close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive",
@@ -108,7 +109,8 @@
  "38": {
   "prompt": "wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
   "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire, torches, hooded robes, ritual",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: unha fogueira grande no chan e unha multitude cos brazos en alto e fachos azuis; lese como un rito ou unha queima (veto §8.5), coma na r1. Proposta: unha verbena con mesas e unha cunca de lume azul en cada mesa (a queimada xa de todos), sen fogueira."
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: unha fogueira grande no chan e unha multitude cos brazos en alto e fachos azuis; lese como un rito ou unha queima (veto §8.5), coma na r1. Proposta: unha verbena con mesas e unha cunca de lume azul en cada mesa (a queimada xa de todos), sen fogueira. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "people talk softly at the long tables and the small flames flicker"
  },
  "39": {
   "prompt": "overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
@@ -158,8 +160,8 @@
  "48": {
   "prompt": "medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, tractor, turf roof, thatched cottage, sheep, felt hat",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dous homes tranquilos con ovellas diante dunha casa de tellado de herba (labregos irlandeses, coma na r1), un con sombreiro de feltro; sen becerra morta, sen leitóns e sen liorta. Proposta: dentro da corte, coa becerra morta e os veciños acusando; a muller queda fóra de cadro. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))",
-  "accion": "one man points at the dead calf while the other shouts toward the door"
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dous homes tranquilos con ovellas diante dunha casa de tellado de herba (labregos irlandeses, coma na r1), un con sombreiro de feltro; sen becerra morta, sen leitóns e sen liorta. Proposta: dentro da corte, coa becerra morta e os veciños acusando; a muller queda fóra de cadro. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the men kneel over the dead calf and one slowly shakes his head"
  },
  "49": {
   "prompt": "over-the-shoulder shot of two village men in sheepskin vests crouching behind a mossy granite wall at night, peering over it at distant women gathered around a small bonfire by a rustic stone spring, deep shadows",
@@ -175,19 +177,20 @@
  "52": {
   "prompt": "wide shot of three village women in dark wool shawls sitting on a low granite wall beside a rustic stone spring at night, talking and laughing softly, moonlight, seen from far away through dark branches",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hooded robes, cloaks, ritual, bonfire, nun, wolf, arcade, columns",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: catro mulleres con mantos e veos coma de monxa arredor dunha fogueira, unha de costas con capucha, e un can coma lobo: volve parecer un rito (veto §8.5), coma na r1. Proposta: sen lume, á luz da lúa, sentadas no muro da fonte. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))",
-  "accion": "the women talk and laugh softly and one gestures with her hand"
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: catro mulleres con mantos e veos coma de monxa arredor dunha fogueira, unha de costas con capucha, e un can coma lobo: volve parecer un rito (veto §8.5), coma na r1. Proposta: sen lume, á luz da lúa, sentadas no muro da fonte. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the two seated women talk softly and one slowly turns toward the other"
  },
  "54": {
   "prompt": "medium close-up at night by a rustic stone spring: an old woman in a black wool headscarf crossing herself and looking warily into the dark, behind her a young woman with a long dark braid smiling as she fills a clay jug",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, oil lamp, witch hat, broom, table, teapot, kitchen",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dúas mulleres rindo xuntas nun interior con xarras e, á dereita, un candil de vidro con forma de bombilla; sen fonte e sen o contraste (unha alegre e a outra con medo). Proposta: a vella en primeiro termo persignándose e a moza detrás enchendo a xerra."
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: dúas mulleres rindo xuntas nun interior con xarras e, á dereita, un candil de vidro con forma de bombilla; sen fonte e sen o contraste (unha alegre e a outra con medo). Proposta: a vella en primeiro termo persignándose e a moza detrás enchendo a xerra. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the old woman holding the jug slowly turns her head toward the dark woods"
  },
  "58": {
   "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit, smiling as he studies a sprig of a medicinal herb in his fingers, a basket of wild herbs on his arm, monastery herb garden, 18th century",
   "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, cathedral, skullcap, blue robe, hood",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: un home vello e fraco de capucho azul (a cor do chal da curandeira) cun cesto de herbas; o frade e a muller fundíronse nunha persoa, que ademais se parece ao Feijoo do 59. Proposta: só Sarmiento, groso e de cara redonda, de hábito negro, estudando a herba. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2))",
-  "accion": "the friar slowly turns the sprig in his fingers and smiles"
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: un home vello e fraco de capucho azul (a cor do chal da curandeira) cun cesto de herbas; o frade e a muller fundíronse nunha persoa, que ademais se parece ao Feijoo do 59. Proposta: só Sarmiento, groso e de cara redonda, de hábito negro, estudando a herba. | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r2 das imaxes da v2)) | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the friar smiles and slowly lifts the basket of herbs to look at them"
  },
  "61": {
   "prompt": "medium shot of a village woman asleep curled on her side under a wool blanket on a straw mattress in a dark granite room, her face calm, moonlight from a small opening, on the wall above her the soft shadow of a bird in flight",
@@ -229,7 +232,8 @@
  "69": {
   "prompt": "medium shot of the dark silhouettes of an old man and an old woman at a wooden table at night, between them a wide clay bowl of pale blue flames, he lifts a clay ladle of blue fire above it, darkness all around",
   "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, stove, window, daylight, candles, cauldron, orange fire",
-  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: lume laranxa alto ao lado da cunca (parece un fogón), unha fiestra con luz de día e sen a vella; no durmir, unha imaxe clara e viva. «faces lit blue» non chega: con caras, SDXL pinta luz laranxa. Proposta: as siluetas escuras e a cunca de lume azul como única luz (a receita do 32)."
+  "motivo": "rexenerar (axente Claude (revisión r2 das imaxes da v2)): Un só intento: lume laranxa alto ao lado da cunca (parece un fogón), unha fiestra con luz de día e sen a vella; no durmir, unha imaxe clara e viva. «faces lit blue» non chega: con caras, SDXL pinta luz laranxa. Proposta: as siluetas escuras e a cunca de lume azul como única luz (a receita do 32). | acción I2V que casa coa imaxe aceptada (axente Claude (revisión r3 das imaxes da v2))",
+  "accion": "the old couple sit quietly at the table while the small blue flame flickers"
  },
  "70": {
   "prompt": "wide calm view of a misty harbour at night, a small old wooden sailing boat moored at a granite quay, a faint blue glow and three small seated figures on its deck, still dark water, 1960s",
