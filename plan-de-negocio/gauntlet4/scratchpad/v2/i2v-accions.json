@@ -2,7 +2,7 @@
  {
   "n": 2,
   "prioridade_i2v": 1,
-  "imaxe": "-",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/001-d301efcc-1.png",
   "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
   "i2v": {
    "F": 73
@@ -45,8 +45,8 @@
  {
   "n": 18,
   "prioridade_i2v": 1,
-  "imaxe": "-",
-  "accion": "the healer slowly brings the steaming bowl to the young woman's lips",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/017-7a519b46-1.png",
+  "accion": "the healer slowly stirs the herbs in the small bowl while the candle flame flickers",
   "i2v": {}
  },
  {
@@ -105,8 +105,8 @@
  {
   "n": 48,
   "prioridade_i2v": 1,
-  "imaxe": "-",
-  "accion": "one man points at the dead calf while the other shouts toward the door",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/047-187c2db0-2.png",
+  "accion": "the men kneel over the dead calf and one slowly shakes his head",
   "i2v": {}
  },
  {
@@ -126,8 +126,8 @@
  {
   "n": 52,
   "prioridade_i2v": 1,
-  "imaxe": "-",
-  "accion": "the women talk and laugh softly and one gestures with her hand",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/051-eb6300ef-2.png",
+  "accion": "the two seated women talk softly and one slowly turns toward the other",
   "i2v": {}
  },
  {
@@ -140,8 +140,8 @@
  {
   "n": 54,
   "prioridade_i2v": 1,
-  "imaxe": "-",
-  "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/053-924ca526-0.png",
+  "accion": "the old woman holding the jug slowly turns her head toward the dark woods",
   "i2v": {}
  },
  {
@@ -168,8 +168,8 @@
  {
   "n": 58,
   "prioridade_i2v": 1,
-  "imaxe": "-",
-  "accion": "the friar slowly turns the sprig in his fingers and smiles",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/057-9b8f8a5a-1.png",
+  "accion": "the friar smiles and slowly lifts the basket of herbs to look at them",
   "i2v": {}
  },
  {
@@ -189,8 +189,8 @@
  {
   "n": 69,
   "prioridade_i2v": 1,
-  "imaxe": "-",
-  "accion": "he lifts the ladle and pours a slow stream of blue fire back into the bowl",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/068-d57394b4-2.png",
+  "accion": "the old couple sit quietly at the table while the small blue flame flickers",
   "i2v": {}
  },
  {
@@ -220,7 +220,7 @@
   "n": 6,
   "prioridade_i2v": 2,
   "imaxe": "-",
-  "accion": "the old midwife slowly moves her hand over the young woman's belly",
+  "accion": "the old hands slowly move over the round belly while the candlelight flickers",
   "i2v": {
    "F": 73
   }
@@ -267,8 +267,8 @@
  {
   "n": 21,
   "prioridade_i2v": 2,
-  "imaxe": "-",
-  "accion": "she opens the heavy door wider and the cloaked man steps inside",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/020-25e4c055-2.png",
+  "accion": "she raises the small lantern and the cloaked man slowly steps toward the door",
   "i2v": {}
  },
  {
@@ -313,8 +313,8 @@
  {
   "n": 29,
   "prioridade_i2v": 2,
-  "imaxe": "-",
-  "accion": "the priest slowly reads aloud from the decree and lowers the paper",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/028-cf91664e-2.png",
+  "accion": "the priest slowly lowers the paper in front of the closed church door",
   "i2v": {}
  },
  {
@@ -336,8 +336,8 @@
  {
   "n": 38,
   "prioridade_i2v": 2,
-  "imaxe": "-",
-  "accion": "people raise their cups and the blue flames flicker",
+  "imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/037-3ab544ff-2.png",
+  "accion": "people talk softly at the long tables and the small flames flicker",
   "i2v": {
    "F": 73
   }

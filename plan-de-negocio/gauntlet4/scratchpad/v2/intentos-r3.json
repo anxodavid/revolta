@@ -1,0 +1,455 @@
+{
+ "2": {
+  "clave": "001-d301efcc",
+  "prompt": "close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+  "texto": "Coas luces apagadas, alguén pronuncia o conxuro mentres ergue cun cazo o líquido en chamas.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "escollido_pola_porta": "001-d301efcc-1.png",
+  "intentos": [
+   {
+    "ficheiro": "001-d301efcc-0.png",
+    "problemas": [
+     "negativo do plano: cauldron (CLIP)",
+     "negativo do plano: iron pot (CLIP)",
+     "negativo do plano: bonfire (CLIP)"
+    ]
+   },
+   {
+    "ficheiro": "001-d301efcc-1.png",
+    "problemas": [
+     "negativo do plano: iron pot (CLIP)"
+    ]
+   },
+   {
+    "ficheiro": "001-d301efcc-2.png",
+    "problemas": [
+     "man sen corpo (2)",
+     "negativo do plano: cauldron (CLIP)"
+    ]
+   }
+  ]
+ },
+ "6": {
+  "clave": "005-35675b9d",
+  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+  "texto": "que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the old midwife slowly moves her hand over the young woman's belly",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "escollido_pola_porta": "005-35675b9d-0.png",
+  "intentos": [
+   {
+    "ficheiro": "005-35675b9d-0.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "005-35675b9d-1.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "005-35675b9d-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "10": {
+  "clave": "009-c7aec42d",
+  "prompt": "wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+  "texto": "Isto é Cousas de Galiza para durmir.",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_der",
+   "efectos": [
+    "bretema",
+    "ceo"
+   ]
+  },
+  "escollido_pola_porta": "009-c7aec42d-0.png",
+  "intentos": [
+   {
+    "ficheiro": "009-c7aec42d-0.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "009-c7aec42d-1.png",
+    "problemas": [
+     "casas alleas"
+    ]
+   },
+   {
+    "ficheiro": "009-c7aec42d-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "18": {
+  "clave": "017-7a519b46",
+  "prompt": "close-up of an old village healer in a dark blue wool shawl holding a steaming clay bowl of herb infusion to the lips of a sick young woman under a wool blanket, firelight on their faces, dark background",
+  "texto": "A meiga, moitas veces, non era a bruxa dos contos, senón a que curaba, a que axudaba nos partos, a que sabía de herbas.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the healer slowly brings the steaming bowl to the young woman's lips"
+  },
+  "escollido_pola_porta": "017-7a519b46-2.png",
+  "intentos": [
+   {
+    "ficheiro": "017-7a519b46-0.png",
+    "problemas": [
+     "man sen corpo (1)",
+     "3 mans para 1 corpos"
+    ]
+   },
+   {
+    "ficheiro": "017-7a519b46-1.png",
+    "problemas": [
+     "interior moderno",
+     "negativo do plano: electric light (CLIP)",
+     "negativo do plano: light bulb (CLIP)",
+     "negativo do plano: lamp (CLIP)"
+    ]
+   },
+   {
+    "ficheiro": "017-7a519b46-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "21": {
+  "clave": "020-25e4c055",
+  "prompt": "medium shot at night of a woman in a faded red wool headscarf holding up a horn lantern in the open doorway of a dark stone house, letting in a man in a dark wool cloak, 17th century",
+  "texto": "Da filla dicían outra cousa: que era alcaiota, e que acollía na súa casa homes casados e mulleres solteiras.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "she opens the heavy door wider and the cloaked man steps inside"
+  },
+  "escollido_pola_porta": "020-25e4c055-2.png",
+  "intentos": [
+   {
+    "ficheiro": "020-25e4c055-0.png",
+    "problemas": [
+     "obxectos modernos"
+    ]
+   },
+   {
+    "ficheiro": "020-25e4c055-1.png",
+    "problemas": [
+     "obxectos modernos"
+    ]
+   },
+   {
+    "ficheiro": "020-25e4c055-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "29": {
+  "clave": "028-cf91664e",
+  "prompt": "medium shot of a stern priest in a black cassock and black cape standing at the arched door of a small rustic granite chapel, reading aloud from an unrolled paper decree, overcast daylight, 17th century",
+  "texto": "E as palabras tamén podían pechar portas. O vicario xeral do bispado de Mondoñedo excomungou a nai e a filla, e mandou que ninguén lles dese pan, sal, auga nin lume.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_esq",
+   "efectos": [],
+   "accion": "the priest slowly reads aloud from the decree and lowers the paper"
+  },
+  "escollido_pola_porta": "028-cf91664e-1.png",
+  "intentos": [
+   {
+    "ficheiro": "028-cf91664e-0.png",
+    "problemas": [
+     "abrigo moderno (CLIP)"
+    ]
+   },
+   {
+    "ficheiro": "028-cf91664e-1.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "028-cf91664e-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "38": {
+  "clave": "037-3ab544ff",
+  "prompt": "wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
+  "texto": "Así, unhas palabras sen nome no papel acabaron parecendo de todos, e de sempre.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "people raise their cups and the blue flames flicker",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "escollido_pola_porta": "037-3ab544ff-0.png",
+  "intentos": [
+   {
+    "ficheiro": "037-3ab544ff-0.png",
+    "problemas": [
+     "multitude"
+    ]
+   },
+   {
+    "ficheiro": "037-3ab544ff-1.png",
+    "problemas": [
+     "multitude"
+    ]
+   },
+   {
+    "ficheiro": "037-3ab544ff-2.png",
+    "problemas": [
+     "multitude"
+    ]
+   }
+  ]
+ },
+ "47": {
+  "clave": "046-ecc98768",
+  "prompt": "wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+  "texto": "Unha noite de san Xoán aparece tamén nos papeis de Campo Lameiro.",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_esq",
+   "efectos": [
+    "auga",
+    "bretema"
+   ]
+  },
+  "escollido_pola_porta": "046-ecc98768-0.png",
+  "intentos": [
+   {
+    "ficheiro": "046-ecc98768-0.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "046-ecc98768-1.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "046-ecc98768-2.png",
+    "problemas": [
+     "obxectos modernos"
+    ]
+   }
+  ]
+ },
+ "48": {
+  "clave": "047-187c2db0",
+  "prompt": "medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century",
+  "texto": "En mil seiscentos corenta e tres, a Real Audiencia procesou alí varias mulleres. Uns veciños, rifados cunha delas, culpábana de lles facer morrer as becerras e os leitóns.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_esq",
+   "efectos": [],
+   "accion": "one man points at the dead calf while the other shouts toward the door"
+  },
+  "escollido_pola_porta": "047-187c2db0-0.png",
+  "intentos": [
+   {
+    "ficheiro": "047-187c2db0-0.png",
+    "problemas": [
+     "casas alleas"
+    ]
+   },
+   {
+    "ficheiro": "047-187c2db0-1.png",
+    "problemas": [
+     "animais en grupo"
+    ]
+   },
+   {
+    "ficheiro": "047-187c2db0-2.png",
+    "problemas": [
+     "casas alleas"
+    ]
+   }
+  ]
+ },
+ "52": {
+  "clave": "051-eb6300ef",
+  "prompt": "wide shot of three village women in dark wool shawls sitting on a low granite wall beside a rustic stone spring at night, talking and laughing softly, moonlight, seen from far away through dark branches",
+  "texto": "Do que elas dixesen aquela noite, non nos chegou nin unha palabra. Só nos chegou a noticia da lista, na voz doutros.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_der",
+   "efectos": [
+    "auga"
+   ],
+   "accion": "the women talk and laugh softly and one gestures with her hand"
+  },
+  "escollido_pola_porta": "051-eb6300ef-0.png",
+  "intentos": [
+   {
+    "ficheiro": "051-eb6300ef-0.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "051-eb6300ef-1.png",
+    "problemas": [
+     "man sen corpo (1)",
+     "obxectos modernos"
+    ]
+   },
+   {
+    "ficheiro": "051-eb6300ef-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "54": {
+  "clave": "053-924ca526",
+  "prompt": "medium close-up at night by a rustic stone spring: an old woman in a black wool headscarf crossing herself and looking warily into the dark, behind her a young woman with a long dark braid smiling as she fills a clay jug",
+  "texto": "E na crenza popular, era tamén a noite en que as meigas andaban máis libres. A mesma fonte, a mesma noite, e dúas maneiras de mirala.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "auga"
+   ],
+   "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug"
+  },
+  "escollido_pola_porta": "053-924ca526-0.png",
+  "intentos": [
+   {
+    "ficheiro": "053-924ca526-0.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "053-924ca526-1.png",
+    "problemas": [
+     "obxectos modernos"
+    ]
+   },
+   {
+    "ficheiro": "053-924ca526-2.png",
+    "problemas": []
+   }
+  ]
+ },
+ "58": {
+  "clave": "057-9b8f8a5a",
+  "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit, smiling as he studies a sprig of a medicinal herb in his fingers, a basket of wild herbs on his arm, monastery herb garden, 18th century",
+  "texto": "Xa no século dezaoito, frei Martín Sarmiento defendeu o saber das curandeiras, as meigas, como o de auténticos médicos e botánicos.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "xira_der",
+   "efectos": [],
+   "accion": "the friar slowly turns the sprig in his fingers and smiles"
+  },
+  "escollido_pola_porta": "057-9b8f8a5a-1.png",
+  "intentos": [
+   {
+    "ficheiro": "057-9b8f8a5a-0.png",
+    "problemas": [
+     "interior moderno"
+    ]
+   },
+   {
+    "ficheiro": "057-9b8f8a5a-1.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "057-9b8f8a5a-2.png",
+    "problemas": [
+     "cousas do século XX"
+    ]
+   }
+  ]
+ },
+ "65": {
+  "clave": "064-9ed6a1a7",
+  "prompt": "wide shot of an open dark meadow at night under a deep blue sky, far away on the grass a small low glow of dying red embers, three tiny silhouettes, one leaping over it, soft mist, calm",
+  "texto": "Lonxe, cando a cacharela xa case se apaga, a xente salta as últimas lapas, sempre un número impar de veces, polo menos tres. E ao saltar di unhas palabras que ninguén apunta nunha lista. Salto por riba do lume de san Xoán, para que non me morda cadela nin can.",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "recua",
+   "efectos": [
+    "fume",
+    "bretema"
+   ],
+   "accion": "a small figure leaps over the embers and sparks rise slowly"
+  },
+  "escollido_pola_porta": "064-9ed6a1a7-0.png",
+  "intentos": [
+   {
+    "ficheiro": "064-9ed6a1a7-0.png",
+    "problemas": [
+     "lume vivo ao durmir (3.0% de altas luces cor de chama)"
+    ]
+   },
+   {
+    "ficheiro": "064-9ed6a1a7-1.png",
+    "problemas": [
+     "lume vivo ao durmir (3.4% de altas luces cor de chama)"
+    ]
+   },
+   {
+    "ficheiro": "064-9ed6a1a7-2.png",
+    "problemas": [
+     "lume vivo ao durmir (5.4% de altas luces cor de chama)",
+     "sombreiro moderno (CLIP)"
+    ]
+   }
+  ]
+ },
+ "69": {
+  "clave": "068-d57394b4",
+  "prompt": "medium shot of the dark silhouettes of an old man and an old woman at a wooden table at night, between them a wide clay bowl of pale blue flames, he lifts a clay ladle of blue fire above it, darkness all around",
+  "texto": "Os comensais xúntanse arredor do pote, para animar os corazóns. Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro.",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "he lifts the ladle and pours a slow stream of blue fire back into the bowl"
+  },
+  "escollido_pola_porta": "068-d57394b4-0.png",
+  "intentos": [
+   {
+    "ficheiro": "068-d57394b4-0.png",
+    "problemas": []
+   },
+   {
+    "ficheiro": "068-d57394b4-1.png",
+    "problemas": [
+     "man sen corpo (1)",
+     "lume vivo ao durmir (4.7% de altas luces cor de chama)",
+     "negativo do plano: modern kitchen (CLIP)"
+    ]
+   },
+   {
+    "ficheiro": "068-d57394b4-2.png",
+    "problemas": [
+     "interior moderno"
+    ]
+   }
+  ]
+ }
+}

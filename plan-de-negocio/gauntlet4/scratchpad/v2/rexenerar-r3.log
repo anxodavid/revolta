@@ -73,3 +73,10 @@ The following part of your input was truncated because CLIP can only handle sequ
 imaxe  57 intento 2 116.8s + revisión  9.7s ['cousas do século XX']
 imaxe  64 intento 0 120.7s + revisión 10.9s ['lume vivo ao durmir (3.0% de altas luces cor de chama)']
 imaxe  64 intento 1 123.9s + revisión  9.8s ['lume vivo ao durmir (3.4% de altas luces cor de chama)']
+imaxe  64 intento 2 119.1s + revisión 10.5s ['lume vivo ao durmir (5.4% de altas luces cor de chama)', 'sombreiro moderno (CLIP)']
+imaxe  68 intento 0 121.8s + revisión 11.4s ok
+imaxe  68 intento 1 120.8s + revisión 11.7s ['man sen corpo (1)', 'lume vivo ao durmir (4.7% de altas luces cor de chama)', 'negativo do plano: modern kitchen (CLIP)']
+imaxe  68 intento 2 120.5s + revisión 10.3s ['interior moderno']
+so-imaxes: 77 planos con imaxe; sen pasar a porta: 25 [2, 12, 15, 19, 23, 26, 31, 32, 33, 37, 38, 39, 41, 42, 44, 48, 56, 59, 62, 64, 65, 70, 72, 73, 76]
+rc 0 Sun Oct  4 00:25:24 UTC 2026
+r3 fin Sun Oct  4 00:25:24 UTC 2026

@@ -28,3 +28,5 @@ clip 2/7: {"imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f5
 clip 3/7: {"imaxe": "/tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/w/imaxes/015-b27e8d07-0.png", "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers", "modelo": "ltxv-2b-0.9.8-distilled", "W": 800, "H": 448, "F": 97, "pasos": 8, "semente": 42, "ruido_cond": 0.15, "s_total": 656.9, "s_pasos": [66.2, 62.0, 61.7, 73.9, 59.6, 61.9, 61.7, 59.9], "s_descodificar": 149.9, "fotogramas": 97, "pico_proceso_mb": 11784, "pico_cgroup_mb": 11703}
 cedo a CPU a un traballo prioritario: saio para liberar a memoria
 agardo a que remate o traballo prioritario Sat Oct  3 22:43:06 UTC 2026
+9 traballos I2V -> /tmp/claude-0/-home-user-revolta/c92eba35-e89d-5d11-bb3d-f517a84dab48/scratchpad/v2/i2v-p1-gancho.json; fóra: 2 (imaxe sen aprobar (nin a porta nin a revisión)), 18 (só aprobada pola porta: falta a revisión do axente)
+9 clips, faltan 5

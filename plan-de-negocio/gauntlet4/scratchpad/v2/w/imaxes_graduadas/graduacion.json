@@ -11,15 +11,15 @@
   "lum_final": 0.18
  },
  {
-  "imaxe": "001-c3bf7fe7-0.png",
-  "lum_orixe": 0.209,
+  "imaxe": "001-d301efcc-1.png",
+  "lum_orixe": 0.334,
   "gamma": 1.0,
   "contraste": 1.078,
   "toe": 0.0,
   "brillo": 1.0,
   "saturacion": 1.0,
-  "croma_orixe": 0.049,
-  "lum_final": 0.21
+  "croma_orixe": 0.057,
+  "lum_final": 0.336
  },
  {
   "imaxe": "002-53ec0878-1.png",
@@ -55,15 +55,15 @@
   "lum_final": 0.189
  },
  {
-  "imaxe": "005-22e55ab6-0.png",
-  "lum_orixe": 0.176,
+  "imaxe": "005-35675b9d-0.png",
+  "lum_orixe": 0.175,
   "gamma": 1.0,
   "contraste": 1.074,
   "toe": 0.0,
   "brillo": 1.0,
   "saturacion": 1.0,
-  "croma_orixe": 0.034,
-  "lum_final": 0.177
+  "croma_orixe": 0.061,
+  "lum_final": 0.175
  },
  {
   "imaxe": "006-a661aa18-1.png",
@@ -99,15 +99,15 @@
   "lum_final": 0.21
  },
  {
-  "imaxe": "009-5fe0eba6-0.png",
-  "lum_orixe": 0.323,
+  "imaxe": "009-c7aec42d-0.png",
+  "lum_orixe": 0.345,
   "gamma": 1.0,
   "contraste": 1.067,
   "toe": 0.0,
   "brillo": 1.0,
   "saturacion": 1.0,
-  "croma_orixe": 0.026,
-  "lum_final": 0.325
+  "croma_orixe": 0.055,
+  "lum_final": 0.347
  },
  {
   "imaxe": "010-64e96403-0.png",
@@ -187,15 +187,15 @@
   "lum_final": 0.241
  },
  {
-  "imaxe": "017-1c61c9e1-1.png",
-  "lum_orixe": 0.207,
+  "imaxe": "017-7a519b46-2.png",
+  "lum_orixe": 0.19,
   "gamma": 1.0,
   "contraste": 1.055,
   "toe": 0.0007,
   "brillo": 1.0,
   "saturacion": 0.998,
-  "croma_orixe": 0.031,
-  "lum_final": 0.208
+  "croma_orixe": 0.023,
+  "lum_final": 0.191
  },
  {
   "imaxe": "018-768e74a5-0.png",
@@ -220,15 +220,15 @@
   "lum_final": 0.277
  },
  {
-  "imaxe": "020-cbe12583-2.png",
-  "lum_orixe": 0.385,
-  "gamma": 1.0,
+  "imaxe": "020-25e4c055-2.png",
+  "lum_orixe": 0.178,
+  "gamma": 0.843,
   "contraste": 1.048,
   "toe": 0.0069,
   "brillo": 0.998,
   "saturacion": 0.974,
-  "croma_orixe": 0.047,
-  "lum_final": 0.39
+  "croma_orixe": 0.039,
+  "lum_final": 0.233
  },
  {
   "imaxe": "021-58ee4f0b-0.png",
@@ -308,15 +308,15 @@
   "lum_final": 0.246
  },
  {
-  "imaxe": "028-8b2ad9ae-1.png",
-  "lum_orixe": 0.303,
+  "imaxe": "028-cf91664e-1.png",
+  "lum_orixe": 0.373,
   "gamma": 1.0,
   "contraste": 1.023,
   "toe": 0.008,
   "brillo": 0.978,
   "saturacion": 0.97,
-  "croma_orixe": 0.037,
-  "lum_final": 0.308
+  "croma_orixe": 0.02,
+  "lum_final": 0.376
  },
  {
   "imaxe": "029-ffcab11f-0.png",
@@ -330,14 +330,14 @@
   "lum_final": 0.285
  },
  {
-  "imaxe": "030-547fa865-0.png",
+  "imaxe": "030-547fa865-2.png",
   "lum_orixe": 0.508,
   "gamma": 1.0,
   "contraste": 1.017,
   "toe": 0.008,
   "brillo": 0.974,
-  "saturacion": 0.889,
-  "croma_orixe": 0.093,
+  "saturacion": 0.97,
+  "croma_orixe": 0.076,
   "lum_final": 0.508
  },
  {
@@ -407,26 +407,26 @@
   "lum_final": 0.482
  },
  {
-  "imaxe": "037-9f099e0f-0.png",
-  "lum_orixe": 0.187,
-  "gamma": 0.932,
+  "imaxe": "037-3ab544ff-0.png",
+  "lum_orixe": 0.237,
+  "gamma": 1.0,
   "contraste": 1.002,
   "toe": 0.0096,
   "brillo": 0.961,
   "saturacion": 0.933,
-  "croma_orixe": 0.046,
-  "lum_final": 0.21
+  "croma_orixe": 0.064,
+  "lum_final": 0.242
  },
  {
-  "imaxe": "038-e2e0f531-0.png",
-  "lum_orixe": 0.293,
+  "imaxe": "038-e2e0f531-1.png",
+  "lum_orixe": 0.254,
   "gamma": 1.0,
   "contraste": 1.0,
   "toe": 0.0105,
   "brillo": 0.96,
   "saturacion": 0.915,
-  "croma_orixe": 0.051,
-  "lum_final": 0.296
+  "croma_orixe": 0.065,
+  "lum_final": 0.258
  },
  {
   "imaxe": "039-11685f76-0.png",
@@ -440,26 +440,26 @@
   "lum_final": 0.254
  },
  {
-  "imaxe": "040-197330a6-0.png",
-  "lum_orixe": 0.254,
+  "imaxe": "040-197330a6-2.png",
+  "lum_orixe": 0.218,
   "gamma": 1.0,
   "contraste": 0.997,
   "toe": 0.0116,
   "brillo": 0.956,
   "saturacion": 0.89,
-  "croma_orixe": 0.039,
-  "lum_final": 0.259
+  "croma_orixe": 0.033,
+  "lum_final": 0.224
  },
  {
-  "imaxe": "041-da2d9672-0.png",
-  "lum_orixe": 0.208,
+  "imaxe": "041-da2d9672-2.png",
+  "lum_orixe": 0.254,
   "gamma": 1.0,
   "contraste": 0.995,
   "toe": 0.012,
   "brillo": 0.953,
   "saturacion": 0.88,
-  "croma_orixe": 0.026,
-  "lum_final": 0.214
+  "croma_orixe": 0.022,
+  "lum_final": 0.259
  },
  {
   "imaxe": "042-8f6f62a0-0.png",
@@ -484,15 +484,15 @@
   "lum_final": 0.297
  },
  {
-  "imaxe": "044-23046b20-1.png",
-  "lum_orixe": 0.245,
+  "imaxe": "044-23046b20-0.png",
+  "lum_orixe": 0.215,
   "gamma": 1.0,
   "contraste": 0.986,
   "toe": 0.012,
   "brillo": 0.941,
   "saturacion": 0.88,
-  "croma_orixe": 0.016,
-  "lum_final": 0.249
+  "croma_orixe": 0.028,
+  "lum_final": 0.22
  },
  {
   "imaxe": "045-1181e234-0.png",
@@ -506,26 +506,26 @@
   "lum_final": 0.211
  },
  {
-  "imaxe": "046-d98f3d12-0.png",
-  "lum_orixe": 0.179,
+  "imaxe": "046-ecc98768-0.png",
+  "lum_orixe": 0.214,
   "gamma": 1.0,
   "contraste": 0.98,
   "toe": 0.012,
   "brillo": 0.933,
   "saturacion": 0.88,
-  "croma_orixe": 0.043,
-  "lum_final": 0.184
+  "croma_orixe": 0.026,
+  "lum_final": 0.218
  },
  {
-  "imaxe": "047-391b42ba-0.png",
-  "lum_orixe": 0.285,
+  "imaxe": "047-187c2db0-0.png",
+  "lum_orixe": 0.278,
   "gamma": 1.0,
   "contraste": 0.979,
   "toe": 0.012,
   "brillo": 0.932,
   "saturacion": 0.88,
-  "croma_orixe": 0.035,
-  "lum_final": 0.286
+  "croma_orixe": 0.039,
+  "lum_final": 0.28
  },
  {
   "imaxe": "048-c696dadc-2.png",
@@ -561,15 +561,15 @@
   "lum_final": 0.213
  },
  {
-  "imaxe": "051-898a87cf-0.png",
-  "lum_orixe": 0.164,
+  "imaxe": "051-eb6300ef-0.png",
+  "lum_orixe": 0.176,
   "gamma": 1.0,
   "contraste": 0.97,
   "toe": 0.012,
   "brillo": 0.919,
   "saturacion": 0.88,
-  "croma_orixe": 0.052,
-  "lum_final": 0.169
+  "croma_orixe": 0.028,
+  "lum_final": 0.18
  },
  {
   "imaxe": "052-d27a5209-0.png",
@@ -583,15 +583,15 @@
   "lum_final": 0.328
  },
  {
-  "imaxe": "053-5622c582-0.png",
-  "lum_orixe": 0.177,
+  "imaxe": "053-924ca526-0.png",
+  "lum_orixe": 0.213,
   "gamma": 1.0,
   "contraste": 0.965,
   "toe": 0.012,
   "brillo": 0.914,
   "saturacion": 0.88,
-  "croma_orixe": 0.041,
-  "lum_final": 0.181
+  "croma_orixe": 0.026,
+  "lum_final": 0.215
  },
  {
   "imaxe": "054-e88400da-0.png",
@@ -627,15 +627,15 @@
   "lum_final": 0.285
  },
  {
-  "imaxe": "057-712c303d-0.png",
-  "lum_orixe": 0.282,
-  "gamma": 1.0,
+  "imaxe": "057-9b8f8a5a-1.png",
+  "lum_orixe": 0.341,
+  "gamma": 1.03,
   "contraste": 0.952,
   "toe": 0.012,
   "brillo": 0.896,
   "saturacion": 0.88,
-  "croma_orixe": 0.057,
-  "lum_final": 0.279
+  "croma_orixe": 0.036,
+  "lum_final": 0.326
  },
  {
   "imaxe": "058-4344e708-2.png",
@@ -682,37 +682,37 @@
   "lum_final": 0.228
  },
  {
-  "imaxe": "062-f1cdc92c-2.png",
-  "lum_orixe": 0.238,
-  "gamma": 1.002,
+  "imaxe": "062-f1cdc92c-0.png",
+  "lum_orixe": 0.218,
+  "gamma": 1.0,
   "contraste": 0.941,
   "toe": 0.0169,
   "brillo": 0.881,
   "saturacion": 0.708,
-  "croma_orixe": 0.019,
-  "lum_final": 0.239
+  "croma_orixe": 0.028,
+  "lum_final": 0.22
  },
  {
-  "imaxe": "063-3f44e6e3-1.png",
-  "lum_orixe": 0.225,
-  "gamma": 1.067,
+  "imaxe": "063-3f44e6e3-2.png",
+  "lum_orixe": 0.204,
+  "gamma": 1.002,
   "contraste": 0.939,
   "toe": 0.0188,
   "brillo": 0.878,
   "saturacion": 0.643,
-  "croma_orixe": 0.021,
-  "lum_final": 0.21
+  "croma_orixe": 0.033,
+  "lum_final": 0.208
  },
  {
-  "imaxe": "064-be421997-2.png",
-  "lum_orixe": 0.22,
-  "gamma": 1.132,
+  "imaxe": "064-9ed6a1a7-0.png",
+  "lum_orixe": 0.26,
+  "gamma": 1.272,
   "contraste": 0.935,
   "toe": 0.02,
   "brillo": 0.869,
   "saturacion": 0.6,
-  "croma_orixe": 0.016,
-  "lum_final": 0.19
+  "croma_orixe": 0.037,
+  "lum_final": 0.197
  },
  {
   "imaxe": "065-00feb3af-0.png",
@@ -748,26 +748,26 @@
   "lum_final": 0.217
  },
  {
-  "imaxe": "068-7252222d-0.png",
-  "lum_orixe": 0.289,
-  "gamma": 1.381,
+  "imaxe": "068-d57394b4-0.png",
+  "lum_orixe": 0.237,
+  "gamma": 1.192,
   "contraste": 0.922,
   "toe": 0.02,
   "brillo": 0.843,
   "saturacion": 0.6,
-  "croma_orixe": 0.037,
-  "lum_final": 0.208
+  "croma_orixe": 0.043,
+  "lum_final": 0.198
  },
  {
-  "imaxe": "069-2fef8b64-3.png",
-  "lum_orixe": 0.281,
-  "gamma": 1.351,
+  "imaxe": "069-2fef8b64-1.png",
+  "lum_orixe": 0.118,
+  "gamma": 1.0,
   "contraste": 0.919,
   "toe": 0.02,
   "brillo": 0.837,
-  "saturacion": 0.6,
-  "croma_orixe": 0.01,
-  "lum_final": 0.196
+  "saturacion": 0.523,
+  "croma_orixe": 0.057,
+  "lum_final": 0.127
  },
  {
   "imaxe": "070-bad0884c-0.png",

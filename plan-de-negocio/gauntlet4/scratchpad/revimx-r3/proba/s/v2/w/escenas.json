@@ -1,0 +1,2525 @@
+[
+ {
+  "n": 1,
+  "frases": [
+   1
+  ],
+  "pal0": 0,
+  "t0": 1.5,
+  "b0": 0.0,
+  "texto": "Mouchos, curuxas, sapos e bruxas.",
+  "b1": 4.318,
+  "movemento": "zoom_in",
+  "xf": 0.7,
+  "fase": "gancho",
+  "u": 0.0,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "close-up of a little owl perched on a mossy granite wall at night, its round yellow eyes catching a faint blue glow from below, a small toad on the stone beside it, deep darkness behind",
+  "tipo": "primeiro_plano",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch, hat, cartoon, moon face",
+  "son": "noite",
+  "clave": "owl",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the owl slowly turns its head and blinks",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "Owls, barn owls, toads and witches.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 2,
+  "frases": [
+   2
+  ],
+  "pal0": 5,
+  "t0": 4.568,
+  "b0": 4.318,
+  "texto": "Coas luces apagadas, alguén pronuncia o conxuro mentres ergue cun cazo o líquido en chamas.",
+  "b1": 9.768,
+  "movemento": "pan_right",
+  "xf": 0.71,
+  "fase": "gancho",
+  "u": 0.0031,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "close-up in the dark of a hand lifting a clay ladle of pale blue flames above a wide brown clay bowl of blue flames, a thin stream of blue fire falling back into it, black background",
+  "tipo": "primeiro_plano",
+  "negativo": "cauldron, iron pot, frying pan, knife, bonfire, neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
+  "son": "lume",
+  "clave": "blue flames",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "the hand slowly raises the ladle and pours a thin stream of blue fire back into the bowl",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "epoca": "xx",
+  "texto_en": "With the lights out, someone recites the spell while lifting the burning liquid with a ladle.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 3,
+  "frases": [
+   3,
+   4
+  ],
+  "pal0": 20,
+  "t0": 10.018,
+  "b0": 9.768,
+  "texto": "Parece de hai séculos. Pero ten autor coñecido e é de mil novecentos sesenta e sete:",
+  "b1": 15.753,
+  "movemento": "zoom_out",
+  "xf": 0.72,
+  "fase": "gancho",
+  "u": 0.0123,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater writing verses with a fountain pen in a small notebook, sitting on the deck of an old wooden boat at night, lit by an oil lantern beside him, 1967",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, ballpoint pen, laptop, light bulb",
+  "son": "mar",
+  "clave": "notebook",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the man writes slowly, pauses and looks up from the notebook"
+  },
+  "epoca": "xx",
+  "texto_en": "It seems centuries old. But it has a known author and dates from nineteen sixty-seven:",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 4,
+  "frases": [
+   4
+  ],
+  "pal0": 36,
+  "desde": "escribiuno Mariano Marcos Abalo",
+  "t0": 15.873,
+  "metodo_desde": "whisper",
+  "b0": 15.753,
+  "texto": "escribiuno Mariano Marcos Abalo nun vello barco amarrado no porto de Vigo.",
+  "b1": 20.514,
+  "movemento": "pan_left",
+  "xf": 0.74,
+  "fase": "gancho",
+  "u": 0.0221,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "wide shot of an old wooden sailing boat moored beside a granite quay in a harbour at night, a warm oil lantern glowing on its deck, the small silhouettes of three men sitting there, dark still water reflecting the light, 1960s",
+  "tipo": "xeral",
+  "negativo": "neon, plastic, television, smartphone, street lamps, cars, modern yacht",
+  "son": "mar",
+  "clave": "boat",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_der",
+   "efectos": [
+    "auga"
+   ]
+  },
+  "referencia": {
+   "ficheiro": "11-barcos-costa/16-dorna-a-vela-rianxo-de-noite.jpg",
+   "modo": "img2img",
+   "forza": 0.5
+  },
+  "epoca": "xx",
+  "texto_en": "Mariano Marcos Abalo wrote it on an old boat moored in the port of Vigo.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 5,
+  "frases": [
+   5,
+   6
+  ],
+  "pal0": 48,
+  "t0": 20.764,
+  "b0": 20.514,
+  "texto": "Vilalba, mil seiscentos dezasete. Unha testemuña declara",
+  "b1": 25.066,
+  "movemento": "zoom_in",
+  "xf": 0.75,
+  "fase": "gancho",
+  "u": 0.0295,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of a bearded peasant man in a coarse brown wool jacket, a felt hat held to his chest, testifying while a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writes with a goose quill, candlelight, bare granite walls",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, framed pictures, bookshelves, flat cap, baseball cap, cowboy hat",
+  "son": "limpa",
+  "clave": "bearded man",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the bearded man writes slowly with the quill and looks up, the candle flames flicker",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "Vilalba, sixteen seventeen. A witness declares",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 6,
+  "frases": [
+   6
+  ],
+  "pal0": 55,
+  "desde": "que a parteira Dorotea do Barro",
+  "t0": 25.186,
+  "metodo_desde": "whisper",
+  "b0": 25.066,
+  "texto": "que a parteira Dorotea do Barro dixera que podía quitarlle as dores do parto a unha muller e pasarllas a un home.",
+  "b1": 30.788,
+  "movemento": "pan_up",
+  "xf": 0.76,
+  "fase": "gancho",
+  "u": 0.0338,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of an old midwife in a dark brown wool headscarf kneeling by a straw bed, her wrinkled hand on the big round belly of a heavily pregnant young woman lying on her back, candlelight, dark granite walls, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, leaded window, blood, nudity, hospital, metal bed, sofa",
+  "son": "limpa",
+  "clave": "pregnant woman",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the old midwife slowly moves her hand over the young woman's belly",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "that the midwife Dorotea do Barro had said she could take away a woman's labour pains and pass them on to a man.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 7,
+  "frases": [
+   7
+  ],
+  "pal0": 77,
+  "t0": 31.038,
+  "b0": 30.788,
+  "texto": "Abondaría con calzarlle ao home os zapatos da muller, dicindo unhas palabras que ela sabía.",
+  "b1": 35.97,
+  "movemento": "zoom_in",
+  "xf": 0.79,
+  "fase": "gancho",
+  "u": 0.0473,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "close-up of an old midwife in a dark brown wool headscarf kneeling on a rough wooden floor, pushing a small worn soft leather slipper onto a bearded man's large bare foot, candlelight, 17th century",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, sneaker, high heel, shoelaces, boots",
+  "son": "limpa",
+  "clave": "shoe",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "baixa",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "her hands slowly push the small shoe onto the man's foot"
+  },
+  "texto_en": "It would be enough to put the woman's shoes on the man, saying some words that she knew.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 8,
+  "frases": [
+   8
+  ],
+  "pal0": 92,
+  "t0": 36.22,
+  "b0": 35.97,
+  "texto": "E o home saltaría coma un poldro bravo.",
+  "b1": 39.738,
+  "movemento": "pan_right",
+  "xf": 0.8,
+  "fase": "gancho",
+  "u": 0.0565,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "full shot of a burly man with a short black beard in a coarse linen shirt, startled, leaping up from a low wooden bench with his arms flung wide, small women's shoes on his feet, bare granite room lit from an open doorway, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, horse",
+  "son": "limpa",
+  "clave": "man",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [],
+   "accion": "he jolts upright from the bench and flings his arms wide",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "And the man would leap like a wild colt.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 9,
+  "frases": [
+   9,
+   10
+  ],
+  "pal0": 100,
+  "t0": 39.988,
+  "b0": 39.738,
+  "texto": "Boas noites. A voz que vas escoitar é sintética, e este texto preparouno un proceso automático.",
+  "b1": 46.985,
+  "movemento": "zoom_out",
+  "xf": 0.81,
+  "fase": "gancho",
+  "u": 0.0614,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "close-up of a single thin beeswax taper candle just lit in a simple wrought-iron holder on a rough dark oak table, a thin curl of smoke rising, rough granite wall behind in deep shadow, calm night",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass jar, pillar candle, fruit",
+  "son": "limpa",
+  "clave": "candle",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ]
+  },
+  "texto_en": "Good night. The voice you are about to hear is synthetic, and this text was prepared by an automatic process.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 10,
+  "frases": [
+   11
+  ],
+  "pal0": 116,
+  "t0": 47.235,
+  "b0": 46.985,
+  "texto": "Isto é Cousas de Galiza para durmir.",
+  "b1": 50.851,
+  "movemento": "pan_left",
+  "xf": 0.83,
+  "fase": "gancho",
+  "u": 0.0713,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "wide shot of two old Galician granaries raised on granite pillars with mushroom-shaped staddle stones, one of wood and one of granite, stone-tiled roofs, in a quiet village yard at dusk, soft mist, calm",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern house, brick chimney, cars, wall lantern, grass roof, moss roof",
+  "son": "noite",
+  "clave": "granary",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_der",
+   "efectos": [
+    "bretema",
+    "ceo"
+   ]
+  },
+  "referencia": {
+   "ficheiro": "01-horreo/16-horreos-de-muimenta-carballeda-de-avia-galiza.jpg",
+   "modo": "profundidade",
+   "forza": 0.6,
+   "recorte": [
+    0.32,
+    0.2,
+    1.0,
+    1.0
+   ]
+  },
+  "texto_en": "This is Cousas de Galiza para durmir (Things of Galicia for falling asleep).",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 11,
+  "frases": [
+   12
+  ],
+  "pal0": 123,
+  "t0": 51.101,
+  "b0": 50.851,
+  "texto": "As palabras do conxuro parecen vellas e son novas, e hai un motivo polo que semellan de ninguén.",
+  "b1": 56.581,
+  "movemento": "zoom_in",
+  "xf": 0.84,
+  "fase": "gancho",
+  "u": 0.0756,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of a wide clay bowl of burning spirits glowing blue on a dark wooden table, three people around it with their faces lost in shadow, only their hands lit as they raise small clay cups toward the blue glow, darkness all around, 20th century",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, light bulb, lamp, glass, modern kitchen",
+  "son": "lume",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "the people slowly raise their small cups toward the flames",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "epoca": "xx",
+  "texto_en": "The words of the spell seem old but are new, and there is a reason why they seem to belong to no one.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 12,
+  "frases": [
+   13
+  ],
+  "pal0": 141,
+  "t0": 56.831,
+  "b0": 56.581,
+  "texto": "O que se contou de Dorotea é vello de verdade, e só o coñecemos porque alguén o escribiu nun proceso por bruxería.",
+  "b1": 62.732,
+  "movemento": "pan_up",
+  "xf": 0.86,
+  "fase": "gancho",
+  "u": 0.0866,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar, bent over a thick bundle of trial papers, writing with a goose quill by the light of a single candle, inkpot at hand, bare granite wall, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book, bookshelves",
+  "son": "limpa",
+  "clave": "papers",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "xira_esq",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the scribe dips the quill in the inkpot and writes"
+  },
+  "texto_en": "What was told about Dorotea is truly old, and we only know it because someone wrote it down in a witchcraft trial.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 13,
+  "frases": [
+   14
+  ],
+  "pal0": 163,
+  "t0": 62.982,
+  "b0": 62.732,
+  "texto": "As palabras que ela sabía, esas non as coñecemos.",
+  "b1": 66.709,
+  "movemento": "zoom_in",
+  "xf": 0.89,
+  "fase": "gancho",
+  "u": 0.1001,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "close-up portrait of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, eyes lowered, lips murmuring words we cannot hear, half her face in shadow, warm light from the side",
+  "tipo": "primeiro_plano",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, warts, hooked nose, smile",
+  "son": "limpa",
+  "clave": "old woman",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "her lips move slightly as she murmurs",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "The words she knew, those we do not know.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 14,
+  "frases": [
+   15
+  ],
+  "pal0": 172,
+  "t0": 66.959,
+  "b0": 66.709,
+  "texto": "Nos papeis daqueles procesos hai moitas máis palabras.",
+  "b1": 70.432,
+  "movemento": "pan_right",
+  "xf": 0.9,
+  "fase": "gancho",
+  "u": 0.1057,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "still life of tall stacks of yellowed 17th-century trial papers tied with faded cords on a long dark wooden table, dust floating in a shaft of light from a small shuttered opening, deep shadows",
+  "tipo": "bodegon",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, printed books, modern office",
+  "son": "limpa",
+  "clave": "papers",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "xira_der",
+   "efectos": [
+    "po"
+   ]
+  },
+  "texto_en": "In the papers of those trials there are many more words.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 15,
+  "frases": [
+   16
+  ],
+  "pal0": 180,
+  "t0": 70.682,
+  "b0": 70.432,
+  "texto": "Hai unha palabra trabucada que ninguén borrou en máis de catrocentos anos.",
+  "b1": 75.074,
+  "movemento": "zoom_out",
+  "xf": 0.91,
+  "fase": "gancho",
+  "u": 0.1106,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "extreme close-up of faded brown handwriting on a yellowed 17th-century page, one word struck through with a single line of ink, soft raking light showing the texture of the old paper",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, printed text, typewriter",
+  "son": "limpa",
+  "clave": "handwritten page",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_der",
+   "efectos": []
+  },
+  "texto_en": "There is a mistaken word that no one has erased in more than four hundred years.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 16,
+  "frases": [
+   17
+  ],
+  "pal0": 192,
+  "t0": 75.324,
+  "b0": 75.074,
+  "texto": "E hai mesmo noticia dunha lista coas mulleres que uns veciños viron nunha fonte, a noite de san Xoán.",
+  "b1": 81.593,
+  "movemento": "pan_left",
+  "xf": 0.92,
+  "fase": "gancho",
+  "u": 0.1179,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of a young woman with a long dark braid, white linen blouse and dark shawl filling a clay jug at a granite fountain spout on Saint John's night, a distant bonfire glowing behind her, she looks up into the darkness as if someone were watching",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic",
+  "son": "fonte+noite",
+  "clave": "fountain",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "auga"
+   ],
+   "accion": "water drips from her fingers into the stone basin, she slowly looks up into the darkness, the fire flickers"
+  },
+  "texto_en": "And there is even news of a list of the women some neighbours saw at a fountain on Saint John's night.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 17,
+  "frases": [
+   18
+  ],
+  "pal0": 211,
+  "t0": 81.843,
+  "b0": 81.593,
+  "texto": "Había mulleres de aldea detrás de todas esas palabras.",
+  "b1": 85.571,
+  "movemento": "zoom_in",
+  "xf": 0.94,
+  "fase": "gancho",
+  "u": 0.1296,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of an old village woman sitting on a granite doorstep shelling beans into her lap, a young woman in a dark wool headscarf standing in the dark open doorway beside her, long dark wool skirts, soft evening light, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, flowerpots, broom, white cap",
+  "son": "aldea",
+  "clave": "women",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_esq",
+   "efectos": [],
+   "accion": "the two old women sit quietly and one slowly turns her head toward the other",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "There were village women behind all those words.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 18,
+  "frases": [
+   19
+  ],
+  "pal0": 220,
+  "t0": 85.821,
+  "b0": 85.571,
+  "texto": "A meiga, moitas veces, non era a bruxa dos contos, senón a que curaba, a que axudaba nos partos, a que sabía de herbas.",
+  "b1": 92.352,
+  "movemento": "pan_up",
+  "xf": 0.95,
+  "fase": "gancho",
+  "u": 0.1351,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "close-up of an old village healer in a dark blue wool shawl holding a steaming clay bowl of herb infusion to the lips of a sick young woman under a wool blanket, firelight on their faces, dark background",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, brick wall, witch hat, broom, warts, hooked nose, shelves of bottles",
+  "son": "limpa",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the healer slowly brings the steaming bowl to the young woman's lips"
+  },
+  "texto_en": "The meiga, many times, was not the witch of tales, but the one who healed, who helped in childbirth, who knew about herbs.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 19,
+  "frases": [
+   20
+  ],
+  "pal0": 244,
+  "t0": 92.602,
+  "b0": 92.352,
+  "texto": "Esta noite imos buscalas no pouco que delas quedou escrito, e preguntarnos de quen son, de verdade, esas palabras.",
+  "b1": 99.2,
+  "movemento": "zoom_in",
+  "xf": 0.98,
+  "fase": "gancho",
+  "u": 0.1499,
+  "orixe": "sentido",
+  "capitulo": "Comezo",
+  "prompt": "medium shot of a woman in a dark wool shawl holding up a candle in an iron holder to tall wooden shelves of old bundles of papers tied with cords, searching among them in a dark archive at night, candlelight on her face",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern books, computer",
+  "son": "limpa",
+  "clave": "papers",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_der",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "she slowly turns the old papers in the candlelight"
+  },
+  "texto_en": "Tonight we will look for them in the little that was written about them, and ask ourselves whose those words really are.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 20,
+  "frases": [
+   21
+  ],
+  "pal0": 263,
+  "t0": 99.2,
+  "b0": 99.2,
+  "texto": "En Vilalba, a Real Audiencia xulgou tamén a María do Barro, a filla de Dorotea.",
+  "b1": 106.375,
+  "movemento": "pan_right",
+  "xf": 1.0,
+  "fase": "transicion",
+  "u": 0.1615,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of a woman of about thirty in a faded red wool headscarf standing before a plain wooden table where a stern grey-bearded judge in a black gown points his quill at her, bare granite walls, a narrow shaft of daylight",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chandelier, arched windows, red cloak",
+  "son": "limpa",
+  "clave": "judge",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [],
+   "accion": "the judge points his quill at her and she lowers her eyes"
+  },
+  "texto_en": "In Vilalba, the Royal Court also tried María do Barro, Dorotea's daughter.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 21,
+  "frases": [
+   22
+  ],
+  "pal0": 278,
+  "t0": 106.625,
+  "b0": 106.375,
+  "texto": "Da filla dicían outra cousa: que era alcaiota, e que acollía na súa casa homes casados e mulleres solteiras.",
+  "b1": 112.995,
+  "movemento": "zoom_out",
+  "xf": 1.02,
+  "fase": "transicion",
+  "u": 0.1708,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot at night of a woman in a faded red wool headscarf holding up a horn lantern in the open doorway of a dark stone house, letting in a man in a dark wool cloak, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, modern door, chimney, red cloak, hood, balcony, whitewashed wall",
+  "son": "aldea",
+  "clave": "door",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "she opens the heavy door wider and the cloaked man steps inside"
+  },
+  "texto_en": "Of the daughter they said something else: that she was a go-between, and that she took married men and unmarried women into her house.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 22,
+  "frases": [
+   23
+  ],
+  "pal0": 297,
+  "t0": 113.245,
+  "b0": 112.995,
+  "texto": "Unha testemuña oíu murmurar entre algúns veciños que María era meiga, e que non era boa cristiá.",
+  "b1": 119.284,
+  "movemento": "pan_left",
+  "xf": 1.05,
+  "fase": "transicion",
+  "u": 0.1824,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of two village women in dark wool headscarves and an old man whispering together beside the round-arched stone doorway of a small Romanesque granite church, one woman glancing sideways with suspicion, overcast daylight, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cars, cathedral, drainpipe, gutter",
+  "son": "campas",
+  "clave": "church",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_esq",
+   "efectos": [],
+   "accion": "the hooded woman slowly turns her head and whispers to the old man"
+  },
+  "texto_en": "A witness heard some neighbours murmuring that María was a meiga, and that she was not a good Christian.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 23,
+  "frases": [
+   24,
+   25
+  ],
+  "pal0": 314,
+  "t0": 119.534,
+  "b0": 119.284,
+  "texto": "E contou que María, cando tiña o gando no monte, dicía unhas palabras: unhas en voz baixa, e outras que se oían. Pensemos nela alí, co gando arredor e o vento levando a medias o que dicía.",
+  "b1": 131.577,
+  "movemento": "zoom_in",
+  "xf": 1.07,
+  "fase": "transicion",
+  "u": 0.1929,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of a woman of about thirty, dark braided hair under a faded red wool headscarf, standing among brown cows on a windswept hillside of heather and gorse, murmuring words to them, her scarf and the long grass blown by the wind, overcast sky",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fence, wind turbines, power lines, road",
+  "son": "vento",
+  "clave": "cows",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "ceo"
+   ],
+   "accion": "the wind blows her scarf and the grass as she speaks softly, the cows graze behind her"
+  },
+  "texto_en": "And he said that María, when she had the cattle up on the hill, said some words: some under her breath, and others that could be heard. Let us picture her there, with the cattle around her and the wind half carrying away what she said.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 24,
+  "frases": [
+   26
+  ],
+  "pal0": 351,
+  "t0": 131.827,
+  "b0": 131.577,
+  "texto": "E, entre elas, un desexo para o gando: que bebese auga de sete fontes e trouxese leite de sete cortes e de sete montes.",
+  "b1": 140.044,
+  "movemento": "pan_up",
+  "xf": 1.12,
+  "fase": "transicion",
+  "u": 0.2156,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of two brown cows lowering their heads to drink from a clear spring running over mossy stones on a green hillside, a woman of about thirty, dark braided hair under a faded red wool headscarf, watching them from behind, soft morning light",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fence, road, power lines",
+  "son": "fonte",
+  "clave": "cows",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_der",
+   "efectos": [
+    "auga"
+   ],
+   "accion": "the cows drink from the stream and the water ripples around their muzzles"
+  },
+  "texto_en": "And, among them, a wish for the cattle: that they drink water from seven springs and bring milk from seven byres and seven hills.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 25,
+  "frases": [
+   27,
+   28
+  ],
+  "pal0": 375,
+  "t0": 140.294,
+  "b0": 140.044,
+  "texto": "Eran palabras para o gando, non para un tribunal. Pero do monte pasaron á boca da testemuña, e da boca ao papel.",
+  "b1": 148.662,
+  "movemento": "zoom_in",
+  "xf": 1.15,
+  "fase": "transicion",
+  "u": 0.2303,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "close-up of a bearded peasant man in a coarse brown wool jacket speaking in profile, and behind him, in soft focus, a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing his words with a goose quill, candlelight, bare granite wall",
+  "tipo": "primeiro_plano",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book",
+  "son": "limpa",
+  "clave": "scribe",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "xira_der",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the bearded man speaks slowly in profile, the candle flames flicker"
+  },
+  "texto_en": "They were words for the cattle, not for a court. But from the hill they passed into the witness's mouth, and from the mouth onto paper.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 26,
+  "frases": [
+   29
+  ],
+  "pal0": 397,
+  "t0": 148.912,
+  "b0": 148.662,
+  "texto": "No papel quedou ata a emenda de quen escribía: que trouxese auga, digo, leite.",
+  "b1": 154.055,
+  "movemento": "pan_right",
+  "xf": 1.18,
+  "fase": "transicion",
+  "u": 0.2439,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "close-up of a scribe's hand with a goose quill striking through a word on a page of trial notes and writing the next one, black wool sleeve with a white cuff, fresh ink glistening, candlelight",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, ballpoint pen, printed text",
+  "son": "limpa",
+  "clave": "quill",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the hand strikes through a word with the quill and writes on",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "On the paper even the correction of the one writing remained: that she bring water, I mean, milk.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 27,
+  "frases": [
+   30,
+   31
+  ],
+  "pal0": 411,
+  "t0": 154.305,
+  "b0": 154.055,
+  "texto": "O papel gárdao o Arquivo do Reino de Galicia, con outros procesos por bruxería da Real Audiencia. Máis de catrocentos anos despois, a palabra trabucada segue alí, xusto antes da boa.",
+  "b1": 166.508,
+  "movemento": "zoom_out",
+  "xf": 1.2,
+  "fase": "transicion",
+  "u": 0.2525,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of an archivist in white cotton gloves carefully opening an old bundle of 17th-century trial papers on a grey table between tall shelves of bound bundles, one page with a struck-through word catching the soft daylight, quiet archive",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, computer, plastic folders",
+  "son": "limpa",
+  "clave": "papers",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [
+    "po"
+   ],
+   "accion": "the archivist gently unfolds the bundle and smooths the page"
+  },
+  "epoca": "xx",
+  "texto_en": "The paper is kept by the Archive of the Kingdom of Galicia, with other witchcraft trials of the Royal Court. More than four hundred years later, the mistaken word is still there, just before the right one.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 28,
+  "frases": [
+   32
+  ],
+  "pal0": 442,
+  "t0": 166.758,
+  "b0": 166.508,
+  "texto": "Así nos chegan as palabras daquelas mulleres: na voz doutros, e na man de quen escribía.",
+  "b1": 172.013,
+  "movemento": "pan_left",
+  "xf": 1.25,
+  "fase": "transicion",
+  "u": 0.2715,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of a gaunt clean-shaven scribe of about forty in a black wool doublet with a white collar writing with a goose quill by candlelight in the foreground, and behind him in shadow a woman of about thirty in a faded red wool headscarf, standing silent, lips closed",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book",
+  "son": "limpa",
+  "clave": "scribe",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the scribe writes slowly while the man behind him watches in silence",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "This is how the words of those women reach us: in the voice of others, and in the hand of the one who wrote.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 29,
+  "frases": [
+   33,
+   34
+  ],
+  "pal0": 458,
+  "t0": 172.263,
+  "b0": 172.013,
+  "texto": "E as palabras tamén podían pechar portas. O vicario xeral do bispado de Mondoñedo excomungou a nai e a filla, e mandou que ninguén lles dese pan, sal, auga nin lume.",
+  "b1": 183.97,
+  "movemento": "zoom_in",
+  "xf": 1.27,
+  "fase": "transicion",
+  "u": 0.2813,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of a stern priest in a black cassock and black cape standing at the arched door of a small rustic granite chapel, reading aloud from an unrolled paper decree, overcast daylight, 17th century",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, cathedral, cars, columns, crowd, cardinal, red robe, wall lantern, wide-brimmed hat",
+  "son": "campas",
+  "clave": "priest",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_esq",
+   "efectos": [],
+   "accion": "the priest slowly reads aloud from the decree and lowers the paper"
+  },
+  "texto_en": "And words could also close doors. The vicar general of the bishopric of Mondoñedo excommunicated the mother and the daughter, and ordered that no one give them bread, salt, water or fire.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 30,
+  "frases": [
+   35,
+   36
+  ],
+  "pal0": 489,
+  "t0": 184.22,
+  "b0": 183.97,
+  "texto": "Auga de sete fontes para o gando. E para elas, nin auga.",
+  "b1": 189.802,
+  "movemento": "pan_up",
+  "xf": 1.31,
+  "fase": "transicion",
+  "u": 0.3004,
+  "orixe": "sentido",
+  "capitulo": "I. Auga, digo, leite",
+  "prompt": "medium shot of an old midwife of about sixty, lined face, grey hair under a dark brown wool headscarf, and a woman of about thirty, dark braided hair under a faded red wool headscarf, sitting on a stone doorstep at dusk, an empty clay jug on its side between them",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass bottle, plastic, modern door",
+  "son": "vento",
+  "clave": "clay jug",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the younger woman picks up the empty jug and looks into it",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "texto_en": "Water from seven springs for the cattle. And for them, not even water.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 31,
+  "frases": [
+   37
+  ],
+  "pal0": 501,
+  "t0": 189.802,
+  "b0": 189.802,
+  "texto": "Aquel papel gardou ata o máis pequeno, unha palabra trabucada.",
+  "b1": 197.354,
+  "movemento": "zoom_in",
+  "xf": 1.33,
+  "fase": "transicion",
+  "u": 0.3077,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "close-up of an old brass magnifying glass lying on a yellowed 17th-century manuscript of faded brown ink, shallow depth of field, the handwriting soft and blurred, soft daylight in a quiet archive",
+  "tipo": "detalle",
+  "negativo": "hands, fingers, electric lamp, printed text, typewriter, plastic, computer",
+  "son": "limpa",
+  "clave": "magnifying glass",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "avanza",
+   "efectos": [
+    "po"
+   ]
+  },
+  "epoca": "xx",
+  "texto_en": "That paper kept even the smallest thing, a mistaken word.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 32,
+  "frases": [
+   38
+  ],
+  "pal0": 511,
+  "t0": 197.604,
+  "b0": 197.354,
+  "texto": "Ao conxuro da queimada pasoulle ao revés: polo camiño quedou sen o máis importante, o nome de quen o escribiu.",
+  "b1": 204.915,
+  "movemento": "pan_right",
+  "xf": 1.34,
+  "fase": "transicion",
+  "u": 0.3139,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "close-up of a handwritten sheet of verses lying beside a wide clay bowl of blue flames on a wooden table, the bottom corner of the sheet torn away where a signature would be, blue light flickering on the paper, 1960s",
+  "tipo": "detalle",
+  "negativo": "neon, plastic, television, smartphone, printed text, typewriter, light bulb",
+  "son": "lume",
+  "clave": "sheet of paper",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "baixa",
+   "efectos": [
+    "lume"
+   ]
+  },
+  "epoca": "xx",
+  "texto_en": "With the queimada spell the opposite happened: along the way it was left without the most important thing, the name of the one who wrote it.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 33,
+  "frases": [
+   39
+  ],
+  "pal0": 531,
+  "t0": 205.165,
+  "b0": 204.915,
+  "texto": "Mariano Marcos Abalo xuntábase cos amigos a bordo do vello barco, amarrado no porto, e alí facían queimadas.",
+  "b1": 212.208,
+  "movemento": "zoom_out",
+  "xf": 1.37,
+  "fase": "transicion",
+  "u": 0.3262,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "medium shot of a dark-haired man of about forty in a white shirt and dark wool sweater, and two friends in white shirts and dark wool sweaters, laughing on coils of rope around a clay bowl of burning spirits glowing blue on the deck of an old wooden boat in a harbour at night",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, modern yacht, street lamps",
+  "son": "lume+mar",
+  "clave": "boat",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "xira_esq",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "the three men laugh and lean toward the flames as one stirs with the ladle"
+  },
+  "epoca": "xx",
+  "texto_en": "Mariano Marcos Abalo used to meet his friends aboard the old boat, moored in the port, and there they made queimadas.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 34,
+  "frases": [
+   40
+  ],
+  "pal0": 549,
+  "t0": 212.458,
+  "b0": 212.208,
+  "texto": "Contaba que escribira o conxuro para darlles un pouco de ritual a aquelas queimadas.",
+  "b1": 217.851,
+  "movemento": "pan_left",
+  "xf": 1.39,
+  "fase": "transicion",
+  "u": 0.3372,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "medium close-up of a dark-haired man of about forty in a white shirt and dark wool sweater, reading verses aloud from a sheet of paper with a solemn face, lit from below by a soft blue glow, a friend smiling beside him, night on the deck of a boat, 1960s",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, light bulb, glasses",
+  "son": "lume",
+  "clave": "sheet of paper",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "he reads aloud with a solemn face and slowly raises one hand",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "epoca": "xx",
+  "texto_en": "He used to say he had written the spell to give those queimadas a bit of ritual.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 35,
+  "frases": [
+   41
+  ],
+  "pal0": 563,
+  "t0": 218.101,
+  "b0": 217.851,
+  "texto": "E que houbo outros cinco ou seis conxuros daquela época, pero ningún tivo a saída do seu.",
+  "b1": 225.267,
+  "movemento": "zoom_in",
+  "xf": 1.41,
+  "fase": "transicion",
+  "u": 0.3458,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "still life of five or six handwritten sheets of verses scattered on a worn wooden table beside an oil lantern on the deck of a boat at night, one sheet lit in the warm light, the others in shadow, 1960s",
+  "tipo": "bodegon",
+  "negativo": "neon, plastic, television, smartphone, printed text, typewriter, light bulb",
+  "son": "mar",
+  "clave": "papers",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "xira_der",
+   "efectos": [
+    "candea"
+   ]
+  },
+  "epoca": "xx",
+  "texto_en": "And that there were five or six other spells from that time, but none was as successful as his.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 36,
+  "frases": [
+   42
+  ],
+  "pal0": 580,
+  "t0": 225.517,
+  "b0": 225.267,
+  "texto": "Unha empresa vendeu copias do conxuro sen o nome do autor, e por iso moita xente pensou que era un texto popular e anónimo.",
+  "b1": 232.671,
+  "movemento": "pan_up",
+  "xf": 1.43,
+  "fase": "transicion",
+  "u": 0.3563,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "medium shot of two tourists in late-20th-century clothes reading a printed card with a poem and a small drawing of a clay bowl, at the wooden counter of a souvenir shop where stacks of the same printed cards lie for sale, warm shop light",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, computer",
+  "son": "xente",
+  "clave": "printed card",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "they read the card together and one points at the poem"
+  },
+  "epoca": "xx",
+  "texto_en": "A company sold copies of the spell without the author's name, and so many people thought it was a popular, anonymous text.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 37,
+  "frases": [
+   43
+  ],
+  "pal0": 604,
+  "t0": 232.921,
+  "b0": 232.671,
+  "texto": "En dous mil un, o autor rexistrouno como propiedade intelectual.",
+  "b1": 237.674,
+  "movemento": "zoom_in",
+  "xf": 1.47,
+  "fase": "transicion",
+  "u": 0.371,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "close-up of an older man's hand signing an official registration form with a fountain pen on an office desk, a rubber stamp and a printed copy of a poem beside it, daylight, 2001",
+  "tipo": "detalle",
+  "negativo": "neon, plastic, television, smartphone, laptop",
+  "son": "limpa",
+  "clave": "document",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "baixa",
+   "efectos": [],
+   "accion": "the hand slowly signs the form",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "epoca": "xx",
+  "texto_en": "In two thousand and one, the author registered it as intellectual property.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 38,
+  "frases": [
+   44
+  ],
+  "pal0": 614,
+  "t0": 237.924,
+  "b0": 237.674,
+  "texto": "Así, unhas palabras sen nome no papel acabaron parecendo de todos, e de sempre.",
+  "b1": 243.222,
+  "movemento": "pan_right",
+  "xf": 1.48,
+  "fase": "transicion",
+  "u": 0.3771,
+  "orixe": "sentido",
+  "capitulo": "II. O conxuro do barco",
+  "prompt": "wide shot of a village festival at night, long wooden tables crowded with people, on each table a wide clay bowl of pale blue flames, people raising small clay cups, faces softly lit, 1980s",
+  "tipo": "xeral",
+  "negativo": "neon, plastic, television, smartphone, plastic cups, stage lights, bonfire, torches, hooded robes, ritual",
+  "son": "xente",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "people raise their cups and the blue flames flicker",
+   "i2v": {
+    "F": 73
+   }
+  },
+  "epoca": "xx",
+  "texto_en": "So some nameless words on paper ended up seeming to belong to everyone, and to have always existed.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 39,
+  "frases": [
+   45
+  ],
+  "pal0": 628,
+  "t0": 243.222,
+  "b0": 243.222,
+  "texto": "O conxuro naceu entre amigos, arredor dun pote.",
+  "b1": 250.496,
+  "movemento": "zoom_out",
+  "xf": 1.5,
+  "fase": "calma",
+  "u": 0.3857,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "overhead shot of a wide clay bowl of pale blue flames on the wooden deck of an old boat at night, the shoes and trouser legs of three men standing around it, coils of rope nearby, 1960s",
+  "tipo": "xeral",
+  "negativo": "neon, plastic, television, smartphone, light bulb, bonfire, burning boat",
+  "son": "lume+mar",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "baixa",
+   "efectos": [
+    "lume"
+   ]
+  },
+  "epoca": "xx",
+  "texto_en": "The spell was born among friends, around a pot.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 40,
+  "frases": [
+   46,
+   47
+  ],
+  "pal0": 636,
+  "t0": 250.746,
+  "b0": 250.496,
+  "texto": "As palabras dos procesos acabaron noutro sitio: nos tribunais. Tres xustizas podían xulgar a bruxería: a civil, a eclesiástica e a Inquisición.",
+  "b1": 262.723,
+  "movemento": "pan_left",
+  "xf": 1.51,
+  "fase": "calma",
+  "u": 0.3907,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "wide shot of three judges seated side by side at a long wooden table in a bare granite hall: a grey-bearded judge in a black gown, a priest in a black cassock, an elderly friar in a white habit and black cape, light from a high opening",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, flags, chandelier, crowd",
+  "son": "limpa",
+  "clave": "judge",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_der",
+   "efectos": [
+    "po"
+   ],
+   "accion": "the judge in the black gown signs a paper while the others read"
+  },
+  "texto_en": "The words of the trials ended up somewhere else: in the courts. Three jurisdictions could judge witchcraft: the civil, the ecclesiastical and the Inquisition.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 41,
+  "frases": [
+   48
+  ],
+  "pal0": 658,
+  "t0": 262.973,
+  "b0": 262.723,
+  "texto": "Para o investigador Diego Valor Bravo, coas meigas galegas a temida Inquisición foi branda: en tres séculos só condenou a morte unha meiga.",
+  "b1": 271.347,
+  "movemento": "zoom_in",
+  "xf": 1.54,
+  "fase": "calma",
+  "u": 0.4042,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "medium shot of a lean elderly friar with a grey tonsure, in a white habit and black cape, closing a thick bundle of trial papers tied with cord and laying it on a tall pile of bundles, single candle, bare stone room, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hood, pointed hat, fire, crowd, glasses, bookshelves",
+  "son": "limpa",
+  "clave": "papers",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "xira_esq",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "he slowly closes the small book in his hands and bows his head"
+  },
+  "texto_en": "For the researcher Diego Valor Bravo, the feared Inquisition was lenient with Galician meigas: in three centuries it sentenced only one meiga to death.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 42,
+  "frases": [
+   49,
+   50
+  ],
+  "pal0": 681,
+  "t0": 271.597,
+  "b0": 271.347,
+  "texto": "Os xuíces civís foron moito máis duros. E nos procesos civís da Real Audiencia, todas as acusadas eran mulleres.",
+  "b1": 281.727,
+  "movemento": "pan_up",
+  "xf": 1.57,
+  "fase": "calma",
+  "u": 0.4183,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "over-the-shoulder shot from behind a stern grey-bearded judge in a black gown at a high wooden table, looking down at three village women in dark wool headscarves seated on a rough bench below him, cold light from a high opening, bare granite hall",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, framed pictures, chains, park bench, trees",
+  "son": "limpa",
+  "clave": "judge",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the women stand still and slowly lower their heads while the bearded judge speaks"
+  },
+  "texto_en": "The civil judges were much harsher. And in the civil trials of the Royal Court, all the accused were women.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 43,
+  "frases": [
+   51,
+   52
+  ],
+  "pal0": 700,
+  "t0": 281.977,
+  "b0": 281.727,
+  "texto": "Unha delas foi María Cibreira, procesada en mil seiscentos trinta e nove con outras veciñas de Boborás. Despois de ser torturada, confesou que había uns doce anos que exercía o oficio de bruxa e feiticeira.",
+  "b1": 295.016,
+  "movemento": "zoom_in",
+  "xf": 1.59,
+  "fase": "calma",
+  "u": 0.43,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "medium shot of a pale exhausted woman of about forty, dark hair under a grey wool headscarf, worn grey wool dress, seated on a stool and speaking with her eyes down, other village women waiting on a bench in the shadows behind her, candlelight, bare stone room, 1639",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, wounds, chains, torture instruments",
+  "son": "limpa",
+  "clave": "woman",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "she speaks slowly with her eyes down, her hands trembling in her lap"
+  },
+  "texto_en": "One of them was María Cibreira, tried in sixteen thirty-nine with other women from Boborás. After being tortured, she confessed that for some twelve years she had practised the trade of witch and sorceress.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 44,
+  "frases": [
+   53,
+   54
+  ],
+  "pal0": 735,
+  "t0": 295.266,
+  "b0": 295.016,
+  "texto": "Que llo ensinara a súa nai. Que á nai acudía moita xente, e que ela lles facía curas e menciñas.",
+  "b1": 303.712,
+  "movemento": "pan_right",
+  "xf": 1.64,
+  "fase": "calma",
+  "u": 0.4515,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "medium shot of an old healer with white hair under a black wool headscarf at the door of her rough granite house, handing a small clay pot of ointment to a peasant woman holding a child, villagers waiting behind, soft morning light, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, modern door, plastered walls, amphora, olive trees, paper cup",
+  "son": "aldea",
+  "clave": "clay pot",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_der",
+   "efectos": [],
+   "accion": "the old healer slowly hands the clay pot to the woman with the basket"
+  },
+  "texto_en": "That her mother had taught her. That many people came to her mother, and that she gave them cures and remedies.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 45,
+  "frases": [
+   55,
+   56
+  ],
+  "pal0": 755,
+  "t0": 303.962,
+  "b0": 303.712,
+  "texto": "E que as noites de san Xoán as meigas ían ás xuntanzas do demo, nas areas de Sevilla. Diante dela, alguén preguntaba, e alguén escribía.",
+  "b1": 315.743,
+  "movemento": "zoom_out",
+  "xf": 1.66,
+  "fase": "calma",
+  "u": 0.4638,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "over-the-shoulder shot from behind a peasant woman in a grey wool headscarf on a stool: a stern grey-bearded judge in a black gown questions her while a gaunt clean-shaven scribe beside him writes with a quill, bare stone room, candlelight",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, devil, horns, demon, fire, chandelier, ball gown, earrings",
+  "son": "limpa",
+  "clave": "judge",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the judge leans over the table and speaks slowly while the woman lowers her eyes"
+  },
+  "texto_en": "And that on Saint John's nights the meigas went to gatherings with the devil, on the sands of Seville. Before her, someone asked, and someone wrote.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 46,
+  "frases": [
+   57,
+   58
+  ],
+  "pal0": 780,
+  "t0": 315.993,
+  "b0": 315.743,
+  "texto": "Rodrigo Pousa, historiador, explica que aquelas mulleres non sabían que declarar: as respostas xa ían nas preguntas. Ás veces, a voz era dunha muller, e as palabras, de quen preguntaba.",
+  "b1": 328.477,
+  "movemento": "pan_left",
+  "xf": 1.69,
+  "fase": "calma",
+  "u": 0.4791,
+  "orixe": "sentido",
+  "capitulo": "III. As respostas nas preguntas",
+  "prompt": "close-up two-shot in profile: a stern grey-bearded judge in a black gown reads a question from a paper to a pale exhausted peasant woman in a grey wool headscarf, who nods in silence with her lips closed, candlelight",
+  "tipo": "primeiro_plano",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, printed book, vignette, white frame, bonnet",
+  "son": "limpa",
+  "clave": "judge",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the judge leans closer and speaks softly, and the woman slowly nods in silence"
+  },
+  "texto_en": "Rodrigo Pousa, historian, explains that those women did not know what to declare: the answers were already in the questions. Sometimes the voice was a woman's, and the words, the questioner's.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 47,
+  "frases": [
+   59
+  ],
+  "pal0": 810,
+  "t0": 328.477,
+  "b0": 328.477,
+  "texto": "Unha noite de san Xoán aparece tamén nos papeis de Campo Lameiro.",
+  "b1": 337.393,
+  "movemento": "zoom_in",
+  "xf": 1.73,
+  "fase": "calma",
+  "u": 0.4975,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "wide shot of an old chestnut grove at night under a full moon, soft mist between the trunks, a low mossy granite wall and a small stone trough in the foreground, calm, no one around",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, lantern, string lights, candles, houses, cottage, statue, ornamental fountain, park, buildings",
+  "son": "fonte+noite",
+  "clave": "fountain",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_esq",
+   "efectos": [
+    "auga",
+    "bretema"
+   ]
+  },
+  "texto_en": "A Saint John's night also appears in the papers of Campo Lameiro.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 48,
+  "frases": [
+   60,
+   61
+  ],
+  "pal0": 822,
+  "t0": 337.643,
+  "b0": 337.393,
+  "texto": "En mil seiscentos corenta e tres, a Real Audiencia procesou alí varias mulleres. Uns veciños, rifados cunha delas, culpábana de lles facer morrer as becerras e os leitóns.",
+  "b1": 350.717,
+  "movemento": "pan_up",
+  "xf": 1.75,
+  "fase": "calma",
+  "u": 0.5049,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot inside a dark stone byre of two angry village men in sheepskin vests, one pointing at a dead calf lying on the straw at their feet, the other shouting toward the open door, 17th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, blood, tractor, turf roof, thatched cottage, sheep, felt hat",
+  "son": "aldea",
+  "clave": "calf",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_esq",
+   "efectos": [],
+   "accion": "one man points at the dead calf while the other shouts toward the door"
+  },
+  "texto_en": "In sixteen forty-three, the Royal Court tried several women there. Some neighbours, quarrelling with one of them, blamed her for making their calves and piglets die.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 49,
+  "frases": [
+   62
+  ],
+  "pal0": 850,
+  "t0": 350.967,
+  "b0": 350.717,
+  "texto": "Unha testemuña contou que, pola sospeita que tiñan delas, uns veciños foran espreitalas á fonte da Nogueira, a noite de san Xoán do ano anterior.",
+  "b1": 359.886,
+  "movemento": "zoom_in",
+  "xf": 1.78,
+  "fase": "calma",
+  "u": 0.5221,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "over-the-shoulder shot of two village men in sheepskin vests crouching behind a mossy granite wall at night, peering over it at distant women gathered around a small bonfire by a rustic stone spring, deep shadows",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, ornamental fountain, houses",
+  "son": "noite",
+  "clave": "fountain",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the three men sit still in the dark and slowly turn their heads toward the firelight"
+  },
+  "texto_en": "A witness said that, because of the suspicion they had of them, some neighbours had gone to spy on them at the Nogueira fountain, on Saint John's night the year before.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 50,
+  "frases": [
+   63
+  ],
+  "pal0": 875,
+  "t0": 360.136,
+  "b0": 359.886,
+  "texto": "Alí, dixo, viron e recoñeceron as mulleres, e apuntáronas nunha lista porque eran moitas.",
+  "b1": 367.707,
+  "movemento": "pan_right",
+  "xf": 1.81,
+  "fase": "calma",
+  "u": 0.5375,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of one of two village men in sheepskin vests and wool breeches, writing names on a scrap of paper by the light of a horn lantern, crouched behind a granite wall at night while the other points into the darkness",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, ballpoint pen, flashlight",
+  "son": "noite",
+  "clave": "paper",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "he writes a name, glances up toward the fountain and writes again"
+  },
+  "texto_en": "There, he said, they saw and recognised the women, and wrote them down on a list because there were many.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 51,
+  "frases": [
+   64
+  ],
+  "pal0": 889,
+  "t0": 367.957,
+  "b0": 367.707,
+  "texto": "Pensemos nunha noite curta de xuño: a auga fría da fonte, e uns ollos que miran desde a escuridade.",
+  "b1": 374.532,
+  "movemento": "zoom_out",
+  "xf": 1.83,
+  "fase": "calma",
+  "u": 0.5461,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "close-up of cold water pouring from a rough stone spout in a mossy granite wall into a stone trough on a short June night, moonlight on the water, dark leaves and ferns all around",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, monster, animal eyes, plastic pipe, metal tap, ornamental fountain",
+  "son": "fonte+noite",
+  "clave": "water",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "avanza",
+   "efectos": [
+    "auga"
+   ]
+  },
+  "texto_en": "Let us picture a short June night: the cold water of the fountain, and some eyes watching from the darkness.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 52,
+  "frases": [
+   65,
+   66
+  ],
+  "pal0": 908,
+  "t0": 374.782,
+  "b0": 374.532,
+  "texto": "Do que elas dixesen aquela noite, non nos chegou nin unha palabra. Só nos chegou a noticia da lista, na voz doutros.",
+  "b1": 385.234,
+  "movemento": "pan_left",
+  "xf": 1.86,
+  "fase": "calma",
+  "u": 0.5577,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "wide shot of three village women in dark wool shawls sitting on a low granite wall beside a rustic stone spring at night, talking and laughing softly, moonlight, seen from far away through dark branches",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, hooded robes, cloaks, ritual, bonfire, nun, wolf, arcade, columns",
+  "son": "fonte+noite",
+  "clave": "women",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_der",
+   "efectos": [
+    "auga"
+   ],
+   "accion": "the women talk and laugh softly and one gestures with her hand"
+  },
+  "texto_en": "Of whatever they said that night, not a single word has reached us. Only the news of the list reached us, in the voice of others.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 53,
+  "frases": [
+   67
+  ],
+  "pal0": 930,
+  "t0": 385.484,
+  "b0": 385.234,
+  "texto": "A noite de san Xoán era costume ir ás fontes, porque se cría que a auga desa noite tiña virtudes especiais.",
+  "b1": 392.767,
+  "movemento": "zoom_in",
+  "xf": 1.89,
+  "fase": "calma",
+  "u": 0.5713,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of two village women walking toward the camera along a path between mossy granite walls at dusk, carrying clay jugs on their hips, a young girl beside them, warm last light, wildflowers on the walls",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, road, houses, plastic",
+  "son": "aldea",
+  "clave": "clay jug",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [],
+   "accion": "the women walk slowly toward the camera carrying their water pails"
+  },
+  "texto_en": "On Saint John's night it was the custom to go to the fountains, because it was believed that the water of that night had special virtues.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 54,
+  "frases": [
+   68,
+   69
+  ],
+  "pal0": 951,
+  "t0": 393.017,
+  "b0": 392.767,
+  "texto": "E na crenza popular, era tamén a noite en que as meigas andaban máis libres. A mesma fonte, a mesma noite, e dúas maneiras de mirala.",
+  "b1": 404.848,
+  "movemento": "pan_up",
+  "xf": 1.91,
+  "fase": "calma",
+  "u": 0.5842,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium close-up at night by a rustic stone spring: an old woman in a black wool headscarf crossing herself and looking warily into the dark, behind her a young woman with a long dark braid smiling as she fills a clay jug",
+  "tipo": "primeiro_plano",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, oil lamp, witch hat, broom, table, teapot, kitchen",
+  "son": "fonte+noite",
+  "clave": "fountain",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "auga"
+   ],
+   "accion": "the old woman slowly turns her head toward the darkness while the young woman fills the jug"
+  },
+  "texto_en": "And in popular belief, it was also the night when the meigas roamed most freely. The same fountain, the same night, and two ways of looking at it.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 55,
+  "frases": [
+   70,
+   71
+  ],
+  "pal0": 977,
+  "t0": 405.098,
+  "b0": 404.848,
+  "texto": "Moitas das acusadas eran parteiras e menciñeiras que aprenderan o oficio doutras mulleres, a miúdo das súas nais. Nos papeis, Pousa atopou esta expresión: maldita a nai que non ensina a súa filla a meigar.",
+  "b1": 420.227,
+  "movemento": "zoom_in",
+  "xf": 1.94,
+  "fase": "calma",
+  "u": 0.6001,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of an old village woman and her young daughter kneeling by a low open stone hearth, the mother guiding the girl's hands as they grind herbs in a stone mortar, sprigs of rue and fennel beside them, warm light",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, iron stove, cauldron, witch hat",
+  "son": "lume",
+  "clave": "mortar",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "the mother slowly crushes herbs between her hands while the girl watches the small fire"
+  },
+  "referencia": {
+   "ficheiro": "06-cocina/03-reitoral-de-beiro-carballeda-de-avia-3.jpg",
+   "modo": "img2img",
+   "forza": 0.75
+  },
+  "texto_en": "Many of the accused were midwives and healers who had learned the trade from other women, often from their mothers. In the papers, Pousa found this expression: cursed be the mother who does not teach her daughter to be a meiga.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 56,
+  "frases": [
+   72,
+   73
+  ],
+  "pal0": 1012,
+  "t0": 420.477,
+  "b0": 420.227,
+  "texto": "Moitas denuncias nacían de liortas entre veciños, coma en Campo Lameiro. Ás veces había quen falaba de bruxería cando, en realidade, as ovellas dun veciño lle comeran a viña ao outro.",
+  "b1": 433.723,
+  "movemento": "pan_right",
+  "xf": 1.99,
+  "fase": "calma",
+  "u": 0.6216,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "wide shot of a few sheep eating the leaves of a terraced vineyard behind a granite wall while an old man and a younger man argue across the wall, the old one pointing angrily at the sheep, overcast autumn light, 17th century",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, wire fence, tractor, road",
+  "son": "aldea",
+  "clave": "sheep",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "pan_der",
+   "efectos": [],
+   "accion": "the sheep graze slowly while the old man watches them"
+  },
+  "texto_en": "Many accusations were born of quarrels between neighbours, as in Campo Lameiro. Sometimes there were those who spoke of witchcraft when, in reality, one neighbour's sheep had eaten the other's vineyard.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 57,
+  "frases": [
+   74
+  ],
+  "pal0": 1043,
+  "t0": 433.973,
+  "b0": 433.723,
+  "texto": "E, con todo, para Pousa aquelas mulleres eran necesarias, porque resolvían os problemas de cada día: a saúde, as colleitas e o gando.",
+  "b1": 443.788,
+  "movemento": "zoom_out",
+  "xf": 2.03,
+  "fase": "calma",
+  "u": 0.6407,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of an old village healer in a dark blue wool shawl, kneeling in a stone byre to rub ointment on a cow's swollen leg while a farmer holds a horn lantern for her, straw on the floor, warm lantern light",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, flashlight",
+  "son": "aldea",
+  "clave": "cow",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "candea"
+   ],
+   "accion": "the healer slowly moves her hands over the calf and the calf lifts its head"
+  },
+  "texto_en": "And yet, for Pousa those women were necessary, because they solved the problems of every day: health, crops and livestock.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 58,
+  "frases": [
+   75
+  ],
+  "pal0": 1066,
+  "t0": 444.038,
+  "b0": 443.788,
+  "texto": "Xa no século dezaoito, frei Martín Sarmiento defendeu o saber das curandeiras, as meigas, como o de auténticos médicos e botánicos.",
+  "b1": 453.865,
+  "movemento": "pan_left",
+  "xf": 2.06,
+  "fase": "calma",
+  "u": 0.6548,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of a stout round-faced Benedictine friar of about fifty in a black habit, smiling as he studies a sprig of a medicinal herb in his fingers, a basket of wild herbs on his arm, monastery herb garden, 18th century",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, cathedral, skullcap, blue robe, hood",
+  "son": "aldea",
+  "clave": "monk",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "xira_der",
+   "efectos": [],
+   "accion": "the friar slowly turns the sprig in his fingers and smiles"
+  },
+  "texto_en": "Already in the eighteenth century, Friar Martín Sarmiento defended the knowledge of the healers, the meigas, as that of true doctors and botanists.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 59,
+  "frases": [
+   76,
+   77
+  ],
+  "pal0": 1087,
+  "t0": 454.115,
+  "b0": 453.865,
+  "texto": "No mesmo século, o frade Benito Xerónimo Feijoo escribiu contra as falsas crenzas e as supersticións. Advertía que as fábulas de bruxería pasan do pobo aos libros, e dos libros outra vez ao pobo.",
+  "b1": 468.091,
+  "movemento": "zoom_in",
+  "xf": 2.09,
+  "fase": "calma",
+  "u": 0.6677,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of an elderly Benedictine monk with thin white hair and a lined face, in a black hooded habit, writing with a quill at a tall wooden lectern in a bare stone monastery cell, a pile of closed leather books beside him, soft morning light from a small shuttered opening",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glasses, open book with text, bookshelves",
+  "son": "limpa",
+  "clave": "monk",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the monk writes, pauses and looks up thoughtfully"
+  },
+  "texto_en": "In the same century, the friar Benito Xerónimo Feijoo wrote against false beliefs and superstitions. He warned that witchcraft tales pass from the people to books, and from books back to the people.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 60,
+  "frases": [
+   78
+  ],
+  "pal0": 1121,
+  "t0": 468.341,
+  "b0": 468.091,
+  "texto": "Así, para el, unha fábula nacida no recuncho dunha aldea chega a encher o mundo enteiro.",
+  "b1": 474.858,
+  "movemento": "pan_up",
+  "xf": 2.13,
+  "fase": "calma",
+  "u": 0.6886,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "close-up of an old village woman whispering into a young woman's ear against a mossy granite wall, cupping her hand around her mouth, the young woman's eyes widening, soft evening light",
+  "tipo": "primeiro_plano",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, warts",
+  "son": "aldea",
+  "clave": "woman",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the young man whispers into her ear and she slowly raises her eyes"
+  },
+  "texto_en": "So, for him, a tale born in the corner of a village ends up filling the whole world.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 61,
+  "frases": [
+   79
+  ],
+  "pal0": 1137,
+  "t0": 475.108,
+  "b0": 474.858,
+  "texto": "E admitía que moitas veces o voo das bruxas era só soñado, aínda que non negaba que as houbese.",
+  "b1": 483.566,
+  "movemento": "zoom_in",
+  "xf": 2.15,
+  "fase": "calma",
+  "u": 0.6984,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "medium shot of a village woman asleep curled on her side under a wool blanket on a straw mattress in a dark granite room, her face calm, moonlight from a small opening, on the wall above her the soft shadow of a bird in flight",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, broom, witch, demon, corpse, coffin",
+  "son": "noite",
+  "clave": "sleeping woman",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "she sleeps peacefully, breathing slowly under the blanket"
+  },
+  "texto_en": "And he admitted that the witches' flight was often only dreamed, although he did not deny that witches existed.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 62,
+  "frases": [
+   80,
+   81
+  ],
+  "pal0": 1156,
+  "t0": 483.816,
+  "b0": 483.566,
+  "texto": "E aquí deixamos os papeis. Desde agora a historia vai máis amodo, e non tes que lembrar nada do que escoites.",
+  "b1": 493.54,
+  "movemento": "pan_right",
+  "xf": 2.17,
+  "fase": "calma",
+  "u": 0.7101,
+  "orixe": "sentido",
+  "capitulo": "IV. A lista da fonte",
+  "prompt": "still life of a candle burning low beside a closed bundle of old papers tied with a faded red cord on a dark wooden table, the room around sinking into darkness, quiet warm light",
+  "tipo": "bodegon",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, printed books",
+  "son": "limpa",
+  "clave": "papers",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "recua",
+   "efectos": [
+    "candea"
+   ]
+  },
+  "texto_en": "And here we leave the papers. From now on the story goes more slowly, and you don't have to remember anything you hear.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 63,
+  "frases": [
+   82
+  ],
+  "pal0": 1177,
+  "t0": 493.54,
+  "b0": 493.54,
+  "texto": "É outra vez aquela noite de xuño, e esta vez ninguén espreita na escuridade nin apunta nomes nunha lista.",
+  "b1": 505.965,
+  "movemento": "zoom_out",
+  "xf": 2.2,
+  "fase": "durmir",
+  "u": 0.723,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "high-angle close-up of the full moon reflected in the still dark water of a stone trough under a rustic spring spout, ferns and moss around its edge, a thin stream falling, soft mist, night, no one around",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, plastic pipe, statue, ornamental fountain, daylight",
+  "son": "fonte+noite",
+  "clave": "fountain",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "baixa",
+   "efectos": [
+    "auga",
+    "bretema"
+   ]
+  },
+  "texto_en": "It is that June night again, and this time no one spies in the darkness or writes names on a list.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 64,
+  "frases": [
+   83,
+   84
+  ],
+  "pal0": 1196,
+  "t0": 506.215,
+  "b0": 505.965,
+  "texto": "Para facer o cacho, alguén colle auga de sete fontes, coma naquelas palabras do monte, e deixa nela as herbas da véspera. A talla queda fóra toda a noite, para que lle caia o orballo, que segundo a crenza daba ás herbas as súas virtudes.",
+  "b1": 524.456,
+  "movemento": "pan_left",
+  "xf": 2.23,
+  "fase": "durmir",
+  "u": 0.7346,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "a wide brown earthenware basin full of water with floating sprigs of fennel, ferns and wild flowers, resting on top of a mossy granite wall outside at night, dew drops on the leaves, moonlight, calm",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic, glass vase, concrete",
+  "son": "noite",
+  "clave": "clay basin",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "xira_esq",
+   "efectos": [
+    "auga"
+   ]
+  },
+  "texto_en": "To make the 'cacho', someone takes water from seven springs, as in those words on the hill, and leaves in it the herbs of Saint John's eve. The basin stays outside all night, so the dew falls on it, which, according to belief, gave the herbs their virtues.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 65,
+  "frases": [
+   85,
+   86,
+   87
+  ],
+  "pal0": 1241,
+  "t0": 524.706,
+  "b0": 524.456,
+  "texto": "Lonxe, cando a cacharela xa case se apaga, a xente salta as últimas lapas, sempre un número impar de veces, polo menos tres. E ao saltar di unhas palabras que ninguén apunta nunha lista. Salto por riba do lume de san Xoán, para que non me morda cadela nin can.",
+  "b1": 547.188,
+  "movemento": "zoom_in",
+  "xf": 2.29,
+  "fase": "durmir",
+  "u": 0.7623,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "wide shot of an open dark meadow at night under a deep blue sky, far away on the grass a small low glow of dying red embers, three tiny silhouettes, one leaping over it, soft mist, calm",
+  "tipo": "xeral",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, fireworks, city lights, wildfire, big flames, houses, cottage, village, crowd",
+  "son": "lume+noite",
+  "clave": "bonfire",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "recua",
+   "efectos": [
+    "fume",
+    "bretema"
+   ],
+   "accion": "a small figure leaps over the embers and sparks rise slowly"
+  },
+  "texto_en": "Far away, when the bonfire is almost out, people jump over the last flames, always an odd number of times, at least three. And as they jump they say some words that no one writes on a list. I jump over Saint John's fire, so that no bitch or dog may bite me.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 66,
+  "frases": [
+   88,
+   89
+  ],
+  "pal0": 1291,
+  "t0": 547.438,
+  "b0": 547.188,
+  "texto": "Ao amencer, a primeira auga da fonte chámase flor da auga, e crese que dá saúde e beleza. Coa auga das herbas, verde e recendente, lávase a cara; e nalgunhas zonas lávase mirando ao oriente, para recibir as primeiras raiolas do sol.",
+  "b1": 567.845,
+  "movemento": "pan_up",
+  "xf": 2.35,
+  "fase": "durmir",
+  "u": 0.793,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "medium shot of a young woman with a long dark braid, white linen blouse and dark shawl, in profile, washing her face with green herb water from a clay basin at dawn, turned toward the rising sun, golden first light through the mist, a granite fountain behind her",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic, sink, tap",
+  "son": "fonte",
+  "clave": "clay basin",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "she slowly lowers the bowl and brings the herb water to her face"
+  },
+  "texto_en": "At dawn, the first water of the fountain is called the flower of the water, and it is believed to give health and beauty. With the herb water, green and fragrant, one washes one's face; and in some places one washes facing east, to receive the first rays of the sun.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 67,
+  "frases": [
+   90
+  ],
+  "pal0": 1333,
+  "t0": 568.095,
+  "b0": 567.845,
+  "texto": "Despois, os ramos de herbas colgan secos nalgún lugar da casa, para que a protexan o resto do ano.",
+  "b1": 577.219,
+  "movemento": "zoom_in",
+  "xf": 2.41,
+  "fase": "durmir",
+  "u": 0.8188,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "close-up of bunches of dried herbs and wild flowers hanging from a dark smoke-blackened wooden beam against a rough granite wall, dust floating in a thin beam of light, dim and quiet",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, plastic, vase, flowerpots, shutters",
+  "son": "limpa",
+  "clave": "dried herbs",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "sobe",
+   "efectos": [
+    "po"
+   ]
+  },
+  "texto_en": "Then the bunches of herbs hang dry somewhere in the house, to protect it for the rest of the year.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 68,
+  "frases": [
+   91,
+   92
+  ],
+  "pal0": 1352,
+  "t0": 577.469,
+  "b0": 577.219,
+  "texto": "Outra noite, nunha cociña de aldea, tras a cea, apáganse as luces. No pote de barro van a augardente e o azucre, a casca de limón e uns poucos grans de café.",
+  "b1": 592.455,
+  "movemento": "pan_right",
+  "xf": 2.43,
+  "fase": "durmir",
+  "u": 0.8305,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "close-up of an old woman's hand pouring clear spirits from an earthenware jug into a wide clay bowl holding sugar, lemon peel and coffee beans, small clay cups hanging on its rim, dim room at night, faint warm light",
+  "tipo": "detalle",
+  "negativo": "neon, plastic, television, smartphone, glass bottle, modern kitchen, light bulb, daylight",
+  "son": "limpa",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "baixa",
+   "efectos": [],
+   "accion": "the hand slowly lets a few coffee beans fall into the bowl"
+  },
+  "referencia": {
+   "ficheiro": "07-queimada/02-camino-de-santiago-may-2008.jpg",
+   "modo": "profundidade",
+   "forza": 0.6
+  },
+  "epoca": "xx",
+  "texto_en": "Another night, in a village kitchen, after supper, the lights are put out. Into the clay pot go the brandy and the sugar, the lemon peel and a few coffee beans.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 69,
+  "frases": [
+   93,
+   94
+  ],
+  "pal0": 1384,
+  "t0": 592.705,
+  "b0": 592.455,
+  "texto": "Os comensais xúntanse arredor do pote, para animar os corazóns. Un deles ergue cun cazo o líquido en chamas e déixao caer pouco a pouco no pote, mentres pronuncia o conxuro.",
+  "b1": 609.245,
+  "movemento": "zoom_out",
+  "xf": 2.48,
+  "fase": "durmir",
+  "u": 0.8501,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "medium shot of the dark silhouettes of an old man and an old woman at a wooden table at night, between them a wide clay bowl of pale blue flames, he lifts a clay ladle of blue fire above it, darkness all around",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, light bulb, modern kitchen, glass, fireplace, stove, window, daylight, candles, cauldron, orange fire",
+  "son": "lume",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [
+    "lume"
+   ],
+   "accion": "he lifts the ladle and pours a slow stream of blue fire back into the bowl"
+  },
+  "epoca": "xx",
+  "texto_en": "The guests gather around the pot, to cheer their hearts. One of them lifts the burning liquid with a ladle and lets it fall little by little into the pot, while reciting the spell.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 70,
+  "frases": [
+   95,
+   96
+  ],
+  "pal0": 1415,
+  "t0": 609.495,
+  "b0": 609.245,
+  "texto": "Mouchos, curuxas, sapos e bruxas. Agora xa sabes quen escribiu estas palabras, que parecían de ninguén: un home nun barco, entre amigos.",
+  "b1": 623.113,
+  "movemento": "pan_left",
+  "xf": 2.52,
+  "fase": "durmir",
+  "u": 0.8692,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "wide calm view of a misty harbour at night, a small old wooden sailing boat moored at a granite quay, a faint blue glow and three small seated figures on its deck, still dark water, 1960s",
+  "tipo": "xeral",
+  "negativo": "neon, plastic, television, smartphone, street lamps, modern yacht, city lights, tall ship",
+  "son": "mar",
+  "clave": "boat",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_der",
+   "efectos": [
+    "auga",
+    "bretema"
+   ]
+  },
+  "referencia": {
+   "ficheiro": "11-barcos-costa/16-dorna-a-vela-rianxo-de-noite.jpg",
+   "modo": "img2img",
+   "forza": 0.5
+  },
+  "epoca": "xx",
+  "texto_en": "Owls, barn owls, toads and witches. Now you know who wrote these words, which seemed to belong to no one: a man on a boat, among friends.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 71,
+  "frases": [
+   97,
+   98
+  ],
+  "pal0": 1437,
+  "t0": 623.363,
+  "b0": 623.113,
+  "texto": "E alguén di aquel dito tan coñecido: eu non creo nas meigas, mais habelas, hainas. Ese si é de todos, porque ninguén lle coñece autor.",
+  "b1": 638.273,
+  "movemento": "zoom_in",
+  "xf": 2.55,
+  "fase": "durmir",
+  "u": 0.8827,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "medium close-up in profile of an old woman in a black cardigan and dark headscarf, smiling and raising one finger as she speaks to an old man with white stubble in a dark wool waistcoat who laughs softly, small clay cups in their hands, soft blue glow in a dark room",
+  "tipo": "plano_medio",
+  "negativo": "neon, plastic, television, smartphone, light bulb, glass, witch hat",
+  "son": "lume",
+  "clave": "old woman",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "she wags her raised finger as she speaks and the other old woman laughs softly"
+  },
+  "epoca": "xx",
+  "texto_en": "And someone says that well-known saying: I don't believe in meigas, but they exist, they do. That one does belong to everyone, because no one knows its author.",
+  "prioridade_i2v": 1
+ },
+ {
+  "n": 72,
+  "frases": [
+   99,
+   100
+  ],
+  "pal0": 1462,
+  "t0": 638.523,
+  "b0": 638.273,
+  "texto": "As lapas do alcohol van baixando amodo, ata que se esgota case todo, e a cociña queda á luz das brasas. Das meigas de verdade escoitamos esta noite poucas palabras, e todas quedaron escritas por outra man.",
+  "b1": 656.321,
+  "movemento": "pan_up",
+  "xf": 2.58,
+  "fase": "durmir",
+  "u": 0.898,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "close-up of a wide brown earthenware bowl on a wooden table with a few faint low blue flames dying on its surface, the dark kitchen lit only by a dim red glow of embers, an old bundle of papers tied with a faded red cord beside it",
+  "tipo": "detalle",
+  "negativo": "neon, plastic, television, smartphone, light bulb, glass, cauldron, iron pot, fireplace, orange flames",
+  "son": "lume",
+  "clave": "clay bowl",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "avanza",
+   "efectos": [
+    "lume"
+   ]
+  },
+  "epoca": "xx",
+  "texto_en": "The flames of the spirits slowly die down, until almost all is spent, and the kitchen is left in the light of the embers. Of the real meigas we heard few words tonight, and all were written down by another hand.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 73,
+  "frases": [
+   101
+  ],
+  "pal0": 1499,
+  "t0": 656.571,
+  "b0": 656.321,
+  "texto": "A outra meiga, a dos contos, saíu das fábulas que van da aldea aos libros, e dos libros outra vez á aldea.",
+  "b1": 667.207,
+  "movemento": "zoom_in",
+  "xf": 2.63,
+  "fase": "durmir",
+  "u": 0.9208,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "medium shot of a grandmother in a dark headscarf telling a tale to a sleepy child wrapped in a wool blanket, an old closed book on her lap, in a dark granite room lit by a soft orange glow, both in profile, calm",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, witch hat, broom, open book with text",
+  "son": "lume",
+  "clave": "book",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "avanza",
+   "efectos": [],
+   "accion": "the grandmother turns a page and speaks softly while the child leans against her"
+  },
+  "texto_en": "The other meiga, the one from tales, came out of the fables that go from the village to books, and from books back to the village.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 74,
+  "frases": [
+   102,
+   103
+  ],
+  "pal0": 1521,
+  "t0": 667.457,
+  "b0": 667.207,
+  "texto": "Agora chove sobre as lousas do tellado, unha chuvia miúda e mansa, coma o orballo que caía sobre as herbas. Na corte, o gando dorme quente, e nalgún lugar da casa colgan as herbas secas da véspera, que aínda cheiran a monte.",
+  "b1": 688.363,
+  "movemento": "pan_right",
+  "xf": 2.66,
+  "fase": "durmir",
+  "u": 0.9343,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "medium shot of two brown cows asleep on straw in a dark stone byre at night, bunches of dried herbs hanging from the wooden beam above them, fine rain falling outside the open half-door, the faint glow of a small horn lantern, calm",
+  "tipo": "plano_medio",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, metal stalls, black and white cows, wall lamp",
+  "son": "choiva",
+  "clave": "cows",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "pan_esq",
+   "efectos": [
+    "candea"
+   ]
+  },
+  "texto_en": "Now it rains on the slates of the roof, a fine, gentle rain, like the dew that fell on the herbs. In the byre, the cattle sleep warm, and somewhere in the house hang the dried herbs of Saint John's eve, which still smell of the hills.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 75,
+  "frases": [
+   104,
+   105
+  ],
+  "pal0": 1563,
+  "t0": 688.613,
+  "b0": 688.363,
+  "texto": "Lonxe, as sete fontes seguen correndo na escuridade, e a auga baixa mansa cara ao río, sen que ninguén a espreite. Ninguén apunta nomes, ninguén pregunta, e xa non fan falta palabras: só a chuvia na lousa, sempre igual, sempre mansa.",
+  "b1": 710.744,
+  "movemento": "zoom_out",
+  "xf": 2.71,
+  "fase": "durmir",
+  "u": 0.9601,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "wide shot of a small stream running gently down between mossy stones and ferns at night under a fine rain, toward a misty river valley, faint moonlight on the wet stones, no one around",
+  "tipo": "paisaxe",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, houses, bridge, road",
+  "son": "choiva+fonte",
+  "clave": "stream",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "baixa",
+   "efectos": [
+    "auga",
+    "choiva",
+    "bretema"
+   ]
+  },
+  "texto_en": "Far away, the seven springs keep running in the darkness, and the water flows gently down to the river, with no one spying on it. No one writes down names, no one asks, and words are no longer needed: only the rain on the slate, always the same, always gentle.",
+  "prioridade_i2v": 3
+ },
+ {
+  "n": 76,
+  "frases": [
+   106,
+   107
+  ],
+  "pal0": 1604,
+  "t0": 710.994,
+  "b0": 710.744,
+  "texto": "A casa descansa baixo a chuvia, e xa non tes que lembrar nada. E agora, amodo, xa se pode apagar a candea.",
+  "b1": 724.288,
+  "movemento": "pan_left",
+  "xf": 2.77,
+  "fase": "durmir",
+  "u": 0.9853,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "close-up of a single candle burning on the deep stone sill of a small open wooden shutter in the thick granite wall of a dark house at night, fine rain falling past it from the slate eaves, calm",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, glass window, lantern, light bulb",
+  "son": "choiva",
+  "clave": "candle",
+  "animacion": {
+   "modo": "i2v",
+   "camara": "recua",
+   "efectos": [
+    "candea",
+    "choiva"
+   ],
+   "accion": "the two candle flames tremble and slowly go out, leaving thin threads of smoke"
+  },
+  "texto_en": "The house rests under the rain, and you no longer have to remember anything. And now, slowly, the candle can be put out.",
+  "prioridade_i2v": 2
+ },
+ {
+  "n": 77,
+  "frases": [
+   108
+  ],
+  "pal0": 1626,
+  "t0": 724.538,
+  "b0": 724.288,
+  "texto": "Boas noites.",
+  "b1": 751.3585833333333,
+  "movemento": "zoom_in",
+  "xf": 2.8,
+  "fase": "durmir",
+  "u": 0.9988,
+  "orixe": "sentido",
+  "capitulo": "V. Chove na lousa",
+  "prompt": "close-up of fine rain falling on dark wet stone slates of an old roof at night, drops gathering and dripping from the edge, moss between the slates, deep blue darkness, calm",
+  "tipo": "detalle",
+  "negativo": "electric light, light bulb, lamp, glass window, modern clothes, street lamp, tiles, gutter, window, dormer, chimney",
+  "son": "choiva",
+  "clave": "slate roof",
+  "animacion": {
+   "modo": "paralaxe",
+   "camara": "recua",
+   "efectos": [
+    "choiva"
+   ]
+  },
+  "texto_en": "Good night.",
+  "prioridade_i2v": 3
+ }
+]
