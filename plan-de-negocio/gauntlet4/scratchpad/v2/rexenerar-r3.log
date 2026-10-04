@@ -58,3 +58,18 @@ imaxe  47 intento 1 115.2s + revisión 10.6s ['animais en grupo']
 imaxe  47 intento 2 115.1s + revisión 10.3s ['casas alleas']
 imaxe  51 intento 0 115.8s + revisión 10.1s ok
 imaxe  51 intento 1 114.7s + revisión  9.8s ['man sen corpo (1)', 'obxectos modernos']
+imaxe  51 intento 2 115.9s + revisión 10.4s ok
+imaxe  53 intento 0 115.2s + revisión  9.6s ok avisos ['falta: fountain (CLIP)']
+imaxe  53 intento 1 114.2s + revisión 10.4s ['obxectos modernos'] avisos ['falta: fountain (CLIP)']
+imaxe  53 intento 2 113.3s + revisión  9.7s ok avisos ['falta: fountain (CLIP)']
+imaxe  57 intento 0 112.6s + revisión  9.8s ['interior moderno']
+Token indices sequence length is longer than the specified maximum sequence length for this model (79 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['blue dusk']
+Token indices sequence length is longer than the specified maximum sequence length for this model (79 > 77). Running this sequence through the model will result in indexing errors
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['blue dusk']
+imaxe  57 intento 1 112.3s + revisión  9.9s ok
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['blue dusk']
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['blue dusk']
+imaxe  57 intento 2 116.8s + revisión  9.7s ['cousas do século XX']
+imaxe  64 intento 0 120.7s + revisión 10.9s ['lume vivo ao durmir (3.0% de altas luces cor de chama)']
+imaxe  64 intento 1 123.9s + revisión  9.8s ['lume vivo ao durmir (3.4% de altas luces cor de chama)']
